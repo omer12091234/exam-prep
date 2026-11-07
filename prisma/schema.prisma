@@ -1,0 +1,361 @@
+// Exam practice platform – data model
+// Connection URLs live in prisma.config.ts (Prisma 7).
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// ───────────────────────── Users ─────────────────────────
+
+enum Role {
+  ADMIN
+  USER
+}
+
+/// Mirrors auth.users from Supabase; id = auth user id.
+model User {
+  id          String         @id @db.Uuid
+  email       String         @unique
+  displayName String?
+  role        Role           @default(USER)
+  createdAt   DateTime       @default(now())
+  progress    UserProgress[]
+  attempts    ExamAttempt[]
+  submissions Submission[]
+  recall      RecallState[]
+}
+
+// ───────────────────────── Catalogue ─────────────────────────
+
+enum CourseType {
+  REGULAR
+  LAB
+}
+
+model Course {
+  id             String          @id @default(cuid())
+  slug           String          @unique
+  name           String
+  number         String? // e.g. 36111021
+  institution    String? // e.g. BGU
+  type           CourseType      @default(REGULAR)
+  topics         Topic[]
+  exams          Exam[]
+  sourceFiles    SourceFile[]
+  gradingProfile GradingProfile?
+  quizzes        Quiz[]
+}
+
+model Lecturer {
+  id    String @id @default(cuid())
+  name  String @unique
+  exams Exam[]
+}
+
+model Topic {
+  id        String          @id @default(cuid())
+  courseId  String
+  course    Course          @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  name      String
+  order     Int             @default(0)
+  summaryMd String? // topic summary (Markdown + LaTeX)
+  tipsMd    String? // tips page built from lecturer/grader comments
+  questions QuestionTopic[]
+
+  @@unique([courseId, name])
+}
+
+enum Semester {
+  A
+  B
+  SUMMER
+}
+
+enum ExamOrigin {
+  OFFICIAL // original questionnaire
+  RESTORED // שחזור – reconstructed by students
+  PRACTICE // מבחן ניסיון / sample
+  EXTERNAL // other institution (e.g. TAU booklet)
+}
+
+model Exam {
+  id              String        @id @default(cuid())
+  courseId        String
+  course          Course        @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  lecturerId      String?
+  lecturer        Lecturer?     @relation(fields: [lecturerId], references: [id])
+  year            Int
+  semester        Semester
+  moed            Int // 1=א 2=ב 3=ג
+  date            DateTime?
+  durationMinutes Int?
+  aidsNote        String?
+  origin          ExamOrigin    @default(OFFICIAL)
+  /// Official grade stats when a stats page exists (e.g. "_prof" files)
+  statMean        Float?
+  statStdDev      Float?
+  statTakers      Int?
+  statFailPct     Float?
+  /// Computed 1–5 difficulty used for recommendations
+  difficulty      Float?
+  published       Boolean       @default(false)
+  questions       Question[]
+  sourceFiles     SourceFile[]
+  attempts        ExamAttempt[]
+
+  @@unique([courseId, year, semester, moed, origin])
+}
+
+enum SourceKind {
+  EXAM_SCAN // questionnaire (may contain student scribbles)
+  LECTURER_SOLUTION // official handwritten/typed solution
+  GRADED_NOTEBOOK // Moodle report: grading table + scanned answers with grader marks
+  STUDENT_SOLUTION // full student solution (lower trust)
+  STATS // grade distribution page
+  BOOKLET // multi-exam compilation, needs splitting
+  OTHER
+}
+
+enum IngestStatus {
+  PENDING
+  EXTRACTED
+  NEEDS_REVIEW
+  APPROVED
+  REJECTED
+}
+
+model SourceFile {
+  id            String         @id @default(cuid())
+  courseId      String
+  course        Course         @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  examId        String?
+  exam          Exam?          @relation(fields: [examId], references: [id])
+  kind          SourceKind
+  title         String
+  driveFileId   String?        @unique
+  sha256        String         @unique // dedup – the Drive folder has ~25 duplicate files
+  storagePath   String
+  pageCount     Int
+  hasTextLayer  Boolean        @default(false)
+  status        IngestStatus   @default(PENDING)
+  notes         String?
+  createdAt     DateTime       @default(now())
+  images        QuestionImage[]
+  comments      LecturerComment[]
+  solutions     Solution[]
+}
+
+// ───────────────────────── Questions ─────────────────────────
+
+model Question {
+  id            String          @id @default(cuid())
+  examId        String
+  exam          Exam            @relation(fields: [examId], references: [id], onDelete: Cascade)
+  number        Int
+  points        Float?
+  stemText      String // Hebrew + inline LaTeX ($...$)
+  figuresNote   String? // textual description of figures for accessibility/search
+  difficulty    Float? // 1–5
+  needsReview   Boolean         @default(true)
+  subQuestions  SubQuestion[]
+  images        QuestionImage[]
+  topics        QuestionTopic[]
+  progress      UserProgress[]
+
+  @@unique([examId, number])
+}
+
+model SubQuestion {
+  id          String            @id @default(cuid())
+  questionId  String
+  question    Question          @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  label       String // א, ב, ...
+  order       Int
+  points      Float?
+  text        String
+  difficulty  Float?
+  images      QuestionImage[]
+  comments    LecturerComment[]
+  solutions   Solution[]
+  progress    UserProgress[]
+  submissions Submission[]
+
+  @@unique([questionId, label])
+}
+
+model QuestionTopic {
+  questionId String
+  question   Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  topicId    String
+  topic      Topic    @relation(fields: [topicId], references: [id], onDelete: Cascade)
+  isPrimary  Boolean  @default(true)
+
+  @@id([questionId, topicId])
+}
+
+enum ImageRole {
+  STEM // question text / header
+  FIGURE // circuit / graph (may appear after the sub-questions)
+  SUB // sub-question line(s)
+}
+
+/// A cropped region of a source page. A question can have several (e.g. figure placed after the subs).
+model QuestionImage {
+  id            String       @id @default(cuid())
+  sourceFileId  String
+  sourceFile    SourceFile   @relation(fields: [sourceFileId], references: [id], onDelete: Cascade)
+  questionId    String?
+  question      Question?    @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  subQuestionId String?
+  subQuestion   SubQuestion? @relation(fields: [subQuestionId], references: [id], onDelete: Cascade)
+  role          ImageRole
+  page          Int
+  /// normalised [x0,y0,x1,y1] in 0..1 of the deskewed page
+  bbox          Float[]
+  path          String // storage path of the crop (webp)
+  order         Int          @default(0)
+  hasHandwriting Boolean     @default(false) // student scribbles inside the crop
+  manuallyEdited Boolean     @default(false)
+}
+
+enum SolutionAuthor {
+  LECTURER
+  GRADER
+  STUDENT
+}
+
+model Solution {
+  id            String         @id @default(cuid())
+  subQuestionId String
+  subQuestion   SubQuestion    @relation(fields: [subQuestionId], references: [id], onDelete: Cascade)
+  sourceFileId  String?
+  sourceFile    SourceFile?    @relation(fields: [sourceFileId], references: [id])
+  author        SolutionAuthor
+  contentMd     String // Markdown + LaTeX transcription
+  confidence    Float? // transcription confidence 0..1
+  pages         Int[]
+}
+
+enum CommentKind {
+  DEDUCTION // "מתח הסליל לא נכון" (−2)
+  PRAISE // "מרשים!"
+  HINT
+  RIGOR // "יש לנמק כל צעד", continuity / Riemann remarks
+  COMMON_MISTAKE
+}
+
+model LecturerComment {
+  id            String       @id @default(cuid())
+  sourceFileId  String?
+  sourceFile    SourceFile?  @relation(fields: [sourceFileId], references: [id])
+  subQuestionId String?
+  subQuestion   SubQuestion? @relation(fields: [subQuestionId], references: [id], onDelete: Cascade)
+  kind          CommentKind
+  text          String
+  pointsLost    Float?
+  maxPoints     Float?
+}
+
+// ───────────────────────── Progress ─────────────────────────
+
+enum ProgressStatus {
+  NOT_SOLVED
+  OK
+  STRUGGLED
+}
+
+model UserProgress {
+  id            String         @id @default(cuid())
+  userId        String         @db.Uuid
+  user          User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  questionId    String?
+  question      Question?      @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  subQuestionId String?
+  subQuestion   SubQuestion?   @relation(fields: [subQuestionId], references: [id], onDelete: Cascade)
+  status        ProgressStatus @default(NOT_SOLVED)
+  updatedAt     DateTime       @updatedAt
+
+  @@unique([userId, questionId])
+  @@unique([userId, subQuestionId])
+}
+
+model ExamAttempt {
+  id          String    @id @default(cuid())
+  userId      String    @db.Uuid
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  examId      String
+  exam        Exam      @relation(fields: [examId], references: [id], onDelete: Cascade)
+  simulation  Boolean   @default(true)
+  startedAt   DateTime  @default(now())
+  endsAt      DateTime? // startedAt + durationMinutes
+  submittedAt DateTime?
+  selfScore   Float?
+}
+
+model Submission {
+  id            String      @id @default(cuid())
+  userId        String      @db.Uuid
+  user          User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  subQuestionId String
+  subQuestion   SubQuestion @relation(fields: [subQuestionId], references: [id], onDelete: Cascade)
+  answerText    String?
+  answerImage   String? // storage path
+  score         Float?
+  maxScore      Float?
+  feedbackMd    String?
+  model         String?
+  createdAt     DateTime    @default(now())
+}
+
+/// Per-course grading "skill", exportable as SKILL.md
+model GradingProfile {
+  id         String   @id @default(cuid())
+  courseId   String   @unique
+  course     Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  skillMd    String
+  version    Int      @default(1)
+  updatedAt  DateTime @updatedAt
+}
+
+// ───────────────────────── Lab courses ─────────────────────────
+
+model Quiz {
+  id        String           @id @default(cuid())
+  courseId  String
+  course    Course           @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  title     String
+  order     Int              @default(0)
+  questions RecallQuestion[]
+}
+
+model RecallQuestion {
+  id          String        @id @default(cuid())
+  quizId      String
+  quiz        Quiz          @relation(fields: [quizId], references: [id], onDelete: Cascade)
+  prompt      String
+  choices     String[] // empty → open answer
+  answer      String
+  explanation String
+  states      RecallState[]
+}
+
+/// Spaced repetition (SM-2 style) state per user per recall question
+model RecallState {
+  userId           String         @db.Uuid
+  user             User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  recallQuestionId String
+  recallQuestion   RecallQuestion @relation(fields: [recallQuestionId], references: [id], onDelete: Cascade)
+  ease             Float          @default(2.5)
+  intervalDays     Int            @default(0)
+  reps             Int            @default(0)
+  lapses           Int            @default(0)
+  dueAt            DateTime       @default(now())
+  lastResult       Boolean?
+
+  @@id([userId, recallQuestionId])
+}
