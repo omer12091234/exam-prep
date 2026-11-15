@@ -1,10 +1,16 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
-import { isDemo } from "@/lib/demo";
+import { deployedWithoutAuth, isDemo } from "@/lib/demo";
 
 /** Refreshes the Supabase session cookie and gates everything except /login. */
 export async function proxy(request: NextRequest) {
   let response = NextResponse.next({ request });
+  if (deployedWithoutAuth) {
+    return new NextResponse(
+      "Supabase is not configured: set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY in the Vercel project settings.",
+      { status: 503, headers: { "content-type": "text/plain; charset=utf-8" } },
+    );
+  }
   if (isDemo) return response; // no Supabase configured → local demo, no auth
   const supabase = createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
