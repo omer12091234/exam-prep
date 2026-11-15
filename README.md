@@ -37,6 +37,6 @@ python3 -I ingest/crop.py ingest/example/extraction.json ingest/example/pages ou
 התוצאה בתיקייה `out/`: חיתוך לכל סעיף ולגוף השאלה, `manifest.json` ותמונות `overlay_*.jpg` לבדיקה.
 פרטים על תהליך הקליטה ב-[ingest/README.md](ingest/README.md).
 
-## Supabase (פרודקשן)
+## העלאה ל-Vercel עם Supabase
 
-ממלאים ב-`.env` את פרטי Supabase לפי ההערות ב-`.env.example`, ואז `npx prisma migrate deploy`.
+מדריך מלא, צעד אחרי צעד: [docs/DEPLOY.md](docs/DEPLOY.md).
