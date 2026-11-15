@@ -1,0 +1,3 @@
+# Local-only ingest tooling (Python). Without this, Vercel detects a Python project.
+ingest/
+out/
