@@ -1,6 +1,7 @@
 """Crop question / sub-question regions from rendered exam pages.
 
 Usage: python3 -I crop.py extraction.json pages_dir out_dir
+Example: python3 -I ingest/crop.py ingest/example/extraction.json ingest/example/pages out
 
 Claude supplies structure (subs, approximate boxes in "view" coordinates, and the
 number of text lines per sub). This script does the pixel-exact part:
@@ -94,11 +95,15 @@ def main():
     ex, pagedir, outdir = sys.argv[1:4]
     os.makedirs(outdir, exist_ok=True)
     data = json.load(open(ex))
-    report, cache = [], {}
+    report, cache, manifest = [], {}, []
     for q in data["questions"]:
         r0 = q["regions"][0]; pg, vw = r0["page"], r0["view"]
         if pg not in cache:
-            raw = Image.open(f"{pagedir}/p-{pg}.png").convert("RGB")
+            path = next((f"{pagedir}/p-{pg}.{ext}" for ext in ("png", "jpg", "jpeg")
+                         if os.path.exists(f"{pagedir}/p-{pg}.{ext}")), None)
+            if path is None:
+                sys.exit(f"missing page image {pagedir}/p-{pg}.png|jpg")
+            raw = Image.open(path).convert("RGB")
             ang = estimate_skew(raw)
             cache[pg] = (raw.rotate(ang, resample=Image.BICUBIC, fillcolor=(255, 255, 255)), ang)
         im, ang = cache[pg]
@@ -138,9 +143,18 @@ def main():
             spans = [(int(rotate_box((0, s["box"][1] * sy, 0, s["box"][1] * sy), W, H, ang)[1]),
                       int(rotate_box((0, s["box"][3] * sy, 0, s["box"][3] * sy), W, H, ang)[1]))
                      for s in subs]
-        for s, (top, bot) in zip(subs, spans):
+        def save(box, name, **meta):
+            im.crop(box).save(f"{outdir}/{name}", quality=88)
+            manifest.append({"file": name, "question": q["number"], "page": pg,
+                             "bbox": [round(box[0] / W, 4), round(box[1] / H, 4),
+                                      round(box[2] / W, 4), round(box[3] / H, 4)],
+                             "skew_deg": round(ang, 2), **meta})
+
+        for order, (s, (top, bot)) in enumerate(zip(subs, spans), start=1):
             box = (max(0, bx0 - pad), top, min(W, bx1 + pad), bot)
-            im.crop(box).save(f"{outdir}/Q{q['number']}_{s['label']}.png")
+            # ASCII file names (labels are Hebrew) – the label is kept in the manifest
+            save(box, f"Q{q['number']}_s{order}.webp", role="SUB", sub=s["label"], order=order,
+                 needs_review=not ok)
             d.rectangle(box, outline=(230, 0, 0), width=5)
         # stem / figure regions (a question may have several, e.g. a circuit after the subs)
         for i, r in enumerate(q["regions"]):
@@ -149,12 +163,15 @@ def main():
             rsx, rsy = W / r["view"][0], H / r["view"][1]
             x0, y0r, x1, y1r = rotate_box([v * s for v, s in zip(r["box"], (rsx, rsy, rsx, rsy))], W, H, ang)
             box = (max(0, int(x0) - pad), max(0, int(y0r) - pad), min(W, int(x1) + pad), min(H, int(y1r) + pad))
-            im.crop(box).save(f"{outdir}/Q{q['number']}_stem{i + 1}.png")
+            save(box, f"Q{q['number']}_stem{i + 1}.webp", role="STEM" if i == 0 else "FIGURE",
+                 order=i, needs_review=False)
             d.rectangle(box, outline=(0, 90, 255), width=5)
         for a, b in lines:
             d.line((min(W - 10, bx1 + 15), a, min(W - 10, bx1 + 15), b), fill=(0, 160, 0), width=8)
         ov.thumbnail((1100, 1500)); ov.save(f"{outdir}/overlay_Q{q['number']}.jpg", quality=80)
         report.append((q["number"], "line-order" if ok else "box-fallback(review)", len(lines), want, ang))
+    with open(f"{outdir}/manifest.json", "w", encoding="utf-8") as f:
+        json.dump(manifest, f, ensure_ascii=False, indent=1)
     for r in report:
         print("Q%d %s detected=%d expected=%d skew=%.1f°" % r)
 

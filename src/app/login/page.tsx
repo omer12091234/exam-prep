@@ -1,11 +1,22 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
+import { isDemo } from "@/lib/demo";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [state, setState] = useState<"idle" | "sent" | "error">("idle");
+
+  if (isDemo) {
+    return (
+      <main className="mx-auto mt-24 w-full max-w-sm p-6">
+        <p className="mb-4">מצב דמו: אין צורך בהתחברות.</p>
+        <Link href="/" className="underline">לדף הבית</Link>
+      </main>
+    );
+  }
 
   async function submit(e: React.FormEvent) {
     e.preventDefault();

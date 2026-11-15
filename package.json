@@ -7,7 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "postinstall": "prisma generate"
+    "postinstall": "prisma generate",
+    "db:start": "prisma dev -d -n exam-prep -P 51214",
+    "db:stop": "prisma dev stop exam-prep",
+    "db:setup": "prisma migrate deploy && prisma db seed",
+    "demo": "npm run db:start && npm run db:setup && next dev"
   },
   "dependencies": {
     "@prisma/adapter-pg": "^7.10.1",
@@ -31,6 +35,7 @@
     "eslint-config-next": "16.4.5",
     "prisma": "^7.10.1",
     "tailwindcss": "^4",
+    "tsx": "^4.20.3",
     "typescript": "^5"
   }
 }

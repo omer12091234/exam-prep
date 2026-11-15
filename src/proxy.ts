@@ -1,9 +1,11 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
+import { isDemo } from "@/lib/demo";
 
 /** Refreshes the Supabase session cookie and gates everything except /login. */
 export async function proxy(request: NextRequest) {
   let response = NextResponse.next({ request });
+  if (isDemo) return response; // no Supabase configured → local demo, no auth
   const supabase = createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!,

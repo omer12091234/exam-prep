@@ -1,0 +1,11 @@
+{
+ "_source": "פיתרון מועד א 2023.pdf – page 1 (Moodle grading summary, text layer). Graded student notebook, final 94.",
+ "rows": [
+  {"q": 2, "sub": 2, "score": 4, "max": 5, "kind": "DEDUCTION", "text": "וכאשר המכנה שלילי מה קורה ?"},
+  {"q": 2, "sub": 3, "score": 5, "max": 5, "kind": "PRAISE", "text": "מרשים!"},
+  {"q": 2, "sub": 4, "score": 5, "max": 5, "kind": "DEDUCTION", "text": "מתח הסליל לא נכון"},
+  {"q": 2, "sub": 5, "score": 3, "max": 5, "kind": "DEDUCTION", "text": ""},
+  {"q": 2, "sub": 6, "score": 3, "max": 5, "kind": "DEDUCTION", "text": "זב גם מה שקורה במצב הקודם"},
+  {"q": 3, "sub": 4, "score": 5, "max": 6, "kind": "DEDUCTION", "text": "הזוית של המקור לא נכונה ,הערך של מתח הקבל גדול יותר ממתח הסליל במצב שתיארנו."}
+ ]
+}

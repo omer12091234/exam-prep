@@ -1,9 +1,17 @@
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { db } from "@/lib/db";
+import { DEMO_USER, isDemo } from "@/lib/demo";
 
 /** Current user row (created on first visit). Redirects to /login when signed out. */
 export async function requireUser() {
+  if (isDemo) {
+    return db.user.upsert({
+      where: { id: DEMO_USER.id },
+      update: {},
+      create: { ...DEMO_USER, role: "ADMIN" },
+    });
+  }
   const supabase = await createClient();
   const { data } = await supabase.auth.getUser();
   if (!data.user) redirect("/login");
