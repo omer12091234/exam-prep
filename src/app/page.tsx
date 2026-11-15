@@ -2,6 +2,8 @@ import { Suspense } from "react";
 import Link from "next/link";
 import { db } from "@/lib/db";
 import { requireUser } from "@/lib/auth";
+import { ProgressBar } from "@/components/ProgressBar";
+import { emptyCounts, examCounts, sumCounts } from "@/lib/progress";
 
 export default function Home() {
   return (
@@ -18,8 +20,15 @@ async function Courses() {
   const user = await requireUser();
   const courses = await db.course.findMany({
     orderBy: { name: "asc" },
-    include: { _count: { select: { exams: { where: { published: true } } } } },
+    include: { exams: { where: { published: true }, select: { id: true } } },
   });
+  const perExam = await examCounts(
+    user.id,
+    courses.flatMap((c) => c.exams.map((e) => e.id)),
+  );
+  const courseCounts = new Map(
+    courses.map((c) => [c.id, sumCounts(c.exams.map((e) => perExam.get(e.id) ?? emptyCounts()))]),
+  );
 
   return (
     <>
@@ -36,8 +45,13 @@ async function Courses() {
               >
                 <div className="font-semibold">{c.name}</div>
                 <div className="text-sm text-neutral-500">
-                  {c.type === "LAB" ? "מעבדה" : `${c._count.exams} מבחנים`}
+                  {c.type === "LAB" ? "מעבדה" : `${c.exams.length} מבחנים`}
                 </div>
+                {c.type !== "LAB" && (
+                  <div className="mt-3">
+                    <ProgressBar counts={courseCounts.get(c.id) ?? emptyCounts()} />
+                  </div>
+                )}
               </Link>
             </li>
           ))}
