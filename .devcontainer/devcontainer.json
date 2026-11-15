@@ -1,0 +1,18 @@
+{
+  // Demo in GitHub Codespaces: https://codespaces.new/omer12091234/exam-prep
+  // Creates .env from the template (demo mode), installs, then starts the local DB,
+  // migrations, seed and the site. Port 3000 is forwarded privately (only you can open it).
+  "name": "exam-prep demo",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+  "postCreateCommand": "cp -n .env.example .env && npm ci",
+  "postAttachCommand": "npm run demo",
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": { "label": "exam-prep demo", "onAutoForward": "openBrowser" },
+    "51214": { "label": "demo database", "onAutoForward": "ignore" }
+  },
+  "otherPortsAttributes": { "onAutoForward": "ignore" },
+  "customizations": {
+    "codespaces": { "openFiles": ["README.md"] }
+  }
+}
