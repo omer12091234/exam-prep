@@ -15,9 +15,25 @@ export function MathText({ text, className }: { text: string; className?: string
         if (p.length > 1 && p.startsWith("$") && p.endsWith("$")) {
           return <Formula key={i} tex={p.slice(1, -1)} />;
         }
-        return <span key={i}>{p}</span>;
+        return <Plain key={i} text={p} />;
       })}
     </span>
+  );
+}
+
+/** Non-math text; supports **bold** (the exams bold words like "מעתה"). */
+function Plain({ text }: { text: string }) {
+  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  return (
+    <>
+      {parts.map((p, i) =>
+        p.startsWith("**") && p.endsWith("**") && p.length > 4 ? (
+          <strong key={i}>{p.slice(2, -2)}</strong>
+        ) : (
+          <span key={i}>{p}</span>
+        ),
+      )}
+    </>
   );
 }
 

@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# exam-prep
 
-## Getting Started
+אתר לתרגול ומעקב למידה למבחנים. Next.js 16, Prisma 7, Supabase.
 
-First, run the development server:
+## הרצת הדוגמה (מקומית, בלי Supabase ובלי Docker)
+
+צריך Node.js 20 ומעלה.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+cp .env.example .env
+npm install
+npm run demo
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+`npm run demo` מפעיל Postgres מקומי (`prisma dev`, פורט 51214), מריץ migrations,
+טוען את מבחן מבוא להנדסת חשמל 1, 2023 מועד א' (3 שאלות, 19 סעיפים, חיתוכים והערות בודק)
+ומפעיל את האתר ב-http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+כשאין `NEXT_PUBLIC_SUPABASE_URL` ב-`.env` האתר רץ במצב דמו: אין התחברות, ויש משתמש אדמין מקומי אחד.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+פקודות נוספות:
 
-## Learn More
+| פקודה | מה עושה |
+|---|---|
+| `npm run db:start` / `npm run db:stop` | הפעלה / עצירה של ה-Postgres המקומי |
+| `npm run db:setup` | migrations + seed (בטוח להריץ שוב) |
+| `npm run dev` | רק האתר, כשה-DB כבר רץ |
 
-To learn more about Next.js, take a look at the following resources:
+## דוגמת החיתוך
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+צריך Python 3 עם `pip install -r ingest/requirements.txt`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+python3 -I ingest/crop.py ingest/example/extraction.json ingest/example/pages out
+```
 
-## Deploy on Vercel
+התוצאה בתיקייה `out/`: חיתוך לכל סעיף ולגוף השאלה, `manifest.json` ותמונות `overlay_*.jpg` לבדיקה.
+פרטים על תהליך הקליטה ב-[ingest/README.md](ingest/README.md).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Supabase (פרודקשן)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+ממלאים ב-`.env` את פרטי Supabase לפי ההערות ב-`.env.example`, ואז `npx prisma migrate deploy`.
