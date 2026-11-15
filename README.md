@@ -4,7 +4,7 @@
 
 ## הרצת הדוגמה (מקומית, בלי Supabase ובלי Docker)
 
-צריך Node.js 20 ומעלה.
+צריך Node.js 22 (מומלץ) או לפחות 20.19 – גרסאות 20 ישנות יותר לא יעבדו עם Prisma.
 
 ```bash
 cp .env.example .env
