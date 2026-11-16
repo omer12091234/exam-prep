@@ -30,6 +30,22 @@ model User {
   attempts    ExamAttempt[]
   submissions Submission[]
   recall      RecallState[]
+  enrollments Enrollment[]
+  times       QuestionTime[]
+  gradings    Grading[]
+  /// false until the user picked courses once (onboarding)
+  onboarded   Boolean        @default(false)
+}
+
+/// Courses a user follows. Users pick their own; admins can edit anyone's.
+model Enrollment {
+  userId    String   @db.Uuid
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  courseId  String
+  course    Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+
+  @@id([userId, courseId])
 }
 
 // ───────────────────────── Catalogue ─────────────────────────
@@ -51,6 +67,23 @@ model Course {
   sourceFiles    SourceFile[]
   gradingProfile GradingProfile?
   quizzes        Quiz[]
+  enrollments    Enrollment[]
+  docs           CourseDoc[]
+}
+
+/// Long-form course material (translated lectures). HTML is sanitised on render.
+model CourseDoc {
+  id        String  @id @default(cuid())
+  courseId  String
+  course    Course  @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  key       String
+  title     String
+  order     Int     @default(0)
+  note      String?
+  sourceUrl String?
+  html      String
+
+  @@unique([courseId, key])
 }
 
 model Lecturer {
@@ -67,9 +100,18 @@ model Topic {
   order     Int             @default(0)
   summaryMd String? // topic summary (Markdown + LaTeX)
   tipsMd    String? // tips page built from lecturer/grader comments
+  /// Key inside the import file (t1, t2…)
+  key         String?
+  /// Sanitised on render. Math as \\( … \\) / \\[ … \\]
+  summaryHtml String?
+  formulas    String[]
+  pitfalls    String[]
   questions QuestionTopic[]
+  subQuestions SubQuestionTopic[]
+  practice  PracticeQuestion[]
 
   @@unique([courseId, name])
+  @@unique([courseId, key])
 }
 
 enum Semester {
@@ -106,11 +148,18 @@ model Exam {
   /// Computed 1–5 difficulty used for recommendations
   difficulty      Float?
   published       Boolean       @default(false)
+  /// Display title from the import ("מועד א׳ חורף 2026 (ביליק)"); null → built from year/semester/moed
+  title           String?
+  sourceUrl       String? // original file in Drive
+  hasSolution     Boolean       @default(false)
+  /// Stable key of an imported exam; several exams may share year/semester/moed (parts, parallel courses)
+  importKey       String?       @unique
   questions       Question[]
   sourceFiles     SourceFile[]
   attempts        ExamAttempt[]
+  gradings        Grading[]
 
-  @@unique([courseId, year, semester, moed, origin])
+  @@index([courseId])
 }
 
 enum SourceKind {
@@ -159,6 +208,8 @@ model Question {
   examId        String
   exam          Exam            @relation(fields: [examId], references: [id], onDelete: Cascade)
   number        Int
+  /// Display label when the exam numbers by part ("א8-9"); null → the number
+  label         String?
   points        Float?
   stemText      String // Hebrew + inline LaTeX ($...$)
   figuresNote   String? // textual description of figures for accessibility/search
@@ -168,6 +219,8 @@ model Question {
   images        QuestionImage[]
   topics        QuestionTopic[]
   progress      UserProgress[]
+  times         QuestionTime[]
+  gradings      Grading[]
 
   @@unique([examId, number])
 }
@@ -186,6 +239,7 @@ model SubQuestion {
   solutions   Solution[]
   progress    UserProgress[]
   submissions Submission[]
+  topics      SubQuestionTopic[]
 
   @@unique([questionId, label])
 }
@@ -198,6 +252,28 @@ model QuestionTopic {
   isPrimary  Boolean  @default(true)
 
   @@id([questionId, topicId])
+}
+
+model SubQuestionTopic {
+  subQuestionId String
+  subQuestion   SubQuestion @relation(fields: [subQuestionId], references: [id], onDelete: Cascade)
+  topicId       String
+  topic         Topic       @relation(fields: [topicId], references: [id], onDelete: Cascade)
+
+  @@id([subQuestionId, topicId])
+  @@index([topicId])
+}
+
+/// Extra practice question per topic (not from an exam), with hint and solution.
+model PracticeQuestion {
+  id         String @id @default(cuid())
+  topicId    String
+  topic      Topic  @relation(fields: [topicId], references: [id], onDelete: Cascade)
+  order      Int    @default(0)
+  difficulty Int    @default(2)
+  question   String
+  hint       String?
+  solution   String?
 }
 
 enum ImageRole {
@@ -269,6 +345,7 @@ enum ProgressStatus {
   NOT_SOLVED
   OK
   STRUGGLED
+  FAILED // tried and did not manage
 }
 
 model UserProgress {
@@ -312,6 +389,45 @@ model Submission {
   feedbackMd    String?
   model         String?
   createdAt     DateTime    @default(now())
+}
+
+/// Seconds a user spent on a question (stopwatch on the exam / topic pages).
+model QuestionTime {
+  userId     String   @db.Uuid
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  questionId String
+  question   Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  seconds    Int      @default(0)
+  updatedAt  DateTime @updatedAt
+
+  @@id([userId, questionId])
+}
+
+enum GradingStatus {
+  PENDING
+  DONE
+  FAILED
+}
+
+/// A solution the user sent for checking (whole exam or one question) and the checked report.
+model Grading {
+  id         String        @id @default(cuid())
+  userId     String        @db.Uuid
+  user       User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  examId     String
+  exam       Exam          @relation(fields: [examId], references: [id], onDelete: Cascade)
+  questionId String? // null → whole exam
+  question   Question?     @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  fileNames  String[]
+  status     GradingStatus @default(PENDING)
+  score      Float?
+  maxScore   Float?
+  reportMd   String?
+  error      String?
+  model      String?
+  createdAt  DateTime      @default(now())
+
+  @@index([userId, examId])
 }
 
 /// Per-course grading "skill", exportable as SKILL.md

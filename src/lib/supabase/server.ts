@@ -11,7 +11,9 @@ export async function createClient() {
         getAll: () => cookieStore.getAll(),
         setAll: (toSet) => {
           try {
-            toSet.forEach(({ name, value, options }) => cookieStore.set(name, value, options));
+            toSet.forEach(({ name, value, options }) =>
+              cookieStore.set(name, value, options),
+            );
           } catch {
             // called from a Server Component – the proxy refreshes the session instead
           }

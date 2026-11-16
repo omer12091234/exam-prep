@@ -1,12 +1,28 @@
 import { db } from "@/lib/db";
 import type { ProgressStatus } from "@/generated/prisma/client";
 
-export type Counts = { ok: number; struggled: number; total: number };
+export type Counts = {
+  ok: number;
+  struggled: number;
+  failed: number;
+  total: number;
+};
 
-export const emptyCounts = (total = 0): Counts => ({ ok: 0, struggled: 0, total });
+export const emptyCounts = (total = 0): Counts => ({
+  ok: 0,
+  struggled: 0,
+  failed: 0,
+  total,
+});
 
-/** "Solved" = attempted, whether it went fine or was a struggle. */
-export const solved = (c: Counts) => c.ok + c.struggled;
+/** "Done" = attempted, whatever the outcome. */
+export const solved = (c: Counts) => c.ok + c.struggled + c.failed;
+
+function add(c: Counts, s: ProgressStatus | undefined) {
+  if (s === "OK") c.ok++;
+  else if (s === "STRUGGLED") c.struggled++;
+  else if (s === "FAILED") c.failed++;
+}
 
 /** Status of each sub-question for a user (missing → NOT_SOLVED). */
 export async function subStatuses(userId: string, subIds: string[]) {
@@ -19,43 +35,91 @@ export async function subStatuses(userId: string, subIds: string[]) {
   return map;
 }
 
-export function countStatuses(subIds: string[], statuses: Map<string, ProgressStatus>): Counts {
+export function countStatuses(
+  subIds: string[],
+  statuses: Map<string, ProgressStatus>,
+): Counts {
   const c = emptyCounts(subIds.length);
-  for (const id of subIds) {
-    const s = statuses.get(id);
-    if (s === "OK") c.ok++;
-    else if (s === "STRUGGLED") c.struggled++;
-  }
+  for (const id of subIds) add(c, statuses.get(id));
   return c;
 }
 
-/** Per-exam counts for a set of exams (one query for the subs, one for progress). */
-export async function examCounts(userId: string, examIds: string[]) {
-  const subs = await db.subQuestion.findMany({
-    where: { question: { examId: { in: examIds } } },
-    select: { id: true, question: { select: { examId: true } } },
-  });
-  const statuses = await subStatuses(
-    userId,
-    subs.map((s) => s.id),
+export type DoneLeft = { done: number; started: number; total: number };
+export type CourseStats = {
+  /** sub-question counts */
+  counts: Counts;
+  /** an exam is done when every part of it has a status; started when at least one has */
+  exams: DoneLeft;
+  /** a question is done when every part of it has a status */
+  questions: DoneLeft;
+  perExam: Map<string, Counts>;
+};
+
+const emptyStats = (): CourseStats => ({
+  counts: emptyCounts(),
+  exams: { done: 0, started: 0, total: 0 },
+  questions: { done: 0, started: 0, total: 0 },
+  perExam: new Map(),
+});
+
+/** Progress of one user in each course: parts, questions and exams done / left. Two queries. */
+export async function courseStats(userId: string, courseIds: string[]) {
+  const stats = new Map<string, CourseStats>(
+    courseIds.map((id) => [id, emptyStats()]),
   );
-  const byExam = new Map<string, Counts>(examIds.map((id) => [id, emptyCounts()]));
+  if (courseIds.length === 0) return stats;
+  const subs = await db.subQuestion.findMany({
+    where: {
+      question: { exam: { courseId: { in: courseIds }, published: true } },
+    },
+    select: {
+      id: true,
+      questionId: true,
+      question: {
+        select: { examId: true, exam: { select: { courseId: true } } },
+      },
+    },
+  });
+  const progress = await db.userProgress.findMany({
+    where: {
+      userId,
+      status: { not: "NOT_SOLVED" },
+      subQuestion: { question: { exam: { courseId: { in: courseIds } } } },
+    },
+    select: { subQuestionId: true, status: true },
+  });
+  const status = new Map(progress.map((p) => [p.subQuestionId!, p.status]));
+
+  const perQuestion = new Map<
+    string,
+    { courseId: string; done: number; total: number }
+  >();
   for (const s of subs) {
-    const c = byExam.get(s.question.examId)!;
-    c.total++;
-    const st = statuses.get(s.id);
-    if (st === "OK") c.ok++;
-    else if (st === "STRUGGLED") c.struggled++;
+    const { examId } = s.question;
+    const courseId = s.question.exam.courseId;
+    const cs = stats.get(courseId)!;
+    const st = status.get(s.id);
+    let ec = cs.perExam.get(examId);
+    if (!ec) cs.perExam.set(examId, (ec = emptyCounts()));
+    for (const c of [cs.counts, ec]) {
+      c.total++;
+      add(c, st);
+    }
+    let q = perQuestion.get(s.questionId);
+    if (!q)
+      perQuestion.set(s.questionId, (q = { courseId, done: 0, total: 0 }));
+    q.total++;
+    if (st) q.done++;
   }
-  return byExam;
+  for (const q of perQuestion.values())
+    tally(stats.get(q.courseId)!.questions, q.done, q.total);
+  for (const cs of stats.values())
+    for (const c of cs.perExam.values()) tally(cs.exams, solved(c), c.total);
+  return stats;
 }
 
-export function sumCounts(list: Iterable<Counts>): Counts {
-  const t = emptyCounts();
-  for (const c of list) {
-    t.ok += c.ok;
-    t.struggled += c.struggled;
-    t.total += c.total;
-  }
-  return t;
+function tally(t: DoneLeft, done: number, total: number) {
+  t.total++;
+  if (done > 0) t.started++;
+  if (done === total) t.done++;
 }

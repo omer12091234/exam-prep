@@ -1,0 +1,3920 @@
+{
+ "course": {
+  "name": "מבוא להנדסת חשמל",
+  "code": "361.1.1021"
+ },
+ "sources": [
+  {
+   "title": "נושאי לימוד (סילבוס הקורס)",
+   "url": "https://drive.google.com/file/d/1lebmKcBhKuYQmp-ir_IpaDaP7HnZeM41/view?usp=drivesdk",
+   "kind": "other"
+  },
+  {
+   "title": "הרצאות גיא כהן 2010",
+   "url": "https://drive.google.com/file/d/1jiwHf0qlTXUIyq6OVZNYbwVsSzhJB5-b/view?usp=drivesdk",
+   "kind": "lecture"
+  },
+  {
+   "title": "תיקיית הרצאות (כולל מתן גל)",
+   "url": "https://drive.google.com/drive/folders/1HO5gbNPtTV7zxdfawrZetfPEZM1F44Mr",
+   "kind": "lecture"
+  },
+  {
+   "title": "חשמל מרצה - מתן גל (הרצאות, תרגולים, עבודות)",
+   "url": "https://drive.google.com/drive/folders/1WTIyVqZqIdjwihpzLkg0hC0jslc4GiEk",
+   "kind": "lecture"
+  },
+  {
+   "title": "נועם עובד - סיכום כל החומר מבוא לחשמל",
+   "url": "https://drive.google.com/file/d/1R1xmogQm_itC_Ug5zgeltVosBxZm-JYu/view?usp=drivesdk",
+   "kind": "summary"
+  },
+  {
+   "title": "מבוא לחשמל - סיכום לפי הרצאות",
+   "url": "https://drive.google.com/file/d/1PVzAsA-nS7YC3i-5I5oUcGZPqSvxagk0/view?usp=drivesdk",
+   "kind": "summary"
+  },
+  {
+   "title": "סיכום מבוא לחשמל - אסף (שנים קודמות)",
+   "url": "https://drive.google.com/file/d/12tTahTavgXY7hywoOF6Tymk8tFqu8irN/view?usp=drivesdk",
+   "kind": "summary"
+  },
+  {
+   "title": "אלגוריתם למשוואות מצב - אופיר כהן",
+   "url": "https://drive.google.com/file/d/1jaW4yFP1HiZFtk1SU7-NpTu0EzVDGnAU/view?usp=drivesdk",
+   "kind": "summary"
+  },
+  {
+   "title": "סיכום מושגים והגדרות מבוא להנדסת חשמל",
+   "url": "https://drive.google.com/file/d/1Pj4YTsUmtaro52MpsGJvmx1kXFVF9mKF/view?usp=drivesdk",
+   "kind": "summary"
+  },
+  {
+   "title": "תיקיית תרגולים",
+   "url": "https://drive.google.com/drive/folders/1pa3BqdPrVmREIZAeNTd4pKjlZsWqUzXY",
+   "kind": "tutorial"
+  },
+  {
+   "title": "תרגולים חן (מתרגל 2023) + סיכום",
+   "url": "https://drive.google.com/drive/folders/1kSkPvwf0ySxFZMs6lTEitEJTwySV5iQW",
+   "kind": "tutorial"
+  },
+  {
+   "title": "תרגיל בית 2 - נגדים",
+   "url": "https://drive.google.com/file/d/17gOYUyQffm915F81Q0kW_xX5sgbTjhhA/view?usp=drivesdk",
+   "kind": "homework"
+  },
+  {
+   "title": "תיקיית תרגילי בית",
+   "url": "https://drive.google.com/drive/folders/1Cz3GInWev7-yFp_P5CLW4-Z1xdQSW8Hn",
+   "kind": "homework"
+  },
+  {
+   "title": "ריכוז תרגילים - דיודות",
+   "url": "https://drive.google.com/file/d/13Tu3nDHHu2MfzBsovK4V2wGBeKDbnDaJ/view?usp=drivesdk",
+   "kind": "exam"
+  },
+  {
+   "title": "ריכוז תרגילים - מעגלי L.T.I",
+   "url": "https://drive.google.com/file/d/12yS203Ox4tybQXVV1c7Y7R6OUtUm0QbJ/view?usp=drivesdk",
+   "kind": "exam"
+  },
+  {
+   "title": "ריכוז תרגילים - תורת המערכות",
+   "url": "https://drive.google.com/file/d/1kqU6tlD2zVPgMc4EMxm4oMbkbSoi2rzI/view?usp=drivesdk",
+   "kind": "exam"
+  },
+  {
+   "title": "ריכוז תרגילים - משוואות מצב",
+   "url": "https://drive.google.com/file/d/1LtL4gxq7gA2CKzFVg-m7lcoyFwnZgsnh/view?usp=drivesdk",
+   "kind": "exam"
+  },
+  {
+   "title": "ריכוז תרגילים - תמסורות",
+   "url": "https://drive.google.com/file/d/1ZG_Bb1f9YjGUaapb7aLb23psxQxFbv__/view?usp=drivesdk",
+   "kind": "exam"
+  },
+  {
+   "title": "ריכוז תרגילים - פאזורים",
+   "url": "https://drive.google.com/file/d/1rzRNZsVJu8wem9-DTpX4vI9aYL5HtzAM/view?usp=drivesdk",
+   "kind": "exam"
+  },
+  {
+   "title": "שאלות ממבחנים + פתרונות, מסודר לפי נושאים",
+   "url": "https://drive.google.com/file/d/1QHxeOpxsesQsRKATbc5xab4xomwYo9Vi/view?usp=drivesdk",
+   "kind": "exam"
+  },
+  {
+   "title": "סוגי שאלות ונושאים מרכזיים שיש במבחנים 2023",
+   "url": "https://drive.google.com/file/d/1ioRZTHqqxXI3lKPmDc6sUN-iDIkW5lcO/view?usp=drivesdk",
+   "kind": "exam"
+  },
+  {
+   "title": "מיפוי מועדים (מסמך)",
+   "url": "https://docs.google.com/document/d/1_vlw4MGj4Yri89qBR87nIb9Xwiy8Fl_KMwOZXOFau7c/edit",
+   "kind": "other"
+  },
+  {
+   "title": "תיקיית מבחנים גיא כהן (לפי שנים)",
+   "url": "https://drive.google.com/drive/folders/1pReuVT2qWQ8x1WhofuhBr6DAGe90DwGW",
+   "kind": "exam"
+  },
+  {
+   "title": "תיקיית מבחנים (תיקיית הסטודנט)",
+   "url": "https://drive.google.com/drive/folders/1M6BeSp7vAxWyonfjHzOzYbV_uzmbQKQn",
+   "kind": "exam"
+  },
+  {
+   "title": "פתרונות מבחן 2025",
+   "url": "https://drive.google.com/drive/folders/1tuj9q3MWiy9lCJgSg1_jooYxw56WZ0oc",
+   "kind": "exam"
+  },
+  {
+   "title": "תרגול מודפס 6 - מעגלים מסדר ראשון (ZIR/ZSR)",
+   "url": "https://drive.google.com/file/d/1tCigBw-tgHHDPwtdoWIP8m92f_5vx4Cp/view?usp=drivesdk",
+   "kind": "tutorial"
+  },
+  {
+   "title": "תרגול מודפס 13 - סלילים מצומדים ותרגילים נוספים",
+   "url": "https://drive.google.com/file/d/19GL-IK32FO8P-9S3Fowkw8qXWzOKzIjq/view?usp=drivesdk",
+   "kind": "tutorial"
+  },
+  {
+   "title": "תרגולים מודפסים שהיו במודל (תיקייה)",
+   "url": "https://drive.google.com/drive/folders/1fe4BLFpvkcoBOWm_RTI60RoYoNbeEp1q",
+   "kind": "tutorial"
+  },
+  {
+   "title": "מבחני תשפ\"א של תימור מלמד + פתרונות (תיקייה)",
+   "url": "https://drive.google.com/drive/folders/1jBusCnH6ilwrMGa2WgRlK4p5eBPhuw6I",
+   "kind": "exam"
+  }
+ ],
+ "topics": [
+  {
+   "id": "t1",
+   "title": "מושגי יסוד, רכיבים מקובצים וחוקי קירכהוף",
+   "summary_html": "<p><strong>אינטואיציה.</strong> מעגל חשמלי הוא אוסף רכיבים המחוברים בהדקים. בקורס מניחים <strong>רכיבים מקובצים</strong> (lumped): ממדי המעגל קטנים בהרבה מאורך הגל, ולכן לכל רכיב יש מתח \\(v(t)\\) בין הדקיו וזרם \\(i(t)\\) דרכו, והחוקים הם אלגבריים ולא משוואות שדה.</p>\n<h4>הגדרות</h4>\n<ul>\n<li><strong>זרם</strong> הוא קצב מעבר מטען: \\(i(t)=\\frac{dq}{dt}\\). <strong>מתח</strong> הוא הפרש פוטנציאלים (עבודה ליחידת מטען).</li>\n<li><strong>מוסכמת הצרכן</strong> (כיווני ייחוס מתואמים): הזרם נכנס להדק ה־\"+\". אז ההספק הנצרך ברכיב הוא \\(p(t)=v(t)i(t)\\), והאנרגיה שנמסרה לו: \\(W=\\int p\\,dt\\).</li>\n<li>רכיב <strong>פאסיבי</strong>: האנרגיה הכוללת שנמסרה לו אינה שלילית לכל זמן, \\(\\int_{-\\infty}^{t}v\\,i\\,d\\tau\\ge 0\\).</li>\n</ul>\n<h4>חוקי קירכהוף</h4>\n<ul>\n<li><strong>KCL</strong>: סכום הזרמים היוצאים מכל צומת (או מכל משטח סגור) הוא אפס — שימור מטען.</li>\n<li><strong>KVL</strong>: סכום המתחים לאורך כל חוג סגור הוא אפס — שימור אנרגיה.</li>\n<li>החוקים אינם תלויים באופי הרכיבים (לינארי/לא לינארי, קבוע/משתנה בזמן). מהם נובע <strong>משפט טלגן</strong>: \\(\\sum_k v_k i_k=0\\) — מאזן הספקים במעגל.</li>\n</ul>\n<h4>דוגמה קצרה</h4>\n<p>מקור \\(10\\,\\mathrm{V}\\) בטור עם נגד \\(2\\,\\Omega\\) ומקור \\(4\\,\\mathrm{V}\\) המחובר בקוטביות נגדית. KVL: \\(10-2i-4=0\\Rightarrow i=3\\,\\mathrm{A}\\). מקור ה־10V מספק \\(30\\,\\mathrm{W}\\), הנגד צורך \\(18\\,\\mathrm{W}\\) ומקור ה־4V צורך \\(12\\,\\mathrm{W}\\) — המאזן נסגר.</p>\n<p><strong>במבחנים של הקורס</strong> נדרש \"לנמק כל צעד ולציין כל שיקול פיסיקלי\": כותבים במפורש אילו משוואות הן KCL/KVL ואילו הן משוואות רכיב.</p>",
+   "formulas": [
+    "i(t)=\\frac{dq(t)}{dt}",
+    "p(t)=v(t)\\,i(t)",
+    "W(t_1,t_2)=\\int_{t_1}^{t_2}v(t)i(t)\\,dt",
+    "\\sum_{k\\in\\text{node}} i_k=0",
+    "\\sum_{k\\in\\text{loop}} v_k=0",
+    "\\sum_k v_k i_k=0"
+   ],
+   "pitfalls": [
+    "בלבול בסימן ההספק: עם מוסכמת צרכן \\(p>0\\) פירושו צריכה; במקור הזרם בדרך כלל יוצא מה־\"+\" ולכן \\(p< 0\\) (הספקה).",
+    "שכחה לסמן כיווני ייחוס לפני כתיבת KCL/KVL — הכיוון שרירותי אך חייב להיות עקבי.",
+    "KVL תקף גם על חוג שעובר דרך 'אוויר' בין שני הדקים פתוחים — כך מגדירים מתח ריקם."
+   ]
+  },
+  {
+   "id": "t2",
+   "title": "רכיבי המעגל: נגד, קבל, סליל ומקורות (לינארי/לא לינארי, קבוע/משתנה בזמן)",
+   "summary_html": "<p><strong>אינטואיציה.</strong> כל רכיב דו־הדקי מוגדר על ידי <strong>אופיין</strong> — קשר בין שני גדלים: נגד במישור \\(v\\!-\\!i\\), קבל במישור \\(q\\!-\\!v\\), סליל במישור \\(\\phi\\!-\\!i\\). הרכיב <strong>לינארי</strong> אם האופיין הוא ישר דרך הראשית, ו<strong>קבוע בזמן</strong> אם האופיין אינו משתנה עם \\(t\\). במבחני הקורס מופיעים לעיתים קרובות רכיבים משתנים בזמן כמו \\(R(t)=1+t\\) או \\(C(t)=a+t\\), וקבלים עם אופיין \\(q(t,v)\\) נתון בגרף.</p>\n<h4>הרכיבים</h4>\n<table>\n<tr><td><strong>רכיב</strong></td><td><strong>אופיין כללי</strong></td><td><strong>לינארי וקבוע בזמן</strong></td><td><strong>אנרגיה אגורה</strong></td></tr>\n<tr><td>נגד</td><td>\\(f(v,i,t)=0\\)</td><td>\\(v=Ri\\)</td><td>אין (מבזבז \\(p=i^2R\\))</td></tr>\n<tr><td>קבל</td><td>\\(q=q(v,t)\\), \\(i=\\frac{dq}{dt}\\)</td><td>\\(i=C\\frac{dv}{dt}\\)</td><td>\\(\\tfrac12Cv^2\\)</td></tr>\n<tr><td>סליל</td><td>\\(\\phi=\\phi(i,t)\\), \\(v=\\frac{d\\phi}{dt}\\)</td><td>\\(v=L\\frac{di}{dt}\\)</td><td>\\(\\tfrac12Li^2\\)</td></tr>\n</table>\n<ul>\n<li>קבל לינארי <strong>משתנה בזמן</strong>: \\(q=C(t)v\\) ולכן \\(i=\\frac{d}{dt}\\big(C(t)v\\big)=C(t)\\dot v+\\dot C(t)v\\) — נגזרת של מכפלה!</li>\n<li><strong>רציפות</strong>: מתח קבל (ליתר דיוק המטען) וזרם סליל (השטף) רציפים בזמן, אלא אם יש הלם זרם/מתח. צורה אינטגרלית: \\(v_C(t)=v_C(t_0)+\\frac1C\\int_{t_0}^t i\\,d\\tau\\).</li>\n<li><strong>מקורות בלתי תלויים אידיאליים</strong>: מקור מתח קובע מתח לכל זרם; מקור זרם קובע זרם לכל מתח. מקור לא אידיאלי = מקור אידיאלי + התנגדות פנימית (טורית למקור מתח, מקבילית למקור זרם).</li>\n<li>במצב DC מתמיד: קבל = נתק, סליל = קצר.</li>\n</ul>\n<h4>דוגמה</h4>\n<p>קבל \\(C(t)=1+t\\) במקביל לנגד \\(R=1\\), \\(v(0)=V_0\\). KCL: \\(\\frac{d}{dt}[(1+t)v]+v=0\\Rightarrow(1+t)\\dot v=-2v\\Rightarrow v(t)=\\frac{V_0}{(1+t)^2}\\).</p>",
+   "formulas": [
+    "v=Ri,\\quad p=i^2R=\\frac{v^2}{R}",
+    "i_C=\\frac{dq}{dt}=C\\frac{dv_C}{dt}",
+    "v_L=\\frac{d\\phi}{dt}=L\\frac{di_L}{dt}",
+    "i_C=\\frac{d}{dt}\\big(C(t)v\\big)=C(t)\\dot v+\\dot C(t)v",
+    "W_C=\\tfrac12Cv^2,\\quad W_L=\\tfrac12Li^2",
+    "v_C(t)=v_C(t_0)+\\frac1C\\int_{t_0}^{t}i(\\tau)\\,d\\tau"
+   ],
+   "pitfalls": [
+    "ברכיב משתנה בזמן אסור לכתוב \\(i=C\\dot v\\); חייבים לגזור את המטען \\(q=C(t)v\\).",
+    "מתח קבל רציף רק כשהזרם סופי — בכניסת הלם \\(\\delta(t)\\) המתח קופץ ב־\\(1/C\\).",
+    "לינאריות נבדקת על האופיין (הומוגניות + אדיטיביות), לא על כך שהרכיב 'נראה פשוט'; נגד עם אופיין לינארי למקוטעין אינו לינארי."
+   ]
+  },
+  {
+   "id": "t3",
+   "title": "שיטות ניתוח רשתות: צמתים, חוגים, סופרפוזיציה, תבנין ונורטון, מקורות תלויים",
+   "summary_html": "<p><strong>אינטואיציה.</strong> רשת נגדית לינארית מתוארת במערכת משוואות לינאריות. השיטות השונות הן דרכים שיטתיות לכתוב ולצמצם את המשוואות.</p>\n<h4>כלים בסיסיים</h4>\n<ul>\n<li>חיבור טורי: \\(R_{eq}=\\sum R_k\\); חיבור מקבילי: \\(\\frac1{R_{eq}}=\\sum\\frac1{R_k}\\). מחלק מתח ומחלק זרם.</li>\n<li><strong>התמרת מקורות</strong>: מקור מתח \\(V_s\\) בטור עם \\(R\\) שקול למקור זרם \\(V_s/R\\) במקביל ל־\\(R\\).</li>\n</ul>\n<h4>שיטות שיטתיות</h4>\n<ul>\n<li><strong>מתחי צמתים</strong>: בוחרים צומת ייחוס, כותבים KCL בכל צומת אחר כשהזרמים מבוטאים במתחי הצמתים.</li>\n<li><strong>זרמי חוגים (רשת)</strong>: מגדירים זרם לכל חוג בלתי תלוי וכותבים KVL.</li>\n<li><strong>סופרפוזיציה</strong>: ברשת לינארית התגובה היא סכום התגובות לכל מקור בלתי תלוי בנפרד (מקור מתח מאופס = קצר, מקור זרם מאופס = נתק). <strong>מקורות תלויים אינם מאופסים</strong>.</li>\n</ul>\n<h4>תבנין ונורטון</h4>\n<p>כל דו־הדק לינארי שקול למקור מתח \\(V_{th}\\) בטור עם \\(R_{th}\\) (תבנין), או למקור זרם \\(I_N\\) במקביל ל־\\(R_{th}\\) (נורטון). \\(V_{th}\\) הוא מתח הריקם, \\(I_N\\) זרם הקצר, ו־\\(R_{th}=V_{th}/I_N\\). לחלופין מאפסים מקורות בלתי תלויים ומחשבים התנגדות שקולה; כשיש מקורות תלויים מחברים <strong>מקור בוחן</strong> ומחשבים \\(R_{th}=v_t/i_t\\).</p>\n<p><strong>העברת הספק מרבית</strong>: עומס \\(R_L\\) מקבל הספק מרבי כאשר \\(R_L=R_{th}\\), ואז \\(P_{max}=\\frac{V_{th}^2}{4R_{th}}\\).</p>\n<h4>דוגמה</h4>\n<p>מקור \\(24\\,\\mathrm V\\) בטור עם \\(6\\,\\Omega\\) לצומת a, נגד \\(3\\,\\Omega\\) מ־a לאדמה. \\(V_{th}=24\\cdot\\frac{3}{9}=8\\,\\mathrm V\\), \\(R_{th}=6\\|3=2\\,\\Omega\\), \\(I_N=4\\,\\mathrm A\\).</p>\n<p>מקורות תלויים (VCVS, VCCS, CCVS, CCCS) יכולים לגרום להתנגדות שקולה שלילית ולאי־יציבות — במבחן 2015ב' ו־2011ב' נדרש תנאי על מקדם המקור התלוי כדי שהמעגל יהיה יציב.</p>\n<h4>ניסוח מטריצי על גרף המעגל (מופיע במבחני תימור)</h4><ul><li>מתארים את המעגל כ<strong>גרף מכוון</strong>; <strong>עץ</strong> הוא קבוצת ענפים המחברת את כל הצמתים ללא חוגים. כל ענף שאינו בעץ מגדיר <strong>חוג יסודי</strong> (KVL), וכל ענף עץ מגדיר <strong>קבוצת חיתוך יסודית</strong> (KCL).</li><li>זרמי חוגים: \\(Z_m=MZM^T\\), \\(E_s=MZJ_s-MV_s\\), \\(Z_mI=E_s\\), \\(J=M^TI\\) — \\(M\\) מטריצת פגישת החוגים, \\(Z\\) מטריצת עכבות הענפים (צימוד \\(j\\omega M\\) ומקור מבוקר מופיעים כאיברים מחוץ לאלכסון).</li><li>מתחי צמתים: \\(Y_n=AYA^T\\), \\(I_s=AYV_s-AJ_s\\), \\(Y_ne=I_s\\), \\(V=A^Te\\).</li><li>במישור הזמן כותבים את העכבות עם האופרטור \\(D=\\frac{d}{dt}\\): \\(DL\\), \\(\\frac{1}{DC}\\), ומקבלים ישירות את המד\"ר.</li></ul>",
+   "formulas": [
+    "R_{eq}^{\\text{series}}=\\sum_k R_k,\\qquad \\frac{1}{R_{eq}^{\\text{par}}}=\\sum_k\\frac1{R_k}",
+    "v_k=V\\frac{R_k}{\\sum_j R_j}\\ (\\text{voltage divider})",
+    "i_k=I\\frac{G_k}{\\sum_j G_j}\\ (\\text{current divider})",
+    "R_{th}=\\frac{V_{oc}}{I_{sc}}",
+    "P_{max}=\\frac{V_{th}^2}{4R_{th}}\\quad (R_L=R_{th})",
+    "Z_m=MZM^T,\\quad E_s=MZJ_s-MV_s,\\quad Z_mI=E_s",
+    "Y_n=AYA^T,\\quad I_s=AYV_s-AJ_s,\\quad Y_ne=I_s"
+   ],
+   "pitfalls": [
+    "איפוס מקור תלוי בסופרפוזיציה או בחישוב \\(R_{th}\\) — אסור.",
+    "הספק אינו מקיים סופרפוזיציה (הוא ריבועי במתח/זרם).",
+    "מחלק מתח תקף רק כשאותו זרם זורם בשני הנגדים (אין עומס על נקודת האמצע)."
+   ]
+  },
+  {
+   "id": "t4",
+   "title": "רכיבים לא לינאריים ודיודות: נקודת עבודה, קו עומס, אופיין מעבר",
+   "summary_html": "<p><strong>אינטואיציה.</strong> כשיש במעגל רכיב לא לינארי אי אפשר להשתמש בסופרפוזיציה. מפרידים את המעגל ל\"חלק לינארי\" (שקול תבנין) ולרכיב הלא לינארי, ומחפשים את הנקודה המקיימת את שני האופיינים בו־זמנית.</p>\n<h4>נקודת עבודה וקו עומס</h4>\n<ul>\n<li>החלק הלינארי נותן את <strong>קו העומס</strong>: \\(v=V_{th}-R_{th}i\\). חיתוכו עם אופיין הרכיב \\(i=g(v)\\) הוא <strong>נקודת העבודה</strong> \\((V_Q,I_Q)\\).</li>\n<li><strong>התנגדות דינמית</strong> (אות קטן): \\(r_d=\\frac{dv}{di}\\Big|_Q\\). לאות קטן סביב נקודת העבודה מחליפים את הרכיב בנגד \\(r_d\\) ופותרים מעגל לינארי.</li>\n</ul>\n<h4>דיודה אידיאלית ודיודת זנר</h4>\n<ul>\n<li>דיודה אידיאלית: <strong>מוליכה</strong> — קצר (\\(v_D=0,\\ i_D\\ge0\\)); <strong>קטועה</strong> — נתק (\\(i_D=0,\\ v_D\\le0\\)).</li>\n<li>שיטת ההנחות: מניחים מצב לכל דיודה, פותרים מעגל לינארי, ובודקים עקביות (זרם חיובי בדיודה מוליכה, מתח שלילי בקטועה). אם אין עקביות — מחליפים הנחה.</li>\n<li>זנר אידיאלית עם מתח פריצה \\(E\\): בנוסף לשני המצבים, במתח אחורי \\(v_{ak}=-E\\) היא מוליכה זרם אחורי ושומרת מתח קבוע.</li>\n<li><strong>אופיין מעבר</strong> \\(V_{out}(V_{in})\\): לינארי למקוטעין; מוצאים את נקודות השבירה שבהן דיודה משנה מצב ומשרטטים קטע־קטע (שאלה קלאסית — 2011ב', שחזור 2018).</li>\n</ul>\n<h4>מעגל עם דיודה ורכיב אוגר</h4>\n<p>כאשר במעגל גם קבל/סליל, המעגל לינארי למקוטעין בזמן: פותרים מעגל מסדר ראשון בכל מצב של הדיודה, ומוצאים את <strong>רגע המיתוג</strong> מהתנאי שהמתח/הזרם על הדיודה מתאפס (2008ב' שאלה 2, 2011ב' שאלה 1 עם נגד לינארי למקוטעין).</p>\n<h4>דוגמה</h4>\n<p>רכיב \\(i=v^2\\) [mA] (\\(v\\ge0\\)) מחובר למקור \\(6\\,\\mathrm V\\) דרך \\(1\\,\\mathrm{k\\Omega}\\): \\(v^2+v-6=0\\Rightarrow V_Q=2\\,\\mathrm V,\\ I_Q=4\\,\\mathrm{mA}\\), \\(r_d=\\frac1{2V_Q}=0.25\\,\\mathrm{k\\Omega}\\).</p>",
+   "formulas": [
+    "v=V_{th}-R_{th}\\,i\\quad(\\text{load line})",
+    "r_d=\\left.\\frac{dv}{di}\\right|_{Q}",
+    "\\text{ideal diode: } v_D\\,i_D=0,\\ i_D\\ge0,\\ v_D\\le0",
+    "\\Delta v\\approx r_d\\,\\Delta i"
+   ],
+   "pitfalls": [
+    "לא בודקים עקביות של ההנחה על מצב הדיודה (זרם שלילי בדיודה 'מוליכה').",
+    "שימוש בסופרפוזיציה במעגל עם דיודה.",
+    "באופיין מעבר שוכחים לציין את שיפוע כל קטע ואת נקודות השבירה המדויקות."
+   ]
+  },
+  {
+   "id": "t5",
+   "title": "אותות: מדרגה, הלם, רמפה, אותות מחזוריים, ערך ממוצע וערך יעיל",
+   "summary_html": "<p><strong>אינטואיציה.</strong> אותות היסוד מאפשרים לתאר מיתוגים (מדרגה), \"מכות\" קצרות (הלם) ואותות מורכבים כצירוף שלהם. במערכת לינארית מספיק לדעת את התגובה לאות יסוד אחד כדי לקבל את כל השאר.</p>\n<h4>אותות יסוד</h4>\n<ul>\n<li><strong>מדרגה</strong>: \\(u(t)=1\\) עבור \\(t>0\\), \\(0\\) עבור \\(t< 0\\).</li>\n<li><strong>רמפה (שיפוע)</strong>: \\(r(t)=t\\,u(t)=\\int_{-\\infty}^t u(\\tau)d\\tau\\).</li>\n<li><strong>הלם</strong> \\(\\delta(t)\\): \"פונקציה\" בעלת שטח 1 המרוכזת באפס; \\(\\delta=\\frac{du}{dt}\\). מוגדרת דרך פעולתה: \\(\\int f(t)\\delta(t-t_0)dt=f(t_0)\\) לכל \\(f\\) רציפה ב־\\(t_0\\) (<strong>תכונת הדגימה</strong>).</li>\n<li>הלם כגבול: \\(p_\\Delta(t)\\to\\delta(t)\\) כאשר \\(\\int p_\\Delta=1\\) והרוחב שואף לאפס. במבחנים מבקשים להוכיח ש־\\(\\lim\\int i_\\Delta(t)f(t)dt=K f(0)\\) \"לכל \\(f\\) אינטגרבילית רימן ורציפה באפס\" — כלומר שהאות שואף ל־\\(K\\delta(t)\\).</li>\n<li><strong>דופק</strong>: \\(u(t-a)-u(t-b)\\). <strong>גל ריבועי / מחזורי</strong>: \\(f(t+T)=f(t)\\).</li>\n</ul>\n<h4>ערך ממוצע וערך יעיל (RMS)</h4>\n<p>לאות מחזורי: \\(V_{av}=\\frac1T\\int_0^T v\\,dt\\), \\(V_{rms}=\\sqrt{\\frac1T\\int_0^T v^2dt}\\). ההספק הממוצע על נגד: \\(P=V_{rms}^2/R\\). תמיד \\(V_{rms}\\ge|V_{av}|\\). לסינוס \\(V_m\\cos\\omega t\\): \\(V_{rms}=V_m/\\sqrt2\\). לסכום DC והרמוניות בתדרים שונים: \\(V_{rms}^2=V_0^2+\\sum\\frac{V_k^2}{2}\\).</p>\n<h4>דוגמה</h4>\n<p>גל ריבועי בגובה \\(A\\) עם מחזור פעולה \\(D\\): \\(V_{av}=AD\\), \\(V_{rms}=A\\sqrt D\\).</p>",
+   "formulas": [
+    "u(t)=\\begin{cases}1,&t>0\\\\0,&t< 0\\end{cases}",
+    "\\delta(t)=\\frac{du}{dt},\\qquad \\int_{-\\infty}^{\\infty}f(t)\\delta(t-t_0)\\,dt=f(t_0)",
+    "r(t)=t\\,u(t)",
+    "V_{av}=\\frac1T\\int_0^T v(t)\\,dt",
+    "V_{rms}=\\sqrt{\\frac1T\\int_0^T v^2(t)\\,dt}",
+    "V_{rms}^2=V_0^2+\\sum_k \\frac{V_k^2}{2}"
+   ],
+   "pitfalls": [
+    "\\(V_{rms}\\ne V_{av}\\) באופן כללי; שוויון רק לאות קבוע.",
+    "גזירת אות עם קפיצה בלי להוסיף הלם בגודל הקפיצה.",
+    "\\(\\int f\\,\\delta(t-t_0)dt=f(t_0)\\) רק אם \\(t_0\\) בתוך תחום האינטגרציה."
+   ]
+  },
+  {
+   "id": "t6",
+   "title": "מעגלים מסדר ראשון: RC ו־RL, ZIR/ZSR, תגובה למדרגה ולהלם, מיתוג מחזורי",
+   "summary_html": "<p><strong>אינטואיציה.</strong> מעגל עם רכיב אוגר אחד \"זוכר\" גודל אחד (מתח קבל או זרם סליל) ומתכנס אקספוננציאלית למצב המתמיד עם <strong>קבוע זמן</strong> \\(\\tau\\).</p>\n<h4>המשוואה והפתרון</h4>\n<p>\\(\\tau\\dot x+x=f(t)\\), כאשר \\(\\tau=R_{th}C\\) או \\(\\tau=L/R_{th}\\) (\\(R_{th}\\) — ההתנגדות שרואה הרכיב האוגר). למקור קבוע: \\(x(t)=x(\\infty)+\\big(x(0^+)-x(\\infty)\\big)e^{-t/\\tau}\\).</p>\n<h4>פירוק התגובה (מינוח הקורס)</h4>\n<ul>\n<li><strong>ZIR</strong> (Zero Input Response): תגובה לתנאי התחלה בלבד, ללא כניסה. לינארית בתנאי ההתחלה.</li>\n<li><strong>ZSR</strong> (Zero State Response): תגובה לכניסה כשתנאי ההתחלה אפס. לינארית בכניסה.</li>\n<li><strong>תגובה כוללת</strong> = ZIR + ZSR. חלוקה אחרת: תגובת מעבר (נעלמת) + מצב מתמיד.</li>\n</ul>\n<h4>תגובה להלם ולמדרגה</h4>\n<ul>\n<li>תגובה להלם \\(h(t)\\): ההלם \"מזריק\" תנאי התחלה ב־\\(0^+\\) ואז פותרים ZIR. למשל מקור זרם \\(\\delta(t)\\) על \\(R\\|C\\): \\(v(0^+)=1/C\\), \\(h(t)=\\frac1Ce^{-t/RC}u(t)\\).</li>\n<li>במעגל <strong>לינארי וקבוע בזמן</strong>: \\(h(t)=\\frac{d}{dt}s(t)\\) כאשר \\(s\\) התגובה למדרגה. במעגל <strong>משתנה בזמן</strong> הקשר הזה אינו נכון בהכרח (2008א' שאלה 1ג').</li>\n</ul>\n<h4>מיתוג מחזורי ומצב מתמיד מחזורי</h4>\n<p>כאשר מפסק נסגר ונפתח מחזורית (2008א', 2017ב', 2022ב'/ג'), פותרים קטע־קטע ודורשים <strong>מחזוריות</strong>: \\(x(T)=x(0)\\). כך מוצאים את הערכים המזערי והמרבי. \"ביטול תופעת המעבר\" = בחירת תנאי ההתחלה כך שהפתרון מחזורי מההתחלה. בממוצע על מחזור: מתח ממוצע על סליל = 0, זרם ממוצע בקבל = 0.</p>\n<h4>דוגמה</h4>\n<p>RL עם \\(R=2,\\ L=1\\), גל ריבועי \\(0/10\\,\\mathrm V\\) במחזור \\(1\\,\\mathrm s\\) (50%): \\(I_{max}=\\frac{5}{1+e^{-1}}\\approx3.66\\,\\mathrm A\\), \\(I_{min}=I_{max}e^{-1}\\approx1.34\\,\\mathrm A\\), ממוצע \\(2.5\\,\\mathrm A\\).</p>\n<h4>שלבי פתרון בתרגילי מיתוג (מהתרגול)</h4><ul><li>(1) מצב הרכיב רגע לפני המיתוג (\\(0^-\\)) — במצב יציב DC קבל הוא נתק וסליל קצר; (2) בדיקת רציפות \\(v_C(0^+)=v_C(0^-)\\); (3) משוואות המעגל אחרי המיתוג; (4) פתרון הומוגני + פרטי והצבת תנאי ההתחלה על <strong>הפתרון המלא</strong>.</li><li>אם ידועה תגובת ה־ZSR לכניסה \\(x\\), אז לכניסה \\(f[x]\\) עבור אופרטור לינארי \\(f\\) (גזירה, אינטגרציה, הזזה) התגובה היא \\(f[y]\\) — כך מקבלים למשל את התגובה ל־\\(\\cos(t)u(t)+\\delta\\)-ים מהתגובה ל־\\(\\sin(t)u(t)\\).</li></ul>",
+   "formulas": [
+    "\\tau\\dot x+x=f(t),\\qquad \\tau=R_{th}C\\ \\text{or}\\ \\frac{L}{R_{th}}",
+    "x(t)=x(\\infty)+\\big(x(0^+)-x(\\infty)\\big)e^{-t/\\tau}",
+    "h(t)=\\frac{d}{dt}s(t)\\quad(\\text{LTI only})",
+    "v_C(0^+)-v_C(0^-)=\\frac1C\\int_{0^-}^{0^+}i\\,dt",
+    "x_{total}=x_{ZIR}+x_{ZSR}"
+   ],
+   "pitfalls": [
+    "חישוב \\(\\tau\\) עם התנגדות שגויה — צריך את \\(R_{th}\\) שרואה הרכיב האוגר כשהמקורות מאופסים.",
+    "שימוש ב־\\(h=ds/dt\\) במעגל משתנה בזמן.",
+    "ZIR+ZSR אינה אותו פירוק כמו הומוגני+פרטי: ה־ZSR כולל גם חלק מעבר.",
+    "במיתוג מחזורי שוכחים שקבוע הזמן יכול להיות שונה במצב סגור ובמצב פתוח."
+   ]
+  },
+  {
+   "id": "t7",
+   "title": "מעגלים מסדר שני: RLC, ריסון, תנודות, גורם איכות ויציבות אסימפטוטית",
+   "summary_html": "<p><strong>אינטואיציה.</strong> שני רכיבים אוגרים בלתי תלויים מחליפים ביניהם אנרגיה; הנגד מבזבז אותה. היחס בין קצב הבזבוז לתדר ההחלפה קובע אם יהיו תנודות.</p>\n<h4>הצורה הקנונית</h4>\n<p>\\(\\ddot x+2\\alpha\\dot x+\\omega_0^2x=f(t)\\). הפולינום האופייני \\(s^2+2\\alpha s+\\omega_0^2=0\\), שורשים \\(s_{1,2}=-\\alpha\\pm\\sqrt{\\alpha^2-\\omega_0^2}\\).</p>\n<table>\n<tr><td><strong>מקרה</strong></td><td><strong>תנאי</strong></td><td><strong>צורת ה־ZIR</strong></td></tr>\n<tr><td>ריסון יתר</td><td>\\(\\alpha>\\omega_0\\)</td><td>\\(K_1e^{s_1t}+K_2e^{s_2t}\\)</td></tr>\n<tr><td>ריסון קריטי</td><td>\\(\\alpha=\\omega_0\\)</td><td>\\((K_1+K_2t)e^{-\\alpha t}\\)</td></tr>\n<tr><td>תת־ריסון (תנודות)</td><td>\\(\\alpha< \\omega_0\\)</td><td>\\(e^{-\\alpha t}(K_1\\cos\\omega_dt+K_2\\sin\\omega_dt)\\), \\(\\omega_d=\\sqrt{\\omega_0^2-\\alpha^2}\\)</td></tr>\n</table>\n<ul>\n<li>RLC טורי: \\(\\alpha=\\frac{R}{2L}\\), \\(\\omega_0=\\frac1{\\sqrt{LC}}\\), \\(Q=\\frac{\\omega_0L}{R}\\). RLC מקבילי: \\(\\alpha=\\frac1{2RC}\\), \\(Q=\\omega_0RC\\). באופן כללי \\(Q=\\frac{\\omega_0}{2\\alpha}\\); תנודות אם ורק אם \\(Q>\\tfrac12\\).</li>\n<li><strong>מקדם הריסון</strong> \\(\\alpha\\) מתאפס כשאין הפסדים (\\(R=0\\) בטורי, \\(R\\to\\infty\\) במקבילי) — תנודות לא דועכות בתדר \\(\\omega_0\\).</li>\n<li><strong>יציבות אסימפטוטית</strong>: \\(\\lim_{t\\to\\infty}x_{ZIR}(t)=0\\) לכל תנאי התחלה \\(\\iff\\) \\(\\mathrm{Re}(s_{1,2})< 0\\). לפולינום \\(as^2+bs+c\\) זה שקול ל־\\(a,b,c\\) בעלי אותו סימן. למעגל פאסיבי עם נגדים חיוביים התנאי מתקיים תמיד — הוכחה נדרשת במבחנים (2008, 2015א', 2017ב').</li>\n<li><strong>תנאי התחלה</strong>: צריך \\(x(0^+)\\) ו־\\(\\dot x(0^+)\\). את הנגזרת מוצאים ממשוואות הרכיב: \\(\\dot v_C(0^+)=i_C(0^+)/C\\), \\(\\dot i_L(0^+)=v_L(0^+)/L\\), תוך שימוש ברציפות \\(v_C,i_L\\).</li>\n<li>תגובה להלם: אינטגרציה של המשוואה על \\([0^-,0^+]\\) נותנת קפיצה בנגזרת הגבוהה. עבור \\(\\ddot x+2\\alpha\\dot x+\\omega_0^2x=\\delta\\): \\(x(0^+)=0,\\ \\dot x(0^+)=1\\).</li>\n</ul>\n<h4>דוגמה</h4>\n<p>\\(\\ddot v+2\\dot v+2v=2u(t)\\) עם תנאי התחלה אפס: \\(s=-1\\pm j\\), \\(v(t)=1-e^{-t}(\\cos t+\\sin t)\\).</p>",
+   "formulas": [
+    "\\ddot x+2\\alpha\\dot x+\\omega_0^2x=f(t)",
+    "s_{1,2}=-\\alpha\\pm\\sqrt{\\alpha^2-\\omega_0^2}",
+    "\\omega_d=\\sqrt{\\omega_0^2-\\alpha^2}",
+    "\\text{series: }\\alpha=\\frac{R}{2L},\\ \\omega_0=\\frac{1}{\\sqrt{LC}},\\ Q=\\frac{\\omega_0L}{R}=\\frac1R\\sqrt{\\frac LC}",
+    "\\text{parallel: }\\alpha=\\frac{1}{2RC},\\ Q=\\omega_0RC=R\\sqrt{\\frac CL}",
+    "Q=\\frac{\\omega_0}{2\\alpha}"
+   ],
+   "pitfalls": [
+    "תנאי התחלה של הנגזרת: \\(\\dot v_C(0^+)\\) נקבע מהזרם בקבל ב־\\(0^+\\), לא מניחים שהוא אפס.",
+    "בלבול בין \\(\\alpha\\) של מעגל טורי לזה של מקבילי.",
+    "כשהמשתנה אינו \\(v_C\\) או \\(i_L\\) (למשל זרם בנגד) — אגף ימין כולל נגזרות של הכניסה, ותנאי ההתחלה עלולים לקפוץ.",
+    "תדר התנודות של ה־ZIR הוא \\(\\omega_d\\), לא \\(\\omega_0\\)."
+   ]
+  },
+  {
+   "id": "t8",
+   "title": "תורת המערכות: לינאריות, קביעות בזמן, סיבתיות, תגובה להלם וקונבולוציה",
+   "summary_html": "<p><strong>אינטואיציה.</strong> מסתכלים על המעגל כעל \"קופסה\" הממפה אות כניסה לאות יציאה. אם הקופסה לינארית וקבועה בזמן (LTI), התגובה להלם \\(h(t)\\) מאפיינת אותה לחלוטין.</p>\n<h4>תכונות מערכת \\(y=\\mathcal M[x]\\)</h4>\n<ul>\n<li><strong>מוגדרת היטב</strong>: לכל כניסה בתחום מתקבלת יציאה יחידה שנמצאת בטווח (למשל \\(\\mathcal M:B(\\mathbb R)\\to C(\\mathbb R)\\) — מחסומות ואינטגרביליות לרציפות).</li>\n<li><strong>לינאריות</strong>: \\(\\mathcal M[ax_1+bx_2]=a\\mathcal M[x_1]+b\\mathcal M[x_2]\\).</li>\n<li><strong>קביעות בזמן</strong>: הזזת הכניסה גוררת אותה הזזה ביציאה: \\(\\mathcal M[S_\\tau x]=S_\\tau\\mathcal M[x]\\), \\((S_\\tau x)(t)=x(t-\\tau)\\).</li>\n<li><strong>סיבתיות</strong>: \\(y(t)\\) תלוי רק ב־\\(x(\\tau)\\) עבור \\(\\tau\\le t\\). למערכת LTI: \\(h(t)=0\\) עבור \\(t< 0\\). פיסיקלית — המערכת אינה \"מנבאת\".</li>\n<li><strong>חסרת זיכרון</strong>: \\(y(t)\\) תלוי רק ב־\\(x(t)\\); ב־LTI: \\(h(t)=K\\delta(t)\\).</li>\n</ul>\n<h4>תגובה להלם וקונבולוציה</h4>\n<p>במערכת LTI: \\(y(t)=(x*h)(t)=\\int_{-\\infty}^{\\infty}x(\\tau)h(t-\\tau)d\\tau\\). תגובה למדרגה: \\(s(t)=\\int_{-\\infty}^th(\\tau)d\\tau\\), ו־\\(h=\\dot s\\).</p>\n<ul>\n<li>קונבולוציה קומוטטיבית, אסוציאטיבית ודיסטריבוטיבית. \\(x*\\delta=x\\); \\(x*\\delta(t-t_0)=x(t-t_0)\\).</li>\n<li><strong>חיבור בטור (קסקדה)</strong>: \\(h=h_1*h_2\\) — שוב LTI; אם שתיהן סיבתיות גם הכוללת סיבתית, \\(h(t)=\\int_0^th_1(\\tau)h_2(t-\\tau)d\\tau\\).</li>\n<li><strong>מערכות בדידות</strong>: \\(y[n]=\\sum_kx[k]h[n-k]\\). למשל \\(h=\\{1,-1\\}\\) — \"גוזר\" (מאפס אות קבוע), \\(h=\\{1,1\\}\\) — מאפס את \\((-1)^n\\).</li>\n</ul>\n<h4>דוגמה (סגנון מבחן)</h4>\n<p>\\(y(t)=\\frac12\\int_{t-1}^{t+1}x(u)du\\): לינארית וקבועה בזמן; \\(h(t)=\\frac12\\) עבור \\(|t|< 1\\) — לא סיבתית (מגיבה לפני ההלם). גרסה סיבתית: \\(\\int_{t-2}^{t}\\).</p>\n<h4>הערות מהתרגולים וממבחני תימור</h4><ul><li>במעגל <strong>לא לינארי</strong> (למשל עם דיודה) אין הכרח ש־\\(y=h*x\\): בתרגול מחושבת תגובה לרמפה שאינה שווה ל־\\(h*r\\).</li><li><strong>דובלט</strong>: \\(x*\\delta'(t-t_0)=x'(t-t_0)\\). קסקדה עם השהיה/קידום משנה סיבתיות: בודקים את \\(h_1*h_2\\) כולה, לא כל מערכת בנפרד.</li><li>בקרת שגיאות: תגובה להלם חייבת לכלול \\(u(t)\\); מוצא של מערכת סיבתית אינו מתחיל לפני הכניסה; סדר אי־הרציפות של המוצא גבוה מזה של הכניסה בסדר המערכת.</li></ul>",
+   "formulas": [
+    "y(t)=\\int_{-\\infty}^{\\infty}x(\\tau)h(t-\\tau)\\,d\\tau",
+    "s(t)=\\int_{-\\infty}^{t}h(\\tau)\\,d\\tau,\\qquad h(t)=\\frac{ds}{dt}",
+    "h_{cascade}=h_1*h_2",
+    "\\text{causal LTI}\\iff h(t)=0\\ \\ \\forall t< 0",
+    "y[n]=\\sum_{k=-\\infty}^{\\infty}x[k]\\,h[n-k]",
+    "x(t)*\\delta'(t-t_0)=x'(t-t_0)"
+   ],
+   "pitfalls": [
+    "מערכת \\(y=x+c\\) (עם קבוע) אינה לינארית — היא לא מעבירה אפס לאפס.",
+    "בדיקת קביעות בזמן: מחליפים \\(x(t)\\to x(t-\\tau)\\) רק בארגומנט של הכניסה, לא בכל מופע של \\(t\\).",
+    "גבולות הקונבולוציה: עם אותות סיבתיים הגבולות הם \\(0\\) עד \\(t\\).",
+    "במעגל משתנה בזמן אין משמעות ל־\\(h(t)\\) יחידה — התגובה להלם תלויה ברגע ההפעלה."
+   ]
+  },
+  {
+   "id": "t9",
+   "title": "משוואות מצב",
+   "summary_html": "<p><strong>אינטואיציה.</strong> מצב המעגל ברגע נתון נקבע על ידי מתחי הקבלים וזרמי הסלילים. במקום משוואה אחת מסדר \\(n\\) כותבים \\(n\\) משוואות מסדר ראשון — קל לכתוב שיטתית וקל לנתח יציבות.</p>\n<h4>כתיבת המשוואות</h4>\n<ul>\n<li>משתני מצב: \\(\\mathbf x=(v_{C_1},\\dots,i_{L_1},\\dots)^T\\).</li>\n<li>לכל קבל: \\(C\\dot v_C=i_C\\) — מבטאים את \\(i_C\\) ב־KCL באמצעות משתני המצב והכניסות. לכל סליל: \\(L\\dot i_L=v_L\\) — מבטאים את \\(v_L\\) ב־KVL.</li>\n<li>מתקבל \\(\\dot{\\mathbf x}=A\\mathbf x+B\\mathbf u\\), \\(\\mathbf y=C\\mathbf x+D\\mathbf u\\).</li>\n</ul>\n<h4>פתרון (האלגוריתם מהסיכומים)</h4>\n<ul>\n<li>מוצאים ערכים עצמיים: \\(\\det(A-\\lambda I)=0\\), ווקטורים עצמיים. אם \\(A=PDP^{-1}\\) אז \\(e^{At}=Pe^{Dt}P^{-1}\\).</li>\n<li>ZIR: \\(\\mathbf x(t)=e^{At}\\mathbf x_0\\). תגובה כוללת: \\(\\mathbf x(t)=e^{At}\\mathbf x_0+\\int_0^te^{A(t-\\tau)}B\\mathbf u(\\tau)d\\tau\\).</li>\n<li>לערכים עצמיים מרוכבים \\(\\lambda=\\sigma\\pm j\\omega\\): הפתרון הממשי הוא \\(c_1\\mathrm{Re}(e^{\\lambda t}\\mathbf v)+c_2\\mathrm{Im}(e^{\\lambda t}\\mathbf v)\\).</li>\n<li>היפוך 2×2: \\(\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}^{-1}=\\frac1{ad-bc}\\begin{pmatrix}d&-b\\\\-c&a\\end{pmatrix}\\).</li>\n</ul>\n<h4>יציבות</h4>\n<p>המעגל יציב אסימפטוטית \\(\\iff\\) לכל הערכים העצמיים של \\(A\\) חלק ממשי שלילי. הערכים העצמיים הם שורשי הפולינום האופייני של המשוואה הדיפרנציאלית השקולה: \\(\\lambda^2-\\mathrm{tr}(A)\\lambda+\\det A=0\\) (במקרה 2×2), ולכן יציבות \\(\\iff \\mathrm{tr}A< 0,\\ \\det A>0\\).</p>\n<h4>דוגמה</h4>\n<p>RLC טורי עם מקור \\(V_s\\): \\(\\dot v_C=\\frac{i_L}{C}\\), \\(\\dot i_L=\\frac{V_s-v_C-Ri_L}{L}\\), כלומר \\(A=\\begin{pmatrix}0&1/C\\\\-1/L&-R/L\\end{pmatrix}\\), \\(B=\\begin{pmatrix}0\\\\1/L\\end{pmatrix}\\).</p>",
+   "formulas": [
+    "\\dot{\\mathbf x}=A\\mathbf x+B\\mathbf u",
+    "\\det(A-\\lambda I)=0",
+    "e^{At}=Pe^{Dt}P^{-1}",
+    "\\mathbf x(t)=e^{At}\\mathbf x_0+\\int_0^t e^{A(t-\\tau)}B\\mathbf u(\\tau)\\,d\\tau",
+    "\\lambda^2-\\operatorname{tr}(A)\\lambda+\\det A=0"
+   ],
+   "pitfalls": [
+    "בחירת משתנה שאינו משתנה מצב (למשל מתח נגד) — יש לבטא אותו באמצעות \\(v_C,i_L\\).",
+    "שכחה לחלק ב־\\(C\\) או ב־\\(L\\) בעת בידוד הנגזרת.",
+    "\\(e^{At}\\) אינו העלאת כל איבר באקספוננט; יש ללכסן.",
+    "חוג של קבלים (או צומת של סלילים) מקטין את מספר משתני המצב הבלתי תלויים."
+   ]
+  },
+  {
+   "id": "t10",
+   "title": "מצב סינוסי מתמיד: פאזורים, עכבה, דיאגרמת פאזורים והספק",
+   "summary_html": "<p><strong>אינטואיציה.</strong> במעגל LTI יציב, כניסה סינוסית בתדר \\(\\omega\\) גורמת — אחרי דעיכת תופעת המעבר — לכך שכל המתחים והזרמים סינוסיים באותו תדר, ונבדלים רק במשרעת ובמופע. לכן מספיק מספר מרוכב אחד לכל אות: <strong>הפאזור</strong>.</p>\n<h4>פאזורים ועכבות</h4>\n<ul>\n<li>\\(v(t)=V_m\\cos(\\omega t+\\theta)=\\mathrm{Re}\\{\\mathbf Ve^{j\\omega t}\\}\\), \\(\\mathbf V=V_me^{j\\theta}\\). גזירה בזמן \\(\\leftrightarrow\\) כפל ב־\\(j\\omega\\).</li>\n<li>\\(\\sin(\\omega t)=\\cos(\\omega t-90^\\circ)\\), כלומר הפאזור של \\(\\sin\\) הוא \\(-j\\).</li>\n<li>עכבות: \\(Z_R=R\\), \\(Z_L=j\\omega L\\), \\(Z_C=\\frac{1}{j\\omega C}\\). אדמיטנס \\(Y=1/Z\\). כל שיטות הניתוח של רשתות נגדים (צמתים, מחלק מתח, תבנין...) תקפות עם עכבות מרוכבות.</li>\n<li><strong>דיאגרמת פאזורים</strong>: בסליל המתח מקדים את הזרם ב־\\(90^\\circ\\); בקבל הזרם מקדים את המתח ב־\\(90^\\circ\\); בנגד באותו מופע. במבחן יש לחשב \"גדלים וזוויות\" ולוודא ש־KVL/KCL נסגרים וקטורית.</li>\n</ul>\n<h4>הספק</h4>\n<ul>\n<li>הספק ממוצע: \\(P=\\frac12\\mathrm{Re}\\{\\mathbf V\\mathbf I^*\\}=\\frac12|\\mathbf I|^2\\mathrm{Re}\\{Z\\}=\\frac12|\\mathbf V|^2\\mathrm{Re}\\{Y\\}\\). על קבל או סליל אידיאלי \\(P=0\\).</li>\n<li><strong>התאמת עכבות</strong>: למקור עם עכבה פנימית \\(Z_s\\), הספק ממוצע מרבי בעומס כאשר \\(Z_L=Z_s^*\\), ואז \\(P_{max}=\\frac{|\\mathbf V_s|^2}{8\\,\\mathrm{Re}Z_s}\\) (משרעות שיא).</li>\n<li>כניסה עם כמה תדרים (למשל \\(1+\\sin\\omega t\\)): סופרפוזיציה — פאזור נפרד לכל תדר (DC הוא \\(\\omega=0\\)), וחיבור <strong>בזמן</strong>. ההספק הממוצע הוא סכום ההספקים של התדרים השונים.</li>\n</ul>\n<h4>תגובה כוללת לכניסה סינוסית</h4>\n<p>\\(x(t)=x_{ss}(t)+x_h(t)\\): הפתרון הפרטי מפאזורים, וההומוגני עם קבועים שנקבעים מתנאי ההתחלה (למשל \\(i'+i=\\cos t,\\ i(0)=0\\Rightarrow i=\\tfrac12(\\cos t+\\sin t)-\\tfrac12e^{-t}\\)).</p>",
+   "formulas": [
+    "v(t)=\\mathrm{Re}\\{\\mathbf V e^{j\\omega t}\\},\\quad \\mathbf V=V_me^{j\\theta}",
+    "Z_R=R,\\quad Z_L=j\\omega L,\\quad Z_C=\\frac{1}{j\\omega C}",
+    "P_{av}=\\tfrac12\\mathrm{Re}\\{\\mathbf V\\mathbf I^*\\}=\\tfrac12|\\mathbf I|^2\\,\\mathrm{Re}\\{Z\\}",
+    "Z_L=Z_s^*\\ \\Rightarrow\\ P_{max}=\\frac{|\\mathbf V_s|^2}{8\\,\\mathrm{Re}\\{Z_s\\}}",
+    "A\\cos\\omega t+B\\sin\\omega t=\\sqrt{A^2+B^2}\\cos\\!\\big(\\omega t-\\arctan\\tfrac BA\\big)"
+   ],
+   "pitfalls": [
+    "חיבור פאזורים של תדרים שונים — אסור; לכל תדר פאזור משלו.",
+    "שכחת הגורם \\(\\tfrac12\\) בהספק כשעובדים עם משרעות שיא (ולא RMS).",
+    "מדרגה אינה סינוסואידה: לכניסה \\(u(t)+\\cos t\\) מטפלים ברכיב ה־DC בנפרד.",
+    "זווית של מספר מרוכב ברביע השני/שלישי: \\(\\arctan\\) לבדו נותן תשובה שגויה."
+   ]
+  },
+  {
+   "id": "t11",
+   "title": "פונקציית תמסורת, מסננים ותהודה",
+   "summary_html": "<p><strong>אינטואיציה.</strong> פונקציית התמסורת מתארת כמה המעגל מגביר/מנחית ומזיז מופע לכל תדר. מסנן הוא מעגל שמעביר תחום תדרים אחד ומנחית אחר.</p>\n<h4>תמסורת</h4>\n<ul>\n<li>\\(H(j\\omega)=\\frac{\\mathbf V_{out}}{\\mathbf V_{in}}=|H|e^{j\\angle H}\\). לכניסה \\(A\\cos(\\omega t+\\theta)\\) המוצא במצב מתמיד: \\(A|H(j\\omega)|\\cos(\\omega t+\\theta+\\angle H(j\\omega))\\).</li>\n<li><strong>נקודת מחצית ההספק</strong> (\\(-3\\,\\mathrm{dB}\\), \"תדר הברך\"): \\(|H(j\\omega_c)|=\\frac{1}{\\sqrt2}|H|_{max}\\).</li>\n<li>RC עם מוצא על הקבל: \\(H=\\frac{1}{1+j\\omega RC}\\) — <strong>LPF</strong>, \\(\\omega_c=\\frac1{RC}\\). מוצא על הנגד: \\(H=\\frac{j\\omega RC}{1+j\\omega RC}\\) — <strong>HPF</strong>. RL עם מוצא על הנגד: \\(H=\\frac{R}{R+j\\omega L}\\) — LPF, \\(\\omega_c=R/L\\).</li>\n<li>כניסה שהיא סכום הרמוניות \\(\\sum a_n\\cos(n\\omega_0t+\\theta_n)\\): המוצא \\(\\sum a_n|H(jn\\omega_0)|\\cos(n\\omega_0t+\\theta_n+\\angle H(jn\\omega_0))\\). הטור מתכנס אם \\(\\sum|a_n|< \\infty\\) (כי \\(|H|\\le1\\)). אינטגרל על מחזור שלם מאפס את כל ההרמוניות ומשאיר רק את רכיב ה־DC כפול \\(H(0)\\): ב־LPF ה־DC עובר, ב־HPF הוא נחסם (2015, 2020).</li>\n</ul>\n<h4>תהודה</h4>\n<ul>\n<li>RLC טורי: \\(Z=R+j(\\omega L-\\frac1{\\omega C})\\). בתהודה \\(\\omega_0=\\frac1{\\sqrt{LC}}\\) העכבה ממשית ומזערית, הזרם מרבי ובמופע עם המקור.</li>\n<li><strong>גורם איכות</strong>: \\(Q=\\frac{\\omega_0L}{R}=\\omega_0\\frac{\\text{אנרגיה אגורה}}{\\text{הספק ממוצע מתבזבז}}\\). בתהודה \\(|\\mathbf V_C|=|\\mathbf V_L|=Q|\\mathbf V_s|\\).</li>\n<li><strong>סכום האנרגיות</strong> על הקבל והסליל בתהודה קבוע בזמן: \\(W=\\frac12L I_m^2\\) (2014ד', 2023א').</li>\n<li><strong>רוחב סרט</strong>: \\(\\Delta\\omega=\\omega_2-\\omega_1=\\frac{\\omega_0}{Q}=\\frac RL\\) (טורי), ו־\\(\\omega_1\\omega_2=\\omega_0^2\\).</li>\n</ul>\n<h4>דוגמה</h4>\n<p>\\(R=10\\,\\Omega,\\ L=10\\,\\mathrm{mH},\\ C=1\\,\\mu\\mathrm F\\): \\(\\omega_0=10^4\\,\\mathrm{rad/s}\\), \\(Q=10\\), \\(\\Delta\\omega=10^3\\,\\mathrm{rad/s}\\).</p>",
+   "formulas": [
+    "H(j\\omega)=\\frac{\\mathbf V_{out}}{\\mathbf V_{in}}",
+    "|H(j\\omega_c)|=\\frac{|H|_{max}}{\\sqrt2}",
+    "H_{LPF}=\\frac{1}{1+j\\omega RC},\\qquad H_{HPF}=\\frac{j\\omega RC}{1+j\\omega RC}",
+    "\\omega_0=\\frac{1}{\\sqrt{LC}},\\qquad Q=\\frac{\\omega_0L}{R}=\\omega_0\\frac{W_{stored}}{P_{av}}",
+    "\\Delta\\omega=\\frac{\\omega_0}{Q}",
+    "W_L(t)+W_C(t)=\\tfrac12LI_m^2\\ \\ (\\omega=\\omega_0)"
+   ],
+   "pitfalls": [
+    "\\(-3\\,\\mathrm{dB}\\) מוגדר ביחס לערך המרבי של \\(|H|\\), לא בהכרח ביחס ל־1.",
+    "שרטוט \\(|H|\\) בלי לבדוק את הגבולות \\(\\omega\\to0\\) ו־\\(\\omega\\to\\infty\\) — משם מזהים את סוג המסנן.",
+    "בסכום הרמוניות שוכחים שגם המופע משתנה בכל הרמוניה.",
+    "בלבול בין \\(Q\\) של מעגל טורי (\\(\\omega_0L/R\\)) למקבילי (\\(\\omega_0RC\\))."
+   ]
+  },
+  {
+   "id": "t12",
+   "title": "רכיבים מצומדים: סלילים מצומדים, שנאי אידיאלי ומקורות מבוקרים",
+   "summary_html": "<p><strong>אינטואיציה.</strong> ברכיב מצומד המתח/הזרם בהדק אחד תלוי בגדלים של הדק אחר. סלילים מצומדים חולקים שטף מגנטי; שנאי אידיאלי הוא הגבול של צימוד מושלם.</p>\n<h4>סלילים מצומדים</h4>\n<ul>\n<li>\\(v_1=L_1\\dot i_1\\pm M\\dot i_2\\), \\(v_2=\\pm M\\dot i_1+L_2\\dot i_2\\). הסימן \"+\" כאשר שני הזרמים נכנסים (או שניהם יוצאים) בהדקים המסומנים <strong>בנקודה</strong>.</li>\n<li>מקדם צימוד: \\(k=\\frac{M}{\\sqrt{L_1L_2}}\\), \\(0\\le k\\le1\\) (נובע מפאסיביות).</li>\n<li>אנרגיה: \\(W=\\frac12L_1i_1^2+\\frac12L_2i_2^2\\pm Mi_1i_2\\).</li>\n<li>חיבור טורי: \\(L_{eq}=L_1+L_2\\pm2M\\).</li>\n<li>בפאזורים: \\(\\mathbf V_1=j\\omega L_1\\mathbf I_1\\pm j\\omega M\\mathbf I_2\\) וכו' — נוח לפתור בשיטת זרמי החוגים.</li>\n</ul>\n<h4>שנאי אידיאלי</h4>\n<ul>\n<li>יחס ליפופים \\(n_1:n_2\\): \\(\\frac{v_2}{v_1}=\\frac{n_2}{n_1}\\), \\(\\frac{i_2}{i_1}=\\frac{n_1}{n_2}\\) (עם כיווני ייחוס מתאימים). אינו אוגר ואינו מבזבז אנרגיה: \\(v_1i_1=v_2i_2\\).</li>\n<li><strong>שיקוף עכבות</strong>: עומס \\(Z_L\\) במשני נראה מהראשוני כ־\\(Z_{in}=\\left(\\frac{n_1}{n_2}\\right)^2Z_L\\). קבל \\(C\\) במשני נראה כקבל \\((n_2/n_1)^2C\\).</li>\n<li>שימושים: התאמת עכבות להספק מרבי, בידוד, שינוי רמות מתח.</li>\n</ul>\n<h4>מקורות מבוקרים</h4>\n<p>ארבעה סוגים: VCVS (\\(v=\\mu v_x\\)), VCCS (\\(i=g v_x\\)), CCVS (\\(v=r i_x\\)), CCCS (\\(i=\\beta i_x\\)). הם רכיבים לינאריים דו־שעריים, אינם פאסיביים בהכרח, ולכן יכולים לשנות את סימן המקדמים במשוואה האופיינית ולהוציא מעגל מיציבות.</p>\n<h4>דוגמה</h4>\n<p>שנאי אידיאלי \\(1:5\\) עם עומס \\(100\\,\\Omega\\) במשני: מהראשוני רואים \\(100/25=4\\,\\Omega\\).</p>\n<h4>השלמות מהתרגול (סלילים מצומדים ושנאי אידיאלי)</h4><ul><li>ניסוח כללי: \\(\\mathbf v=L\\,\\dot{\\mathbf i}\\) עם מטריצת השראויות סימטרית, \\(L_{12}=L_{21}=M\\); לסלילים פאסיביים \\(M\\le\\sqrt{L_{11}L_{22}}\\).</li><li>שנאי אידיאלי מוגדר בשלוש תכונות: אין פיזור או אגירת אנרגיה (\\(\\sum v_ji_j=0\\)), אין זליגת שטף (\\(k=1\\)), וההשראויות העצמיות שואפות לאינסוף. מכאן \\(\\frac{v_1}{n_1}=\\frac{v_2}{n_2}\\) ו־\\(n_1i_1+n_2i_2=0\\) (שני הזרמים נכנסים לנקודות).</li><li>זהירות בחישוב הספק דרך מעגל שקול/משוקף: השקול נכון כלפי ההדקים, לא בהכרח לרכיב פנימי בודד.</li></ul>",
+   "formulas": [
+    "v_1=L_1\\frac{di_1}{dt}\\pm M\\frac{di_2}{dt},\\quad v_2=\\pm M\\frac{di_1}{dt}+L_2\\frac{di_2}{dt}",
+    "k=\\frac{M}{\\sqrt{L_1L_2}}\\le1",
+    "L_{eq}=L_1+L_2\\pm2M",
+    "\\frac{v_2}{v_1}=\\frac{n_2}{n_1},\\qquad \\frac{i_2}{i_1}=\\frac{n_1}{n_2}",
+    "Z_{in}=\\left(\\frac{n_1}{n_2}\\right)^2Z_L",
+    "W=\\tfrac12L_1i_1^2+\\tfrac12L_2i_2^2\\pm Mi_1i_2",
+    "n_1i_1+n_2i_2=0,\\qquad \\frac{v_1}{n_1}=\\frac{v_2}{n_2}"
+   ],
+   "pitfalls": [
+    "סימן ה־\\(M\\): נקבע לפי מוסכמת הנקודות ולפי כיווני הייחוס של הזרמים, לא לפי הציור 'בעין'.",
+    "שנאי אידיאלי אינו מעביר DC במציאות, אך המודל האידיאלי \\(v_2=nv_1\\) אלגברי — שימו לב להנחות השאלה.",
+    "בשיקוף עכבה היחס בריבוע; קבל משתקף הפוך מנגד (הקיבול מוכפל ב־\\((n_2/n_1)^2\\)).",
+    "מקור מבוקר אינו מאופס בסופרפוזיציה/תבנין."
+   ]
+  }
+ ],
+ "exams": [
+  {
+   "title": "מבחן 2008 מועד א' (סמסטר ב' תשס\"ח, ד\"ר גיא כהן)",
+   "year": "2008",
+   "term": "מועד א",
+   "url": "https://drive.google.com/file/d/1HAWHYTX0iEiNQK5rjPEYgokkvkJVpuIT/view?usp=drivesdk",
+   "has_solution": true,
+   "questions": [
+    {
+     "num": "1א-ב",
+     "description": "קבל לינארי קבוע בזמן במקביל לנגד משתנה בזמן \\(R(t)=1+t\\) ומקור זרם: מציאת תגובת המטען על הקבל לכניסת הלם \\(\\delta(t)\\) ולכניסת מדרגה \\(u(t)\\).",
+     "topics": [
+      "t2",
+      "t6",
+      "t5"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "1ג",
+     "description": "האם הנגזרת בזמן של התגובה למדרגה שווה לתגובה להלם במעגל משתנה בזמן? נדרש נימוק.",
+     "topics": [
+      "t6",
+      "t8"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "1ד",
+     "description": "חישוב האנרגיה הכוללת המתבזבזת על הנגד עבור שתי הכניסות והמשמעות הפיסיקלית.",
+     "topics": [
+      "t1",
+      "t2"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2",
+     "description": "מעגל RC עם מפסק הנע מחזורית בין שני מצבים עם זמן מחזור \\(\\tau=RC\\): מציאת המתחים \\(V_1,V_2\\) במצב היציב המחזורי.",
+     "topics": [
+      "t6"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3א",
+     "description": "מעגל פאסיבי \\(R_1,L,C,R_2\\): האם תגובת ה־ZIR של מתח הקבל יציבה אסימפטוטית לכל ערכי הרכיבים?",
+     "topics": [
+      "t7"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3ב",
+     "description": "ערכי יחידה, \\(v_C(0)=0,\\ i_L(0)=2\\,\\mathrm A\\): תגובה כוללת של מתח הקבל לכניסת מדרגה וחישוב הגבול באינסוף ללא הפתרון המלא.",
+     "topics": [
+      "t7"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3ג",
+     "description": "תגובה כוללת של מתח הקבל לכניסה \\(\\cos t\\) (פתרון פרטי בפאזורים + הומוגני).",
+     "topics": [
+      "t7",
+      "t10"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3ד",
+     "description": "האם התגובה לכניסה \\(u(t)+\\cos t\\) היא סכום התגובות הכוללות? חישוב ההספק הממוצע במצב מתמיד על נגד עבור כניסה זו.",
+     "topics": [
+      "t10",
+      "t8"
+     ],
+     "difficulty": 3
+    }
+   ]
+  },
+  {
+   "title": "מבחן 2008 מועד ב' (סמסטר ב' תשס\"ח, ד\"ר גיא כהן)",
+   "year": "2008",
+   "term": "מועד ב",
+   "url": "https://drive.google.com/file/d/1bqHIyK9dpHDpT3fXG3evnpq8xhIvasQo/view?usp=drivesdk",
+   "has_solution": true,
+   "questions": [
+    {
+     "num": "1א-ד",
+     "description": "מערכת \\(M_f(t)=\\tfrac12\\int_{t-1}^{t+1}f(u)du\\) מהפונקציות החסומות לרציפות: מוגדרת היטב? לינארית? קבועה בזמן? תגובה להלם, סיבתיות ותגובה למדרגה.",
+     "topics": [
+      "t8"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "1ה-ו",
+     "description": "מערכת מתוקנת \\(N_f\\) (אינטגרל על העבר בלבד): תגובה להלם וסיבתיות; מימוש באמצעות מעגל עם שני קבלים ומקורות \\(f(t),f(t-1)\\).",
+     "topics": [
+      "t8",
+      "t2"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2",
+     "description": "מעגל עם דיודה אידיאלית, \\(R_1,R_2,C\\) ומקור שעובר מ־\\(-V_0\\) ל־\\(+V_0\\) ברגע אפס: מתח הקבל בכל רגע, גבולו, והזמן המזערי שבו מושג הגבול.",
+     "topics": [
+      "t4",
+      "t6"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3א",
+     "description": "מעגל \\(I_s,R,L,C\\): הוכחת יציבות אסימפטוטית של ה־ZIR לכל רכיבים פאסיביים.",
+     "topics": [
+      "t7"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3ב-ג",
+     "description": "מצב מתמיד של מתח הקבל לכניסה \\(1+\\sin(t/\\sqrt{LC})\\) (סופרפוזיציה של DC ותדר התהודה) וההספק הממוצע על הקבל.",
+     "topics": [
+      "t10",
+      "t11"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3ד-ה",
+     "description": "מציאת עומס \\(Z_1\\) להספק ממוצע מרבי (התאמת עכבות) ומימושו מרכיבים בעלי ערכי \\(R,L,C\\) בלבד.",
+     "topics": [
+      "t10"
+     ],
+     "difficulty": 3
+    }
+   ]
+  },
+  {
+   "title": "מבחן 2011 סמסטר ב' מועד ב' (גיא כהן)",
+   "year": "2011",
+   "term": "מועד ב",
+   "url": "https://drive.google.com/file/d/1sRpbfXBZrEHbVqmlUD0FAYU62LOa7reP/view?usp=drivesdk",
+   "has_solution": true,
+   "questions": [
+    {
+     "num": "1",
+     "description": "קבל \\(1\\,\\mathrm F\\) טעון ל־\\(2\\,\\mathrm V\\) מתפרק דרך נגד לינארי למקוטעין (אופיין בגרף): \\(v(t)\\), הזרם בנגד, רציפות הזרם ואנרגיית החום המתבזבזת.",
+     "topics": [
+      "t4",
+      "t6",
+      "t2"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2א-ב",
+     "description": "מעגל עם מקור תלוי בעל מקדם ממשי ומקור זרם: משוואה דיפרנציאלית למתח הקבל ותחום ערכי המקדם שעבורם המעגל יציב אסימפטוטית.",
+     "topics": [
+      "t3",
+      "t12",
+      "t7"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2ג-ד",
+     "description": "מצב סינוסי מתמיד: איזו עכבה לחבר במקביל לנגד לקבלת הספק מרבי; האם המתח על הנגד חסום — הוכחה.",
+     "topics": [
+      "t10",
+      "t7"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3",
+     "description": "מעגל עם דיודה אידיאלית ודיודת זנר אידיאלית (מתח פריצה \\(E\\)): חישוב ושרטוט אופיין המעבר \\(V_{out}(V_{in})\\), ושוב כאשר הופכים את \\(D_1\\).",
+     "topics": [
+      "t4"
+     ],
+     "difficulty": 2
+    }
+   ]
+  },
+  {
+   "title": "מבחן 2014 מועד ד' (גיא כהן)",
+   "year": "2014",
+   "term": "מועד ד",
+   "url": "https://drive.google.com/file/d/1hxh9QvVGDAGHtYCPxlgncWmhfBIFTjur/view?usp=drivesdk",
+   "has_solution": false,
+   "questions": [
+    {
+     "num": "1א-ג",
+     "description": "תגובה להלם \\(h(t)\\) הבנויה מסכום הזזות של דופק נתון: שרטוט, האם המעגל סיבתי והאם הוא חסר זיכרון.",
+     "topics": [
+      "t8",
+      "t5"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "1ד",
+     "description": "חישוב התגובה למדרגה בזמנים בדידים (אינטגרל של \\(h\\)) ובגבול.",
+     "topics": [
+      "t8"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "1ה",
+     "description": "סינתזה: מימוש \\(h(t)\\) באמצעות קבלים, מקורות זרם הלם ומעגל אינטגרטור מתח; מציאת סדרות המקדמים והזמנים.",
+     "topics": [
+      "t8",
+      "t2",
+      "t5"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2א-ג",
+     "description": "רשת LTI עם תמסורת \\(H(i\\omega)\\): משוואת תדרי מחצית ההספק; חישוב \\(H\\) (גודל וזווית) למעגל \\(L,R\\) נתון ומספר תדרי מחצית ההספק.",
+     "topics": [
+      "t11"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ד-ה",
+     "description": "כניסה שהיא סכום סינוסים וקוסינוסים: המוצא במצב מתמיד וההספק הממוצע במוצא כשהתדרים תלויים הרמונית.",
+     "topics": [
+      "t11",
+      "t10"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3",
+     "description": "מעגל תהודה: סכום האנרגיות הרגעיות על הקבל והסליל בתהודה, היחס \\(|V_C|/|V_s|\\) ותלותו ב־\\(R\\), וקיום תדר שבו הפרש המופע בין מתח הנגד למתח הקבל \\(45^\\circ\\).",
+     "topics": [
+      "t11",
+      "t10"
+     ],
+     "difficulty": 2
+    }
+   ]
+  },
+  {
+   "title": "מבחן 2015 סמסטר ב' מועד א' (גיא כהן)",
+   "year": "2015",
+   "term": "מועד א",
+   "url": "https://drive.google.com/file/d/1QN9mLOqD5lm_ktpXSjjScF6Vneme6jNF/view?usp=drivesdk",
+   "has_solution": true,
+   "questions": [
+    {
+     "num": "1א-ב",
+     "description": "נגד \\(R\\) וקבל משתנה בזמן \\(C(t)=a+t\\): משוואה דיפרנציאלית למתח הקבל ותנאי התחלה, ופתרון ושרטוט עבור \\(0< R< 1\\), \\(R=1\\), \\(R>1\\).",
+     "topics": [
+      "t2",
+      "t6"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "1ג-ד",
+     "description": "האם תגובת ה־ZIR אדיטיבית והומוגנית בתנאי ההתחלה; חישוב התגובה הגבולית כאשר הפרמטר \\(a\\) תלוי ב־\\(R\\).",
+     "topics": [
+      "t6",
+      "t8"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2א",
+     "description": "מעגל \\(I_s,R,L,C\\): הוכחת יציבות אסימפטוטית של ה־ZIR של מתח הקבל.",
+     "topics": [
+      "t7"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ב-ג",
+     "description": "מצב מתמיד של מתח הקבל לכניסה \\(1+\\sin(t/\\sqrt{LC})\\) והספק ממוצע על הקבל.",
+     "topics": [
+      "t10",
+      "t11"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ד-ה",
+     "description": "עומס \\(Z_1\\) בטור לנגד להספק מרבי ומימושו מרכיבים בעלי ערכי \\(R,L,C\\) בלבד.",
+     "topics": [
+      "t10"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3א-ג",
+     "description": "מסנן RC: תמסורת \\(H(i\\omega)\\), גודל וזווית ושרטוטם, נקודת \\(-3\\,\\mathrm{dB}\\) וסוג המסנן.",
+     "topics": [
+      "t11"
+     ],
+     "difficulty": 1
+    },
+    {
+     "num": "3ד-ה",
+     "description": "כניסה \\(\\sum a_n\\cos(n\\omega_0t+\\theta_n)\\) עם \\(\\sum|a_n|< \\infty\\): תגובת המסנן והתכנסותה; אינטגרל המוצא על מחזור והקשר לסוג המסנן.",
+     "topics": [
+      "t11",
+      "t5"
+     ],
+     "difficulty": 3
+    }
+   ]
+  },
+  {
+   "title": "מבחן 2015 סמסטר ב' מועד ב' (גיא כהן)",
+   "year": "2015",
+   "term": "מועד ב",
+   "url": "https://drive.google.com/file/d/1ePLc_x3tjKzldcWFQFfTqtfhqKH7dJpH/view?usp=drivesdk",
+   "has_solution": true,
+   "questions": [
+    {
+     "num": "1א-ג",
+     "description": "מעגל \\(R_1,R_2,C\\) עם מקור זרם תלוי (מקדם \\(\\alpha\\ge0\\)) ומפסק שנסגר ב־\\(t=0\\): המתח והזרם על \\(R_2\\) לכל \\(t\\), וההגבלות על \\(\\alpha\\) ליציבות אסימפטוטית.",
+     "topics": [
+      "t3",
+      "t12",
+      "t6"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "1ד",
+     "description": "האם קיים \\(\\alpha\\) שעבורו \\(\\lim\\int i_2(t)f(t)dt=Kf(0)\\) לכל \\(f\\) רציפה באפס (התכנסות הזרם להלם) — הוכחה ומציאת \\(K\\).",
+     "topics": [
+      "t5",
+      "t6"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "1ה",
+     "description": "מציאת \\(\\alpha\\) מתוך האנרגיה הכוללת המתבזבזת על הנגד.",
+     "topics": [
+      "t1",
+      "t6"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2א-ג",
+     "description": "מעגל פאסיבי \\(L,C,R\\) עם \\(I_s=\\cos t\\) ותנאי התחלה אפס: משוואה דיפרנציאלית לזרם הסליל, תנאי ההתחלה שלה, מקדם הריסון וההנחה הפיסיקלית שמאפסת אותו.",
+     "topics": [
+      "t7"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ד-ה",
+     "description": "דיאגרמת פאזורים לזרמי הקבל, הסליל והמקור ולמתח הקבל; האם קיים תדר שבו מתחי הסליל והקבל מבטלים זה את זה.",
+     "topics": [
+      "t10",
+      "t11"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ו",
+     "description": "ערכי יחידה: התגובה הכוללת של זרם הסליל, מבוטאת בסינוסואידות.",
+     "topics": [
+      "t7",
+      "t10"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3א-ג",
+     "description": "מסנן RL (מוצא על הנגד): תמסורת, גודל וזווית, נקודת \\(-3\\,\\mathrm{dB}\\) וסוג המסנן.",
+     "topics": [
+      "t11"
+     ],
+     "difficulty": 1
+    },
+    {
+     "num": "3ד-ה",
+     "description": "תגובה לסכום הרמוניות \\(\\sum a_n\\cos(n\\omega_0t+\\theta_n)\\), התכנסות, ואינטגרל המוצא על מחזור.",
+     "topics": [
+      "t11",
+      "t5"
+     ],
+     "difficulty": 3
+    }
+   ]
+  },
+  {
+   "title": "מבחן 2017 סמסטר ב' מועד ב' (גיא כהן)",
+   "year": "2017",
+   "term": "מועד ב",
+   "url": "https://drive.google.com/file/d/1iQp8uqcghyCzFNGouxhzfuz2TUgsZ3Rw/view?usp=drivesdk",
+   "has_solution": true,
+   "questions": [
+    {
+     "num": "1א",
+     "description": "מעגל RL (\\(1\\,\\Omega,\\ 1\\,\\mathrm H\\)) עם גל ריבועי \\(\\pm1\\) במחזור 2: זרמי הטעינה והפריקה המרביים במצב המחזורי.",
+     "topics": [
+      "t6",
+      "t5"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "1ב-ג",
+     "description": "מציאת נגזרת אות הכניסה (רכבת הלמים) בביטוי סגור ותגובת הזרם אליה.",
+     "topics": [
+      "t5",
+      "t6",
+      "t8"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "1ד-ה",
+     "description": "האם ניתן לחשב את התגובה לאות המקורי מתוך \\(h(t)\\); חישוב הזרמים המרביים מתוך ידיעת \\(h(t)\\).",
+     "topics": [
+      "t8",
+      "t6"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2א-ב",
+     "description": "מעגל LTI \\(V_s,R,L,C\\) שמוצאו הזרם בנגד: משוואה דיפרנציאלית ללא אינטגרלים והוכחה מתמטית ליציבות אסימפטוטית.",
+     "topics": [
+      "t7"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ג-ד",
+     "description": "ההתנגדות המרבית שעבורה אין תנודות ב־ZIR (באמצעות \\(L,C\\)) והתדר הזוויתי של התנודות.",
+     "topics": [
+      "t7"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ה",
+     "description": "תגובת הזרם למתח קבוע \\(E\\) מתנאי התחלה אפס עבור יחס נתון בין \\(R\\) ל־\\(\\sqrt{L/C}\\).",
+     "topics": [
+      "t7"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3א-ד",
+     "description": "מערכת אינטגרלית על חלון \\([t-1,t+1]\\) עם משקל: מוגדרת היטב, לינאריות, קביעות בזמן, תגובה להלם, סיבתיות ותגובה למדרגה.",
+     "topics": [
+      "t8"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3ה",
+     "description": "שינוי המערכת לחלון על העבר בלבד: תגובה להלם, סיבתיות והסבר פיסיקלי.",
+     "topics": [
+      "t8"
+     ],
+     "difficulty": 2
+    }
+   ]
+  },
+  {
+   "title": "מבחן 2020 סמסטר א' מועד א' (גיא כהן)",
+   "year": "2020",
+   "term": "מועד א",
+   "url": "https://drive.google.com/file/d/1xfY7wRMUC3L0fOGav3xmOUtSBL3wRHjk/view?usp=drivesdk",
+   "has_solution": true,
+   "questions": [
+    {
+     "num": "1א",
+     "description": "מעגל גשר עם \\(R_1,C\\) בענף אחד ו־\\(L,R_2\\) בשני ונגד \\(R\\) בין הצמתים \\(V_1,V_2\\): תנאי על הרכיבים שעבורו תגובת הזרם ב־\\(R\\) להלם זהותית אפס.",
+     "topics": [
+      "t3",
+      "t7"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "1ב-ג",
+     "description": "ערכי יחידה ומקור \\(\\cos(t)u(t)\\): מציאת \\(V_1,V_2\\) וההפרש \\(\\Delta V\\).",
+     "topics": [
+      "t7",
+      "t10"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "1ד-ה",
+     "description": "תנאי לכך שהזרם ב־\\(R\\) זהותית אפס לכל כניסה רציפה, והוכחה ש־\\(\\Delta V=0\\) ללא חישוב המתחים (גשר מאוזן).",
+     "topics": [
+      "t3",
+      "t10"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2א-ג",
+     "description": "מעגל מסדר שני עם קבלים, סליל ונגד: משוואה דיפרנציאלית למתח הקבל, תנאי על \\(R\\) לאי־תנודות ב־ZIR וגורם האיכות.",
+     "topics": [
+      "t7"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ד",
+     "description": "תגובת מתח הקבל לכניסת מדרגת יחידה בערכים נתונים.",
+     "topics": [
+      "t7"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3א",
+     "description": "מסנן RC: זיהוי סוג המסנן ונקודת \\(-3\\,\\mathrm{dB}\\).",
+     "topics": [
+      "t11"
+     ],
+     "difficulty": 1
+    },
+    {
+     "num": "3ב",
+     "description": "תגובת מצב מתמיד לסכום הרמוניות \\(\\sum a_n\\cos(n\\omega_0t+\\theta_n)\\) ושיקולי התכנסות.",
+     "topics": [
+      "t11"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3ג-ד",
+     "description": "אינטגרל אות המוצא על מחזור מול אינטגרל הכניסה; מה קורה כשמחליפים בין הנגד לקבל (HPF).",
+     "topics": [
+      "t11",
+      "t5"
+     ],
+     "difficulty": 2
+    }
+   ]
+  },
+  {
+   "title": "מבחן 2022 סמסטר א' מועד ב' (גיא כהן)",
+   "year": "2022",
+   "term": "מועד ב",
+   "url": "https://drive.google.com/file/d/1xtPBUGUhXDQZdpFaarF2LumH9siDkGTw/view?usp=drivesdk",
+   "has_solution": true,
+   "questions": [
+    {
+     "num": "1א-ב",
+     "description": "מקור \\(E\\), מפסק מחזורי עם מחזור פעולה \\(D\\), סליל ונגד: מתח הנגד לאורך מחזור, ותנאי ההתחלה \\(I_0\\) שמבטל את תופעת המעבר (פתרון מחזורי).",
+     "topics": [
+      "t6"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "1ג-ה",
+     "description": "המתח הממוצע על הנגד, סטיות הערכים המזערי והמרבי מהממוצע, והערך היעיל (RMS).",
+     "topics": [
+      "t5",
+      "t6"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "1ו-ח",
+     "description": "החלפת המפסק בגל ריבועי שנותן אותו ממוצע; הערך היעיל החדש והשוואה לקודם.",
+     "topics": [
+      "t5",
+      "t6"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2א-ג",
+     "description": "מעגל \\(V_s,C_1,C_2,L,R\\): משוואה דיפרנציאלית למתח הקבל, תנאי לאי־תנודות ב־ZIR וגורם האיכות.",
+     "topics": [
+      "t7"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ד",
+     "description": "ZSR של מתח הקבל לכניסה סינוסית מופעלת ב־\\(t=0\\) (ערכים נתונים), כולל הסקת תנאי ההתחלה ושאלת היציבות האסימפטוטית.",
+     "topics": [
+      "t7",
+      "t10"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2ה",
+     "description": "מקרה \\(R=0\\) עם כניסה בתדר התהודה — תגובה לא חסומה.",
+     "topics": [
+      "t7",
+      "t11"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3א-ג",
+     "description": "שתי מערכות LTI בטור: הוכחה שהכוללת LTI, התגובה להלם \\(h=h_1*h_2\\) וסיבתיות.",
+     "topics": [
+      "t8"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3ד-ה",
+     "description": "מערכות בדידות עם \\(h_1=\\{1,1\\}\\), \\(h_2=\\{1,-1\\}\\): מציאת כניסה לא קבועה שנותנת יציאה אפס ופירוש מערכתי של כל מערכת.",
+     "topics": [
+      "t8"
+     ],
+     "difficulty": 3
+    }
+   ]
+  },
+  {
+   "title": "מבחן 2022 סמסטר ב' מועד ג' (גיא כהן)",
+   "year": "2022",
+   "term": "מועד ג",
+   "url": "https://drive.google.com/file/d/1ZOUUguwft9L4ky1RhDyQuUzFVUoYZQdK/view?usp=drivesdk",
+   "has_solution": false,
+   "questions": [
+    {
+     "num": "1א-ה",
+     "description": "מעגל \\(E\\), מפסק מחזורי, \\(L,R\\): מתח הנגד, תנאי התחלה לביטול תופעת המעבר, ממוצע, סטיות וערך יעיל.",
+     "topics": [
+      "t6",
+      "t5"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "1ו-ח",
+     "description": "מקור \\(A\\cos(\\cdot)\\) במקום המפסק: תנאי לקבלת אותו מתח ממוצע, הערך היעיל במצב מתמיד ותנאי לשוויון הערכים היעילים.",
+     "topics": [
+      "t10",
+      "t5"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2א",
+     "description": "רשת עם שנאי אידיאלי \\(1{:}1\\) וקבלים שווים, כניסה \\(A\\sin(\\omega t)\\) בראשוני: מציאת אות המוצא על הקבל במשני.",
+     "topics": [
+      "t12",
+      "t10"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2ב",
+     "description": "מעגל עם צימוד וקבלים, כניסה \\(V_p\\cos t\\): חישוב מתח המוצא.",
+     "topics": [
+      "t12",
+      "t10"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3א-ג",
+     "description": "קסקדה של שתי מערכות LTI: לינאריות וקביעות בזמן, תגובה להלם כוללת וסיבתיות.",
+     "topics": [
+      "t8"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3ד",
+     "description": "מערכות בדידות: כניסה לא קבועה עם יציאה אפס; האם קיימת כניסה אחרת כנדרש — הוכחה.",
+     "topics": [
+      "t8"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3ה",
+     "description": "חיבור המערכת בטור עם עצמה \\(n\\) פעמים ומציאת המערכת הגבולית.",
+     "topics": [
+      "t8"
+     ],
+     "difficulty": 3
+    }
+   ]
+  },
+  {
+   "title": "מבחן 2023 סמסטר א' מועד א' (גיא כהן)",
+   "year": "2023",
+   "term": "מועד א",
+   "url": "https://drive.google.com/file/d/1FqD4NQ_JrxtVhVpSJrvYSsR2QWjWu1QA/view?usp=drivesdk",
+   "has_solution": true,
+   "questions": [
+    {
+     "num": "1א-ב",
+     "description": "מקור זרם, נגד ושני קבלים עם אופיינים \\(q_1=t\\,v\\) (משתנה בזמן) ו־\\(q_2=v\\): משוואה דיפרנציאלית על \\(v(t)\\) ותגובת ZIR עם \\(v(0)=1\\).",
+     "topics": [
+      "t2",
+      "t6"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "1ג-ה",
+     "description": "ZSR לכניסת הלם ולכניסת מדרגה, וגבול המתח באינסוף עם הסבר.",
+     "topics": [
+      "t6",
+      "t5"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "1ו-ז",
+     "description": "ZSR למדרגה הפוכה \\(u(-t)\\) ולהלם הפוך — חשיבה על מעגל משתנה בזמן.",
+     "topics": [
+      "t6",
+      "t8"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "1ח",
+     "description": "הוכחה שלכל \\(f\\) אינטגרבילית ורציפה באפס קיים הגבול של \\(\\int i_R f\\,dt\\) כאשר \\(R\\to0^+\\) (התכנסות להלם) וחישובו.",
+     "topics": [
+      "t5"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2א-ב",
+     "description": "מעגל פאסיבי \\(V_s,R_1,R_2,C,L\\): משוואה דיפרנציאלית למתח הקבל ותנאי לתנודות ב־ZIR של הזרם ב־\\(R_2\\).",
+     "topics": [
+      "t7"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ג",
+     "description": "ערכי יחידה: תגובה להלם של הזרם ב־\\(R_2\\).",
+     "topics": [
+      "t7",
+      "t8"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2ד-ו",
+     "description": "כניסה \\(\\cos(\\omega t)\\): דיאגרמת פאזורים עם גדלים וזוויות, הספק ממוצע על הנגד וגבולות ההספק כאשר \\(\\omega\\to0\\) ו־\\(\\omega\\to\\infty\\) עם הסבר פיסיקלי.",
+     "topics": [
+      "t10",
+      "t11"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3א-ג",
+     "description": "מעגל תהודה: הוכחה שסכום האנרגיות על הקבל והסליל בתהודה קבוע, היחס בין האנרגיה האגורה להספק המתבזבז, ומשמעות \\(1/\\sqrt{LC}\\).",
+     "topics": [
+      "t11"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3ד-ה",
+     "description": "דיאגרמת פאזורים בתדר נמוך מתדר התהודה ורוחב הסרט (תחום התדרים שבו ההספק לפחות מחצית מהמרבי).",
+     "topics": [
+      "t11",
+      "t10"
+     ],
+     "difficulty": 2
+    }
+   ]
+  },
+  {
+   "title": "מבחן 2024 מועד ב' — שאלון מצולם (שתי שאלות, 50 נק' כל אחת)",
+   "year": "2024",
+   "term": "מועד ב",
+   "url": "https://drive.google.com/file/d/1IHA2v58A8MlLK9Oe4Rvu5cTm9tbnuDCe/view?usp=drivesdk",
+   "has_solution": false,
+   "questions": [
+    {
+     "num": "1א-ב",
+     "description": "מעגל \\(L\\) בטור ו-\\(R\\) במוצא: פונקציית התמסורת \\(H(i\\omega)=V_{out}/V_{in}\\) (גודל וזווית), שרטוט \\(|H(i\\omega)|\\), סוג המסנן ותדר הברך (מחצית ההספק, \\(-3\\) dB).",
+     "topics": [
+      "t11"
+     ],
+     "difficulty": 1
+    },
+    {
+     "num": "1ג",
+     "description": "דיאגרמת פאזורים של \\(V_{in}\\) ו-\\(V_{out}\\) בתדר הברך עם גדלים וזוויות.",
+     "topics": [
+      "t10",
+      "t11"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "1ד-ה",
+     "description": "ערכי יחידה וכניסה \\(V_{in}(t)=\\cos(t)+\\cos(t/\\sqrt3)\\): אות היציאה במצב המתמיד וההספק הממוצע על הנגד.",
+     "topics": [
+      "t11",
+      "t10"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "1ו",
+     "description": "משוואה דיפרנציאלית למתח המוצא ותגובת ה-ZSR של מתח המוצא לכניסה הנתונה.",
+     "topics": [
+      "t6",
+      "t10"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2א-ב",
+     "description": "מקור זרם \\(I_s(t)=\\cos(t)\\) במקביל לקבל \\(C\\) ולענף \\(L\\)–\\(R\\) טורי, עם \\(V_C(0)=0\\), \\(i_L(0)=0\\): משוואה דיפרנציאלית ל-\\(i_L(t)\\) ותנאי ההתחלה שלה.",
+     "topics": [
+      "t7"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ג",
+     "description": "מקדם הריסון של המעגל (כאשר יש תנודות) וההנחה הפיסיקלית שמאפסת אותו, עם הסבר פיסיקלי.",
+     "topics": [
+      "t7"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ד-ה",
+     "description": "דיאגרמת פאזורים לזרמי הקבל, הסליל והמקור ולמתח הקבל; ועבור \\(R\\gt0\\) – האם קיים תדר שבו מתח הסליל ומתח הקבל מבטלים זה את זה (הוכח/הפרך).",
+     "topics": [
+      "t10",
+      "t11"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2ו",
+     "description": "לכל הרכיבים ערך יחידה: מציאת זרם הסליל במצב המתמיד.",
+     "topics": [
+      "t10"
+     ],
+     "difficulty": 2
+    }
+   ]
+  },
+  {
+   "title": "מבחן 2025 סמסטר א' מועד ב' (גיא כהן, 03.03.25) — שאלון סרוק",
+   "year": "2025",
+   "term": "מועד ב",
+   "url": "https://drive.google.com/file/d/19VbIkJOLe6TAAs4jbrCChs5uA9DIqmQt/view?usp=drivesdk",
+   "has_solution": false,
+   "questions": [
+    {
+     "num": "1א-ב",
+     "description": "מעגל גשר פאסיבי עם מקור מתח \\(u(t)\\), נגדים \\(R_1,R_2,R_3\\), סליל \\(L\\) בענף האמצעי ומקור מתח תלוי \\(\\alpha i_1\\) (\\(i_1\\) הזרם ב-\\(R_1\\)): מציאת זרם הסליל בכל רגע כתלות ב-\\(\\alpha\\) ובשאר הרכיבים, והאם קיים \\(\\alpha\\) שעבורו זרם הסליל זהותית אפס (הוכח/הפרך).",
+     "topics": [
+      "t6",
+      "t3",
+      "t12"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "1ג-ד",
+     "description": "האם הנגד \\(R_2\\) משפיע על התנהגות המעגל (הוכחה או דוגמה), והאם עבור בחירה כלשהי של הרכיבים יש לזרם הסליל קפיצה באפס.",
+     "topics": [
+      "t6",
+      "t3"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "1ה",
+     "description": "מוסיפים נגד במקביל לסליל, לכל הרכיבים ערך יחידה, \\(\\alpha\\) נקבע כבשרטוט והכניסה \\(\\delta(t)\\): מציאת זרם הסליל בכל רגע (רמז: נקודת מבט של אחד הרכיבים – תבנין).",
+     "topics": [
+      "t6",
+      "t8",
+      "t3"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2א-ב",
+     "description": "מקור זרם \\(I_s(t)=\\sin(t)u(t)\\) במקביל לקבל \\(C\\) ולענף \\(L\\)–\\(R\\) טורי: משוואה דיפרנציאלית ל-\\(i_L(t)\\) ותנאי ההתחלה שלה.",
+     "topics": [
+      "t7"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ג",
+     "description": "תנאי לקיום תנודות במעגל, מקדם הריסון וההנחה הפיסיקלית שמאפסת אותו, עם הסבר פיסיקלי.",
+     "topics": [
+      "t7"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ד-ה",
+     "description": "דיאגרמת פאזורים לזרמי הקבל, הסליל והמקור ולמתח הקבל; חישוב ההספק הממוצע במצב המתמיד על הסליל.",
+     "topics": [
+      "t10"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ו",
+     "description": "לכל הרכיבים ערך יחידה: תגובת זרם הסליל לאות הכניסה, מבוטאת כסינוסואידה עם זווית מופע.",
+     "topics": [
+      "t7",
+      "t10"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3א-ג",
+     "description": "מעגל \\(L\\) בטור ו-\\(R\\) במוצא: חישוב \\(H(i\\omega)\\) עם ביטוי ושרטוט לגודל ולזווית, מציאת נקודת ה-\\(-3\\) dB (מחצית ההספק) וסוג המסנן.",
+     "topics": [
+      "t11"
+     ],
+     "difficulty": 1
+    },
+    {
+     "num": "3ד",
+     "description": "לכניסה \\(V_{in}(t)=\\sum_{n=0}^{\\infty}a_n\\cos(n\\omega_0t+\\theta_n)\\) עם \\(\\sum|a_n|\\lt\\infty\\): מציאת \\(V_{out}(t)\\), והאם האות מוגדר היטב (מתכנס) – נימוק השיקולים.",
+     "topics": [
+      "t11",
+      "t10",
+      "t5"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3ה",
+     "description": "חישוב \\(\\frac{\\omega_0}{2\\pi}\\int_0^{2\\pi/\\omega_0}V_{out}(t)dt\\) (הערך הממוצע – רכיב ה-DC העובר במסנן) והקשר לסוג המסנן מסעיף ג.",
+     "topics": [
+      "t11",
+      "t5"
+     ],
+     "difficulty": 2
+    }
+   ]
+  },
+  {
+   "title": "מבחן 2018 סמסטר ב' מועד ב' (גיא כהן)",
+   "year": "2018",
+   "term": "מועד ב",
+   "url": "https://drive.google.com/file/d/1m1Um_RRY76oFTv-xHW0i1CRUF6naEvGB/view?usp=drivesdk",
+   "has_solution": true,
+   "questions": [
+    {
+     "num": "1א-ב",
+     "description": "מעגל \\(R,L,C\\): כתיבת משוואת מצב \\(\\dot X=AX\\) לווקטור המצב (מתח הקבל, זרם הסליל), ופתרון ה־ZIR בערכי יחידה אך ורק דרך משוואת המצב.",
+     "topics": [
+      "t9",
+      "t7"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "1ג-ד",
+     "description": "האנרגיה הכוללת המתבזבזת על הנגד בקטע \\([0,\\infty)\\) ושרטוט מסלול המצב במישור \\((v_C,i_L)\\).",
+     "topics": [
+      "t9",
+      "t1"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "1ה",
+     "description": "הוכחה: מערכת עם מטריצת מצב \\(B\\) יציבה אסימפטוטית אם ורק אם לכל הערכים העצמיים של \\(B\\) חלק ממשי שלילי.",
+     "topics": [
+      "t9"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2א-ב",
+     "description": "מעגל \\(V_s,C_1,C_2,R_1,R_2\\): משוואה דיפרנציאלית למתח על אחד הנגדים ותגובת ZIR עם תנאי התחלה 1.",
+     "topics": [
+      "t6",
+      "t7"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ג-ה",
+     "description": "רכיבים שווים: פונקציית התמסורת \\(H(i\\omega)\\), התדר (אם קיים) שבו עובר מחצית ההספק הממוצע לנגד, ודיאגרמת פאזורים.",
+     "topics": [
+      "t11",
+      "t10"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3א",
+     "description": "מקור סינוסי עם עכבה \\(Z_s=R_s+jX_s\\), שנאי אידיאלי \\(n_1{:}n_2\\) ועומס \\(Z_L=R_L+jX_L\\): נוסחה להספק הממוצע על העומס.",
+     "topics": [
+      "t12",
+      "t10"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3ב-ג",
+     "description": "יחס הליפופים שנותן הספק מרבי כשרק הוא ניתן לשינוי (מבוטא בגודלי העכבות, עם הוכחה), ותלותו בתדר כאשר \\(Z_s\\) קבל+נגד ו־\\(Z_L\\) סליל+נגד בערכי יחידה.",
+     "topics": [
+      "t12",
+      "t10"
+     ],
+     "difficulty": 3
+    }
+   ]
+  },
+  {
+   "title": "מבחן 2025 מועד א' (09.02.25) — שחזור סטודנטים בכתב יד (פתרונות סטודנטים בתיקייה נפרדת)",
+   "year": "2025",
+   "term": "מועד א",
+   "url": "https://drive.google.com/file/d/1soZ-4ZO7xSiwUuL3UBVLGjTcidnet-a_/view?usp=drivesdk",
+   "has_solution": true,
+   "questions": [
+    {
+     "num": "1א-ב",
+     "description": "שני סלילים \\(L_1,L_2\\) נטענים דרך מקורות \\(V_1,V_2\\) ונגדים; ברגע \\(t=t_0\\) המפסקים \\(S_1,S_2\\) נפתחים ומפסק \\(S_0\\) מחבר נגד \\(R\\) במקביל לסלילים. האם זרמי הסלילים רציפים ב-\\(t_0\\) (הסבר), ומציאת \\(I_R(t)\\) לכל \\(t\\).",
+     "topics": [
+      "t6",
+      "t2"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "1ג",
+     "description": "מציאת \\(I_{L_1}(t)\\), \\(I_{L_2}(t)\\) לכל \\(t\\), חישוב \\(I_R(\\infty), I_{L_1}(\\infty), I_{L_2}(\\infty)\\) (נשאר זרם מעגלי קבוע בסלילים) והאם התוצאה הגיונית פיסיקלית.",
+     "topics": [
+      "t6"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "1ד",
+     "description": "האם קיים קבוע \\(K\\) כך שלכל \\(f\\) מתקיים \\(V_R(t)*f\\to K\\,f(t-t_0)\\) כאשר \\(R\\to\\infty\\) (מתח הנגד שואף להלם)? נמקו.",
+     "topics": [
+      "t5",
+      "t8",
+      "t6"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "1ה",
+     "description": "חישוב \\(I_{L_1}(t), I_{L_2}(t)\\) כאשר \\(S_0\\) נשאר מנותק.",
+     "topics": [
+      "t6",
+      "t2"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2א-ב",
+     "description": "מקור זרם \\(I_s=\\cos(t)u(t)\\) במקביל לקבל \\(C\\) ולענף \\(L\\)–\\(R\\) טורי: משוואה דיפרנציאלית לזרם הסליל \\(I_L\\) ותנאי ההתחלה למשוואה.",
+     "topics": [
+      "t7"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ג",
+     "description": "מה התנאי הנדרש כדי שמקדם הריסון יהיה אפס? הסבר פיסיקלי.",
+     "topics": [
+      "t7"
+     ],
+     "difficulty": 1
+    },
+    {
+     "num": "2ד-ה",
+     "description": "חישוב הפאזורים ושרטוט דיאגרמת פאזורים ל-\\(I_s,I_L,I_C,V_C\\); והאם קיים תדר \\(\\omega\\) שבו מתח הנגד ומתח הסליל מבטלים זה את זה כאשר \\(R\\gt0\\).",
+     "topics": [
+      "t10"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ו",
+     "description": "מציאת \\(I_L(t)\\) (תגובה מלאה לכניסה \\(\\cos(t)u(t)\\)).",
+     "topics": [
+      "t7",
+      "t10"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3א-ב",
+     "description": "מערכת \\(Mf(t)=t\\int_0^tf(u)du\\) מהפונקציות החסומות לרציפות: האם המערכת מוגדרת היטב, האם היא לינארית והאם היא קבועה בזמן.",
+     "topics": [
+      "t8"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3ג",
+     "description": "האם קיימת כניסה חסומה \\(f\\) שאינה זהותית אפס כך ש-\\(M(f)=0\\) לכל \\(t\\)?",
+     "topics": [
+      "t8"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3ד-ו",
+     "description": "מציאת התגובה להלם והתגובה למדרגה של המערכת, והאם המערכת סיבתית (נמקו).",
+     "topics": [
+      "t8",
+      "t5"
+     ],
+     "difficulty": 2
+    }
+   ]
+  },
+  {
+   "title": "מבחן תשפ\"א (2021) מועד א' — מרצה: פרופ' תימור מלמד",
+   "year": "2021",
+   "term": "מועד א",
+   "url": "https://drive.google.com/file/d/1oaaME33kfHd0on5gwsPTfHHj4zLJHMm8/view?usp=drivesdk",
+   "has_solution": true,
+   "questions": [
+    {
+     "num": "1א-ב",
+     "description": "מעגל עם שני סלילים מצומדים (\\(L_1,L_2,M\\)), נגד, קבל ושני מקורות מתח: מד\\\"ר למתח הנגד בעזרת האופרטור \\(D\\), והתנאי על הרכיבים שעבורו המערכת מסדר שני (התאפסות מקדם הנגזרת השלישית).",
+     "topics": [
+      "t12",
+      "t7"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "1ג-ה",
+     "description": "תנאים לקיום מצב סינוסי עמיד, פונקציית התמסורת \\(H(j\\omega)=V_R/V_1\\), סוג המסנן (חוסם פס) ותדרי התהודה/קיצון של \\(|H|\\).",
+     "topics": [
+      "t10",
+      "t11"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2א",
+     "description": "מערכת LTI \\(y''+2\\alpha y'+\\omega_0^2y=(\\omega_0^2-\\alpha^2)x\\) בתת־ריסון: מציאת התגובה להלם \\(h(t)\\) (כולל \\(u(t)\\)).",
+     "topics": [
+      "t7",
+      "t8"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ב-ג",
+     "description": "מוצא לכניסה \\(e^{-\\alpha t}[u(t)-u(t-t_0)]\\) בקונבולוציה, ובדיקה האם קיים \\(t_0\\) שעבורו המוצא מתאפס זהותית ל־\\(t>t_0\\).",
+     "topics": [
+      "t8"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2ד-ה",
+     "description": "חיבור בטור עם \\(h_2=e^{-a|t|}\\sum\\delta(t-t_n)\\): תנאי לסיבתיות המערכת החדשה ותנאי להתאפסות התגובה להלם במרווחים.",
+     "topics": [
+      "t8"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3א-ב",
+     "description": "מעגל במצב סינוסי עמיד עם מקור מבוקר וסלילים מצומדים: מטריצת פגישת החוגים \\(M\\), מטריצת עכבות הענפים \\(Z\\) ווקטור מקורות המתח \\(V_s\\).",
+     "topics": [
+      "t3",
+      "t12"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3ג",
+     "description": "הדרך הפשוטה לשקול תבנין מתוך זרמי החוגים: ניסוי ריקם וניסוי קצר, \\(Z_T=V_{oc}/I_N\\) (לא לאפס מקור תלוי).",
+     "topics": [
+      "t3",
+      "t10"
+     ],
+     "difficulty": 2
+    }
+   ]
+  },
+  {
+   "title": "מבחן תשפ\"א (2021) מועד ב' — מרצה: פרופ' תימור מלמד",
+   "year": "2021",
+   "term": "מועד ב",
+   "url": "https://drive.google.com/file/d/1MKmTIa0QKx62WQ2o2dpYuEd6a_YPlTb9/view?usp=drivesdk",
+   "has_solution": true,
+   "questions": [
+    {
+     "num": "1א-ג",
+     "description": "מעגל במצב סינוסי עמיד עם מקור זרם, נגדים, קבל וסלילים מצומדים: בחירת שני משתנים, כתיבת שתי משוואות KVL וחישוב התמסורת \\(H(j\\omega)=V_{out}/I_s\\).",
+     "topics": [
+      "t12",
+      "t10",
+      "t3"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "1ד-ה",
+     "description": "האם המסנן מעביר גבוהים או נמוכים (משיקולי רכיבים בלבד); מקרה פרטי \\(L_1=L_2=L\\): משרעת המוצא והתנאי לאפס מוצא בכל תדר (\\(L=M\\)).",
+     "topics": [
+      "t11",
+      "t12"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2א",
+     "description": "מערכת \\(y''+2y'+5y=2x\\): התגובה להלם \\(h(t)=e^{-t}\\sin(2t)u(t)\\).",
+     "topics": [
+      "t7",
+      "t8"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ב-ג",
+     "description": "מוצא לכניסה \\(e^{-t}[u(t+1)-u(t-2)]\\) בקונבולוציה, שרטוט ובקרת שגיאות (מבנה הפתרון בכל תחום).",
+     "topics": [
+      "t8"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2ד-ה",
+     "description": "חיבור בטור עם דובלט מושהה \\(h_2=\\delta'(t-t_0)\\): סיבתיות המערכת החדשה והמוצא שלה.",
+     "topics": [
+      "t8",
+      "t5"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3א",
+     "description": "גרף מכוון עם מדידות חלקיות של מתחי וזרמי הענפים: השלמת הווקטורים בעזרת KVL ו־KCL.",
+     "topics": [
+      "t1",
+      "t3"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3ב-ג",
+     "description": "המרת מקור זרם לענף סטנדרטי, ומטריצת עכבות הענפים \\(Z\\) (כולל צימוד), וקטורי המקורות \\(V_s,J_s\\).",
+     "topics": [
+      "t3",
+      "t12"
+     ],
+     "difficulty": 3
+    }
+   ]
+  },
+  {
+   "title": "מבחן תשפ\"א (2021) מועד ג' — מרצה: פרופ' תימור מלמד",
+   "year": "2021",
+   "term": "מועד ג",
+   "url": "https://drive.google.com/file/d/1xbtfk_kLqMikE7vEapYKxm59rXCo6f8N/view?usp=drivesdk",
+   "has_solution": true,
+   "questions": [
+    {
+     "num": "1א-ג",
+     "description": "מערכת LTI עם \\(h_1=u(t-\\Delta)-u(t-2\\Delta)\\) וכניסת דופק ברוחב \\(\\varepsilon< \\Delta\\): המוצא בקונבולוציה, שרטוט ובקרת שגיאות, וסיבתיות.",
+     "topics": [
+      "t8"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "1ד-ו",
+     "description": "חיבור בטור עם מערכת 2: מציאת \\(\\varepsilon\\) ו־\\(h_2(t)\\) מתוך מוצא מדוד (מתקבל הפרש הלמים), וסיבתיות מערכת 2 והמערכת הכוללת.",
+     "topics": [
+      "t8",
+      "t5"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2א-ב",
+     "description": "מצב סינוסי עמיד עם עכבות \\(Z_{2,3,4}\\): ערך הקבל לתיקון גורם ההספק ל־1, והאם הכפלת התדר מפצה על קבל קטן פי 2.",
+     "topics": [
+      "t10"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2ג-ה",
+     "description": "ערך מקור הזרם שמאפס את המתח על \\(Z_3\\), ההספק הממוצע שמספק מקור המתח, והספק ממוצע כששני המקורות בתדרים \\(\\omega\\) ו־\\(2\\omega\\).",
+     "topics": [
+      "t10",
+      "t3"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3א-ג",
+     "description": "גרף מעגל (3 צמתים, 4 ענפים): מטריצת פגישת החוגים \\(M\\), מטריצת עכבות הענפים עם האופרטור \\(D\\), וקטורי מקורות ומשוואות זרמי החוגים.",
+     "topics": [
+      "t3"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3ד",
+     "description": "מהמשוואות המטריציות: מד\\\"ר לזרם בענף עבור \\(C=1,L=1,R_1=R_2=1\\).",
+     "topics": [
+      "t7",
+      "t3"
+     ],
+     "difficulty": 2
+    }
+   ]
+  },
+  {
+   "title": "מבחן ניסיון 2021 — מרצה: פרופ' תימור מלמד",
+   "year": "2021",
+   "term": "מבחן ניסיון",
+   "url": "https://drive.google.com/drive/folders/1_zZclJmyPlTxo6cXJ7coPck3xGfenkTZ",
+   "has_solution": true,
+   "questions": [
+    {
+     "num": "1",
+     "description": "\\(h(t)=[2te^{-4t}+e^{-2t}]u(t)\\): סדר המערכת, המד\\\"ר המתארת אותה, המוצא לכניסה \\(e^{-4t}[u(t-1)-u(t-3)]\\) ובדיקת סדר אי־הרציפות ומבנה הפתרון.",
+     "topics": [
+      "t8",
+      "t7"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2א-ב",
+     "description": "\\(h(t)=A\\,t\\,e^{-t/\\tau_0}u(t)\\) (כניסה זרם, מוצא מתח): יחידות הקבועים, המד\\\"ר ותנאי ההתחלה ב־\\(0^-\\) ללא התמרות.",
+     "topics": [
+      "t7",
+      "t8"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ג-ה",
+     "description": "תגובה לדופק מלבני \\(|t|< T_0\\) בקונבולוציה, והגבולות \\(T_0\\to0\\) (עם \\(I_0T_0=1\\) — הלם) ו־\\(T_0\\to\\infty\\).",
+     "topics": [
+      "t8",
+      "t5"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3",
+     "description": "גרף מכוון: הוכחה שקבוצת ענפים היא עץ, חוגים יסודיים ומשוואת KVL, קבוצות חיתוך יסודיות ל־KCL, ושקול תבנין מתוך פתרון הפאזורים.",
+     "topics": [
+      "t3",
+      "t1"
+     ],
+     "difficulty": 3
+    }
+   ]
+  },
+  {
+   "title": "מבחן 2022 מועד א' — מתוך סיכום פתרון סטודנט בכתב יד (נוסח שאלה 1 מועתק ביד, שאלות 2–3 מודבקות מהשאלון; שם המרצה לא מופיע)",
+   "year": "2022",
+   "term": "מועד א",
+   "url": "https://drive.google.com/file/d/1mdL_OaprOMWM58YvEfRccaM5ay0GkKQx/view?usp=drivesdk",
+   "has_solution": true,
+   "questions": [
+    {
+     "num": "1א-ג",
+     "description": "שני קבלים \\(C_1,C_2\\) מחוברים דרך מפסק ונגד \\(R\\); המפסק נסגר ב-\\(t=0\\) עם \\(V_{C_1}(0^-)=V_1\\), \\(V_{C_2}(0^-)=V_2\\). למצוא את \\(V_{C_1}(t),V_{C_2}(t)\\), את הזרם \\(I_R(t)\\) ואת הגבולות \\(\\lim_{t\\to\\infty}V_{C_1},V_{C_2}\\).",
+     "topics": [
+      "t6",
+      "t2"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "1ד",
+     "description": "למצוא קבוע \\(K\\gt 0\\) כך שלכל \\(f(t)\\) אינטגרבילית ורציפה באפס מתקיים \\(\\lim_{R\\to0^+}\\int_{-\\infty}^{\\infty}I_R(t)f(t)\\,dt=K f(0)\\) (הזרם שואף להלם).",
+     "topics": [
+      "t5",
+      "t6"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "1ה",
+     "description": "עבור \\(C_1=C_2=C\\): להוכיח ש-\\(\\tfrac12\\le\\eta\\le1\\) כאשר \\(\\eta=E_{fin}/E_{init}\\) (יחס האנרגיה הסופית להתחלתית), ולמצוא מתי \\(\\eta=\\tfrac12\\).",
+     "topics": [
+      "t2",
+      "t6"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2א",
+     "description": "מעגל: מקור \\(V_s\\) בטור לקבל \\(C_1\\), ואחריו ענף \\(L\\)–\\(R\\) טורי במקביל לקבל \\(C_2\\); \\(V\\) הוא המתח על \\(C_2\\). לכתוב משוואה דיפרנציאלית מתאימה עבור \\(V\\).",
+     "topics": [
+      "t7",
+      "t1"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ב",
+     "description": "מהו התנאי על \\(R\\) כך שלא יתרחשו תנודות בפתרון ה-ZIR לכל תנאי התחלה?",
+     "topics": [
+      "t7"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ג",
+     "description": "מהו גורם האיכות של המעגל, והאם התוצאה מסתדרת פיזיקלית?",
+     "topics": [
+      "t7",
+      "t11"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ד",
+     "description": "עבור \\(R=\\tfrac34,\\ L=\\tfrac14,\\ C_1=C_2=1\\) (ולפי הערת הסטודנט \\(V_s=\\sin t\\cdot u(t)\\)): למצוא את תגובת ה-ZSR של \\(V\\) לאות הכניסה.",
+     "topics": [
+      "t7",
+      "t10"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2ה",
+     "description": "לחשב את הפרש הפאזות בין \\(I_{C_2}\\) ל-\\(I_L\\) (פאזורים).",
+     "topics": [
+      "t10"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3א",
+     "description": "רשת LTI: \\(L\\) ו-\\(C\\) בטור והמוצא \\(V_{out}\\) על הנגד \\(R\\); נתון של-\\(|H(i\\omega)|\\) מקסימום גלובלי ב-\\(\\omega_0\\). לחשב את \\(A(\\omega)=|H(i\\omega)|\\) ו-\\(P(\\omega)=\\angle H(i\\omega)\\) ולקבוע את סוג המסנן.",
+     "topics": [
+      "t11",
+      "t10"
+     ],
+     "difficulty": 1
+    },
+    {
+     "num": "3ב-ג",
+     "description": "למצוא את גורם האיכות \\(Q\\) ואת תדר התנודות \\(\\omega_0\\), ולכתוב באמצעותם משוואה המתארת את תדרי מחצית ההספק; כמה תדרים כאלה יש ומה ערכם כאשר \\(Q\\gg1\\) (חלק מהנוסח נחתך בתמונה).",
+     "topics": [
+      "t11"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3ד",
+     "description": "נתון \\(V_{in}=\\sum_{n=-\\infty}^{\\infty}u(t-nT+a)-u(t-nT-a)\\), \\(0\\lt a\\lt T/2\\) (רכבת פולסים מחזורית): למצוא את \\(V_{out}\\) (טור פורייה דרך התמסורת).",
+     "topics": [
+      "t5",
+      "t11",
+      "t10"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3ה",
+     "description": "למצוא את \\(\\tfrac1T\\int_0^T V_{out}^2\\,dt\\) (הספק ממוצע/ערך יעיל של המוצא).",
+     "topics": [
+      "t5",
+      "t10"
+     ],
+     "difficulty": 2
+    }
+   ]
+  },
+  {
+   "title": "מבחן 2016 סמסטר ב' מועד א' (גיא כהן, 20.07.16) + פתרון סטודנט (ציון 90)",
+   "year": "2016",
+   "term": "מועד א",
+   "url": "https://drive.google.com/file/d/1ivuoHCFdOCsjjYYtkllvUpjwCRtahCFf/view?usp=drivesdk",
+   "has_solution": true,
+   "questions": [
+    {
+     "num": "1א-ב",
+     "description": "מעגל \\(R,L,C\\) מקבילי עם \\(v_C(0)=V_0\\), \\(i_L(0)=I_0\\) ווקטור מצב \\(X(t)=(v_C,i_L)^T\\). לכתוב את משוואת המצב \\(\\tfrac{d}{dt}X=AX\\), ולכתוב אותה שנית עבור מעגל חסר הפסדים עם \\(L=1H,\\ C=1F\\).",
+     "topics": [
+      "t9",
+      "t7"
+     ],
+     "difficulty": 1
+    },
+    {
+     "num": "1ג",
+     "description": "למצוא את פתרון משוואת המצב \\(X(t)\\) באופן וקטורי בגישת משוואות מצב, כלומר לחשב את \\(\\exp(At)\\).",
+     "topics": [
+      "t9"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "1ד-ה",
+     "description": "מהי צורת מסלול המצב (המסילה של \\(v_C\\) ו-\\(i_L\\) במישור)? להוכיח ולפרט צורה ומימדים, ולהסביר כיצד האנרגיה במעגל משפיעה על צורת ומימדי המסלול.",
+     "topics": [
+      "t9",
+      "t7"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2א-ב",
+     "description": "מעגל פסיבי: מקור זרם \\(I_s(t)=\\cos(t)\\) במקביל לקבל \\(C\\) ולענף טורי \\(L\\)–\\(R\\), תנאי התחלה אפס. למצוא את המשוואה הדיפרנציאלית ל-\\(i_L(t)\\) כתלות ברכיבים ואת תנאי ההתחלה שלה.",
+     "topics": [
+      "t7",
+      "t1"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ג",
+     "description": "למצוא את מקדם הריסון של המעגל (כאשר יש תנודות); מהי ההנחה הפיזיקלית הדרושה כדי שיתאפס? עם הסבר פיזיקלי.",
+     "topics": [
+      "t7"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ד-ה",
+     "description": "לשרטט דיאגרמת פאזורים לזרם הקבל, הסליל והמקור ולמתח הקבל; בהינתן \\(R\\gt 0\\), האם קיים תדר שבו מתח הסליל ומתח הקבל מבטלים זה את זה? להוכיח או להפריך.",
+     "topics": [
+      "t10"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ו",
+     "description": "כאשר כל הרכיבים בעלי ערך יחידה – למצוא את התגובה הכוללת של זרם הסליל ולבטא אותה באמצעות סינוסואידות.",
+     "topics": [
+      "t7",
+      "t10"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3א",
+     "description": "קבל \\(C\\) טעון (\\(V_C(0^-)=V_0\\ne0\\)) מחובר דרך מפסק שנסגר ב-\\(t=0^+\\) ל-\\(R_1\\) במקביל למקור זרם תלוי \\(aV_2\\), ובטור \\(R_2\\) (שמתחו \\(V_2\\)). לכל \\(a\\) למצוא את \\(V_a(t)\\) (המתח על \\(R_2\\)) לכל \\(t\\).",
+     "topics": [
+      "t6",
+      "t3"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3ב-ג",
+     "description": "בהינתן שהמעגל יציב אסימפטוטית – מהן ההגבלות על \\(a\\)? ולמצוא את \\(i_a(t)\\) לכל \\(a\\) ולכל \\(t\\).",
+     "topics": [
+      "t6",
+      "t7",
+      "t3"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3ד",
+     "description": "האם קיים \\(a_0\\) כך שלכל \\(f(t)\\) אינטגרבילית ורציפה באפס \\(\\lim_{a\\to a_0}\\int i_a(t)f(t)\\,dt=Kf(0)\\) עבור \\(K\\gt 0\\)? להוכיח ולמצוא את \\(K\\), או להפריך.",
+     "topics": [
+      "t5",
+      "t6"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3ה",
+     "description": "ידוע שהאנרגיה הכוללת המבוזבזת על \\(R_2\\) היא \\(\\tfrac{CV_0^2R_2}{2(R_1+R_2)}\\); למצוא את ה-\\(a\\) המתאים.",
+     "topics": [
+      "t6",
+      "t2"
+     ],
+     "difficulty": 2
+    }
+   ]
+  },
+  {
+   "title": "מבחן 2014 סמסטר ב' מועד ב' (גיא כהן, 25.07.14) + פתרון סטודנט (ציון 99)",
+   "year": "2014",
+   "term": "מועד ב",
+   "url": "https://drive.google.com/file/d/1HNXjQpkQ5zM0W-VnSgsCdmUU8SKS32P9/view?usp=drivesdk",
+   "has_solution": true,
+   "questions": [
+    {
+     "num": "1א-ב",
+     "description": "מקור זרם קבוע \\(I\\) מחובר דרך מפסק \\(S_1\\) (נפתח ב-\\(t_0\\)) לסליל \\(L_1\\) במקביל לנגד \\(R\\), ומפסק \\(S_2\\) (נסגר ב-\\(t_0\\)) מחבר במקביל סליל \\(L_2\\); לפני \\(t_0\\) מצב יציב. למצוא משוואה דיפרנציאלית למתח הנגד עבור \\(t\\gt t_0\\) ואת תנאי ההתחלה שלה.",
+     "topics": [
+      "t6",
+      "t1"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "1ג-ה",
+     "description": "למצוא את \\(v_R(t)\\) ואת הזרמים \\(I_{L1}(t),I_{L2}(t)\\) עבור \\(t\\gt t_0\\), את \\(I_{L1}(\\infty),I_{L2}(\\infty)\\), ולקבוע האם ערכי האינסוף תלויים ב-\\(R\\).",
+     "topics": [
+      "t6",
+      "t2"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "1ו-ז",
+     "description": "למצוא בחישוב מלא את האנרגיה שמתבזבזת על הנגד בזמן \\(0\\lt t\\lt\\infty\\); האם הגודל תלוי ב-\\(R\\)? הסבר ונימוק פיזיקלי.",
+     "topics": [
+      "t6",
+      "t2"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "1ח",
+     "description": "האם חוק שימור האנרגיה מתקיים גם כאשר \\(R\\to\\infty\\)? למצוא את \\(I_{L1}(t),I_{L2}(t)\\) במקרה זה (קפיצת זרם/הלם).",
+     "topics": [
+      "t6",
+      "t5",
+      "t2"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2א",
+     "description": "מעגל: מקור \\(V_s(t)\\), סליל \\(L\\) בטור, \\(R_1\\) במקביל לקבל \\(C\\), ובטור \\(R_2\\); כל הרכיבים פסיביים. האם תגובת ה-ZIR של מתח הקבל תמיד יציבה אסימפטוטית (\\(\\lim_{t\\to\\infty}|V_c(t)|=0\\)) לכל ערכי הרכיבים?",
+     "topics": [
+      "t7"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ב-ג",
+     "description": "עבור רכיבי יחידה, \\(V_c(0)=0\\), \\(i_L(0)=2A\\): למצוא את התגובה הכוללת של מתח הקבל לכניסת מדרגה \\(V_s=u(t)\\), לחשב את \\(\\lim_{t\\to\\infty}V_c^u(t)\\) ולקבוע האם ניתן לחשבו בלי כל התגובה הכוללת.",
+     "topics": [
+      "t7",
+      "t6"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2ד",
+     "description": "למצוא את התגובה הכוללת של מתח הקבל (\\(t\\ge0\\)) לכניסת סינוסואידה \\(V_s(t)=\\cos(t)\\).",
+     "topics": [
+      "t7",
+      "t10"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2ה",
+     "description": "לחשב את ההספק הממוצע במצב המתמיד המתפתח על הנגד \\(R_2\\) עבור הכניסה \\(V_s(t)=u(t)+\\cos(t)\\) (סופרפוזיציה של DC ו-AC).",
+     "topics": [
+      "t10",
+      "t3",
+      "t5"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3א",
+     "description": "מעגל RLC טורי במצב מתמיד עם מקור בתדר התהודה (\\(E\\) פאזור המקור). להוכיח שסכום האנרגיה הרגעית על הקבל והאנרגיה הרגעית על הסליל הוא גודל קבוע ולמצוא אותו.",
+     "topics": [
+      "t11",
+      "t10"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3ב-ג",
+     "description": "למצוא את היחס בין גודל פאזור מתח הקבל לגודל פאזור מתח המקור בתהודה באמצעות נתוני המעגל, ולציין איך נקרא גודל זה (גורם האיכות).",
+     "topics": [
+      "t11",
+      "t10"
+     ],
+     "difficulty": 1
+    }
+   ]
+  },
+  {
+   "title": "מבחן 2013 סמסטר ב' מועד א' (גיא כהן, 12.07.13) + פתרון סטודנט (ציון 93)",
+   "year": "2013",
+   "term": "מועד א",
+   "url": "https://drive.google.com/file/d/11wB9RIhb1kz3sAMZO_jEUhuwXuWAkbfF/view?usp=drivesdk",
+   "has_solution": true,
+   "questions": [
+    {
+     "num": "1א-ב",
+     "description": "מעגל \\(R,L,C\\) מקבילי עם \\(v_C(0)=V_0\\), \\(i_L(0)=I_0\\) ווקטור מצב \\(X(t)=(v_C,i_L)^T\\). לכתוב את משוואת המצב \\(\\tfrac{d}{dt}X=AX\\), ולכתוב אותה שנית למעגל חסר הפסדים עם \\(L=1H,\\ C=1F\\). (שאלה זו חזרה במועד א' 2016.)",
+     "topics": [
+      "t9",
+      "t7"
+     ],
+     "difficulty": 1
+    },
+    {
+     "num": "1ג",
+     "description": "למצוא את פתרון משוואת המצב באופן וקטורי, כלומר לחשב את \\(\\exp(At)\\).",
+     "topics": [
+      "t9"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "1ד-ה",
+     "description": "מהי צורת מסלול המצב במישור \\((v_C,i_L)\\)? להוכיח ולפרט צורה ומימדים, ולהסביר כיצד האנרגיה במעגל משפיעה עליהם.",
+     "topics": [
+      "t9",
+      "t7"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2א-ב",
+     "description": "מקור זרם \\(I_s(t)=\\cos(t)\\) במקביל לקבל \\(C\\) ולענף טורי \\(L\\)–\\(R\\), תנאי התחלה אפס. למצוא את המשוואה הדיפרנציאלית ל-\\(i_L(t)\\) ואת תנאי ההתחלה שלה.",
+     "topics": [
+      "t7",
+      "t1"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ג",
+     "description": "למצוא את מקדם הריסון של המעגל; מהי ההנחה הפיזיקלית הדרושה כדי שיתאפס? עם הסבר פיזיקלי.",
+     "topics": [
+      "t7"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ד-ה",
+     "description": "דיאגרמת פאזורים לזרמי הקבל, הסליל והמקור ולמתח הקבל; בהינתן \\(R\\gt 0\\), האם קיים תדר שבו מתח הסליל ומתח הקבל מבטלים זה את זה? להוכיח או להפריך.",
+     "topics": [
+      "t10"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ו-ז",
+     "description": "עבור רכיבי יחידה למצוא את התגובה הכוללת של זרם הסליל באמצעות סינוסואידות, ולקבוע האם לתדרים שבתגובה הכוללת קיים מחזור משותף.",
+     "topics": [
+      "t7",
+      "t10",
+      "t5"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3א",
+     "description": "מעגל קוטם: נגד \\(R\\gt 0\\) בטור ושני ענפי דיודה אידיאלית + מקור \\(E\\) בכיוונים מנוגדים במקביל למוצא. מהו התנאי על \\(V_{in}(t)\\) כדי ש-\\(V_{out}(t)=V_{in}(t)\\) לכל \\(t\\)?",
+     "topics": [
+      "t4"
+     ],
+     "difficulty": 1
+    },
+    {
+     "num": "3ב",
+     "description": "\\(V_{in}\\) מחזורי עם מחזור \\(T\\) וערך ממוצע אפס. האם \\(V_{out}\\) מחזורי? האם גם הערך הממוצע שלו אפס? להוכיח או להפריך בדוגמה נגדית.",
+     "topics": [
+      "t4",
+      "t5"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3ג-ד",
+     "description": "עבור \\(E=\\tfrac12\\) וולט ו-\\(V_{in}=\\sin(t)\\), כשהיציאה מחוברת לנגד של 1 אוהם: לחשב במדויק את ההספק הממוצע על הנגד ואת הערך הממוצע של \\(V_{out}(t)\\).",
+     "topics": [
+      "t4",
+      "t5"
+     ],
+     "difficulty": 3
+    }
+   ]
+  },
+  {
+   "title": "מבחן 2013 סמסטר ב' מועד ב' (גיא כהן, 12.08.13) + פתרון סטודנט (ציון 94)",
+   "year": "2013",
+   "term": "מועד ב",
+   "url": "https://drive.google.com/file/d/1RzW7uTdX3m0ezNtJBLG8LCJcZvWkOiJf/view?usp=drivesdk",
+   "has_solution": true,
+   "questions": [
+    {
+     "num": "1א-ב",
+     "description": "מקור זרם \\(I_{in}(t)=-RLC^2\\delta(t)+LCu(t)\\cos(t/\\sqrt{LC})\\) במקביל לסליל \\(L\\), קבל \\(C\\) ונגד שלילי \\(-R\\) (\\(R,L,C\\gt 0\\)), תנאי התחלה אפס ב-\\(0^-\\). לכתוב משוואה דיפרנציאלית עבור \\(i_L\\) ולמצוא את תנאי ההתחלה המתאימים (כולל השפעת ההלם).",
+     "topics": [
+      "t7",
+      "t5",
+      "t2"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "1ג-ד",
+     "description": "למצוא את התגובה הכוללת של זרם הסליל ל-\\(t\\gt 0\\) ולקבוע האם היא מתבדרת (\\(\\sup_{t\\gt 0}|i_L(t)|=\\infty\\)), עם הסבר פיזיקלי; האם התשובה תלויה בסימן \\(R\\)?",
+     "topics": [
+      "t7",
+      "t11"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "1ה-ו",
+     "description": "כעת \\(i_L(0^-)=\\varepsilon\\gt 0\\), \\(L=R\\), \\(C=1/R\\): למצוא את התגובה הכוללת \\(i_L^0(t)\\) באמצעות \\(\\varepsilon\\) בלבד ולקבוע האם היא מתבדרת, עם הסבר פיזיקלי.",
+     "topics": [
+      "t7"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2א",
+     "description": "מעגל RLC טורי במצב מתמיד בתהודה: להוכיח שסכום האנרגיות הרגעיות על הקבל והסליל הוא גודל קבוע ולמצוא אותו.",
+     "topics": [
+      "t11",
+      "t10"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ב-ד",
+     "description": "למצוא את היחס בין גודל מתח הקבל לגודל מתח המקור בתהודה באמצעות נתוני המעגל, לציין את שמו (גורם האיכות), ולחשב אותו כאשר \\(R\\to\\infty\\) ו-\\(R\\to0^+\\) עם הסבר פיזיקלי.",
+     "topics": [
+      "t11",
+      "t10"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3א-ב",
+     "description": "שנאי פסיבי בעל השראות הדדית \\(M\\gt 0\\) והשראויות עצמיות \\(L_1,L_2\\), עם עומס \\(Z\\) במשני. למצוא חסם עליון על \\(M\\) ואת העכבה \\(Z_{in}\\) המשתקפת מהמשני לראשוני.",
+     "topics": [
+      "t12",
+      "t10"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3ג",
+     "description": "שנאי אידיאלי עם יחס ליפופים \\(n=n_1/n_2\\); הראשוני מחובר למקור \\(e(t)=\\sin(t)\\) בעל עכבה טורית \\(Z_s=R_s+iX_s\\), והעומס \\(Z\\) הוא קבל \\(C\\). מהו ההספק הממוצע המירבי המתפתח על \\(Z\\)? עם הסבר פיזיקלי.",
+     "topics": [
+      "t12",
+      "t10"
+     ],
+     "difficulty": 2
+    }
+   ]
+  },
+  {
+   "title": "מבחן 2012 סמסטר ב' מועד א' (גיא כהן, 13.07.12; בכותרת השאלון מודפס \"2011\") + פתרון סטודנט (ציון 92)",
+   "year": "2012",
+   "term": "מועד א",
+   "url": "https://drive.google.com/file/d/1sNmp031NlZp5vZtBoiV8WUhCbYfcjY56/view?usp=drivesdk",
+   "has_solution": true,
+   "questions": [
+    {
+     "num": "1א-ב",
+     "description": "קבל \\(C\\) טעון (\\(V_C(0^-)=V_0\\ne0\\)) מחובר דרך מפסק שנסגר ב-\\(t=0^+\\) ל-\\(R_1\\) במקביל למקור זרם תלוי \\(aV_2\\) (\\(a\\ge0\\)), ובטור \\(R_2\\). לכל \\(a\\ge0\\) למצוא את \\(V_a(t)\\) (המתח על \\(R_2\\)) לכל \\(t\\), ולקבוע האם הוא תמיד בעל אופי מעריכי.",
+     "topics": [
+      "t6",
+      "t3"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "1ג",
+     "description": "לכל \\(a\\ge0\\) למצוא את הזרם \\(i_a(t)\\) דרך \\(R_2\\) לכל \\(t\\).",
+     "topics": [
+      "t6",
+      "t3"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "1ד",
+     "description": "האם קיים \\(a_0\\ge0\\) כך שלכל \\(f(t)\\) אינטגרבילית ורציפה באפס \\(\\lim_{a\\to a_0}\\int i_a(t)f(t)\\,dt=Kf(0)\\) עבור \\(K\\gt 0\\)? להוכיח ולמצוא את \\(K\\), או להפריך.",
+     "topics": [
+      "t5",
+      "t6"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "1ה",
+     "description": "ידוע שהאנרגיה הכוללת המבוזבזת על \\(R_2\\) היא \\(\\tfrac{CV_0^2R_2}{2(R_1+R_2)}\\); למצוא את ה-\\(a\\) המתאים.",
+     "topics": [
+      "t6",
+      "t2"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2א-ב",
+     "description": "מקור זרם \\(I_s(t)=\\cos(t)\\) במקביל לקבל \\(C\\) ולענף טורי \\(L\\)–\\(R\\), תנאי התחלה אפס. למצוא את המשוואה הדיפרנציאלית ל-\\(i_L(t)\\) ואת תנאי ההתחלה שלה.",
+     "topics": [
+      "t7",
+      "t1"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ג",
+     "description": "למצוא את מקדם הריסון של המעגל; מהי ההנחה הפיזיקלית הדרושה כדי שיתאפס? עם הסבר פיזיקלי.",
+     "topics": [
+      "t7"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ד-ה",
+     "description": "דיאגרמת פאזורים לזרמי הקבל, הסליל והמקור ולמתח הקבל; בהינתן \\(R\\gt 0\\), האם קיים תדר שבו מתח הסליל ומתח הקבל מבטלים זה את זה? להוכיח או להפריך.",
+     "topics": [
+      "t10"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ו-ז",
+     "description": "עבור רכיבי יחידה למצוא את התגובה הכוללת של זרם הסליל באמצעות סינוסואידות, ולקבוע האם התגובה הכוללת מחזורית.",
+     "topics": [
+      "t7",
+      "t10",
+      "t5"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3א-ב",
+     "description": "מקור זרם \\(I_s\\) במקביל לנגד \\(1\\Omega\\), ודיודה אידיאלית בטור לקבל \\(1F\\) עם \\(v(0)=\\tfrac12\\) וולט. למצוא את תגובת מתח הקבל לכל \\(t\\) עבור \\(I_s=u(t)\\) (\\(V_{step}\\)) ועבור \\(I_s=t\\,u(t)\\) (\\(V_{ramp}\\)).",
+     "topics": [
+      "t4",
+      "t6",
+      "t5"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3ג-ה",
+     "description": "האם \\(\\tfrac{dV_{ramp}}{dt}=V_{step}\\)? לנמק; לחזור על הסעיפים עבור \\(v(0)=0\\) ולבדוק האם כעת השוויון מתקיים (לינאריות מול רכיב לא לינארי ותנאי התחלה).",
+     "topics": [
+      "t4",
+      "t8",
+      "t6"
+     ],
+     "difficulty": 3
+    }
+   ]
+  },
+  {
+   "title": "מבחן 2012 סמסטר ב' מועד ב' (גיא כהן, 13.08.12) + פתרון סטודנט (ציון 96)",
+   "year": "2012",
+   "term": "מועד ב",
+   "url": "https://drive.google.com/file/d/1xTMLJqMayaI-e-OmFFD0DvOBQb566pV_/view?usp=drivesdk",
+   "has_solution": true,
+   "questions": [
+    {
+     "num": "1א-ב",
+     "description": "על מרחב הפונקציות הרציפות \\(X=C(\\mathbb R)\\) מוגדרת הפעולה \\(M(f)(t)=(1-t)\\int_{t-1}^{t}f(x)\\,dx+\\int_{t-1}^{t}f(x)\\,x\\,dx\\). להוכיח שהיא מוגדרת היטב (מ-\\(X\\) לעצמו) ושהיא אופרטור לינארי – כלומר מערכת לינארית.",
+     "topics": [
+      "t8"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "1ג-ד",
+     "description": "להוכיח ש-\\(X\\) אינווריאנטי להזזות ושהמערכת קבועה בזמן: \\(M(S_\\tau f)(t)=[S_\\tau M(f)](t)\\).",
+     "topics": [
+      "t8"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "1ה-ו",
+     "description": "האם קיימת \\(h(t)\\) יחידה עם \\(\\int|h|\\lt\\infty\\) כך ש-\\(M(f)=f*h\\) לכל \\(f\\)? אם כן, מהי \\(h(t)\\) (תגובה להלם), והאם המערכת סיבתית?",
+     "topics": [
+      "t8"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2א-ב",
+     "description": "מעגל מקבילי: מקור זרם \\(I_s(t)=\\cos(t/\\sqrt{LC})\\), מקור זרם תלוי \\(\\beta i_R\\), קבל \\(C\\), נגד \\(R\\) וסליל \\(L\\); \\(v(t)\\) מתח הסליל, \\(v(0)=V_0\\), \\(i_L(0)=I_0\\). למצוא את המשוואה הדיפרנציאלית ל-\\(v(t)\\) ואת תנאי ההתחלה שלה.",
+     "topics": [
+      "t7",
+      "t3"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ג-ד",
+     "description": "למצוא תנאי על הפרמטרים שעבורו המעגל יציב אסימפטוטית; בהינתן יציבות אסימפטוטית וריסון קריטי – למצוא את \\(\\beta\\) כתלות ברכיבים.",
+     "topics": [
+      "t7",
+      "t3"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ה",
+     "description": "בנתוני סעיף ד׳ ועם \\(V_0=0,\\ I_0=1\\): למצוא את \\(v(t)\\) עבור \\(t\\ge0\\) (עירור בתדר \\(1/\\sqrt{LC}\\)).",
+     "topics": [
+      "t7",
+      "t10"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3א",
+     "description": "רשת LTI עם תמסורת \\(H(i\\omega)\\) ש-\\(|H|\\) שלה מקסימלי גלובלית ב-\\(\\omega_0\\). לכתוב משוואה למציאת התדרים שבהם ההספק על הנגד הוא מחצית מההספק הממוצע ב-\\(\\omega_0\\).",
+     "topics": [
+      "t11"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3ב-ג",
+     "description": "הרשת ממומשת ע\"י \\(L\\) ו-\\(C\\) בטור והמוצא על \\(R\\): למצוא את \\(H(i\\omega)\\) (גודל וזווית), ולכתוב משוואה שפתרונה תדרי מחצית ההספק; כמה תדרים כאלה יש?",
+     "topics": [
+      "t11",
+      "t10"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3ד-ה",
+     "description": "\\(\\omega_1\\ne\\omega_2\\) הם תדרי מחצית ההספק (\\(\\omega_1\\lt 1/\\sqrt{LC}\\)) ו-\\(V_{in}=A\\sin(\\omega_1t)+B\\cos(\\omega_2t+\\varphi)\\): למצוא את \\(V_{out}(t)\\) במצב המתמיד, ובהנחה שהתדרים תלויים הרמונית – את ההספק הממוצע על הנגד.",
+     "topics": [
+      "t11",
+      "t10",
+      "t5"
+     ],
+     "difficulty": 3
+    }
+   ]
+  },
+  {
+   "title": "מבחן 2011 סמסטר ב' מועד א' (גיא כהן, 30.06.11) + פתרון סטודנט (ציון 94)",
+   "year": "2011",
+   "term": "מועד א",
+   "url": "https://drive.google.com/file/d/1IJGzphLN7lKNh1osdau6qGfd7pEs7vaP/view?usp=drivesdk",
+   "has_solution": true,
+   "questions": [
+    {
+     "num": "1א-ג",
+     "description": "מקור \\(V_0\\) מחובר דרך מפסק \\(S_1\\) (נפתח ב-\\(t_0\\)) לקבל \\(C_1\\); מפסק \\(S_2\\) (נסגר ב-\\(t_0\\)) מחבר דרך נגד \\(R_1\\) לקבל \\(C_2\\) שאינו טעון. למצוא את \\(i(t),V_1(t),V_2(t)\\) לכל \\(t\\), את \\(V_1(\\infty),V_2(\\infty)\\), ולקבוע האם הם תלויים ב-\\(R\\) (נימוק פיזיקלי).",
+     "topics": [
+      "t6",
+      "t2"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "1ד",
+     "description": "למצוא את \\(V_1(t),V_2(t)\\) לכל \\(t\\) כאשר \\(R\\to0^+\\).",
+     "topics": [
+      "t6",
+      "t5"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "1ה-ו",
+     "description": "למצוא את אנרגיית החום \\(E_R\\) המבוזבזת על הנגד והאם היא תלויה ב-\\(R\\), עם נימוק פיזיקלי.",
+     "topics": [
+      "t6",
+      "t2"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "1ז-ח",
+     "description": "להראות בחישוב שחוק שימור האנרגיה מתקיים במעגל עבור \\(t\\ge t_0\\); האם הוא מתקיים גם במקרה \\(R\\to0^+\\)? נימוק פיזיקלי.",
+     "topics": [
+      "t2",
+      "t6"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2א-ב",
+     "description": "מעגל פסיבי ללא מקור: נגד \\(R\\) במקביל לקבל \\(C\\) ולענף טורי \\(R_L\\)–\\(L\\), עם \\(V_C(0)=V_0\\), \\(i_L(0)=I_0\\). למצוא את המשוואה הדיפרנציאלית ל-\\(i_L(t)\\) ואת תנאי ההתחלה שלה.",
+     "topics": [
+      "t7",
+      "t1"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ג",
+     "description": "למצוא את מקדם הריסון; מה יש להניח על \\(R\\) ועל \\(R_L\\) כדי שיתאפס? הסבר פיזיקלי.",
+     "topics": [
+      "t7"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ד",
+     "description": "בהנחה \\(R=R_L\\): לאילו ערכי קיבול \\(C\\) יתקיימו תנודות במעגל? לבטא במונחי \\(R\\) ו-\\(L\\).",
+     "topics": [
+      "t7"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3א",
+     "description": "מקור זרם \\(I_s\\) במקביל ל-\\(R\\), \\(C\\) ולענף \\(R_L\\)–\\(L\\); \\(Z(i\\omega)\\) העכבה הנראית מהמקור ופאזור המקור \\(I_s=|I_s|e^{-i\\angle Z(i\\omega)}\\). לשרטט דיאגרמת פאזורים עם \\(V_R,I_R,I_C,I_L\\).",
+     "topics": [
+      "t10"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3ב-ג",
+     "description": "מהו התדר \\(\\omega_0\\) (באמצעות רכיבי המעגל) שבו \\(I_L\\) מקדים את \\(I_R\\) ב-\\(\\pi/4\\) רדיאנים? האם ב-\\(\\omega_0\\) מתקיים \\(I_R=I_s\\), והאם מצב כזה אפשרי בכלל?",
+     "topics": [
+      "t10"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3ד-ה",
+     "description": "בנוסף ידוע ש-\\(\\angle Z(i\\omega_0)=0\\) (תהודה): למצוא את \\(\\omega_0\\) כתלות ב-\\(L,C\\) בלבד, ולתת ביטוי בזמן לזרם על הנגד במצב המתמיד.",
+     "topics": [
+      "t10",
+      "t11"
+     ],
+     "difficulty": 3
+    }
+   ]
+  },
+  {
+   "title": "מבחן 2010 סמסטר ב' מועד א' (גיא כהן, 06.07.10) + פתרון סטודנט",
+   "year": "2010",
+   "term": "מועד א",
+   "url": "https://drive.google.com/file/d/1PuK8rsG7XfgHv5KaAnSPjAMD4pQk715q/view?usp=drivesdk",
+   "has_solution": true,
+   "questions": [
+    {
+     "num": "1א-ב",
+     "description": "על \\(X=C(\\mathbb R)\\) מוגדרת הפעולה \\(M(f)(t)=\\int_{t-1}^{t+1}f(x)\\,dx\\). להוכיח שהיא מוגדרת היטב (מ-\\(X\\) לעצמו) ושהיא אופרטור לינארי – מערכת לינארית.",
+     "topics": [
+      "t8"
+     ],
+     "difficulty": 1
+    },
+    {
+     "num": "1ג-ד",
+     "description": "להוכיח ש-\\(X\\) אינווריאנטי להזזות ושהמערכת קבועה בזמן: \\(M(S_\\tau f)(t)=[S_\\tau M(f)](t)\\).",
+     "topics": [
+      "t8"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "1ה-ו",
+     "description": "האם קיימת \\(h(t)\\) יחידה עם \\(\\int|h|\\lt\\infty\\) כך ש-\\(M(f)=f*h\\)? אם כן מהי, והאם המערכת סיבתית?",
+     "topics": [
+      "t8"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2א",
+     "description": "מעגל פסיבי: סליל \\(L_1\\) במקביל לנגד \\(R\\), ובמקביל להם ענף טורי של נגד \\(R\\) וסליל \\(L_2\\); \\(i_{L1}(0)=I_0\\), \\(i_{L2}(0)=0\\), \\(i(t)\\) הזרם ב-\\(L_2\\). מהו סדר המעגל?",
+     "topics": [
+      "t7",
+      "t1"
+     ],
+     "difficulty": 1
+    },
+    {
+     "num": "2ב-ג",
+     "description": "האם המעגל יציב אסימפטוטית (\\(|i(t)|\\to0\\) לכל \\(I_0\\))? להוכיח מתמטית; האם יש למעגל תנודות מחזוריות, ואם לא – איזה סוג ריסון קיים?",
+     "topics": [
+      "t7"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ד",
+     "description": "עבור \\(L_1=L_2=L\\): למצוא את \\(i(t)\\) לכל \\(t\\ge0\\) באמצעות רכיבי המעגל בלבד.",
+     "topics": [
+      "t7"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3א",
+     "description": "רשת LTI עם תמסורת \\(H(i\\omega)\\) ש-\\(|H|\\) שלה מקסימלי גלובלית ב-\\(\\omega_0\\). לכתוב משוואה למציאת התדרים שבהם מתפתח על עומס אוהמי מחצית מההספק הממוצע ב-\\(\\omega_0\\).",
+     "topics": [
+      "t11"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3ב-ד",
+     "description": "הרשת ממומשת ע\"י \\(L\\) ו-\\(C\\) בטור והמוצא על \\(R\\): למצוא את \\(H(i\\omega)\\) (גודל וזווית), לכתוב משוואה לתדרי מחצית ההספק (כמה יש?), ולקבוע את סוג המסנן.",
+     "topics": [
+      "t11",
+      "t10"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3ה",
+     "description": "עבור \\(V_{in}(t)=A\\cos(\\omega_1t)+B\\cos(\\omega_2t+\\varphi)\\), \\(A,B\\gt 0\\): למצוא ביטוי ל-\\(V_{out}(t)\\) במצב המתמיד.",
+     "topics": [
+      "t10",
+      "t11",
+      "t3"
+     ],
+     "difficulty": 2
+    }
+   ]
+  },
+  {
+   "title": "מבחן 2010 סמסטר ב' מועד ב' (גיא כהן, 26.07.10) + פתרון סטודנט",
+   "year": "2010",
+   "term": "מועד ב",
+   "url": "https://drive.google.com/file/d/1FwgnWRI8Xk9vj2Y5hheAwLnfWiniDHUl/view?usp=drivesdk",
+   "has_solution": true,
+   "questions": [
+    {
+     "num": "1א",
+     "description": "מקור מתח \\(V_s\\) בטור לדיודה בעלת אופיין \\(i=\\tfrac1R v\\cdot u(v)\\) (נגד חד-כיווני) ולקבל \\(C\\). לחשב את התגובה להלם \\(h(t)\\) של מתח הקבל (\\(V_s=\\delta(t)\\)).",
+     "topics": [
+      "t4",
+      "t6",
+      "t5"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "1ב",
+     "description": "לחשב את התגובה לשיפוע יחידה \\(\\Gamma(t)\\), כלומר עבור \\(V_s(t)=r(t)=t\\,u(t)\\).",
+     "topics": [
+      "t4",
+      "t6",
+      "t5"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "1ג",
+     "description": "האם \\(\\Gamma(t)=\\int r(t-\\tau)h(\\tau)\\,d\\tau\\) לכל \\(t\\)? להוכיח או להסביר מדוע לא (קונבולוציה במערכת לא לינארית).",
+     "topics": [
+      "t8",
+      "t4"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2א-ב",
+     "description": "במקביל לקבל של שאלה 1 מוסיפים נגד עומס \\(R_L\\); המקור הוא גל שן מסור מחזורי (עולה לינארית עד \\(T\\) ב-\\(0\\le t\\le T\\), אפס עד \\(2T\\) וחוזר), עם \\(T=(R\\|R_L)C\\) ומצב אפס. למצוא את פונקציית טעינת הקבל במחזור הראשון ואת הערך המירבי שאליו ייטען.",
+     "topics": [
+      "t6",
+      "t4",
+      "t5"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2ג-ד",
+     "description": "למצוא את פונקציית הפריקה הראשונה של הקבל, ולכתוב משוואה (ללא פתרון) לרגע \\(t_0\\) שבו הקבל מתחיל להיטען שנית.",
+     "topics": [
+      "t6",
+      "t4"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2ה-ח",
+     "description": "בקירוב \\(e^x\\cong1+x\\) ל-\\(|x|\\ll1\\): מהי ההנחה על רכיבי המעגל שמצדיקה אותו בפריקה? למצוא את \\(t_0\\) תחת הקירוב, את \\(t_0\\) כאשר \\(R_L\\to\\infty\\), ולבדוק האם \\(t_0(R_L\\to\\infty)\\lt 3T\\) והאם זה הגיוני.",
+     "topics": [
+      "t6",
+      "t4"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3א",
+     "description": "מעגל דיודות אידיאליות, \\(E\\gt 0\\): נגד \\(R\\) טורי, ענף \\(D_1\\) עם מקור \\(2E\\) לאדמה, דיודה טורית \\(D_2\\), ובמוצא ענף \\(R\\) עם מקור \\(E\\). למצוא את אופיין המעבר \\(V_{out}(V_{in})\\) כביטוי מתמטי ולשרטט אותו.",
+     "topics": [
+      "t4"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3ב",
+     "description": "לחזור על סעיף א׳ כאשר הדיודה \\(D_2\\) מחוברת הפוך.",
+     "topics": [
+      "t4"
+     ],
+     "difficulty": 2
+    }
+   ]
+  },
+  {
+   "title": "מבחן 2007 סמסטר ב' מועד א' (תשס\"ז, 36111021) — שאלון בכתב יד + פתרון בכתב יד (שם המרצה לא מופיע)",
+   "year": "2007",
+   "term": "מועד א",
+   "url": "https://drive.google.com/file/d/1AWena0gf4lIOJB9bwe-khHAsHmYqw6RS/view?usp=drivesdk",
+   "has_solution": true,
+   "questions": [
+    {
+     "num": "1א",
+     "description": "מערכת לינארית וקבועה בזמן \\(F\\), \\(u(t)\\) מדרגת יחידה ו-\\(r(t)=tu(t)\\). בהינתן ש-\\(F[u(t)]\\) מוגדר היטב ושניתן להחליף גבול ואופרטור, להוכיח שהנגזרת של התגובה לשיפוע יחידה היא התגובה למדרגה, \\(F[u(t)]=\\frac{d}{dt}F[r(t)]\\), ולהסיק \\(F[r(t)]=\\int_{-\\infty}^{t}F[u(x)]dx\\) כשהמערכת במצב אפס ב-\\(-\\infty\\).",
+     "topics": [
+      "t8"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "1ב",
+     "description": "מקור זרם \\(i_s(t)\\) במקביל לענף \\(C\\)–\\(R_1\\) טורי ולנגד \\(R_2\\) שעליו המתח \\(v(t)\\): מציאת התגובה להלם \\(i_s=\\delta(t)\\) והתגובה למדרגה \\(i_s=u(t)\\) (ZSR).",
+     "topics": [
+      "t6",
+      "t8"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "1ג",
+     "description": "לאותו מעגל: מציאת התגובה לשיפוע \\(i_s=r(t)\\) (ZSR), ובאמצעות התגובות למדרגה ולשיפוע ביטוי התגובה לכניסה \\(w(t)\\) – רמפה מ-0 ל-1 בקטע \\([0,1]\\) ואפס אחרת.",
+     "topics": [
+      "t6",
+      "t8",
+      "t5"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2",
+     "description": "מקור מתח \\(E\\), נגד \\(R\\) וסליל \\(L\\) עם מפסק \\(S\\) הנע מחזורית בין מצב 1 למצב 2 ושוהה \\(L/R\\) שניות בכל מצב; נתון גרף הזרם \\(i_L(t)\\) שלאחר זמן רב מתייצב לתנודה מחזורית בין \\(I_1\\) ל-\\(I_2\\). באיזה מצב היה המפסק בזמנים \\(0\\lt t\\lt L/R\\), ומציאת \\(I_1\\) ו-\\(I_2\\).",
+     "topics": [
+      "t6"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3א",
+     "description": "מקור זרם \\(i_s(t)\\) במקביל לענף \\(L\\)–\\(R\\) טורי ולקבל \\(C\\) שעליו \\(v(t)\\): להוכיח שתגובת ה-ZIR של \\(v(t)\\) יציבה (\\(\\lim_{t\\to\\infty}|v(t)|=0\\)) לכל \\(0\\lt R,L,C\\lt\\infty\\) ולכל תנאי התחלה.",
+     "topics": [
+      "t7"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3ב",
+     "description": "מציאת תגובת המצב המתמיד של \\(v(t)\\) לכניסה \\(i_s(t)=1+\\cos(t/\\sqrt{LC})\\) (סופרפוזיציה של DC ופאזור), כאות ממשי.",
+     "topics": [
+      "t10",
+      "t3"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3ג",
+     "description": "בטור ל-\\(R\\) מוסיפים עומס \\(Z_L\\) ונתון \\(i_s=I_s\\cos(t)\\): מציאת \\(Z_L\\) שיקבל הספק ממוצע מירבי (עומס מתואם) ובנייתו מנגדים, קבלים וסלילים פסיביים.",
+     "topics": [
+      "t10"
+     ],
+     "difficulty": 3
+    }
+   ]
+  },
+  {
+   "title": "מבחן 2009 סמסטר ב' מועד א' — שחזור סטודנטים בכתב יד (פתרון מרצה בקובץ סרוק נפרד)",
+   "year": "2009",
+   "term": "מועד א",
+   "url": "https://drive.google.com/file/d/12zDjpXRWrjeHKMLvpd2jJi7w4K7SER0p/view?usp=drivesdk",
+   "has_solution": true,
+   "questions": [
+    {
+     "num": "1א-ב",
+     "description": "מקור מתח \\(V_s\\) בטור לנגד \\(R\\) ואחריו \\(L\\) ו-\\(C\\) במקביל; הכניסה \\(V_s\\) והיציאה זרם המקור \\(i(t)\\). כתיבת משוואה דיפרנציאלית עבור \\(i(t)\\), והאם ב-ZIR \\(\\lim_{t\\to\\infty}|i(t)|=0\\) לכל \\(R,L,C\\) ולכל תנאי התחלה.",
+     "topics": [
+      "t7"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "1ג-ד",
+     "description": "האם קיים מצב שבו ייתכנו תנודות במעגל, ומציאת התנאי לכך (בעזרת הנוסחה שנמצאה). נוסח סעיף ד בשחזור אינו ברור.",
+     "topics": [
+      "t7"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "1ה",
+     "description": "מציאת תנאי התחלה מספריים למשוואה מסעיף א, כלומר \\(i(0)\\) ו-\\(\\frac{di}{dt}\\big|_{t=0}\\), כאשר תנאי ההתחלה של הקבל והסליל הם אפס.",
+     "topics": [
+      "t7",
+      "t9"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "1ו-ז",
+     "description": "עם תנאי התחלה אפס ומקור קבוע \\(V_s=E\\): מציאת פתרון ל-\\(i(t)\\) כאשר נתון \\(R=\\tfrac12\\sqrt{L/C}\\) (ריסון קריטי); ומציאת הגבול \\(\\lim_{R\\to0^+}i_R(t)\\) של הפתרון עם הסבר פיסיקלי.",
+     "topics": [
+      "t7"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2א",
+     "description": "מקור \\(V_s=V_m\\cos(\\omega t+\\alpha)\\) מזין שתי עכבות \\(Z_1,Z_2\\) במקביל וזרם המקור \\(i(t)=I_m\\sin(\\omega t+\\beta)\\). האם ניתן לקבוע מהנתונים שהרכיבים פסיביים, או מתי ניתן לדעת שאינם פסיביים?",
+     "topics": [
+      "t10"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ב",
+     "description": "נתון \\(\\mathrm{Im}\\,Z_1=0\\) ו-\\(\\mathrm{Re}\\,Z_2=0\\): מציאת \\(Z_1\\) ו-\\(Z_2\\) בעזרת נתוני המעגל.",
+     "topics": [
+      "t10"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ג",
+     "description": "ללא קשר לסעיף ב: מהו ההספק הממוצע המירבי שיכול ליפול על \\(Z_2\\) כאשר נתון \\(\\mathrm{Im}\\,Z_1=0\\), עם הסבר פיסיקלי.",
+     "topics": [
+      "t10"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3א",
+     "description": "נתון אופיין מעבר: \\(V_{out}=E_1\\) עבור \\(V_{in}\\gt E_1\\), \\(V_{out}=V_{in}\\) עבור \\(-E_2\\lt V_{in}\\lt E_1\\) ו-\\(V_{out}=-E_2\\) מתחת (קוצץ דו-צדדי). בניית מעגל המקיים זאת בעזרת נגדים, דיודות אידיאליות ומקורות בלתי תלויים בלבד.",
+     "topics": [
+      "t4"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3ב",
+     "description": "מחברים במקביל למוצא נגד \\(R\\): מהו ההספק הממוצע הנופל על הנגד כאשר בכניסה גל ריבועי מחזורי \\(V_{in}=\\pm V_m\\) עם זמן מחזור \\(T\\) (מספר אפשרויות לפי היחס בין \\(V_m\\) ל-\\(E_1,E_2\\)).",
+     "topics": [
+      "t4",
+      "t5"
+     ],
+     "difficulty": 2
+    }
+   ]
+  },
+  {
+   "title": "מבחן 2018 סמסטר ב' מועד א' — שחזור סטודנטים בכתב יד",
+   "year": "2018",
+   "term": "מועד א",
+   "url": "https://drive.google.com/file/d/1lcNSMAwtDyZWJIw5QkogFkalXxFo_8GZ/view?usp=drivesdk",
+   "has_solution": false,
+   "questions": [
+    {
+     "num": "1א-ב",
+     "description": "מקור מתח \\(V_s\\) בטור לצירוף מקבילי \\(L\\parallel R_1\\) ואחריו צירוף מקבילי \\(R_2\\parallel C\\) שעליו \\(V_2\\). מציאת משוואה דיפרנציאלית ל-\\(V_2\\), מציאת גורם הריסון ומה התנאי לתנודות במעגל.",
+     "topics": [
+      "t7"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "1ג-ד",
+     "description": "מציאת תנאי על \\(R_1\\) כך שיהיו תנודות במעגל; ועבור \\(R_2=\\tfrac13\\), \\(L=C=1\\) (רכיבים פסיביים) – האם עדיין קיים \\(R_1\\) המקיים תנודות.",
+     "topics": [
+      "t7"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "1ה",
+     "description": "מציאת התגובה להלם של \\(V_2\\) כאשר כל הרכיבים בעלי ערך יחידה.",
+     "topics": [
+      "t7",
+      "t8"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2א-ב",
+     "description": "מקור \\(V_s\\) בטור ל-\\(C_1\\parallel R_1\\) ואחריו \\(R_2\\parallel C_2\\) שעליו \\(V_2\\). מציאת משוואה דיפרנציאלית ל-\\(V_2\\) ותגובת ה-ZIR כאשר \\(V_2(0)=1\\).",
+     "topics": [
+      "t6"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ג-ד",
+     "description": "עבור \\(R_1=R_2\\), \\(C_1=C_2\\): מציאת פונקציית התמסורת \\(H(j\\omega)=V_2/V_s\\) (מחלק מפוצה), והאם קיים תדר שבו מתקבל מחצית מההספק הממוצע המירבי על \\(R_2\\).",
+     "topics": [
+      "t11",
+      "t10"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ה",
+     "description": "שרטוט דיאגרמת פאזורים עבור \\(V_s, I_s, V_2, I_{C_2}, I_{R_2}\\) (\\(I_s\\) זרם המקור).",
+     "topics": [
+      "t10"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3",
+     "description": "מעגל דיודות: \\(V_{in}\\) דרך \\(R_1\\), ענף מקבילי של \\(D_1\\) בטור למקור \\(E\\), ואחריו \\(D_2\\) בטור למקור \\(E/2\\) אל הנגד \\(R_2\\) שעליו \\(V_{out}\\). מציאת אופיין המעבר \\(V_{out}(V_{in})\\) כולל שרטוט; חזרה כאשר הופכים את \\(D_2\\); וכאשר \\(D_1\\) מוחלפת בקצר.",
+     "topics": [
+      "t4"
+     ],
+     "difficulty": 3
+    }
+   ]
+  },
+  {
+   "title": "מבחן 2024 מועד א' — שחזור סטודנטים בכתב יד (שאלות 1–2 בלבד; שאלה 2 עם פתרון סטודנט)",
+   "year": "2024",
+   "term": "מועד א",
+   "url": "https://drive.google.com/file/d/1ktM_N0_3W-AaqtrY-ucUxwon-6r6nRHh/view?usp=drivesdk",
+   "has_solution": true,
+   "questions": [
+    {
+     "num": "1א-ב",
+     "description": "מפסק נסגר ב-\\(t=0\\) כשזרם הסליל \\(I_L(0)=I\\); במעגל נגדים \\(R_1,R_2\\) ומקור מתח תלוי \\(aI_a\\), כאשר \\(I_a\\) הזרם בנגד \\(R_2\\). מציאת \\(I_a(t)\\) וחישוב האנרגיה המתבזבזת על \\(R_2\\) בזמנים \\(0\\lt t\\lt\\infty\\).",
+     "topics": [
+      "t6",
+      "t3",
+      "t12"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "1ג",
+     "description": "להוכיח שכאשר \\(a\\to a_0\\) מתקיים \\(I_a*f(t)\\to Kf(t)\\) (הזרם שואף להלם), ולמצוא את \\(K\\) ואת \\(a_0\\) מפורשות.",
+     "topics": [
+      "t5",
+      "t8",
+      "t6"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "1ד",
+     "description": "מעגל שבו מקור זרם מזין \\(R\\) ו-\\(C\\) במקביל, כאשר מקור הזרם הוא \\(I_a\\) בגבול \\(a\\to a_0\\) מהסעיף הקודם: מציאת \\(V_C(t)\\) (תגובה להלם של RC).",
+     "topics": [
+      "t6",
+      "t8"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2א",
+     "description": "קוצץ דיודות: \\(V_{in}\\) דרך \\(R\\), ושני ענפים מקביליים של דיודה אידיאלית בטור למקור \\(E\\) (בכיוונים מנוגדים), \\(V_{out}\\) על הענפים. מהו התנאי על \\(V_{in}(t)\\) כך ש-\\(V_{out}(t)=V_{in}(t)\\) לכל \\(t\\).",
+     "topics": [
+      "t4"
+     ],
+     "difficulty": 1
+    },
+    {
+     "num": "2ב",
+     "description": "נתון ש-\\(V_{in}\\) מחזורי עם מחזור \\(T\\) וערך ממוצע אפס: האם \\(V_{out}\\) מחזורי, והאם גם ערכו הממוצע אפס? הוכחה או דוגמה נגדית.",
+     "topics": [
+      "t4",
+      "t5"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ג-ד",
+     "description": "עבור \\(E=\\tfrac12\\) וולט ו-\\(V_{in}=\\sin(t)\\), כשהיציאה מחוברת לנגד של \\(1\\Omega\\): חישוב ההספק הממוצע על הנגד, וחישוב הערך הממוצע של \\(V_{out}\\).",
+     "topics": [
+      "t4",
+      "t5"
+     ],
+     "difficulty": 2
+    }
+   ]
+  },
+  {
+   "title": "מבחן תשס\"ז (2007) סמסטר קיץ מועד א' (08.10.2007) — מרצה: ד\"ר תימור מלמד, כולל פתרון בכתב יד",
+   "year": "2007",
+   "term": "מועד א (קיץ, תימור)",
+   "url": "https://drive.google.com/file/d/1a3HwDt6WPYTpKiOz4yB2U8477fBzJrB-/view?usp=drivesdk",
+   "has_solution": true,
+   "questions": [
+    {
+     "num": "1א-ב",
+     "description": "רשת \\(\\pi\\) בעלת הדק יחיד (single port) המחוברת לעומס ושקול נורטון שלה (\\(\\pi_0\\) במקביל למקור זרם \\(i_s\\)): רישום התנאים שהרשת צריכה לקיים, כיצד מתקבלת \\(\\pi_0\\) וכיצד מחושב מקור הזרם; והוכחת משפט נורטון באופן מלא.",
+     "topics": [
+      "t3"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "1ג",
+     "description": "מציאת שקול תבנין (לא נורטון) לרשת עם מקור זרם \\(i_s(t)=I_0e^{-2t/R_2C}u(t)\\), מקור מתח \\(v_s(t)=V_0\\sin(2t)u(t-1)\\), קבל \\(C\\) (מתח התחלתי אפס) ונגדים \\(R_1,R_2\\).",
+     "topics": [
+      "t3",
+      "t6"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2א",
+     "description": "מעגל עם מקור מתח \\(v_s\\) ונגד \\(R_s\\), מקור זרם \\(i_s\\), קבל \\(C\\), סליל \\(L\\) ונגד \\(R\\): מציאת משוואה דיפרנציאלית עבור הזרם \\(i(t)\\) הזורם בנגד \\(R_s\\).",
+     "topics": [
+      "t7",
+      "t3"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ב",
+     "description": "עבור \\(R_s=R=1\\Omega\\), \\(C=1F\\), \\(L=1H\\), \\(i_s=0\\) ותנאי התחלה אפס: המערכת שכניסתה \\(v_s(t)\\) ומוצאה \\(i(t)\\) – האם היא לינארית, קבועה בזמן וסיבתית.",
+     "topics": [
+      "t8"
+     ],
+     "difficulty": 1
+    },
+    {
+     "num": "2ג",
+     "description": "מציאת תגובת ההלם של המערכת (מעגל מסדר שני עם ערכי יחידה).",
+     "topics": [
+      "t7",
+      "t8"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3א",
+     "description": "מעגל במצב סינוסי יציב עם מקור \\(V_s\\) (פאזור ממשי), עכבות \\(Z_1,Z_2,Z_3\\) ומקור זרם מבוקר \\(gV_{Z_2}\\): מציאת פאזור הזרם \\(I\\) דרך המקור כפונקציה של ערכי הרכיבים.",
+     "topics": [
+      "t10",
+      "t3",
+      "t12"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3ב-ג",
+     "description": "עבור \\(Z_1\\) קבל \\(C\\), \\(Z_2\\) סליל \\(L\\), \\(Z_3\\) נגד \\(R\\) ו-\\(g=-2/R\\): ביטוי לפאזור \\(I\\) מופרד לחלק ממשי ומדומה, ההספק המרוכב \\(P\\) וההספק הממוצע \\(P_{av}\\) שמספק מקור המתח.",
+     "topics": [
+      "t10"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3ד",
+     "description": "מציאת התדירות שבה ההספק הממוצע סטציונרי (נקודת קיצון) וקביעה האם ההספק מקסימלי או מינימלי.",
+     "topics": [
+      "t10",
+      "t11"
+     ],
+     "difficulty": 3
+    }
+   ]
+  },
+  {
+   "title": "מבחן תשס\"ז (2007) סמסטר קיץ מועד ב' (29.10.2007) — מרצה: ד\"ר תימור מלמד, כולל פתרון בכתב יד",
+   "year": "2007",
+   "term": "מועד ב (קיץ, תימור)",
+   "url": "https://drive.google.com/file/d/1ZqQ2c5BtHWncilTTWjC62_VuN_BHBA-j/view?usp=drivesdk",
+   "has_solution": true,
+   "questions": [
+    {
+     "num": "1א",
+     "description": "מקור \\(v_s\\) בטור ל-\\(L\\parallel R_1\\) (עליהם \\(v_2\\)) ואחריהם \\(R_2\\parallel C\\) (עליהם \\(v_1\\)), תנאי התחלה אפס; מערכת עם כניסה \\(v_s\\) ושני מוצאים \\(v_1,v_2\\). עבור תגובות ההלם: מציאת סוג אי-הרציפות של כל אחד מהמוצאים (רציף, גזיר, קפיצה, הלם וכו').",
+     "topics": [
+      "t7",
+      "t8",
+      "t5"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "1ב",
+     "description": "עבור \\(v_s(t)=A\\delta(t)\\) והמוצא \\(v_1(t)\\) בלבד: מציאת המד\"ר המתארת את המערכת ותנאי ההתחלה הרלוונטיים ב-\\(t=0^+\\).",
+     "topics": [
+      "t7",
+      "t9"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "1ג",
+     "description": "בהנחה שהמערכת בריסון יתר: מציאת ערכי המוצאים \\(v_1(t)\\) ו-\\(v_2(t)\\) לכניסת ההלם (תשובה מלאה במונחי הנתונים).",
+     "topics": [
+      "t7"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "1ד",
+     "description": "מערכת חדשה \\(v_{out}\\) המתקבלת מסיכום \\(v_1\\) מושהה ב-\\(\\tau\\) ו-\\(v_2\\) מושהה ב-\\(-\\tau\\): לקבוע עבור אילו ערכי \\(\\tau\\) המערכת החדשה סיבתית.",
+     "topics": [
+      "t8"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2א-ב",
+     "description": "רכיב one-port הכולל \\(L_1\\) עם מקור \\(v_{s2}\\), נגד \\(R\\), קבל \\(C_1\\), סליל מתכוונן \\(L_V\\) וקבל \\(C_2\\) עם מקור \\(v_{s1}\\), בתנאי התחלה אפס: משוואה דיפרנציאלית למתח ההדקים \\(v(t)\\), וערך \\(L_V\\) שבו המעגל בריסון קריטי והתנאים על שאר הרכיבים.",
+     "topics": [
+      "t7"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2ג-ד",
+     "description": "עבור \\(v_{s1}=0\\), \\(v_{s2}=A\\sin\\!\\big(\\tfrac{t}{2R(C_1+C_2)}\\big)u(t)\\) וערך הסליל שנמצא: מציאת שקול תבנין של הרשת (עם שרטוט הרשת \\(\\pi_0\\) ברכיבים לינאריים אידיאליים), ומציאת זרם הקצר \\(i_{sc}(t)\\) בין ההדקים.",
+     "topics": [
+      "t3",
+      "t7"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3א-ב",
+     "description": "מצב סינוסי יציב עם שני מקורות \\(v_a=A\\cos(\\omega t)\\), \\(v_b=B\\cos(\\omega t)\\), סליל \\(L\\), נגד \\(R\\) וקבל \\(C\\): ההספק הרגעי \\(p(t)\\) שהנגד צורך, וההספק הממוצע \\(P_{av}\\) על כל אחד מהרכיבים הפסיביים.",
+     "topics": [
+      "t10"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3ג",
+     "description": "מציאת ערך \\(R\\) (כתלות בשאר הרכיבים) שבו ההספק הממוצע הנצרך ע\"י הרכיבים הפסיביים סטציונרי, חישוב ההספק וקביעה אם הוא מקסימלי או מינימלי.",
+     "topics": [
+      "t10"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3ד",
+     "description": "חזרה על סעיף ב כאשר תדרי המקורות שונים (\\(\\omega_a\\ne\\omega_b\\)), בזמנים גדולים בהרבה מקבועי הזמן של תופעות המעבר (סופרפוזיציה של הספקים).",
+     "topics": [
+      "t10",
+      "t3"
+     ],
+     "difficulty": 2
+    }
+   ]
+  },
+  {
+   "title": "מבחן תש\"פ (2020) סמסטר ב' מועד א' (14.07.2020) — מרצה: פרופ' תימור מלמד, כולל פתרון בכתב יד",
+   "year": "2020",
+   "term": "מועד א (סמסטר ב, תימור)",
+   "url": "https://drive.google.com/file/d/1MhMdVyVzIOv5O5ULpmvHwxT9EXrTrFKv/view?usp=drivesdk",
+   "has_solution": true,
+   "questions": [
+    {
+     "num": "1א",
+     "description": "שני סלילים מצומדים \\(L_1,L_2\\) (השראות הדדית \\(M\\)) המחוברים בטור: להראות שניתן להמירם בסליל לינארי יחיד ולמצוא את \\(L\\) במונחי \\(L_1,L_2,M\\).",
+     "topics": [
+      "t12"
+     ],
+     "difficulty": 1
+    },
+    {
+     "num": "1ב",
+     "description": "מצב סינוסי יציב: מקור זרם לא אידיאלי (\\(i_s=I_0\\cos(\\omega t)\\) במקביל ל-\\(R_s\\)) מזין נגד \\(R\\), סלילים מצומדים בטור וקבל \\(C\\). מציאת פאזור מקור הזרם \\(I_s\\) ופאזור המתח \\(V_s\\) בין הדקי המקור.",
+     "topics": [
+      "t10",
+      "t12"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "1ג-ד",
+     "description": "ההספק הממוצע \\(P_{av}\\) שהמקור הלא אידיאלי מספק למעגל, וההספק הרגעי \\(p(t)\\) הנופל על הסליל \\(L_1\\).",
+     "topics": [
+      "t10",
+      "t12"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "1ה",
+     "description": "מהו ערך \\(M\\) הנדרש לקבלת הספק ממוצע מקסימלי, מהו התנאי על תדר המעגל לשם כך, ואיזה שינוי ניתן לעשות במעגל אם התנאי אינו מתקיים.",
+     "topics": [
+      "t10",
+      "t11",
+      "t12"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2ב-ג",
+     "description": "מערכת לינארית עם כניסה \\(v(t)\\) ומוצא \\(i(t)\\) המקיימת \\(i''+2\\alpha i'+\\omega_0^2i=av'+bv\\), וכניסה \\(v(t)=A_0\\delta(t)\\): מציאת היחידות הפיסיקליות של הקבועים \\(\\alpha,\\omega_0,a,b,A_0\\) ותנאי ההתחלה של המוצא ב-\\(t=0^+\\).",
+     "topics": [
+      "t7",
+      "t8"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ד-ה",
+     "description": "מהו ערך \\(\\alpha\\) שעבורו המערכת בריסון קריטי, מציאת תגובת המערכת לכניסה הנתונה עבור ערך זה, ובדיקת היחידות הפיסיקליות של התשובה.",
+     "topics": [
+      "t7"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ו",
+     "description": "המערכת ממומשת כמעגל מקובץ וטוענים את הקבלים והסלילים כך ש-\\(i(0^-)=C_0\\), \\(i'(0^-)=C_1\\): האם קיימים \\(C_0,C_1\\) כך שהמוצא יהיה אפס לכל \\(t\\gt0\\) עבור כניסת ההלם.",
+     "topics": [
+      "t7",
+      "t6"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2ז",
+     "description": "עבור \\(C_0,C_1\\) מהסעיף הקודם והכניסה \\(v(t)=1-\\cos t\\) בקטע \\(0\\lt t\\lt2\\pi\\) (אפס אחרת): להסביר במילים מהי הדרך הקצרה ביותר למציאת המוצא (ZIR+ZSR, קונבולוציה עם תגובת ההלם).",
+     "topics": [
+      "t8",
+      "t7"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3א-ב",
+     "description": "גרף מכוון בעל חמישה צמתים ושבעה ענפים: להוכיח שקבוצת הענפים \\((1,4,5,7)\\) מהווה עץ, ולמצוא עבור עץ זה את כל קבוצות החיתוך היסודיות ואת כל החוגים היסודיים.",
+     "topics": [
+      "t1",
+      "t3"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3ג",
+     "description": "למעגל במצב סינוסי יציב התואם את הגרף (נגדים \\(R_1,R_4,R_5,R_7\\), עכבות \\(Z_2,Z_3,Z_6\\) ומקור \\(V_s\\)): רישום משוואות קירכהוף (KCL ו-KVL) המתאימות לחיתוכים ולחוגים היסודיים במונחי הרכיבים.",
+     "topics": [
+      "t1",
+      "t3",
+      "t10"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3ד",
+     "description": "בהנחה שכל זרמי הענפים \\(J_{1-7}\\) ידועים: מציאת שקול תבנין לרשת בין זוג הדקים נתון (תשובה מלאה ללא פישוט), כולל \\(V_{th}\\).",
+     "topics": [
+      "t3",
+      "t10"
+     ],
+     "difficulty": 3
+    }
+   ]
+  },
+  {
+   "title": "מבחן תש\"פ (2020) סמסטר ב' מועד ב' (24.08.2020) — מרצה: פרופ' תימור מלמד, כולל פתרון בכתב יד",
+   "year": "2020",
+   "term": "מועד ב (סמסטר ב, תימור)",
+   "url": "https://drive.google.com/file/d/1Q69CTEbVFX-EMzWuyluwUMTLRe5ihuPs/view?usp=drivesdk",
+   "has_solution": true,
+   "questions": [
+    {
+     "num": "1א",
+     "description": "מקור זרם \\(i_s(t)\\) (הכניסה) במקביל ל-\\(R_s\\) (בו זורם \\(i_0\\)), לקבל \\(C\\) ולענף טורי \\(R_L\\)–\\(L\\)–מקור מתח מבוקר \\(v_0=R_0i_0\\); המוצא הוא מתח המקור \\(v(t)\\), תנאי התחלה אפס. מציאת המשוואה הדיפרנציאלית המקשרת בין הכניסה למוצא.",
+     "topics": [
+      "t7",
+      "t3",
+      "t12"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "1ב",
+     "description": "עבור אילו כניסות מתח המוצא יהיה בעל אי-רציפות מסדר ראשון בלבד (ללא הלם ונגזרותיו).",
+     "topics": [
+      "t5",
+      "t7"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "1ג-ד",
+     "description": "האם המערכת סיבתית, לינארית וקבועה בזמן; וחוות דעת על 'פתרון' בסופרפוזיציה שבו מנתקים גם את המקור המבוקר (שגיאה: מקור תלוי אינו מתאפס בסופרפוזיציה).",
+     "topics": [
+      "t8",
+      "t3"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2א-ב",
+     "description": "מצב סינוסי עמיד: מקור זרם לא אידיאלי \\(i_s=I_0\\sin(\\omega t)\\) עם \\(R_s\\), קבל \\(C\\) ושני סלילים מצומדים (\\(M\\)), כשהסליל \\(L_1\\) מחובר למקור זרם מבוקר \\(g_mV_2\\) (\\(V_2\\) המתח על \\(L_2\\)). מציאת פאזור מקור הזרם \\(I_s\\) ושקול תבנין לחלק המעגל של הסלילים המצומדים והמקור המבוקר.",
+     "topics": [
+      "t12",
+      "t10",
+      "t3"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2ג",
+     "description": "מציאת פאזור המתח \\(V_2\\) והמתח הזמני \\(v_2(t)\\).",
+     "topics": [
+      "t10",
+      "t12"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "2ד",
+     "description": "האם ניתן להוריד לאפס את ההספק הממוצע של מקור הזרם האידיאלי \\(I_s\\), או שבגלל ההתנגדות הפנימית \\(R_s\\) תמיד יהיה בזבוז הספק? נמקו והסבירו.",
+     "topics": [
+      "t10"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2ה",
+     "description": "המקור חוזר לפעולה בזמן \\(t_0\\) לאחר הפסקה ארוכה, \\(i_s(t)=I_0\\sin(\\omega t)u(t-t_0)\\): האם המתח \\(v_2(t)\\) יהיה רציף עם סיום ההפסקה.",
+     "topics": [
+      "t5",
+      "t7",
+      "t12"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3א-ג",
+     "description": "מערכת LTI עם תגובה להלם \\(h(t)=e^t\\) בקטע \\(-2\\lt t\\lt-1\\) (אפס אחרת): תגובת המערכת לכניסת דובלט \\(x(t)=\\delta'(t)\\), התנאי על הכניסה כך שהמוצא יהיה רציף לכל \\(t\\), והאם המערכת סיבתית.",
+     "topics": [
+      "t8",
+      "t5"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3ד",
+     "description": "מציאת תגובת המערכת לכניסה מדרגתית למקוטעין: \\(x=2\\) בקטע \\(1\\lt t\\lt3\\) ו-\\(x=-1\\) בקטע \\(3\\lt t\\lt4\\) (קונבולוציה).",
+     "topics": [
+      "t8"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3ה",
+     "description": "חזרה על סעיפים ג–ד כאשר מחליפים תפקידים: התגובה להלם היא האות מציור 2 והכניסה היא האות מציור 1.",
+     "topics": [
+      "t8"
+     ],
+     "difficulty": 2
+    }
+   ]
+  },
+  {
+   "title": "מבחן תש\"פ (2020) סמסטר ב' מועד ג' (15.10.2020) — מרצה: פרופ' תימור מלמד, כולל פתרון בכתב יד",
+   "year": "2020",
+   "term": "מועד ג (סמסטר ב, תימור)",
+   "url": "https://drive.google.com/file/d/16FMwJWDey12dGZrEr8DaEPFzC1g5xfqg/view?usp=drivesdk",
+   "has_solution": true,
+   "questions": [
+    {
+     "num": "1א",
+     "description": "מצב סינוסי יציב: מקור זרם לא אידיאלי (\\(I_0\\cos\\omega t\\), \\(R_s\\)) עם קיבול פרזיטי טורי \\(C_s\\), סלילים מצומדים, מקור זרם מבוקר \\(g_mV_c\\) ושנאי אידיאלי \\(N_1:N_2\\) המחובר לעומס \\(R_L\\parallel C_L\\). שיקוף העומס לצד הראשוני של השנאי – מציאת העכבה \\(Z_L\\).",
+     "topics": [
+      "t12",
+      "t10"
+     ],
+     "difficulty": 1
+    },
+    {
+     "num": "1ב-ג",
+     "description": "מציאת העכבה \\(Z_{in}\\) (כולל \\(C_s\\)) מופרדת לחלק ממשי ומדומה, ומציאת תדר התהודה \\(\\omega_0\\) שבו \\(Z_{in}\\) ממשית.",
+     "topics": [
+      "t10",
+      "t11",
+      "t12"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "1ד-ה",
+     "description": "ערך \\(g_m\\) הנחוץ לביטול השפעת הקיבול הפרזיטי \\(C_s\\) על תדר התהודה ומהו תדר התהודה במצב זה; וההספק הממוצע של מקור הזרם האידיאלי כשהוא מתנדנד בתדר התהודה.",
+     "topics": [
+      "t11",
+      "t10",
+      "t12"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2א-ב",
+     "description": "מערכת LTI עם כניסה \\(i_{in}(t)\\), מוצא \\(v_{out}(t)\\) ותגובה להלם \\(h(t)=A_0te^{-t/\\tau}u(t)\\): היחידות הפיסיקליות של \\(A_0,\\tau\\), ומציאת המשוואה הדיפרנציאלית המתארת את המערכת ותנאי ההתחלה ב-\\(t=0^-\\) (ללא התמרות).",
+     "topics": [
+      "t8",
+      "t7"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2ג",
+     "description": "מציאת תגובת המערכת לדופק מלבני \\(i_{in}=I_0\\) עבור \\(|t|\\lt T_0\\) ע\"י קונבולוציה בלבד, כולל ערך המוצא ב-\\(t=0\\).",
+     "topics": [
+      "t8"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2ד-ה",
+     "description": "הצבת \\(I_0=1/T_0\\) ומציאת התגובה בגבול \\(T_0\\to0\\) (מתקבלת תגובת ההלם); ועבור \\(I_0\\) קבוע – התגובה בגבול \\(T_0\\to\\infty\\) (מצב DC), עם הסבר.",
+     "topics": [
+      "t8",
+      "t5"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3א",
+     "description": "נתונה מטריצת הפגיעה המצומצמת \\(A\\) (4×8) של גרף בעל חמישה צמתים: השלמת הענפים (כולל כיוון) בין הצמתים.",
+     "topics": [
+      "t1",
+      "t3"
+     ],
+     "difficulty": 2
+    },
+    {
+     "num": "3ב",
+     "description": "מצב סינוסי יציב בתדר \\(\\omega=10^6\\) rad/sec עם מטריצת הולכת הענפים \\(G\\) (כולל איברים לא אלכסוניים – צימוד) ווקטור מקורות המתח \\(V_s\\): ציור מעגל מתאים מרכיבים לינאריים בסיסיים (קבל, סליל, נגד, מקורות, אלמנטים מצומדים) וציון כל ערכי הרכיבים.",
+     "topics": [
+      "t3",
+      "t10",
+      "t12"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3ג",
+     "description": "בהנחה שמתחי הצמתים ידועים (משוואות מתחי צמתים \\(Y_n e=i_s\\)): מציאת הזרם הזורם בענף 1 באמצעות מתחי הצמתים והנתונים.",
+     "topics": [
+      "t3"
+     ],
+     "difficulty": 2
+    }
+   ]
+  }
+ ],
+ "practice": [
+  {
+   "topic": "t1",
+   "difficulty": 1,
+   "question": "ברכיב דו־הדקי (מוסכמת צרכן) נמדדו עבור \\(t\\ge0\\): \\(v(t)=10e^{-2t}\\,\\mathrm V\\) ו־\\(i(t)=2e^{-2t}\\,\\mathrm A\\). עבור \\(t< 0\\) שניהם אפס. חשבו את ההספק הרגעי ואת האנרגיה הכוללת שנמסרה לרכיב. האם התוצאה מתיישבת עם רכיב פאסיבי?",
+   "hint": "\\(p=v\\,i\\) ואז אינטגרל מ־0 עד אינסוף.",
+   "solution": "\\(p(t)=v\\,i=20e^{-4t}\\,\\mathrm W\\) עבור \\(t\\ge0\\).\n\\[W=\\int_0^\\infty 20e^{-4t}dt=\\frac{20}{4}=5\\,\\mathrm J.\\]\nהאנרגיה המצטברת \\(W(t)=5(1-e^{-4t})\\ge0\\) לכל \\(t\\), ולכן אין סתירה לפאסיביות (למעשה \\(v/i=5\\,\\Omega\\) — נגד)."
+  },
+  {
+   "topic": "t1",
+   "difficulty": 1,
+   "question": "לצומת A מחוברים ארבעה ענפים. בשלושה מהם ידוע: \\(3\\,\\mathrm A\\) נכנס, \\(5\\,\\mathrm A\\) נכנס, \\(2\\,\\mathrm A\\) יוצא. (א) מהו הזרם \\(i_x\\) היוצא בענף הרביעי? (ב) בחוג סגור יש מקור \\(12\\,\\mathrm V\\) (עליית מתח בכיוון ההקפה) ושלושה רכיבים שעליהם מפלי מתח \\(5\\,\\mathrm V\\), \\(v_x\\) ו־\\(3\\,\\mathrm V\\) בכיוון ההקפה. מצאו את \\(v_x\\).",
+   "hint": "KCL: סכום הנכנסים = סכום היוצאים. KVL: סכום העליות = סכום המפלים.",
+   "solution": "(א) KCL: \\(3+5=2+i_x\\Rightarrow i_x=6\\,\\mathrm A\\).\n(ב) KVL: \\(12=5+v_x+3\\Rightarrow v_x=4\\,\\mathrm V\\).\nשני החוקים אינם תלויים בסוג הרכיבים."
+  },
+  {
+   "topic": "t1",
+   "difficulty": 2,
+   "question": "המטען שעבר דרך חתך של מוליך עד הרגע \\(t\\ge0\\) הוא \\(q(t)=5\\left(1-e^{-t/2}\\right)\\,\\mathrm{mC}\\) (\\(t\\) בשניות). (א) מצאו את הזרם \\(i(t)\\). (ב) מהו הזרם ברגע \\(t=2\\,\\mathrm s\\)? (ג) מהו המטען הכולל שיעבור כאשר \\(t\\to\\infty\\)?",
+   "hint": "\\(i=dq/dt\\).",
+   "solution": "(א) \\(i(t)=\\frac{dq}{dt}=5\\cdot\\frac12e^{-t/2}=2.5e^{-t/2}\\,\\mathrm{mA}\\).\n(ב) \\(i(2)=2.5e^{-1}\\approx0.92\\,\\mathrm{mA}\\).\n(ג) \\(q(\\infty)=5\\,\\mathrm{mC}\\); בדיקה: \\(\\int_0^\\infty2.5e^{-t/2}dt=2.5\\cdot2=5\\,\\mathrm{mC}\\)."
+  },
+  {
+   "topic": "t1",
+   "difficulty": 2,
+   "question": "מעגל טורי בעל חוג יחיד: מקור מתח \\(V_1=10\\,\\mathrm V\\), נגד \\(R=2\\,\\Omega\\), ומקור מתח \\(V_2=4\\,\\mathrm V\\) המחובר כך שהוא מתנגד לזרם ש־\\(V_1\\) מנסה להזרים (כלומר הזרם נכנס להדק ה־\"+\" של \\(V_2\\)). חשבו את הזרם, ואת ההספק של כל רכיב, והראו שמאזן ההספקים (משפט טלגן) מתקיים.",
+   "hint": "KVL אחד; אחר כך \\(p=vi\\) עם תשומת לב מי מספק ומי צורך.",
+   "solution": "KVL: \\(10-2i-4=0\\Rightarrow i=3\\,\\mathrm A\\).\nמקור \\(V_1\\): הזרם יוצא מה־\"+\" — מספק \\(10\\cdot3=30\\,\\mathrm W\\).\nנגד: צורך \\(i^2R=9\\cdot2=18\\,\\mathrm W\\).\nמקור \\(V_2\\): הזרם נכנס ל־\"+\" — צורך \\(4\\cdot3=12\\,\\mathrm W\\) (נטען).\nמאזן: \\(30=18+12\\). במוסכמת צרכן: \\(-30+18+12=0\\), כנדרש ממשפט טלגן."
+  },
+  {
+   "topic": "t2",
+   "difficulty": 1,
+   "question": "על קבל לינארי קבוע בזמן \\(C=2\\,\\mu\\mathrm F\\) מופעל מתח \\(v(t)=5t\\,\\mathrm V\\) (\\(t\\) בשניות) עבור \\(t\\ge0\\). מצאו את זרם הקבל ואת האנרגיה האגורה בו ברגע \\(t=2\\,\\mathrm s\\).",
+   "hint": "\\(i=C\\dot v\\), \\(W=\\tfrac12Cv^2\\).",
+   "solution": "\\(i=C\\frac{dv}{dt}=2\\cdot10^{-6}\\cdot5=10\\,\\mu\\mathrm A\\) (קבוע).\nב־\\(t=2\\): \\(v=10\\,\\mathrm V\\), \\(W=\\tfrac12\\cdot2\\cdot10^{-6}\\cdot100=10^{-4}\\,\\mathrm J=100\\,\\mu\\mathrm J\\).\nבדיקה: \\(\\int_0^2v\\,i\\,dt=\\int_0^25t\\cdot10^{-5}dt=10^{-5}\\cdot10=10^{-4}\\,\\mathrm J\\)."
+  },
+  {
+   "topic": "t2",
+   "difficulty": 2,
+   "question": "בסליל לינארי \\(L=0.5\\,\\mathrm H\\) זורם \\(i(t)=4\\sin(10t)\\,\\mathrm A\\). מצאו: (א) את מתח הסליל; (ב) את ההספק הרגעי ואת ממוצעו; (ג) את האנרגיה האגורה המרבית.",
+   "hint": "\\(v=L\\,di/dt\\); השתמשו ב־\\(\\sin2x=2\\sin x\\cos x\\).",
+   "solution": "(א) \\(v=L\\frac{di}{dt}=0.5\\cdot40\\cos(10t)=20\\cos(10t)\\,\\mathrm V\\).\n(ב) \\(p=v\\,i=80\\sin(10t)\\cos(10t)=40\\sin(20t)\\,\\mathrm W\\). הממוצע על מחזור הוא אפס — סליל אידיאלי אינו מבזבז אנרגיה אלא אוגר ומחזיר אותה.\n(ג) \\(W_{max}=\\tfrac12LI_m^2=\\tfrac12\\cdot0.5\\cdot16=4\\,\\mathrm J\\)."
+  },
+  {
+   "topic": "t2",
+   "difficulty": 3,
+   "question": "קבל לינארי משתנה בזמן עם קיבול \\(C(t)=1+t\\) [F] (עבור \\(t\\ge0\\)) מחובר במקביל לנגד \\(R=1\\,\\Omega\\). נתון \\(v(0)=V_0\\). (א) כתבו משוואה דיפרנציאלית למתח \\(v(t)\\). (ב) פתרו אותה. (ג) מצאו את המטען \\(q(t)\\) על הקבל. (ד) האם תגובת ה־ZIR הומוגנית בתנאי ההתחלה?",
+   "hint": "זרם הקבל הוא נגזרת המטען \\(q=C(t)v\\) — נגזרת של מכפלה.",
+   "solution": "(א) \\(i_C=\\frac{d}{dt}\\big[(1+t)v\\big]=(1+t)\\dot v+v\\). KCL: \\(i_C+\\frac vR=0\\Rightarrow(1+t)\\dot v+2v=0\\).\n(ב) הפרדת משתנים: \\(\\frac{dv}{v}=-\\frac{2\\,dt}{1+t}\\Rightarrow\\ln v=-2\\ln(1+t)+c\\Rightarrow v(t)=\\frac{V_0}{(1+t)^2}\\).\nבדיקה: \\(\\dot v=-\\frac{2V_0}{(1+t)^3}\\), \\((1+t)\\dot v=-2v\\) ✓.\n(ג) \\(q=C(t)v=\\frac{V_0}{1+t}\\).\n(ד) כן — הפתרון פרופורציוני ל־\\(V_0\\); המעגל לינארי (אם כי משתנה בזמן), ולכן ה־ZIR הומוגני ואדיטיבי בתנאי ההתחלה."
+  },
+  {
+   "topic": "t2",
+   "difficulty": 2,
+   "question": "קבל לינארי \\(C=1\\,\\mathrm F\\) טעון למתח \\(2\\,\\mathrm V\\) ומחובר ב־\\(t=0\\) לנגד \\(R=2\\,\\Omega\\). חשבו בשתי דרכים את האנרגיה הכוללת שתתבזבז על הנגד.",
+   "hint": "דרך אחת: שימור אנרגיה. דרך שנייה: \\(\\int v^2/R\\,dt\\).",
+   "solution": "דרך א': כל האנרגיה ההתחלתית מתבזבזת: \\(W=\\tfrac12Cv^2(0)=\\tfrac12\\cdot1\\cdot4=2\\,\\mathrm J\\).\nדרך ב': \\(\\tau=RC=2\\,\\mathrm s\\), \\(v(t)=2e^{-t/2}\\). \\(p=\\frac{v^2}{R}=\\frac{4e^{-t}}{2}=2e^{-t}\\), \\(\\int_0^\\infty2e^{-t}dt=2\\,\\mathrm J\\) ✓."
+  },
+  {
+   "topic": "t2",
+   "difficulty": 2,
+   "question": "מקור מתח לא אידיאלי מיוצג כמקור אידיאלי \\(E=12\\,\\mathrm V\\) בטור עם התנגדות פנימית \\(r=0.5\\,\\Omega\\). (א) מהו מתח ההדקים כאשר מחברים עומס \\(R_L=5.5\\,\\Omega\\)? (ב) הציגו את המקור כמקור זרם לא אידיאלי שקול. (ג) מהו זרם הקצר?",
+   "hint": "מחלק מתח; התמרת מקורות.",
+   "solution": "(א) \\(i=\\frac{12}{0.5+5.5}=2\\,\\mathrm A\\), מתח ההדקים \\(v=12-0.5\\cdot2=11\\,\\mathrm V\\).\n(ב) מקור זרם \\(I=E/r=24\\,\\mathrm A\\) במקביל להתנגדות \\(0.5\\,\\Omega\\).\n(ג) זרם הקצר \\(24\\,\\mathrm A\\). בדיקה למקור הזרם השקול עם העומס: \\(v=24\\cdot(0.5\\|5.5)=24\\cdot\\frac{2.75}{6}=11\\,\\mathrm V\\) ✓."
+  },
+  {
+   "topic": "t3",
+   "difficulty": 1,
+   "question": "מקור \\(12\\,\\mathrm V\\) מחובר לשני נגדים בטור: \\(R_1=2\\,\\mathrm{k\\Omega}\\) (למעלה) ו־\\(R_2=4\\,\\mathrm{k\\Omega}\\) (למטה, לאדמה). המוצא נלקח על \\(R_2\\). (א) מהו מתח המוצא ללא עומס? (ב) מחברים במקביל ל־\\(R_2\\) עומס \\(R_L=4\\,\\mathrm{k\\Omega}\\). מהו מתח המוצא כעת?",
+   "hint": "מחלק מתח; עם העומס החליפו את \\(R_2\\) ב־\\(R_2\\|R_L\\).",
+   "solution": "(א) \\(V_{out}=12\\cdot\\frac{4}{2+4}=8\\,\\mathrm V\\).\n(ב) \\(R_2\\|R_L=2\\,\\mathrm{k\\Omega}\\), \\(V_{out}=12\\cdot\\frac{2}{2+2}=6\\,\\mathrm V\\).\nהעומס \"מעמיס\" על המחלק ומוריד את המתח."
+  },
+  {
+   "topic": "t3",
+   "difficulty": 2,
+   "question": "נתון מעגל עם צומת ייחוס (אדמה) ושני צמתים A,B: מקור \\(10\\,\\mathrm V\\) (שלילי לאדמה) מחובר ל־A דרך נגד \\(2\\,\\Omega\\); נגד \\(4\\,\\Omega\\) בין A לאדמה; נגד \\(2\\,\\Omega\\) בין A ל־B; נגד \\(2\\,\\Omega\\) בין B לאדמה; ומקור זרם \\(3\\,\\mathrm A\\) המזרים מהאדמה אל B. מצאו את \\(V_A,V_B\\) בשיטת מתחי הצמתים.",
+   "hint": "כתבו KCL (סכום זרמים יוצאים = 0) בכל אחד משני הצמתים.",
+   "solution": "צומת A: \\(\\frac{V_A-10}{2}+\\frac{V_A}{4}+\\frac{V_A-V_B}{2}=0\\Rightarrow5V_A-2V_B=20\\).\nצומת B: \\(\\frac{V_B-V_A}{2}+\\frac{V_B}{2}=3\\Rightarrow2V_B-V_A=6\\).\nהצבה \\(V_A=2V_B-6\\): \\(10V_B-30-2V_B=20\\Rightarrow V_B=6.25\\,\\mathrm V\\), \\(V_A=6.5\\,\\mathrm V\\).\nבדיקה ב־A: \\(-1.75+1.625+0.125=0\\) ✓."
+  },
+  {
+   "topic": "t3",
+   "difficulty": 2,
+   "question": "מקור \\(24\\,\\mathrm V\\) בטור עם \\(6\\,\\Omega\\) מחובר לצומת a; נגד \\(3\\,\\Omega\\) בין a לאדמה; ונגד \\(2\\,\\Omega\\) בין a להדק המוצא x. ההדקים הם x והאדמה. (א) מצאו שקול תבנין ושקול נורטון. (ב) איזה עומס יקבל הספק מרבי ומהו הספק זה?",
+   "hint": "מתח ריקם: בנגד \\(2\\,\\Omega\\) אין זרם. \\(R_{th}\\): קצרו את המקור.",
+   "solution": "(א) \\(V_{th}=24\\cdot\\frac{3}{6+3}=8\\,\\mathrm V\\). \\(R_{th}=2+6\\|3=2+2=4\\,\\Omega\\). \\(I_N=V_{th}/R_{th}=2\\,\\mathrm A\\).\n(ב) \\(R_L=R_{th}=4\\,\\Omega\\), \\(P_{max}=\\frac{V_{th}^2}{4R_{th}}=\\frac{64}{16}=4\\,\\mathrm W\\)."
+  },
+  {
+   "topic": "t3",
+   "difficulty": 2,
+   "question": "לצומת a מחוברים: מקור מתח \\(6\\,\\mathrm V\\) דרך נגד \\(3\\,\\Omega\\); מקור זרם \\(2\\,\\mathrm A\\) המזרים מהאדמה אל a; ונגד \\(6\\,\\Omega\\) מ־a לאדמה. מצאו את \\(V_a\\) בעזרת סופרפוזיציה ובדקו ב־KCL.",
+   "hint": "מקור מתח מאופס = קצר; מקור זרם מאופס = נתק.",
+   "solution": "מקור המתח לבדו: \\(V_a'=6\\cdot\\frac{6}{3+6}=4\\,\\mathrm V\\).\nמקור הזרם לבדו: \\(V_a''=2\\cdot(3\\|6)=2\\cdot2=4\\,\\mathrm V\\).\nסה\"כ \\(V_a=8\\,\\mathrm V\\). בדיקה: \\(\\frac{8-6}{3}+\\frac86=\\frac23+\\frac43=2\\,\\mathrm A\\) ✓."
+  },
+  {
+   "topic": "t3",
+   "difficulty": 3,
+   "question": "מקור \\(V_s=10\\,\\mathrm V\\) מחובר דרך \\(R_1=2\\,\\Omega\\) לצומת a; נסמן ב־\\(i_x\\) את הזרם ב־\\(R_1\\) מהמקור אל a. מקור זרם מבוקר זרם מזרים \\(3i_x\\) מהאדמה אל a. נגד \\(R_2=4\\,\\Omega\\) מחובר בין a לאדמה. מצאו את שקול תבנין בין a לאדמה, ואמתו את \\(R_{th}\\) בעזרת מקור בוחן.",
+   "hint": "מתח ריקם + זרם קצר. מקור תלוי אינו מאופס.",
+   "solution": "ריקם: KCL ב־a: \\(i_x+3i_x=\\frac{V_a}{4}\\Rightarrow i_x=\\frac{V_a}{16}\\). וגם \\(i_x=\\frac{10-V_a}{2}\\). לכן \\(V_a=8(10-V_a)\\Rightarrow V_{th}=\\frac{80}{9}\\approx8.89\\,\\mathrm V\\).\nקצר: \\(V_a=0\\), \\(i_x=5\\,\\mathrm A\\), \\(I_{sc}=4i_x=20\\,\\mathrm A\\).\n\\(R_{th}=\\frac{80/9}{20}=\\frac49\\,\\Omega\\).\nאימות במקור בוחן \\(v_t\\) (עם \\(V_s=0\\)): \\(i_x=-\\frac{v_t}{2}\\); הזרם הנכנס מהמקור הבוחן: \\(i_t=\\frac{v_t}{4}-i_x-3i_x=\\frac{v_t}{4}+2v_t=\\frac94v_t\\Rightarrow R_{th}=\\frac49\\,\\Omega\\) ✓.\nהמקור התלוי \"מגביר\" את הזרם ולכן ההתנגדות השקולה קטנה מ־\\(R_1\\|R_2=\\tfrac43\\,\\Omega\\)."
+  },
+  {
+   "topic": "t4",
+   "difficulty": 1,
+   "question": "מקור \\(v_{in}(t)=10\\sin(\\omega t)\\,\\mathrm V\\) מחובר בטור לדיודה אידיאלית ולנגד \\(R=1\\,\\mathrm{k\\Omega}\\); המוצא הוא המתח על הנגד. תארו את \\(v_{out}(t)\\) וחשבו את ערכו הממוצע ואת ערכו היעיל.",
+   "hint": "הדיודה מוליכה רק בחצי המחזור החיובי.",
+   "solution": "כאשר \\(v_{in}>0\\) הדיודה קצר ו־\\(v_{out}=v_{in}\\); אחרת נתק ו־\\(v_{out}=0\\) (יישור חצי גל).\n\\(V_{av}=\\frac{1}{2\\pi}\\int_0^\\pi10\\sin\\theta\\,d\\theta=\\frac{10}{\\pi}\\approx3.18\\,\\mathrm V\\).\n\\(V_{rms}=\\sqrt{\\frac{1}{2\\pi}\\int_0^\\pi100\\sin^2\\theta\\,d\\theta}=\\sqrt{\\frac{100}{4}}=5\\,\\mathrm V\\)."
+  },
+  {
+   "topic": "t4",
+   "difficulty": 2,
+   "question": "כניסה \\(V_{in}\\) מחוברת דרך נגד \\(R\\) לצומת המוצא. מהמוצא לאדמה שני ענפים מקביליים: (1) דיודה אידיאלית \\(D_1\\) שהאנודה שלה במוצא, בטור עם סוללה \\(3\\,\\mathrm V\\) (הקתודה מחוברת להדק החיובי של הסוללה, ההדק השלילי לאדמה); (2) דיודה אידיאלית \\(D_2\\) שהקתודה שלה במוצא, בטור עם סוללה \\(2\\,\\mathrm V\\) שהדקה השלילי מחובר לאנודה והחיובי לאדמה. חשבו ושרטטו (במילים) את אופיין המעבר \\(V_{out}(V_{in})\\).",
+   "hint": "מצאו מתי כל דיודה מתחילה להוליך: \\(D_1\\) כאשר \\(V_{out}\\) מגיע ל־\\(3\\,\\mathrm V\\), \\(D_2\\) כאשר הוא יורד ל־\\(-2\\,\\mathrm V\\).",
+   "solution": "כששתי הדיודות קטועות אין זרם ב־\\(R\\) ולכן \\(V_{out}=V_{in}\\). זה עקבי כל עוד \\(v_{D1}=V_{out}-3\\le0\\) ו־\\(v_{D2}=-2-V_{out}\\le0\\), כלומר \\(-2\\le V_{in}\\le3\\).\nעבור \\(V_{in}>3\\): \\(D_1\\) מוליכה, \\(V_{out}=3\\,\\mathrm V\\), זרמה \\(\\frac{V_{in}-3}{R}>0\\) ✓.\nעבור \\(V_{in}< -2\\): \\(D_2\\) מוליכה, \\(V_{out}=-2\\,\\mathrm V\\), זרמה \\(\\frac{-2-V_{in}}{R}>0\\) ✓.\nאופיין: קטע אופקי בגובה \\(-2\\) עד \\(V_{in}=-2\\), קטע בשיפוע 1 עד \\(V_{in}=3\\), וקטע אופקי בגובה \\(3\\) (מעגל קוטם דו־צדדי)."
+  },
+  {
+   "topic": "t4",
+   "difficulty": 2,
+   "question": "מייצב מתח: מקור \\(V_s=12\\,\\mathrm V\\), נגד טורי \\(R=200\\,\\Omega\\), ודיודת זנר אידיאלית עם מתח פריצה \\(V_Z=6\\,\\mathrm V\\) המחוברת (בממתח אחורי) במקביל לעומס \\(R_L\\). (א) עבור \\(R_L=600\\,\\Omega\\) חשבו את הזרמים בנגד, בעומס ובזנר. (ב) מהו \\(R_L\\) המזערי שעבורו המתח על העומס עדיין \\(6\\,\\mathrm V\\)?",
+   "hint": "הזנר בפריצה כל עוד זרמה האחורי אינו שלילי; אחרת היא נתק והמעגל מחלק מתח.",
+   "solution": "(א) \\(I_R=\\frac{12-6}{200}=30\\,\\mathrm{mA}\\), \\(I_L=\\frac{6}{600}=10\\,\\mathrm{mA}\\), \\(I_Z=20\\,\\mathrm{mA}>0\\) — ההנחה עקבית.\n(ב) גבול הייצוב כאשר \\(I_Z=0\\): \\(I_L=30\\,\\mathrm{mA}\\Rightarrow R_{L,min}=\\frac{6}{0.03}=200\\,\\Omega\\). (שקול לדרישה שמתח המחלק ללא זנר \\(12\\frac{R_L}{R_L+200}\\ge6\\).)"
+  },
+  {
+   "topic": "t4",
+   "difficulty": 3,
+   "question": "רכיב לא לינארי בעל אופיין \\(i=v^2\\) (כאשר \\(i\\) ב־mA ו־\\(v\\) בוולט, \\(v\\ge0\\)) מחובר למקור \\(E=6\\,\\mathrm V\\) דרך נגד \\(R=1\\,\\mathrm{k\\Omega}\\). (א) מצאו את נקודת העבודה. (ב) חשבו את ההתנגדות הדינמית בנקודת העבודה. (ג) למקור מוסיפים אות קטן \\(e(t)=0.1\\sin t\\,\\mathrm V\\). מצאו בקירוב את רכיב האות הקטן במתח על הרכיב.",
+   "hint": "חיתוך קו העומס \\(i=(6-v)/1\\) עם האופיין; אחר כך מחלק מתח עם \\(r_d\\).",
+   "solution": "(א) \\(v^2=6-v\\Rightarrow v^2+v-6=0\\Rightarrow V_Q=2\\,\\mathrm V\\) (השורש החיובי), \\(I_Q=4\\,\\mathrm{mA}\\).\n(ב) \\(\\frac{di}{dv}=2v=4\\,\\mathrm{mA/V}\\Rightarrow r_d=0.25\\,\\mathrm{k\\Omega}=250\\,\\Omega\\).\n(ג) מעגל האות הקטן: \\(R\\) בטור עם \\(r_d\\). \\(\\Delta v=0.1\\cdot\\frac{250}{1000+250}\\sin t=0.02\\sin t\\,\\mathrm V\\).\nלכן \\(v(t)\\approx2+0.02\\sin t\\)."
+  },
+  {
+   "topic": "t4",
+   "difficulty": 3,
+   "question": "מקור \\(v_s(t)\\) מחובר דרך נגד \\(R\\) לצומת a. בין a לאדמה מחוברים במקביל: קבל \\(C\\), וענף המכיל דיודה אידיאלית (אנודה ב־a) בטור עם סוללה \\(E=5\\,\\mathrm V\\) (הקתודה להדק החיובי, השלילי לאדמה). נתון \\(v_s=-10\\,\\mathrm V\\) עבור \\(t< 0\\) (זמן רב) ו־\\(v_s=+10\\,\\mathrm V\\) עבור \\(t\\ge0\\). מצאו את \\(v_a(t)\\) לכל \\(t\\), את \\(\\lim_{t\\to\\infty}v_a\\), ואת הזמן המזערי \\(t_1\\) שבו \\(v_a\\) מגיע לערכו הגבולי.",
+   "hint": "כל עוד \\(v_a< 5\\) הדיודה קטועה ויש מעגל RC רגיל; ברגע ש־\\(v_a=5\\) הדיודה מוליכה ומקבעת את המתח.",
+   "solution": "עבור \\(t< 0\\): מצב מתמיד, הדיודה קטועה (\\(v_a=-10< 5\\)), \\(v_a=-10\\,\\mathrm V\\).\nעבור \\(t\\ge0\\) וכל עוד הדיודה קטועה: \\(v_a(t)=10+(-10-10)e^{-t/RC}=10-20e^{-t/RC}\\).\nהדיודה מתחילה להוליך כאשר \\(v_a=5\\): \\(20e^{-t_1/RC}=5\\Rightarrow t_1=RC\\ln4\\approx1.39RC\\).\nעבור \\(t\\ge t_1\\): הדיודה מוליכה, \\(v_a=5\\,\\mathrm V\\) קבוע; זרם הדיודה \\(\\frac{10-5}{R}>0\\) ✓ (והקבל אינו מושך זרם).\nלכן \\(\\lim v_a=5\\,\\mathrm V\\), והוא מושג בזמן סופי \\(t_1=RC\\ln4\\) — בניגוד למעגל לינארי שבו הגבול מושג רק אסימפטוטית."
+  },
+  {
+   "topic": "t5",
+   "difficulty": 1,
+   "question": "נתון הדופק \\(f(t)=2\\) עבור \\(1< t< 3\\) ואפס אחרת. (א) בטאו את \\(f\\) באמצעות פונקציות מדרגה. (ב) מצאו את \\(\\frac{df}{dt}\\). (ג) מצאו את \\(g(t)=\\int_{-\\infty}^tf(\\tau)d\\tau\\) ובטאו אותו באמצעות פונקציות רמפה.",
+   "hint": "נגזרת של מדרגה היא הלם; אינטגרל של מדרגה הוא רמפה.",
+   "solution": "(א) \\(f(t)=2u(t-1)-2u(t-3)\\).\n(ב) \\(\\dot f(t)=2\\delta(t-1)-2\\delta(t-3)\\).\n(ג) \\(g(t)=2r(t-1)-2r(t-3)\\), כלומר \\(0\\) עבור \\(t< 1\\); \\(2(t-1)\\) עבור \\(1\\le t\\le3\\); \\(4\\) עבור \\(t>3\\)."
+  },
+  {
+   "topic": "t5",
+   "difficulty": 1,
+   "question": "חשבו: (א) \\(\\int_{-\\infty}^{\\infty}(t^2+3)\\delta(t-2)dt\\); (ב) \\(\\int_0^1\\cos(t)\\,\\delta(t-2)dt\\); (ג) \\(\\int_{-\\infty}^{\\infty}e^{-t}\\,\\dot\\delta(t)dt\\).",
+   "hint": "תכונת הדגימה; ב־(ג) אינטגרציה בחלקים.",
+   "solution": "(א) \\(2^2+3=7\\).\n(ב) \\(0\\) — ההלם ב־\\(t=2\\) מחוץ לתחום האינטגרציה.\n(ג) אינטגרציה בחלקים: \\(\\int f\\dot\\delta\\,dt=-\\dot f(0)\\). כאן \\(f=e^{-t}\\), \\(\\dot f(0)=-1\\), ולכן התוצאה \\(1\\)."
+  },
+  {
+   "topic": "t5",
+   "difficulty": 2,
+   "question": "(א) גל ריבועי מחזורי שערכו \\(A=10\\,\\mathrm V\\) במשך רבע מחזור ואפס בשאר: חשבו ערך ממוצע וערך יעיל. (ב) גל שן מסור \\(v(t)=A\\,t/T\\) עבור \\(0\\le t< T\\) (מחזורי): חשבו ערך ממוצע וערך יעיל.",
+   "hint": "הגדרות: \\(V_{av}=\\frac1T\\int v\\), \\(V_{rms}^2=\\frac1T\\int v^2\\).",
+   "solution": "(א) \\(V_{av}=A\\cdot D=10\\cdot0.25=2.5\\,\\mathrm V\\). \\(V_{rms}=\\sqrt{A^2D}=A\\sqrt D=5\\,\\mathrm V\\).\n(ב) \\(V_{av}=\\frac1T\\int_0^T\\frac{At}{T}dt=\\frac A2\\). \\(V_{rms}^2=\\frac1T\\int_0^T\\frac{A^2t^2}{T^2}dt=\\frac{A^2}{3}\\Rightarrow V_{rms}=\\frac{A}{\\sqrt3}\\).\nבשני המקרים \\(V_{rms}>V_{av}\\)."
+  },
+  {
+   "topic": "t5",
+   "difficulty": 2,
+   "question": "על נגד \\(R=2\\,\\Omega\\) מופעל המתח \\(v(t)=3+4\\cos(\\omega t)\\,\\mathrm V\\). חשבו את הערך הממוצע, הערך היעיל וההספק הממוצע על הנגד.",
+   "hint": "ריבועי הערכים היעילים של DC ושל הרמוניה מתחברים.",
+   "solution": "\\(V_{av}=3\\,\\mathrm V\\) (ממוצע הקוסינוס אפס).\n\\(V_{rms}^2=3^2+\\frac{4^2}{2}=17\\Rightarrow V_{rms}=\\sqrt{17}\\approx4.12\\,\\mathrm V\\).\n\\(P=\\frac{V_{rms}^2}{R}=8.5\\,\\mathrm W\\). (בדיקה ישירה: \\(v^2=9+24\\cos\\omega t+16\\cos^2\\omega t\\), ממוצע \\(9+0+8=17\\).)"
+  },
+  {
+   "topic": "t5",
+   "difficulty": 3,
+   "question": "נתונה משפחת האותות \\(p_\\Delta(t)=\\frac{1}{\\Delta}e^{-t/\\Delta}u(t)\\), \\(\\Delta>0\\). הוכיחו שלכל פונקציה \\(f\\) חסומה ורציפה באפס מתקיים \\(\\lim_{\\Delta\\to0^+}\\int_{-\\infty}^{\\infty}p_\\Delta(t)f(t)dt=f(0)\\). מה המשמעות הפיסיקלית כאשר \\(p_\\Delta\\) הוא זרם הפריקה של קבל דרך נגד קטן?",
+   "hint": "הציבו \\(t=\\Delta s\\) והשתמשו ברציפות \\(f\\) באפס.",
+   "solution": "\\(\\int_0^\\infty\\frac1\\Delta e^{-t/\\Delta}f(t)dt=\\int_0^\\infty e^{-s}f(\\Delta s)ds\\) (הצבה \\(t=\\Delta s\\)).\nמאחר ש־\\(\\int_0^\\infty e^{-s}ds=1\\): \\(\\left|\\int_0^\\infty e^{-s}f(\\Delta s)ds-f(0)\\right|\\le\\int_0^\\infty e^{-s}|f(\\Delta s)-f(0)|ds\\).\nיהי \\(\\varepsilon>0\\). מרציפות באפס קיים \\(\\eta\\) כך ש־\\(|f(x)-f(0)|< \\varepsilon\\) עבור \\(0\\le x< \\eta\\). נפצל את האינטגרל ב־\\(s=\\eta/\\Delta\\): החלק הראשון קטן מ־\\(\\varepsilon\\), והשני חסום ב־\\(2M e^{-\\eta/\\Delta}\\to0\\) (\\(M\\) חסם של \\(|f|\\)). לכן הגבול הוא \\(f(0)\\), כלומר \\(p_\\Delta\\to\\delta\\).\nפיסיקלית: קבל \\(C\\) הטעון למתח \\(V_0\\) ומתפרק דרך נגד \\(R\\) נותן זרם \\(\\frac{V_0}{R}e^{-t/RC}=CV_0\\,p_\\Delta(t)\\) עם \\(\\Delta=RC\\). כאשר \\(R\\to0\\) הזרם שואף להלם \\(CV_0\\,\\delta(t)\\) — כל המטען \\(CV_0\\) עובר \"ברגע\"."
+  },
+  {
+   "topic": "t6",
+   "difficulty": 1,
+   "question": "מקור \\(v_s(t)=10u(t)\\,\\mathrm V\\) מחובר בטור ל־\\(R=2\\,\\mathrm{k\\Omega}\\) ולקבל \\(C=5\\,\\mu\\mathrm F\\) שאינו טעון. מצאו את \\(v_C(t)\\), את זרם הטעינה, ואת הזמן שבו הקבל מגיע ל־\\(5\\,\\mathrm V\\).",
+   "hint": "\\(\\tau=RC\\); נוסחת ערך התחלתי–ערך סופי.",
+   "solution": "\\(\\tau=2\\cdot10^3\\cdot5\\cdot10^{-6}=10\\,\\mathrm{ms}\\).\n\\(v_C(t)=10\\left(1-e^{-t/\\tau}\\right)\\,\\mathrm V\\), \\(i(t)=\\frac{10-v_C}{R}=5e^{-t/\\tau}\\,\\mathrm{mA}\\).\n\\(10(1-e^{-t/\\tau})=5\\Rightarrow t=\\tau\\ln2\\approx6.93\\,\\mathrm{ms}\\)."
+  },
+  {
+   "topic": "t6",
+   "difficulty": 2,
+   "question": "מקור \\(12\\,\\mathrm V\\) מחובר בטור ל־\\(R_1=4\\,\\Omega\\), ל־\\(R_2=2\\,\\Omega\\) ולסליל \\(L=2\\,\\mathrm H\\). מפסק סגור מקצר את \\(R_2\\) במשך זמן רב, ונפתח ב־\\(t=0\\). מצאו את \\(i_L(t)\\) ואת מתח הסליל עבור \\(t>0\\), ובדקו את \\(v_L(0^+)\\) בעזרת KVL.",
+   "hint": "זרם הסליל רציף. מצאו \\(i(0^-)\\), \\(i(\\infty)\\) ו־\\(\\tau\\) החדש.",
+   "solution": "\\(i(0^-)=12/4=3\\,\\mathrm A=i(0^+)\\). לאחר פתיחת המפסק: \\(i(\\infty)=12/6=2\\,\\mathrm A\\), \\(\\tau=\\frac{L}{R_1+R_2}=\\frac13\\,\\mathrm s\\).\n\\(i(t)=2+e^{-3t}\\,\\mathrm A\\).\n\\(v_L=L\\frac{di}{dt}=-6e^{-3t}\\,\\mathrm V\\).\nבדיקה: \\(v_L(0^+)=12-6\\cdot3=-6\\,\\mathrm V\\) ✓."
+  },
+  {
+   "topic": "t6",
+   "difficulty": 2,
+   "question": "מקור זרם \\(I_s(t)\\) מחובר במקביל לנגד \\(R\\) ולקבל \\(C\\) (לינאריים וקבועים בזמן). (א) מצאו את התגובה להלם \\(h(t)\\) של מתח הקבל. (ב) מצאו את התגובה למדרגה \\(s(t)\\). (ג) אמתו ש־\\(h=\\dot s\\). (ד) מדוע קשר זה אינו מובטח אם הנגד משתנה בזמן?",
+   "hint": "אינטגרציה של KCL על \\([0^-,0^+]\\) נותנת את הקפיצה במתח.",
+   "solution": "KCL: \\(C\\dot v+\\frac vR=I_s\\).\n(א) עבור \\(I_s=\\delta\\): אינטגרציה על \\([0^-,0^+]\\) נותנת \\(C[v(0^+)-v(0^-)]=1\\Rightarrow v(0^+)=\\frac1C\\). אחר כך ZIR: \\(h(t)=\\frac1Ce^{-t/RC}u(t)\\).\n(ב) עבור \\(I_s=u\\): \\(s(t)=R\\left(1-e^{-t/RC}\\right)u(t)\\).\n(ג) \\(\\dot s=R\\cdot\\frac{1}{RC}e^{-t/RC}u(t)=\\frac1Ce^{-t/RC}u(t)=h\\) ✓ (אין הלם נוסף כי \\(s(0)=0\\)).\n(ד) ההוכחה ש־\\(h=\\dot s\\) נשענת על קביעות בזמן: \\(\\delta\\approx\\frac{u(t)-u(t-\\Delta)}{\\Delta}\\) והתגובה ל־\\(u(t-\\Delta)\\) היא \\(s(t-\\Delta)\\). במעגל משתנה בזמן התגובה למדרגה מוזזת אינה הזזה של התגובה למדרגה, ולכן הקשר עלול להישבר."
+  },
+  {
+   "topic": "t6",
+   "difficulty": 3,
+   "question": "מעגל RL טורי עם \\(R=2\\,\\Omega\\), \\(L=1\\,\\mathrm H\\) מוזן מגל ריבועי מחזורי: \\(v_s=10\\,\\mathrm V\\) עבור \\(0< t< 0.5\\,\\mathrm s\\) ו־\\(v_s=0\\) עבור \\(0.5< t< 1\\,\\mathrm s\\), וחוזר חלילה. (א) מצאו את הזרם המזערי \\(I_{min}\\) והמרבי \\(I_{max}\\) במצב המתמיד המחזורי. (ב) מהו תנאי ההתחלה \\(i(0)\\) שמבטל את תופעת המעבר? (ג) מהו הזרם הממוצע? נמקו בלי לחשב אינטגרל.",
+   "hint": "פתרו קטע־קטע ודרשו מחזוריות: \\(i(1)=i(0)\\). בממוצע, המתח על סליל במצב מחזורי הוא אפס.",
+   "solution": "המשוואה: \\(\\dot i+2i=v_s\\), \\(\\tau=0.5\\,\\mathrm s\\).\nקטע טעינה (\\(0< t< 0.5\\)): \\(i(t)=5+(I_{min}-5)e^{-2t}\\Rightarrow I_{max}=5+(I_{min}-5)e^{-1}\\).\nקטע פריקה: \\(i(t)=I_{max}e^{-2(t-0.5)}\\Rightarrow I_{min}=I_{max}e^{-1}\\).\nהצבה: \\(I_{max}(1-e^{-2})=5(1-e^{-1})\\Rightarrow I_{max}=\\frac{5}{1+e^{-1}}\\approx3.655\\,\\mathrm A\\), \\(I_{min}=I_{max}e^{-1}\\approx1.345\\,\\mathrm A\\).\n(ב) \\(i(0)=I_{min}\\approx1.345\\,\\mathrm A\\) — אז הפתרון מחזורי כבר מהמחזור הראשון.\n(ג) במצב מחזורי \\(\\frac1T\\int_0^Tv_L\\,dt=\\frac LT[i(T)-i(0)]=0\\), ולכן \\(\\overline{v_s}=R\\,\\bar i\\Rightarrow\\bar i=\\frac{5}{2}=2.5\\,\\mathrm A\\)."
+  },
+  {
+   "topic": "t6",
+   "difficulty": 3,
+   "question": "קבל לינארי קבוע בזמן \\(C=1\\,\\mathrm F\\) מחובר במקביל לנגד משתנה בזמן \\(R(t)=\\frac{1}{1+t}\\) [Ω] (\\(t\\ge0\\)) ולמקור זרם \\(I_s(t)=\\delta(t)\\). הקבל אינו טעון לפני \\(t=0\\). (א) מצאו את מתח הקבל \\(v(t)\\) עבור \\(t>0\\). (ב) חשבו את האנרגיה הכוללת שמתבזבזת בנגד והסבירו את התוצאה.",
+   "hint": "ההלם טוען את הקבל ל־\\(v(0^+)=1/C\\); אחר כך פותרים ZIR של משוואה עם מקדם משתנה בהפרדת משתנים.",
+   "solution": "KCL: \\(\\dot v+(1+t)v=\\delta(t)\\). ההלם נותן \\(v(0^+)=1\\,\\mathrm V\\).\nעבור \\(t>0\\): \\(\\frac{dv}{v}=-(1+t)dt\\Rightarrow v(t)=e^{-\\left(t+t^2/2\\right)}\\).\n(ב) \\(p=\\frac{v^2}{R}=(1+t)e^{-(2t+t^2)}\\). מאחר ש־\\(\\frac{d}{dt}e^{-(2t+t^2)}=-2(1+t)e^{-(2t+t^2)}\\):\n\\[W=\\int_0^\\infty(1+t)e^{-(2t+t^2)}dt=\\left[-\\tfrac12e^{-(2t+t^2)}\\right]_0^\\infty=\\tfrac12\\,\\mathrm J.\\]\nזו בדיוק האנרגיה שההלם אגר בקבל, \\(\\tfrac12Cv^2(0^+)=\\tfrac12\\,\\mathrm J\\) — כולה מתבזבזת בנגד."
+  },
+  {
+   "topic": "t7",
+   "difficulty": 1,
+   "question": "מעגל RLC טורי עם \\(L=1\\,\\mathrm H\\), \\(C=0.25\\,\\mathrm F\\). (א) עבור \\(R=2\\,\\Omega\\) סווגו את סוג הריסון ומצאו את תדר התנודות של ה־ZIR ואת גורם האיכות. (ב) מהי ההתנגדות המרבית שעבורה עדיין יש תנודות (הריסון הקריטי)?",
+   "hint": "\\(\\alpha=R/2L\\), \\(\\omega_0=1/\\sqrt{LC}\\).",
+   "solution": "\\(\\omega_0=\\frac{1}{\\sqrt{0.25}}=2\\,\\mathrm{rad/s}\\).\n(א) \\(\\alpha=\\frac{R}{2L}=1< \\omega_0\\) — תת־ריסון. \\(\\omega_d=\\sqrt{4-1}=\\sqrt3\\,\\mathrm{rad/s}\\). \\(Q=\\frac{\\omega_0L}{R}=1\\) (ואכן \\(Q>\\tfrac12\\)).\n(ב) ריסון קריטי: \\(\\alpha=\\omega_0\\Rightarrow R=2L\\omega_0=2\\sqrt{L/C}=4\\,\\Omega\\). תנודות קיימות עבור \\(R< 4\\,\\Omega\\)."
+  },
+  {
+   "topic": "t7",
+   "difficulty": 2,
+   "question": "מעגל RLC טורי ללא מקור: \\(L=1\\,\\mathrm H\\), \\(R=3\\,\\Omega\\), \\(C=0.5\\,\\mathrm F\\). נתון \\(v_C(0)=1\\,\\mathrm V\\) ו־\\(i_L(0)=0\\). כתבו משוואה דיפרנציאלית למתח הקבל ומצאו את תגובת ה־ZIR.",
+   "hint": "\\(LC\\ddot v+RC\\dot v+v=0\\); \\(\\dot v(0)=i_L(0)/C\\).",
+   "solution": "\\(0.5\\ddot v+1.5\\dot v+v=0\\Rightarrow\\ddot v+3\\dot v+2v=0\\). שורשים: \\(s=-1,-2\\) (ריסון יתר).\n\\(v=K_1e^{-t}+K_2e^{-2t}\\). תנאים: \\(K_1+K_2=1\\); \\(\\dot v(0)=\\frac{i_L(0)}{C}=0\\Rightarrow-K_1-2K_2=0\\).\n\\(K_2=-1,\\ K_1=2\\): \\(v_C(t)=2e^{-t}-e^{-2t}\\,\\mathrm V\\).\nבדיקה: \\(v(0)=1\\), \\(\\dot v(0)=-2+2=0\\) ✓."
+  },
+  {
+   "topic": "t7",
+   "difficulty": 2,
+   "question": "מקור \\(v_s(t)=u(t)\\,\\mathrm V\\) מחובר בטור ל־\\(R=2\\,\\Omega\\), \\(L=1\\,\\mathrm H\\), \\(C=0.5\\,\\mathrm F\\) עם תנאי התחלה אפס. מצאו את מתח הקבל \\(v_C(t)\\), ואת ערכו המרבי (התגובה העודפת).",
+   "hint": "פתרון פרטי קבוע + הומוגני תת־מרוסן; הנגזרת מתאפסת בנקודת המקסימום.",
+   "solution": "\\(LC\\ddot v+RC\\dot v+v=v_s\\Rightarrow\\ddot v+2\\dot v+2v=2u(t)\\). שורשים \\(s=-1\\pm j\\).\n\\(v=1+e^{-t}(K_1\\cos t+K_2\\sin t)\\). \\(v(0)=0\\Rightarrow K_1=-1\\). \\(\\dot v(0)=-K_1+K_2=0\\Rightarrow K_2=-1\\).\n\\(v_C(t)=1-e^{-t}(\\cos t+\\sin t)\\).\n\\(\\dot v=2e^{-t}\\sin t\\), מתאפסת לראשונה ב־\\(t=\\pi\\): \\(v_{max}=1+e^{-\\pi}\\approx1.043\\,\\mathrm V\\) (תגובה עודפת של כ־4.3%)."
+  },
+  {
+   "topic": "t7",
+   "difficulty": 3,
+   "question": "מקור זרם \\(I_s(t)\\) מחובר במקביל לנגד \\(R\\), לסליל \\(L\\) ולקבל \\(C\\). (א) כתבו משוואה דיפרנציאלית לזרם הסליל \\(i_L\\). (ב) מצאו תנאי על \\(R\\) לקיום תנודות ב־ZIR, ואת מקדם הריסון. באיזו הנחה פיסיקלית מקדם הריסון מתאפס? (ג) עבור ערכי יחידה (\\(R=L=C=1\\)) מצאו את התגובה להלם של \\(i_L\\).",
+   "hint": "KCL בצומת העליון ו־\\(v=L\\,\\dot i_L\\). בהלם: \\(i_L(0^+)=0\\), \\(\\dot i_L(0^+)=\\frac{1}{LC}\\).",
+   "solution": "(א) KCL: \\(C\\dot v+\\frac vR+i_L=I_s\\), עם \\(v=L\\dot i_L\\): \\(LC\\,\\ddot i_L+\\frac LR\\dot i_L+i_L=I_s\\).\n(ב) \\(\\alpha=\\frac{1}{2RC}\\), \\(\\omega_0=\\frac{1}{\\sqrt{LC}}\\). תנודות כאשר \\(\\alpha< \\omega_0\\), כלומר \\(R>\\frac12\\sqrt{\\frac LC}\\). מקדם הריסון מתאפס כאשר \\(R\\to\\infty\\) (אין ענף מבזבז) — האנרגיה עוברת בין הקבל לסליל ללא הפסדים.\n(ג) \\(\\ddot i+\\dot i+i=\\delta(t)\\). אינטגרציה על \\([0^-,0^+]\\): \\(i(0^+)=0\\), \\(\\dot i(0^+)=1\\). שורשים \\(s=-\\tfrac12\\pm j\\tfrac{\\sqrt3}{2}\\).\n\\(i=e^{-t/2}K\\sin\\left(\\tfrac{\\sqrt3}{2}t\\right)\\), \\(\\dot i(0)=K\\tfrac{\\sqrt3}{2}=1\\):\n\\[h(t)=\\frac{2}{\\sqrt3}e^{-t/2}\\sin\\left(\\frac{\\sqrt3}{2}t\\right)u(t).\\]"
+  },
+  {
+   "topic": "t7",
+   "difficulty": 3,
+   "question": "מקור מתח \\(V_s\\) מחובר בטור ל־\\(R_1\\) ולסליל \\(L\\); אחריהם, בין הצומת לאדמה, מחוברים במקביל קבל \\(C\\) ונגד \\(R_2\\). (א) כתבו משוואה דיפרנציאלית למתח הקבל \\(v\\). (ב) הוכיחו שה־ZIR יציב אסימפטוטית לכל ערכים חיוביים של הרכיבים. (ג) עבור \\(R_1=R_2=2\\,\\Omega\\), \\(L=1\\,\\mathrm H\\), \\(C=1\\,\\mathrm F\\): האם יש תנודות? מהו \\(\\lim_{t\\to\\infty}v(t)\\) לכניסת מדרגת יחידה, והאם אפשר לקבלו בלי לפתור?",
+   "hint": "KVL בחוג החיצוני, KCL בצומת הקבל. למשוואה \\(a\\ddot v+b\\dot v+cv=0\\) עם \\(a,b,c>0\\) — לשני השורשים חלק ממשי שלילי.",
+   "solution": "(א) \\(i_L=C\\dot v+\\frac{v}{R_2}\\); \\(V_s=R_1i_L+L\\dot i_L+v\\). הצבה:\n\\[LC\\,\\ddot v+\\left(\\frac{L}{R_2}+R_1C\\right)\\dot v+\\left(1+\\frac{R_1}{R_2}\\right)v=V_s.\\]\n(ב) הפולינום האופייני \\(as^2+bs+c\\) עם \\(a=LC>0\\), \\(b=\\frac{L}{R_2}+R_1C>0\\), \\(c=1+\\frac{R_1}{R_2}>0\\). אם השורשים ממשיים: מכפלתם \\(c/a>0\\) וסכומם \\(-b/a< 0\\) — שניהם שליליים. אם מרוכבים צמודים: החלק הממשי \\(-\\frac{b}{2a}< 0\\). בכל מקרה \\(v_{ZIR}\\to0\\). פיסיקלית: הנגדים מבזבזים את האנרגיה האגורה.\n(ג) \\(\\ddot v+2.5\\dot v+2v=V_s\\). דיסקרימיננטה \\(6.25-8< 0\\): יש תנודות, \\(s=-1.25\\pm j0.661\\).\nבמצב DC מתמיד הסליל קצר והקבל נתק — מחלק מתח: \\(v(\\infty)=\\frac{R_2}{R_1+R_2}=0.5\\,\\mathrm V\\) (וכך גם מהמשוואה: \\(2v=1\\))."
+  },
+  {
+   "topic": "t8",
+   "difficulty": 1,
+   "question": "עבור כל אחת מהמערכות קבעו אם היא לינארית ואם היא קבועה בזמן: (א) \\(y(t)=t\\,x(t)\\); (ב) \\(y(t)=x^2(t)\\); (ג) \\(y(t)=x(t-1)+2\\); (ד) \\(y(t)=\\int_{-\\infty}^tx(\\tau)d\\tau\\).",
+   "hint": "בדקו הומוגניות ואדיטיביות; לקביעות בזמן השוו תגובה לכניסה מוזזת עם הזזת התגובה.",
+   "solution": "(א) לינארית; לא קבועה בזמן: לכניסה \\(x(t-\\tau)\\) מתקבל \\(t\\,x(t-\\tau)\\ne(t-\\tau)x(t-\\tau)\\).\n(ב) לא לינארית (\\((2x)^2=4x^2\\)); קבועה בזמן.\n(ג) לא לינארית — כניסת אפס נותנת \\(2\\ne0\\); קבועה בזמן.\n(ד) לינארית וקבועה בזמן (אינטגרטור), עם \\(h(t)=u(t)\\)."
+  },
+  {
+   "topic": "t8",
+   "difficulty": 2,
+   "question": "נתונה המערכת \\(y(t)=\\int_{t-2}^{t}x(u)du\\). (א) הראו שהיא LTI. (ב) מצאו את התגובה להלם. האם המערכת סיבתית? חסרת זיכרון? (ג) מצאו את התגובה למדרגה.",
+   "hint": "הציבו \\(x=\\delta\\): האינטגרל שווה 1 אם ורק אם 0 נמצא בתחום האינטגרציה.",
+   "solution": "(א) לינאריות — מלינאריות האינטגרל. קביעות בזמן: לכניסה \\(x(u-\\tau)\\): \\(\\int_{t-2}^tx(u-\\tau)du=\\int_{t-\\tau-2}^{t-\\tau}x(w)dw=y(t-\\tau)\\) ✓.\n(ב) \\(h(t)=\\int_{t-2}^t\\delta(u)du=1\\) כאשר \\(t-2< 0< t\\), כלומר \\(h(t)=u(t)-u(t-2)\\). \\(h=0\\) עבור \\(t< 0\\) — סיבתית. יש זיכרון (\\(h\\) אינה כפולה של הלם) — היציאה תלויה ב־2 השניות האחרונות.\n(ג) \\(s(t)=\\int_{-\\infty}^th=0\\) עבור \\(t< 0\\); \\(t\\) עבור \\(0\\le t\\le2\\); \\(2\\) עבור \\(t>2\\). כלומר \\(s(t)=r(t)-r(t-2)\\)."
+  },
+  {
+   "topic": "t8",
+   "difficulty": 2,
+   "question": "מערכת LTI סיבתית עם \\(h(t)=e^{-2t}u(t)\\). חשבו בעזרת קונבולוציה את היציאה עבור: (א) \\(x(t)=u(t)\\); (ב) \\(x(t)=e^{-t}u(t)\\).",
+   "hint": "\\(y(t)=\\int_0^tx(\\tau)h(t-\\tau)d\\tau\\) עבור \\(t\\ge0\\).",
+   "solution": "(א) \\(y=\\int_0^te^{-2(t-\\tau)}d\\tau=e^{-2t}\\cdot\\frac{e^{2t}-1}{2}=\\tfrac12\\left(1-e^{-2t}\\right)u(t)\\).\n(ב) \\(y=\\int_0^te^{-\\tau}e^{-2(t-\\tau)}d\\tau=e^{-2t}\\int_0^te^{\\tau}d\\tau=e^{-2t}(e^t-1)=\\left(e^{-t}-e^{-2t}\\right)u(t)\\).\nבדיקה ל־(ב): \\(\\dot y+2y=-e^{-t}+2e^{-2t}+2e^{-t}-2e^{-2t}=e^{-t}\\) ✓ (המערכת מממשת \\(\\dot y+2y=x\\))."
+  },
+  {
+   "topic": "t8",
+   "difficulty": 2,
+   "question": "נתונה המערכת \\(y(t)=\\int_{t-1}^{t+2}x(u)du\\). (א) מצאו את התגובה להלם. (ב) האם המערכת סיבתית? תנו הסבר פיסיקלי. (ג) מצאו את התגובה למדרגה. (ד) הציעו שינוי מזערי בגבולות האינטגרל שיהפוך אותה לסיבתית.",
+   "hint": "ההלם \"נתפס\" כאשר \\(t-1< 0< t+2\\).",
+   "solution": "(א) \\(h(t)=1\\) עבור \\(-2< t< 1\\) ואפס אחרת: \\(h(t)=u(t+2)-u(t-1)\\).\n(ב) לא סיבתית: \\(h(t)\\ne0\\) עבור \\(-2< t< 0\\) — המערכת מגיבה 2 שניות לפני שההלם מופעל, כלומר היציאה ברגע \\(t\\) תלויה בכניסה עתידית עד \\(t+2\\). מערכת פיסיקלית בזמן אמת אינה יכולה לממש זאת.\n(ג) \\(s(t)=\\int_{-\\infty}^th\\): \\(0\\) עבור \\(t< -2\\); \\(t+2\\) עבור \\(-2\\le t\\le1\\); \\(3\\) עבור \\(t>1\\).\n(ד) להזיז את החלון לעבר: \\(y(t)=\\int_{t-3}^{t}x(u)du\\) (השהיה של 2 שניות) — \\(h(t)=u(t)-u(t-3)\\)."
+  },
+  {
+   "topic": "t8",
+   "difficulty": 3,
+   "question": "שתי מערכות LTI בדידות מחוברות בטור. \\(h_1[0]=1,\\ h_1[1]=-2,\\ h_1[2]=1\\) ואפס אחרת; \\(h_2[0]=h_2[1]=1\\) ואפס אחרת. (א) מצאו את התגובה להלם הכוללת. (ב) מצאו כניסה לא קבועה ל־\\(h_1\\) שנותנת יציאה אפס לכל \\(n\\). (ג) מצאו כניסה לא קבועה ל־\\(h_2\\) שנותנת יציאה אפס. (ד) פרשו מה מממשת כל מערכת.",
+   "hint": "קונבולוציה בדידה של סדרות סופיות = כפל פולינומים. חשבו על \\(h_1\\) כהפרש שני.",
+   "solution": "(א) \\(h=h_1*h_2\\): \\(\\{1,-2,1\\}*\\{1,1\\}=\\{1,-1,-1,1\\}\\), כלומר \\(h[0]=1,h[1]=-1,h[2]=-1,h[3]=1\\).\n(ב) \\(y_1[n]=x[n]-2x[n-1]+x[n-2]\\) — הפרש שני. עבור \\(x[n]=n\\): \\(n-2(n-1)+(n-2)=0\\) לכל \\(n\\). (כל סדרה לינארית \\(an+b\\) מתאפסת.)\n(ג) \\(y_2[n]=x[n]+x[n-1]\\). עבור \\(x[n]=(-1)^n\\): \\((-1)^n+(-1)^{n-1}=0\\).\n(ד) \\(h_1\\) היא \"גוזר פעמיים\" בדיד — מסנן מעביר גבוהים שחוסם DC ומגמות לינאריות; \\(h_2\\) היא ממצע/סוכם של שתי דגימות — מסנן מעביר נמוכים שחוסם את התדר הגבוה ביותר \\((-1)^n\\). לכן הקסקדה חוסמת את שני הקצוות."
+  },
+  {
+   "topic": "t9",
+   "difficulty": 1,
+   "question": "כתבו משוואות מצב בצורה \\(\\dot{\\mathbf x}=A\\mathbf x+Bu\\) עבור מעגל RLC טורי המוזן ממקור מתח \\(V_s(t)\\), עם משתני המצב \\(\\mathbf x=(v_C,\\ i_L)^T\\). מה יהיו \\(A,B\\) עבור \\(R=3\\,\\Omega\\), \\(L=1\\,\\mathrm H\\), \\(C=0.5\\,\\mathrm F\\)?",
+   "hint": "\\(C\\dot v_C=i_L\\); \\(L\\dot i_L=V_s-v_C-Ri_L\\).",
+   "solution": "\\(\\dot v_C=\\frac{1}{C}i_L\\), \\(\\dot i_L=-\\frac1Lv_C-\\frac RLi_L+\\frac1LV_s\\).\n\\[A=\\begin{pmatrix}0&\\frac1C\\\\-\\frac1L&-\\frac RL\\end{pmatrix},\\quad B=\\begin{pmatrix}0\\\\\\frac1L\\end{pmatrix}.\\]\nבערכים הנתונים: \\(A=\\begin{pmatrix}0&2\\\\-1&-3\\end{pmatrix}\\), \\(B=\\begin{pmatrix}0\\\\1\\end{pmatrix}\\). ערכים עצמיים: \\(\\lambda^2+3\\lambda+2=0\\Rightarrow\\lambda=-1,-2\\)."
+  },
+  {
+   "topic": "t9",
+   "difficulty": 2,
+   "question": "נתונה \\(A=\\begin{pmatrix}0&1\\\\-2&-3\\end{pmatrix}\\). (א) מצאו ערכים ווקטורים עצמיים. (ב) חשבו את \\(e^{At}\\) בליכסון. (ג) מצאו את ה־ZIR עבור \\(\\mathbf x(0)=(1,0)^T\\).",
+   "hint": "\\(e^{At}=Pe^{Dt}P^{-1}\\); בדקו ש־\\(e^{A\\cdot0}=I\\).",
+   "solution": "(א) \\(\\det(A-\\lambda I)=\\lambda^2+3\\lambda+2=0\\Rightarrow\\lambda_1=-1,\\ \\lambda_2=-2\\). וקטורים עצמיים: \\(\\mathbf v_1=(1,-1)^T\\), \\(\\mathbf v_2=(1,-2)^T\\).\n(ב) \\(P=\\begin{pmatrix}1&1\\\\-1&-2\\end{pmatrix}\\), \\(\\det P=-1\\), \\(P^{-1}=\\begin{pmatrix}2&1\\\\-1&-1\\end{pmatrix}\\).\n\\[e^{At}=\\begin{pmatrix}2e^{-t}-e^{-2t}&e^{-t}-e^{-2t}\\\\-2e^{-t}+2e^{-2t}&-e^{-t}+2e^{-2t}\\end{pmatrix}.\\]\nבדיקה: ב־\\(t=0\\) מתקבלת \\(I\\); הנגזרת ב־\\(t=0\\) היא \\(\\begin{pmatrix}0&1\\\\-2&-3\\end{pmatrix}=A\\) ✓.\n(ג) \\(\\mathbf x(t)=e^{At}\\binom10=\\binom{2e^{-t}-e^{-2t}}{-2e^{-t}+2e^{-2t}}\\)."
+  },
+  {
+   "topic": "t9",
+   "difficulty": 3,
+   "question": "מקור \\(V_s\\) מחובר דרך \\(R_1=1\\,\\Omega\\) לצומת 1; קבל \\(C_1=1\\,\\mathrm F\\) בין צומת 1 לאדמה; נגד \\(R_2=1\\,\\Omega\\) בין צומת 1 לצומת 2; קבל \\(C_2=1\\,\\mathrm F\\) בין צומת 2 לאדמה. (א) כתבו משוואות מצב עבור \\((v_1,v_2)\\). (ב) מצאו ערכים עצמיים. האם ייתכנו תנודות? האם המעגל יציב אסימפטוטית? (ג) מהו המצב המתמיד עבור \\(V_s=1\\,\\mathrm V\\)?",
+   "hint": "KCL בכל צומת קבל. למטריצה 2×2: \\(\\lambda^2-\\mathrm{tr}A\\,\\lambda+\\det A=0\\).",
+   "solution": "(א) צומת 1: \\(\\dot v_1=(V_s-v_1)-(v_1-v_2)=-2v_1+v_2+V_s\\). צומת 2: \\(\\dot v_2=v_1-v_2\\).\n\\(A=\\begin{pmatrix}-2&1\\\\1&-1\\end{pmatrix}\\), \\(B=\\binom10\\).\n(ב) \\(\\mathrm{tr}A=-3\\), \\(\\det A=1\\): \\(\\lambda^2+3\\lambda+1=0\\Rightarrow\\lambda=\\frac{-3\\pm\\sqrt5}{2}\\approx-0.382,\\ -2.618\\).\nשניהם ממשיים ושליליים: אין תנודות (מעגל RC בלבד — אין החלפת אנרגיה בין סוגי אגירה) והמעגל יציב אסימפטוטית.\n(ג) \\(\\dot{\\mathbf x}=0\\): \\(v_1=v_2\\) ו־\\(-2v_1+v_2+1=0\\Rightarrow v_1=v_2=1\\,\\mathrm V\\) (קבלים כנתק — אין זרם ואין מפל מתח)."
+  },
+  {
+   "topic": "t9",
+   "difficulty": 3,
+   "question": "נתונה מערכת המצב \\(\\dot{\\mathbf x}=A\\mathbf x\\) עם \\(A=\\begin{pmatrix}-1&1\\\\-1&-1\\end{pmatrix}\\). (א) מצאו את הערכים העצמיים. (ב) הראו ש־\\(e^{At}=e^{-t}\\begin{pmatrix}\\cos t&\\sin t\\\\-\\sin t&\\cos t\\end{pmatrix}\\). (ג) מצאו את \\(\\mathbf x(t)\\) עבור \\(\\mathbf x(0)=(2,0)^T\\) ואת \\(\\|\\mathbf x(t)\\|\\). (ד) מה מייצגים החלק הממשי והמדומה של הערכים העצמיים?",
+   "hint": "כתבו \\(A=-I+J\\) עם \\(J=\\begin{pmatrix}0&1\\\\-1&0\\end{pmatrix}\\); המטריצות מתחלפות ולכן \\(e^{At}=e^{-t}e^{Jt}\\).",
+   "solution": "(א) \\(\\det(A-\\lambda I)=(\\lambda+1)^2+1=0\\Rightarrow\\lambda=-1\\pm j\\).\n(ב) \\(A=-I+J\\), ו־\\(I\\) מתחלפת עם כל מטריצה, לכן \\(e^{At}=e^{-t}e^{Jt}\\). מאחר ש־\\(J^2=-I\\): \\(e^{Jt}=I\\cos t+J\\sin t=\\begin{pmatrix}\\cos t&\\sin t\\\\-\\sin t&\\cos t\\end{pmatrix}\\). בדיקה: הנגזרת ב־\\(t=0\\) היא \\(-I+J=A\\) ✓.\n(ג) \\(\\mathbf x(t)=2e^{-t}\\binom{\\cos t}{-\\sin t}\\), \\(\\|\\mathbf x(t)\\|=2e^{-t}\\).\n(ד) החלק הממשי \\(-1\\) הוא קצב הדעיכה (\\(-\\alpha\\)) והחלק המדומה \\(1\\) הוא תדר התנודות \\(\\omega_d\\). המסלול במישור המצב הוא ספירלה מתכנסת לראשית — יציבות אסימפטוטית."
+  },
+  {
+   "topic": "t10",
+   "difficulty": 1,
+   "question": "מקור \\(v_s(t)=10\\cos(1000t)\\,\\mathrm V\\) מחובר בטור ל־\\(R=3\\,\\Omega\\) ולסליל \\(L=4\\,\\mathrm{mH}\\). מצאו את העכבה, את פאזור הזרם, את \\(i(t)\\) במצב מתמיד ואת ההספק הממוצע הנצרך.",
+   "hint": "\\(Z=R+j\\omega L\\); \\(P=\\tfrac12|I|^2R\\).",
+   "solution": "\\(Z=3+j\\cdot1000\\cdot0.004=3+j4\\,\\Omega\\), \\(|Z|=5\\), \\(\\angle Z=53.13^\\circ\\).\n\\(\\mathbf I=\\frac{10\\angle0^\\circ}{5\\angle53.13^\\circ}=2\\angle{-53.13^\\circ}\\,\\mathrm A\\Rightarrow i(t)=2\\cos(1000t-53.13^\\circ)\\,\\mathrm A\\) (הזרם מפגר — עומס השראי).\n\\(P=\\tfrac12|\\mathbf I|^2R=\\tfrac12\\cdot4\\cdot3=6\\,\\mathrm W\\). בדיקה: \\(\\tfrac12\\cdot10\\cdot2\\cdot\\cos53.13^\\circ=6\\,\\mathrm W\\) ✓."
+  },
+  {
+   "topic": "t10",
+   "difficulty": 2,
+   "question": "מקור זרם \\(i_s(t)=\\cos t\\,\\mathrm A\\) מחובר במקביל ל־\\(R=1\\,\\Omega\\) ול־\\(C=1\\,\\mathrm F\\). מצאו את פאזורי המתח, זרם הנגד וזרם הקבל (גדלים וזוויות), תארו את דיאגרמת הפאזורים ובדקו KCL.",
+   "hint": "\\(Y=\\frac1R+j\\omega C\\).",
+   "solution": "\\(Y=1+j\\), \\(\\mathbf V=\\frac{1}{1+j}=\\frac{1}{\\sqrt2}\\angle{-45^\\circ}\\,\\mathrm V\\).\n\\(\\mathbf I_R=\\mathbf V/R=0.707\\angle{-45^\\circ}=0.5-j0.5\\).\n\\(\\mathbf I_C=j\\omega C\\mathbf V=0.707\\angle{+45^\\circ}=0.5+j0.5\\).\nסכום: \\(1\\angle0^\\circ=\\mathbf I_s\\) ✓.\nדיאגרמה: \\(\\mathbf I_s\\) על הציר הממשי; \\(\\mathbf V\\) ו־\\(\\mathbf I_R\\) בזווית \\(-45^\\circ\\); \\(\\mathbf I_C\\) מקדים את \\(\\mathbf V\\) ב־\\(90^\\circ\\) (בזווית \\(+45^\\circ\\)); \\(\\mathbf I_R\\perp\\mathbf I_C\\) וסכומם הווקטורי הוא \\(\\mathbf I_s\\).\nבזמן: \\(v(t)=0.707\\cos(t-45^\\circ)\\,\\mathrm V\\)."
+  },
+  {
+   "topic": "t10",
+   "difficulty": 3,
+   "question": "למקור סינוסי בתדר \\(\\omega=100\\,\\mathrm{rad/s}\\) משרעת \\(10\\,\\mathrm V\\) ועכבה פנימית \\(Z_s=4+j3\\,\\Omega\\). (א) איזו עכבת עומס תקבל הספק ממוצע מרבי? (ב) מהו הספק זה? (ג) ממשו את העומס באמצעות נגד ורכיב אוגר אחד בטור, וציינו ערכים.",
+   "hint": "התאמה צמודה \\(Z_L=Z_s^*\\).",
+   "solution": "(א) \\(Z_L=Z_s^*=4-j3\\,\\Omega\\).\n(ב) העכבה הכוללת \\(8\\,\\Omega\\) (ממשית), \\(|\\mathbf I|=\\frac{10}{8}=1.25\\,\\mathrm A\\), \\(P=\\tfrac12|\\mathbf I|^2\\cdot4=\\tfrac12\\cdot1.5625\\cdot4=3.125\\,\\mathrm W\\) (\\(=\\frac{|V_s|^2}{8R_s}\\)).\n(ג) נגד \\(4\\,\\Omega\\) בטור עם קבל שעכבתו \\(-j3\\): \\(\\frac{1}{\\omega C}=3\\Rightarrow C=\\frac{1}{300}\\,\\mathrm F\\approx3.33\\,\\mathrm{mF}\\)."
+  },
+  {
+   "topic": "t10",
+   "difficulty": 3,
+   "question": "מעגל RL טורי עם \\(R=1\\,\\Omega\\), \\(L=1\\,\\mathrm H\\) מוזן מהמקור \\(v_s(t)=\\cos(t)\\,u(t)\\), \\(i(0)=0\\). מצאו את התגובה הכוללת של הזרם, הפרידו בין תגובת המעבר למצב המתמיד, ובטאו את המצב המתמיד כקוסינוס עם זווית מופע.",
+   "hint": "פתרון פרטי מפאזורים, ועוד \\(Ke^{-t}\\) שנקבע מתנאי ההתחלה.",
+   "solution": "\\(\\dot i+i=\\cos t\\). פאזור: \\(\\mathbf I=\\frac{1}{1+j}=\\frac{1}{\\sqrt2}\\angle{-45^\\circ}\\Rightarrow i_{ss}=\\frac{1}{\\sqrt2}\\cos(t-45^\\circ)=\\tfrac12\\cos t+\\tfrac12\\sin t\\).\n\\(i=i_{ss}+Ke^{-t}\\), \\(i(0)=\\tfrac12+K=0\\Rightarrow K=-\\tfrac12\\).\n\\[i(t)=\\tfrac{1}{\\sqrt2}\\cos(t-45^\\circ)-\\tfrac12e^{-t},\\quad t\\ge0.\\]\nבדיקה: \\(\\dot i+i=\\tfrac12(-\\sin t+\\cos t)+\\tfrac12e^{-t}+\\tfrac12(\\cos t+\\sin t)-\\tfrac12e^{-t}=\\cos t\\) ✓.\nתגובת המעבר \\(-\\tfrac12e^{-t}\\) דועכת; מכיוון שתנאי ההתחלה אפס זו גם תגובת ה־ZSR."
+  },
+  {
+   "topic": "t10",
+   "difficulty": 2,
+   "question": "למעגל LTI יציב מוכנסת הכניסה \\(v_s(t)=2+3\\cos(2t)\\,\\mathrm V\\). המעגל הוא נגד \\(R=1\\,\\Omega\\) בטור עם סליל \\(L=0.5\\,\\mathrm H\\). מצאו את זרם המצב המתמיד ואת ההספק הממוצע על הנגד. מדוע אסור לחבר את שני הפאזורים?",
+   "hint": "סופרפוזיציה: תדר \\(\\omega=0\\) ותדר \\(\\omega=2\\) בנפרד, וחיבור בזמן.",
+   "solution": "DC (\\(\\omega=0\\)): הסליל קצר, \\(I_0=2\\,\\mathrm A\\).\n\\(\\omega=2\\): \\(Z=1+j1\\), \\(\\mathbf I=\\frac{3}{1+j}=2.121\\angle{-45^\\circ}\\,\\mathrm A\\).\n\\(i_{ss}(t)=2+2.121\\cos(2t-45^\\circ)\\,\\mathrm A\\).\nהספק: \\(P=I_0^2R+\\tfrac12|\\mathbf I|^2R=4+\\tfrac12\\cdot4.5=6.25\\,\\mathrm W\\).\nפאזור מייצג אות בתדר מסוים (\\(\\mathrm{Re}\\{\\mathbf Ie^{j\\omega t}\\}\\)); לפאזורים בתדרים שונים גורם \\(e^{j\\omega t}\\) שונה ולכן אין משמעות לסכומם. ההספקים הממוצעים כן מתחברים כי ממוצע המכפלה של שני תדרים שונים הוא אפס."
+  },
+  {
+   "topic": "t11",
+   "difficulty": 1,
+   "question": "מסנן RC: \\(R=1\\,\\mathrm{k\\Omega}\\) בטור עם הכניסה, והמוצא נלקח על הקבל \\(C=1\\,\\mu\\mathrm F\\). מצאו את \\(H(j\\omega)\\) (גודל וזווית), את סוג המסנן ואת תדר מחצית ההספק ברדיאנים לשנייה ובהרץ.",
+   "hint": "מחלק מתח עם עכבות.",
+   "solution": "\\(H(j\\omega)=\\frac{1/j\\omega C}{R+1/j\\omega C}=\\frac{1}{1+j\\omega RC}\\). \\(|H|=\\frac{1}{\\sqrt{1+(\\omega RC)^2}}\\), \\(\\angle H=-\\arctan(\\omega RC)\\).\n\\(|H(0)|=1\\), \\(|H|\\to0\\) כש־\\(\\omega\\to\\infty\\): מסנן מעביר נמוכים (LPF).\n\\(|H|=\\frac{1}{\\sqrt2}\\) כאשר \\(\\omega_cRC=1\\): \\(\\omega_c=\\frac{1}{10^3\\cdot10^{-6}}=1000\\,\\mathrm{rad/s}\\), \\(f_c=\\frac{\\omega_c}{2\\pi}\\approx159\\,\\mathrm{Hz}\\). בתדר זה \\(\\angle H=-45^\\circ\\)."
+  },
+  {
+   "topic": "t11",
+   "difficulty": 2,
+   "question": "מקור \\(v_{in}\\) מחובר בטור לסליל \\(L=1\\,\\mathrm H\\) ולנגד \\(R=1\\,\\Omega\\); המוצא הוא המתח על הנגד. (א) מצאו את \\(H(j\\omega)\\), סוג המסנן ותדר הברך. (ב) עבור \\(v_{in}(t)=\\cos t+\\cos3t\\) מצאו את \\(v_{out}(t)\\) במצב מתמיד. (ג) חשבו את ההספק הממוצע על הנגד.",
+   "hint": "טפלו בכל תדר בנפרד; ההספקים מתחברים.",
+   "solution": "(א) \\(H=\\frac{R}{R+j\\omega L}=\\frac{1}{1+j\\omega}\\) — LPF, \\(\\omega_c=R/L=1\\,\\mathrm{rad/s}\\).\n(ב) \\(H(j1)=\\frac{1}{\\sqrt2}\\angle{-45^\\circ}\\); \\(H(j3)=\\frac{1}{\\sqrt{10}}\\angle{-71.57^\\circ}\\).\n\\(v_{out}(t)=0.707\\cos(t-45^\\circ)+0.316\\cos(3t-71.57^\\circ)\\,\\mathrm V\\).\n(ג) \\(P=\\frac{1}{2R}\\left(0.707^2+0.316^2\\right)=\\tfrac12(0.5+0.1)=0.3\\,\\mathrm W\\)."
+  },
+  {
+   "topic": "t11",
+   "difficulty": 2,
+   "question": "מעגל RLC טורי: \\(R=10\\,\\Omega\\), \\(L=10\\,\\mathrm{mH}\\), \\(C=1\\,\\mu\\mathrm F\\), מוזן ממקור סינוסי במשרעת \\(1\\,\\mathrm V\\). מצאו: תדר התהודה, גורם האיכות, רוחב הסרט, ומשרעת מתח הקבל בתהודה.",
+   "hint": "\\(\\omega_0=1/\\sqrt{LC}\\), \\(Q=\\omega_0L/R\\), \\(\\Delta\\omega=\\omega_0/Q\\).",
+   "solution": "\\(\\omega_0=\\frac{1}{\\sqrt{10^{-2}\\cdot10^{-6}}}=10^4\\,\\mathrm{rad/s}\\).\n\\(Q=\\frac{\\omega_0L}{R}=\\frac{100}{10}=10\\).\n\\(\\Delta\\omega=\\frac{\\omega_0}{Q}=\\frac RL=1000\\,\\mathrm{rad/s}\\).\nבתהודה \\(|\\mathbf I|=\\frac{1}{R}=0.1\\,\\mathrm A\\), \\(|\\mathbf V_C|=\\frac{|\\mathbf I|}{\\omega_0C}=0.1\\cdot100=10\\,\\mathrm V=Q|\\mathbf V_s|\\) — מתח הקבל גדול פי \\(Q\\) ממתח המקור (ומתבטל מול מתח הסליל)."
+  },
+  {
+   "topic": "t11",
+   "difficulty": 3,
+   "question": "מקור זרם \\(i_s(t)=I_m\\cos(\\omega_0t)\\) מחובר במקביל ל־\\(R\\), \\(L\\), \\(C\\), כאשר \\(\\omega_0=1/\\sqrt{LC}\\). (א) הוכיחו שבמצב המתמיד סכום האנרגיות הרגעיות בקבל ובסליל קבוע בזמן, ומצאו אותו. (ב) מצאו את היחס בין האנרגיה האגורה להספק הממוצע המתבזבז, וקשרו אותו לגורם האיכות.",
+   "hint": "בתהודה האדמיטנס ממשי: \\(v=RI_m\\cos\\omega_0t\\). מצאו את \\(i_L\\) ממנו.",
+   "solution": "(א) בתהודה \\(Y=\\frac1R+j\\left(\\omega_0C-\\frac{1}{\\omega_0L}\\right)=\\frac1R\\), לכן \\(v(t)=RI_m\\cos\\omega_0t\\).\n\\(i_L=\\frac1L\\int v\\,dt=\\frac{RI_m}{\\omega_0L}\\sin\\omega_0t\\).\n\\(W_C=\\tfrac12CR^2I_m^2\\cos^2\\omega_0t\\); \\(W_L=\\tfrac12L\\frac{R^2I_m^2}{\\omega_0^2L^2}\\sin^2\\omega_0t=\\tfrac12CR^2I_m^2\\sin^2\\omega_0t\\) (כי \\(\\frac{1}{\\omega_0^2L}=C\\)).\n\\[W_C+W_L=\\tfrac12CR^2I_m^2\\quad\\text{(קבוע)}.\\]\nהאנרגיה עוברת הלוך ושוב בין הקבל לסליל, והמקור מספק רק את מה שהנגד מבזבז.\n(ב) \\(P=\\tfrac12RI_m^2\\). \\(\\frac{W}{P}=RC\\). מאחר ש־\\(Q=\\omega_0RC\\) במעגל מקבילי: \\(Q=\\omega_0\\frac{W}{P}\\)."
+  },
+  {
+   "topic": "t11",
+   "difficulty": 3,
+   "question": "למסנן RC מעביר נמוכים (\\(R=1\\,\\Omega\\) טורי, מוצא על \\(C=0.5\\,\\mathrm F\\)) מוכנס \\(v_{in}(t)=2+3\\cos(2t)\\,\\mathrm V\\). (א) מצאו את \\(v_{out}(t)\\) במצב מתמיד. (ב) חשבו את \\(\\int_0^{\\pi}v_{out}(t)dt\\) והשוו ל־\\(\\int_0^{\\pi}v_{in}(t)dt\\). (ג) מה היה מתקבל באינטגרל המוצא אילו הוחלפו מקומות הנגד והקבל (מוצא על הנגד)? קשרו לסוג המסנן.",
+   "hint": "\\(\\pi\\) הוא בדיוק מחזור של \\(\\cos2t\\); אינטגרל של קוסינוס על מחזור שלם מתאפס.",
+   "solution": "(א) \\(RC=0.5\\). \\(H(0)=1\\); \\(H(j2)=\\frac{1}{1+j}=0.707\\angle{-45^\\circ}\\).\n\\(v_{out}(t)=2+2.121\\cos(2t-45^\\circ)\\,\\mathrm V\\).\n(ב) המחזור \\(T=\\pi\\). \\(\\int_0^\\pi v_{out}dt=2\\pi+0=2\\pi\\), וגם \\(\\int_0^\\pi v_{in}dt=2\\pi\\). השוויון נובע מכך ש־LPF מעביר את ה־DC ללא שינוי (\\(H(0)=1\\)) וכל הרמוניה מתאפסת באינטגרל על מחזור שלם.\n(ג) HPF: \\(H(j\\omega)=\\frac{j\\omega RC}{1+j\\omega RC}\\), \\(H(0)=0\\) — רכיב ה־DC נחסם (הקבל טעון ל־2V), \\(v_{out}=2.121\\cos(2t+45^\\circ)\\), והאינטגרל על מחזור הוא \\(0\\). במעגל: במצב מתמיד הזרם הממוצע דרך הקבל אפס, ולכן המתח הממוצע על הנגד אפס."
+  },
+  {
+   "topic": "t12",
+   "difficulty": 1,
+   "question": "מקור בעל מתח יעיל \\(10\\,\\mathrm V\\) והתנגדות פנימית \\(4\\,\\Omega\\) מחובר לראשוני של שנאי אידיאלי בעל יחס ליפופים \\(1:5\\). למשני מחובר עומס \\(100\\,\\Omega\\). מצאו את ההתנגדות הנראית מהראשוני, את המתחים בראשוני ובמשני ואת ההספק בעומס. מדוע זהו המקרה האופטימלי?",
+   "hint": "שיקוף עכבה: \\(R_{in}=R_L(n_1/n_2)^2\\).",
+   "solution": "\\(R_{in}=\\frac{100}{25}=4\\,\\Omega\\).\nזרם הראשוני: \\(\\frac{10}{4+4}=1.25\\,\\mathrm A\\); מתח הראשוני \\(5\\,\\mathrm V\\); מתח המשני \\(5\\cdot5=25\\,\\mathrm V\\); זרם המשני \\(0.25\\,\\mathrm A\\).\nהספק בעומס: \\(\\frac{25^2}{100}=6.25\\,\\mathrm W\\) (שווה להספק הנכנס לראשוני \\(5\\cdot1.25\\) — השנאי אינו מבזבז).\nההתנגדות המשתקפת שווה להתנגדות הפנימית — תנאי העברת הספק מרבית: \\(P_{max}=\\frac{V^2}{4R_s}=\\frac{100}{16}=6.25\\,\\mathrm W\\) ✓."
+  },
+  {
+   "topic": "t12",
+   "difficulty": 2,
+   "question": "שני סלילים מצומדים: \\(L_1=4\\,\\mathrm{mH}\\), \\(L_2=9\\,\\mathrm{mH}\\), מקדם צימוד \\(k=0.5\\). (א) מצאו את \\(M\\). (ב) מהי ההשראות השקולה בחיבור טורי מסייע ובחיבור טורי מנוגד? (ג) מהו \\(M\\) המרבי האפשרי ומדוע?",
+   "hint": "\\(M=k\\sqrt{L_1L_2}\\); \\(L_{eq}=L_1+L_2\\pm2M\\).",
+   "solution": "(א) \\(M=0.5\\sqrt{36}=3\\,\\mathrm{mH}\\).\n(ב) מסייע: \\(4+9+6=19\\,\\mathrm{mH}\\). מנוגד: \\(4+9-6=7\\,\\mathrm{mH}\\).\n(ג) \\(M_{max}=\\sqrt{L_1L_2}=6\\,\\mathrm{mH}\\) (\\(k=1\\)). האנרגיה \\(W=\\tfrac12L_1i_1^2+\\tfrac12L_2i_2^2\\pm Mi_1i_2\\) חייבת להיות אי־שלילית לכל \\(i_1,i_2\\) (פאסיביות), וזה מתקיים רק אם \\(M^2\\le L_1L_2\\)."
+  },
+  {
+   "topic": "t12",
+   "difficulty": 2,
+   "question": "בסליל הראשוני של זוג סלילים מצומדים (\\(L_1=0.1\\,\\mathrm H\\), \\(M=0.05\\,\\mathrm H\\)) זורם \\(i_1(t)=2\\sin(100t)\\,\\mathrm A\\). הסליל המשני פתוח. הזרם \\(i_1\\) נכנס בהדק המסומן בנקודה, ומתח המשני \\(v_2\\) מוגדר כחיובי בהדק המסומן בנקודה. מצאו את \\(v_1(t)\\) ואת \\(v_2(t)\\).",
+   "hint": "\\(i_2=0\\), ולכן \\(v_1=L_1\\dot i_1\\), \\(v_2=M\\dot i_1\\).",
+   "solution": "\\(\\dot i_1=200\\cos(100t)\\,\\mathrm{A/s}\\).\n\\(v_1=L_1\\dot i_1=20\\cos(100t)\\,\\mathrm V\\).\n\\(v_2=+M\\dot i_1=10\\cos(100t)\\,\\mathrm V\\) (סימן חיובי לפי מוסכמת הנקודות: זרם הנכנס בנקודה בסליל אחד משרה מתח חיובי בנקודה של הסליל השני).\nיחס המתחים \\(v_2/v_1=M/L_1=0.5\\)."
+  },
+  {
+   "topic": "t12",
+   "difficulty": 3,
+   "question": "מעגל בצימוד מגנטי במצב סינוסי מתמיד, \\(\\omega=10\\,\\mathrm{rad/s}\\). חוג ראשוני: מקור \\(\\mathbf V_s=10\\angle0^\\circ\\,\\mathrm V\\) (משרעת), נגד \\(R_1=1\\,\\Omega\\) וסליל \\(L_1=0.1\\,\\mathrm H\\). חוג משני: סליל \\(L_2=0.4\\,\\mathrm H\\) ועומס \\(R_2=4\\,\\Omega\\). \\(M=0.1\\,\\mathrm H\\). זרמי החוגים \\(\\mathbf I_1,\\mathbf I_2\\) מוגדרים כך שמשוואות החוגים הן \\((R_1+j\\omega L_1)\\mathbf I_1-j\\omega M\\mathbf I_2=\\mathbf V_s\\) ו־\\(-j\\omega M\\mathbf I_1+(R_2+j\\omega L_2)\\mathbf I_2=0\\). מצאו את \\(\\mathbf I_1,\\mathbf I_2\\), את ההספק הממוצע בכל נגד ובדקו מאזן הספקים.",
+   "hint": "בודדו את \\(\\mathbf I_1\\) מהמשוואה השנייה והציבו בראשונה.",
+   "solution": "\\(j\\omega L_1=j1\\), \\(j\\omega L_2=j4\\), \\(j\\omega M=j1\\).\nמשוואה 2: \\(\\mathbf I_1=\\frac{(4+j4)}{j}\\mathbf I_2=(4-j4)\\mathbf I_2\\).\nמשוואה 1: \\((1+j)(4-j4)\\mathbf I_2-j\\mathbf I_2=10\\). \\((1+j)(4-j4)=8\\), לכן \\((8-j)\\mathbf I_2=10\\):\n\\(\\mathbf I_2=\\frac{10}{8-j}=\\frac{10(8+j)}{65}=1.231+j0.154=1.240\\angle7.13^\\circ\\,\\mathrm A\\).\n\\(\\mathbf I_1=(4-j4)\\mathbf I_2=5.657\\angle{-45^\\circ}\\cdot1.240\\angle7.13^\\circ=7.016\\angle{-37.87^\\circ}\\,\\mathrm A\\).\nהספקים: \\(P_{R_2}=\\tfrac12|\\mathbf I_2|^2R_2=\\tfrac12\\cdot\\tfrac{100}{65}\\cdot4=3.08\\,\\mathrm W\\); \\(P_{R_1}=\\tfrac12|\\mathbf I_1|^2R_1=\\tfrac12\\cdot49.23=24.62\\,\\mathrm W\\).\nמקור: \\(P_s=\\tfrac12\\mathrm{Re}\\{\\mathbf V_s\\mathbf I_1^*\\}=\\tfrac12\\cdot10\\cdot7.016\\cos37.87^\\circ=27.69\\,\\mathrm W=24.62+3.08\\) ✓ (הסלילים המצומדים אינם מבזבזים הספק ממוצע)."
+  },
+  {
+   "topic": "t12",
+   "difficulty": 3,
+   "question": "מקור \\(v_s(t)=A\\sin(\\omega t)\\) מחובר בטור עם קבל \\(C_1=C\\) אל הראשוני של שנאי אידיאלי בעל יחס \\(1:2\\) (ראשוני:משני). למשני מחובר קבל \\(C_2=C\\). מצאו את המתח על \\(C_2\\) במצב המתמיד. הסבירו מדוע התוצאה אינה תלויה בתדר.",
+   "hint": "שקפו את \\(C_2\\) לראשוני: עכבה \\(\\frac{1}{j\\omega C}\\) מחולקת ב־\\(n^2=4\\), כלומר קבל \\(4C\\). אחר כך מחלק מתח קיבולי.",
+   "solution": "העכבה הנראית מהראשוני: \\(Z_{in}=\\frac{1}{n^2}\\cdot\\frac{1}{j\\omega C}=\\frac{1}{j\\omega(4C)}\\) — קבל שקול \\(4C\\).\nמחלק מתח בין \\(C_1=C\\) לקבל השקול \\(4C\\): \\(\\mathbf V_1=\\mathbf V_s\\frac{\\frac{1}{4C}}{\\frac1C+\\frac{1}{4C}}=\\frac{\\mathbf V_s}{5}\\).\n\\(\\mathbf V_2=2\\mathbf V_1=\\frac25\\mathbf V_s\\Rightarrow v_{C_2}(t)=0.4A\\sin(\\omega t)\\).\nבדיקת מטען: זרם הראשוני \\(\\mathbf I_1=j\\omega C(\\mathbf V_s-\\mathbf V_1)=j\\omega C\\cdot\\tfrac45\\mathbf V_s\\); זרם המשני \\(\\mathbf I_2=\\mathbf I_1/2=j\\omega C\\cdot\\tfrac25\\mathbf V_s=j\\omega C_2\\mathbf V_2\\) ✓.\nהגורם \\(\\frac{1}{j\\omega}\\) משותף לכל העכבות ומצטמצם במחלק — רשת של קבלים ושנאי אידיאלי בלבד היא מחלק מתח שאינו תלוי בתדר (ואין בה הפרש מופע)."
+  }
+ ],
+ "unreadable": [
+  {
+   "title": "מועד א 2007 חשמל (עותק הסטודנט)",
+   "url": "https://drive.google.com/file/d/1tX4qEnyDbTSNLjquS7EqUMohrOcMS91o/view?usp=drivesdk",
+   "reason": "נבדק כתמונה: כפילות של מבחן 2007 סמסטר ב' מועד א' (אותו שאלון ופתרון בכתב יד) שנותח מהקובץ 2007_semB_a_exam."
+  },
+  {
+   "title": "2008 מועד ב (עותק הסטודנט)",
+   "url": "https://drive.google.com/file/d/1Ztcy3iBjtnDZlaMAwY7XHdaXlOuQbTmm/view?usp=drivesdk",
+   "reason": "כפילות של מבחן 2008 מועד ב' שנותח מהעותק המודפס."
+  },
+  {
+   "title": "2009 מועד א (עותק הסטודנט)",
+   "url": "https://drive.google.com/file/d/15oDEYsj6vcI0KhBKebENlpwVYBGVPDi5/view?usp=drivesdk",
+   "reason": "לא נותח בנפרד: עותק/פתרון בכתב יד של מבחן 2009 מועד א', שנוסח שאלותיו נותח מקובץ השחזור."
+  },
+  {
+   "title": "2009 סמסטר ב' מועד א' - פתרון מרצה",
+   "url": "https://drive.google.com/file/d/14TzsC9xdj7O2gAO-P7TlLspSY9pajUEm/view?usp=drivesdk",
+   "reason": "לא נותח: קובץ פתרון בלבד (סרוק, כתב יד) למבחן 2009 מועד א', שנוסח שאלותיו נותח מקובץ השחזור."
+  },
+  {
+   "title": "2018 BA - פתרון סטודנט",
+   "url": "https://drive.google.com/file/d/16zihTQL351ZNEns60HvSFyINzvsznGZe/view?usp=drivesdk",
+   "reason": "לא נותח: פתרון סטודנט בלבד (סריקת כתב יד) למבחן 2018 מועד א', שנוסח שאלותיו נותח מקובץ השחזור."
+  },
+  {
+   "title": "פתרון סטודנט מועד ב 2023",
+   "url": "https://drive.google.com/file/d/1Bpb1-KRDdSNwO5kKtlhk8vVUrNtSQTDc/view?usp=drivesdk",
+   "reason": "נבדק כתמונה: מחברת בחינה סרוקה של סטודנט (פתרון בלבד, ללא נוסח השאלות) – שאלון מועד ב' 2023 אינו בכונן ולכן לא נותח."
+  },
+  {
+   "title": "2024 מועד ב חשמל (עותק הסטודנט)",
+   "url": "https://drive.google.com/file/d/15f-v2bTNOBb_47g8rOoo-7SlwtpZvUjf/view?usp=drivesdk",
+   "reason": "לא נותח בנפרד: עותק/פתרון סטודנט בכתב יד של מבחן 2024 מועד ב', שהשאלון המלא שלו (שתי שאלות) נותח מהקובץ המצולם."
+  },
+  {
+   "title": "פתרונות סטודנטים מועד 25א / 25ב (תיקייה)",
+   "url": "https://drive.google.com/drive/folders/1tuj9q3MWiy9lCJgSg1_jooYxw56WZ0oc",
+   "reason": "פתרונות סטודנטים בלבד (סריקות כתב יד) למועדי א' ו-ב' 2025, ששאלוניהם נותחו מקובץ השחזור (מועד א') ומהשאלון הסרוק (מועד ב'); לא נותחו בנפרד."
+  },
+  {
+   "title": "חוברת מבחנים - מבוא להנדסת חשמל (45MB)",
+   "url": "https://drive.google.com/file/d/13m07IWdIPxCSYe_GPRRSR3zQHFnku3Wr/view?usp=drivesdk",
+   "reason": "קובץ סרוק גדול מאוד — לא נקרא."
+  },
+  {
+   "title": "חוברת מבחנים מתל אביב",
+   "url": "https://drive.google.com/drive/folders/1zS6ZktppibxBEhqafjNEzFxvJm7fO_iY",
+   "reason": "חומר ממוסד אחר — לא נותח."
+  },
+  {
+   "title": "קבצי ‎.ntb / ‎.note של הסטודנט (2014, 2016, 2022)",
+   "url": "https://drive.google.com/drive/folders/1OithigV1onwf1x4q31F5liGAphTRp4Et",
+   "reason": "פורמט מחברת דיגיטלית (zip) שאינו נתמך בקריאה."
+  },
+  {
+   "title": "מיפוי מועדים (מסמך בכתב יד)",
+   "url": "https://docs.google.com/document/d/1_vlw4MGj4Yri89qBR87nIb9Xwiy8Fl_KMwOZXOFau7c/edit",
+   "reason": "שחזור/פתרון בכתב יד — זיהוי התווים החזיר טקסט לא קריא."
+  },
+  {
+   "title": "2007_semC_a_exam_prof.PDF / 2007_semC_b_exam_prof.PDF (תיקיית 'מבחנים תימור 2007')",
+   "url": "https://drive.google.com/drive/folders/1aUNgohfA9TShbVuJyiFH46CBHo7rWxDu",
+   "reason": "כפילות: סריקות של מבחני קיץ תשס\"ז מועד א' ו-ב' (תימור מלמד) שנותחו מהעותקים שבתיקיית 'מבחנים מהמודל'."
+  },
+  {
+   "title": "שאלות לדוגמא ברמת מבחן.pdf (תיקיית 'מבחנים מהמודל תימור')",
+   "url": "https://drive.google.com/file/d/1UK8ujDk9bM7tvBAlR6MFmsfeZXe_56SI/view?usp=drivesdk",
+   "reason": "לא נותח: אוסף שאלות לדוגמה ולא שאלון מבחן של מועד מסוים."
+  }
+ ]
+}

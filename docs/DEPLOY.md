@@ -95,3 +95,15 @@ update "User" set role = 'ADMIN' where email = 'המייל-שלך@example.com';
 | `password authentication failed` | הסיסמה לא נכונה או לא מקודדת (ראה שלב 1) |
 | הקישור במייל מוביל ל-localhost | שלב 4: Site URL ו-Redirect URLs |
 | האתר נפתח אבל אין קורסים | לא הרצת `npx prisma db seed` מול Supabase (שלב 2) |
+
+## עדכון: migrations וייבוא רצים לבד בכל deploy
+
+מאז שנוסף הסקריפט `vercel-build`, כל deploy ב-Vercel מריץ לפני הבנייה `prisma migrate deploy`, את ה-seed ואת ייבוא הקורסים (`data/study`). לכן אין צורך להריץ אותם ידנית מהמחשב (שלב 2), בתנאי ש-`DATABASE_URL` ו-`DIRECT_URL` מוגדרים ב-Vercel גם לסביבת ה-Build.
+
+## בדיקה אוטומטית של פתרונות
+
+כדי להפעיל את "שליחה לבדיקה" מוסיפים ב-Vercel את המשתנה `ANTHROPIC_API_KEY` (מפתח מ-console.anthropic.com) ועושים Redeploy. בלי המפתח שאר האתר עובד, ובדף השליחה מוצגת הודעה שהבדיקה לא הופעלה. כל בדיקה עולה כסף לבעל המפתח; יש מגבלה של 20 בדיקות ביממה למשתמש.
+
+## הרשמה ומנהלים
+
+משתמשים נרשמים ב-`/signup` (אימייל וסיסמה). אם ב-Supabase מופעל אישור אימייל (ברירת המחדל), נשלח מייל אישור, ולכן צריך להגדיר ב-Authentication → URL Configuration את כתובת האתר ואת `https://<האתר>/auth/confirm` ב-Redirect URLs. משתמש חדש הוא משתמש רגיל; את המנהל הראשון מגדירים ב-SQL (שלב 5), ואחר כך אפשר לקדם משתמשים מ-`/admin/users`.

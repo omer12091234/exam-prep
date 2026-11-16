@@ -10,20 +10,25 @@
     "postinstall": "prisma generate",
     "db:start": "prisma dev -d -n exam-prep -P 51214",
     "db:stop": "prisma dev stop exam-prep",
-    "db:setup": "prisma migrate deploy && prisma db seed",
-    "demo": "npm run db:start && npm run db:setup && next dev"
+    "db:setup": "prisma migrate deploy && prisma db seed && tsx prisma/import-study.ts",
+    "demo": "npm run db:start && npm run db:setup && next dev",
+    "db:import": "tsx prisma/import-study.ts",
+    "vercel-build": "prisma migrate deploy && tsx prisma/seed.ts && tsx prisma/import-study.ts && next build"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^1.8.0",
     "@prisma/adapter-pg": "^7.10.1",
     "@prisma/client": "^7.10.1",
     "@supabase/ssr": "^0.12.7",
     "@supabase/supabase-js": "^2.119.0",
     "dotenv": "^18.0.9",
     "katex": "^0.19.1",
+    "marked": "^18.2.0",
     "next": "16.4.5",
     "react": "19.3.0",
     "react-dom": "19.3.0",
-    "react-katex": "^3.1.0"
+    "react-katex": "^3.1.0",
+    "sanitize-html": "^2.18.2"
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "^4",
@@ -31,6 +36,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/react-katex": "^3.0.4",
+    "@types/sanitize-html": "^2.16.2",
     "eslint": "^9",
     "eslint-config-next": "16.4.5",
     "prisma": "^7.10.1",

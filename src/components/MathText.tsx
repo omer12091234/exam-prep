@@ -1,18 +1,34 @@
 import katex from "katex";
 
 /**
- * Renders Hebrew text with inline ($...$) and display ($$...$$) LaTeX.
+ * Renders Hebrew text with inline ($...$ or \\(...\\)) and display ($$...$$ or \\[...\\]) LaTeX.
  * Hebrew runs stay RTL; each formula is an isolated LTR island.
  */
-export function MathText({ text, className }: { text: string; className?: string }) {
-  const parts = text.split(/(\$\$[\s\S]+?\$\$|\$[^$\n]+?\$)/g);
+const SPLIT =
+  /(\$\$[\s\S]+?\$\$|\\\[[\s\S]+?\\\]|\\\([\s\S]+?\\\)|\$[^$\n]+?\$)/g;
+
+export function MathText({
+  text,
+  className,
+}: {
+  text: string;
+  className?: string;
+}) {
+  const parts = text.split(SPLIT);
   return (
     <span className={className}>
       {parts.map((p, i) => {
-        if (p.startsWith("$$") && p.endsWith("$$")) {
+        if (
+          p.length > 4 &&
+          ((p.startsWith("$$") && p.endsWith("$$")) ||
+            (p.startsWith("\\[") && p.endsWith("\\]")))
+        ) {
           return <Formula key={i} tex={p.slice(2, -2)} display />;
         }
-        if (p.length > 1 && p.startsWith("$") && p.endsWith("$")) {
+        if (p.length > 4 && p.startsWith("\\(") && p.endsWith("\\)")) {
+          return <Formula key={i} tex={p.slice(2, -2)} />;
+        }
+        if (p.length > 2 && p.startsWith("$") && p.endsWith("$")) {
           return <Formula key={i} tex={p.slice(1, -1)} />;
         }
         return <Plain key={i} text={p} />;
@@ -38,9 +54,17 @@ function Plain({ text }: { text: string }) {
 }
 
 function Formula({ tex, display = false }: { tex: string; display?: boolean }) {
-  const html = katex.renderToString(tex, { displayMode: display, throwOnError: false, strict: "ignore" });
+  const html = katex.renderToString(tex, {
+    displayMode: display,
+    throwOnError: false,
+    strict: "ignore",
+  });
   return display ? (
-    <div dir="ltr" className="my-2 overflow-x-auto" dangerouslySetInnerHTML={{ __html: html }} />
+    <div
+      dir="ltr"
+      className="my-2 overflow-x-auto"
+      dangerouslySetInnerHTML={{ __html: html }}
+    />
   ) : (
     <bdi dir="ltr" dangerouslySetInnerHTML={{ __html: html }} />
   );

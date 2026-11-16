@@ -9,7 +9,8 @@ export async function requireUser() {
   // Per-user data is request-time only. In demo mode nothing reads cookies, so without
   // this Next tries to prerender the DB query (Prisma uses crypto.randomUUID → error).
   await connection();
-  if (deployedWithoutAuth) throw new Error("Supabase is not configured on this deployment");
+  if (deployedWithoutAuth)
+    throw new Error("Supabase is not configured on this deployment");
   if (isDemo) {
     return db.user.upsert({
       where: { id: DEMO_USER.id },
@@ -20,12 +21,28 @@ export async function requireUser() {
   const supabase = await createClient();
   const { data } = await supabase.auth.getUser();
   if (!data.user) redirect("/login");
-  const { id, email } = data.user;
+  const { id, email, user_metadata } = data.user;
+  const name =
+    typeof user_metadata?.display_name === "string"
+      ? user_metadata.display_name.trim().slice(0, 60)
+      : "";
   return db.user.upsert({
     where: { id },
     update: {},
-    create: { id, email: email ?? `${id}@unknown` },
+    // New accounts are regular users; an admin promotes from /admin/users.
+    create: { id, email: email ?? `${id}@unknown`, displayName: name || null },
   });
+}
+
+/** Signed-in user or null – for places that must not redirect (the nav bar on /login). */
+export async function currentUser() {
+  await connection();
+  if (deployedWithoutAuth) return null;
+  if (isDemo) return requireUser();
+  const supabase = await createClient();
+  const { data } = await supabase.auth.getUser();
+  if (!data.user) return null;
+  return db.user.findUnique({ where: { id: data.user.id } });
 }
 
 /** Only admins upload and edit content. */
