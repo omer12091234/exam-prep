@@ -305,6 +305,7 @@ enum SolutionAuthor {
   LECTURER
   GRADER
   STUDENT
+  AI // worked solution written by Claude, not an official one
 }
 
 model Solution {

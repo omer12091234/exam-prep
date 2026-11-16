@@ -12,6 +12,7 @@ import { existsSync, readFileSync } from "node:fs";
 import { PrismaPg } from "@prisma/adapter-pg";
 import { PrismaClient } from "../src/generated/prisma/client";
 import { runtimeDbUrl } from "../src/lib/dburl";
+import { importDetailed, loadDetailed, type Detailed } from "./detailed";
 
 type Item = {
   num: string;
@@ -225,13 +226,24 @@ async function main() {
     }[] = [];
     const links: { subQuestionId: string; topicId: string }[] = [];
 
+    const detailed = loadDetailed(slug);
+    const detailedExams: { examId: string; items: Item[]; detail: Detailed }[] =
+      [];
+
     for (const e of data.exams) {
       if (
         slug === SEEDED.slug &&
         e.year === SEEDED.year &&
         e.term === SEEDED.term
       ) {
-        links.push(...(await tagSeededExam(db, e.questions, topicId)));
+        links.push(
+          ...(await tagExam(
+            db,
+            { importKey: SEEDED.importKey },
+            e.questions,
+            topicId,
+          )),
+        );
         continue;
       }
       const examId = id(slug, "exam", e.title);
@@ -251,6 +263,12 @@ async function main() {
           published: true,
         },
       });
+      const detail = detailed.get(e.title);
+      if (detail) {
+        // Exact text, crops and solutions come from data/exams; only the topics are taken from here.
+        detailedExams.push({ examId, items: e.questions, detail });
+        continue;
+      }
       const groups = new Map<string, { qid: string; count: number }>();
       const usedLabels = new Set<string>();
       for (const item of e.questions) {
@@ -295,6 +313,10 @@ async function main() {
         update: e.data,
         create: { id: e.id, ...e.data } as never,
       });
+    }
+    for (const x of detailedExams) {
+      await importDetailed(db, x.examId, course.id, x.detail);
+      links.push(...(await tagExam(db, { id: x.examId }, x.items, topicId)));
     }
     await db.question.createMany({ data: questions, skipDuplicates: true });
     const have = new Map(
@@ -380,14 +402,15 @@ async function main() {
   await db.$disconnect();
 }
 
-/** Tags the sub-questions of the seeded 2023 exam with the topics of the matching import items. */
-async function tagSeededExam(
+/** Tags the parts of a fully transcribed exam with the topics of the matching import items ("1א-ד" → א…ד of question 1). */
+async function tagExam(
   db: PrismaClient,
+  where: { id: string } | { importKey: string },
   items: Item[],
   topicId: Map<string, string>,
 ) {
   const exam = await db.exam.findUnique({
-    where: { importKey: SEEDED.importKey },
+    where,
     include: { questions: { include: { subQuestions: true } } },
   });
   if (!exam) return [];

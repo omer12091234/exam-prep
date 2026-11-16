@@ -10,6 +10,7 @@ import { QuestionTimer } from "@/components/QuestionTimer";
 import { SubCard } from "@/components/SubCard";
 import { examTitle } from "@/lib/courses";
 import { countStatuses, solved, subStatuses } from "@/lib/progress";
+import { markdownHtml } from "@/lib/richtext";
 import type { ProgressStatus } from "@/generated/prisma/client";
 
 export default function ExamPage({ params }: PageProps<"/exams/[id]">) {
@@ -39,6 +40,7 @@ async function Exam({ params }: { params: Promise<{ id: string }> }) {
             include: {
               images: true,
               comments: true,
+              solutions: true,
               topics: {
                 select: { topic: { select: { id: true, name: true } } },
               },
@@ -215,7 +217,7 @@ async function Exam({ params }: { params: Promise<{ id: string }> }) {
                   topics={s.topics.map((t) => t.topic)}
                 >
                   {s.images.length > 0 && (
-                    <details className="mt-2">
+                    <details className="mt-2" open>
                       <summary className="cursor-pointer text-sm text-neutral-500">
                         תמונה מהמבחן
                       </summary>
@@ -228,6 +230,24 @@ async function Exam({ params }: { params: Promise<{ id: string }> }) {
                       ))}
                     </details>
                   )}
+                  {s.solutions.map((sol) => (
+                    <details
+                      key={sol.id}
+                      className="mt-3 rounded-lg border border-neutral-200 p-3 dark:border-neutral-800"
+                    >
+                      <summary className="cursor-pointer text-sm font-medium text-blue-700 dark:text-blue-400">
+                        {sol.author === "AI"
+                          ? "פתרון מלא עם הסברים (נכתב על ידי Claude, לא פתרון רשמי)"
+                          : "פתרון"}
+                      </summary>
+                      <div
+                        className="rich mt-2"
+                        dangerouslySetInnerHTML={{
+                          __html: markdownHtml(sol.contentMd),
+                        }}
+                      />
+                    </details>
+                  ))}
                   {s.comments.length > 0 && (
                     <ul className="mt-3 flex flex-col gap-1 text-sm">
                       {s.comments.map((c) => (
