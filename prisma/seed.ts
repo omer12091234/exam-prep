@@ -8,6 +8,7 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import { PrismaPg } from "@prisma/adapter-pg";
 import { PrismaClient } from "../src/generated/prisma/client";
+import { runtimeDbUrl } from "../src/lib/dburl";
 
 type Sub = { label: string; points: number; text: string };
 type Q = {
@@ -54,7 +55,7 @@ const read = <T>(p: string): T => JSON.parse(readFileSync(p, "utf8")) as T;
 
 async function main() {
   const db = new PrismaClient({
-    adapter: new PrismaPg({ connectionString: process.env.DATABASE_URL! }),
+    adapter: new PrismaPg({ connectionString: runtimeDbUrl() }),
   });
   const ex = read<Extraction>("ingest/example/extraction.json");
   const crops = read<Crop[]>("public/demo/2023A/manifest.json");
