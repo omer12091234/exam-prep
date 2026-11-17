@@ -31,7 +31,8 @@ def check_text(where, s, need=True):
     if "\\(" in s or re.search(r"\\\[(?!\d)", s):  # \\[2mm] inside cases is fine
         errors.append(f"{where}: use $...$ / $$...$$, not \\( \\[")
     for m in re.finditer(r"\$\$[\s\S]+?\$\$|\$[^$\n]+?\$", s):
-        if re.search(r"[֐-׿]", m.group(0)):
+        # Hebrew is fine inside \text{...} (KaTeX renders it); bare Hebrew in math is not.
+        if re.search(r"[֐-׿]", re.sub(r"\\text\{[^{}]*\}", "", m.group(0))):
             errors.append(f"{where}: Hebrew inside math: {m.group(0)[:40]}")
             break
     if re.search(r"[\x00-\x08\x0b\x0c\x0e-\x1f]", s):
