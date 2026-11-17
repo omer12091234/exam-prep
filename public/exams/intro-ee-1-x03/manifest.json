@@ -1,0 +1,301 @@
+[
+ {
+  "file": "Q1_s1.webp",
+  "question": 1,
+  "page": 3,
+  "bbox": [
+   0.1683,
+   0.3822,
+   0.9196,
+   0.4007
+  ],
+  "skew_deg": 0.0,
+  "role": "SUB",
+  "sub": "א",
+  "order": 1,
+  "needs_review": true
+ },
+ {
+  "file": "Q1_s2.webp",
+  "question": 1,
+  "page": 3,
+  "bbox": [
+   0.1683,
+   0.403,
+   0.9196,
+   0.4209
+  ],
+  "skew_deg": 0.0,
+  "role": "SUB",
+  "sub": "ב",
+  "order": 2,
+  "needs_review": true
+ },
+ {
+  "file": "Q1_s3.webp",
+  "question": 1,
+  "page": 3,
+  "bbox": [
+   0.1683,
+   0.4198,
+   0.9196,
+   0.4363
+  ],
+  "skew_deg": 0.0,
+  "role": "SUB",
+  "sub": "ג",
+  "order": 3,
+  "needs_review": true
+ },
+ {
+  "file": "Q1_s4.webp",
+  "question": 1,
+  "page": 3,
+  "bbox": [
+   0.1683,
+   0.4399,
+   0.9196,
+   0.4749
+  ],
+  "skew_deg": 0.0,
+  "role": "SUB",
+  "sub": "ד",
+  "order": 4,
+  "needs_review": true
+ },
+ {
+  "file": "Q1_s5.webp",
+  "question": 1,
+  "page": 3,
+  "bbox": [
+   0.1683,
+   0.4959,
+   0.9196,
+   0.6648
+  ],
+  "skew_deg": 0.0,
+  "role": "SUB",
+  "sub": "ה",
+  "order": 5,
+  "needs_review": true
+ },
+ {
+  "file": "Q1_stem1.webp",
+  "question": 1,
+  "page": 3,
+  "bbox": [
+   0.1683,
+   0.2515,
+   0.9196,
+   0.3733
+  ],
+  "skew_deg": 0.0,
+  "role": "STEM",
+  "order": 0,
+  "needs_review": false
+ },
+ {
+  "file": "Q2_s1.webp",
+  "question": 2,
+  "page": 5,
+  "bbox": [
+   0.1683,
+   0.1809,
+   0.9196,
+   0.1988
+  ],
+  "skew_deg": 0.0,
+  "role": "SUB",
+  "sub": "א",
+  "order": 1,
+  "needs_review": true
+ },
+ {
+  "file": "Q2_s2.webp",
+  "question": 2,
+  "page": 5,
+  "bbox": [
+   0.1683,
+   0.2025,
+   0.9196,
+   0.2212
+  ],
+  "skew_deg": 0.0,
+  "role": "SUB",
+  "sub": "ב",
+  "order": 2,
+  "needs_review": true
+ },
+ {
+  "file": "Q2_s3.webp",
+  "question": 2,
+  "page": 5,
+  "bbox": [
+   0.1683,
+   0.5273,
+   0.9196,
+   0.5623
+  ],
+  "skew_deg": 0.0,
+  "role": "SUB",
+  "sub": "ג",
+  "order": 3,
+  "needs_review": true
+ },
+ {
+  "file": "Q2_s4.webp",
+  "question": 2,
+  "page": 5,
+  "bbox": [
+   0.1683,
+   0.5749,
+   0.9196,
+   0.6304
+  ],
+  "skew_deg": 0.0,
+  "role": "SUB",
+  "sub": "ד",
+  "order": 4,
+  "needs_review": true
+ },
+ {
+  "file": "Q2_s5.webp",
+  "question": 2,
+  "page": 5,
+  "bbox": [
+   0.1683,
+   0.6329,
+   0.9196,
+   0.6698
+  ],
+  "skew_deg": 0.0,
+  "role": "SUB",
+  "sub": "ה",
+  "order": 5,
+  "needs_review": true
+ },
+ {
+  "file": "Q2_stem1.webp",
+  "question": 2,
+  "page": 5,
+  "bbox": [
+   0.1683,
+   0.0966,
+   0.9196,
+   0.1831
+  ],
+  "skew_deg": 0.0,
+  "role": "STEM",
+  "order": 0,
+  "needs_review": false
+ },
+ {
+  "file": "Q2_stem2.webp",
+  "question": 2,
+  "page": 5,
+  "bbox": [
+   0.1964,
+   0.2641,
+   0.7854,
+   0.4982
+  ],
+  "skew_deg": 0.0,
+  "role": "FIGURE",
+  "order": 1,
+  "needs_review": false
+ },
+ {
+  "file": "Q3_s1.webp",
+  "question": 3,
+  "page": 7,
+  "bbox": [
+   0.1659,
+   0.2027,
+   0.9184,
+   0.238
+  ],
+  "skew_deg": 0.3,
+  "role": "SUB",
+  "sub": "א",
+  "order": 1,
+  "needs_review": false
+ },
+ {
+  "file": "Q3_s2.webp",
+  "question": 3,
+  "page": 7,
+  "bbox": [
+   0.1659,
+   0.238,
+   0.9184,
+   0.2694
+  ],
+  "skew_deg": 0.3,
+  "role": "SUB",
+  "sub": "ב",
+  "order": 2,
+  "needs_review": false
+ },
+ {
+  "file": "Q3_s3.webp",
+  "question": 3,
+  "page": 7,
+  "bbox": [
+   0.1659,
+   0.2694,
+   0.9184,
+   0.3024
+  ],
+  "skew_deg": 0.3,
+  "role": "SUB",
+  "sub": "ג",
+  "order": 3,
+  "needs_review": false
+ },
+ {
+  "file": "Q3_s4.webp",
+  "question": 3,
+  "page": 7,
+  "bbox": [
+   0.1659,
+   0.3024,
+   0.9184,
+   0.3372
+  ],
+  "skew_deg": 0.3,
+  "role": "SUB",
+  "sub": "ד",
+  "order": 4,
+  "needs_review": false
+ },
+ {
+  "file": "Q3_stem1.webp",
+  "question": 3,
+  "page": 7,
+  "bbox": [
+   0.7098,
+   0.1624,
+   0.9177,
+   0.1949
+  ],
+  "skew_deg": 0.3,
+  "role": "STEM",
+  "order": 0,
+  "needs_review": false
+ },
+ {
+  "file": "Q3_stem2.webp",
+  "question": 3,
+  "page": 7,
+  "bbox": [
+   0.323,
+   0.4136,
+   0.6231,
+   0.5113
+  ],
+  "skew_deg": 0.3,
+  "role": "FIGURE",
+  "order": 1,
+  "needs_review": false
+ }
+]
