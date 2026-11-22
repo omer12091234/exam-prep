@@ -4,14 +4,13 @@ import { notFound } from "next/navigation";
 import { db } from "@/lib/db";
 import { requireUser } from "@/lib/auth";
 import { ExamTimer } from "@/components/ExamTimer";
-import { MathText } from "@/components/MathText";
 import { ProgressBar } from "@/components/ProgressBar";
 import { QuestionTimer } from "@/components/QuestionTimer";
 import { RepeatNote, repeatsInclude } from "@/components/RepeatNote";
 import { SubCard } from "@/components/SubCard";
+import { PartExtras, QuestionStem } from "@/components/ExamParts";
 import { examTitle } from "@/lib/courses";
 import { countStatuses, solved, subStatuses } from "@/lib/progress";
-import { markdownHtml } from "@/lib/richtext";
 import type { ProgressStatus } from "@/generated/prisma/client";
 
 export default function ExamPage({ params }: PageProps<"/exams/[id]">) {
@@ -198,18 +197,11 @@ async function Exam({ params }: { params: Promise<{ id: string }> }) {
                 שליחת השאלה לבדיקה
               </Link>
             </div>
-            {q.stemText && (
-              <p className="mb-3 leading-8">
-                <MathText text={q.stemText} />
-              </p>
-            )}
-            {q.images.map((img) => (
-              <Crop
-                key={img.id}
-                src={img.path}
-                alt={`שאלה ${q.number} – ${img.role === "FIGURE" ? "שרטוט" : "גוף השאלה"}`}
-              />
-            ))}
+            <QuestionStem
+              number={q.number}
+              stemText={q.stemText}
+              images={q.images}
+            />
 
             <ol className="mt-4 flex flex-col gap-4">
               {q.subQuestions.map((s) => (
@@ -219,57 +211,12 @@ async function Exam({ params }: { params: Promise<{ id: string }> }) {
                   status={statuses.get(s.id) ?? "NOT_SOLVED"}
                   topics={s.topics.map((t) => t.topic)}
                 >
-                  {s.images.length > 0 && (
-                    <details className="mt-2" open>
-                      <summary className="cursor-pointer text-sm text-neutral-500">
-                        תמונה מהמבחן
-                      </summary>
-                      {s.images.map((img) => (
-                        <Crop
-                          key={img.id}
-                          src={img.path}
-                          alt={`סעיף ${s.label} – תמונה מהמבחן`}
-                        />
-                      ))}
-                    </details>
-                  )}
-                  {s.solutions.map((sol) => (
-                    <details
-                      key={sol.id}
-                      className="mt-3 rounded-lg border border-neutral-200 p-3 dark:border-neutral-800"
-                    >
-                      <summary className="cursor-pointer text-sm font-medium text-blue-700 dark:text-blue-400">
-                        {sol.author === "AI"
-                          ? "פתרון מלא עם הסברים (נכתב על ידי Claude, לא פתרון רשמי)"
-                          : "פתרון"}
-                      </summary>
-                      <div
-                        className="rich mt-2"
-                        dangerouslySetInnerHTML={{
-                          __html: markdownHtml(sol.contentMd),
-                        }}
-                      />
-                    </details>
-                  ))}
-                  {s.comments.length > 0 && (
-                    <ul className="mt-3 flex flex-col gap-1 text-sm">
-                      {s.comments.map((c) => (
-                        <li
-                          key={c.id}
-                          className={
-                            c.kind === "PRAISE"
-                              ? "text-green-700 dark:text-green-400"
-                              : "text-amber-700 dark:text-amber-400"
-                          }
-                        >
-                          הערת בודק: {c.text}
-                          {c.pointsLost
-                            ? ` (−${c.pointsLost} מתוך ${c.maxPoints})`
-                            : ""}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
+                  <PartExtras
+                    label={s.label}
+                    images={s.images}
+                    solutions={s.solutions}
+                    comments={s.comments}
+                  />
                 </SubCard>
               ))}
             </ol>
@@ -277,18 +224,6 @@ async function Exam({ params }: { params: Promise<{ id: string }> }) {
         ))}
       </div>
     </>
-  );
-}
-
-function Crop({ src, alt }: { src: string; alt: string }) {
-  return (
-    // Crops have arbitrary sizes and come from storage; plain img keeps it simple.
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
-      src={src}
-      alt={alt}
-      className="my-2 w-full rounded-lg border border-neutral-200 bg-white dark:border-neutral-800"
-    />
   );
 }
 

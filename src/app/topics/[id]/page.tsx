@@ -8,6 +8,7 @@ import { ProgressBar } from "@/components/ProgressBar";
 import { QuestionTimer } from "@/components/QuestionTimer";
 import { RepeatNote, repeatsInclude } from "@/components/RepeatNote";
 import { Chip, SubCard } from "@/components/SubCard";
+import { PartExtras, QuestionStem } from "@/components/ExamParts";
 import { examTitle } from "@/lib/courses";
 import { DIFFICULTY, difficultyLabel } from "@/lib/format";
 import { countStatuses, subStatuses } from "@/lib/progress";
@@ -53,11 +54,16 @@ async function Topic({
               points: true,
               difficulty: true,
               order: true,
+              images: true,
+              solutions: true,
+              comments: true,
               question: {
                 select: {
                   id: true,
                   number: true,
                   label: true,
+                  stemText: true,
+                  images: { orderBy: { order: "asc" } },
                   repeats: repeatsInclude,
                   exam: {
                     select: {
@@ -241,13 +247,25 @@ async function Topic({
               />
             </div>
             <RepeatNote repeats={g.q.repeats} />
-            <ol className="flex flex-col gap-3">
+            <QuestionStem
+              number={g.q.number}
+              stemText={g.q.stemText}
+              images={g.q.images}
+            />
+            <ol className="mt-3 flex flex-col gap-3">
               {g.subs.map((s) => (
                 <SubCard
                   key={s.id}
                   sub={s}
                   status={statuses.get(s.id) ?? "NOT_SOLVED"}
-                />
+                >
+                  <PartExtras
+                    label={s.label}
+                    images={s.images}
+                    solutions={s.solutions}
+                    comments={s.comments}
+                  />
+                </SubCard>
               ))}
             </ol>
           </section>
