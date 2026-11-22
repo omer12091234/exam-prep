@@ -1,0 +1,597 @@
+{
+ "exam": {
+  "match_title": "דף 1 – דגימה, DTFT, bandpass",
+  "sheet_number": 1,
+  "drive_file_id": "1NSrMIGM9AL6rrhjKwzAmM_WIWtzYOYZe",
+  "source_title": "דף 1 - דגימה DTFT, bandpass.pdf",
+  "notes": "הדף באנגלית (Home Work #1 של Introduction to Signal Processing; שאלות 7.3, 7.4, 7.5, 7.6, 7.11, 7.12, 7.23, 7.26, 7.27 מתוך Oppenheim, Willsky). הניסוח מתומלל כפי שהודפס. עמודים 1-5 שאלון, עמודים 6-10 פתרון (Solutions). הפתרונות כאן נכתבו מחדש ונבדקו מול הפתרון שבקובץ. במספר מקומות הפתרון בקובץ מקוצר או מכיל שגיאות הקלדה (ב-7.23 סכום ההלמים של $P_1$, ב-7.27 כיוון המשולש המשורטט) ותוקנו כאן."
+ },
+ "questions": [
+  {
+   "number": 3,
+   "topics": [
+    "t2"
+   ],
+   "stem": "7.3. The frequency which, under the sampling theorem, must be exceeded by the sampling frequency is called the Nyquist rate. Determine the Nyquist rate corresponding to each of the following signals:",
+   "figures": [],
+   "regions": [
+    {
+     "page": 1,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      135,
+      200,
+      805,
+      267
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "a",
+     "text": "$x(t) = 1 + \\cos(2{,}000\\pi t) + \\sin(4{,}000\\pi t)$",
+     "box": [
+      135,
+      266,
+      805,
+      290
+     ],
+     "lines": 1,
+     "solution": "**מוסכמות:** התדר $\\omega$ ברד/שנייה. אם $X(j\\omega)=0$ עבור $|\\omega|>\\omega_{\\max}$ אז קצב נייקוויסט הוא $\\omega_N=2\\omega_{\\max}$ (וקצב הדגימה $\\omega_s=2\\pi/T$ חייב לעבור אותו).\n\n**שלב 1 – תדרי האות.** הקבוע $1$ הוא תדר $0$; $\\cos(2000\\pi t)$ הוא בתדר $2000\\pi$; $\\sin(4000\\pi t)$ הוא בתדר $4000\\pi$. הספקטרום הוא אוסף של פונקציות דלתא בתדרים $0,\\ \\pm2000\\pi,\\ \\pm4000\\pi$, ולכן $\\omega_{\\max}=4000\\pi$.\n\n**שלב 2 – קצב נייקוויסט.**\n\n$$\\omega_N=2\\cdot 4000\\pi=8000\\pi\\ \\text{rad/s}$$\n\n(שקול ל-$f_s>4000$ הרץ). משפט הדגימה דורש קצב דגימה **גדול ממש** מ-$8000\\pi$.\n\n**בדיקה:** הרכיב המהיר ביותר הוא $\\sin(4000\\pi t)$, בעל מחזור $0.5$ מילי-שנייה; דגימה בקצב מעל שתי דגימות למחזור מתאימה ל-$f_s>4$ קילוהרץ, כלומר $\\omega_s>8000\\pi$.\n"
+    },
+    {
+     "label": "b",
+     "text": "$x(t) = \\dfrac{\\sin(4{,}000\\pi t)}{\\pi t}$",
+     "box": [
+      135,
+      293,
+      805,
+      326
+     ],
+     "lines": 1,
+     "solution": "**שלב 1 – התמרה.** מזוג ההתמרות הידוע\n\n$$\\frac{\\sin(Wt)}{\\pi t}\\ \\longleftrightarrow\\ X(j\\omega)=\\begin{cases}1,&|\\omega|<W\\\\0,&|\\omega|>W\\end{cases}$$\n\nעם $W=4000\\pi$ מקבלים פולס מלבני בתדר, עם $X(j\\omega)=0$ עבור $|\\omega|>4000\\pi$. לכן $\\omega_{\\max}=4000\\pi$.\n\n**שלב 2 – קצב נייקוויסט.**\n\n$$\\omega_N=2\\cdot4000\\pi=8000\\pi\\ \\text{rad/s}$$\n\n**בדיקה:** האות הוא סינוק אידיאלי של מסנן מעבר-נמוך בעל תדר חיתוך $4000\\pi$, ולכן קצב הדגימה המינימלי שווה לפעמיים התדר הזה.\n"
+    },
+    {
+     "label": "c",
+     "text": "$x(t) = \\left(\\dfrac{\\sin(4{,}000\\pi t)}{\\pi t}\\right)^2$",
+     "box": [
+      135,
+      328,
+      805,
+      372
+     ],
+     "lines": 1,
+     "solution": "**שלב 1 – התמרה.** כפל בזמן הוא קונבולוציה בתדר. אם $X_1(j\\omega)$ היא ההתמרה של $\\frac{\\sin(4000\\pi t)}{\\pi t}$ (מלבן ברוחב $|\\omega|<4000\\pi$ וגובה 1, כמו בסעיף ב), אז\n\n$$X(j\\omega)=\\frac{1}{2\\pi}\\,\\big[X_1(j\\omega)*X_1(j\\omega)\\big]$$\n\n**שלב 2 – תחום התדר.** קונבולוציה של שני מלבנים התומכים ב-$[-4000\\pi,\\,4000\\pi]$ היא משולש התומך ב-$[-8000\\pi,\\,8000\\pi]$ (התומכים מתחברים). לכן $X(j\\omega)=0$ עבור $|\\omega|>8000\\pi$ ו-$\\omega_{\\max}=8000\\pi$.\n\n**שלב 3 – קצב נייקוויסט.**\n\n$$\\omega_N=2\\cdot 8000\\pi=16000\\pi\\ \\text{rad/s}$$\n\n**בדיקה:** גובה המשולש ב-$\\omega=0$ הוא $\\frac{1}{2\\pi}\\cdot 8000\\pi=4000$. שטח המשולש חלקי $2\\pi$ הוא $\\frac{1}{2\\pi}\\cdot\\frac12\\cdot16000\\pi\\cdot4000=1.6\\times10^{7}$, והוא אכן שווה ל-$x(0)^2=(4000)^2$ כי $x(0)=W/\\pi=4000$.\n"
+    }
+   ],
+   "page": 1,
+   "view": [
+    935,
+    1210
+   ]
+  },
+  {
+   "number": 4,
+   "topics": [
+    "t2"
+   ],
+   "stem": "7.4. Let $x(t)$ be a signal with Nyquist rate $\\omega_0$. Determine the Nyquist rate for each of the following signals:",
+   "figures": [],
+   "regions": [
+    {
+     "page": 1,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      135,
+      376,
+      805,
+      421
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "a",
+     "text": "$x(t) + x(t-1)$",
+     "box": [
+      135,
+      421,
+      805,
+      442
+     ],
+     "lines": 1,
+     "solution": "**נתון:** קצב נייקוויסט של $x$ הוא $\\omega_0$, כלומר $X(j\\omega)=0$ עבור $|\\omega|>\\omega_0/2$.\n\n**שלב 1.** הזזה בזמן מכפילה את ההתמרה במעריכי מרוכב:\n\n$$y(t)=x(t)+x(t-1)\\ \\longleftrightarrow\\ Y(j\\omega)=\\big(1+e^{-j\\omega}\\big)X(j\\omega)$$\n\n**שלב 2.** הכפלה בפונקציה חסומה לא מרחיבה את התומך: $Y(j\\omega)=0$ עבור $|\\omega|>\\omega_0/2$, ובדרך כלל (כש-$1+e^{-j\\omega}\\neq0$ בקצה) התומך אינו קטן יותר. לכן אפשר להבטיח רק $\\omega_{\\max}=\\omega_0/2$.\n\n**תשובה:** קצב נייקוויסט של $y$ הוא $\\omega_0$.\n"
+    },
+    {
+     "label": "b",
+     "text": "$\\dfrac{dx(t)}{dt}$",
+     "box": [
+      135,
+      443,
+      805,
+      472
+     ],
+     "lines": 1,
+     "solution": "**שלב 1.** גזירה בזמן היא כפל ב-$j\\omega$ בתדר:\n\n$$y(t)=\\frac{dx(t)}{dt}\\ \\longleftrightarrow\\ Y(j\\omega)=j\\omega\\,X(j\\omega)$$\n\n**שלב 2.** הכפל ב-$j\\omega$ אינו משנה את התומך (הוא רק מאפס את $\\omega=0$ ומעצים תדרים גבוהים). לכן $Y(j\\omega)=0$ עבור $|\\omega|>\\omega_0/2$.\n\n**תשובה:** קצב נייקוויסט של $y$ הוא $\\omega_0$.\n"
+    },
+    {
+     "label": "c",
+     "text": "$x^2(t)$",
+     "box": [
+      135,
+      473,
+      805,
+      497
+     ],
+     "lines": 1,
+     "solution": "**שלב 1.** כפל בזמן הוא קונבולוציה בתדר:\n\n$$y(t)=x^2(t)\\ \\longleftrightarrow\\ Y(j\\omega)=\\frac{1}{2\\pi}\\,\\big[X(j\\omega)*X(j\\omega)\\big]$$\n\n**שלב 2.** קונבולוציה של שתי פונקציות התומכות ב-$[-\\omega_0/2,\\ \\omega_0/2]$ תומכת ב-$[-\\omega_0,\\ \\omega_0]$. לכן $Y(j\\omega)=0$ עבור $|\\omega|>\\omega_0$ ו-$\\omega_{\\max}=\\omega_0$.\n\n**תשובה:** קצב נייקוויסט של $y$ הוא $2\\omega_0$.\n"
+    },
+    {
+     "label": "d",
+     "text": "$x(t)\\cos\\omega_0 t$",
+     "box": [
+      135,
+      498,
+      805,
+      520
+     ],
+     "lines": 1,
+     "solution": "**שלב 1.** כפל בקוסינוס מזיז את הספקטרום לשני הכיוונים:\n\n$$y(t)=x(t)\\cos(\\omega_0t)\\ \\longleftrightarrow\\ Y(j\\omega)=\\tfrac12X\\big(j(\\omega-\\omega_0)\\big)+\\tfrac12X\\big(j(\\omega+\\omega_0)\\big)$$\n\n**שלב 2.** העותק המוזז ימינה תומך ב-$[\\omega_0-\\omega_0/2,\\ \\omega_0+\\omega_0/2]=[\\omega_0/2,\\ 3\\omega_0/2]$, והעותק המוזז שמאלה סימטרי לו. לכן $Y(j\\omega)=0$ עבור $|\\omega|>\\tfrac32\\omega_0$, כלומר $\\omega_{\\max}=\\tfrac32\\omega_0$.\n\n**תשובה:** קצב נייקוויסט של $y$ הוא $2\\cdot\\tfrac32\\omega_0=3\\omega_0$.\n"
+    }
+   ],
+   "page": 1,
+   "view": [
+    935,
+    1210
+   ]
+  },
+  {
+   "number": 5,
+   "topics": [
+    "t2",
+    "t3"
+   ],
+   "stem": "7.5. Let $x(t)$ be a signal with Nyquist rate $\\omega_0$. Also, let $$y(t)=x(t)\\,p(t-1),$$ where $$p(t)=\\sum_{n=-\\infty}^{\\infty}\\delta(t-nT),\\quad\\text{and}\\quad T<\\frac{2\\pi}{\\omega_0}.$$",
+   "figures": [],
+   "regions": [
+    {
+     "page": 1,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      135,
+      523,
+      805,
+      700
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "",
+     "text": "Specify the constraints on the magnitude and phase of the frequency response of a filter that gives $x(t)$ as its output when $y(t)$ is the input.",
+     "box": [
+      135,
+      708,
+      805,
+      753
+     ],
+     "lines": 2,
+     "solution": "**מוסכמות:** $\\omega_s=2\\pi/T$ הוא קצב הדגימה ברד/שנייה. מהנתון $X(j\\omega)=0$ עבור $|\\omega|>\\omega_0/2$, ו-$T<2\\pi/\\omega_0$ פירושו $\\omega_s>\\omega_0$ (דגימה מעל קצב נייקוויסט).\n\n**שלב 1 – ספקטרום רכבת הדלתאות המוזזת.** ל-$p(t)$ יש התמרה $P(j\\omega)=\\frac{2\\pi}{T}\\sum_k\\delta(\\omega-k\\omega_s)$. הזזה של 1 שנייה מכפילה ב-$e^{-j\\omega}$, ובנקודות $\\omega=k\\omega_s$ נקבל גורם קבוע:\n\n$$\\mathcal F\\{p(t-1)\\}=\\frac{2\\pi}{T}\\sum_{k=-\\infty}^{\\infty}e^{-jk\\omega_s}\\,\\delta(\\omega-k\\omega_s)$$\n\n**שלב 2 – ספקטרום $y$.** כפל בזמן הוא קונבולוציה בתדר, ולכן\n\n$$Y(j\\omega)=\\frac{1}{2\\pi}X(j\\omega)*\\mathcal F\\{p(t-1)\\}=\\frac1T\\sum_{k=-\\infty}^{\\infty}X\\big(j(\\omega-k\\omega_s)\\big)\\,e^{-jk\\omega_s}$$\n\nכלומר עותקים של $X$ במרכזים $k\\omega_s$, כל אחד מוכפל בקבוע מרוכב $e^{-jk\\omega_s}$. העותק $k=0$ הוא $\\frac1TX(j\\omega)$ **בלי** גורם פאזה (הזזת רגע הדגימה ב-1 שנייה משפיעה רק על העותקים האחרים).\n\n**שלב 3 – בידוד העותק המרכזי.** כל עותק תופס רוחב $\\omega_0$ סביב מרכזו. העותק $k=\\pm1$ מתחיל ב-$\\omega_s-\\omega_0/2>\\omega_0/2$, ולכן אין חפיפה בין העותקים. נדרש מסנן $H(j\\omega)$ ש:\n\n- בתחום $|\\omega|\\le\\omega_0/2$ (התחום שבו $X$ שונה מאפס): $|H(j\\omega)|=T$ ו-$\\angle H(j\\omega)=0$ (מודולו $2\\pi$). הגודל $T$ מבטל את הגורם $\\frac1T$, והפאזה $0$ משמרת את $X$ ללא עיוות (פאזה לינארית הייתה מזיזה את $x$ בזמן, ופאזה אחרת הייתה מעוותת).\n- בתחום $|\\omega|\\ge\\omega_s-\\omega_0/2$ (שם נמצאים העותקים האחרים): $H(j\\omega)=0$.\n- בתחום הביניים $\\omega_0/2<|\\omega|<\\omega_s-\\omega_0/2$ הערך חופשי, כי שם $Y(j\\omega)=0$.\n\nבמילים אחרות, מסנן מעביר-נמוך אידיאלי:\n\n$$H(j\\omega)=\\begin{cases}T,&|\\omega|\\le\\omega_c\\\\0,&\\text{otherwise}\\end{cases}\\qquad \\frac{\\omega_0}{2}<\\omega_c<\\frac{2\\pi}{T}-\\frac{\\omega_0}{2}$$\n\n**בדיקה:** $\\omega_c$ אכן קיים כי $\\omega_s>\\omega_0$ גורר $\\omega_0/2<\\omega_s-\\omega_0/2$. בזמן: $y(t)=\\sum_n x(nT+1)\\delta(t-nT-1)$ הם דגימות באינסטנטים $nT+1$, ואינטרפולציה בסינק בלי השהיה משחזרת את $x(t)$.\n"
+    }
+   ],
+   "page": 1,
+   "view": [
+    935,
+    1210
+   ]
+  },
+  {
+   "number": 6,
+   "topics": [
+    "t2"
+   ],
+   "stem": "7.6. In the system shown in Figure P7.6, two functions of time, $x_1(t)$ and $x_2(t)$, are multiplied together, and the product $w(t)$ is sampled by a periodic impulse train. $x_1(t)$ is band limited to $\\omega_1$, and $x_2(t)$ is band limited to $\\omega_2$; that is, $$X_1(j\\omega)=0,\\ |\\omega|\\ge\\omega_1,\\qquad X_2(j\\omega)=0,\\ |\\omega|\\ge\\omega_2.$$",
+   "figures": [
+    "דיאגרמת בלוקים: $x_1(t)$ ו-$x_2(t)$ נכפלים ליצירת $w(t)$, שנכפל ברכבת הלמים $p(t)=\\sum\\delta(t-nT)$ ונותן $w_p(t)$; מתחת, שרטוט ספקטרום $X_1(j\\omega)$ (פעמון סימטרי בתחום $[-\\omega_1,\\omega_1]$) ו-$X_2(j\\omega)$ (פעמון סימטרי עם מדרגות בקצוות, בתחום $[-\\omega_2,\\omega_2]$)"
+   ],
+   "page": 101,
+   "view": [
+    935,
+    2420
+   ],
+   "regions": [
+    {
+     "page": 101,
+     "view": [
+      935,
+      2420
+     ],
+     "box": [
+      135,
+      773,
+      805,
+      930
+     ]
+    },
+    {
+     "page": 101,
+     "view": [
+      935,
+      2420
+     ],
+     "box": [
+      175,
+      1325,
+      840,
+      1650
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "",
+     "text": "Determine the maximum sampling interval $T$ such that $w(t)$ is recoverable from $w_p(t)$ through the use of an ideal lowpass filter.",
+     "box": [
+      135,
+      945,
+      805,
+      996
+     ],
+     "lines": 2,
+     "solution": "**מוסכמות:** $\\omega$ ברד/שנייה; $\\omega_s=2\\pi/T$; האותות $x_1,x_2$ מוגבלי-סרט, $X_i(j\\omega)=0$ עבור $|\\omega|\\ge\\omega_i$.\n\n**שלב 1 – ספקטרום המכפלה.**\n\n$$w(t)=x_1(t)x_2(t)\\ \\longleftrightarrow\\ W(j\\omega)=\\frac{1}{2\\pi}\\,\\big[X_1(j\\omega)*X_2(j\\omega)\\big]$$\n\nקונבולוציה של פונקציה התומכת ב-$[-\\omega_1,\\omega_1]$ עם פונקציה התומכת ב-$[-\\omega_2,\\omega_2]$ תומכת ב-$[-(\\omega_1+\\omega_2),\\ \\omega_1+\\omega_2]$. לכן $W(j\\omega)=0$ עבור $|\\omega|\\ge\\omega_1+\\omega_2$, כלומר $\\omega_{\\max}=\\omega_1+\\omega_2$.\n\n**שלב 2 – משפט הדגימה.** כדי לשחזר $w(t)$ במסנן מעביר-נמוך אידיאלי נדרש $\\omega_s\\ge2\\omega_{\\max}=2(\\omega_1+\\omega_2)$ (עם אי-שוויון חזק בדגימה אידיאלית; הגבול הוא הסופרמום של $T$).\n\n**שלב 3 – תחום ה-$T$.**\n\n$$\\frac{2\\pi}{T}\\ge2(\\omega_1+\\omega_2)\\ \\Rightarrow\\ T_{\\max}=\\frac{\\pi}{\\omega_1+\\omega_2}$$\n\n**בדיקה:** אם $x_2\\equiv1$ (כלומר $\\omega_2\\to0$), מקבלים $T=\\pi/\\omega_1$, שהוא תנאי נייקוויסט של $x_1$ לבדו. ממדים: $\\omega$ ב-1/שנייה, $T$ בשניות.\n"
+    }
+   ]
+  },
+  {
+   "number": 11,
+   "topics": [
+    "t5"
+   ],
+   "stem": "7.11. Let $x_c(t)$ be a continuous-time signal whose Fourier transform has the property that $X_c(j\\omega)=0$ for $|\\omega|\\ge2{,}000\\pi$. A discrete-time signal $$x_d[n]=x_c\\big(n(0.5\\times10^{-3})\\big)$$ is obtained. For each of the following constraints on the Fourier transform $X_d(e^{j\\omega})$ of $x_d[n]$, determine the corresponding constraint on $X_c(j\\omega)$:",
+   "figures": [],
+   "regions": [
+    {
+     "page": 2,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      135,
+      458,
+      805,
+      602
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "a",
+     "text": "$X_d(e^{j\\omega})$ is real.",
+     "box": [
+      135,
+      603,
+      805,
+      625
+     ],
+     "lines": 1,
+     "solution": "**מוסכמות:** $T=0.5\\times10^{-3}$ שנ'. בזמן בדיד $\\Omega=\\omega T$ ברד/דגימה (בטקסט השאלה גם הוא מסומן $\\omega$). הקשר בין ההתמרות:\n\n$$X_d(e^{j\\Omega})=\\frac1T\\sum_{k=-\\infty}^{\\infty}X_c\\!\\left(j\\,\\frac{\\Omega-2\\pi k}{T}\\right)$$\n\n**שלב 1 – אין aliasing.** $\\omega_s=2\\pi/T=4000\\pi$ ו-$\\pi/T=2000\\pi$. עבור $|\\Omega|\\le\\pi$ והעותקים $k\\neq0$, הארגומנט $\\left|\\frac{\\Omega-2\\pi k}{T}\\right|\\ge\\frac{\\pi}{T}=2000\\pi$, שם $X_c=0$. לכן בתחום $|\\Omega|\\le\\pi$:\n\n$$X_d(e^{j\\Omega})=\\frac1T\\,X_c\\!\\left(j\\frac{\\Omega}{T}\\right)$$\n\n**שלב 2 – ממשיות.** $X_d$ ממשית ב-$|\\Omega|\\le\\pi$ אם ורק אם $X_c(j\\omega)$ ממשית ב-$|\\omega|<2000\\pi$. מחוץ לתחום זה $X_c=0$, שהוא ממשי גם כן.\n\n**תשובה:** $X_c(j\\omega)$ ממשית לכל $\\omega$.\n"
+    },
+    {
+     "label": "b",
+     "text": "The maximum value of $X_d(e^{j\\omega})$ over all $\\omega$ is 1.",
+     "box": [
+      135,
+      625,
+      805,
+      646
+     ],
+     "lines": 1,
+     "solution": "**שלב 1.** מסעיף א, $X_d(e^{j\\Omega})=\\frac1TX_c(j\\Omega/T)$ עבור $|\\Omega|\\le\\pi$, וכל ערכי $X_d$ מתקבלים בתחום זה (ההתמרה מחזורית).\n\n**שלב 2.** המקסימום של $X_d$ הוא $\\frac1T$ כפול המקסימום של $X_c$. נציב:\n\n$$\\frac1T\\max_\\omega X_c(j\\omega)=1\\ \\Rightarrow\\ \\max_\\omega X_c(j\\omega)=T=0.5\\times10^{-3}$$\n\n**תשובה:** הערך המרבי של $X_c(j\\omega)$ הוא $T=0.5\\times10^{-3}$.\n\n(במובן של מקסימום של ערך ממשי, או של הגודל $|X_c|$ אם ההתמרה מרוכבת.)\n"
+    },
+    {
+     "label": "c",
+     "text": "$X_d(e^{j\\omega})=0$ for $\\dfrac{3\\pi}{4}\\le|\\omega|\\le\\pi$.",
+     "box": [
+      135,
+      646,
+      805,
+      672
+     ],
+     "lines": 1,
+     "solution": "**שלב 1.** התחום $\\frac{3\\pi}{4}\\le|\\Omega|\\le\\pi$ מתאים לתדר רציף $\\omega=\\Omega/T$:\n\n$$\\frac{3\\pi}{4T}\\le|\\omega|\\le\\frac{\\pi}{T}\\ \\Longleftrightarrow\\ 1500\\pi\\le|\\omega|\\le2000\\pi$$\n\n**שלב 2.** מהקשר $X_d=\\frac1TX_c(j\\Omega/T)$ נקבל $X_c(j\\omega)=0$ עבור $1500\\pi\\le|\\omega|\\le2000\\pi$.\n\n**שלב 3.** כבר נתון $X_c(j\\omega)=0$ עבור $|\\omega|\\ge2000\\pi$. מחברים את שני התחומים.\n\n**תשובה:** $X_c(j\\omega)=0$ עבור $|\\omega|\\ge1500\\pi$.\n"
+    },
+    {
+     "label": "d",
+     "text": "$X_d(e^{j\\omega})=X_d(e^{j(\\omega-\\pi)})$.",
+     "box": [
+      135,
+      672,
+      805,
+      693
+     ],
+     "lines": 1,
+     "solution": "**שלב 1.** הזזה ב-$\\pi$ בתדר הבדיד מתאימה להזזה ב-$\\pi/T=2000\\pi$ בתדר הרציף. בתחום $0<\\Omega<\\pi$, כאשר $\\omega=\\Omega/T\\in(0,2000\\pi)$:\n\n$$X_d(e^{j\\Omega})=\\frac1TX_c(j\\omega),\\qquad X_d(e^{j(\\Omega-\\pi)})=\\frac1TX_c\\big(j(\\omega-2000\\pi)\\big)$$\n\n(הארגומנט $\\Omega-\\pi\\in(-\\pi,0)$ נמצא בתחום ללא aliasing).\n\n**שלב 2.** השוויון הנתון נותן\n\n$$X_c(j\\omega)=X_c\\big(j(\\omega-2000\\pi)\\big),\\qquad 0<\\omega<2000\\pi$$\n\nובאופן שקול (מחילוף משתנים) $X_c(j\\omega)=X_c(j(\\omega+2000\\pi))$ עבור $-2000\\pi<\\omega<0$.\n\n**תשובה:** $X_c(j\\omega)=X_c\\big(j(\\omega-2000\\pi)\\big)$ בתחום $|\\omega|<2000\\pi$ שבו $X_c$ אינה מתאפסת בהכרח.\n\n**הערה לבדיקה:** $X_d(e^{j(\\Omega-\\pi)})$ היא התמרת $(-1)^nx_d[n]$, ולכן התנאי שקול ל-$x_d[n]=(-1)^nx_d[n]$, כלומר $x_d[n]=0$ לכל $n$ אי-זוגי, כלומר $x_c(nT)=0$ עבור $n$ אי-זוגי.\n"
+    }
+   ],
+   "page": 2,
+   "view": [
+    935,
+    1210
+   ]
+  },
+  {
+   "number": 12,
+   "topics": [
+    "t5",
+    "t3"
+   ],
+   "stem": "7.12. A discrete-time signal $x_d[n]$ has a Fourier transform $X_d(e^{j\\omega})$ with the property that $X_d(e^{j\\omega})=0$ for $3\\pi/4\\le|\\omega|\\le\\pi$. The signal is converted into a continuous-time signal $$x_c(t)=T\\sum_{n=-\\infty}^{\\infty}x_d[n]\\,\\frac{\\sin\\frac{\\pi}{T}(t-nT)}{\\pi(t-nT)},$$",
+   "figures": [],
+   "regions": [
+    {
+     "page": 2,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      135,
+      698,
+      805,
+      845
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "",
+     "text": "where $T=10^{-3}$. Determine the values of $\\omega$ for which the Fourier transform $X_c(j\\omega)$ of $x_c(t)$ is guaranteed to be zero.",
+     "box": [
+      135,
+      860,
+      805,
+      912
+     ],
+     "lines": 2,
+     "solution": "**מוסכמות:** $\\Omega$ התדר הבדיד (רד/דגימה), $\\omega$ התדר הרציף (רד/שנייה), והקשר $\\Omega=\\omega T$.\n\n**שלב 1 – זיהוי הממיר.** הגרעין $T\\frac{\\sin(\\pi t/T)}{\\pi t}$ הוא תגובת הלם של מסנן מעביר-נמוך אידיאלי בעל גבול $\\pi/T$ והגבר $T$ (כפי שלמדנו: $\\frac{\\sin(Wt)}{\\pi t}\\leftrightarrow\\text{rect}$ עם $W=\\pi/T$). לכן\n\n$$X_c(j\\omega)=\\begin{cases}T\\,X_d\\big(e^{j\\omega T}\\big),&|\\omega|<\\pi/T\\\\0,&|\\omega|>\\pi/T\\end{cases}$$\n\n**שלב 2 – החלפת משתנים.** $X_d(e^{j\\Omega})=0$ עבור $\\frac{3\\pi}{4}\\le|\\Omega|\\le\\pi$. עבור $\\Omega=\\omega T$:\n\n$$\\frac{3\\pi}{4}\\le|\\omega|T\\le\\pi\\ \\Rightarrow\\ 750\\pi\\le|\\omega|\\le1000\\pi\\quad(T=10^{-3})$$\n\nבאותו תחום $X_c(j\\omega)=T\\,X_d(e^{j\\omega T})=0$.\n\n**שלב 3 – מחוץ לתחום המסנן.** עבור $|\\omega|>\\pi/T=1000\\pi$ ההתמרה $X_c$ מתאפסת מעצם המסנן האידיאלי.\n\n**תשובה:** $X_c(j\\omega)=0$ מובטח עבור $|\\omega|\\ge750\\pi$ (כלומר $750\\pi\\le|\\omega|\\le1000\\pi$ ומעבר לכך).\n\n**בדיקה:** $\\frac{3}{4}\\cdot\\frac{\\pi}{T}=\\frac34\\cdot1000\\pi=750\\pi$.\n"
+    }
+   ],
+   "page": 2,
+   "view": [
+    935,
+    1210
+   ]
+  },
+  {
+   "number": 23,
+   "topics": [
+    "t2",
+    "t3"
+   ],
+   "stem": "7.23. Shown in Figure P7.23 is a system in which the sampling signal is an impulse train with alternating sign. The Fourier transform of the input signal is as indicated in the figure.",
+   "figures": [
+    "דיאגרמה: $x(t)$ נכפל ב-$p(t)$ ונותן $x_p(t)$, שנכנס למסנן $H(j\\omega)$ ומוציא $y(t)$; $p(t)$ היא רכבת הלמים בגובה $+1$ ב-$t=0,2\\Delta,\\ldots$ ו-$-1$ ב-$t=\\pm\\Delta,\\ldots$; $X(j\\omega)$ פעמון סימטרי בתחום $[-\\omega_M,\\omega_M]$; $H(j\\omega)$ מעביר-פס בגובה 1 בתחומים $\\pi/\\Delta\\le|\\omega|\\le3\\pi/\\Delta$"
+   ],
+   "regions": [
+    {
+     "page": 3,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      135,
+      123,
+      805,
+      188
+     ]
+    },
+    {
+     "page": 3,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      190,
+      325,
+      650,
+      835
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "a",
+     "text": "For $\\Delta<\\pi/(2\\omega_M)$, sketch the Fourier transform of $x_p(t)$ and $y(t)$.",
+     "box": [
+      135,
+      188,
+      805,
+      210
+     ],
+     "lines": 1,
+     "solution": "**מוסכמות:** $\\omega$ ברד/שנייה; $p(t)=\\sum_k(-1)^k\\delta(t-k\\Delta)$ (גובה $+1$ ב-$t=0$, $-1$ ב-$t=\\pm\\Delta$, $+1$ ב-$t=\\pm2\\Delta$, וכן הלאה); מחזור $2\\Delta$; נניח $X(0)=1$ כמו בשרטוט.\n\n**שלב 1 – ספקטרום $p(t)$.** נכתוב $p(t)=p_1(t)-p_1(t-\\Delta)$ כאשר $p_1(t)=\\sum_k\\delta(t-2k\\Delta)$ היא רכבת הלמים במחזור $2\\Delta$, שהתמרתה\n\n$$P_1(j\\omega)=\\frac{2\\pi}{2\\Delta}\\sum_k\\delta\\!\\left(\\omega-k\\frac{\\pi}{\\Delta}\\right)=\\frac{\\pi}{\\Delta}\\sum_k\\delta\\!\\left(\\omega-k\\frac{\\pi}{\\Delta}\\right)$$\n\nלכן $P(j\\omega)=(1-e^{-j\\omega\\Delta})P_1(j\\omega)$. בנקודות $\\omega=k\\pi/\\Delta$ מתקבל $1-e^{-jk\\pi}=1-(-1)^k$, שהוא $2$ עבור $k$ אי-זוגי ו-$0$ עבור $k$ זוגי:\n\n$$P(j\\omega)=\\frac{2\\pi}{\\Delta}\\sum_{k\\ \\text{odd}}\\delta\\!\\left(\\omega-k\\frac{\\pi}{\\Delta}\\right)$$\n\n**שלב 2 – ספקטרום $x_p$.**\n\n$$X_p(j\\omega)=\\frac1{2\\pi}X(j\\omega)*P(j\\omega)=\\frac1\\Delta\\sum_{k\\ \\text{odd}}X\\!\\left(j\\Big(\\omega-k\\frac\\pi\\Delta\\Big)\\right)$$\n\n**שרטוט $X_p$:** עותקים של $X$, בגובה $\\frac1\\Delta$ (עבור $X(0)=1$) וברוחב $2\\omega_M$, ממורכזים ב-$\\pm\\frac\\pi\\Delta,\\ \\pm\\frac{3\\pi}\\Delta,\\ \\pm\\frac{5\\pi}\\Delta,\\dots$ (כלומר במכפלות אי-זוגיות של $\\pi/\\Delta$). אין עותק במרכז ($\\omega=0$). מהנתון $\\Delta<\\frac{\\pi}{2\\omega_M}$ נובע $\\frac\\pi\\Delta>2\\omega_M$, ולכן העותקים אינם חופפים ואינם נוגעים בראשית: העותק סביב $\\pi/\\Delta$ תופס $[\\frac\\pi\\Delta-\\omega_M,\\ \\frac\\pi\\Delta+\\omega_M]$ והמרווח בין עותקים סמוכים הוא $\\frac{2\\pi}{\\Delta}>4\\omega_M$.\n\n**שלב 3 – ספקטרום $y$.** $H$ עובר רק $\\frac\\pi\\Delta\\le|\\omega|\\le\\frac{3\\pi}\\Delta$ בהגבר 1. מכל עותק נשארת רק החצי שבתוך התחום:\n\n- סביב $+\\frac\\pi\\Delta$: החצי **הימני** בלבד, $[\\frac\\pi\\Delta,\\ \\frac\\pi\\Delta+\\omega_M]$.\n- סביב $+\\frac{3\\pi}\\Delta$: החצי **השמאלי** בלבד, $[\\frac{3\\pi}\\Delta-\\omega_M,\\ \\frac{3\\pi}\\Delta]$.\n- באופן סימטרי בתדרים שליליים (החצי השמאלי סביב $-\\frac\\pi\\Delta$ והחצי הימני סביב $-\\frac{3\\pi}\\Delta$).\n- העותקים סביב $\\pm\\frac{5\\pi}\\Delta$ ומעלה נחתכים לחלוטין.\n\nהגובה נשאר $\\frac1\\Delta$.\n\n**בדיקה:** כל חצאי העותקים נמצאים בתוך $\\frac\\pi\\Delta\\le|\\omega|\\le\\frac{3\\pi}{\\Delta}$, ואין חפיפה ביניהם.\n"
+    },
+    {
+     "label": "b",
+     "text": "For $\\Delta<\\pi/(2\\omega_M)$, determine a system that will recover $x(t)$ from $x_p(t)$.",
+     "box": [
+      135,
+      210,
+      805,
+      231
+     ],
+     "lines": 1,
+     "solution": "**רעיון:** נזיז את העותקים הממורכזים ב-$\\pm\\pi/\\Delta$ לראשית בעזרת כפל בקוסינוס, ואז נבודד אותם במסנן מעביר-נמוך.\n\n**שלב 1 – כפל בקוסינוס.** נכפיל $x_p(t)$ ב-$\\cos(\\pi t/\\Delta)$. בתדר זו קונבולוציה עם $\\frac12\\big[\\delta(\\omega-\\frac\\pi\\Delta)+\\delta(\\omega+\\frac\\pi\\Delta)\\big]$, כלומר הזזה של כל עותק ב-$\\pm\\pi/\\Delta$ והכפלה ב-$\\frac12$:\n\n$$\\mathcal F\\{x_p(t)\\cos(\\pi t/\\Delta)\\}=\\frac1{2\\Delta}\\sum_{k\\ \\text{odd}}\\Big[X\\big(j(\\omega-(k+1)\\tfrac\\pi\\Delta)\\big)+X\\big(j(\\omega-(k-1)\\tfrac\\pi\\Delta)\\big)\\Big]$$\n\nב-$\\omega=0$ מורכבים שני תרומות, מהעותק $k=1$ שהוזז שמאלה ומהעותק $k=-1$ שהוזז ימינה. כל אחת בגובה $\\frac1{2\\Delta}$, ויחד $\\frac1\\Delta X(j\\omega)$. שאר העותקים ממורכזים ב-$\\pm\\frac{2\\pi}\\Delta,\\ \\pm\\frac{4\\pi}\\Delta,\\dots$.\n\n**שלב 2 – מסנן מעביר-נמוך.** נשתמש ב-$H_1(j\\omega)=\\Delta$ עבור $|\\omega|\\le\\omega_c$ ו-$0$ אחרת, עם $\\omega_M<\\omega_c<\\frac{2\\pi}\\Delta-\\omega_M$ (למשל $\\omega_c=\\omega_M$ כמו בפתרון הסרוק). בתחום זה אין עותקים אחרים, כי העותק הקרוב ביותר מתחיל ב-$\\frac{2\\pi}\\Delta-\\omega_M>\\omega_M$.\n\n**המערכת:** $x_p(t)\\ \\to\\ \\times\\cos(\\pi t/\\Delta)\\ \\to\\ H_1(j\\omega)\\ \\to\\ x(t)$.\n\n**בדיקה בזמן:** $p(t)\\cos(\\pi t/\\Delta)=\\sum_k(-1)^k\\cos(k\\pi)\\,\\delta(t-k\\Delta)=\\sum_k\\delta(t-k\\Delta)$, כלומר דגימה סטנדרטית במחזור $\\Delta$ (קצב $\\frac{2\\pi}\\Delta>2\\omega_M$), ומסנן מעביר-נמוך בהגבר $\\Delta$ משחזר אותה.\n"
+    },
+    {
+     "label": "c",
+     "text": "For $\\Delta<\\pi/(2\\omega_M)$, determine a system that will recover $x(t)$ from $y(t)$.",
+     "box": [
+      135,
+      231,
+      805,
+      252
+     ],
+     "lines": 1,
+     "solution": "**שלב 1 – כפל בקוסינוס.** נכפיל $y(t)$ ב-$\\cos(\\pi t/\\Delta)$, כלומר נזיז את ספקטרום $y$ בכל כיוון ב-$\\pi/\\Delta$ ונכפיל ב-$\\frac12$.\n\n**שלב 2 – מה מגיע לראשית.** ב-$Y(j\\omega)$ קיימים (מסעיף א):\n\n- החצי הימני של העותק סביב $+\\pi/\\Delta$. הזזה שמאלה ב-$\\pi/\\Delta$ מציבה אותו על $[0,\\omega_M]$ ונותנת $\\frac12\\cdot\\frac1\\Delta X(j\\omega)$ שם.\n- החצי השמאלי של העותק סביב $-\\pi/\\Delta$. הזזה ימינה ב-$\\pi/\\Delta$ מציבה אותו על $[-\\omega_M,0]$ ונותנת $\\frac1{2\\Delta}X(j\\omega)$ שם.\n\nשני החצאים משלימים זה את זה, ובתחום $|\\omega|\\le\\omega_M$ מתקבל:\n\n$$\\frac1{2\\Delta}X(j\\omega)$$\n\nחצאי העותקים סביב $\\pm3\\pi/\\Delta$ מוזזים אל סביב $\\pm2\\pi/\\Delta$ (ומעבר), רחוק מהראשית.\n\n**שלב 3 – מסנן.** מעביר-נמוך עם הגבר $2\\Delta$ (כדי לבטל את $\\frac1{2\\Delta}$) ותדר חיתוך $\\omega_c$ המקיים $\\omega_M<\\omega_c<\\frac{2\\pi}\\Delta-\\omega_M$.\n\n**המערכת:** $y(t)\\ \\to\\ \\times\\cos(\\pi t/\\Delta)\\ \\to\\ H_2(j\\omega)=2\\Delta\\cdot\\mathbb 1_{|\\omega|\\le\\omega_c}\\ \\to\\ x(t)$.\n\n**בדיקה:** ההגבר $2\\Delta$ הוא כפול ההגבר שבסעיף ב. זה הגיוני כי כאן רק חצי מהאנרגיה של כל עותק עברה במסנן $H$, ולכן נדרש פיצוי כפול.\n"
+    },
+    {
+     "label": "d",
+     "text": "What is the maximum value of $\\Delta$ in relation to $\\omega_M$ for which $x(t)$ can be recovered from either $x_p(t)$ or $y(t)$?",
+     "box": [
+      135,
+      252,
+      805,
+      297
+     ],
+     "lines": 2,
+     "solution": "**שלב 1 – תנאי להיעדר חפיפה ב-$x_p$.** העותקים ממורכזים במכפלות אי-זוגיות של $\\pi/\\Delta$, במרווח $\\frac{2\\pi}\\Delta$ ביניהם, וכל אחד ברוחב $2\\omega_M$. אין חפיפה כאשר\n\n$$2\\omega_M\\le\\frac{2\\pi}\\Delta\\ \\Longleftrightarrow\\ \\omega_M\\le\\frac\\pi\\Delta$$\n\nובמונחי דגימה: $p(t)\\cos(\\pi t/\\Delta)$ היא רכבת הלמים רגילה במחזור $\\Delta$, ולכן נדרש $\\frac{2\\pi}\\Delta\\ge2\\omega_M$ (קצב נייקוויסט).\n\n**שלב 2 – $y(t)$.** כאשר $\\Delta=\\pi/\\omega_M$, מסנן $H$ מתחיל ב-$\\frac\\pi\\Delta=\\omega_M$. החצאים הנחוצים לשחזור ($[\\omega_M,2\\omega_M]$ ובסימטריה) נשארים בתוך תחום המעבר $[\\omega_M,3\\omega_M]$ ואינם חופפים. לכן גם משם אפשר לשחזר.\n\n**תשובה:**\n\n$$\\Delta_{\\max}=\\frac{\\pi}{\\omega_M}$$\n\n(בשוויון, בגבול נייקוויסט; כל $\\Delta<\\pi/\\omega_M$ מתאים. התנאי $\\Delta<\\pi/(2\\omega_M)$ שבסעיפים א–ג היה מחמיר מהנדרש ונועד לשרטוט נוח.)\n"
+    }
+   ],
+   "page": 3,
+   "view": [
+    935,
+    1210
+   ]
+  },
+  {
+   "number": 26,
+   "topics": [
+    "t4"
+   ],
+   "stem": "7.26. The sampling theorem, as we have derived it, states that a signal $x(t)$ must be sampled at a rate greater than its bandwidth (or equivalently, a rate greater than twice its highest frequency). This implies that if $x(t)$ has a spectrum as indicated in Figure P7.26(a) then $x(t)$ must be sampled at a rate greater than $2\\omega_2$. However, since the signal has most of its energy concentrated in a narrow band, it would seem reasonable to expect that a sampling rate lower than twice the highest frequency could be used. A signal whose energy is concentrated in a frequency band is often referred to as a bandpass signal. There are a variety of techniques for sampling such signals, generally referred to as bandpass-sampling techniques.",
+   "figures": [
+    "(a) ספקטרום $X(j\\omega)$: שני משולשים ישרי-זווית, בתחומים $[-\\omega_2,-\\omega_1]$ (עולה עד גובה 1 ב-$-\\omega_1$) ו-$[\\omega_1,\\omega_2]$ (יורד מגובה 1 ב-$\\omega_1$ ל-0 ב-$\\omega_2$)",
+    "(b) מערכת: $x(t)$ נכפל ברכבת הלמים $p(t)=\\sum\\delta(t-nT)$ ונותן $x_p(t)$, שנכנס למסנן $H(j\\omega)$ ומוציא $x_r(t)$; $H(j\\omega)$ מעביר-פס בגובה $A$ בתחומים $\\omega_a\\le|\\omega|\\le\\omega_b$"
+   ],
+   "regions": [
+    {
+     "page": 4,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      135,
+      108,
+      850,
+      895
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "",
+     "text": "To examine the possibility of sampling a bandpass signal as a rate less than the total bandwidth, consider the system shown in Figure P7.26(b). Assuming that $\\omega_1>\\omega_2-\\omega_1$, find the maximum value of $T$ and the values of the constants $A$, $\\omega_a$, and $\\omega_b$ such that $x_r(t)=x(t)$.",
+     "box": [
+      135,
+      917,
+      805,
+      1004
+     ],
+     "lines": 4,
+     "solution": "**מוסכמות:** $\\omega$ ברד/שנייה; $\\omega_s=2\\pi/T$. $X(j\\omega)$ שונה מאפס רק עבור $\\omega_1<|\\omega|<\\omega_2$. התנאי $\\omega_1>\\omega_2-\\omega_1$ שקול ל-$\\omega_2<2\\omega_1$.\n\n**שלב 1 – ספקטרום הדגימה.**\n\n$$X_p(j\\omega)=\\frac1T\\sum_{k=-\\infty}^{\\infty}X\\big(j(\\omega-k\\omega_s)\\big)$$\n\nעותקים של $X$ מוזזים ב-$k\\omega_s$, כל אחד בגובה $\\frac1T$ (פי $\\frac1T$ מ-$X$).\n\n**שלב 2 – איזה עותקים מסוכנים.** המסנן $H$ צריך לבודד את הפס $[\\omega_1,\\omega_2]$ (ואת הדמות הסימטרית שלו). העותקים הקרובים ביותר ל-$[\\omega_1,\\omega_2]$ הם דמויות של הפס **השלילי** $[-\\omega_2,-\\omega_1]$ שהוזזו ימינה ב-$k\\omega_s$:\n\n- $k=1$: $[\\omega_s-\\omega_2,\\ \\omega_s-\\omega_1]$.\n- $k=2$: $[2\\omega_s-\\omega_2,\\ 2\\omega_s-\\omega_1]$.\n\nודמויות של הפס **החיובי** שהוזזו שמאלה ב-$\\omega_s$: $[\\omega_1-\\omega_s,\\ \\omega_2-\\omega_s]$.\n\n**שלב 3 – תנאי אי-חפיפה** (בתוך $[\\omega_1,\\omega_2]$ אסור שייכנס עותק אחר):\n\n- העותק $k=1$ של הפס השלילי, $[\\omega_s-\\omega_2,\\ \\omega_s-\\omega_1]$, חייב להסתיים לא מעל $\\omega_1$: $\\omega_s-\\omega_1\\le\\omega_1$, כלומר $\\omega_s\\le2\\omega_1$.\n- העותק $k=2$ של הפס השלילי, $[2\\omega_s-\\omega_2,\\ 2\\omega_s-\\omega_1]$, חייב להתחיל לא מתחת ל-$\\omega_2$: $2\\omega_s-\\omega_2\\ge\\omega_2$, כלומר $\\omega_s\\ge\\omega_2$.\n- העותקים של הפס החיובי שהוזזו ימינה ($[\\omega_1+\\omega_s,\\ \\omega_2+\\omega_s]$) נמצאים מעל $\\omega_2$ כבר כש-$\\omega_s\\ge\\omega_2$, וזה שהוזז שמאלה, $[\\omega_1-\\omega_s,\\ \\omega_2-\\omega_s]$, נמצא ב-$\\omega\\le0$.\n\nלכן התחום הבטוח, תחת ההנחה $\\omega_2<2\\omega_1$ בלבד, הוא\n\n$$\\omega_2\\le\\omega_s\\le2\\omega_1\\qquad\\Longleftrightarrow\\qquad 0\\le\\frac{2\\pi}{T}-\\omega_2\\le2\\omega_1-\\omega_2$$\n\n(תחום זה אינו ריק בדיוק כי $\\omega_2\\le2\\omega_1$.)\n\n**שלב 4 – $T$ מרבי.** $T$ גדול פירושו $\\omega_s$ קטן, ולכן בוחרים את $\\omega_s$ הקטן ביותר המותר: $\\omega_s=\\omega_2$.\n\n$$T_{\\max}=\\frac{2\\pi}{\\omega_2}$$\n\n**שלב 5 – המסנן.** עם $\\omega_s=\\omega_2$ התכולה של $X_p$ בתחום $\\omega>0$ היא:\n\n- הפס המקורי $[\\omega_1,\\omega_2]$, בגובה $\\frac1T$;\n- דמות של הפס השלילי, $[0,\\ \\omega_2-\\omega_1]$ ($k=1$);\n- דמות של הפס השלילי, $[\\omega_2,\\ 2\\omega_2-\\omega_1]$ ($k=2$), המתחילה בדיוק ב-$\\omega_2$ (שם גובהה 0);\n- דמות של הפס החיובי $[\\omega_1+\\omega_2,\\ 2\\omega_2]$ ($k=1$) וכן הלאה, מעל $\\omega_2$.\n\nהפער $(\\omega_2-\\omega_1,\\ \\omega_1)$ ריק (כי $\\omega_2-\\omega_1<\\omega_1$), ולכן המסנן צריך:\n\n$$A=T,\\qquad \\omega_b=\\frac{2\\pi}{T}=\\omega_2,\\qquad \\omega_2-\\omega_1\\le\\omega_a\\le\\omega_1\\ \\ (\\text{למשל }\\omega_a=\\omega_b-\\omega_1=\\omega_2-\\omega_1)$$\n\nעם $H(j\\omega)=A$ עבור $\\omega_a\\le|\\omega|\\le\\omega_b$ ו-$0$ אחרת. ההגבר $A=T$ מבטל את הגורם $\\frac1T$ בספקטרום הדגימה.\n\n**בדיקה:** נציב $T=\\frac{2\\pi}{\\omega_2}$: $\\omega_b=\\frac{2\\pi}{T}=\\omega_2$. מקבלים $x_r=x$ כי רק $[\\omega_1,\\omega_2]$ וסימטרייתו עוברים, ובגובה $T\\cdot\\frac1T=1$ בלבד. קצב הדגימה $\\omega_2$ קטן מ-$2\\omega_2$ שמשפט הדגימה הרגיל דורש, כמבוקש בשאלה.\n\n**הערה:** התשובה $T_{\\max}=2\\pi/\\omega_2$ היא המקסימום שמתאים לכל $\\omega_1$ המקיים רק $\\omega_1>\\omega_2-\\omega_1$. אם $\\omega_1$ גדול יותר (למשל $\\omega_1\\ge\\frac23\\omega_2$), אפשר גם דגימות איטיות יותר (למשל $\\omega_s=\\frac23\\omega_2$); זה מעבר לנדרש כאן.\n"
+    }
+   ],
+   "page": 4,
+   "view": [
+    935,
+    1210
+   ]
+  },
+  {
+   "number": 27,
+   "topics": [
+    "t4"
+   ],
+   "stem": "7.27. In Problem 7.26, we considered one procedure for bandpass sampling and reconstruction. Another procedure, used when $x(t)$ is real, consists of multiplying $x(t)$ by a complex exponential and then sampling the product. The sampling system is shown in Figure P7.27(a). With $x(t)$ real and with $X(j\\omega)$ nonzero only for $\\omega_1<|\\omega|<\\omega_2$, the frequency is chosen to be $\\omega_0=(1/2)(\\omega_1+\\omega_2)$, and the lowpass filter $H_1(j\\omega)$ has cutoff frequency $(1/2)(\\omega_2-\\omega_1)$.",
+   "figures": [
+    "(a) מערכת: $x(t)$ נכפל ב-$e^{-j\\omega_0t}$, עובר מסנן $H_1(j\\omega)$, ואז נכפל ברכבת הלמים $p(t)=\\sum\\delta(t-nT)$ ונותן $x_p(t)$",
+    "(b) ספקטרום $X(j\\omega)$: שני משולשים ישרי-זווית ב-$[-\\omega_2,-\\omega_1]$ (עולה עד גובה 1 ב-$-\\omega_1$) וב-$[\\omega_1,\\omega_2]$ (יורד מגובה 1 ב-$\\omega_1$ ל-0 ב-$\\omega_2$)"
+   ],
+   "regions": [
+    {
+     "page": 5,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      135,
+      108,
+      805,
+      238
+     ]
+    },
+    {
+     "page": 5,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      195,
+      340,
+      790,
+      685
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "a",
+     "text": "For $X(j\\omega)$ as shown in Figure P7.27(b), sketch $X_p(j\\omega)$.",
+     "box": [
+      135,
+      238,
+      805,
+      257
+     ],
+     "lines": 1,
+     "solution": "**מוסכמות:** $\\omega$ ברד/שנייה; $\\omega_s=2\\pi/T$; $B=\\omega_2-\\omega_1$; $\\omega_0=\\frac{\\omega_1+\\omega_2}2$. נניח שהמסנן $H_1$ אידיאלי בהגבר 1.\n\n**שלב 1 – אחרי הכפל ב-$e^{-j\\omega_0t}$.** $x_1(t)=x(t)e^{-j\\omega_0t}$ ולכן\n\n$$X_1(j\\omega)=X\\big(j(\\omega+\\omega_0)\\big)$$\n\nכלומר ספקטרום $X$ מוזז **שמאלה** ב-$\\omega_0$:\n\n- הפס החיובי $[\\omega_1,\\omega_2]$ עובר ל-$[\\omega_1-\\omega_0,\\ \\omega_2-\\omega_0]=[-\\frac B2,\\ \\frac B2]$, סביב הראשית. הוא נשאר בצורת משולש יורד (גובה 1 בקצה השמאלי $-\\frac B2$ ו-0 בקצה הימני $\\frac B2$).\n- הפס השלילי $[-\\omega_2,-\\omega_1]$ עובר ל-$[-\\omega_2-\\omega_0,\\ -\\omega_1-\\omega_0]$, רחוק משמאל (סביב $-\\omega_0-\\frac{\\omega_1+\\omega_2}2=-(\\omega_1+\\omega_2)$).\n\n**שלב 2 – אחרי $H_1$.** תדר החיתוך $\\frac B2$ משאיר רק את הפס שסביב הראשית:\n\n$$X_2(j\\omega)=\\begin{cases}X_1(j\\omega),&|\\omega|<B/2\\\\0,&\\text{otherwise}\\end{cases}$$\n\nזהו אות מרוכב (ספקטרום לא סימטרי), בעל רוחב סרט כולל $B$.\n\n**שלב 3 – דגימה.**\n\n$$X_p(j\\omega)=\\frac1T\\sum_{k=-\\infty}^{\\infty}X_2\\big(j(\\omega-k\\omega_s)\\big)$$\n\n**שרטוט:** משולש יורד יחיד ברוחב $B$ (בתחום $[-\\frac B2,\\frac B2]$, גובה $\\frac1T$ בקצה השמאלי) שחוזר מחזורית בכל $\\omega_s=\\frac{2\\pi}T$, כך שהעותקים ממורכזים ב-$0,\\ \\pm\\frac{2\\pi}T,\\ \\pm\\frac{4\\pi}T,\\dots$. העותקים אינם חופפים כל עוד $\\omega_s\\ge B$.\n\n*הערה: בשרטוט הסרוק שבקובץ הפס המרכזי של $X_1,X_2$ מצויר כמשולש עולה. לפי $X_1(j\\omega)=X(j(\\omega+\\omega_0))$ הפס שמגיע לראשית הוא הפס החיובי, ולכן הוא יורד כמתואר כאן. זה אינו משנה את התשובות לסעיפים ב-ג.*\n\n**בדיקה:** רוחב הפס $B$ נשמר בהזזה, ורק המרכז זז מ-$\\omega_0$ ל-$0$.\n"
+    },
+    {
+     "label": "b",
+     "text": "Determine the maximum sampling period $T$ such that $x(t)$ is recoverable from $x_p(t)$.",
+     "box": [
+      135,
+      257,
+      805,
+      299
+     ],
+     "lines": 2,
+     "solution": "**שלב 1 – רוחב הסרט של $x_2$.** $X_2(j\\omega)=0$ עבור $|\\omega|>\\frac B2$, ולכן $\\omega_{\\max}=\\frac B2=\\frac{\\omega_2-\\omega_1}2$ וקצב נייקוויסט (מסעיף a: $x_2$ הוא האות הנדגם)\n\n$$\\omega_N=2\\cdot\\frac{\\omega_2-\\omega_1}2=\\omega_2-\\omega_1$$\n\n**שלב 2 – תנאי הדגימה.** העותקים של $X_p$ ברוחב $B$ ובמרווח $\\omega_s$ אינם חופפים כאשר $\\omega_s\\ge B$:\n\n$$\\frac{2\\pi}T\\ge\\omega_2-\\omega_1$$\n\n**תשובה:**\n\n$$T_{\\max}=\\frac{2\\pi}{\\omega_2-\\omega_1}$$\n\n**בדיקה:** $\\omega_s\\ge\\omega_2-\\omega_1$ קטן מ-$2\\omega_2$ שמשפט הדגימה הרגיל דורש. זה אפשרי כי $x_2$ מרוכב, וקצב הדגימה של אות מרוכב ברוחב סרט כולל $B$ הוא $B$ (ולא $2B$ כמו באות ממשי מעביר-נמוך).\n"
+    },
+    {
+     "label": "c",
+     "text": "Determine a system to recover $x(t)$ from $x_p(t)$.",
+     "box": [
+      135,
+      299,
+      805,
+      325
+     ],
+     "lines": 1,
+     "solution": "**רעיון:** נחזור על השלבים של הדגימה בסדר הפוך: נבודד את העותק המרכזי, נחזיר אותו למקומו בתדר, ונשחזר את האות הממשי מהחלק החיובי שלו.\n\n**שלב 1 – בידוד העותק המרכזי.** עבור $T\\le\\frac{2\\pi}{\\omega_2-\\omega_1}$ העותק $k=0$ של $X_p$ הוא $\\frac1TX_2(j\\omega)$ בתחום $|\\omega|<\\frac B2$. מעביר-נמוך אידיאלי $H_1$ (תדר חיתוך $\\frac B2$) עם הגבר $T$ משחזר $x_2(t)$.\n\n**שלב 2 – חזרה למקום המקורי.** כפל ב-$e^{j\\omega_0t}$ מזיז ימינה ב-$\\omega_0$:\n\n$$x_2(t)e^{j\\omega_0t}\\ \\longleftrightarrow\\ X_2\\big(j(\\omega-\\omega_0)\\big)=X(j\\omega)\\,u(\\omega)\\ \\text{ (בתחום }\\omega_1<\\omega<\\omega_2)$$\n\nהוא החלק של הפס החיובי $x_+(t)$ בלבד, כלומר $X_+(j\\omega)=X(j\\omega)$ עבור $\\omega>0$ ו-$0$ עבור $\\omega<0$.\n\n**שלב 3 – חזרה לאות ממשי.** $x(t)$ ממשי, ולכן $X(-j\\omega)=X^*(j\\omega)$, כלומר הפס השלילי הוא הצמוד של החיובי:\n\n$$x(t)=x_+(t)+x_+^*(t)=2\\,\\mathrm{Re}\\{x_+(t)\\}$$\n\n**המערכת:**\n\n$$x_p(t)\\ \\to\\ \\boxed{2T\\,H_1(j\\omega)}\\ \\to\\ \\times e^{j\\omega_0t}\\ \\to\\ \\mathrm{Re}\\{\\cdot\\}\\ \\to\\ x(t)$$\n\nההגבר $2T$ מאחד את $T$ (ביטול $\\frac1T$ של הדגימה) ואת הגורם $2$ של $2\\mathrm{Re}\\{\\cdot\\}$.\n\n**בדיקה:** נעקוב אחרי הספקטרום בלבד: $x_p\\to\\frac1TX_2\\to$ אחרי $2TH_1$ מקבלים $2X_2$ $\\to$ אחרי $e^{j\\omega_0t}$ מקבלים $2X(j\\omega)u(\\omega)$. החלק הממשי הוא מחצית הסכום של האות ושל הצמוד שלו, כלומר $x_++x_+^*=x$. ✔\n"
+    }
+   ],
+   "page": 5,
+   "view": [
+    935,
+    1210
+   ]
+  }
+ ]
+}

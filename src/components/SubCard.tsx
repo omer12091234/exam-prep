@@ -63,7 +63,8 @@ export function SubCard({
       {heading && (
         <div className="mb-1 text-sm text-neutral-500">{heading}</div>
       )}
-      <div className="leading-8">
+      {/* dir="auto": English textbook problems read left to right */}
+      <div className="leading-8" dir="auto">
         {sub.label && <span className="me-2 font-semibold">{sub.label}.</span>}
         {sub.points ? (
           <span className="me-2 text-neutral-500">[{sub.points}%]</span>

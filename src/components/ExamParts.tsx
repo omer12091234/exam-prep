@@ -30,7 +30,7 @@ export function QuestionStem({
   return (
     <>
       {stemText && (
-        <div className="mb-3 leading-8">
+        <div className="mb-3 leading-8" dir="auto">
           <MathText text={stemText} />
         </div>
       )}

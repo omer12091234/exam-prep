@@ -3508,7 +3508,27 @@
    "term": "מועד א",
    "url": "https://drive.google.com/file/d/1pCTzXi7FJdHDniac4DjMGZFZ9wqc5zRF/view?usp=drivesdk",
    "has_solution": false,
-   "questions": []
+   "questions": [
+    {
+     "num": "1",
+     "description": "",
+     "topics": [
+      "t6",
+      "t5"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2",
+     "description": "",
+     "topics": [
+      "t7",
+      "t10",
+      "t8"
+     ],
+     "difficulty": 3
+    }
+   ]
   },
   {
    "title": "מבחן 2023 סמסטר ב' מועד ב' (מתן גל, 26.07.23) — שאלון מצולם",
@@ -3589,7 +3609,36 @@
    "term": "מבחן לדוגמה",
    "url": "https://drive.google.com/file/d/1dVz58DWHpdLfKqvtsCu4odwlJ9Z0558S/view?usp=drivesdk",
    "has_solution": true,
-   "questions": []
+   "questions": [
+    {
+     "num": "1",
+     "description": "",
+     "topics": [
+      "t4",
+      "t6",
+      "t8"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2",
+     "description": "",
+     "topics": [
+      "t7",
+      "t10"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3",
+     "description": "",
+     "topics": [
+      "t12",
+      "t3"
+     ],
+     "difficulty": 3
+    }
+   ]
   },
   {
    "title": "מבחן 2022 סמסטר ב' מועד ב' (מתן גל, 16.08.22) + פתרון סטודנט (ציון 90)",

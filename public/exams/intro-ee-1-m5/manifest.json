@@ -1,0 +1,254 @@
+[
+ {
+  "file": "Q1_s1.webp",
+  "question": 1,
+  "page": 1,
+  "bbox": [
+   0.0968,
+   0.5622,
+   0.8988,
+   0.6279
+  ],
+  "skew_deg": -0.4,
+  "role": "SUB",
+  "sub": "א",
+  "order": 1,
+  "needs_review": true
+ },
+ {
+  "file": "Q1_s2.webp",
+  "question": 1,
+  "page": 1,
+  "bbox": [
+   0.0968,
+   0.6291,
+   0.8988,
+   0.6642
+  ],
+  "skew_deg": -0.4,
+  "role": "SUB",
+  "sub": "ב",
+  "order": 2,
+  "needs_review": true
+ },
+ {
+  "file": "Q1_s3.webp",
+  "question": 1,
+  "page": 1,
+  "bbox": [
+   0.0968,
+   0.6667,
+   0.8988,
+   0.7061
+  ],
+  "skew_deg": -0.4,
+  "role": "SUB",
+  "sub": "ג",
+  "order": 3,
+  "needs_review": true
+ },
+ {
+  "file": "Q1_s4.webp",
+  "question": 1,
+  "page": 1,
+  "bbox": [
+   0.0968,
+   0.7092,
+   0.8988,
+   0.7448
+  ],
+  "skew_deg": -0.4,
+  "role": "SUB",
+  "sub": "ד",
+  "order": 4,
+  "needs_review": true
+ },
+ {
+  "file": "Q1_s5.webp",
+  "question": 1,
+  "page": 1,
+  "bbox": [
+   0.0968,
+   0.7417,
+   0.8988,
+   0.7749
+  ],
+  "skew_deg": -0.4,
+  "role": "SUB",
+  "sub": "ה",
+  "order": 5,
+  "needs_review": true
+ },
+ {
+  "file": "Q1_s6.webp",
+  "question": 1,
+  "page": 1,
+  "bbox": [
+   0.0968,
+   0.7749,
+   0.8988,
+   0.8086
+  ],
+  "skew_deg": -0.4,
+  "role": "SUB",
+  "sub": "ו",
+  "order": 6,
+  "needs_review": true
+ },
+ {
+  "file": "Q1_stem1.webp",
+  "question": 1,
+  "page": 1,
+  "bbox": [
+   0.0334,
+   0.3696,
+   0.901,
+   0.5635
+  ],
+  "skew_deg": -0.4,
+  "role": "STEM",
+  "order": 0,
+  "needs_review": false
+ },
+ {
+  "file": "Q2_s1.webp",
+  "question": 2,
+  "page": 2,
+  "bbox": [
+   0.0957,
+   0.5084,
+   0.8988,
+   0.5285
+  ],
+  "skew_deg": -0.6,
+  "role": "SUB",
+  "sub": "א",
+  "order": 1,
+  "needs_review": true
+ },
+ {
+  "file": "Q2_s2.webp",
+  "question": 2,
+  "page": 2,
+  "bbox": [
+   0.0957,
+   0.536,
+   0.8988,
+   0.5585
+  ],
+  "skew_deg": -0.6,
+  "role": "SUB",
+  "sub": "ב",
+  "order": 2,
+  "needs_review": true
+ },
+ {
+  "file": "Q2_s3.webp",
+  "question": 2,
+  "page": 2,
+  "bbox": [
+   0.0957,
+   0.5629,
+   0.8988,
+   0.5847
+  ],
+  "skew_deg": -0.6,
+  "role": "SUB",
+  "sub": "ג",
+  "order": 3,
+  "needs_review": true
+ },
+ {
+  "file": "Q2_s4.webp",
+  "question": 2,
+  "page": 2,
+  "bbox": [
+   0.0957,
+   0.5897,
+   0.8988,
+   0.6223
+  ],
+  "skew_deg": -0.6,
+  "role": "SUB",
+  "sub": "ד",
+  "order": 4,
+  "needs_review": true
+ },
+ {
+  "file": "Q2_s5.webp",
+  "question": 2,
+  "page": 2,
+  "bbox": [
+   0.0957,
+   0.6442,
+   0.8988,
+   0.7173
+  ],
+  "skew_deg": -0.6,
+  "role": "SUB",
+  "sub": "ה",
+  "order": 5,
+  "needs_review": true
+ },
+ {
+  "file": "Q2_s6.webp",
+  "question": 2,
+  "page": 2,
+  "bbox": [
+   0.0957,
+   0.7223,
+   0.8988,
+   0.7442
+  ],
+  "skew_deg": -0.6,
+  "role": "SUB",
+  "sub": "ו",
+  "order": 6,
+  "needs_review": true
+ },
+ {
+  "file": "Q2_stem1.webp",
+  "question": 2,
+  "page": 2,
+  "bbox": [
+   0.158,
+   0.3327,
+   0.9522,
+   0.3927
+  ],
+  "skew_deg": -0.6,
+  "role": "STEM",
+  "order": 0,
+  "needs_review": false
+ },
+ {
+  "file": "Q2_stem2.webp",
+  "question": 2,
+  "page": 2,
+  "bbox": [
+   0.2503,
+   0.3815,
+   0.6696,
+   0.5097
+  ],
+  "skew_deg": -0.6,
+  "role": "FIGURE",
+  "order": 1,
+  "needs_review": false
+ },
+ {
+  "file": "Q2_stem3.webp",
+  "question": 2,
+  "page": 2,
+  "bbox": [
+   0.0367,
+   0.2008,
+   0.96,
+   0.3365
+  ],
+  "skew_deg": -0.6,
+  "role": "FIGURE",
+  "order": 2,
+  "needs_review": false
+ }
+]

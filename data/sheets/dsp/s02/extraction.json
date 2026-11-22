@@ -1,0 +1,449 @@
+{
+ "exam": {
+  "match_title": "דף 2 – בעיות מעשיות בדגימה ושחזור, ZOH",
+  "sheet_number": 2,
+  "drive_file_id": "10rfN5ERFRWcWHuNum-HBkF9bE1mubQKb",
+  "source_title": "דף 2 - בעיות מעשיות בדגימה ושחזור, ZOH.pdf",
+  "notes": "הקובץ (10 עמודים): עמודים 1–4 שאלות 7.7, 7.21, 7.22, 7.25, 7.38, 7.41 מספר הלימוד (Oppenheim–Willsky, Signals and Systems, פרק 7, באנגלית); עמוד 5 שאלה 2 ממבחן 2010 מועד א' (בעברית); עמודים 6–8 פתרונות מודפסים לשאלות 7.x ועמודים 9–10 פתרון בכתב יד לשאלת המבחן – שימשו לבדיקה בלבד. שאלות 7.x מתומללות כפי שהודפסו באנגלית; הפתרונות בעברית. בסעיף 7.21(ז) הפתרון המודפס בקובץ (תשובה: כן) נראה שגוי – הפתרון שלנו: לא (ראו הערה בפתרון). מספרי השאלות 1–7 הם סידורי; המספר המודפס מופיע בתחילת נוסח כל שאלה."
+ },
+ "questions": [
+  {
+   "number": 1,
+   "topics": [
+    "t3"
+   ],
+   "stem": "7.7. A signal $x(t)$ undergoes a zero-order hold operation with an effective sampling period $T$ to produce a signal $x_0(t)$. Let $x_1(t)$ denote the result of a first-order hold operation on the samples of $x(t)$; i.e., $$x_1(t)=\\sum_{n=-\\infty}^{\\infty}x(nT)\\,h_1(t-nT),$$",
+   "figures": [
+    "Figure P7.7: גרף של $h_1(t)$ – משולש שוויון שוקיים עם שיא 1 ב-$t=0$, המתאפס ב-$t=-T$ וב-$t=T$"
+   ],
+   "regions": [
+    {
+     "page": 1,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      135,
+      200,
+      800,
+      350
+     ]
+    },
+    {
+     "page": 1,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      270,
+      425,
+      640,
+      548
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "",
+     "text": "where $h_1(t)$ is the function shown in Figure P7.7. Specify the frequency response of a filter that produces $x_1(t)$ as its output when $x_0(t)$ is the input.",
+     "box": [
+      175,
+      368,
+      800,
+      415
+     ],
+     "lines": 2,
+     "solution": "**מוסכמות:** $\\omega$ ברד/שנייה, $X(j\\omega)=\\int x(t)e^{-j\\omega t}dt$, $x_p(t)=\\sum_n x(nT)\\delta(t-nT)$ (רכבת הלמים עם משקלי הדגימות).\n\n**שלב 1 – שני המחזיקים כמסננים על $x_p$.** מחזיק סדר אפס הוא קונבולוציה של $x_p$ עם $h_0(t)$ – מלבן בגובה 1 על $[0,T]$; מחזיק סדר ראשון (לפי הנתון) הוא קונבולוציה עם $h_1(t)$. לכן:\n\n$$X_0(j\\omega)=H_0(j\\omega)X_p(j\\omega),\\qquad X_1(j\\omega)=H_1(j\\omega)X_p(j\\omega)$$\n\nאנו מחפשים $H_d(j\\omega)$ כך ש-$X_0(j\\omega)H_d(j\\omega)=X_1(j\\omega)$, כלומר\n\n$$H_d(j\\omega)=\\frac{H_1(j\\omega)}{H_0(j\\omega)}$$\n\n(בתדרים שבהם $H_0\\neq 0$).\n\n**שלב 2 – $H_0$.** \n$$H_0(j\\omega)=\\int_0^T e^{-j\\omega t}dt=\\frac{1-e^{-j\\omega T}}{j\\omega}=e^{-j\\omega T/2}\\,\\frac{2\\sin(\\omega T/2)}{\\omega}$$\n\n**שלב 3 – $H_1$.** המשולש $h_1$ הוא קונבולוציה של שני מלבנים סימטריים ברוחב $T$ וגובה $1/\\sqrt T$ (קונבולוציה של שני מלבנים כאלה נותנת משולש ברוחב כולל $2T$ וגובה $\\frac1T\\cdot T=1$). כל מלבן הוא $\\frac{1}{\\sqrt T}h_0(t+T/2)$, ולכן, משום שהזזה ב-$T/2$ היא כפל ב-$e^{j\\omega T/2}$:\n\n$$H_1(j\\omega)=\\left(\\frac{1}{\\sqrt T}e^{j\\omega T/2}H_0(j\\omega)\\right)^2=\\frac1T e^{j\\omega T}H_0^2(j\\omega)=\\frac{4\\sin^2(\\omega T/2)}{T\\omega^2}$$\n\n(ממשי וחיובי – המשולש זוגי, ובהתאם $H_1(0)=T$ שווה לשטח המשולש.)\n\n**שלב 4 – המנה.**\n\n$$H_d(j\\omega)=\\frac{H_1(j\\omega)}{H_0(j\\omega)}=\\frac1T e^{j\\omega T}H_0(j\\omega)=e^{j\\omega T/2}\\,\\frac{2\\sin(\\omega T/2)}{\\omega T}=e^{j\\omega T/2}\\,\\frac{\\sin(\\omega T/2)}{\\omega T/2}$$\n\n**בדיקות.** (1) $H_d(0)=1$ – ערך קבוע נשמר, כצפוי משום ששני המחזיקים משחזרים קבוע במדויק. (2) הכפל ב-$e^{j\\omega T/2}$ הוא הקדמה בזמן של $T/2$ (מסנן לא סיבתי): $h_1$ סימטרי סביב אפס ו-$h_0$ ממורכז סביב $T/2$, ולכן ההפרש בין מרכזיהם הוא $T/2$. (3) $x_1$ אכן מתקבל כי $H_dH_0=H_1$ לפי בניה.\n\n**תשובה:** $$H_d(j\\omega)=e^{j\\omega T/2}\\,\\frac{2\\sin(\\omega T/2)}{\\omega T}$$\n\n*התאמה לפתרון הסרוק:* זהה."
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "topics": [
+    "t2"
+   ],
+   "stem": "7.21. A signal $x(t)$ with Fourier transform $X(j\\omega)$ undergoes impulse-train sampling to generate $$x_p(t)=\\sum_{n=-\\infty}^{\\infty}x(nT)\\,\\delta(t-nT)$$ where $T=10^{-4}$. For each of the following sets of constraints on $x(t)$ and/or $X(j\\omega)$, does the sampling theorem (see Section 7.1.1) guarantee that $x(t)$ can be recovered exactly from $x_p(t)$?",
+   "figures": [],
+   "regions": [
+    {
+     "page": 1,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      135,
+      558,
+      800,
+      738
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "א",
+     "text": "$X(j\\omega)=0$ for $|\\omega|>5000\\pi$",
+     "box": [
+      185,
+      739,
+      800,
+      758
+     ],
+     "lines": 1,
+     "solution": "**מוסכמות:** $T=10^{-4}$ שנ', ולכן תדר הדגימה $\\omega_s=\\dfrac{2\\pi}{T}=2\\pi\\cdot10^{4}=20000\\pi$ רד/שנ'. משפט הדגימה (תנאי מספיק): אם $X(j\\omega)=0$ עבור $|\\omega|>\\omega_M$ ו-$\\omega_s>2\\omega_M$, אפשר לשחזר את $x(t)$ במדויק מ-$x_p(t)$. כאן התנאי הוא $\\omega_M<\\dfrac{\\omega_s}{2}=10000\\pi$ (שקול: $T<\\dfrac{\\pi}{\\omega_M}$).\n\n$\\omega_M=5000\\pi<10000\\pi$, כלומר קצב נייקוויסט $2\\omega_M=10000\\pi<\\omega_s$ (שקול: $T_{max}=\\frac{2\\pi}{10000\\pi}=2\\cdot10^{-4}$ שנ' $>T=10^{-4}$).\n\n**תשובה: כן**, אפשר לשחזר."
+    },
+    {
+     "label": "ב",
+     "text": "$X(j\\omega)=0$ for $|\\omega|>15000\\pi$",
+     "box": [
+      185,
+      759,
+      800,
+      778
+     ],
+     "lines": 1,
+     "solution": "$\\omega_M=15000\\pi$, קצב נייקוויסט $2\\omega_M=30000\\pi>\\omega_s=20000\\pi$ (שקול: $T_{max}=\\frac{2\\pi}{30000\\pi}\\approx0.67\\cdot10^{-4}$ שנ' $<T=10^{-4}$ שנ'). התנאי של משפט הדגימה לא מתקיים.\n\n**תשובה: לא** – המשפט אינו מבטיח שחזור (אכן, עבור אות שרוחב הפס שלו מגיע עד $15000\\pi$ מתקבלת חפיפה בין העתקי הספקטרום, כי המרחק בין העתקים הוא $20000\\pi<2\\cdot 15000\\pi$)."
+    },
+    {
+     "label": "ג",
+     "text": "$\\mathcal{Re}\\{X(j\\omega)\\}=0$ for $|\\omega|>5000\\pi$",
+     "box": [
+      185,
+      779,
+      800,
+      799
+     ],
+     "lines": 1,
+     "solution": "התנאי מגביל רק את **החלק הממשי** של $X(j\\omega)$. החלק המדומה $\\mathcal{Im}\\{X(j\\omega)\\}$ אינו מוגבל, ולכן $X(j\\omega)$ יכול להיות שונה מאפס בכל התדרים ורוחב הפס של $x(t)$ לא ידוע (ייתכן אף אינסופי).\n\n**תשובה: לא** – אין ערובה לכך שהתנאי $\\omega_s>2\\omega_M$ מתקיים."
+    },
+    {
+     "label": "ד",
+     "text": "$x(t)$ real and $X(j\\omega)=0$ for $\\omega>5000\\pi$",
+     "box": [
+      185,
+      801,
+      800,
+      820
+     ],
+     "lines": 1,
+     "solution": "$x(t)$ ממשי, ולכן $X(-j\\omega)=X^*(j\\omega)$ (סימטריה צמודה). אם $X(j\\omega)=0$ לכל $\\omega>5000\\pi$, אז גם $X(j\\omega)=0$ לכל $\\omega<-5000\\pi$. כלומר $X(j\\omega)=0$ עבור $|\\omega|>5000\\pi$ – בדיוק התנאי של סעיף א.\n\n**תשובה: כן**."
+    },
+    {
+     "label": "ה",
+     "text": "$x(t)$ real and $X(j\\omega)=0$ for $\\omega<-15000\\pi$",
+     "box": [
+      185,
+      822,
+      800,
+      841
+     ],
+     "lines": 1,
+     "solution": "כמו בסעיף ד, אות ממשי מקיים $|X(j\\omega)|=|X(-j\\omega)|$, ולכן $X(j\\omega)=0$ גם עבור $\\omega>15000\\pi$. כלומר $X(j\\omega)=0$ עבור $|\\omega|>15000\\pi$ – התנאי של סעיף ב ($\\omega_M=15000\\pi>10000\\pi$).\n\n**תשובה: לא**."
+    },
+    {
+     "label": "ו",
+     "text": "$X(j\\omega)*X(j\\omega)=0$ for $|\\omega|>15000\\pi$",
+     "box": [
+      185,
+      842,
+      800,
+      862
+     ],
+     "lines": 1,
+     "solution": "אם $X(j\\omega)$ מרוכז בתחום $[a,b]$ (כלומר מתאפס מחוץ לו), אז תומך הקונבולוציה $X*X$ הוא $[2a,2b]$ (משפט טיצ'מרש לתומכים חסומים: קצוות התומך של קונבולוציה הם סכומי הקצוות). לכן\n\n$$2a\\ge-15000\\pi,\\quad 2b\\le15000\\pi\\ \\Rightarrow\\ -7500\\pi\\le a\\le b\\le7500\\pi.$$\n\nכלומר $X(j\\omega)=0$ עבור $|\\omega|>7500\\pi$ ו-$\\omega_M=7500\\pi<10000\\pi$ (קצב נייקוויסט $15000\\pi<20000\\pi=\\omega_s$; שקול: $T_{max}=\\frac{2\\pi}{15000\\pi}\\approx1.33\\cdot10^{-4}$ שנ' $>T$).\n\n**תשובה: כן**."
+    },
+    {
+     "label": "ז",
+     "text": "$|X(j\\omega)|=0$ for $\\omega>5000\\pi$",
+     "box": [
+      185,
+      864,
+      800,
+      884
+     ],
+     "lines": 1,
+     "solution": "התנאי $|X(j\\omega)|=0$ שקול ל-$X(j\\omega)=0$ עבור $\\omega>5000\\pi$ בלבד, כלומר **רק בתדרים החיוביים**. בניגוד לסעיף ד, לא נאמר ש-$x(t)$ ממשי, ולכן אין סימטריה צמודה ו-$X(j\\omega)$ עבור $\\omega<-5000\\pi$ אינו מוגבל. למשל, אות מרוכב שהספקטרום שלו ממוקם ב-$[-30000\\pi,0]$ מקיים את התנאי, אבל רוחב הפס שלו $30000\\pi>10000\\pi$ ויש aliasing. \n\n**תשובה: לא** – אין ערובה לשחזור (מלבד אם ידוע ש-$x(t)$ ממשי, ואז התשובה הייתה כמו בסעיף א).\n\n*הערה: בפתרון הסרוק שבקובץ התקבל שהתשובה זהה לסעיף א — נראה ששם הוסק בטעות שגם $X(j\\omega)=0$ עבור $\\omega<-5000\\pi$, מה שנכון רק לאות ממשי, ולא נאמר כך בסעיף ז.*"
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "topics": [
+    "t2"
+   ],
+   "stem": "7.22. The signal $y(t)$ is generated by convolving a band-limited signal $x_1(t)$ with another band-limited signal $x_2(t)$, that is, $$y(t)=x_1(t)*x_2(t)$$ where $$X_1(j\\omega)=0\\ \\text{ for } |\\omega|>1000\\pi,\\qquad X_2(j\\omega)=0\\ \\text{ for } |\\omega|>2000\\pi.$$ Impulse-train sampling is performed on $y(t)$ to obtain $$y_p(t)=\\sum_{n=-\\infty}^{+\\infty}y(nT)\\,\\delta(t-nT).$$",
+   "figures": [],
+   "regions": [
+    {
+     "page": 101,
+     "view": [
+      935,
+      377
+     ],
+     "box": [
+      135,
+      5,
+      800,
+      300
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "",
+     "text": "Specify the range of values for the sampling period $T$ which ensures that $y(t)$ is recoverable from $y_p(t)$.",
+     "box": [
+      135,
+      322,
+      800,
+      376
+     ],
+     "lines": 2,
+     "solution": "**מוסכמות:** $\\omega$ ברד/שנ', $\\omega_s=2\\pi/T$.\n\n**שלב 1 – ספקטרום $y$.** קונבולוציה בזמן היא כפל בתדר:\n\n$$Y(j\\omega)=X_1(j\\omega)X_2(j\\omega)$$\n\nהמכפלה מתאפסת בכל תדר שבו **אחד** הגורמים מתאפס. $X_1$ מתאפס עבור $|\\omega|>1000\\pi$, ולכן גם $Y(j\\omega)=0$ עבור $|\\omega|>1000\\pi$, כלומר $\\omega_M=1000\\pi$ (ולא $2000\\pi$; ה-$2000\\pi$ של $X_2$ אינו משפיע כי ב-$1000\\pi<|\\omega|<2000\\pi$ ממילא $X_1=0$).\n\n**שלב 2 – תנאי נייקוויסט.** נדרש $\\omega_s>2\\omega_M$:\n\n$$\\frac{2\\pi}{T}>2000\\pi\\ \\Longrightarrow\\ T<\\frac{2\\pi}{2000\\pi}=10^{-3}\\ \\text{שנ'}$$\n\n**בדיקה:** ב-$T=10^{-3}$ בדיוק $\\omega_s=2000\\pi=2\\omega_M$ – מקרה קצה שבו המשפט דורש אי-שוויון חזק (למשל $\\sin(\\omega_Mt)$ נדגם באפסים). עבור $T<10^{-3}$ ההעתקים אינם חופפים.\n\n**תשובה:** $0<T<10^{-3}$ שנ'.\n\n*התאמה לפתרון הסרוק:* זהה."
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "topics": [
+    "t2",
+    "t3"
+   ],
+   "stem": "7.25. In Figure P7.25 is a sampler, followed by an ideal lowpass filter, for reconstruction of $x(t)$ from its samples $x_p(t)$. From the sampling theorem, we know that if $\\omega_s=2\\pi/T$ is greater than twice the highest frequency present in $x(t)$ and $\\omega_c=\\omega_s/2$, then the reconstructed signal $x_r(t)$ will exactly equal $x(t)$. If this condition on the bandwidth of $x(t)$ is violated, then $x_r(t)$ will *not* equal $x(t)$. We seek to show in this problem that if $\\omega_c=\\omega_s/2$, then for any choice of $T$, $x_r(t)$ and $x(t)$ will always be equal at the sampling instants; that is, $$x_r(kT)=x(kT),\\quad k=0,\\pm1,\\pm2,\\ldots.$$",
+   "figures": [
+    "Figure P7.25: $x(t)$ מוכפל ברכבת הלמים $p(t)=\\sum_{n}\\delta(t-nT)$ ונותן $x_p(t)$, שעובר במסנן $H(j\\omega)$ מלבני (מעביר נמוכים אידיאלי) בגובה $T$ ובתחום $[-\\omega_c,\\omega_c]$, והפלט $x_r(t)$"
+   ],
+   "regions": [
+    {
+     "page": 2,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      135,
+      280,
+      800,
+      470
+     ]
+    },
+    {
+     "page": 2,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      135,
+      470,
+      800,
+      670
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "",
+     "text": "To obtain this result, consider eq. (7.11), which expresses $x_r(t)$ in terms of the samples of $x(t)$: $$x_r(t)=\\sum_{n=-\\infty}^{\\infty}x(nT)\\,T\\,\\frac{\\omega_c}{\\pi}\\,\\frac{\\sin[\\omega_c(t-nT)]}{\\omega_c(t-nT)}.$$ With $\\omega_c=\\omega_s/2$, this becomes $$x_r(t)=\\sum_{n=-\\infty}^{\\infty}x(nT)\\,\\frac{\\sin\\left[\\frac{\\pi}{T}(t-nT)\\right]}{\\frac{\\pi}{T}(t-nT)}.\\qquad\\text{(P7.25-1)}$$ By considering the values of $\\alpha$ for which $[\\sin(\\alpha)]/\\alpha=0$, show from eq. (P7.25-1) that, without any restrictions on $x(t)$, $x_r(kT)=x(kT)$ for any integer value of $k$.",
+     "box": [
+      185,
+      676,
+      800,
+      956
+     ],
+     "lines": 8,
+     "solution": "**מוסכמות:** $\\omega_s=2\\pi/T$, ולכן $\\omega_c=\\omega_s/2=\\pi/T$ ו-$T\\frac{\\omega_c}{\\pi}=1$ (זה מסביר למה (7.11) הופך ל-(P7.25-1)).\n\n**שלב 1 – הצבת $t=kT$ ב-(P7.25-1).** הארגומנט של ה-sinc הוא $\\frac{\\pi}{T}(kT-nT)=\\pi(k-n)$, ולכן\n\n$$x_r(kT)=\\sum_{n=-\\infty}^{\\infty}x(nT)\\,\\frac{\\sin[\\pi(k-n)]}{\\pi(k-n)}$$\n\n**שלב 2 – ערכי ה-sinc.** נסמן $\\alpha=\\pi(k-n)$, כאשר $k,n$ שלמים.\n\n- אם $n\\neq k$: $k-n$ שלם שונה מאפס, ולכן $\\alpha$ הוא כפולה שלמה שונה מאפס של $\\pi$, כלומר $\\sin\\alpha=0$ ו-$\\frac{\\sin\\alpha}{\\alpha}=0$.\n- אם $n=k$: $\\alpha=0$ ו-$\\lim_{\\alpha\\to0}\\frac{\\sin\\alpha}{\\alpha}=1$.\n\n**שלב 3 – סכום.** כל האיברים בסכום מתאפסים פרט לאיבר $n=k$, שמקבל משקל 1:\n\n$$x_r(kT)=x(kT)\\cdot1=x(kT),\\qquad k=0,\\pm1,\\pm2,\\ldots$$\n\n**הערות.** (1) לא נדרשה שום הנחה על רוחב הפס של $x(t)$ – רק על כך ש-$\\omega_c=\\omega_s/2$. (2) משמעות: פונקציית ה-sinc היא גרעין אינטרפולציה – היא שווה 1 בנקודת הדגימה שלה ו-0 בכל שאר נקודות הדגימה, ולכן השחזור עובר דרך כל הדגימות גם כשיש aliasing (בין הדגימות הוא יכול להיות שונה מ-$x(t)$).\n\n*התאמה לפתרון הסרוק:* זהה."
+    }
+   ]
+  },
+  {
+   "number": 5,
+   "topics": [
+    "t2",
+    "t4"
+   ],
+   "stem": "7.38. It is frequently necessary to display on an oscilloscope screen waveforms having very short time structures—for example, on the scale of thousandths of a nanosecond. Since the rise time of the fastest oscilloscope is longer than this, such displays cannot be achieved directly. If however, the waveform is periodic, the desired result can be obtained indirectly by using an instrument called a sampling oscilloscope. The idea, as shown in Figure P7.38(a), is to sample the fast waveform $x(t)$ once each period, but at successively later points in successive periods. The increment $\\Delta$ should be an appropriately chosen sampling interval in relation to the bandwidth of $x(t)$. If the resulting impulse train is then passed through an appropriate interpolat-",
+   "figures": [
+    "Figure P7.38(a): שלושה גרפים אחד מעל השני – $x(t)$ מחזורי עם מחזור $T$, רכבת ההלמים $p(t)$ שבה המרחק בין הלמים סמוכים הוא $T+\\Delta$ (כל הלם מוסט ב-$\\Delta$ ביחס למחזור), ו-$y(t)$ המתקבל מהשחזור (גל איטי)",
+    "Figure P7.38(b): דיאגרמת בלוקים – $x(t)$ מחזורי במחזור $T$ עם $|X(j\\omega)|=0$ עבור $|\\omega|>W_x$ מוכפל ב-$p(t)=\\sum\\delta[t-n(T+\\Delta)]$, ועובר דרך $H(j\\omega)$ ל-$y(t)$; $H(j\\omega)=1$ עבור $|\\omega|<\\frac{1}{2(T+\\Delta)}$ ו-0 אחרת"
+   ],
+   "regions": [
+    {
+     "page": 3,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      135,
+      110,
+      800,
+      310
+     ]
+    },
+    {
+     "page": 3,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      190,
+      311,
+      800,
+      850
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "",
+     "text": "ing lowpass filter, the output $y(t)$ will be proportional to the original fast waveform slowed down or stretched out in time [i.e., $y(t)$ is proportional to $x(at)$, where $a<1$]. For $x(t)=A+B\\cos[(2\\pi/T)t+\\theta]$, find a range of values of $\\Delta$ such that $y(t)$ in Figure P7.38(b) is proportional to $x(at)$ with $a<1$. Also, determine the value of $a$ in terms of $T$ and $\\Delta$.",
+     "box": [
+      135,
+      863,
+      800,
+      968
+     ],
+     "lines": 5,
+     "solution": "**מוסכמות:** $\\omega$ ברד/שנ'. נסמן $\\omega_0=2\\pi/T$ (תדר $x$), $T_s=T+\\Delta$ (מחזור הדגימה), $\\omega_s=\\dfrac{2\\pi}{T+\\Delta}$. נניח $\\Delta>0$ ($\\Delta=0$ נותן דגימה באותה נקודה בכל מחזור, כלומר $y$ קבוע, ללא התארכות).\n\n**שלב 1 – ספקטרום האות.**\n\n$$X(j\\omega)=2\\pi A\\,\\delta(\\omega)+\\pi B\\left[e^{j\\theta}\\delta(\\omega-\\omega_0)+e^{-j\\theta}\\delta(\\omega+\\omega_0)\\right]$$\n\n**שלב 2 – דגימה.** $P(j\\omega)=\\omega_s\\sum_k\\delta(\\omega-k\\omega_s)$, ולכן ספקטרום האות הדגום הוא $\\frac{1}{T_s}\\sum_k X(j(\\omega-k\\omega_s))$: העתקים של $0,\\pm\\omega_0$ סביב כל כפולה של $\\omega_s$. הרכיב הקרוב ביותר לראשית (פרט ל-DC) הוא ההעתק של $\\omega_0$ ב-$\\omega_0-\\omega_s$:\n\n$$\\omega_0-\\omega_s=\\frac{2\\pi}{T}-\\frac{2\\pi}{T+\\Delta}=\\frac{2\\pi\\Delta}{T(T+\\Delta)}\\equiv\\delta_0$$\n\n**שלב 3 – תנאי על המסנן.** הרכיבים בתדרים $0,\\pm\\delta_0$ חייבים להיכנס לפס ההעברה, והעתקים אחרים (הראשון הוא ב-$\\omega_s-\\delta_0$ ומעלה) חייבים להידחות. לפי האיור $H(j\\omega)=1$ עבור $|\\omega|<\\dfrac{1}{2(T+\\Delta)}$, ולכן נדרש\n\n$$\\frac{2\\pi\\Delta}{T(T+\\Delta)}\\le\\frac{1}{2(T+\\Delta)}\\ \\Longrightarrow\\ \\Delta\\le\\frac{T}{4\\pi}$$\n\n(התנאי על דחיית שאר ההעתקים מתקיים אוטומטית: הם נמצאים ב-$\\omega_s-\\delta_0\\ge\\omega_s-\\frac{1}{2(T+\\Delta)}>\\frac{1}{2(T+\\Delta)}$.)\n\n**טווח:** $0<\\Delta\\le\\dfrac{T}{4\\pi}$.\n\n**שלב 4 – הפלט וקבוע ההאטה.** המוצא מכיל DC ורכיב ב-$\\delta_0$ בלבד:\n\n$$y(t)=\\frac{1}{T+\\Delta}\\left[A+B\\cos(\\delta_0t+\\theta)\\right]$$\n\nומאחר ש-$x(at)=A+B\\cos\\!\\left(\\tfrac{2\\pi a}{T}t+\\theta\\right)$, נדרוש $\\dfrac{2\\pi a}{T}=\\delta_0$:\n\n$$a=\\frac{\\delta_0}{\\omega_0}=\\frac{2\\pi\\Delta/[T(T+\\Delta)]}{2\\pi/T}=\\frac{\\Delta}{T+\\Delta}<1$$\n\nכלומר $y(t)=\\dfrac{1}{T+\\Delta}\\,x(at)$ – פקטור ההאטה הוא $\\dfrac{T+\\Delta}{\\Delta}$.\n\n**בדיקות.** $\\Delta\\to0$: $a\\to0$ (האטה אינסופית – רואים נקודה קבועה של המחזור). $\\Delta\\ll T$: $a\\approx\\Delta/T$. הערה: אם חיתוך המסנן היה $\\omega_s/2=\\frac{\\pi}{T+\\Delta}$ (קריאה \"סטנדרטית\"), היה מתקבל $\\Delta<T/2$; כאן נעשה שימוש בערך המצוין באיור, וכך גם בפתרון הסרוק.\n\n*התאמה לפתרון הסרוק:* זהה ($\\Delta\\le T/4\\pi$, $a=\\Delta/(T+\\Delta)$)."
+    }
+   ]
+  },
+  {
+   "number": 6,
+   "topics": [
+    "t2",
+    "t3",
+    "t5"
+   ],
+   "stem": "7.41. In many practical situations a signal is recorded in the presence of an echo, which we would like to remove by appropriate processing. For example, in Figure P7.41(a), we illustrate a system in which a receiver simultaneously receives a signal $x(t)$ and an echo represented by an attenuated delayed replication of $x(t)$. Thus, the receiver output is $s(t)=x(t)+\\alpha x(t-T_0)$, where $|\\alpha|<1$. This output is to be processed to recover $x(t)$ by first converting to a sequence and then using an appropriate digital filter $h[n]$, as indicated in Figure P7.41(b). Assume that $x(t)$ is band limited [i.e., $X(j\\omega)=0$ for $|\\omega|>\\omega_M$] and that $|\\alpha|<1$.",
+   "figures": [
+    "Figure P7.41(a): איור של מקור, הד חוזר מקיר ($\\alpha x(t-T_0)$) ומקלט שמוצאו $s(t)=x(t)+\\alpha x(t-T_0)$",
+    "Figure P7.41(b): דיאגרמת בלוקים – $s_c(t)$ מוכפל ברכבת הלמים $p(t)=\\sum\\delta(t-kT)$ ל-$s_p(t)$, המרה מרכבת הלמים לסדרה $s[n]$, המסנן $h[n]$ ל-$y[n]$, המרה מסדרה לרכבת הלמים $y_p(t)$, ומסנן מעביר נמוכים אידיאלי $H(j\\omega)$ בהגבר $A$ ובתחום $[-\\pi/T,\\pi/T]$ ל-$y_c(t)$"
+   ],
+   "regions": [
+    {
+     "page": 4,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      135,
+      110,
+      800,
+      300
+     ]
+    },
+    {
+     "page": 4,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      135,
+      485,
+      800,
+      925
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "א",
+     "text": "If $T_0<\\pi/\\omega_M$, and the sampling period is taken to be equal to $T_0$ (i.e., $T=T_0$), determine the difference equation for the digital filter $h[n]$ such that $y_c(t)$ is proportional to $x(t)$.",
+     "box": [
+      185,
+      301,
+      800,
+      361
+     ],
+     "lines": 3,
+     "solution": "**מוסכמות:** $\\Omega$ הוא תדר בדיד (רד/דגימה), $x[n]=x(nT_0)$, $s[n]=s_c(nT_0)$; $\\omega$ ברד/שנ'. נדרש ש-$y_c(t)$ יהיה שווה ל-$x(t)$ (עד קבוע), ולכן די שיתקיים $y[n]=x[n]$ וש-$T_0<\\pi/\\omega_M$ (אין aliasing).\n\n**שלב 1 – הדגימות.** עם $T=T_0$:\n\n$$s[n]=s_c(nT_0)=x(nT_0)+\\alpha x(nT_0-T_0)=x[n]+\\alpha x[n-1]$$\n\n**שלב 2 – המסנן ההופכי.** נדרש $y[n]=x[n]$. בתחום התדר $S(e^{j\\Omega})=(1+\\alpha e^{-j\\Omega})X(e^{j\\Omega})$, ולכן\n\n$$H(e^{j\\Omega})=\\frac{Y(e^{j\\Omega})}{S(e^{j\\Omega})}=\\frac{X(e^{j\\Omega})}{(1+\\alpha e^{-j\\Omega})X(e^{j\\Omega})}=\\frac{1}{1+\\alpha e^{-j\\Omega}}$$\n\n**שלב 3 – משוואת הפרשים.** $Y(1+\\alpha e^{-j\\Omega})=S$, כלומר\n\n$$y[n]+\\alpha\\,y[n-1]=s[n]$$\n\n**בדיקות.** הצבה: $y[n]=x[n]$ נותן $x[n]+\\alpha x[n-1]=s[n]$ ✓. המסנן סיבתי ויציב כי הקוטב ב-$z=-\\alpha$ ו-$|\\alpha|<1$.\n\n**תשובה:** $y[n]+\\alpha y[n-1]=s[n]$."
+    },
+    {
+     "label": "ב",
+     "text": "With the assumptions of part (a), specify the gain $A$ of the ideal lowpass filter such that $y_c(t)=x(t)$.",
+     "box": [
+      185,
+      362,
+      800,
+      402
+     ],
+     "lines": 2,
+     "solution": "**שלב 1 – המערכת הרציפה השקולה.** (בהמשך לסעיף א, $T=T_0$.) הדגימה באימפולסים נותנת $S_p(j\\omega)=\\frac{1}{T_0}\\sum_kS_c(j(\\omega-k\\omega_s))$, ועבור $|\\omega|<\\pi/T_0$ (ללא aliasing) $S_p(j\\omega)=\\frac{1}{T_0}S_c(j\\omega)$. המסנן הדיגיטלי מכפיל את הספקטרום ב-$H(e^{j\\omega T_0})$ (הקשר $\\Omega=\\omega T_0$), והמסנן האידיאלי בעל הגבר $A$ ותחום $[-\\pi/T_0,\\pi/T_0]$ מעביר רק את התחום הזה:\n\n$$H_{eq}(j\\omega)=\\frac{Y_c(j\\omega)}{S_c(j\\omega)}=\\frac{A}{T_0}H(e^{j\\omega T_0}),\\qquad|\\omega|<\\frac{\\pi}{T_0}$$\n\n**שלב 2 – המטרה.** $S_c(j\\omega)=(1+\\alpha e^{-j\\omega T_0})X(j\\omega)$ ולכן כדי ש-$y_c=x$ נדרש\n\n$$H_{eq}(j\\omega)=\\frac{1}{1+\\alpha e^{-j\\omega T_0}}$$\n\n**שלב 3 – השוואה.** עם $H(e^{j\\Omega})=\\dfrac{1}{1+\\alpha e^{-j\\Omega}}$ מסעיף א: $\\dfrac{A}{T_0}\\cdot\\dfrac{1}{1+\\alpha e^{-j\\omega T_0}}=\\dfrac{1}{1+\\alpha e^{-j\\omega T_0}}$, כלומר $\\dfrac{A}{T_0}=1$.\n\n**תשובה:** $A=T_0$.\n\n**בדיקה:** הגדלת $A$ ב-$T$ מקזזת את הגורם $\\frac1T$ שמוסיפה הדגימה באימפולסים, כמו בשחזור סטנדרטי (מסנן בהגבר $T$)."
+    },
+    {
+     "label": "ג",
+     "text": "Now suppose that $\\pi/\\omega_M<T_0<2\\pi/\\omega_M$. Determine a choice for the sampling period $T$, the lowpass filter gain $A$, and the frequency response for the digital filter $h[n]$ such that $y_c(t)$ is proportional to $x(t)$.",
+     "box": [
+      185,
+      403,
+      800,
+      467
+     ],
+     "lines": 3,
+     "solution": "**מוסכמות:** כמו בסעיפים הקודמים. כעת $T_0\\ge\\pi/\\omega_M$, ולכן דגימה ב-$T=T_0$ גורמת ל-aliasing ($\\omega_s=2\\pi/T_0<2\\omega_M$).\n\n**שלב 1 – בחירת $T$.** נבחר $T$ שמקיים את משפט הדגימה עבור $x$: $T<\\dfrac{\\pi}{\\omega_M}$. מאחר ש-$T_0<\\dfrac{2\\pi}{\\omega_M}$, בחירה נוחה היא\n\n$$T=\\frac{T_0}{2}\\quad\\left(<\\frac{\\pi}{\\omega_M}\\right)$$\n\n(כך ש-$T_0$ הוא כפולה שלמה של $T$ והמסנן הדיגיטלי יהיה ניתן למימוש במשוואת הפרשים; בכלל, כל $T<\\pi/\\omega_M$ מתאים, ואז המסנן הרצוי הוא $\\frac{1}{1+\\alpha e^{-j\\Omega T_0/T}}$).\n\n**שלב 2 – ההגבר.** כמו בסעיף ב: $H_{eq}(j\\omega)=\\dfrac{A}{T}H(e^{j\\omega T})$ בתחום $|\\omega|<\\pi/T$, ולכן $A=T$ (עבור הבחירה: $A=T_0/2$).\n\n**שלב 3 – המסנן הדיגיטלי.** צריך $H_{eq}(j\\omega)=\\dfrac{1}{1+\\alpha e^{-j\\omega T_0}}$ בתחום התדרים של $x$, $|\\omega|\\le\\omega_M$. עם $\\Omega=\\omega T$:\n\n$$H(e^{j\\Omega})=\\frac{1}{1+\\alpha e^{-j\\Omega T_0/T}},\\qquad|\\Omega|\\le\\pi$$\n\nעבור $T=T_0/2$ מתקבל $T_0/T=2$:\n\n$$H(e^{j\\Omega})=\\frac{1}{1+\\alpha e^{-j2\\Omega}}\\ \\Longleftrightarrow\\ y[n]+\\alpha\\,y[n-2]=s[n]$$\n\n**בדיקה.** (1) עם $T=T_0/2$ הדגימות הן $s[n]=s_c(nT_0/2)=x[n]+\\alpha x[n-2]$ (עיכוב של $T_0$ הוא שתי דגימות), ולכן $y[n]=x[n]$ נותן $x[n]+\\alpha x[n-2]=s[n]$ ✓ – בדיוק משוואת ההפרשים. (2) יציבות: שורשי $z^2+\\alpha=0$ הם $\\pm\\sqrt{-\\alpha}$ במודול $\\sqrt{|\\alpha|}<1$ ✓. (3) $T=T_0/2<\\pi/\\omega_M$ ✓ מתנאי השאלה.\n\n**תשובה:** $T=T_0/2$ (או כל $T<\\pi/\\omega_M$), $A=T$ ($=T_0/2$), $H(e^{j\\Omega})=\\dfrac{1}{1+\\alpha e^{-j\\Omega T_0/T}}$, ובבחירה $T=T_0/2$: $y[n]+\\alpha y[n-2]=s[n]$.\n\n*התאמה לפתרון הסרוק:* זהה (הפתרון הסרוק נותן $T<\\pi/\\omega_M$, $A=T$, $H=\\frac{1}{1+\\alpha e^{-j\\Omega T_0/T}}$; כאן הוספנו בחירה קונקרטית)."
+    }
+   ]
+  },
+  {
+   "number": 7,
+   "points": 30,
+   "topics": [
+    "t3"
+   ],
+   "stem": "שאלה ממבחן 2010 מועד א'. שאלה 2. כמהנדס/ת עיבוד אותות הוטלה עליך המשימה לפיתוח מערכת לשחזור אות דגום. בשאלה זו מטרתך לנתח את המערכת, כפי שמפורטת בהמשך. המערכת מקבלת בכניסתה את האות הבא: $$x_s(t)=\\sum_{n=-\\infty}^{\\infty}x(nT)\\,\\delta(t-nT)$$ כאשר זמן הדגימה $T$ נתון, וגם נתון שהאות המקורי $x(t)$ נדגם תוך קיום תנאי הדגימה לקבלת הדגימות: $$x(nT)=x(t)\\big|_{t=nT}\\ \\forall n$$ בשלב הבא $x_s(t)$ עובר דרך מסנן בעל תגובה להלם: $$g(t)=\\frac{1}{\\tau}e^{-t/\\tau}\\cdot\\Pi\\!\\left(\\frac{t-0.5\\tau}{\\tau}\\right)$$ לקבלת האות $y(t)$. האות $y(t)$ עובר דרך מסנן נוסף בעל תגובה להלם $h(t)$ שמוצאו, $z(t)$, אמור להיות שחזור מדויק ככל שניתן של $x(t)$. המערכת כולה מתוארת באיור 1.",
+   "figures": [
+    "איור 1: דיאגרמת בלוקים – $x_s(t)$ נכנס למסנן $g(t)$, המוצא $y(t)$ נכנס למסנן $h(t)$, והמוצא הוא $z(t)$"
+   ],
+   "regions": [
+    {
+     "page": 5,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      190,
+      108,
+      800,
+      690
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "א",
+     "points": 20,
+     "text": "הנח\\י בסעיף זה בלבד כי $\\tau=T$. צייר\\י דוגמא לאותות $x_s(t)$ ו-$y(t)$. פתח\\י ביטוי לתגובת התדר $H(j\\omega)$ של המסנן המשחזר, כך שיתקיים $z(t)=x(t)$. צייר\\י באופן מקורב את $|H(j\\omega)|$.",
+     "box": [
+      165,
+      707,
+      800,
+      852
+     ],
+     "lines": 5,
+     "solution": "**מוסכמות:** $\\omega$ ברד/שנ', $\\omega_s=2\\pi/T$, $\\Pi(u)=1$ עבור $|u|<\\tfrac12$ ו-0 אחרת. מההנחה ש-$x(t)$ נדגם תוך קיום תנאי הדגימה: $X(j\\omega)=0$ עבור $|\\omega|\\ge\\omega_s/2=\\pi/T$. אז $X_s(j\\omega)=\\frac1T\\sum_kX(j(\\omega-k\\omega_s))$ ובתחום $|\\omega|<\\omega_s/2$ מתקבל $X_s(j\\omega)=\\frac1TX(j\\omega)$.\n\n**1. איור הדוגמה.** עם $\\tau=T$: $g(t)=\\frac1Te^{-t/T}$ בתחום $0<t<T$ ואפס מחוץ לו (דעיכה מ-$\\frac1T$ ל-$\\frac1Te^{-1}$ ב-$t=T$). \n\n$$y(t)=x_s(t)*g(t)=\\sum_nx(nT)\\,g(t-nT)$$\n\nכלומר $x_s(t)$ היא רכבת הלמים בנקודות $nT$ בעוצמות $x(nT)$; ו-$y(t)$ מורכב מקטעים: בכל מרווח $[nT,(n+1)T)$ אות דועך אקספוננציאלית שמתחיל בגובה $\\frac{x(nT)}{T}$ ומסתיים ב-$\\frac{x(nT)}{T}e^{-1}\\approx0.37\\cdot\\frac{x(nT)}{T}$, ואז קופץ לקטע הבא (הקטעים אינם חופפים כי רוחב הפולס $\\tau=T$ שווה למרווח הדגימה). \n\n**2. תגובת התדר $H(j\\omega)$.** נדרש $z=x$, כלומר $Z(j\\omega)=H(j\\omega)G(j\\omega)X_s(j\\omega)=X(j\\omega)$. מאחר ש-$X_s=\\frac1TX$ בתחום $|\\omega|<\\pi/T$, צריך\n\n$$H(j\\omega)G(j\\omega)=T\\cdot\\Pi\\!\\left(\\frac{\\omega}{\\omega_s}\\right)$$\n\n(מסנן מעביר נמוכים אידיאלי בהגבר $T$ שמבטל גם את ההעתקים, בתחום $|\\omega|<\\pi/T$). נחשב את $G$ עם $\\tau=T$:\n\n$$G(j\\omega)=\\int_0^T\\frac1Te^{-t/T}e^{-j\\omega t}dt=\\frac1T\\cdot\\frac{1-e^{-(1/T+j\\omega)T}}{1/T+j\\omega}=\\frac{1-e^{-1}e^{-j\\omega T}}{1+j\\omega T}$$\n\nולכן\n\n$$\\boxed{H(j\\omega)=\\frac{T\\,(1+j\\omega T)}{1-e^{-1}e^{-j\\omega T}}\\cdot\\Pi\\!\\left(\\frac{\\omega}{\\omega_s}\\right)}$$\n\n**תנאי קיום:** $G(j\\omega)\\ne0$ בתחום: $|1-e^{-1}e^{-j\\omega T}|\\ge1-e^{-1}>0$ ✓ (המסנן $H$ יציב במובן שהוא חסום בתחום).\n\n**3. שרטוט $|H(j\\omega)|$.**\n\n$$|H(j\\omega)|=T\\,\\frac{\\sqrt{1+\\omega^2T^2}}{\\sqrt{1-2e^{-1}\\cos\\omega T+e^{-2}}},\\qquad|\\omega|<\\frac{\\pi}{T}$$\n\nערכים: $|H(0)|=\\frac{T}{1-e^{-1}}\\approx1.58\\,T$; $|H(j\\pi/T)|=\\frac{T\\sqrt{1+\\pi^2}}{1+e^{-1}}\\approx2.41\\,T$. $|G|$ יורד מונוטונית מ-$0.63$ ל-$0.41$ בתחום $[0,\\pi/T]$ (למשל ב-$\\omega T=1$: $|G|\\approx0.61$; $\\omega T=2$: $\\approx0.54$; $\\omega T=3$: $\\approx0.43$), ולכן $|H|=T/|G|$ **עולה** בהדרגה מ-$\\approx1.58T$ ל-$\\approx2.41T$ ואז קופץ ל-0 ב-$|\\omega|=\\pi/T=\\omega_s/2$; סימטרי סביב $\\omega=0$. הגרף: קטע עולה (קעור כלפי מעלה) מ-$1.58T$ ל-$2.41T$ על $[-\\omega_s/2,\\omega_s/2]$, ואפס מחוץ לתחום – \"מעביר נמוכים\" שמפצה על הנפילה של $G$.\n\n**בדיקות.** $G(0)=1-e^{-1}$ = שטח $g$ ✓; $H(0)G(0)=T$ ✓; $\\omega\\to0$ של הביטוי הכללי מתיישב עם מסנן מפצה על ירידת $|G|$.\n\n*התאמה לפתרון הסרוק (בכתב יד):* זהה – $G(j\\omega)=\\frac{1-e^{-1}e^{-j\\omega T}}{1+j\\omega T}$, $H=T\\Pi(\\omega/\\omega_s)/G$, ושרטוט $|H|$ עולה בתחום $[0,\\omega_s/2]$."
+    },
+    {
+     "label": "ב",
+     "points": 10,
+     "text": "בסעיף זה בלבד הנח\\י כי $\\tau\\to0$. האם לדעתך ניתן לשחזר את $x(t)$ במקרה זה? אם כן, מהו המסנן המשחזר $H(j\\omega)$ במקרה זה? פרט\\י והסבר\\י. אם לדעתך לא ניתן לשחזר את $x(t)$, הסבר\\י מדוע.",
+     "box": [
+      165,
+      875,
+      800,
+      952
+     ],
+     "lines": 3,
+     "solution": "**מוסכמות:** כמו בסעיף א; $X(j\\omega)=0$ עבור $|\\omega|\\ge\\pi/T$, $X_s(j\\omega)=\\frac1TX(j\\omega)$ בתחום $|\\omega|<\\pi/T$.\n\n**1. מה קורה ל-$g(t)$ כש-$\\tau\\to0$?** $g(t)=\\frac1\\tau e^{-t/\\tau}\\Pi\\!\\left(\\frac{t-0.5\\tau}{\\tau}\\right)$ היא פולס על $[0,\\tau]$ ששטחו \n\n$$\\int_0^\\tau\\frac1\\tau e^{-t/\\tau}dt=1-e^{-1}\\equiv\\alpha\\approx0.632$$\n\n(לכל $\\tau$). כש-$\\tau\\to0$ הפולס הופך צר מאוד וגבוה מאוד ושטחו נשאר $\\alpha$, כלומר\n\n$$g(t)\\to\\alpha\\,\\delta(t)$$\n\n(אותה מסקנה מ-$G(j\\omega)=\\frac{1-e^{-1}e^{-j\\omega\\tau}}{1+j\\omega\\tau}\\xrightarrow{\\tau\\to0}1-e^{-1}$ – קבוע בכל התדרים).\n\n**2. האות $y(t)$.** $y(t)=x_s(t)*g(t)\\to\\alpha\\,x_s(t)$. כלומר $y(t)$ הוא האות הדגום בהגבר $\\alpha$ – אין עיוות תדר, רק הנחתה.\n\n**3. שחזור.** **כן**, ניתן לשחזר: $x$ נדגם בקיום תנאי הדגימה, ולכן מסנן מעביר נמוכים אידיאלי בתחום $|\\omega|<\\pi/T$ משחזר אותו. צריך לבטל גם את ההנחתה $\\alpha$ וגם את הגורם $\\frac1T$:\n\n$$H(j\\omega)\\cdot\\alpha\\cdot\\frac1T=1\\ \\text{ בתחום}\\ \\Longrightarrow\\ \\boxed{H(j\\omega)=\\frac{T}{1-e^{-1}}\\,\\Pi\\!\\left(\\frac{\\omega}{\\omega_s}\\right)}$$\n\nכלומר מסנן מעביר נמוכים אידיאלי (חיתוך $\\omega_s/2=\\pi/T$) בהגבר $\\frac{T}{1-e^{-1}}\\approx1.58\\,T$ – בדיוק הערך של $|H(0)|$ מסעיף א.\n\n**בדיקה:** $\\tau\\to0$ בביטוי של סעיף א: $G\\to\\alpha$ ולכן $H=\\frac{T}{\\alpha}\\Pi(\\omega/\\omega_s)$ ✓. **הערה:** $\\tau\\to0$ הוא אידיאליזציה (אין אות פיזי עם הלמים אמיתיים); בפועל $\\tau$ קטן אך סופי והמסנן נקבע כמו בסעיף א.\n\n*התאמה לפתרון הסרוק (בכתב יד):* זהה – $g(t)\\to\\alpha\\delta(t)$, $y=\\alpha x_s$ וניתן לשחזר במסנן מעביר נמוכים."
+    }
+   ]
+  }
+ ]
+}
