@@ -374,6 +374,14 @@
  ],
  "exams": [
   {
+   "title": "מבחן 2026 סמסטר א' מועד א' (גיא כהן)",
+   "year": "2026",
+   "term": "מועד א",
+   "url": "https://drive.google.com/file/d/18TBKjzXXx7ED0O0L6Gb4yO-lwcVwP9r_/view?usp=drivesdk",
+   "has_solution": false,
+   "questions": []
+  },
+  {
    "title": "מבחן 2008 מועד א' (סמסטר ב' תשס\"ח, ד\"ר גיא כהן)",
    "year": "2008",
    "term": "מועד א",
