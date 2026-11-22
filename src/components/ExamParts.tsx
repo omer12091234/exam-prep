@@ -1,4 +1,5 @@
 import { MathText } from "@/components/MathText";
+import { Translation } from "@/components/SubCard";
 import { markdownHtml } from "@/lib/richtext";
 
 type Image = { id: string; path: string; role: string };
@@ -21,10 +22,12 @@ export function Crop({ src, alt }: { src: string; alt: string }) {
 export function QuestionStem({
   number,
   stemText,
+  stemTextHe,
   images,
 }: {
   number: number;
   stemText: string | null;
+  stemTextHe?: string | null;
   images: Image[];
 }) {
   return (
@@ -32,6 +35,11 @@ export function QuestionStem({
       {stemText && (
         <div className="mb-3 leading-8" dir="auto">
           <MathText text={stemText} />
+        </div>
+      )}
+      {stemText && stemTextHe && (
+        <div className="-mt-2 mb-3">
+          <Translation text={stemTextHe} />
         </div>
       )}
       {images.map((img) => (

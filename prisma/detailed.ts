@@ -10,13 +10,21 @@ import type {
   ProgressStatus,
 } from "../src/generated/prisma/client";
 
-type Sub = { label: string; points?: number; text: string; solution?: string };
+type Sub = {
+  label: string;
+  points?: number;
+  text: string;
+  /** Hebrew translation when the text is in English */
+  text_he?: string;
+  solution?: string;
+};
 type Q = {
   number: number;
   /** topic keys of the course ("t3"); used by practice sheets */
   topics?: string[];
   points?: number;
   stem: string;
+  stem_he?: string;
   figures?: string[];
   subs: Sub[];
 };
@@ -148,6 +156,7 @@ export async function importDetailed(
       label: null,
       points: q.points ?? null,
       stemText: q.stem,
+      stemTextHe: q.stem_he ?? null,
       figuresNote: q.figures?.join("\n") ?? null,
       needsReview: false,
     };
@@ -176,6 +185,7 @@ export async function importDetailed(
         order,
         points: s.points ?? null,
         text: s.text,
+        textHe: s.text_he ?? null,
       };
       await db.subQuestion.upsert({
         where: { id: subQuestionId },

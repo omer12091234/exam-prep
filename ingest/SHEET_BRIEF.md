@@ -23,3 +23,9 @@ sheet's number and title.
 - Solutions follow the same rules as for exams: complete, step by step, in Hebrew, formulas in
   `$…$`, checked. Course material is DSP / signals, so state conventions (e.g. $\omega$ in
   rad/sample, DFT length $N$, $W_N=e^{-j2\pi/N}$).
+- **Translation**: when the sheet's text is in English (or any language other than Hebrew), add a
+  faithful Hebrew translation next to the original: `"stem_he"` on the question (translation of
+  `stem`, omit if the stem is empty) and `"text_he"` on every part (translation of `text`). Keep
+  every formula exactly as in the original (same `$…$`), translate only the words; keep technical
+  terms the course uses in English where natural (e.g. "aliasing", "Nyquist rate" →
+  "קצב נייקוויסט (Nyquist rate)"). Hebrew sheets need no translation fields.

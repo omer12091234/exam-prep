@@ -206,6 +206,7 @@ async function Exam({ params }: { params: Promise<{ id: string }> }) {
             <QuestionStem
               number={q.number}
               stemText={q.stemText}
+              stemTextHe={q.stemTextHe}
               images={q.images}
             />
 

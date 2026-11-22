@@ -51,6 +51,7 @@ async function Topic({
               id: true,
               label: true,
               text: true,
+              textHe: true,
               points: true,
               difficulty: true,
               order: true,
@@ -63,6 +64,7 @@ async function Topic({
                   number: true,
                   label: true,
                   stemText: true,
+                  stemTextHe: true,
                   images: { orderBy: { order: "asc" } },
                   repeats: repeatsInclude,
                   exam: {
@@ -250,6 +252,7 @@ async function Topic({
             <QuestionStem
               number={g.q.number}
               stemText={g.q.stemText}
+              stemTextHe={g.q.stemTextHe}
               images={g.q.images}
             />
             <ol className="mt-3 flex flex-col gap-3">

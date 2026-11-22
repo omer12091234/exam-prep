@@ -34,6 +34,19 @@ export function Chip({
   );
 }
 
+/** The Hebrew translation under an English question or part. */
+export function Translation({ text }: { text: string }) {
+  return (
+    <div
+      dir="rtl"
+      className="mt-1 rounded-lg bg-neutral-50 px-3 py-1 leading-8 text-neutral-700 dark:bg-neutral-900 dark:text-neutral-300"
+    >
+      <span className="me-2 text-xs font-semibold text-neutral-500">תרגום</span>
+      <MathText text={text} />
+    </div>
+  );
+}
+
 /** One question part with its status buttons. Used on the exam page and on the topic page. */
 export function SubCard({
   sub,
@@ -46,6 +59,8 @@ export function SubCard({
     id: string;
     label: string;
     text: string;
+    /** Hebrew translation of an English part */
+    textHe?: string | null;
     points: number | null;
     difficulty: number | null;
   };
@@ -71,6 +86,7 @@ export function SubCard({
         ) : null}
         <MathText text={sub.text} />
       </div>
+      {sub.textHe && <Translation text={sub.textHe} />}
       {(diff || (topics && topics.length > 0)) && (
         <div className="mt-2 flex flex-wrap gap-1.5">
           {diff && (

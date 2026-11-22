@@ -53,6 +53,8 @@ for q in qs:
         errors.append(f"{w}: number must be a unique integer")
     seen.add(n)
     check_text(f"{w}.stem", q.get("stem", ""), need=False)
+    if "stem_he" in q:
+        check_text(f"{w}.stem_he", q["stem_he"], need=False)
     regs = q.get("regions") or []
     if not regs:
         errors.append(f"{w}: no regions")
@@ -70,6 +72,10 @@ for q in qs:
         labels.add(s.get("label"))
         check_text(f"{lw}.text", s.get("text", ""))
         check_text(f"{lw}.solution", s.get("solution", ""))
+        if "text_he" in s:
+            check_text(f"{lw}.text_he", s["text_he"])
+        elif kind == "sheets" and re.search(r"[A-Za-z]{4,}", re.sub(r"\$[^$]*\$", "", s.get("text", ""))):
+            errors.append(f"{lw}: English text needs a Hebrew translation (text_he)")
         if len(s.get("solution", "")) < 80:
             errors.append(f"{lw}: solution too short to be a worked solution")
         if len(s.get("box", [])) != 4 or not isinstance(s.get("lines"), int):

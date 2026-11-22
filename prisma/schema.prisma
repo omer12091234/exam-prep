@@ -221,6 +221,8 @@ model Question {
   label         String?
   points        Float?
   stemText      String // Hebrew + inline LaTeX ($...$)
+  /// Hebrew translation of stemText when the original is in another language
+  stemTextHe    String?
   figuresNote   String? // textual description of figures for accessibility/search
   difficulty    Float? // 1–5
   needsReview   Boolean         @default(true)
@@ -260,6 +262,8 @@ model SubQuestion {
   order       Int
   points      Float?
   text        String
+  /// Hebrew translation of text when the original is in another language
+  textHe      String?
   difficulty  Float?
   images      QuestionImage[]
   comments    LecturerComment[]
