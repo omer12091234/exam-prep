@@ -6,6 +6,7 @@ import { requireUser } from "@/lib/auth";
 import { MathText } from "@/components/MathText";
 import { ProgressBar } from "@/components/ProgressBar";
 import { QuestionTimer } from "@/components/QuestionTimer";
+import { RepeatNote, repeatsInclude } from "@/components/RepeatNote";
 import { Chip, SubCard } from "@/components/SubCard";
 import { examTitle } from "@/lib/courses";
 import { DIFFICULTY, difficultyLabel } from "@/lib/format";
@@ -57,6 +58,7 @@ async function Topic({
                   id: true,
                   number: true,
                   label: true,
+                  repeats: repeatsInclude,
                   exam: {
                     select: {
                       id: true,
@@ -238,6 +240,7 @@ async function Topic({
                 initialSeconds={times.get(g.q.id) ?? 0}
               />
             </div>
+            <RepeatNote repeats={g.q.repeats} />
             <ol className="flex flex-col gap-3">
               {g.subs.map((s) => (
                 <SubCard

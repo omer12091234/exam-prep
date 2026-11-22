@@ -12,7 +12,12 @@ import { existsSync, readFileSync } from "node:fs";
 import { PrismaPg } from "@prisma/adapter-pg";
 import { PrismaClient } from "../src/generated/prisma/client";
 import { runtimeDbUrl } from "../src/lib/dburl";
-import { importDetailed, loadDetailed, type Detailed } from "./detailed";
+import {
+  importDetailed,
+  importRepeats,
+  loadDetailed,
+  type Detailed,
+} from "./detailed";
 
 type Item = {
   num: string;
@@ -318,6 +323,9 @@ async function main() {
       await importDetailed(db, x.examId, course.id, x.detail);
       links.push(...(await tagExam(db, { id: x.examId }, x.items, topicId)));
     }
+    await importRepeats(db, slug, course.id, (title) =>
+      id(slug, "exam", title),
+    );
     await db.question.createMany({ data: questions, skipDuplicates: true });
     const have = new Map(
       (

@@ -5,7 +5,10 @@
  */
 import { createHash } from "node:crypto";
 import { existsSync, readdirSync, readFileSync } from "node:fs";
-import type { PrismaClient } from "../src/generated/prisma/client";
+import type {
+  PrismaClient,
+  ProgressStatus,
+} from "../src/generated/prisma/client";
 
 type Sub = { label: string; points?: number; text: string; solution?: string };
 type Q = {
@@ -109,6 +112,25 @@ export async function importDetailed(
   });
 
   const qid = (q: Q) => id(examId, "dq", String(q.number));
+  // The first import of a detailed exam replaces its description-based questions. Keep what
+  // users already recorded on them: statuses move to the matching new parts, times to the
+  // question with the same number.
+  const replaced = await db.question.findMany({
+    where: { examId, id: { notIn: d.questions.map(qid) } },
+    select: {
+      number: true,
+      times: { select: { userId: true, seconds: true } },
+      subQuestions: {
+        select: {
+          label: true,
+          progress: {
+            where: { status: { not: "NOT_SOLVED" } },
+            select: { userId: true, status: true },
+          },
+        },
+      },
+    },
+  });
   await db.question.deleteMany({
     where: { examId, id: { notIn: d.questions.map(qid) } },
   });
@@ -198,4 +220,111 @@ export async function importDetailed(
       });
     }
   }
+
+  for (const old of replaced) {
+    const q = d.questions.find((x) => x.number === old.number);
+    if (!q) continue;
+    const questionId = qid(q);
+    for (const t of old.times) {
+      await db.questionTime.upsert({
+        where: { userId_questionId: { userId: t.userId, questionId } },
+        update: { seconds: { increment: t.seconds } },
+        create: { userId: t.userId, questionId, seconds: t.seconds },
+      });
+    }
+    const rows: {
+      userId: string;
+      subQuestionId: string;
+      status: ProgressStatus;
+    }[] = [];
+    for (const oldSub of old.subQuestions) {
+      const letters = lettersOf(oldSub.label);
+      const targets = q.subs.filter(
+        (s) => !letters || letters.includes(s.label.trim().charAt(0)),
+      );
+      for (const p of oldSub.progress) {
+        for (const s of targets)
+          rows.push({
+            userId: p.userId,
+            subQuestionId: id(questionId, "ds", s.label),
+            status: p.status,
+          });
+      }
+    }
+    // A part already marked on the new version keeps its own status.
+    await db.userProgress.createMany({ data: rows, skipDuplicates: true });
+  }
+}
+
+const HEB = "אבגדהוזחטיכלמנסעפצקרשת";
+
+/** Letters covered by an imported part label: "א-ד" → א…ד; "" or unknown → null (= whole question). */
+function lettersOf(label: string) {
+  const m = label.match(/^([א-ת])(?:\s*[-–]\s*([א-ת]))?/);
+  if (!m) return null;
+  const a = HEB.indexOf(m[1]);
+  const b = m[2] ? HEB.indexOf(m[2]) : a;
+  return [...HEB.slice(a, b + 1)];
+}
+
+type RepeatSide = {
+  title: string;
+  number: number;
+  same: number;
+  parts: number;
+};
+
+/**
+ * Repeated questions (data/repeats/<course>.json, made by ingest/find_repeats.py), stored in
+ * both directions. Rebuilt on every import; pairs whose exam or question is missing are skipped.
+ */
+export async function importRepeats(
+  db: PrismaClient,
+  slug: string,
+  courseId: string,
+  examIdOf: (title: string) => string,
+) {
+  const file = `data/repeats/${slug}.json`;
+  await db.questionRepeat.deleteMany({
+    where: { question: { exam: { courseId } } },
+  });
+  if (!existsSync(file)) return;
+  const pairs = JSON.parse(readFileSync(file, "utf8")) as {
+    a: RepeatSide;
+    b: RepeatSide;
+    similarity: number;
+  }[];
+  const qId = (s: RepeatSide) => id(examIdOf(s.title), "dq", String(s.number));
+  const wanted = pairs.flatMap((p) => [qId(p.a), qId(p.b)]);
+  const existing = new Set(
+    (
+      await db.question.findMany({
+        where: { id: { in: wanted } },
+        select: { id: true },
+      })
+    ).map((q) => q.id),
+  );
+  const rows = pairs.flatMap((p) => {
+    const a = qId(p.a);
+    const b = qId(p.b);
+    if (!existing.has(a) || !existing.has(b)) return [];
+    return [
+      {
+        questionId: a,
+        otherId: b,
+        sameParts: p.a.same,
+        totalParts: p.a.parts,
+        similarity: p.similarity,
+      },
+      {
+        questionId: b,
+        otherId: a,
+        sameParts: p.b.same,
+        totalParts: p.b.parts,
+        similarity: p.similarity,
+      },
+    ];
+  });
+  await db.questionRepeat.createMany({ data: rows, skipDuplicates: true });
+  console.log(`${slug}: ${rows.length / 2} repeated question pairs`);
 }

@@ -221,8 +221,26 @@ model Question {
   progress      UserProgress[]
   times         QuestionTime[]
   gradings      Grading[]
+  repeats       QuestionRepeat[] @relation("repeatOf")
+  repeatedIn    QuestionRepeat[] @relation("repeatOther")
 
   @@unique([examId, number])
+}
+
+/// The same (or nearly the same) question in another exam. Stored in both directions;
+/// built from the exact transcriptions by ingest/find_repeats.py.
+model QuestionRepeat {
+  questionId String
+  question   Question @relation("repeatOf", fields: [questionId], references: [id], onDelete: Cascade)
+  otherId    String
+  other      Question @relation("repeatOther", fields: [otherId], references: [id], onDelete: Cascade)
+  /// Parts of `question` that also appear in `other`, out of `question`'s parts
+  sameParts  Int
+  totalParts Int
+  /// Text similarity of the whole question, 0..1
+  similarity Float
+
+  @@id([questionId, otherId])
 }
 
 model SubQuestion {

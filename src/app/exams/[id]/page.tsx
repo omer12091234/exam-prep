@@ -7,6 +7,7 @@ import { ExamTimer } from "@/components/ExamTimer";
 import { MathText } from "@/components/MathText";
 import { ProgressBar } from "@/components/ProgressBar";
 import { QuestionTimer } from "@/components/QuestionTimer";
+import { RepeatNote, repeatsInclude } from "@/components/RepeatNote";
 import { SubCard } from "@/components/SubCard";
 import { examTitle } from "@/lib/courses";
 import { countStatuses, solved, subStatuses } from "@/lib/progress";
@@ -35,6 +36,7 @@ async function Exam({ params }: { params: Promise<{ id: string }> }) {
         orderBy: { number: "asc" },
         include: {
           images: { orderBy: { order: "asc" } },
+          repeats: repeatsInclude,
           subQuestions: {
             orderBy: { order: "asc" },
             include: {
@@ -183,6 +185,7 @@ async function Exam({ params }: { params: Promise<{ id: string }> }) {
                 statuses={statuses}
               />
             </div>
+            <RepeatNote repeats={q.repeats} />
             <div className="no-print mb-3 flex flex-wrap items-center gap-3">
               <QuestionTimer
                 questionId={q.id}
