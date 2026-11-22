@@ -1,0 +1,518 @@
+[
+ {
+  "key": "d01",
+  "title": "מועד א׳ חורף 2026 (ביליק)",
+  "file_id": "1rHpmMOg3HeyHZ54eiMIlM5xD9YmWan4A",
+  "questions_in_index": 7
+ },
+ {
+  "key": "d02",
+  "title": "מועד ב׳ חורף 2026 (ביליק)",
+  "file_id": "1HrmKDHTFfXT2m_YoL9duieIKw_UeynM7",
+  "questions_in_index": 4
+ },
+ {
+  "key": "d03",
+  "title": "מועד א׳ סמסטר א׳ תשפ״ד 2024 (יקיר חדד)",
+  "file_id": "1ErY_9XcKqspTTmSRY24V0PRSsdpx7C3s",
+  "questions_in_index": 6
+ },
+ {
+  "key": "d04",
+  "title": "מועד ב׳ סמסטר א׳ תשפ״ד 2024 (יקיר חדד)",
+  "file_id": "1wEwIAOm7r-S2IvztmzoJz4XOgy1VhQc9",
+  "questions_in_index": 4
+ },
+ {
+  "key": "d05",
+  "title": "מועד א׳ סמסטר ב׳ 2024 (יגאל ביליק)",
+  "file_id": "1tx2xppGfbvrMM1A8F61GZlQoqIMMHaHH",
+  "questions_in_index": 5
+ },
+ {
+  "key": "d06",
+  "title": "מועד ב׳ סמסטר ב׳ 2024 (יגאל ביליק)",
+  "file_id": "1bNt3ohMgCQY_38leCozEq-QVmQVv5ZZX",
+  "questions_in_index": 4
+ },
+ {
+  "key": "d07",
+  "title": "מועד א׳ סמסטר א׳ תשפ״ג 2023 (ניר שלזינגר)",
+  "file_id": "1r5bX7WL_pIdBLn2ge0U2tDf-T33trWjY",
+  "questions_in_index": 5
+ },
+ {
+  "key": "d08",
+  "title": "מועד א׳ סמסטר א׳ תשפ״ב 2022 (תרצה רוטנברג, ניר שלזינגר)",
+  "file_id": "1ShrWaLfg3R3M2OrWYzP6VCz_X0-mnUQ8",
+  "questions_in_index": 4
+ },
+ {
+  "key": "d09",
+  "title": "מועד ב׳ סמסטר א׳ תשפ״ב 2022 (תרצה רוטנברג, ניר שלזינגר) – שאלה 4 נקטעה בקריאה",
+  "file_id": "1vJC__qbpR5yFelI189tEr1Zzdey8DcLd",
+  "questions_in_index": 4
+ },
+ {
+  "key": "d10",
+  "title": "מועד א׳ סמסטר א׳ תשפ״א (ינואר 2021, תרצה רוטנברג) – חלק א׳ אמריקאי",
+  "file_id": "1aZlyyeteg4Ys_aQA1wD7s4QjDU-TWdgT",
+  "questions_in_index": 9
+ },
+ {
+  "key": "d11",
+  "title": "מועד א׳ סמסטר א׳ תשפ״א (ינואר 2021, תרצה רוטנברג) – חלק ב׳ פתוח",
+  "file_id": "1_s_UCX1tuQv1uiisNVZ3k7O9kD6QgOcd",
+  "questions_in_index": 2
+ },
+ {
+  "key": "d12",
+  "title": "מועד ב׳ סמסטר א׳ תשפ״א (פברואר 2021, תרצה רוטנברג) – חלק א׳ אמריקאי",
+  "file_id": "1gVFrxRWfovbpaSw1XDL8KmytZdTQLXOo",
+  "questions_in_index": 10
+ },
+ {
+  "key": "d13",
+  "title": "מועד ב׳ סמסטר א׳ תשפ״א (פברואר 2021, תרצה רוטנברג) – חלק ב׳ פתוח",
+  "file_id": "1-mnY44wmVUTy64R_gO_xQH0A5UC6AQKv",
+  "questions_in_index": 2
+ },
+ {
+  "key": "d14",
+  "title": "מועד א׳ סמסטר ב׳ 2021 (בועז רפאלי)",
+  "file_id": "1WZjoHufqaldOicLOc8W3YuIepMPRGbJ9",
+  "questions_in_index": 4
+ },
+ {
+  "key": "d15",
+  "title": "מועד ב׳ סמסטר ב׳ 2021 (בועז רפאלי)",
+  "file_id": "1zIWQflQ8t1OX1fDccCef__RZ9yvT72On",
+  "questions_in_index": 4
+ },
+ {
+  "key": "d16",
+  "title": "מועד ג׳ סמסטר ב׳ 2021 (בועז רפאלי)",
+  "file_id": "1TQsYfpOvUHu6Ba9REPYV0OvFu_-JCcUT",
+  "questions_in_index": 4
+ },
+ {
+  "key": "d17",
+  "title": "מועד א׳ סמסטר ב׳ 2020 (תרצה רוטנברג; גם מועד ג׳ של סמסטר א׳)",
+  "file_id": "1IQfWWvVAMEpFDCOdqI1EaWkNYBPeqH1M",
+  "questions_in_index": 4
+ },
+ {
+  "key": "d18",
+  "title": "מועד ב׳ סמסטר ב׳ 2020 (תרצה רוטנברג) – שאלה 4 נקטעה חלקית",
+  "file_id": "114AblQk7Wyv8s4N2u3eVBX13a4czNW-g",
+  "questions_in_index": 4
+ },
+ {
+  "key": "d19",
+  "title": "מועד א׳ סמסטר א׳ 2020 (בועז רפאלי)",
+  "file_id": "1zwceKMBTbsMTOtcBIYuna5hXVwiWIg3D",
+  "questions_in_index": 4
+ },
+ {
+  "key": "d20",
+  "title": "מועד ב׳ סמסטר א׳ 2020 (בועז רפאלי)",
+  "file_id": "1-9xHcLAkXqHN-seEDADLsA-VPygsQFgD",
+  "questions_in_index": 4
+ },
+ {
+  "key": "d21",
+  "title": "מועד א׳ סמסטר א׳ תשע״ט 2019 (תרצה רוטנברג)",
+  "file_id": "1xM4YcdcXqS5faco6GjGSTqlAl_QGnbQE",
+  "questions_in_index": 4
+ },
+ {
+  "key": "d22",
+  "title": "מועד ב׳ סמסטר א׳ תשע״ט 2019 (תרצה רוטנברג)",
+  "file_id": "1cqvkk6iNnYfMhm8P7D2M1ojG1chjT4jU",
+  "questions_in_index": 4
+ },
+ {
+  "key": "d23",
+  "title": "מועד א׳ סמסטר ב׳ תשע״ח 2018 (תרצה רוטנברג)",
+  "file_id": "13XiHwyhMbv6_b-1_ehF1nn2IoW3dhfm6",
+  "questions_in_index": 5
+ },
+ {
+  "key": "d24",
+  "title": "מועד ב׳ סמסטר ב׳ תשע״ח 2018 (תרצה רוטנברג)",
+  "file_id": "1W-gO5ctT46nEbshOoflu-n5nt0Edq5hg",
+  "questions_in_index": 4
+ },
+ {
+  "key": "d25",
+  "title": "מועד א׳ סמסטר ב׳ תשע״ז 2017 (תרצה רוטנברג)",
+  "file_id": "1gZD6cNgvJ88UHG4TRFR__trqITHOc9Wm",
+  "questions_in_index": 4
+ },
+ {
+  "key": "d26",
+  "title": "מועד ב׳ סמסטר ב׳ תשע״ז 2017 (תרצה רוטנברג)",
+  "file_id": "1pxWU3cDlP_M28n7_pKj4dzNFLa-rc-n_",
+  "questions_in_index": 3
+ },
+ {
+  "key": "d27",
+  "title": "מועד א׳ סמסטר ב׳ תשע״ו 2016 (תרצה רוטנברג) – חלק א׳ אמריקאי + חלק ב׳ (שאלה 2 נקטעה)",
+  "file_id": "1U_Xg9xwers6Mv-Vsf9uDfunFfmUUOP4G",
+  "questions_in_index": 11
+ },
+ {
+  "key": "d28",
+  "title": "מועד ב׳ סמסטר ב׳ תשע״ו 2016 (תרצה רוטנברג) – חלק א׳ אמריקאי",
+  "file_id": "1NrrifpIth3YrqKO2t7u9PAcmSFWuc0Zy",
+  "questions_in_index": 10
+ },
+ {
+  "key": "d29",
+  "title": "מועד ב׳ סמסטר ב׳ תשע״ו 2016 (תרצה רוטנברג) – חלק ב׳ פתוח",
+  "file_id": "1XxNhSODQkTrHfS9oV5tWbvCq7Jn9WB_g",
+  "questions_in_index": 2
+ },
+ {
+  "key": "d30",
+  "title": "מועד א׳ סמסטר ב׳ תשע״ה 2015 (תרצה רוטנברג) – אמריקאי + פתוח (שאלה ב2 נקטעה)",
+  "file_id": "1rZqYbqGmOEnI6ltuOpDThsaDpSsaj7ER",
+  "questions_in_index": 10
+ },
+ {
+  "key": "d31",
+  "title": "מועד ב׳ סמסטר ב׳ תשע״ה 2015 (תרצה רוטנברג) – אמריקאי + פתוח (חלקית)",
+  "file_id": "12JLJioHz_a8BJrl6-5wvCq_TBwWb2BZM",
+  "questions_in_index": 10
+ },
+ {
+  "key": "d32",
+  "title": "מבחן לדוגמה 2015 (תרצה רוטנברג) – חלק אמריקאי",
+  "file_id": "1Vueyo0rv-60DbIk4KTDR5yJFXNXCy5-T",
+  "questions_in_index": 7
+ },
+ {
+  "key": "d33",
+  "title": "שחזור מועד א׳ קיץ 2024 (יקיר חדד) – שחזור סטודנטים בכתב יד",
+  "file_id": "1I1pfYEcC_zDPDQpJ2b1BSV2N6pDZDfRS",
+  "questions_in_index": 8
+ },
+ {
+  "key": "d34",
+  "title": "שחזור מועד ב׳ קיץ 2024 (יקיר חדד) – שחזור סטודנטים בכתב יד, קריא חלקית",
+  "file_id": "1k_QKQtpr1Jqx8ixAmXCLUMouHr45vZ4o",
+  "questions_in_index": 8
+ },
+ {
+  "key": "d35",
+  "title": "מועד א׳ חורף 2025 (ביליק, 20/02/2025) – שוחזר מתוך פתרון סטודנט סרוק (ציון 98), ללא נוסח השאלות",
+  "file_id": "1zbXwPzkBEdnRToQv5r3qlQpAZLo811Ke",
+  "questions_in_index": 11
+ },
+ {
+  "key": "d36",
+  "title": "מועד א׳ סמסטר ב׳ 2019 (בועז רפאלי, 03/07/2019) + פתרון בכתב יד",
+  "file_id": "1xnqVJ6F2wURVEfBSme8kWsbovSUirk2R",
+  "questions_in_index": 8
+ },
+ {
+  "key": "d37",
+  "title": "מועד ב׳ סמסטר ב׳ 2019 (בועז רפאלי, 26/07/2019) + פתרון בכתב יד",
+  "file_id": "1Qz7kUMvF__Tfrs0VP-DRXdnA5isF0wNN",
+  "questions_in_index": 8
+ },
+ {
+  "key": "d38",
+  "title": "מועד ג׳ סמסטר ב׳ 2019 (בועז רפאלי, 23/10/2019) + פתרון בכתב יד",
+  "file_id": "1VQ772NfccSqEx2KfGXsJEPgcAdNwkUFP",
+  "questions_in_index": 8
+ },
+ {
+  "key": "d39",
+  "title": "מועד א׳ סמסטר א׳ 2018 (בועז רפאלי, 01/02/2018) + פתרון בכתב יד",
+  "file_id": "1u7HiTIN1DOFUkOlQnPdeWgVswSQ1Uqxx",
+  "questions_in_index": 9
+ },
+ {
+  "key": "d40",
+  "title": "מועד ב׳ סמסטר א׳ 2018 (בועז רפאלי, 23/02/2018) + פתרון בכתב יד",
+  "file_id": "1LRaoYX1vWqSht4dLZsAYT0u2GFOFmNxk",
+  "questions_in_index": 9
+ },
+ {
+  "key": "d41",
+  "title": "מועד ג׳ סמסטר א׳ 2018 (בועז רפאלי, 26/04/2018) + פתרון בכתב יד",
+  "file_id": "1817_RI1Skc15H2y5Fr839Z9bn1ekqYT-",
+  "questions_in_index": 9
+ },
+ {
+  "key": "d42",
+  "title": "מועד א׳ סמסטר א׳ 2017 (בועז רפאלי, 08/02/2017) + פתרון בכתב יד",
+  "file_id": "1eIe1OdlNB0vQYJ7GsxO9PeD0VcTMB8Uh",
+  "questions_in_index": 7
+ },
+ {
+  "key": "d43",
+  "title": "מועד ב׳ סמסטר א׳ 2017 (בועז רפאלי, 03/03/2017) + פתרון בכתב יד",
+  "file_id": "1xyMo5P7g0HEdr1i4SkKxMEEjJnvXS3zf",
+  "questions_in_index": 8
+ },
+ {
+  "key": "d44",
+  "title": "מועד ג׳ סמסטר א׳ 2017 (בועז רפאלי, 07/05/2017) + פתרון בכתב יד",
+  "file_id": "11e5Qin_qZA-l13DfbNC8CrLhZZhq1-rs",
+  "questions_in_index": 8
+ },
+ {
+  "key": "d45",
+  "title": "מועד א׳ סמסטר א׳ 2016 (בועז רפאלי, 03/02/2016) + פתרון",
+  "file_id": "1SJ2gD1JqTLf3LOBvyxpeyrcMt2FxyDWU",
+  "questions_in_index": 9
+ },
+ {
+  "key": "d46",
+  "title": "מועד ב׳ סמסטר א׳ 2016 (בועז רפאלי, 04/03/2016) + פתרון",
+  "file_id": "1ArX6eeSuVrxXOBuWcbahkTOwucEZ-zoV",
+  "questions_in_index": 9
+ },
+ {
+  "key": "d47",
+  "title": "מועד ג׳ סמסטר א׳ 2016 (בועז רפאלי, 21/04/2016) + פתרון",
+  "file_id": "1gRTemn12jw806Aq2BQJlMt6Ffjgfql5U",
+  "questions_in_index": 9
+ },
+ {
+  "key": "d48",
+  "title": "מועד ב׳ סמסטר א׳ 2015 (בועז רפאלי, 25/02/2015) + פתרון",
+  "file_id": "1998GJiURQZ791Fgww-CC3d3yQzPeYk66",
+  "questions_in_index": 8
+ },
+ {
+  "key": "d49",
+  "title": "מועד ג׳ סמסטר א׳ 2015 (בועז רפאלי, 29/04/2015) + פתרון",
+  "file_id": "1443eAUIj3oHD9ApBh7idd7C20hKTyK8F",
+  "questions_in_index": 8
+ },
+ {
+  "key": "d50",
+  "title": "מועד א׳ סמסטר א׳ 2015 (בועז רפאלי; בכותרת הטופס מודפס 03/02/2014, ככל הנראה שגיאת הדפסה) + פתרון",
+  "file_id": "108x6dtjeGr50TIQDPtRnFaYdziBNAYhA",
+  "questions_in_index": 8
+ },
+ {
+  "key": "d51",
+  "title": "מועד א׳ סמסטר א׳ 2014 (בועז רפאלי, 31/01/2014) + פתרון",
+  "file_id": "113dnA8AsCpC3wwG7fEIoIv6jJmxkSmWy",
+  "questions_in_index": 8
+ },
+ {
+  "key": "d52",
+  "title": "מועד ב׳ סמסטר א׳ 2014 (בועז רפאלי, 02/03/2014) + פתרון",
+  "file_id": "1qli-f7SsuuU2pr1nP14kUF9-ZXRHtujq",
+  "questions_in_index": 9
+ },
+ {
+  "key": "d53",
+  "title": "מועד ג׳ סמסטר א׳ 2014 (בועז רפאלי, 02/05/2014) + פתרון",
+  "file_id": "119fOttlqBN5NpRKHuh2npeRgCi_rDbk-",
+  "questions_in_index": 8
+ },
+ {
+  "key": "d54",
+  "title": "מועד א׳ סמסטר א׳ 2013 (בועז רפאלי, 17/02/2013) + פתרון",
+  "file_id": "1dK5Gvv3LawUra0yg1nHufSPwp49NtrF4",
+  "questions_in_index": 8
+ },
+ {
+  "key": "d55",
+  "title": "מועד ב׳ סמסטר א׳ 2013 (בועז רפאלי, 08/03/2013) + פתרון",
+  "file_id": "1i-3F_AS0RL28IfU0wpyQ1-X9WLUdFymw",
+  "questions_in_index": 8
+ },
+ {
+  "key": "d56",
+  "title": "מועד ג׳ סמסטר א׳ 2013 (בועז רפאלי, 24/05/2013) + פתרון",
+  "file_id": "1QkyEULEf3FsFWvWbcGhbZx8nDn4j_HfJ",
+  "questions_in_index": 8
+ },
+ {
+  "key": "d57",
+  "title": "מועד א׳ סמסטר א׳ 2012 (בועז רפאלי ונועם שבתאי, 30/01/2012) + פתרון",
+  "file_id": "1ZbAbj8OeUaJgaE1JvquBcZ-WoYzeDh-S",
+  "questions_in_index": 7
+ },
+ {
+  "key": "d58",
+  "title": "מועד ב׳ סמסטר א׳ 2012 (בועז רפאלי ונועם שבתאי, 22/02/2012) + פתרון",
+  "file_id": "1zdPwcOcMmMfjW5iiYumoruqz1Fl4EHi3",
+  "questions_in_index": 9
+ },
+ {
+  "key": "d59",
+  "title": "מועד ג׳ סמסטר א׳ 2012 (בועז רפאלי ונועם שבתאי, 29/04/2012) + פתרון",
+  "file_id": "1K8FEj--w8TFLrSiHNHnuKNKuCRSyHJql",
+  "questions_in_index": 9
+ },
+ {
+  "key": "d60",
+  "title": "מועד א׳ סמסטר א׳ 2011 (בועז רפאלי, 31/01/2011) + פתרון",
+  "file_id": "1PRS8RPfFiVh5oWpyW8eJ6ATfjVP-pdAs",
+  "questions_in_index": 5
+ },
+ {
+  "key": "d61",
+  "title": "מועד ב׳ סמסטר א׳ 2011 (בועז רפאלי, 18/02/2011) + פתרון",
+  "file_id": "17nXH_aDA4DA1HrBrr14c3EtQHfjXrp7e",
+  "questions_in_index": 5
+ },
+ {
+  "key": "d62",
+  "title": "מועד מיוחד (ג׳) סמסטר א׳ 2011 (בועז רפאלי, 05/04/2011) + פתרון",
+  "file_id": "1zzPFrJp9iVew2CqTB6Qw9uGy23kRpqW_",
+  "questions_in_index": 6
+ },
+ {
+  "key": "d63",
+  "title": "מועד א׳ סמסטר א׳ 2010 (בועז רפאלי, 31/01/2010) + פתרון – מתוך קובץ הארכיון 2009-10 (עמ׳ 1)",
+  "file_id": "1hS8LDrHm7m1pg5iIsviBusQQpxWEpNEK",
+  "questions_in_index": 7
+ },
+ {
+  "key": "d64",
+  "title": "מועד ב׳ סמסטר א׳ 2010 (בועז רפאלי, 17/02/2010) + פתרון – מתוך קובץ הארכיון 2009-10 (עמ׳ 12)",
+  "file_id": "1hS8LDrHm7m1pg5iIsviBusQQpxWEpNEK",
+  "questions_in_index": 7
+ },
+ {
+  "key": "d65",
+  "title": "מועד מיוחד סמסטר א׳ 2010 (בועז רפאלי, 28/03/2010) + פתרון – מתוך קובץ הארכיון 2009-10 (עמ׳ 23)",
+  "file_id": "1hS8LDrHm7m1pg5iIsviBusQQpxWEpNEK",
+  "questions_in_index": 7
+ },
+ {
+  "key": "d66",
+  "title": "מועד א׳ סמסטר ב׳ 2009 (בועז רפאלי, 22/07/2009) + פתרון – מתוך קובץ הארכיון 2008-9 (עמ׳ 1)",
+  "file_id": "1n0CQSAhzQ8Ft4NW_lQUn79A3Nx_WDv-U",
+  "questions_in_index": 6
+ },
+ {
+  "key": "d67",
+  "title": "מועד ב׳ סמסטר ב׳ 2009 (בועז רפאלי, 16/08/2009) + פתרון – מתוך קובץ הארכיון 2008-9 (עמ׳ 9)",
+  "file_id": "1n0CQSAhzQ8Ft4NW_lQUn79A3Nx_WDv-U",
+  "questions_in_index": 5
+ },
+ {
+  "key": "d68",
+  "title": "מועד מיוחד סמסטר ב׳ 2009 (בועז רפאלי, 25/10/2009) + פתרון – מתוך קובץ הארכיון 2008-9 (עמ׳ 19)",
+  "file_id": "1n0CQSAhzQ8Ft4NW_lQUn79A3Nx_WDv-U",
+  "questions_in_index": 5
+ },
+ {
+  "key": "d69",
+  "title": "מועד א׳ סמסטר ב׳ 2008 (בועז רפאלי, 13/08/2008) + פתרון – מתוך קובץ הארכיון 2007-8 (עמ׳ 1)",
+  "file_id": "1goLSwP6ZXK76q0IztwxA7t2LawZ9_xa5",
+  "questions_in_index": 5
+ },
+ {
+  "key": "d70",
+  "title": "מועד ב׳ סמסטר ב׳ 2008 (בועז רפאלי, 03/09/2008) + פתרון – מתוך קובץ הארכיון 2007-8 (עמ׳ 7)",
+  "file_id": "1goLSwP6ZXK76q0IztwxA7t2LawZ9_xa5",
+  "questions_in_index": 6
+ },
+ {
+  "key": "d71",
+  "title": "מועד מיוחד סמסטר ב׳ 2008 (בועז רפאלי, 14/12/2008) + פתרון – מתוך קובץ הארכיון 2007-8 (עמ׳ 16)",
+  "file_id": "1goLSwP6ZXK76q0IztwxA7t2LawZ9_xa5",
+  "questions_in_index": 5
+ },
+ {
+  "key": "d72",
+  "title": "מועד א׳ חלק 1 סמסטר ב׳ 2007 (בועז רפאלי, 13/04/2007) + פתרון בכתב יד – מתוך קובץ הארכיון 2006-7 (עמ׳ 1)",
+  "file_id": "1qS_x3gjSahjTA1SB6l2WE2wA755_Gu_M",
+  "questions_in_index": 3
+ },
+ {
+  "key": "d73",
+  "title": "מועד א׳ חלק 2 סמסטר ב׳ 2007 (בועז רפאלי, 22/06/2007) + פתרון בכתב יד – מתוך קובץ הארכיון 2006-7 (עמ׳ 6)",
+  "file_id": "1qS_x3gjSahjTA1SB6l2WE2wA755_Gu_M",
+  "questions_in_index": 2
+ },
+ {
+  "key": "d74",
+  "title": "מועד א׳ חלק 3 סמסטר ב׳ 2007 (בועז רפאלי, 08/07/2007) + פתרון בכתב יד – מתוך קובץ הארכיון 2006-7 (עמ׳ 10)",
+  "file_id": "1qS_x3gjSahjTA1SB6l2WE2wA755_Gu_M",
+  "questions_in_index": 2
+ },
+ {
+  "key": "d75",
+  "title": "מועד ב׳ סמסטר ב׳ 2007 (בועז רפאלי, 02/08/2007) + פתרון בכתב יד – מתוך קובץ הארכיון 2006-7 (עמ׳ 13)",
+  "file_id": "1qS_x3gjSahjTA1SB6l2WE2wA755_Gu_M",
+  "questions_in_index": 5
+ },
+ {
+  "key": "d76",
+  "title": "מועד מיוחד סמסטר ב׳ 2007 (בועז רפאלי, 20/09/2007) + פתרון בכתב יד – מתוך קובץ הארכיון 2006-7 (עמ׳ 21)",
+  "file_id": "1qS_x3gjSahjTA1SB6l2WE2wA755_Gu_M",
+  "questions_in_index": 4
+ },
+ {
+  "key": "d77",
+  "title": "מועד א׳ סמסטר ב׳ 2006 (בועז רפאלי, 04/07/2006) + פתרון בכתב יד – מתוך קובץ הארכיון 2005-6 (עמ׳ 1)",
+  "file_id": "1ftMZ2aWJ5h2-VxBf-hmNWIVEBbyRnalI",
+  "questions_in_index": 6
+ },
+ {
+  "key": "d78",
+  "title": "מועד ב׳ סמסטר ב׳ 2006 (בועז רפאלי, 27/07/2006) + פתרון בכתב יד – מתוך קובץ הארכיון 2005-6 (עמ׳ 11)",
+  "file_id": "1ftMZ2aWJ5h2-VxBf-hmNWIVEBbyRnalI",
+  "questions_in_index": 6
+ },
+ {
+  "key": "d79",
+  "title": "מועד מיוחד סמסטר ב׳ 2006 (בועז רפאלי, 27/10/2006) + פתרון בכתב יד – מתוך קובץ הארכיון 2005-6 (עמ׳ 20)",
+  "file_id": "1ftMZ2aWJ5h2-VxBf-hmNWIVEBbyRnalI",
+  "questions_in_index": 6
+ },
+ {
+  "key": "d80",
+  "title": "מועד א׳ סמסטר א׳ 2005 (בועז רפאלי, 03/02/2005) + פתרון בכתב יד – מתוך קובץ הארכיון 2004-5 (עמ׳ 1)",
+  "file_id": "1-v-05h_nppLDhwf3-oEuV6aOBk7aVL3O",
+  "questions_in_index": 7
+ },
+ {
+  "key": "d81",
+  "title": "מועד ב׳ סמסטר א׳ 2005 (בועז רפאלי, 25/02/2005) + פתרון בכתב יד – מתוך קובץ הארכיון 2004-5 (עמ׳ 15)",
+  "file_id": "1-v-05h_nppLDhwf3-oEuV6aOBk7aVL3O",
+  "questions_in_index": 7
+ },
+ {
+  "key": "d82",
+  "title": "מועד מיוחד סמסטר א׳ 2005 (בועז רפאלי, 20/05/2005) + פתרון בכתב יד – מתוך קובץ הארכיון 2004-5 (עמ׳ 28)",
+  "file_id": "1-v-05h_nppLDhwf3-oEuV6aOBk7aVL3O",
+  "questions_in_index": 7
+ },
+ {
+  "key": "d83",
+  "title": "מועד א׳ סמסטר קיץ 2004 (בועז רפאלי, 20/09/2004; המועד אינו מצוין בטופס – ככל הנראה א׳) + פתרון בכתב יד – מתוך קובץ הארכיון 2003-4 קיץ (עמ׳ 1)",
+  "file_id": "1Sh5PjrZ79bbK9j-jqTf2SXlGHyV3uXxm",
+  "questions_in_index": 7
+ },
+ {
+  "key": "d84",
+  "title": "מועד ב׳ סמסטר קיץ 2004 (בועז רפאלי, 10/10/2004) + פתרון בכתב יד – מתוך קובץ הארכיון 2003-4 קיץ (עמ׳ 18)",
+  "file_id": "1Sh5PjrZ79bbK9j-jqTf2SXlGHyV3uXxm",
+  "questions_in_index": 5
+ },
+ {
+  "key": "d85",
+  "title": "מועד א׳ סמסטר א׳ 2004 (בועז רפאלי, 05/02/2004) + פתרון בכתב יד – מתוך קובץ הארכיון 2003-4 (עמ׳ 1)",
+  "file_id": "1OCOLdO6hLJuyue8SzE4Qc71T7MHv7jzZ",
+  "questions_in_index": 7
+ },
+ {
+  "key": "d86",
+  "title": "מועד ב׳ סמסטר א׳ 2004 (בועז רפאלי, 24/02/2004) + פתרון בכתב יד – מתוך קובץ הארכיון 2003-4 (עמ׳ 13)",
+  "file_id": "1OCOLdO6hLJuyue8SzE4Qc71T7MHv7jzZ",
+  "questions_in_index": 7
+ }
+]

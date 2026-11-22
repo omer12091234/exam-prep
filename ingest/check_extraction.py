@@ -18,7 +18,12 @@ exam = d.get("exam", {})
 for f in ("match_title",):
     if not exam.get(f):
         errors.append(f"exam.{f} missing")
-study = {"intro-ee-1": "data/study/intro_ee.json"}.get(course) if kind == "exams" else None
+STUDY = {
+    "intro-ee-1": "data/study/intro_ee.json",
+    "dsp": "data/study/dsp.json",
+    "random-processes": "data/study/random.json",
+}
+study = STUDY.get(course) if kind == "exams" else None
 if study and exam.get("match_title"):
     titles = {e["title"] for e in json.load(open(study, encoding="utf8"))["exams"]}
     if exam["match_title"] not in titles:
