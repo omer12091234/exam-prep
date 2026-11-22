@@ -19,6 +19,8 @@ Follow `ingest/AGENT_BRIEF.md` with these differences.
   `ingest/SHEET_BRIEF.md`.
 - **Conventions**: state them in solutions ($\omega$ in rad/sample vs $\Omega$ in rad/s, DFT length
   $N$, $W_N=e^{-j2\pi/N}$, sampling period $T$).
-- **Manual review**: use `"review"` on every part whose text is not certain (see the brief). This
-  matters especially for student reconstructions and handwriting.
+- **Manual review**: use `"review"` on every part whose TEXT is not certain in the source (a word,
+  number, sign or figure detail; see the brief). This matters especially for student
+  reconstructions and handwriting. Do not use it for doubts about your own solution: say those
+  inside the solution (or mark it "**פתרון חלקי – לא אומת.**").
 - If the Drive download fails (file over 10 MB), stop and report it; do not guess the exam.
