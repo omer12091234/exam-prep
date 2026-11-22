@@ -1,0 +1,242 @@
+{
+ "exam": {
+  "match_title": "מועד ב׳ סמסטר ב׳ 2021 (בועז רפאלי)",
+  "drive_file_id": "1zIWQflQ8t1OX1fDccCef__RZ9yvT72On",
+  "source_title": "מועד ב 2021 - בועז + פתרון.pdf",
+  "lecturer": "בועז רפאלי",
+  "year": 2021,
+  "date": "2021-07-25",
+  "duration_minutes": 180,
+  "aids": "דף הנוסחאות המצורף, מחשב כיס ללא תכנות ותקשורת",
+  "notes": "הקובץ כולל 10 עמודים: עמודים 1-2 השאלון, עמודים 3-10 פתרון בכתב יד/מודפס (שאלות 1, 2 (מודפס), 3, 4). בשאלה 4 הסימן Π אינו מוגדר בשאלון; הפתרון מניח מלבן יחידה ברוחב 1. בפתרון הסרוק בשאלה 1 יש אי-התאמות לפתרון כאן, ראו הערות בסעיפים א׳ וב׳."
+ },
+ "questions": [
+  {
+   "number": 1,
+   "points": 25,
+   "stem": "נתון אות בזמן רציף $x(t)$ חסום סרט ובעל התמרת פורייה $X(j\\omega)$ המקיימת $X(j\\omega)=0\\ \\forall|\\omega|\\ge\\frac{\\pi}{T}$ כאשר $T>0$ נתון. בנוסף נתון האות $g(t)=1+2\\cos\\left(\\frac{2\\pi}{T}t\\right)$. האותות עברו עיבוד לפי השלבים הבאים:\n$$y[n]=x(nT_s)g(nT_s),\\quad T_s>0,\\ n\\in\\mathbb Z$$\n$$z[n]=\\sum_{m=-\\infty}^{\\infty}y[n-m]h[m]$$\n$$z(t)=\\sum_{n=-\\infty}^{\\infty}z[n]\\,\\mathrm{sinc}\\left(\\frac{t-nT}{T}\\right)$$",
+   "figures": [],
+   "regions": [
+    {
+     "page": 1,
+     "view": [
+      910,
+      1287
+     ],
+     "box": [
+      75,
+      398,
+      835,
+      651
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "א",
+     "points": 10,
+     "text": "בסעיף זה בלבד: האם קיימים $x(t)$ ו-$T_s$ עבורם יתקיים $y[n]=\\delta[n]$ לכל $n$? הוכח/י, ורשום/י ביטויים מפורשים ל-$x(t)$ ול-$T_s$ אם קיימים.",
+     "box": [
+      75,
+      658,
+      835,
+      706
+     ],
+     "lines": 2,
+     "solution": "**סימונים והנחות:** $\\omega$ – תדר רציף ב-rad/s, $\\theta$ – תדר בדיד ב-rad/sample, $\\Omega_0=\\frac{2\\pi}{T}$. התמרת פורייה $X(j\\omega)=\\int x(t)e^{-j\\omega t}dt$.\n\n**שלב 1 – הכפלה ב-$g(t)$.** נסמן $w(t)=x(t)g(t)$. מכיוון ש-$g(t)=1+e^{j\\Omega_0 t}+e^{-j\\Omega_0 t}$,\n$$W(j\\omega)=X(j\\omega)+X(j(\\omega-\\Omega_0))+X(j(\\omega+\\Omega_0)).$$\n$X$ מרוכז ב-$|\\omega|<\\frac{\\pi}{T}$, והעותקים המוזזים ב-$\\pm\\frac{2\\pi}{T}$ תופסים את $\\frac{\\pi}{T}<|\\omega|<\\frac{3\\pi}{T}$. לכן $W$ תופס את $|\\omega|<\\frac{3\\pi}{T}$ בלי חפיפה בין העותקים (רק בנקודות בודדות), ו-$y[n]=w(nT_s)$.\n\n**שלב 2 – תנאי על הדגימה.** $y[n]=\\delta[n]$ שקול ל-$Y(e^{j\\theta})=1$ לכל $\\theta$, כאשר\n$$Y(e^{j\\theta})=\\frac{1}{T_s}\\sum_{k}W\\!\\left(j\\frac{\\theta-2\\pi k}{T_s}\\right).$$\n\n**בחירה:** $T_s=\\frac{T}{3}$. אז $\\frac{2\\pi}{T_s}=\\frac{6\\pi}{T}$ שווה בדיוק לרוחב הפס של $W$, העותקים של $W$ משתלבים בלי חפיפה וללא רווח, ו-$Y(e^{j\\theta})=\\frac{1}{T_s}W(j\\theta/T_s)$ על $|\\theta|<\\pi$. כדי לקבל 1 קבוע נדרש $W(j\\omega)=T_s=\\frac{T}{3}$ לכל $|\\omega|<\\frac{3\\pi}{T}$, כלומר $X(j\\omega)=\\frac{T}{3}$ ל-$|\\omega|<\\frac{\\pi}{T}$ (שם $W=X$, כי העותקים המוזזים מתאפסים):\n$$X(j\\omega)=\\frac{T}{3}\\,\\Pi\\!\\left(\\frac{\\omega}{2\\pi/T}\\right)\\ \\Longrightarrow\\ \\boxed{x(t)=\\frac13\\,\\mathrm{sinc}\\!\\left(\\frac tT\\right),\\quad T_s=\\frac T3}$$\nכאשר $\\mathrm{sinc}(u)=\\frac{\\sin\\pi u}{\\pi u}$.\n\n**בדיקה ישירה בזמן:**\n$$y[n]=\\tfrac13\\,\\mathrm{sinc}\\!\\left(\\tfrac n3\\right)\\left(1+2\\cos\\tfrac{2\\pi n}{3}\\right).$$\nעבור $n=0$: $\\frac13\\cdot1\\cdot3=1$. עבור $n$ שאינו כפולה של 3: $1+2\\cos\\frac{2\\pi n}{3}=1+2(-\\frac12)=0$. עבור $n=3k$, $k\\ne0$: $\\mathrm{sinc}(k)=0$. לכן $y[n]=\\delta[n]$.\n\n**הערה:** גם $T_s=T$ עובד עם אותו $x(t)$: $g(nT)=3$ ו-$x(nT)=\\frac13\\delta[n]$, ולכן $y[n]=\\delta[n]$.\n\n*הערה: בפתרון הסרוק שבקובץ נרשם $x(t)=\\mathrm{sinc}(t/T)$ עם $T_s=T/3$. נראה ששם הוחמץ הגורם $\\frac13$: עם $x(t)=\\mathrm{sinc}(t/T)$ מתקבל $y[0]=x(0)g(0)=3$ ולא 1.*"
+    },
+    {
+     "label": "ב",
+     "points": 15,
+     "text": "בסעיף זה בלבד נתון $h[n]=\\frac{\\sin(Wn)}{\\pi n}$. האם קיימים $T_s,W>0$ עבורם ניתן לשחזר את $x(t)$ בהינתן $z(t)$? אם כן, מצא/י $T_s,W$ כאלה והצג/י את אופן השחזור. אם לא, הוכח/י.",
+     "box": [
+      75,
+      708,
+      835,
+      758
+     ],
+     "lines": 2,
+     "solution": "**סימונים:** $y[n]$ כבסעיף א׳ (עם $T_s$ שנבחר כעת), $h[n]=\\frac{\\sin Wn}{\\pi n}$ הוא מסנן מעביר-נמוכים אידיאלי: $H(e^{j\\theta})=1$ עבור $|\\theta|<W$ (ומחזורי $2\\pi$) ל-$0<W\\le\\pi$. $z(t)$ הוא שחזור sinc עם מחזור $T$ של הסדרה $z[n]$.\n\n**בחירה:** $T_s=T$ ו-$W=\\pi$.\n\n- עבור $W=\\pi$: $h[n]=\\frac{\\sin\\pi n}{\\pi n}=\\delta[n]$, ולכן $z[n]=y[n]$.\n- עבור $T_s=T$: $y[n]=x(nT)g(nT)=3\\,x(nT)$, כי $g(nT)=1+2\\cos(2\\pi n)=3$.\n\n**שחזור:** $z[n]=3x(nT)$, ו-$x(t)$ חסום בפס $\\frac{\\pi}{T}$, כלומר נדגם בקצב נייקוויסט בדיוק (התנאי $X=0$ ב-$|\\omega|\\ge\\frac\\pi T$ מבטיח אי-חפיפה). משפט הדגימה נותן\n$$z(t)=\\sum_n 3x(nT)\\,\\mathrm{sinc}\\!\\left(\\frac{t-nT}{T}\\right)=3x(t)\\ \\Longrightarrow\\ \\boxed{x(t)=\\tfrac13 z(t)}.$$\n\n**בדיקה בתדר:** עם $T_s=T$ מתקיים $Y(e^{j\\theta})=\\frac1T\\sum_kW\\!\\left(j\\frac{\\theta-2\\pi k}{T}\\right)$. על $|\\omega|<\\frac\\pi T$ ($\\theta=\\omega T$) נקבל $Z(j\\omega)=\\sum_kW(j(\\omega-k\\Omega_0))=\\sum_k\\sum_{l\\in\\{-1,0,1\\}}X(j(\\omega-(k+l)\\Omega_0))$. כל הזחה $m=k+l$ מופיעה 3 פעמים, ורק $m=0$ נמצא בתוך הפס, ולכן $Z(j\\omega)=3X(j\\omega)$.\n\n**אפשרות נוספת:** $T_s=\\frac T3$, $W=\\pi$. אז $z[n]=y(nT/3)$ ושחזור sinc עם מחזור $T$ על סדרה שנדגמה במחזור $T/3$ נותן $z(t)=y(t/3)$ (כי $y$ חסום בפס $\\frac{3\\pi}{T}$). השחזור: $x(t)=\\frac1T\\left(y*\\mathrm{sinc}(\\cdot/T)\\right)(t)$ עם $y(t)=z(3t)$, כלומר מעבירים-נמוכים ב-$\\frac\\pi T$ (על $|\\omega|<\\frac\\pi T$ מתקיים $Y=X$). במקרה זה $x(t)\\ne\\frac13z(t)$.\n\n*הערה: בפתרון הסרוק שבקובץ נבחר $T_s=T/3$, $W=\\pi$ והשחזור $\\hat x=\\frac13z(t)$. נראה ששם התעלמו מכך שה-sinc מחזורו $T$ ולא $T_s$ (ערבוב צירי התדר); עבור $T_s=T/3$ מתקבל $z(t)=y(t/3)$ ולא $3x(t)$. עבור $T_s=T$ התוצאה $\\hat x=\\frac13z$ נכונה.*"
+    }
+   ],
+   "topics": [
+    "t2",
+    "t3",
+    "t5"
+   ]
+  },
+  {
+   "number": 2,
+   "points": 25,
+   "stem": "נתונה סדרה $x[n],\\ n=0,\\dots,2N-1$, ומוגדרות המטריצות $\\boldsymbol A_0$ ו-$\\boldsymbol A_1$ בגודל $N\\times 2N$ עם האיברים הכלליים הבאים:\n$$[\\boldsymbol A_1]_{p,q}=\\begin{cases}1&q=2p+1\\\\0&\\text{elsewhere}\\end{cases},\\qquad [\\boldsymbol A_0]_{p,q}=\\begin{cases}1&q=2p\\\\0&\\text{elsewhere}\\end{cases},\\qquad p=0,\\dots,N-1,\\ q=0,\\dots,2N-1$$\nבנוסף, מוגדרת מטריצה אלכסונית $\\boldsymbol\\Lambda_Q$ בגודל $Q\\times Q$ עם איברים $[\\Lambda_Q]_{p,p}=e^{-j\\frac{2\\pi}{Q}Mp}$, כאשר $M$ מספר שלם. כמו כן, מוגדרים מטריצת DFT $\\boldsymbol F_Q$ בגודל $Q\\times Q$ והוקטור $\\boldsymbol x=(x[0],\\dots,x[2N-1])^T$.",
+   "figures": [],
+   "regions": [
+    {
+     "page": 1,
+     "view": [
+      910,
+      1287
+     ],
+     "box": [
+      75,
+      805,
+      835,
+      973
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "א",
+     "points": 10,
+     "text": "בסעיף זה בלבד נתון כי הווקטור $\\boldsymbol x$ ממשי ו-$M=0$. כמו כן, נתון הקשר המטריציוני הבא:\n$$\\boldsymbol y=(\\boldsymbol A_0+\\boldsymbol F_N^{-1}\\boldsymbol\\Lambda_N\\boldsymbol F_N\\boldsymbol A_1)\\boldsymbol x$$\nהאם ניתן לשחזר את $\\boldsymbol x$ בהינתן $\\boldsymbol y$? אם כן, הצג/י את אופן השחזור? במידה ולא, הסבר/י.",
+     "box": [
+      75,
+      981,
+      835,
+      1055
+     ],
+     "lines": 3,
+     "solution": "**סימונים:** $\\boldsymbol F_Q$ מטריצת DFT בגודל $Q$ עם $W_Q=e^{-j2\\pi/Q}$; $\\boldsymbol F_Q^{-1}\\boldsymbol\\Lambda_Q\\boldsymbol F_Q$ מבצע הזזה מעגלית ב-$M$ (ראו סעיף ב׳).\n\n**פישוט:** עבור $M=0$: $\\boldsymbol\\Lambda_N=\\boldsymbol I_N$, ולכן $\\boldsymbol F_N^{-1}\\boldsymbol\\Lambda_N\\boldsymbol F_N=\\boldsymbol I_N$ ו\n$$\\boldsymbol y=(\\boldsymbol A_0+\\boldsymbol A_1)\\boldsymbol x.$$\n$\\boldsymbol A_0\\boldsymbol x$ בוחרת את האיברים הזוגיים, $\\boldsymbol A_1\\boldsymbol x$ את האי-זוגיים:\n$$y[p]=x[2p]+x[2p+1],\\quad p=0,\\dots,N-1.$$\n\n**מסקנה: לא ניתן לשחזר.** יש $N$ משוואות ו-$2N$ נעלמים (המטריצה $\\boldsymbol A_0+\\boldsymbol A_1$ בגודל $N\\times2N$ ולכן מרחב האפס שלה לא טריוויאלי). דוגמה נגדית ממשית: $\\boldsymbol x=(1,-1,0,\\dots,0)^T$ נותן $\\boldsymbol y=\\boldsymbol 0$, בדיוק כמו $\\boldsymbol x=\\boldsymbol 0$. אי אפשר להבחין בין איבר זוגי לאי-זוגי באותו זוג. הממשיות של $\\boldsymbol x$ לא עוזרת.\n\n*הפתרון בקובץ מסכים: לא ניתן להפריד בין האיברים הזוגיים לאי-זוגיים.*"
+    },
+    {
+     "label": "ב",
+     "points": 15,
+     "text": "בסעיף זה בלבד נתון הקשר המטריציוני הבא\n$$\\boldsymbol z=\\left(\\begin{bmatrix}\\boldsymbol A_0\\\\ \\boldsymbol B\\end{bmatrix}+\\boldsymbol F_{2N}^{-1}\\boldsymbol\\Lambda_{2N}\\boldsymbol F_{2N}\\begin{bmatrix}\\boldsymbol A_1\\\\ \\boldsymbol B\\end{bmatrix}\\right)\\boldsymbol x$$\nכאשר $\\boldsymbol B$ היא מטריצה בגודל $N\\times 2N$ שכל איבריה שווים לאפס. האם קיים $M>0$ עבורו ניתן לשחזר את $\\boldsymbol x$ בהינתן $\\boldsymbol z$? במידה וכן, מצא/י את $M$ והצג/י את אופן השחזור. במידה ולא, הסבר/י.",
+     "box": [
+      75,
+      1056,
+      835,
+      1166
+     ],
+     "lines": 4,
+     "solution": "**סימונים:** $\\boldsymbol x_e=\\boldsymbol A_0\\boldsymbol x=(x[0],x[2],\\dots,x[2N-2])^T$, $\\boldsymbol x_o=\\boldsymbol A_1\\boldsymbol x=(x[1],x[3],\\dots,x[2N-1])^T$, שניהם באורך $N$.\n\n**שלב 1 – משמעות האופרטור.** עבור $\\boldsymbol v\\in\\mathbb C^{2N}$ מתקיים $(\\boldsymbol F_{2N}\\boldsymbol v)[p]=\\sum_n v[n]e^{-j2\\pi np/2N}$. הכפלה ב-$[\\Lambda_{2N}]_{p,p}=e^{-j\\frac{2\\pi}{2N}Mp}$ מתאימה להזזה בזמן, ולכן $\\boldsymbol F_{2N}^{-1}\\boldsymbol\\Lambda_{2N}\\boldsymbol F_{2N}\\boldsymbol v=\\boldsymbol v[(n-M)\\bmod 2N]$: **הזזה מעגלית ב-$M$** באורך $2N$.\n\n**שלב 2 – ביטוי ל-$\\boldsymbol z$.** מכיוון ש-$\\boldsymbol B=\\boldsymbol 0$:\n$$\\boldsymbol z=\\begin{pmatrix}\\boldsymbol x_e\\\\ \\boldsymbol 0\\end{pmatrix}+\\mathrm{Shift}_M\\begin{pmatrix}\\boldsymbol x_o\\\\ \\boldsymbol 0\\end{pmatrix}.$$\nהבלוק הראשון תופס את האינדקסים $0,\\dots,N-1$, והבלוק המוזז את $M,\\dots,M+N-1$ (מודולו $2N$).\n\n**שלב 3 – בחירת $M$.** עבור $M=N$ הבלוק המוזז תופס בדיוק את $N,\\dots,2N-1$, בלי חפיפה:\n$$\\boldsymbol z=\\begin{pmatrix}\\boldsymbol x_e\\\\ \\boldsymbol x_o\\end{pmatrix}.$$\n**תשובה: כן, $M=N$** (וכל $M\\equiv N\\pmod{2N}$).\n\n**שחזור:** $x[2p]=z[p]$ ו-$x[2p+1]=z[N+p]$ עבור $p=0,\\dots,N-1$. כלומר $\\boldsymbol z=\\boldsymbol P\\boldsymbol x$ עם $\\boldsymbol P$ מטריצת תמורה הפיכה ו-$\\boldsymbol x=\\boldsymbol P^{-1}\\boldsymbol z=\\boldsymbol P^T\\boldsymbol z$.\n\n**למה אין $M$ אחר:** אם $M\\not\\equiv N\\pmod{2N}$ שני הבלוקים חופפים, ולכן לוקטור $\\boldsymbol z$ יש תומך באורך קטן מ-$2N$ (למשל $0<M<N$: התומך הוא $0,\\dots,N+M-1$), כלומר פחות מ-$2N$ משוואות לא טריוויאליות על $2N$ נעלמים, והמטריצה אינה הפיכה.\n\n*הפתרון בקובץ מסכים: $M=N$ והמטריצה הפיכה.*"
+    }
+   ],
+   "topics": [
+    "t6",
+    "t7"
+   ]
+  },
+  {
+   "number": 3,
+   "points": 25,
+   "stem": "נתון הקשר $y[n]=\\sum_{m=0}^{M-1}h[m]x[n-m]$ כאשר $x[n]$ הינה סדרה ארוכה, ו-$h[n]$ הינו מסנן באורך $M$. מוגדר בלוק $i$ של אות הכניסה באופן הבא:\n$$x_i[n]=(x[a\\cdot i],x[a\\cdot i+1],\\dots,x[a\\cdot i+4],0,0)$$\nכאשר $a$ הינו קבוע שלם חיובי. עבור כל בלוק מחושבת $X_i[k]$, התמרת DFT של $x_i[n]$ באורך 7 עבור $k=0,\\dots,6$.",
+   "figures": [],
+   "regions": [
+    {
+     "page": 2,
+     "view": [
+      910,
+      1287
+     ],
+     "box": [
+      75,
+      158,
+      835,
+      296
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "א",
+     "points": 6,
+     "text": "בסעיף זה בלבד $M=3$. כמה איברים מתוך $y[n]$ ניתנים לחישוב באופן מדויק בהינתן $h[n]$ ובלוק בודד $X_i[k]$? פרט/י אילו ערכי $y[n]$ הם נכונים והסבר/י כל שלב בפיתוח.",
+     "box": [
+      75,
+      303,
+      835,
+      346
+     ],
+     "lines": 2,
+     "solution": "**סימונים:** $u_i[n]=(h*x_i)[n]$ – קונבולוציה לינארית של הבלוק עם $h$ (באורך $5+3-1=7$), $x_i[n]=0$ מחוץ ל-$n=0,\\dots,4$.\n\n**שלב 1 – מה מחשבים מ-$X_i[k]$.** מחשבים $\\mathrm{IDFT}_7\\{X_i[k]H[k]\\}$ כאשר $H[k]=\\mathrm{DFT}_7\\{h\\}$ ($h$ מרופד באפסים לאורך 7). זו קונבולוציה מעגלית באורך 7. כי $5+3-1=7\\le 7$ אין עטיפה (aliasing), והתוצאה היא הקונבולוציה הלינארית המלאה: $y_i[n]=u_i[n]$ עבור $n=0,\\dots,6$.\n\n**שלב 2 – אילו ערכים שווים ל-$y[\\cdot]$.** $y[ai+n]=\\sum_{m=0}^{2}h[m]x[ai+n-m]$ דורש את $x[ai+n-2],x[ai+n-1],x[ai+n]$, שכולם חייבים להיות בתוך הבלוק, כלומר $n-2\\ge0$ ו-$n\\le4$, כלומר $n=2,3,4$. עבור $n=0,1$ חסרים הדוגמאות $x[ai-2],x[ai-1]$ מהבלוק הקודם, ועבור $n=5,6$ חסרות $x[ai+5],x[ai+6]$ מהבלוק הבא (בבלוק יש שם אפסים).\n\n**תשובה:** **3 איברים** ניתנים לחישוב מדויק מבלוק בודד:\n$$y[ai+2]=y_i[2],\\quad y[ai+3]=y_i[3],\\quad y[ai+4]=y_i[4].$$\nהאיברים $y_i[0],y_i[1],y_i[5],y_i[6]$ הם סכומים חלקיים בלבד.\n\n*הפתרון בקובץ מסכים: 3 איברים, $y_i[2],y_i[3],y_i[4]$.*"
+    },
+    {
+     "label": "ב",
+     "points": 6,
+     "text": "בסעיף זה בלבד $M=3$ וכן $a$ נתון לבחירתך. הצע/י אלגוריתם יעיל חישובית ככל שניתן לחישוב $y[n]$ בהינתן $h[n]$ ו-$X_i[k]$ לכל $i$ שלם. הוכח/י כי אכן ניתן לחשב את כל איברי $y[n]$, הסבר/י כל שלב בפיתוח וציין/י את ערך $a$ שבחרת. הערה: יעיל חישובית – הכולל מספר קטן ככל שניתן של מכפלות קומפלקסיות.",
+     "box": [
+      75,
+      348,
+      835,
+      411
+     ],
+     "lines": 3,
+     "solution": "**עיקרון: Overlap-Add.** נבחר $\\boxed{a=5}$, כך שהבלוקים $x_i$ מכילים את הדוגמאות $x[5i],\\dots,x[5i+4]$ בלי חפיפה ובלי חור, ו-$x[n]=\\sum_i\\tilde x_i[n]$ כאשר $\\tilde x_i[n]=x_i[n-5i]$ (הבלוק במקומו).\n\n**הוכחה שמתקבל כל $y[n]$.** מלינאריות, $y=h*x=\\sum_ih*\\tilde x_i$ ו-$(h*\\tilde x_i)[n]=u_i[n-5i]$, עם $u_i$ באורך 7 (תומך $0,\\dots,6$), שנתון מהקונבולוציה המעגלית כבסעיף א׳ (אורך 7 ללא aliasing). לכן\n$$y[5i+n]=u_i[n]+u_{i-1}[n+5],$$\nכלומר:\n$$y[5i]=u_i[0]+u_{i-1}[5],\\quad y[5i+1]=u_i[1]+u_{i-1}[6],\\quad y[5i+2]=u_i[2],\\quad y[5i+3]=u_i[3],\\quad y[5i+4]=u_i[4].$$\nכל מספר שלם $n$ הוא מהצורה $5i+r$ עם $r\\in\\{0,\\dots,4\\}$, ולכן כל $y[n]$ מחושב.\n\n**האלגוריתם לכל בלוק $i$:**\n1. מחשבים מראש $H[k]=\\mathrm{DFT}_7\\{h[n]\\}$ (פעם אחת).\n2. $Y_i[k]=X_i[k]H[k]$, $k=0,\\dots,6$: **7 מכפלות מרוכבות**.\n3. $u_i[n]=\\mathrm{IDFT}_7\\{Y_i[k]\\}$.\n4. מוציאים $y[5i+2..5i+4]=u_i[2..4]$ ומוסיפים $u_i[5],u_i[6]$ לתחילת הבלוק הבא: $y[5i+5]\\mathrel{+}=u_i[5]$, $y[5i+6]\\mathrel{+}=u_i[6]$ (2 חיבורים).\n\n**למה $a=5$:** כל בלוק נותן 5 דגימות פלט חדשות (המקסימום, כי יש בו רק 5 דגימות קלט). $a<5$ היה מחשב פעמיים את אותן דגימות ו-$a>5$ היה מדלג על דגימות קלט.\n\n**עלות:** 7 מכפלות מרוכבות נקודתיות לבלוק (כלומר $1.4$ מכפלות לכל דגימת פלט), ועוד IDFT אחד באורך 7 לבלוק. לא נדרש DFT של הקלט, כי $X_i[k]$ נתון, ו-$H[k]$ מחושב פעם אחת."
+    },
+    {
+     "label": "ג",
+     "points": 13,
+     "text": "חזור/י על סעיפים א׳ ו-ב׳ עבור $M=4$.",
+     "box": [
+      75,
+      412,
+      835,
+      435
+     ],
+     "lines": 1,
+     "solution": "**(א) $M=4$.** הקונבולוציה הלינארית של הבלוק (5 דוגמאות) עם $h$ (אורך 4) באורך $5+4-1=8>7$. DFT באורך 7 נותנת קונבולוציה מעגלית: האיבר $u_i[7]=h[3]x[ai+4]$ **נעטף** ל-$n=0$:\n$$y_i[0]=u_i[0]+u_i[7],\\qquad y_i[n]=u_i[n],\\ n=1,\\dots,6.$$\n(זה תואם לטבלה בפתרון: $y_i[0]=h_0x[ai]+h_3x[ai+4]$.)\n\nהמדויקים: $y[ai+n]$ דורש $x[ai+n-3..ai+n]$ בתוך הבלוק, כלומר $n-3\\ge0$ ו-$n\\le4$: $n=3,4$. **2 איברים** מדויקים מבלוק בודד:\n$$y[ai+3]=y_i[3],\\quad y[ai+4]=y_i[4].$$\n(האינדקס 0 פגום גם מהעטיפה, והאינדקסים 1, 2, 5, 6 חלקיים.)\n\n**(ב) $M=4$, אלגוריתם.** כאן יש לבחור $\\boxed{a=2}$ ולהשתמש ב-**Overlap-Save**: בבלוק $i$ מחשבים $y_i=\\mathrm{IDFT}_7\\{X_i[k]H[k]\\}$ (7 מכפלות מרוכבות), ושומרים רק את $y_i[3],y_i[4]$ (את שאר האינדקסים זורקים, כולל זה שנפגם מהעטיפה). לפי סעיף (א):\n$$y[2i+3]=y_i[3],\\quad y[2i+4]=y_i[4].$$\n\n**הוכחה שמתקבל כל $y[n]$:** בלוק $i$ נותן את $y[2i+3],y[2i+4]$, ובלוק $i+1$ את $y[2i+5],y[2i+6]$. הזוגות רצופים וללא חורים ולכן $y[n]$ מחושב לכל $n$. עם $a>2$ היו נשארים חורים (למשל $a=3$ מדלג על $y[3i+5]$), ועם $a<2$ היה חישוב כפול.\n\n**הערה על חלופה:** אפשר גם $a=5$ (כמו ב-$M=3$, Overlap-Add) והשלמת $y[5i]$ ו-$y[5i+2]$ בעזרת $u_i[7]=h[3]x[5i+4]$. אבל אז צריך את $x[5i+4]$ במישור הזמן, כלומר IDFT נוסף מתוך $X_i[k]$, והחסכון אינו ברור. לכן הבחירה $a=2$ פשוטה יותר.\n\n*הפתרון בקובץ מסכים: 2 איברים מדויקים ($y_i[3],y_i[4]$) ו-$a=2$.*"
+    }
+   ],
+   "topics": [
+    "t9",
+    "t7",
+    "t6"
+   ]
+  },
+  {
+   "number": 4,
+   "points": 25,
+   "stem": "נתונה הסדרה $x[n]$ ובעזרתה מוגדרת הסדרה $y[n]$ באופן הבא:\n$$y[n]=\\sum_{m=-\\infty}^{\\infty}\\int_{-\\infty}^{\\infty}h(\\tau)\\,x[m]\\,\\Pi\\left(\\frac{[nT-\\tau]-mT}{T}\\right)d\\tau\\qquad\\forall n\\in\\mathbb Z$$",
+   "figures": [],
+   "regions": [
+    {
+     "page": 2,
+     "view": [
+      910,
+      1287
+     ],
+     "box": [
+      75,
+      484,
+      835,
+      612
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "א",
+     "points": 15,
+     "text": "מצא/י פונקציה $h(\\tau)$ (נסמן אותה $h_1(\\tau)$) שעבורה יתקיים $y[n]=x[n]\\ \\forall n$. יש להציג הסבר ופיתוח מלאים.",
+     "box": [
+      75,
+      617,
+      835,
+      662
+     ],
+     "lines": 2,
+     "solution": "**הנחה:** $\\Pi(u)=1$ עבור $|u|<\\frac12$ ו-$0$ אחרת (פונקציית מלבן ברוחב 1 וגובה 1).\n\n**פישוט הביטוי.** $\\Pi$ זוגית, ולכן $\\Pi\\!\\left(\\frac{nT-\\tau-mT}{T}\\right)=\\Pi\\!\\left(\\frac{\\tau-(n-m)T}{T}\\right)$, שהיא 1 בדיוק עבור $\\tau\\in\\left((n-m)T-\\frac T2,\\,(n-m)T+\\frac T2\\right)$. סימון: $c_k=\\int_{kT-T/2}^{kT+T/2}h(\\tau)\\,d\\tau$. אז\n$$y[n]=\\sum_{m}x[m]\\,c_{n-m}=(x*c)[n].$$\nכלומר $y[n]=x[n]$ לכל סדרה $x$ אם ורק אם $c_k=\\delta[k]$: האינטגרל של $h$ על הקטע ברוחב $T$ סביב $0$ שווה 1, ועל כל קטע אחר סביב $kT$ שווה 0.\n\n(פרשנות: $x_0(t)=\\sum_mx[m]\\Pi\\!\\left(\\frac{t-mT}{T}\\right)$ הוא שחזור ZOH, $y(t)=(h*x_0)(t)$ ו-$y[n]=y(nT)$.)\n\n**בחירה:**\n$$\\boxed{h_1(\\tau)=\\delta(\\tau)}$$\nאז $c_0=\\int_{-T/2}^{T/2}\\delta=1$ ו-$c_k=0$ ל-$k\\ne0$ (ה-$\\delta$ נמצאת בתוך הקטע של $k=0$, לא בגבול של קטע). לכן $y[n]=\\sum_mx[m]\\delta[n-m]=x[n]$.\n\n**בדיקה:** $y(t)=(\\delta*x_0)(t)=x_0(t)$, ו-$x_0(nT)=x[n]$ כי ב-$t=nT$ רק המלבן ה-$n$ שונה מאפס ($\\Pi\\!\\left(\\frac{(n-m)T}{T}\\right)=\\delta[n-m]$). לכן $y[n]=x[n]$.\n\n*הפתרון בקובץ מסכים: $h(\\tau)=\\delta(\\tau)$.*"
+    },
+    {
+     "label": "ב",
+     "points": 10,
+     "text": "האם קיימת פונקציה $h(\\tau)$ (נסמן אותה $h_2(\\tau)$) שעבורה יתקיים $y[n]=x[n]\\ \\forall n$, אבל בנוסף $h_1(\\tau)$ שונה מ-$h_2(\\tau)$ ולא רק במספר נקודות סופי?",
+     "box": [
+      75,
+      664,
+      835,
+      714
+     ],
+     "lines": 2,
+     "solution": "**כן.** מסעיף א׳ התנאי היחיד על $h$ הוא $c_k=\\int_{kT-T/2}^{kT+T/2}h=\\delta[k]$, והוא לא קובע את $h$ באופן יחיד.\n\n**דוגמה:**\n$$h_2(\\tau)=\\frac1T\\,\\Pi\\!\\left(\\frac\\tau T\\right).$$\n$c_0=\\int_{-T/2}^{T/2}\\frac1T\\,d\\tau=1$, ו-$c_k=0$ ל-$k\\ne0$ (המלבן מתאפס מחוץ ל-$|\\tau|<\\frac T2$, והערך בנקודות הגבול לא משפיע על האינטגרל). לכן $y[n]=\\sum_mx[m]\\delta[n-m]=x[n]$.\n\n$h_2\\ne h_1$ ולא רק בנקודות סופיות: $h_1=\\delta$ הוא אימפולס ו-$h_2$ מלבן, והם אינם שווים כמעט בשום מקום.\n\n**משפחה שלמה:** לכל $g(\\tau)$ שהאינטגרל שלה על כל קטע $\\left(kT-\\frac T2,kT+\\frac T2\\right)$ הוא אפס, למשל $g(\\tau)=\\sin\\frac{2\\pi\\tau}{T}$ (או $\\cos\\frac{2\\pi\\tau}{T}$), גם $h_1+g$ מקיים את התנאי. כך אפשר לבחור גם זוג פונקציות רגילות, למשל $\\frac1T\\Pi(\\tau/T)$ ו-$\\frac1T\\Pi(\\tau/T)+\\sin\\frac{2\\pi\\tau}{T}$.\n\n*הפתרון בקובץ מסכים: $h(\\tau)=\\frac1T\\Pi(\\tau/T)$.*"
+    }
+   ],
+   "topics": [
+    "t3",
+    "t1"
+   ]
+  }
+ ]
+}
