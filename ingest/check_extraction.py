@@ -74,7 +74,13 @@ for q in qs:
         check_text(f"{lw}.solution", s.get("solution", ""))
         if "text_he" in s:
             check_text(f"{lw}.text_he", s["text_he"])
-        elif kind == "sheets" and re.search(r"[A-Za-z]{4,}", re.sub(r"\$[^$]*\$", "", s.get("text", ""))):
+            if s["text_he"].strip() == s.get("text", "").strip():
+                errors.append(f"{lw}: text_he is a copy of text (omit it for Hebrew text)")
+        elif (
+            kind == "sheets"
+            and re.search(r"[A-Za-z]{4,}", re.sub(r"\$\$[\s\S]*?\$\$|\$[^$]*\$", "", s.get("text", "")))
+            and not re.search(r"[֐-׿]", s.get("text", ""))
+        ):
             errors.append(f"{lw}: English text needs a Hebrew translation (text_he)")
         if len(s.get("solution", "")) < 80:
             errors.append(f"{lw}: solution too short to be a worked solution")

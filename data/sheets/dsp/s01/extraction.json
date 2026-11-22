@@ -329,8 +329,7 @@
       693
      ],
      "lines": 1,
-     "solution": "**שלב 1.** הזזה ב-$\\pi$ בתדר הבדיד מתאימה להזזה ב-$\\pi/T=2000\\pi$ בתדר הרציף. בתחום $0<\\Omega<\\pi$, כאשר $\\omega=\\Omega/T\\in(0,2000\\pi)$:\n\n$$X_d(e^{j\\Omega})=\\frac1TX_c(j\\omega),\\qquad X_d(e^{j(\\Omega-\\pi)})=\\frac1TX_c\\big(j(\\omega-2000\\pi)\\big)$$\n\n(הארגומנט $\\Omega-\\pi\\in(-\\pi,0)$ נמצא בתחום ללא aliasing).\n\n**שלב 2.** השוויון הנתון נותן\n\n$$X_c(j\\omega)=X_c\\big(j(\\omega-2000\\pi)\\big),\\qquad 0<\\omega<2000\\pi$$\n\nובאופן שקול (מחילוף משתנים) $X_c(j\\omega)=X_c(j(\\omega+2000\\pi))$ עבור $-2000\\pi<\\omega<0$.\n\n**תשובה:** $X_c(j\\omega)=X_c\\big(j(\\omega-2000\\pi)\\big)$ בתחום $|\\omega|<2000\\pi$ שבו $X_c$ אינה מתאפסת בהכרח.\n\n**הערה לבדיקה:** $X_d(e^{j(\\Omega-\\pi)})$ היא התמרת $(-1)^nx_d[n]$, ולכן התנאי שקול ל-$x_d[n]=(-1)^nx_d[n]$, כלומר $x_d[n]=0$ לכל $n$ אי-זוגי, כלומר $x_c(nT)=0$ עבור $n$ אי-זוגי.\n",
-     "text_he": "$X_d(e^{j\\omega})=X_d(e^{j(\\omega-\\pi)})$."
+     "solution": "**שלב 1.** הזזה ב-$\\pi$ בתדר הבדיד מתאימה להזזה ב-$\\pi/T=2000\\pi$ בתדר הרציף. בתחום $0<\\Omega<\\pi$, כאשר $\\omega=\\Omega/T\\in(0,2000\\pi)$:\n\n$$X_d(e^{j\\Omega})=\\frac1TX_c(j\\omega),\\qquad X_d(e^{j(\\Omega-\\pi)})=\\frac1TX_c\\big(j(\\omega-2000\\pi)\\big)$$\n\n(הארגומנט $\\Omega-\\pi\\in(-\\pi,0)$ נמצא בתחום ללא aliasing).\n\n**שלב 2.** השוויון הנתון נותן\n\n$$X_c(j\\omega)=X_c\\big(j(\\omega-2000\\pi)\\big),\\qquad 0<\\omega<2000\\pi$$\n\nובאופן שקול (מחילוף משתנים) $X_c(j\\omega)=X_c(j(\\omega+2000\\pi))$ עבור $-2000\\pi<\\omega<0$.\n\n**תשובה:** $X_c(j\\omega)=X_c\\big(j(\\omega-2000\\pi)\\big)$ בתחום $|\\omega|<2000\\pi$ שבו $X_c$ אינה מתאפסת בהכרח.\n\n**הערה לבדיקה:** $X_d(e^{j(\\Omega-\\pi)})$ היא התמרת $(-1)^nx_d[n]$, ולכן התנאי שקול ל-$x_d[n]=(-1)^nx_d[n]$, כלומר $x_d[n]=0$ לכל $n$ אי-זוגי, כלומר $x_c(nT)=0$ עבור $n$ אי-זוגי.\n"
     }
    ],
    "page": 2,

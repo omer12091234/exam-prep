@@ -1,0 +1,605 @@
+{
+ "exam": {
+  "match_title": "דף 4 – התמרת DFT",
+  "sheet_number": 4,
+  "drive_file_id": "1uQVUH9Y66FmA79xID4UseeGZVgN0BFJa",
+  "source_title": "דף 4 - התמרת DFT.pdf",
+  "notes": "הדף באנגלית (Home Work #4 של Introduction to Signal Processing; שאלות 5.3, 5.5, 5.7, 5.10, 5.12, 5.13, 5.18, 5.19, 5.23, 5.24 מתוך Proakis, Manolakis). עמודים 1-3 שאלון, עמודים 4-9 פתרון (Solutions). הניסוח מתומלל כפי שהודפס. הפתרונות נכתבו מחדש ונבדקו מול הפתרון שבקובץ; נמצאו בו שגיאות שתוקנו כאן: ב-5.12 סעיפים א, ב, ג (ערכי הסדרות), ב-5.23ח (פישוט סופי), וב-5.19ד חסר המקרה k=N/2. ב-5.12א המודפס $W_2^{*}$ נקרא כ-$W_2^{k}$ (כפי שבפתרון הסרוק), וב-5.12ב,ג הסימון Re|X(k)| נקרא Re X(k). ב-5.12 החץ מוצב בהדפסה מתחת לאיבר הראשון. ב-5.13ב החץ מתחת לאיבר 2 ומוגדר n=0."
+ },
+ "questions": [
+  {
+   "number": 3,
+   "topics": [
+    "t6",
+    "t7"
+   ],
+   "stem": "5.3. Let $X(k)$, $0\\le k\\le N-1$, be the $N$-point DFT of the sequence $x(n)$, $0\\le n\\le N-1$. We define $$\\hat X(k)=\\begin{cases}X(k), & 0\\le k\\le k_c,\\ N-k_c\\le k\\le N-1\\\\ 0, & k_c<k<N-k_c\\end{cases}$$",
+   "figures": [],
+   "regions": [
+    {
+     "page": 1,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      140,
+      262,
+      800,
+      345
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "",
+     "text": "and we compute the inverse $N$-point DFT of $\\hat X(k)$, $0\\le k\\le N-1$. What is the effect of this process on the sequence $x(n)$? Explain.",
+     "box": [
+      140,
+      350,
+      800,
+      398
+     ],
+     "lines": 2,
+     "solution": "**מוסכמות:** $W_N=e^{-j2\\pi/N}$, $X(k)=\\sum_{n=0}^{N-1}x(n)W_N^{kn}$, $x(n)=\\frac1N\\sum_{k=0}^{N-1}X(k)W_N^{-kn}$; אינדקסים מחוץ ל-$0..N-1$ מובנים מודולו $N$.\n\n**שלב 1 – $\\hat X(k)$ כמכפלה.** נגדיר\n$$F(k)=\\begin{cases}1,&0\\le k\\le k_c,\\ N-k_c\\le k\\le N-1\\\\0,&k_c<k<N-k_c\\end{cases}\\qquad\\Rightarrow\\qquad \\hat X(k)=F(k)X(k).$$\nהמסנן $F(k)$ משאיר את הדגימות בתדרים $\\omega_k=2\\pi k/N$ הקרובים ל-$0$ (כלומר $|\\omega|\\le 2\\pi k_c/N$, כולל הצד ה\"שלילי\" $k\\ge N-k_c$ שמתאים ל-$-k_c..-1$), ומאפס את כל התדרים הגבוהים: מ-$(k_c+1)\\frac{2\\pi}{N}$ ועד $\\pi$ (ובאופן סימטרי עד $-\\pi$).\n\n**שלב 2 – במישור הזמן.** כפל ב-DFT הוא קונבולוציה מעגלית ב-$N$ נקודות:\n$$\\hat x(n)=x(n)\\circledast f(n),\\qquad f(n)=\\frac1N\\sum_{k=-k_c}^{k_c}e^{j2\\pi kn/N}=\\frac1N\\,\\frac{\\sin\\!\\big(\\pi(2k_c+1)n/N\\big)}{\\sin(\\pi n/N)}$$\n($f$ הוא גרעין דיריכלה; $f(0)=(2k_c+1)/N$).\n\n**מסקנה:** התהליך הוא **סינון מעבר-נמוך אידיאלי מעגלי** של $x(n)$: הרכיבים המהירים (תדרים מעל $\\approx 2\\pi(k_c+\\frac12)/N$) נמחקים, והאות מוחלק. מכיוון שהשארנו את הזוגות $k$ ו-$N-k$ יחד, אם $x(n)$ ממשי אז גם $\\hat x(n)$ ממשי ($\\hat X(N-k)=\\hat X^*(k)$ נשמר).\n\n**בדיקות:** עבור $k_c=\\lfloor N/2\\rfloor$ לא מאופס דבר ו-$\\hat x=x$. עבור $k_c=0$ נשאר רק $X(0)$ ולכן $\\hat x(n)=\\frac{X(0)}{N}$, הממוצע של $x$ (קבוע). שני המקרים תואמים ל-$f$ שלעיל.\n\nהערה: מכיוון שהקונבולוציה מעגלית ו-$f$ אינו סופי-חיובי, מופיעות תנודות (תופעת גיבס) סביב קפיצות באות.\n",
+     "text_he": "ונחשב את ה-IDFT בן $N$ נקודות של $\\hat X(k)$, $0\\le k\\le N-1$. מהי השפעת התהליך הזה על הסדרה $x(n)$? הסבירו."
+    }
+   ],
+   "stem_he": "5.3. יהי $X(k)$, $0\\le k\\le N-1$, ה-DFT בן $N$ נקודות של הסדרה $x(n)$, $0\\le n\\le N-1$. נגדיר $$\\hat X(k)=\\begin{cases}X(k), & 0\\le k\\le k_c,\\ N-k_c\\le k\\le N-1\\\\ 0, & k_c<k<N-k_c\\end{cases}$$"
+  },
+  {
+   "number": 5,
+   "topics": [
+    "t6"
+   ],
+   "stem": "5.5. Compute the quantity $$\\sum_{n=0}^{N-1}x_1(n)x_2(n)$$ for the following pairs of sequences.",
+   "figures": [],
+   "regions": [
+    {
+     "page": 1,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      140,
+      419,
+      800,
+      531
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "a",
+     "text": "$x_1(n)=x_2(n)=\\cos\\dfrac{2\\pi}{N}n \\qquad 0\\le n\\le N-1$",
+     "box": [
+      170,
+      531,
+      800,
+      568
+     ],
+     "lines": 1,
+     "solution": "**שלב 1.** $\\cos^2\\theta=\\frac12+\\frac12\\cos2\\theta$, ולכן\n$$\\sum_{n=0}^{N-1}\\cos^2\\!\\frac{2\\pi n}{N}=\\frac N2+\\frac12\\sum_{n=0}^{N-1}\\cos\\frac{4\\pi n}{N}.$$\n\n**שלב 2.** הסכום $\\sum_{n=0}^{N-1}e^{\\pm j4\\pi n/N}$ הוא סכום סדרה הנדסית עם מנה $e^{\\pm j4\\pi/N}\\ne1$ ו-$(e^{\\pm j4\\pi/N})^N=1$, ולכן הוא $0$ (כל עוד $N\\ge3$, שאז $2/N$ אינו שלם). לכן הסכום של הקוסינוס הוא $0$.\n\n$$\\boxed{\\sum_{n}x_1(n)x_2(n)=\\frac N2}\\qquad(N\\ge3)$$\n\n**בדיקה:** $N=4$: $\\cos^2(\\pi n/2)=1,0,1,0$ ומתקבל $2=N/2$. (עבור $N=1,2$ כל האיברים שווים ל-1 והתוצאה $N$.) תואם לפתרון בקובץ.\n"
+    },
+    {
+     "label": "b",
+     "text": "$x_1(n)=\\cos\\dfrac{2\\pi}{N}n \\qquad x_2(n)=\\sin\\dfrac{2\\pi}{N}n \\qquad 0\\le n\\le N-1$",
+     "box": [
+      170,
+      569,
+      800,
+      609
+     ],
+     "lines": 1,
+     "solution": "**שלב 1.** $\\cos\\theta\\sin\\theta=\\frac12\\sin2\\theta$, ולכן\n$$\\sum_{n=0}^{N-1}\\cos\\frac{2\\pi n}{N}\\sin\\frac{2\\pi n}{N}=\\frac12\\sum_{n=0}^{N-1}\\sin\\frac{4\\pi n}{N}=\\frac12\\,\\mathrm{Im}\\sum_{n=0}^{N-1}e^{j4\\pi n/N}=0,$$\nכי סכום הסדרה ההנדסית הוא $0$ (ראו סעיף א; עבור $N=1,2$ כל האיברים עצמם אפס).\n\n$$\\boxed{0}$$\n\n**משמעות:** הקוסינוס והסינוס באותו תדר אורתוגונליים על פני מחזור שלם. תואם לפתרון בקובץ.\n"
+    },
+    {
+     "label": "c",
+     "text": "$x_1(n)=\\delta(n)+\\delta(n-8) \\qquad x_2(n)=u(n)-u(n-N)$",
+     "box": [
+      170,
+      610,
+      800,
+      632
+     ],
+     "lines": 1,
+     "solution": "**שלב 1.** $x_2(n)=1$ עבור $0\\le n\\le N-1$ (מלבן באורך $N$). לכן הסכום מחשב את סכום ערכי $x_2$ בנקודות שבהן $x_1$ שונה מאפס, מתוך חלון הסכימה $0\\le n\\le N-1$.\n\n**שלב 2.** $\\delta(n)$ תורם $x_2(0)=1$ תמיד. $\\delta(n-8)$ תורם $x_2(8)=1$ רק אם $8\\le N-1$, כלומר $N\\ge9$.\n\n$$\\boxed{\\sum_n x_1(n)x_2(n)=\\begin{cases}2,&N\\ge9\\\\1,&N\\le8\\end{cases}}$$\n\nבפתרון בקובץ נלקח $N>8$ ולכן התקבל $2$. (הסכום הוא על $0..N-1$ בלבד, ללא מודולו, ולכן עבור $N\\le8$ הדלתא ב-$n=8$ מחוץ לחלון.)\n"
+    }
+   ],
+   "stem_he": "5.5. חשבו את הגודל $$\\sum_{n=0}^{N-1}x_1(n)x_2(n)$$ עבור זוגות הסדרות הבאים."
+  },
+  {
+   "number": 7,
+   "topics": [
+    "t6"
+   ],
+   "stem": "5.7. If $X(k)$ is the DFT of the sequence $x(n)$, determine the $N$-point DFTs of the sequences",
+   "figures": [],
+   "regions": [
+    {
+     "page": 1,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      140,
+      652,
+      800,
+      690
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "",
+     "text": "$$x_c(n)=x(n)\\cos\\frac{2\\pi k_0n}{N}\\qquad 0\\le n\\le N-1$$ and $$x_s(n)=x(n)\\sin\\frac{2\\pi k_0n}{N}\\qquad 0\\le n\\le N-1$$ in terms of $X(k)$.",
+     "box": [
+      140,
+      680,
+      800,
+      818
+     ],
+     "lines": 4,
+     "solution": "**מוסכמות:** $W_N=e^{-j2\\pi/N}$, $X(k)=\\sum_{n=0}^{N-1}x(n)W_N^{kn}$, $x(n)=\\frac1N\\sum_{k=0}^{N-1}X(k)W_N^{-kn}$; אינדקסים מחוץ ל-$0..N-1$ מובנים מודולו $N$.\n\n($k_0$ שלם.) **שלב 1 – פירוק לאקספוננטים.**\n$$\\cos\\frac{2\\pi k_0n}{N}=\\tfrac12\\big(W_N^{-k_0n}+W_N^{k_0n}\\big),\\qquad \\sin\\frac{2\\pi k_0n}{N}=\\tfrac1{2j}\\big(W_N^{-k_0n}-W_N^{k_0n}\\big)$$\n\n**שלב 2 – $x_c$.**\n$$X_c(k)=\\sum_{n=0}^{N-1}x(n)\\tfrac12\\big(W_N^{-k_0n}+W_N^{k_0n}\\big)W_N^{kn}=\\tfrac12\\sum_n x(n)W_N^{(k-k_0)n}+\\tfrac12\\sum_n x(n)W_N^{(k+k_0)n}$$\nכל סכום הוא DFT של $x$ מוזז בתדר:\n$$\\boxed{X_c(k)=\\tfrac12X\\big((k-k_0)_N\\big)+\\tfrac12X\\big((k+k_0)_N\\big)}$$\n\n**שלב 3 – $x_s$.** באותו אופן\n$$\\boxed{X_s(k)=\\tfrac1{2j}X\\big((k-k_0)_N\\big)-\\tfrac1{2j}X\\big((k+k_0)_N\\big)}$$\nכאשר $(\\cdot)_N$ הוא מודולו $N$ (הזזה מעגלית).\n\n**בדיקה:** עבור $x(n)=1$, $X(k)=N\\delta(k)$ ומתקבל $X_c(k)=\\frac N2[\\delta(k-k_0)+\\delta(k+k_0)]$, וזה ה-DFT של $\\cos(2\\pi k_0n/N)$ (ראו 5.23ו). תואם לפתרון בקובץ.\n",
+     "text_he": "$$x_c(n)=x(n)\\cos\\frac{2\\pi k_0n}{N}\\qquad 0\\le n\\le N-1$$ ו- $$x_s(n)=x(n)\\sin\\frac{2\\pi k_0n}{N}\\qquad 0\\le n\\le N-1$$ במונחי $X(k)$."
+    }
+   ],
+   "stem_he": "5.7. אם $X(k)$ הוא ה-DFT של הסדרה $x(n)$, מצאו את ה-DFT בן $N$ נקודות של הסדרות"
+  },
+  {
+   "number": 10,
+   "topics": [
+    "t6"
+   ],
+   "stem": "5.10. Compute the energy of the $N$-point sequence",
+   "figures": [],
+   "regions": [
+    {
+     "page": 1,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      140,
+      836,
+      800,
+      858
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "",
+     "text": "$$x(n)=\\cos\\frac{2\\pi kn}{N}\\qquad 0\\le n\\le N-1$$",
+     "box": [
+      140,
+      860,
+      800,
+      902
+     ],
+     "lines": 1,
+     "solution": "**הגדרה:** האנרגיה היא $E=\\sum_{n=0}^{N-1}|x(n)|^2$. ($k$ שלם.)\n\n**שלב 1.**\n$$x^2(n)=\\cos^2\\frac{2\\pi kn}{N}=\\frac12+\\frac12\\cos\\frac{4\\pi kn}{N}=\\frac12+\\frac14\\Big(e^{j4\\pi kn/N}+e^{-j4\\pi kn/N}\\Big).$$\n\n**שלב 2.** אם $2k$ אינו כפולה של $N$, הסכומים של האקספוננטים המרוכבים על $n=0..N-1$ מתאפסים (סדרה הנדסית שלמה), ונשאר\n$$\\boxed{E=\\frac N2}$$\n\n**מקרים פרטיים:** אם $k\\equiv0\\pmod N$ אז $x(n)\\equiv1$ ו-$E=N$; אם $N$ זוגי ו-$k\\equiv N/2$ אז $x(n)=(-1)^n$ ו-$E=N$.\n\n**בדיקה בעזרת פרסבל:** $X(k_0)=X(N-k_0)=N/2$ ולכן $E=\\frac1N\\sum|X|^2=\\frac1N\\cdot2\\cdot\\frac{N^2}{4}=\\frac N2$. תואם לפתרון בקובץ.\n"
+    }
+   ],
+   "stem_he": "5.10. חשבו את האנרגיה של הסדרה בת $N$ הנקודות"
+  },
+  {
+   "number": 12,
+   "topics": [
+    "t6",
+    "t7"
+   ],
+   "stem": "5.12. Consider a finite-duration sequence $$x(n)=\\{0,1,2,3,4,5\\}$$ with the arrow (origin $n=0$) under the first element, $0$.",
+   "figures": [
+    "החץ מתחת לאיבר הראשון, 0, במיקום n=0 של הסדרה"
+   ],
+   "regions": [
+    {
+     "page": 2,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      140,
+      112,
+      800,
+      170
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "a",
+     "text": "Sketch the sequence $s(n)$ with six-point DFT $$S(k)=W_2^{*}X(k)\\qquad k=0,1,\\ldots,6$$",
+     "box": [
+      170,
+      191,
+      800,
+      246
+     ],
+     "lines": 2,
+     "solution": "**מוסכמות:** $N=6$, $W_N=e^{-j2\\pi/N}$, $x(n)=\\{0,1,2,3,4,5\\}$ ל-$n=0..5$.\n\n**הערת קריאה:** בטקסט המודפס מופיע $W_2^{*}$ וכן $k=0,\\dots,6$. ב-DFT בן שש נקודות $k=0..5$, ובפתרון שבקובץ המשתנה הוא $W_2^{k}$ (הכוכבית היא כנראה $k$ מוקטן). אני פותר עם $S(k)=W_2^{k}X(k)$. (קריאה מילולית $W_2^*=-1$ הייתה נותנת פשוט $s=-x$.)\n\n**שלב 1.** $W_2=e^{-j\\pi}=-1$, לכן $S(k)=(-1)^kX(k)=e^{j\\pi k}X(k)$. מכיוון ש-$W_6^{-3k}=e^{j2\\pi\\cdot3k/6}=e^{j\\pi k}$:\n$$S(k)=W_6^{-3k}X(k).$$\n\n**שלב 2 – תכונת ההזזה המעגלית.** כפל ב-$W_N^{-mk}$ מזיז את הסדרה מעגלית ימינה ב-$m$: $s(n)=x\\big((n-m)_N\\big)$. כאן $m=3$:\n$$s(n)=x\\big((n-3)_6\\big).$$\n\n**שלב 3 – הערכים.** $s(0)=x(3)=3$, $s(1)=x(4)=4$, $s(2)=x(5)=5$, $s(3)=x(0)=0$, $s(4)=x(1)=1$, $s(5)=x(2)=2$:\n$$\\boxed{s(n)=\\{3,4,5,0,1,2\\},\\quad n=0..5}$$\n(סקיצה: גזע על כל $n$ בגובה הערך; זו הזזה מעגלית של הסדרה המקורית בחצי מחזור.)\n\n*הערה: בפתרון הסרוק שבקובץ נכתב $\\{3,4,0,0,1,2\\}$ — נראה ששם נפלה טעות הקלדה באיבר השלישי, $x(5)=5$ ולא $0$.*\n",
+     "text_he": "שרטטו את הסדרה $s(n)$ שה-DFT בן שש הנקודות שלה הוא $$S(k)=W_2^{*}X(k)\\qquad k=0,1,\\ldots,6$$"
+    },
+    {
+     "label": "b",
+     "text": "Determine the sequence $y(n)$ with six-point DFT $Y(k)=\\mathrm{Re}\\,|X(k)|$.",
+     "box": [
+      170,
+      248,
+      800,
+      270
+     ],
+     "lines": 1,
+     "solution": "**הערת קריאה:** הסימן $\\mathrm{Re}|X(k)|$ מתפרש כ-$\\mathrm{Re}\\{X(k)\\}$ (החלק הממשי של $X(k)$; ערך מוחלט היה עושה את הביטוי טריוויאלי וממשי חיובי).\n\n**שלב 1.** $\\mathrm{Re}\\{X(k)\\}=\\dfrac{X(k)+X^*(k)}{2}$.\n\n**שלב 2.** $\\mathrm{IDFT}\\{X^*(k)\\}=x^*\\big((-n)_N\\big)$. לכן\n$$y(n)=\\tfrac12\\Big[x(n)+x^*\\big((-n)_6\\big)\\Big],$$\nכלומר החלק הזוגי-מעגלי של $x$ (כאן $x$ ממשי).\n\n**שלב 3.** $y(n)=\\frac12[x(n)+x((6-n)_6)]$:\n- $y(0)=x(0)=0$\n- $y(1)=\\frac{x(1)+x(5)}2=\\frac{1+5}2=3$\n- $y(2)=\\frac{x(2)+x(4)}2=3$\n- $y(3)=x(3)=3$\n- $y(4)=\\frac{x(4)+x(2)}2=3$\n- $y(5)=\\frac{x(5)+x(1)}2=3$\n\n$$\\boxed{y(n)=\\{0,3,3,3,3,3\\}}$$\n\n**בדיקה:** $y(n)=y((6-n)_6)$ (סימטרי מעגלית) ו-$\\sum y=15=\\sum x$, כלומר $Y(0)=X(0)=15$. \n\n*הערה: בפתרון הסרוק שבקובץ נרשם $\\{0,\\frac12,3,3,3,\\frac12\\}$, אף שהנוסחה שלו עצמה ($\\frac{x(1)+x(5)}{2}=3$) נותנת $3$ — נראה ששם טעות חישוב.*\n",
+     "text_he": "מצאו את הסדרה $y(n)$ שה-DFT בן שש הנקודות שלה הוא $Y(k)=\\mathrm{Re}\\,|X(k)|$."
+    },
+    {
+     "label": "c",
+     "text": "Determine the sequence $v(n)$ with six-point DFT $V(k)=\\mathrm{Im}\\,|X(k)|$.",
+     "box": [
+      170,
+      270,
+      800,
+      291
+     ],
+     "lines": 1,
+     "solution": "**הערת קריאה:** כמו בסעיף ב, $V(k)=\\mathrm{Im}\\{X(k)\\}$ (ממשי, כלומר החלק המדומה כמספר ממשי).\n\n**שלב 1.** $\\mathrm{Im}\\{X(k)\\}=\\dfrac{X(k)-X^*(k)}{2j}$.\n\n**שלב 2.** $v(n)=\\dfrac{1}{2j}\\Big[x(n)-x^*\\big((-n)_6\\big)\\Big]=\\dfrac{x(n)-x((6-n)_6)}{2j}=-\\dfrac j2\\big[x(n)-x(6-n)\\big]$ (כי $\\frac1j=-j$).\n\n**שלב 3.**\n- $v(0)=0$\n- $v(1)=-\\frac j2(1-5)=2j$\n- $v(2)=-\\frac j2(2-4)=j$\n- $v(3)=-\\frac j2(3-3)=0$\n- $v(4)=-\\frac j2(4-2)=-j$\n- $v(5)=-\\frac j2(5-1)=-2j$\n\n$$\\boxed{v(n)=\\{0,\\,2j,\\,j,\\,0,\\,-j,\\,-2j\\}}$$\n\n**בדיקה:** $v$ אנטי-סימטרי מעגלית וטהור מדומה (כצפוי: $\\mathrm{Im}X(k)$ ממשי ואי-זוגי ב-$k$ עבור $x$ ממשי, ולכן IDFT שלו מדומה ואי-זוגי). $y(n)+$ [החלק האי-זוגי של $x$] מסתכמים ל-$x$: $x(1)=y(1)+j\\,v(1)\\cdot$… ישירות: החלק האי-זוגי $\\frac{x(1)-x(5)}2=-2=j\\,v(1)$, ואכן $j\\cdot2j=-2$.\n\n*הערה: בפתרון הסרוק שבקובץ נרשם $\\{0,-\\frac12j,j,0,-j,\\frac12j\\}$ — לא מתאים לנוסחה $\\frac{x(n)-x(6-n)}{2j}$ המופיעה שם; נראה ששם טעות חישוב באיברים $n=1,5$.*\n",
+     "text_he": "מצאו את הסדרה $v(n)$ שה-DFT בן שש הנקודות שלה הוא $V(k)=\\mathrm{Im}\\,|X(k)|$."
+    }
+   ],
+   "stem_he": "5.12. נתונה סדרה סופית $$x(n)=\\{0,1,2,3,4,5\\}$$ כאשר החץ (ראשית הצירים $n=0$) מתחת לאיבר הראשון, $0$."
+  },
+  {
+   "number": 13,
+   "topics": [
+    "t5",
+    "t7"
+   ],
+   "stem": "5.13. Let $x_p(n)$ be a periodic sequence with fundamental period $N$. Consider the following DFTs: $$x_p(n)\\ \\xleftrightarrow[N]{\\text{DFT}}\\ X_1(k)\\qquad\\qquad x_p(n)\\ \\xleftrightarrow[3N]{\\text{DFT}}\\ X_3(k)$$",
+   "figures": [],
+   "regions": [
+    {
+     "page": 2,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      140,
+      292,
+      800,
+      420
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "a",
+     "text": "What is the relationship between $X_1(k)$ and $X_3(k)$?",
+     "box": [
+      170,
+      425,
+      800,
+      447
+     ],
+     "lines": 1,
+     "solution": "**מוסכמות:** $X_1(k)=\\sum_{n=0}^{N-1}x_p(n)W_N^{kn}$ (DFT בן $N$ נקודות), $X_3(k)=\\sum_{n=0}^{3N-1}x_p(n)W_{3N}^{kn}$ (DFT בן $3N$ נקודות, $k=0..3N-1$).\n\n**שלב 1 – פיצול לשלושה מחזורים.** $x_p(n+N)=x_p(n)$, ולכן\n$$X_3(k)=\\sum_{m=0}^{2}\\sum_{n=0}^{N-1}x_p(n)W_{3N}^{k(n+mN)}=\\Big(\\sum_{m=0}^{2}W_{3N}^{kmN}\\Big)\\sum_{n=0}^{N-1}x_p(n)W_{3N}^{kn}.$$\n\n**שלב 2.** $W_{3N}^{kN}=e^{-j2\\pi k/3}=W_3^k$ ו-$W_{3N}^{kn}=W_N^{kn/3}$. מכאן\n$$X_3(k)=\\big(1+W_3^k+W_3^{2k}\\big)\\sum_{n=0}^{N-1}x_p(n)W_N^{(k/3)n}=\\big(1+W_3^k+W_3^{2k}\\big)\\,X_1\\!\\big(\\tfrac k3\\big),$$\nכאשר $X_1(k/3)=\\sum_n x_p(n)e^{-j2\\pi(k/3)n/N}$ הוא הערך של הביטוי הזה גם באינדקס לא שלם.\n\n**שלב 3 – פישוט.** $1+W_3^k+W_3^{2k}=3$ אם $k$ כפולה של 3, ואחרת $0$ (סדרה הנדסית שלמה). לכן\n$$\\boxed{X_3(k)=\\begin{cases}3\\,X_1(k/3),&k=3m,\\ m=0,\\ldots,N-1\\\\0,&\\text{otherwise}\\end{cases}}$$\n\n**משמעות:** ה-DFT בן $3N$ הנקודות של סדרה מחזורית הוא אותו ספקטרום קווי, עם $N$ קווים ברווחי $3$ ואפסים ביניהם (גודל גדל פי $3$ כי מסכמים פי 3 דגימות). תואם לפתרון בקובץ.\n",
+     "text_he": "מהו הקשר בין $X_1(k)$ ל-$X_3(k)$?"
+    },
+    {
+     "label": "b",
+     "text": "Verify the result in part (a) using the sequence $$x_p(n)=\\{\\cdots1,2,1,2,1,2,1,2\\cdots\\}$$ with the arrow under the marked $2$ ($n=0$).",
+     "box": [
+      170,
+      447,
+      800,
+      514
+     ],
+     "lines": 2,
+     "solution": "**מוסכמות:** מהחץ, $x_p(0)=2$, $x_p(1)=1$, והמחזור הוא $N=2$.\n\n**שלב 1 – $X_1(k)$ ($N=2$).**\n$$X_1(k)=2+W_2^{k}=2+(-1)^k\\quad\\Rightarrow\\quad X_1(0)=3,\\ X_1(1)=1.$$\n\n**שלב 2 – $X_3(k)$ ישירות ($3N=6$ נקודות: $x=2,1,2,1,2,1$).** עם $W=W_6=e^{-j\\pi/3}$:\n$$X_3(k)=2+W^k+2W^{2k}+W^{3k}+2W^{4k}+W^{5k}.$$\n- $k=0$: $9$.\n- $k=3$: $W^3=-1$ ולכן $2-1+2-1+2-1=3$.\n- $k=1,2,4,5$: מקבצים $X_3(k)=2\\,(1+W^{2k}+W^{4k})+W^k\\,(1+W^{2k}+W^{4k})$, וכש-$k$ אינו כפולה של 3 הסוגריים מתאפסים: $X_3(k)=0$.\n\n**שלב 3 – השוואה לנוסחה מסעיף א.** $X_3(0)=3X_1(0)=9$ ✓, $X_3(3)=3X_1(1)=3$ ✓, ובשאר האינדקסים $0$ ✓. \n\nכדרך נוספת, מהנוסחה $X_3(k)=(1+W_3^k+W_3^{2k})X_1(k/3)$ עם $X_1(k/3)=2+W_6^{k}$ מתקבל אותו דבר.\n",
+     "text_he": "אמתו את התוצאה של סעיף א בעזרת הסדרה $$x_p(n)=\\{\\cdots1,2,1,2,1,2,1,2\\cdots\\}$$ כאשר החץ מתחת ל-$2$ המסומן ($n=0$)."
+    }
+   ],
+   "stem_he": "5.13. תהי $x_p(n)$ סדרה מחזורית עם מחזור יסודי $N$. נתבונן ב-DFT-ים הבאים: $$x_p(n)\\ \\xleftrightarrow[N]{\\text{DFT}}\\ X_1(k)\\qquad\\qquad x_p(n)\\ \\xleftrightarrow[3N]{\\text{DFT}}\\ X_3(k)$$"
+  },
+  {
+   "number": 18,
+   "topics": [
+    "t5",
+    "t7"
+   ],
+   "stem": "5.18. A linear time-invariant system with frequency response $H(\\omega)$ is excited with the periodic input $$x(n)=\\sum_{k=-\\infty}^{\\infty}\\delta(n-kN)$$",
+   "figures": [],
+   "regions": [
+    {
+     "page": 2,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      140,
+      537,
+      800,
+      640
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "",
+     "text": "Suppose that we compute the $N$-point DFT $Y(k)$ of the samples $y(n)$, $0\\le n\\le N-1$ of the output sequence. How is $Y(k)$ related to $H(\\omega)$?",
+     "box": [
+      140,
+      648,
+      800,
+      692
+     ],
+     "lines": 2,
+     "solution": "**מוסכמות:** $H(\\omega)=\\sum_m h(m)e^{-j\\omega m}$ ($\\omega$ ברד/דגימה), מערכת יציבה כך ש-$H$ קיים.\n\n**שלב 1 – הפלט.** מקונבולוציה:\n$$y(n)=\\sum_m h(m)x(n-m)=\\sum_m h(m)\\sum_{i}\\delta(n-m-iN)=\\sum_{i=-\\infty}^{\\infty}h(n-iN).$$\nזו סדרה מחזורית עם מחזור $N$ (חזרות מחזוריות, aliasing בזמן, של $h$).\n\n**שלב 2 – DFT על מחזור אחד.**\n$$Y(k)=\\sum_{n=0}^{N-1}\\sum_i h(n-iN)W_N^{kn}.$$\nמכיוון ש-$W_N^{k(n-iN)}=W_N^{kn}$, כל הזוגות $(n,i)$ מכסים כל מספר שלם $m=n-iN$ בדיוק פעם אחת:\n$$Y(k)=\\sum_{m=-\\infty}^{\\infty}h(m)W_N^{km}=\\sum_m h(m)e^{-j(2\\pi k/N)m}.$$\n\n$$\\boxed{Y(k)=H(\\omega)\\Big|_{\\omega=2\\pi k/N}=H\\!\\Big(\\frac{2\\pi k}{N}\\Big),\\quad k=0,\\ldots,N-1}$$\n\n**משמעות:** ה-DFT של פלט מערכת LTI להקשת דלתאות מחזורית הוא דגימות של תגובת התדר בתדרים $2\\pi k/N$. **בדיקה:** $N\\to\\infty$ מחזיר $y=h$ ו-$Y$ הופך ל-$H(\\omega)$ עצמו. תואם לפתרון בקובץ.\n",
+     "text_he": "נניח שאנו מחשבים את ה-DFT בן $N$ נקודות, $Y(k)$, של דגימות הפלט $y(n)$, $0\\le n\\le N-1$. כיצד $Y(k)$ קשור ל-$H(\\omega)$?"
+    }
+   ],
+   "stem_he": "5.18. מערכת לינארית קבועה בזמן (LTI) עם תגובת תדר $H(\\omega)$ מקבלת קלט מחזורי $$x(n)=\\sum_{k=-\\infty}^{\\infty}\\delta(n-kN)$$"
+  },
+  {
+   "number": 19,
+   "topics": [
+    "t6"
+   ],
+   "stem": "5.19. *DFT of real sequences with special symmetries*",
+   "figures": [],
+   "regions": [
+    {
+     "page": 2,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      140,
+      694,
+      800,
+      714
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "a",
+     "text": "Using the symmetry properties of Section 5.2 (especially the decomposition properties), explain how we can compute the DFT of two real symmetric (even) and two real antisymmetric (odd) sequences simultaneously using an $N$-point DFT only.",
+     "box": [
+      170,
+      714,
+      800,
+      793
+     ],
+     "lines": 4,
+     "solution": "**מוסכמות:** סימטרי ($x_e(n)=x_e(N-n)$) ואנטי-סימטרי ($x_o(n)=-x_o(N-n)$) מעגלית; $(-k)$ משמעותו $(N-k)_N$.\n\n**עובדות על ה-DFT של סדרות ממשיות:** DFT של סדרה ממשית **זוגית** הוא ממשי וזוגי; DFT של סדרה ממשית **אי-זוגית** הוא מדומה טהור ואי-זוגי.\n\n**שלב 1 – בניית סדרה מרוכבת.** יהיו $x_{e1},x_{e2}$ זוגיות ו-$x_{o1},x_{o2}$ אי-זוגיות, כולן ממשיות. נגדיר\n$$x(n)=\\big[x_{e1}(n)+x_{o1}(n)\\big]+j\\big[x_{e2}(n)+x_{o2}(n)\\big]$$\nונחשב DFT אחד בן $N$ נקודות, $X(k)$. מלינאריות\n$$X(k)=X_{e1}(k)+X_{o1}(k)+jX_{e2}(k)+jX_{o2}(k),$$\nכאשר $X_{e1},X_{e2}$ ממשיים וזוגיים, ו-$X_{o1},X_{o2}$ מדומים טהורים ואי-זוגיים.\n\n**שלב 2 – הפרדה.** מבחינים בין ממשי/מדומה ובין זוגי/אי-זוגי:\n- החלק הממשי של $X$: $\\mathrm{Re}X=X_{e1}+jX_{o2}$ (הראשון זוגי, השני ממשי ואי-זוגי).\n- החלק המדומה של $X$ (כמספר ממשי): $\\mathrm{Im}X=X_{e2}+X_{o1}/j$ (הראשון זוגי, השני ממשי ואי-זוגי).\n\nלכן, עם $\\mathrm{Re}X(-k)$ ו-$\\mathrm{Im}X(-k)$ בחישוב מודולו $N$:\n$$X_{e1}(k)=\\frac{\\mathrm{Re}X(k)+\\mathrm{Re}X(-k)}2,\\qquad X_{o2}(k)=\\frac{\\mathrm{Re}X(k)-\\mathrm{Re}X(-k)}{2j}$$\n$$X_{e2}(k)=\\frac{\\mathrm{Im}X(k)+\\mathrm{Im}X(-k)}2,\\qquad X_{o1}(k)=j\\,\\frac{\\mathrm{Im}X(k)-\\mathrm{Im}X(-k)}2$$\n\n**מסקנה:** DFT יחיד של $x(n)$ נותן את ארבעת ה-DFT-ים. (בפתרון הסרוק שבקובץ הגורמים $j$ מושמטים; כאן הם נשמרו כדי ש-$X_{o}$ יצאו מדומים כנדרש.)\n\n**בדיקה:** סכום ארבע התוצאות $X_{e1}+X_{o1}+jX_{e2}+jX_{o2}$ מחזיר $\\mathrm{Re}X+j\\,\\mathrm{Im}X=X$.\n",
+     "text_he": "בעזרת תכונות הסימטריה של סעיף 5.2 (במיוחד תכונות הפירוק), הסבירו כיצד ניתן לחשב את ה-DFT של שתי סדרות ממשיות סימטריות (זוגיות) ושתי סדרות ממשיות אנטי-סימטריות (אי-זוגיות) בו-זמנית, באמצעות DFT בן $N$ נקודות בלבד."
+    },
+    {
+     "label": "b",
+     "text": "Suppose now that we are given four real sequences $x_i(n)$, $i=1,2,3,4$, that are all symmetric [i.e., $x_i(n)=x_i(N-n)$, $0\\le n\\le N-1$]. Show that the sequences $$s_i(n)=x_i(n+1)-x_i(n-1)$$ are antisymmetric [i.e., $s_i(n)=-s_i(N-n)$ and $s_i(0)=0$].",
+     "box": [
+      170,
+      793,
+      800,
+      897
+     ],
+     "lines": 5,
+     "solution": "**מוסכמות:** האינדקסים מעגליים (מודולו $N$), $x_i(n)=x_i(N-n)$, כלומר $x_i(-m)=x_i(m)$.\n\n**$s_i(0)=0$:** \n$$s_i(0)=x_i(1)-x_i(-1)=x_i(1)-x_i(N-1)=0,$$\nכי הסימטריה $x_i(N-m)=x_i(m)$ עם $m=1$ נותנת $x_i(N-1)=x_i(1)$.\n\n**$s_i(N-n)=-s_i(n)$:**\n$$s_i(N-n)=x_i(N-n+1)-x_i(N-n-1).$$\nלפי הסימטריה $x_i(N-m)=x_i(m)$ עם $m=n-1$ ועם $m=n+1$:\n$$x_i(N-n+1)=x_i(n-1),\\qquad x_i(N-n-1)=x_i(n+1).$$\nלכן\n$$s_i(N-n)=x_i(n-1)-x_i(n+1)=-\\big[x_i(n+1)-x_i(n-1)\\big]=-s_i(n).\\ \\blacksquare$$\n\n**בדיקה:** $N=4$, $x=\\{a,b,c,b\\}$: $s(0)=b-b=0$, $s(1)=c-a$, $s(2)=b-b=0$, $s(3)=a-c=-s(1)$ ✓.\n",
+     "text_he": "נניח כעת שנתונות ארבע סדרות ממשיות $x_i(n)$, $i=1,2,3,4$, שכולן סימטריות [כלומר $x_i(n)=x_i(N-n)$, $0\\le n\\le N-1$]. הראו שהסדרות $$s_i(n)=x_i(n+1)-x_i(n-1)$$ הן אנטי-סימטריות [כלומר $s_i(n)=-s_i(N-n)$ ו-$s_i(0)=0$]."
+    },
+    {
+     "label": "c",
+     "text": "Form a sequence $x(n)$ using $x_1(n)$, $x_2(n)$, $s_3(n)$, and $s_4(n)$ and show how to compute the DFT $X_i(k)$ of $x_i(n)$, $i=1,2,3,4$ from the $N$-point DFT $X(k)$ of $x(n)$.",
+     "box": [
+      170,
+      897,
+      800,
+      937
+     ],
+     "lines": 2,
+     "solution": "**שלב 1 – הסדרה.** $x_1,x_2$ ממשיות זוגיות ו-$s_3,s_4$ ממשיות אי-זוגיות (סעיף ב). נבחר\n$$x(n)=\\big[x_1(n)+s_3(n)\\big]+j\\big[x_2(n)+s_4(n)\\big].$$\nזה בדיוק המבנה של סעיף א עם $x_{e1}=x_1$, $x_{o1}=s_3$, $x_{e2}=x_2$, $x_{o2}=s_4$.\n\n**שלב 2 – $X_1,X_2,S_3,S_4$ מ-$X(k)$.** לפי סעיף א:\n$$X_1(k)=\\frac{\\mathrm{Re}X(k)+\\mathrm{Re}X(-k)}2,\\quad X_2(k)=\\frac{\\mathrm{Im}X(k)+\\mathrm{Im}X(-k)}2,$$\n$$S_3(k)=j\\,\\frac{\\mathrm{Im}X(k)-\\mathrm{Im}X(-k)}2,\\quad S_4(k)=\\frac{\\mathrm{Re}X(k)-\\mathrm{Re}X(-k)}{2j}.$$\n\n**שלב 3 – מ-$S_i$ ל-$X_i$ ($i=3,4$).** $x_i(n+1)\\leftrightarrow W_N^{-k}X_i(k)$ ו-$x_i(n-1)\\leftrightarrow W_N^{k}X_i(k)$ (הזזה מעגלית), ולכן\n$$S_i(k)=\\big(W_N^{-k}-W_N^{k}\\big)X_i(k)=2j\\sin\\!\\Big(\\frac{2\\pi k}N\\Big)X_i(k).$$\n$$\\boxed{X_i(k)=\\frac{S_i(k)}{2j\\sin(2\\pi k/N)},\\quad i=3,4}$$\nבנקודות שבהן $\\sin(2\\pi k/N)\\ne0$ (ראו סעיף ד).\n",
+     "text_he": "הרכיבו סדרה $x(n)$ באמצעות $x_1(n)$, $x_2(n)$, $s_3(n)$ ו-$s_4(n)$, והראו כיצד לחשב את ה-DFT $X_i(k)$ של $x_i(n)$, $i=1,2,3,4$, מתוך ה-DFT בן $N$ נקודות $X(k)$ של $x(n)$."
+    },
+    {
+     "label": "d",
+     "text": "Are there any frequency samples of $X_i(k)$ that cannot be recovered from $X(k)$? Explain.",
+     "box": [
+      170,
+      937,
+      800,
+      980
+     ],
+     "lines": 2,
+     "solution": "**כן.** $X_1(k),X_2(k)$ משוחזרים לכל $k$ (סעיף ג, שלב 2). עבור $X_3,X_4$ החילוק ב-$2j\\sin(2\\pi k/N)$ אינו אפשרי כשהמכנה מתאפס:\n$$\\sin\\frac{2\\pi k}{N}=0\\iff k=0\\ \\text{ או }\\ k=\\frac N2\\ (N\\text{ זוגי}).$$\n\n**הסבר:** ב-$k=0$ מתקיים $S_i(0)=\\sum_n s_i(n)=\\sum_n[x_i(n+1)-x_i(n-1)]=0$ לכל $x_i$, כלומר $S_i(0)=0\\cdot X_i(0)$ ולא נושא מידע על $X_i(0)=\\sum_n x_i(n)$ (רכיב ה-DC). אותו דבר ב-$k=N/2$ כש-$N$ זוגי: $W_N^{-k}=W_N^{k}=-1$ ולכן $S_i(N/2)=0$.\n\nלכן **$X_3(0),X_4(0)$** אינם ניתנים לשחזור, ועבור $N$ זוגי גם **$X_3(N/2),X_4(N/2)$**. \n\n*הערה: בפתרון הסרוק שבקובץ מוזכרים רק $X_3(0),X_4(0)$; כאשר $N$ זוגי גם $k=N/2$ מאפס את הסינוס.*\n",
+     "text_he": "האם יש דגימות תדר של $X_i(k)$ שאי אפשר לשחזר מתוך $X(k)$? הסבירו."
+    }
+   ],
+   "stem_he": "5.19. *DFT של סדרות ממשיות בעלות סימטריות מיוחדות*"
+  },
+  {
+   "number": 23,
+   "topics": [
+    "t6"
+   ],
+   "stem": "5.23. Compute the $N$-point DFTs of the signals",
+   "figures": [],
+   "regions": [
+    {
+     "page": 3,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      140,
+      112,
+      800,
+      134
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "a",
+     "text": "$x(n)=\\delta(n)$",
+     "box": [
+      170,
+      134,
+      800,
+      154
+     ],
+     "lines": 1,
+     "solution": "**מוסכמות:** $W_N=e^{-j2\\pi/N}$, $X(k)=\\sum_{n=0}^{N-1}x(n)W_N^{kn}$, $x(n)=\\frac1N\\sum_{k=0}^{N-1}X(k)W_N^{-kn}$; אינדקסים מחוץ ל-$0..N-1$ מובנים מודולו $N$.\n\n$$X(k)=\\sum_{n=0}^{N-1}\\delta(n)W_N^{kn}=W_N^0=1\\quad\\Rightarrow\\quad\\boxed{X(k)=1,\\ 0\\le k\\le N-1}$$\n**בדיקה:** סכום האות הוא $1=X(0)$.\n"
+    },
+    {
+     "label": "b",
+     "text": "$x(n)=\\delta(n-n_0)\\qquad 0<n_0<N$",
+     "box": [
+      170,
+      154,
+      800,
+      175
+     ],
+     "lines": 1,
+     "solution": "**מוסכמות:** $W_N=e^{-j2\\pi/N}$, $X(k)=\\sum_{n=0}^{N-1}x(n)W_N^{kn}$, $x(n)=\\frac1N\\sum_{k=0}^{N-1}X(k)W_N^{-kn}$; אינדקסים מחוץ ל-$0..N-1$ מובנים מודולו $N$.\n\n$$X(k)=\\sum_{n=0}^{N-1}\\delta(n-n_0)W_N^{kn}=W_N^{kn_0}\\quad\\Rightarrow\\quad\\boxed{X(k)=e^{-j\\frac{2\\pi}{N}kn_0},\\ 0\\le k\\le N-1}$$\n**בדיקה:** $|X(k)|=1$, ובמסגרת תכונת ההזזה: $\\delta(n-n_0)$ הוא הזזה של $\\delta(n)$ ולכן מכפילים ב-$W_N^{kn_0}$.\n"
+    },
+    {
+     "label": "c",
+     "text": "$x(n)=a^{n}\\qquad 0\\le n\\le N-1$",
+     "box": [
+      170,
+      175,
+      800,
+      197
+     ],
+     "lines": 1,
+     "solution": "**מוסכמות:** $W_N=e^{-j2\\pi/N}$, $X(k)=\\sum_{n=0}^{N-1}x(n)W_N^{kn}$, $x(n)=\\frac1N\\sum_{k=0}^{N-1}X(k)W_N^{-kn}$; אינדקסים מחוץ ל-$0..N-1$ מובנים מודולו $N$.\n\n$$X(k)=\\sum_{n=0}^{N-1}\\big(aW_N^{k}\\big)^n=\\frac{1-a^{N}W_N^{kN}}{1-aW_N^{k}}$$\nומכיוון ש-$W_N^{kN}=1$:\n$$\\boxed{X(k)=\\frac{1-a^N}{1-ae^{-j2\\pi k/N}}}$$\n(כל עוד $aW_N^k\\ne1$; אם $a=1$ אז $X(k)=N\\delta(k)$.)\n\n**בדיקה:** $k=0$: $\\frac{1-a^N}{1-a}=1+a+\\dots+a^{N-1}$ ✓.\n"
+    },
+    {
+     "label": "d",
+     "text": "$x(n)=\\begin{cases}1,&0\\le n\\le N/2-1\\ (N\\text{ even})\\\\0,&N/2\\le n\\le N-1\\end{cases}$",
+     "box": [
+      170,
+      198,
+      800,
+      241
+     ],
+     "lines": 2,
+     "solution": "**מוסכמות:** $W_N=e^{-j2\\pi/N}$, $X(k)=\\sum_{n=0}^{N-1}x(n)W_N^{kn}$, $x(n)=\\frac1N\\sum_{k=0}^{N-1}X(k)W_N^{-kn}$; אינדקסים מחוץ ל-$0..N-1$ מובנים מודולו $N$.\n\n**שלב 1.** עבור $k\\ne0$, סדרה הנדסית עם מנה $W_N^k$ ו-$N/2$ איברים:\n$$X(k)=\\sum_{n=0}^{N/2-1}W_N^{kn}=\\frac{1-W_N^{kN/2}}{1-W_N^{k}}=\\frac{1-e^{-j\\pi k}}{1-e^{-j2\\pi k/N}}=\\frac{1-(-1)^k}{1-e^{-j2\\pi k/N}}.$$\n\n**שלב 2 – תוצאה.**\n$$\\boxed{X(k)=\\begin{cases}N/2,&k=0\\\\ \\dfrac{2}{1-e^{-j2\\pi k/N}},&k\\text{ odd}\\\\ 0,&k\\text{ even},\\ k\\ne0\\end{cases}}$$\n(בקובץ מופיע הביטוי $\\frac{1-(-1)^k}{1-e^{-j2\\pi k/N}}$, שאינו מוגדר ב-$k=0$ שבו $X(0)=N/2$.)\n\n**בדיקה:** $N=2$: $x=\\{1,0\\}$, $X(0)=1=N/2$, $X(1)=1$; הנוסחה נותנת $\\frac{2}{1-e^{-j\\pi}}=\\frac22=1$ ✓.\n",
+     "text_he": "$x(n)=\\begin{cases}1,&0\\le n\\le N/2-1\\ (N\\text{ זוגי})\\\\0,&N/2\\le n\\le N-1\\end{cases}$"
+    },
+    {
+     "label": "e",
+     "text": "$x(n)=e^{j(2\\pi/N)k_0n}\\qquad 0\\le n\\le N-1$",
+     "box": [
+      170,
+      241,
+      800,
+      262
+     ],
+     "lines": 1,
+     "solution": "**מוסכמות:** $W_N=e^{-j2\\pi/N}$, $X(k)=\\sum_{n=0}^{N-1}x(n)W_N^{kn}$, $x(n)=\\frac1N\\sum_{k=0}^{N-1}X(k)W_N^{-kn}$; אינדקסים מחוץ ל-$0..N-1$ מובנים מודולו $N$.\n\n($k_0$ שלם, $0\\le k_0\\le N-1$.)\n$$X(k)=\\sum_{n=0}^{N-1}e^{j\\frac{2\\pi}Nk_0n}e^{-j\\frac{2\\pi}Nkn}=\\sum_{n=0}^{N-1}e^{-j\\frac{2\\pi}N(k-k_0)n}.$$\nזה סכום סדרה הנדסית שלמה: $N$ אם $k=k_0$, ואחרת $\\frac{1-e^{-j2\\pi(k-k_0)}}{1-e^{-j2\\pi(k-k_0)/N}}=0$.\n$$\\boxed{X(k)=N\\,\\delta(k-k_0),\\quad 0\\le k\\le N-1}$$\n**בדיקה:** פרסבל: $\\sum|x|^2=N$ ו-$\\frac1N|X(k_0)|^2=\\frac{N^2}{N}=N$ ✓.\n"
+    },
+    {
+     "label": "f",
+     "text": "$x(n)=\\cos\\dfrac{2\\pi}{N}k_0n\\qquad 0\\le n\\le N-1$",
+     "box": [
+      170,
+      262,
+      800,
+      300
+     ],
+     "lines": 1,
+     "solution": "**מוסכמות:** $W_N=e^{-j2\\pi/N}$, $X(k)=\\sum_{n=0}^{N-1}x(n)W_N^{kn}$, $x(n)=\\frac1N\\sum_{k=0}^{N-1}X(k)W_N^{-kn}$; אינדקסים מחוץ ל-$0..N-1$ מובנים מודולו $N$.\n\n$$x(n)=\\tfrac12e^{j\\frac{2\\pi}Nk_0n}+\\tfrac12e^{-j\\frac{2\\pi}Nk_0n},\\qquad e^{-j\\frac{2\\pi}Nk_0n}=e^{j\\frac{2\\pi}N(N-k_0)n}.$$\nלפי סעיף ה (לינאריות):\n$$\\boxed{X(k)=\\frac N2\\big[\\delta(k-k_0)+\\delta(k-N+k_0)\\big],\\quad 0\\le k\\le N-1}$$\n(עבור $k_0=0$ או $k_0=N/2$ שני הדלתאות מתלכדות ו-$X=N\\delta(k-k_0)$.)\n\n**בדיקה:** סימטריה צמודה: $X(N-k)=X^*(k)$ ✓ ($X$ ממשי וסימטרי).\n"
+    },
+    {
+     "label": "g",
+     "text": "$x(n)=\\sin\\dfrac{2\\pi}{N}k_0n\\qquad 0\\le n\\le N-1$",
+     "box": [
+      170,
+      300,
+      800,
+      338
+     ],
+     "lines": 1,
+     "solution": "**מוסכמות:** $W_N=e^{-j2\\pi/N}$, $X(k)=\\sum_{n=0}^{N-1}x(n)W_N^{kn}$, $x(n)=\\frac1N\\sum_{k=0}^{N-1}X(k)W_N^{-kn}$; אינדקסים מחוץ ל-$0..N-1$ מובנים מודולו $N$.\n\n$$x(n)=\\tfrac1{2j}e^{j\\frac{2\\pi}Nk_0n}-\\tfrac1{2j}e^{-j\\frac{2\\pi}Nk_0n}$$\nולפי סעיף ה:\n$$\\boxed{X(k)=\\frac N{2j}\\big[\\delta(k-k_0)-\\delta(k-N+k_0)\\big],\\quad 0\\le k\\le N-1}$$\n**בדיקה:** $X(N-k)=X^*(k)$ ✓ ($X$ מדומה ואי-זוגי); עבור $k_0=0$ או $N/2$ האות אפס ו-$X\\equiv0$ ✓.\n"
+    },
+    {
+     "label": "h",
+     "text": "$x(n)=\\begin{cases}1,&n\\text{ even}\\\\0,&n\\text{ odd}\\end{cases}\\qquad 0\\le n\\le N-1$",
+     "box": [
+      170,
+      337,
+      800,
+      379
+     ],
+     "lines": 2,
+     "solution": "**מוסכמות:** $W_N=e^{-j2\\pi/N}$, $X(k)=\\sum_{n=0}^{N-1}x(n)W_N^{kn}$, $x(n)=\\frac1N\\sum_{k=0}^{N-1}X(k)W_N^{-kn}$; אינדקסים מחוץ ל-$0..N-1$ מובנים מודולו $N$.\n\n**מקרה $N$ זוגי.** $x(n)=\\frac12\\big(1+(-1)^n\\big)=\\frac12\\big(1+W_N^{(N/2)n}\\big)$, ולכן\n$$X(k)=\\frac N2\\big[\\delta(k)+\\delta(k-N/2)\\big].$$\n\n**מקרה $N$ אי-זוגי** (המקרה שנדון בקובץ). האיברים $n=0,2,\\dots,N-1$, בסך $\\frac{N+1}2$ איברים, ו-$z=W_N^k$:\n$$X(k)=\\sum_{m=0}^{(N-1)/2}z^{2m}=\\frac{1-z^{N+1}}{1-z^2}=\\frac{1-z}{1-z^2}=\\frac1{1+z}\\quad(k\\ne0),$$\nכי $z^N=1$. ל-$k=0$: $X(0)=\\frac{N+1}2$.\n$$\\boxed{X(k)=\\frac1{1+e^{-j2\\pi k/N}}\\ (k\\ne0),\\qquad X(0)=\\frac{N+1}2\\qquad(N\\text{ odd})}$$\n\n**בדיקה:** $N=3$, $x=\\{1,0,1\\}$: $X(1)=1+e^{-j4\\pi/3}$; מהנוסחה $\\frac1{1+z}$ עם $z=e^{-j2\\pi/3}$ ומ-$(1+z)(1+z^2)=1+z+z^2+z^3=1$ מתקבל $\\frac1{1+z}=1+z^2=1+e^{-j4\\pi/3}$ ✓.\n\n*הערה: בפתרון הסרוק שבקובץ נרשם $\\frac1{1-e^{-j2\\pi k/N}}$ — נראה ששם טעות בפישוט האחרון; $\\frac{1-z}{1-z^2}=\\frac1{1+z}$ ולא $\\frac1{1-z}$.*\n",
+     "text_he": "$x(n)=\\begin{cases}1,&n\\text{ זוגי}\\\\0,&n\\text{ אי-זוגי}\\end{cases}\\qquad 0\\le n\\le N-1$"
+    }
+   ],
+   "stem_he": "5.23. חשבו את ה-DFT בן $N$ נקודות של האותות"
+  },
+  {
+   "number": 24,
+   "topics": [
+    "t6"
+   ],
+   "stem": "5.24. Consider the finite-duration signal $$x(n)=\\{1,2,3,1\\}$$ ($n=0,1,2,3$).",
+   "figures": [],
+   "regions": [
+    {
+     "page": 3,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      140,
+      385,
+      800,
+      433
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "a",
+     "text": "Compute its four-point DFT by solving explicitly the 4-by-4 system of linear equations defined by the inverse DFT formula.",
+     "box": [
+      170,
+      438,
+      800,
+      481
+     ],
+     "lines": 2,
+     "solution": "**מוסכמות:** $N=4$, $W_4=e^{-j\\pi/2}=-j$, ו-$W_4^{-1}=j$.\n\n**שלב 1 – משוואות ה-IDFT.** $x(n)=\\frac14\\sum_{k=0}^{3}X(k)\\,j^{nk}$, כלומר $\\sum_k X(k)j^{nk}=4x(n)$, עבור $n=0..3$:\n$$\\begin{aligned}X(0)+X(1)+X(2)+X(3)&=4\\\\X(0)+jX(1)-X(2)-jX(3)&=8\\\\X(0)-X(1)+X(2)-X(3)&=12\\\\X(0)-jX(1)-X(2)+jX(3)&=4\\end{aligned}$$\nכלומר\n$$\\begin{bmatrix}1&1&1&1\\\\1&j&-1&-j\\\\1&-1&1&-1\\\\1&-j&-1&j\\end{bmatrix}\\begin{bmatrix}X(0)\\\\X(1)\\\\X(2)\\\\X(3)\\end{bmatrix}=\\begin{bmatrix}4\\\\8\\\\12\\\\4\\end{bmatrix}.$$\n\n**שלב 2 – פתרון.** חיבור כל ארבע המשוואות: $4X(0)=28\\Rightarrow X(0)=7$. כפל משוואה $n$ ב-$(-j)^{n}$ וחיבור נותן $X(1)$ (עקרון האורתוגונליות): \n$$4X(1)=4+8(-j)+12(-1)+4(j)=-8-4j\\Rightarrow X(1)=-2-j.$$\nבאופן דומה, $4X(2)=4-8+12-4=4\\Rightarrow X(2)=1$, ו-$4X(3)=4+8j-12-4j=-8+4j\\Rightarrow X(3)=-2+j$.\n\n$$\\boxed{X=\\{7,\\ -2-j,\\ 1,\\ -2+j\\}}$$\n\n**בדיקה:** $X(3)=X^*(1)$ כנדרש מסדרה ממשית, ו-$X(0)=\\sum x=7$. תואם לפתרון בקובץ.\n",
+     "text_he": "חשבו את ה-DFT בן ארבע הנקודות שלו על-ידי פתרון מפורש של מערכת המשוואות הלינאריות 4 על 4 המוגדרת על-ידי נוסחת ה-IDFT."
+    },
+    {
+     "label": "b",
+     "text": "Check the answer in part (a) by computing the four-point DFT, using its definition.",
+     "box": [
+      170,
+      481,
+      800,
+      520
+     ],
+     "lines": 2,
+     "solution": "**הגדרה:** $X(k)=\\sum_{n=0}^{3}x(n)e^{-j\\frac{2\\pi}4nk}=\\sum_n x(n)(-j)^{nk}$, עם $x=\\{1,2,3,1\\}$.\n\n- $X(0)=1+2+3+1=7$\n- $X(1)=1+2(-j)+3(-1)+1(j)=-2-j$ (כי $(-j)^2=-1$, $(-j)^3=j$)\n- $X(2)=1+2(-1)+3(1)+1(-1)=1$\n- $X(3)=1+2(j)+3(-1)+1(-j)=-2+j$\n\n$$\\boxed{X=\\{7,-2-j,1,-2+j\\}}$$\nזהה לתוצאה מסעיף א. **בדיקה נוספת (פרסבל):** $\\sum|x|^2=1+4+9+1=15$ ו-$\\frac14\\sum|X|^2=\\frac14(49+5+1+5)=15$ ✓.\n",
+     "text_he": "בדקו את התשובה לסעיף א על-ידי חישוב ה-DFT בן ארבע הנקודות בעזרת ההגדרה שלו."
+    }
+   ],
+   "stem_he": "5.24. נתון האות הסופי $$x(n)=\\{1,2,3,1\\}$$ ($n=0,1,2,3$)."
+  }
+ ]
+}
