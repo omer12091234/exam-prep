@@ -82,6 +82,12 @@ A finished example to imitate (same lecturer, same format):
 - Points: as printed (`[5%]` → 5). Omit when not printed.
 - If something is illegible, transcribe what you can and write `[לא קריא]` at that spot, and
   mention it in `exam.notes`. Never guess numbers.
+- **Manual review flag.** Whenever a part's text is not certain — `[לא קריא]`, a word you guessed,
+  wording reconstructed from a solution, a sign/polarity read from a blurry figure, a student
+  reconstruction that may differ from the real exam — add `"review": "<one Hebrew sentence: what
+  exactly is uncertain and what you assumed>"` to that part (e.g. `"review": "המילה אחרי 'מצאו'
+  לא קריאה; פורשה כ'מקדם ריסון'"`). The site shows it as "לבדיקה ידנית" so a person can check
+  the original. Do not flag parts that are clear.
 - Student handwriting on the questionnaire is noise: not part of the text. Keep boxes off it
   when possible.
 

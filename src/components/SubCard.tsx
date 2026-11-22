@@ -61,6 +61,8 @@ export function SubCard({
     text: string;
     /** Hebrew translation of an English part */
     textHe?: string | null;
+    /** unclear in the source: shown as a "check manually" box */
+    reviewNote?: string | null;
     points: number | null;
     difficulty: number | null;
   };
@@ -87,6 +89,16 @@ export function SubCard({
         <MathText text={sub.text} />
       </div>
       {sub.textHe && <Translation text={sub.textHe} />}
+      {sub.reviewNote && (
+        <div className="mt-2 rounded-lg border border-amber-300 bg-amber-50 px-3 py-2 text-sm text-amber-900 dark:border-amber-800 dark:bg-amber-950/40 dark:text-amber-200">
+          <span className="font-semibold">⚠ לבדיקה ידנית: </span>
+          <MathText text={sub.reviewNote} />
+          <span className="text-amber-700 dark:text-amber-400">
+            {" "}
+            (השוו לתמונה מהמבחן או לקובץ המקורי)
+          </span>
+        </div>
+      )}
       {(diff || (topics && topics.length > 0)) && (
         <div className="mt-2 flex flex-wrap gap-1.5">
           {diff && (

@@ -19,6 +19,9 @@ export async function Nav() {
         <Link href="/gradings" className="hover:underline">
           בדיקות
         </Link>
+        <Link href="/review" className="hover:underline">
+          לבדיקה ידנית
+        </Link>
         <Link href="/settings" className="hover:underline">
           הגדרות
         </Link>

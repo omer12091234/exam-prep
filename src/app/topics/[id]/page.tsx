@@ -52,6 +52,7 @@ async function Topic({
               label: true,
               text: true,
               textHe: true,
+              reviewNote: true,
               points: true,
               difficulty: true,
               order: true,

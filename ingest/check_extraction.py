@@ -72,6 +72,8 @@ for q in qs:
         labels.add(s.get("label"))
         check_text(f"{lw}.text", s.get("text", ""))
         check_text(f"{lw}.solution", s.get("solution", ""))
+        if "[לא קריא]" in s.get("text", "") and not s.get("review"):
+            errors.append(f"{lw}: text has [לא קריא] but no \"review\" note")
         if "text_he" in s:
             check_text(f"{lw}.text_he", s["text_he"])
             if s["text_he"].strip() == s.get("text", "").strip():

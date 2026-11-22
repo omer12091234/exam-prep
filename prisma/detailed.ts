@@ -16,6 +16,8 @@ type Sub = {
   text: string;
   /** Hebrew translation when the text is in English */
   text_he?: string;
+  /** what is unclear in the source, for a person to check against the original */
+  review?: string;
   solution?: string;
 };
 type Q = {
@@ -186,6 +188,7 @@ export async function importDetailed(
         points: s.points ?? null,
         text: s.text,
         textHe: s.text_he ?? null,
+        reviewNote: s.review?.trim() || null,
       };
       await db.subQuestion.upsert({
         where: { id: subQuestionId },

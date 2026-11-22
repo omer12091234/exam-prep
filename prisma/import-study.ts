@@ -87,8 +87,8 @@ const ALIASES: Record<string, string> = {
 const SEEDED = {
   slug: "intro-ee-1",
   importKey: "seed:intro-ee-1:2023A1",
-  year: "2023",
-  term: "מועד א",
+  // Matched by exact title: year + moed alone also matched other 2023 moed A exams.
+  title: "מבחן 2023 סמסטר א' מועד א' (גיא כהן)",
 };
 
 const read = <T>(p: string): T => JSON.parse(readFileSync(p, "utf8")) as T;
@@ -237,11 +237,22 @@ async function main() {
       [];
 
     for (const e of data.exams) {
-      if (
-        slug === SEEDED.slug &&
-        e.year === SEEDED.year &&
-        e.term === SEEDED.term
-      ) {
+      if (slug === SEEDED.slug && e.title === SEEDED.title) {
+        const seeded = detailed.get(e.title)
+          ? await db.exam.findUnique({
+              where: { importKey: SEEDED.importKey },
+              select: { id: true },
+            })
+          : null;
+        if (seeded) {
+          // Fully transcribed since: handled like any detailed exam.
+          detailedExams.push({
+            examId: seeded.id,
+            items: e.questions,
+            detail: detailed.get(e.title)!,
+          });
+          continue;
+        }
         links.push(
           ...(await tagExam(
             db,

@@ -264,6 +264,8 @@ model SubQuestion {
   text        String
   /// Hebrew translation of text when the original is in another language
   textHe      String?
+  /// What is unclear in the source (illegible/reconstructed); shown so a person can check the original
+  reviewNote  String?
   difficulty  Float?
   images      QuestionImage[]
   comments    LecturerComment[]
