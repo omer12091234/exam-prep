@@ -1,0 +1,304 @@
+{
+ "exam": {
+  "match_title": "מועד ב׳ חורף 2026 (ביליק)",
+  "drive_file_id": "1HrmKDHTFfXT2m_YoL9duieIKw_UeynM7",
+  "source_title": "moedB2026.pdf",
+  "lecturer": "יגאל ביליק",
+  "year": 2026,
+  "date": "2026-03-01",
+  "duration_minutes": 180,
+  "aids": "מחשבון, דף נוסחאות",
+  "notes": "הקובץ כולל 3 עמודים של שאלון בלבד, ללא פתרון סרוק וללא דף הנוסחאות שהוזכר בשאלון; הפתרונות נכתבו ונבדקו עצמאית. בשאלה 2 נלקח sinc המנורמל. ראו הערות בדיקה ידנית בסעיפים 2א, 2ב, 3ב, 4ב."
+ },
+ "questions": [
+  {
+   "number": 1,
+   "points": 25,
+   "topics": [
+    "t6",
+    "t7"
+   ],
+   "stem": "נתון אות סופי בזמן בדיד באורך $N$ זוגי, $x[n]\\quad n=0,1,\\ldots,N-1$. כעת מגדירים את $y[n]$ אות באורך $2N$, באופן הבא: $$y[n]=\\begin{cases}(-1)^n x[n] & n=0,1,\\ldots,N-1\\\\ 0 & \\text{else}\\end{cases}\\qquad n=0,1,\\ldots,2N-1$$ נגדיר את $X^d[k],Y^d[k]$ בתור התמרות ה-DFT של $x[n],y[n]$ בהתאמה. נגדיר את הוקטורים: $$\\mathbf X^d=\\left[X^d[0],\\ldots,X^d[N-1]\\right]^T\\in\\mathbb C^{N\\times1},\\qquad \\mathbf Y^d=\\left[Y^d[0],\\ldots,Y^d[2N-1]\\right]^T\\in\\mathbb C^{2N\\times1}$$",
+   "figures": [],
+   "regions": [
+    {
+     "page": 1,
+     "view": [
+      910,
+      1287
+     ],
+     "box": [
+      130,
+      478,
+      790,
+      852
+     ]
+    }
+   ],
+   "page": 1,
+   "view": [
+    910,
+    1287
+   ],
+   "subs": [
+    {
+     "label": "א",
+     "points": 13,
+     "text": "בטאו ופשטו ככל הניתן איבר כללי של מטריצה $\\mathbf A$ המקיימת $\\mathbf Y^d=\\mathbf A\\mathbf X^d$. פרטו חישוביכם",
+     "box": [
+      130,
+      855,
+      790,
+      878
+     ],
+     "lines": 1,
+     "solution": "**מוסכמות.** $W_N=e^{-j2\\pi/N}$; $X^d[q]=\\sum_{n=0}^{N-1}x[n]W_N^{qn}$ ($q=0,\\ldots,N-1$) ו-$Y^d[k]=\\sum_{n=0}^{2N-1}y[n]W_{2N}^{kn}$ ($k=0,\\ldots,2N-1$).\n\n**פיתוח.** $(-1)^n=e^{-j\\pi n}$ ו-$y[n]=0$ עבור $n\\ge N$, ולכן\n$$Y^d[k]=\\sum_{n=0}^{N-1}x[n]\\,e^{-j\\pi n}e^{-j\\frac{2\\pi kn}{2N}}=\\sum_{n=0}^{N-1}x[n]\\,e^{-j\\frac{\\pi (k+N)}{N}n}.$$\nנציב את ה-IDFT $x[n]=\\frac1N\\sum_{q=0}^{N-1}X^d[q]e^{j2\\pi qn/N}$:\n$$Y^d[k]=\\sum_{q=0}^{N-1}X^d[q]\\cdot\\underbrace{\\frac1N\\sum_{n=0}^{N-1}e^{-j\\frac{\\pi n}{N}d}}_{A_{k,q}},\\qquad d=k+N-2q.$$\nסכום גאומטרי: אם $d\\equiv0\\pmod{2N}$ הסכום הוא $N$; אחרת\n$$\\sum_{n=0}^{N-1}e^{-j\\pi nd/N}=\\frac{1-e^{-j\\pi d}}{1-e^{-j\\pi d/N}}=\\frac{1-(-1)^d}{1-e^{-j\\pi d/N}}.$$\nכיוון ש-$N$ זוגי, $d\\equiv k\\pmod 2$.\n\n* **$k$ זוגי:** $d$ זוגי, המונה מתאפס, ונשאר רק המקרה $d\\equiv0\\pmod{2N}$, כלומר $q\\equiv\\frac{k+N}{2}\\pmod N$.\n* **$k$ אי-זוגי:** $d$ אי-זוגי, הסכום הוא $\\frac{2}{1-e^{-j\\pi d/N}}=1-j\\cot\\frac{\\pi d}{2N}$ (המכנה אינו מתאפס כי $d$ אי-זוגי).\n\n**תשובה:**\n$$A_{k,q}=\\begin{cases}1 & k\\text{ even},\\ q\\equiv\\frac{k+N}{2}\\ (\\mathrm{mod}\\ N)\\\\ 0 & k\\text{ even, otherwise}\\\\ \\dfrac1N\\left(1-j\\cot\\dfrac{\\pi(k+N-2q)}{2N}\\right) & k\\text{ odd}\\end{cases}$$\n**בדיקה:** עבור $N=2$, $x=[a,b]$: $y=[a,-b,0,0]$, $Y^d[1]=a+jb$, והנוסחה נותנת $\\frac12[(1+j)(a+b)+(1-j)(a-b)]=a+jb$. כמו כן אומתה מספרית עבור $N=6$."
+    },
+    {
+     "label": "ב",
+     "points": 6,
+     "text": "אילו איברים מ-$\\mathbf X^d$ מופיעים ב-$\\mathbf Y^d$? והיכן? הסבירו תשובתכם",
+     "box": [
+      130,
+      879,
+      790,
+      902
+     ],
+     "lines": 1,
+     "solution": "$Y^d[k]=\\sum_n x[n]e^{-j\\pi n}e^{-j2\\pi kn/(2N)}=X^f\\!\\left(\\frac{\\pi(k+N)}{N}\\right)$: ההכפלה ב-$(-1)^n$ מזיזה את ה-DTFT ב-$\\pi$, וה-DFT באורך $2N$ דוגם אותו בצפיפות כפולה, בתדרים $\\theta=\\frac{2\\pi}{2N}(k+N)$.\n\n**אינדקסים זוגיים $k=2m$:** $\\theta=\\frac{2\\pi}{N}(m+\\frac N2)$ נמצא על רשת ה-DFT של $x$, ולכן\n$$Y^d[2m]=X^d\\!\\left[\\left(m+\\tfrac N2\\right)\\bmod N\\right],\\qquad m=0,\\ldots,N-1.$$\nכלומר **כל $N$ האיברים של $\\mathbf X^d$ מופיעים, ללא שינוי, במקומות הזוגיים של $\\mathbf Y^d$**, בהזזה מעגלית של $N/2$ ($Y^d[0]=X^d[N/2]$, $Y^d[2]=X^d[N/2+1]$, $\\ldots$, $Y^d[N]=X^d[0]$, $\\ldots$). זה תואם את שורות $A$ הזוגיות שמצאנו בסעיף א.\n\n**אינדקסים אי-זוגיים:** הערכים הם נקודות ביניים של ה-DTFT (אינטרפולציה של $X^d$ בגרעין דיריכלה), צירוף לינארי של כל $\\mathbf X^d$. הם לא מוסיפים מידע חדש."
+    },
+    {
+     "label": "ג",
+     "points": 6,
+     "text": "על בסיס תשובתכם בסעיף ב: מצאו מטריצה $\\mathbf B$ המקיימת $\\mathbf X^d=\\mathbf B\\mathbf Y^d$. הראו כי מתקיים ש-$\\mathbf{BA}=\\mathbf I_N$",
+     "box": [
+      130,
+      905,
+      790,
+      960
+     ],
+     "lines": 2,
+     "solution": "מהסעיף הקודם, $X^d[q]=Y^d[2m]$ עבור $m=(q+\\frac N2)\\bmod N$ (ההזזה ב-$N/2$ היא הפיכה לעצמה מודולו $N$). לכן $\\mathbf B\\in\\mathbb R^{N\\times 2N}$ היא מטריצת בחירה:\n$$B_{q,k}=\\begin{cases}1 & k=2\\left((q+\\frac N2)\\bmod N\\right)\\\\0&\\text{else}\\end{cases}$$\nכל שורה של $\\mathbf B$ בוחרת איבר זוגי אחד של $\\mathbf Y^d$, ושורות שונות בוחרות איברים שונים.\n\n**הוכחת $\\mathbf{BA}=\\mathbf I_N$:**\n$$(\\mathbf{BA})_{q,q'}=\\sum_kB_{q,k}A_{k,q'}=A_{2m,q'},\\qquad m=\\left(q+\\tfrac N2\\right)\\bmod N.$$\nלפי סעיף א, $A_{2m,q'}=1$ אם ורק אם $q'\\equiv m+\\frac N2\\equiv q+N\\equiv q\\pmod N$, ו-$0$ אחרת. לכן $(\\mathbf{BA})_{q,q'}=\\delta_{q,q'}$, כלומר $\\mathbf{BA}=\\mathbf I_N$. (מתקיים $\\mathbf{AB}\\ne\\mathbf I_{2N}$: זו מטריצה מדרגה $N$.) הוכחה אמפירית: אומת מספרית ($N=6$).\n\nהמשמעות: אפשר לשחזר את $X^d$ מתוך $Y^d$ פשוט על ידי קריאת האיברים הזוגיים."
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "points": 30,
+   "topics": [
+    "t2",
+    "t3",
+    "t4"
+   ],
+   "stem": "נתונה מערכת דגימה ושחזור המתוארת באיור 1. האות $x(t)$ הוא אות ממשי וזוגי המקיים $X^F(\\omega)=0$ לכל $|\\omega|>\\frac{2\\pi}{T_m}$, האות מוכפל בטור פורייה $q(t)=\\sum_{n=0}^{3}e^{j\\frac{4\\pi}{T_m}\\left(n-\\frac32\\right)t}$, ומתקבל האות $z(t)$. האות $z(t)$ מתפלג לשני ענפים כמתואר באיור 1. בכל ענף, האות עובר במערכות LTI בעלות תגובה להלם $a_1(t),a_2(t)$ ובמוצא מתקבלים האותות $y_1(t),y_2(t)$ בהתאמה. אותות המוצא נדגמים באותה רכבת הלמים $p_{T_s}(t)=\\sum_{n=-\\infty}^{\\infty}\\delta(t-nT_s)$, לקבלת האותות הדגומים $y_{p_1}(t),y_{p_2}(t)$ בהתאמה. לאחר מכן, האותות הדגומים עוברים במערכות LTI בעלות תגובה להלם $h_1(t),h_2(t)$ לקבלת האותות $\\hat y_1(t),\\hat y_2(t)$ בהתאמה. ולבסוף אותות אלה נסכמים לקבלת האות $\\hat z(t)$.",
+   "figures": [
+    "איור 1: שרטוט בלוקים. $x(t)$ מוכפל ב-$q(t)$ לקבלת $z(t)$, שמתפצל לשני ענפים. כל ענף: מערכת $A_i^F(\\omega)$ ואחריה כפל ברכבת הלמים $p_{T_s}(t)$ (דגימה), ואחריה מערכת $H_i^F(\\omega)$. מוצאי הענפים $\\hat y_1,\\hat y_2$ נסכמים ל-$\\hat z(t)$."
+   ],
+   "regions": [
+    {
+     "page": 2,
+     "view": [
+      910,
+      1287
+     ],
+     "box": [
+      130,
+      105,
+      790,
+      385
+     ]
+    },
+    {
+     "page": 2,
+     "view": [
+      910,
+      1287
+     ],
+     "box": [
+      130,
+      682,
+      790,
+      948
+     ]
+    }
+   ],
+   "page": 2,
+   "view": [
+    910,
+    1287
+   ],
+   "subs": [
+    {
+     "label": "א",
+     "points": 10,
+     "text": "נתון כי $a_1(t)=\\mathrm{sinc}\\left(\\frac t{T_1}\\right),\\ a_2(t)=\\mathrm{sinc}\\left(\\frac t{2T_1}\\right)\\cos\\left(\\frac{2\\pi}{T_1}t\\right)$. בטאו את $Y_1^F(\\omega),Y_2^F(\\omega)$, התמרות הפורייה של האותות $y_1(t),y_2(t)$, כתלות ב-$Z^F(\\omega)$ התמרת הפורייה של $z(t)$. שרטטו דוגמא ל-$|Z^F(\\omega)|,|Y_1^F(\\omega)|,|Y_2^F(\\omega)|$. מהו התנאי על $T_1$ המאפשר שחזור של $z(t)$ מתוך $y_1(t),y_2(t)$?",
+     "box": [
+      130,
+      392,
+      790,
+      547
+     ],
+     "lines": 4,
+     "solution": "**מוסכמות.** $\\omega_m\\equiv\\frac{2\\pi}{T_m}$; $X^F(\\omega)=\\int x(t)e^{-j\\omega t}dt$; $\\mathrm{sinc}(u)=\\frac{\\sin\\pi u}{\\pi u}$ (הנחה: ההגדרה המנורמלת), ולכן $\\mathrm{sinc}(t/T)\\ \\leftrightarrow\\ T\\,\\mathrm{rect}$ על $|\\omega|<\\pi/T$. מכיוון ש-$x$ ממשי וזוגי, $X^F$ ממשי וזוגי.\n\n**$Z^F$.** $q(t)=\\sum_n e^{j\\omega_nt}$ עם $\\omega_n=\\frac{4\\pi}{T_m}(n-\\frac32)=\\omega_m\\{-3,-1,1,3\\}$. הכפלה ב-$e^{j\\omega_nt}$ מזיזה את הספקטרום:\n$$Z^F(\\omega)=\\sum_{n=0}^{3}X^F(\\omega-\\omega_n).$$\nלכל עותק רוחב $2\\omega_m$, ולכן העותקים צמודים ללא חפיפה ($[-4\\omega_m,-2\\omega_m],[-2\\omega_m,0],[0,2\\omega_m],[2\\omega_m,4\\omega_m]$): $Z^F$ תופס את $|\\omega|\\le4\\omega_m$, והוא זוגי וסימטרי סביב כל מרכז $\\pm\\omega_m,\\pm3\\omega_m$.\n\n**ענף 1.** $A_1^F(\\omega)=T_1$ עבור $|\\omega|<\\pi/T_1$ (LPF). לכן $Y_1^F=T_1Z^F\\cdot\\mathbf 1_{|\\omega|<\\pi/T_1}$.\n\n**ענף 2.** $\\mathrm{sinc}(\\frac t{2T_1})\\leftrightarrow2T_1$ על $|\\omega|<\\frac\\pi{2T_1}$, והכפל ב-$\\cos(\\frac{2\\pi}{T_1}t)$ מזיז ל-$\\pm\\frac{2\\pi}{T_1}$ עם מקדם $\\frac12$. לכן $A_2^F=T_1$ על $\\frac{3\\pi}{2T_1}<|\\omega|<\\frac{5\\pi}{2T_1}$ (BPF) ו-$Y_2^F=T_1Z^F\\cdot\\mathbf 1_{\\frac{3\\pi}{2T_1}<|\\omega|<\\frac{5\\pi}{2T_1}}$.\n\n**שרטוט (תיאור).** $|Z^F|$: ארבעה עותקי $|X^F|$ צמודים, ממורכזים ב-$\\pm\\omega_m,\\pm3\\omega_m$. $|Y_1^F|$: החלק של $|Z^F|$ שבתוך $|\\omega|<\\pi/T_1$. $|Y_2^F|$: החלק של $|Z^F|$ בתוך שני הפסים $\\left[\\frac{3\\pi}{2T_1},\\frac{5\\pi}{2T_1}\\right]$ ו-$\\left[-\\frac{5\\pi}{2T_1},-\\frac{3\\pi}{2T_1}\\right]$. בין $\\pi/T_1$ ל-$\\frac{3\\pi}{2T_1}$ אין כיסוי.\n\n**תנאי לשחזור.** ללא הסימטריה היה צורך לכסות את כל $[0,4\\omega_m]$, וזה בלתי אפשרי עם הפער. אבל $Z^F$ זוגי וכל עותק סימטרי סביב מרכזו: מספיק לדעת חצי מכל עותק, כלומר שלכל $u\\in[0,\\omega_m]$ לפחות אחת מהנקודות $\\omega_m\\pm u$ ולפחות אחת מהנקודות $3\\omega_m\\pm u$ נמצאת בפס העובר. בבדיקה של התנאי (מספרית) מתקבלים התחומים, עם $P=\\pi/T_1$:\n$$1.2\\,\\omega_m\\le P\\le\\tfrac43\\omega_m,\\qquad 1.6\\,\\omega_m\\le P\\le2\\,\\omega_m,\\qquad P\\ge3\\,\\omega_m,$$\nכלומר $T_1\\in\\left[\\frac{3T_m}{8},\\frac{5T_m}{12}\\right]$, או $T_1\\in\\left[\\frac{T_m}{4},\\frac{5T_m}{16}\\right]$, או $T_1\\le\\frac{T_m}{6}$ (בתחום האחרון ענף 1 לבדו מספיק, וצריך שחזור שאינו LTI). **התנאי הטבעי שמנצל את שני הענפים ושעליו מבוססים הסעיפים הבאים: $T_1=\\frac{T_m}{4}$**, כאשר ענף 1 עובר בדיוק את $|\\omega|<2\\omega_m$ (שני העותקים הפנימיים) וענף 2 עובר את $3\\omega_m<|\\omega|<4\\omega_m$ (החצי העליון של העותקים החיצוניים, והחצי התחתון שווה לו בזכות הסימטריה)."
+    },
+    {
+     "label": "ב",
+     "points": 12,
+     "text": "עבור $T_1=\\frac{T_m}4$ שרטטו את $\\left|Y_{p_1}^F(\\omega)\\right|,\\left|Y_{p_2}^F(\\omega)\\right|$. מהו $T_s$ המקסימלי המאפשר שחזור של $z(t)$ מתוך $y_{p_1}(t),y_{p_2}(t)$?",
+     "box": [
+      130,
+      547,
+      790,
+      622
+     ],
+     "lines": 2,
+     "solution": "**מוסכמות.** $\\omega_m\\equiv\\frac{2\\pi}{T_m}$; $X^F(\\omega)=\\int x(t)e^{-j\\omega t}dt$; $\\mathrm{sinc}(u)=\\frac{\\sin\\pi u}{\\pi u}$ (הנחה: ההגדרה המנורמלת), ולכן $\\mathrm{sinc}(t/T)\\ \\leftrightarrow\\ T\\,\\mathrm{rect}$ על $|\\omega|<\\pi/T$. מכיוון ש-$x$ ממשי וזוגי, $X^F$ ממשי וזוגי.\n\nנציב $T_1=\\frac{T_m}4$, ולכן $\\frac\\pi{T_1}=2\\omega_m$ ו-$\\frac{3\\pi}{2T_1}=3\\omega_m$.\n\n**ספקטרום המוצאים.** $Y_1^F=T_1Z^F$ על $|\\omega|<2\\omega_m$, כלומר $Y_1^F(\\omega)=T_1X^F(|\\omega|-\\omega_m)$, וזה סימטרי סביב $\\pm\\omega_m$. $Y_2^F=T_1Z^F$ על $3\\omega_m<|\\omega|<4\\omega_m$, כלומר $Y_2^F(\\omega)=T_1X^F(|\\omega|-3\\omega_m)$.\n\n**דגימה.** $Y_p^F(\\omega)=\\frac1{T_s}\\sum_kY(\\omega-k\\omega_s)$ עם $\\omega_s=\\frac{2\\pi}{T_s}$.\n\n**ענף 1.** בתחום $|Y_1^F|$ של רוחב $4\\omega_m$, שיטת ניקוויסט הרגילה דורשת $\\omega_s\\ge4\\omega_m$. אולם עבור $\\omega_s=2\\omega_m$ ו-$0<\\omega<2\\omega_m$ ההזזה $k=1$ נותנת\n$$Y_1^F(\\omega-2\\omega_m)=T_1X^F(2\\omega_m-\\omega-\\omega_m)=T_1X^F(\\omega-\\omega_m)=Y_1^F(\\omega)$$\n(בזכות זוגיות $X^F$). העותקים חופפים **בדיוק ובמופע**, ולכן סוכמים לפקטור 2 ואין עיוות: $Y_{p_1}^F=\\frac{2T_1}{T_s}Z^F$ על $|\\omega|<2\\omega_m$.\n\n**ענף 2.** פס $[3\\omega_m,4\\omega_m]$ ושיקוף $[-4\\omega_m,-3\\omega_m]$. עבור $\\omega_s=2\\omega_m$ ההזזה $k=3$ של הפס השלילי נוחתת על $[2\\omega_m,3\\omega_m]$ ונותנת $Y_2^F(\\omega-6\\omega_m)=T_1Z^F(6\\omega_m-\\omega)=T_1Z^F(\\omega)$ (סימטריה סביב $3\\omega_m$). אף עותק אחר אינו נוחת ב-$2\\omega_m<|\\omega|<4\\omega_m$. לכן שם $Y_{p_2}^F=\\frac{T_1}{T_s}Z^F$.\n\n**שרטוט (תיאור) עבור $T_s=T_m/2$.** $|Y_{p_1}^F|$ היא פעמיים $|Y_1^F|$ בתחום $|\\omega|<2\\omega_m$ (בתוספת עותקים מחזוריים מחוץ לתחום, בהזזות $2\\omega_m$). $|Y_{p_2}^F|$ מכילה, בתחום $2\\omega_m<|\\omega|<4\\omega_m$, את $\\frac{T_1}{T_s}|Z^F|$: מחצית אחת במקומה המקורי ומחצית שנייה שהגיעה מההזזה, ושני החצאים מתחברים לעותק שלם (בזכות הסימטריה).\n\n**מקסימום.** עבור $\\omega_s<2\\omega_m$ העותקים חופפים בלי להיות שווים. לדוגמה $\\omega_s=\\omega_m$: בענף 1, על $0<\\omega<\\omega_m$ מתקבל $\\frac{2T_1}{T_s}\\left[X^F(\\omega)+X^F(\\omega_m-\\omega)\\right]$, ובענף 2 מתקבל אותו צירוף, ולכן אי אפשר להפריד את $X^F(\\omega)$. עבור ערכים נוספים מתחת ל-$2\\omega_m$ (למשל $1.5\\omega_m$) מתקבלים שוב עותקים מעורבים. **לכן $\\omega_s^{\\min}=2\\omega_m$, כלומר**\n$$T_s^{\\max}=\\frac{2\\pi}{2\\omega_m}=\\frac{T_m}{2}.$$\n(הבדיקה של אי-קיום פתרון לכל $\\omega_s<2\\omega_m$ נעשתה על ידי ניתוח מקרים ולא כהוכחה מלאה.)"
+    },
+    {
+     "label": "ג",
+     "points": 8,
+     "text": "עבור $T_s$ שמצאתם בסעיף הקודם, מצאו $h_1(t),h_2(t)$ כך שמוצא המערכת מקיים $\\hat z(t)=z(t)$.",
+     "box": [
+      130,
+      627,
+      790,
+      678
+     ],
+     "lines": 2,
+     "solution": "**מוסכמות.** $\\omega_m\\equiv\\frac{2\\pi}{T_m}$; $X^F(\\omega)=\\int x(t)e^{-j\\omega t}dt$; $\\mathrm{sinc}(u)=\\frac{\\sin\\pi u}{\\pi u}$ (הנחה: ההגדרה המנורמלת), ולכן $\\mathrm{sinc}(t/T)\\ \\leftrightarrow\\ T\\,\\mathrm{rect}$ על $|\\omega|<\\pi/T$. מכיוון ש-$x$ ממשי וזוגי, $X^F$ ממשי וזוגי.\n\n$T_s=\\frac{T_m}2$, $\\omega_s=2\\omega_m=\\frac{4\\pi}{T_m}$, $T_1=\\frac{T_m}4$, ולכן $\\frac{T_s}{T_1}=2$. מסעיף ב:\n\n* ענף 1: $Y_{p_1}^F=\\frac{2T_1}{T_s}Z^F=Z^F$ על $|\\omega|<2\\omega_m$. נבחר $H_1^F(\\omega)=\\frac{T_s}{2T_1}\\mathrm{rect}_{|\\omega|<2\\omega_m}=\\mathrm{rect}_{|\\omega|<2\\omega_m}$ (הגבר 1).\n* ענף 2: $Y_{p_2}^F=\\frac{T_1}{T_s}Z^F=\\frac12Z^F$ על $2\\omega_m<|\\omega|<4\\omega_m$. נבחר $H_2^F(\\omega)=\\frac{T_s}{T_1}\\mathbf 1_{2\\omega_m<|\\omega|<4\\omega_m}=2\\cdot\\mathbf 1_{2\\omega_m<|\\omega|<4\\omega_m}$.\n\nאז $\\hat Z^F=Z^F$ בכל התחום.\n\n**תגובות להלם.** $\\mathrm{rect}_{|\\omega|<a}\\leftrightarrow\\frac{\\sin at}{\\pi t}$, עם $2\\omega_m=\\frac{4\\pi}{T_m}$ ו-$4\\omega_m=\\frac{8\\pi}{T_m}$:\n$$h_1(t)=\\frac{\\sin\\left(\\frac{4\\pi t}{T_m}\\right)}{\\pi t}=\\frac4{T_m}\\mathrm{sinc}\\!\\left(\\frac{4t}{T_m}\\right),$$\n$$h_2(t)=\\frac2{\\pi t}\\left[\\sin\\frac{8\\pi t}{T_m}-\\sin\\frac{4\\pi t}{T_m}\\right]=\\frac{4}{\\pi t}\\sin\\frac{2\\pi t}{T_m}\\cos\\frac{6\\pi t}{T_m}=\\frac8{T_m}\\mathrm{sinc}\\!\\left(\\frac{2t}{T_m}\\right)\\cos\\!\\left(\\frac{6\\pi t}{T_m}\\right).$$\n**בדיקה:** סימולציה בתחום התדר עם $X^F$ ממשי וזוגי שרירותי נותנת $\\hat Z^F=Z^F$ (שגיאה בסדר $10^{-16}$). הערה: הפתרון אינו יחיד (למשל $H_1$ רחב יותר, עד $4\\omega_m$, כבר משחזר לבד, כי $Y_{p_1}^F=\\frac{2T_1}{T_s}Z^F$ גם על $2\\omega_m<|\\omega|<4\\omega_m$)."
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "points": 25,
+   "topics": [
+    "t7",
+    "t5",
+    "t6"
+   ],
+   "stem": "נתון אות סופי ממשי בזמן בדיד באורך $N$, $x[n]\\quad n=0,1,\\ldots,N-1$. נתון אות סופי נוסף בזמן בדיד: $y[n]\\quad n=0,1,\\ldots,\\frac M2$ כך שמתקיים: $$Y^d[k]=X^f(\\theta)\\big|_{\\theta=\\frac{2\\pi}{M}k}\\qquad k=0,1,\\ldots,\\frac M2$$ כאשר $M<N$ ו-$M$ מספר זוגי.",
+   "figures": [],
+   "regions": [
+    {
+     "page": 3,
+     "view": [
+      910,
+      1287
+     ],
+     "box": [
+      130,
+      125,
+      790,
+      440
+     ]
+    }
+   ],
+   "page": 3,
+   "view": [
+    910,
+    1287
+   ],
+   "subs": [
+    {
+     "label": "א",
+     "points": 13,
+     "text": "אילו ערכים של $x[n]$ צריכים להתאפס על מנת שנוכל לשחזר את כל ערכי $x[n]$ מתוך $y[n]$?",
+     "box": [
+      130,
+      448,
+      790,
+      470
+     ],
+     "lines": 1,
+     "solution": "**מוסכמות.** $X^f(\\theta)=\\sum_nx[n]e^{-j\\theta n}$ (DTFT), $Y^d$ הוא ה-DFT של $y$ (אורך $\\frac M2+1$).\n\n**המידע ש-$y$ נושא.** $X^f(\\frac{2\\pi k}M)$ הוא ה-DFT באורך $M$ של האות המקופל בזמן\n$$x_M[n]=\\sum_{r}x[n+rM],\\qquad n=0,\\ldots,M-1,$$\n(דגימה בתדר גורמת ל-aliasing בזמן, ו-$M<N$). מכיוון ש-$x$ ממשי, גם $x_M$ ממשי, ולכן $X_M[M-k]=\\overline{X_M[k]}$: הערכים $k=0,\\ldots,\\frac M2$ קובעים את כל ה-DFT ($X_M[0]$ ו-$X_M[M/2]$ ממשיים, כך ש-$M$ הערכים הממשיים תואמים בדיוק את $M$ הנעלמים של $x_M$; כאן משתמשים בכך ש-$M$ זוגי). לכן מ-$y$ אפשר לשחזר בדיוק את $x_M$ (מ-$y$ מחשבים $Y^d$, משלימים בצמודות ומבצעים IDFT באורך $M$).\n\n**תנאי השחזור.** צריך שההקבצה $x_M[n]=x[n]+x[n+M]+x[n+2M]+\\cdots$ תהיה הפיכה, כלומר שבכל מחלקת שאריות $n\\bmod M$ לכל היותר איבר אחד של $x$ אינו אפס. הבחירה הרגילה:\n$$x[n]=0\\quad\\text{for}\\quad n=M,M+1,\\ldots,N-1,$$\n(ואז $x[n]=x_M[n]$ ל-$0\\le n\\le M-1$). בהכללה, מספיק ש-$N-M$ איברים שונים מתאפסים כך שמכל זוג/קבוצה $\\{n,n+M,\\ldots\\}$ נשאר לכל היותר איבר אחד לא מאופס. מספר האפסים המינימלי הוא $N-M$.\n\n**הסבר:** $y$ מכיל $M$ מספרים ממשיים של מידע, ולכן אי אפשר לשחזר יותר מ-$M$ ערכים חופשיים של $x$."
+    },
+    {
+     "label": "ב",
+     "points": 12,
+     "text": "נגדיר את הוקטורים: $\\mathbf x=\\left[x[0],\\ldots,x[N-1]\\right]^T,\\ \\mathbf y=\\left[y[0],\\ldots,y\\left[\\frac M2\\right]\\right]^T$. מצאו מטריצה $A$ המקיימת $\\mathbf y=A\\mathbf x$. רשמו את המטריצה מפורשות עבור $N=5,\\ M=4$. נוסחאות עזר: $D_2\\left(\\frac\\pi2\\right)=\\sqrt2,\\ D_2\\left(\\frac{3\\pi}2\\right)=-\\sqrt2$",
+     "box": [
+      130,
+      471,
+      790,
+      662
+     ],
+     "lines": 5,
+     "solution": "**מוסכמות (הנחה).** $Y^d$ הוא ה-DFT באורך $L=\\frac M2+1$ של $y$ (כמספר האיברים של $\\mathbf y$ בשאלה): $Y^d[k]=\\sum_{n=0}^{L-1}y[n]e^{-j2\\pi kn/L}$.\n\n$$y[n]=\\frac1L\\sum_{k=0}^{L-1}X^f\\!\\left(\\tfrac{2\\pi k}M\\right)e^{j2\\pi kn/L}=\\sum_{m=0}^{N-1}\\underbrace{\\frac1L\\sum_{k=0}^{L-1}e^{j2\\pi k\\left(\\frac nL-\\frac mM\\right)}}_{A_{n,m}}x[m].$$\nסכום גאומטרי עם $\\varphi=2\\pi\\left(\\frac nL-\\frac mM\\right)$:\n$$A_{n,m}=\\frac1L\\sum_{k=0}^{L-1}e^{jk\\varphi}=\\frac1Le^{j\\varphi\\frac{L-1}2}\\frac{\\sin(L\\varphi/2)}{\\sin(\\varphi/2)}=\\frac1Le^{j\\varphi\\frac{L-1}2}D_L(\\varphi)\\quad(\\varphi\\notin2\\pi\\mathbb Z),\\qquad A_{n,m}=1\\ (\\varphi\\in2\\pi\\mathbb Z).$$\nהעמודות $m$ ו-$m+M$ זהות (aliasing).\n\n**$N=5,\\ M=4,\\ L=3$:** $\\varphi=\\frac\\pi6(4n-3m)$, $A_{n,m}=\\frac13\\left(1+e^{j\\varphi}+e^{j2\\varphi}\\right)$, ומתקבל\n$$A=\\begin{pmatrix}1&-\\frac j3&\\frac13&\\frac j3&1\\\\[1mm]0&\\frac{(1+\\sqrt3)e^{j\\pi/6}}3&\\frac{1-j\\sqrt3}3&\\frac{(1-\\sqrt3)e^{-j5\\pi/6}}3&0\\\\[1mm]0&\\frac{(1-\\sqrt3)e^{j5\\pi/6}}3&\\frac{1+j\\sqrt3}3&\\frac{(1+\\sqrt3)e^{-j\\pi/6}}3&0\\end{pmatrix}$$\nבמספרים:\n$$A\\approx\\begin{pmatrix}1&-0.333j&0.333&0.333j&1\\\\0&0.789+0.455j&0.333-0.577j&0.211+0.122j&0\\\\0&0.211-0.122j&0.333+0.577j&0.789-0.455j&0\\end{pmatrix}$$\n**בדיקות:** העמודה הראשונה והאחרונה זהות עבור $m=0,4$ ($x[0]$ ו-$x[4]$ מקופלים), ו-$\\mathbf y=A\\mathbf x$ אומת מספרית עבור $x$ אקראי. עבור $x=\\delta[n]$ מתקבל $\\mathbf y=[1,0,0]^T$ כנדרש ($X^f\\equiv1$).\n\n*הערה: רמז השאלה ($D_2(\\pi/2)=\\sqrt2$, $D_2(3\\pi/2)=-\\sqrt2$) מתאים ל-DFT באורך 2 ($\\frac M2$ ולא $\\frac M2+1$ איברים). עבור הנחה זו ($k=0,1$ בלבד): $A_{n,m}=\\frac12\\left(1+e^{j\\frac\\pi2(2n-m)}\\right)$, כלומר $A=\\begin{pmatrix}1&\\frac{1-j}2&0&\\frac{1+j}2&1\\\\0&\\frac{1+j}2&1&\\frac{1-j}2&0\\end{pmatrix}$.*",
+     "review": "אורך ה-DFT של $y$ לא מפורש; הנחתי $\\frac M2+1$ (לפי מספר איברי $\\mathbf y$), בעוד שרמז $D_2$ מתאים לאורך $\\frac M2$"
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "points": 20,
+   "topics": [
+    "t11",
+    "t12"
+   ],
+   "stem": "נתונה משוואת ההפרשים של מסנן ספרתי: $$y[n]+a_1^2\\,y[n-2]=x[n]+x[n-1]$$ כאשר $a_1\\in\\mathbb R$. נקרא למסנן זה $H_1$.",
+   "figures": [],
+   "regions": [
+    {
+     "page": 3,
+     "view": [
+      910,
+      1287
+     ],
+     "box": [
+      130,
+      672,
+      790,
+      785
+     ]
+    }
+   ],
+   "page": 3,
+   "view": [
+    910,
+    1287
+   ],
+   "subs": [
+    {
+     "label": "א",
+     "points": 6,
+     "text": "אילו ערכים $a_1$ יכול לקבל על מנת שהמסנן $H_1$ יהיה יציב? הסבירו תשובתכם.",
+     "box": [
+      130,
+      795,
+      790,
+      822
+     ],
+     "lines": 1,
+     "solution": "נניח מסנן סיבתי. $H_1(z)=\\dfrac{1+z^{-1}}{1+a_1^2z^{-2}}$. הקטבים: $z^2=-a_1^2\\Rightarrow z=\\pm j|a_1|$, הנמצאים על הציר המדומה ברדיוס $|a_1|$. האפס: $z=-1$ (וקוטב כפול ב-$0$ מהמונה אם $a_1=0$).\n\nמסנן סיבתי יציב אם ורק אם כל הקטבים בתוך מעגל היחידה: $|a_1|<1$. **תשובה:** $a_1\\in(-1,1)$. עבור $|a_1|=1$ הקטבים על מעגל היחידה (בגבול היציבות, לא יציב BIBO; האפס ב-$-1$ אינו מבטל אותם), ועבור $|a_1|>1$ המסנן לא יציב. הערך $a_1=0$ מתקבל כמסנן FIR $1+z^{-1}$ (יציב)."
+    },
+    {
+     "label": "ב",
+     "points": 7,
+     "text": "בסעיפים הבאים נתון: המסנן $H_1$ יציב. קבעו איזה סוג מסנן הוא $H_1$ (BSF,BPF,HPF,LPF)? נמקו את תשובתכם",
+     "box": [
+      130,
+      826,
+      790,
+      880
+     ],
+     "lines": 2,
+     "solution": "$$H_1(e^{j\\omega})=\\frac{1+e^{-j\\omega}}{1+a_1^2e^{-j2\\omega}},\\qquad |H_1|^2=\\frac{2(1+\\cos\\omega)}{(1-a_1^2)^2+4a_1^2\\cos^2\\omega}.$$\n($\\omega$ ברד' לדגימה.)\n\n* **$\\omega=\\pi$:** $|H_1|=0$ (אפס על מעגל היחידה ב-$z=-1$), ולכן המסנן מחליש תדרים גבוהים: אין HPF ואין BSF (ב-BSF אין אפס ב-DC ו-$\\pi$ יחד עם מעבר).\n* **$\\omega=0$:** $|H_1|=\\frac2{1+a_1^2}\\ne0$.\n* **$\\omega=\\frac\\pi2$:** $|H_1|=\\frac{\\sqrt2}{1-a_1^2}$. הקטבים ב-$\\pm j|a_1|$, כלומר בזוית $\\pm\\frac\\pi2$, יוצרים תהודה סביב $\\frac\\pi2$.\n\nנגזרת ביחס ל-$c=\\cos\\omega$ מראה שהשיא הפנימי קיים כאשר $(1-a_1^2)^2<12a_1^2$, כלומר $|a_1|>2-\\sqrt3\\approx0.27$. אז המסנן הוא **BPF** סביב $\\omega^*=\\arccos\\!\\left(-1+\\sqrt{1+\\frac{(1-a_1^2)^2}{4a_1^2}}\\right)<\\frac\\pi2$, הקרוב ל-$\\frac\\pi2$ ככל ש-$|a_1|\\to1$. עבור $|a_1|<2-\\sqrt3$ אין תהודה מובהקת והמסנן הוא **LPF** (למשל $a_1=0$: $1+z^{-1}$). **התשובה העיקרית: BPF** (סביב $\\omega\\approx\\pi/2$, כשהקטבים קרובים למעגל היחידה, ובמסנן שבו התהודה בולטת), עם אפס ב-$\\omega=\\pi$."
+    },
+    {
+     "label": "ג",
+     "points": 7,
+     "text": "כעת נתון מסנן נוסף בעל משוואת ההפרשים הבאה: $$y[n]+a_2^2\\,y[n-2]=x[n]+x[n-1]$$ כאשר $a_1>a_2>0$. נקרא למסנן זה $H_2$. שרטטו באופן סכמתי על גבי אותה מערכת צירים את התגובות לתדר של $H_1$ ושל $H_2$. פרטו את ההבדלים ביניהם ומאיפה הם נגרמים.",
+     "box": [
+      130,
+      883,
+      790,
+      1024
+     ],
+     "lines": 5,
+     "solution": "$H_2(z)=\\dfrac{1+z^{-1}}{1+a_2^2z^{-2}}$ עם $a_1>a_2>0$ ושניהם יציבים ($<1$).\n\n**שרטוט (תיאור) של $|H(e^{j\\omega})|$ על $0\\le\\omega\\le\\pi$:** שתי העקומות מתחילות ב-$\\omega=0$ בגובה $\\frac2{1+a^2}$ ומסתיימות באפס ב-$\\omega=\\pi$.\n\n| | $\\omega=0$ | $\\omega=\\frac\\pi2$ | $\\omega=\\pi$ |\n|---|---|---|---|\n| $a=0.9$ ($H_1$) | $1.10$ | $7.44$ | $0$ |\n| $a=0.5$ ($H_2$) | $1.60$ | $1.89$ | $0$ |\n\n**הבדלים:**\n1. $H_1$ (ה-$a$ הגדול) הוא בעל שיא גבוה וצר יותר סביב $\\omega\\approx\\frac\\pi2$: פס מעבר צר וסלקטיבי.\n2. $H_2$ שטוח יותר, עם שיא נמוך ורחב, כלומר פס מעבר רחב יותר. ב-DC הגבר $H_2$ גדול מזה של $H_1$ ($\\frac2{1+a_2^2}>\\frac2{1+a_1^2}$).\n3. בשניהם אפס זהה ב-$\\omega=\\pi$.\n\n**מקור ההבדל:** מיקום הקטבים. שני המסננים בעלי אותם אפס ($z=-1$) וקטבים בזוויות $\\pm\\frac\\pi2$ (קבועות), אבל ברדיוסים $|a_1|>|a_2|$. קוטב קרוב יותר למעגל היחידה ($|a_1|$ גדול) גורם להגברה חזקה יותר (המכנה $|1-a^2|$ קטן ב-$\\omega=\\frac\\pi2$) ולרוחב פס צר יותר; קוטב רחוק מהמעגל נותן תהודה חלשה ורחבה. בזמן: $H_1$ בעל תגובה להלם שדועכת לאט יותר ($|a_1|^{n}$)."
+    }
+   ]
+  }
+ ]
+}
