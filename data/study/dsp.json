@@ -972,65 +972,76 @@
    "questions": [
     {
      "num": "1",
-     "description": "אות מחזורי בעל 19 הרמוניות (\\(k=-9..9\\)) נדגם: כמה דגימות \\(N\\) נדרשות כדי לשחזר אותו (מספר הנעלמים = מספר מקדמי פורייה).",
+     "description": "",
      "topics": [
-      "t2",
-      "t1"
+      "t1",
+      "t2"
      ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
      "num": "2",
-     "description": "ספקטרום פס נתון באיור: בחירת תדר הדגימה הנמוך ביותר מרשימה שעדיין מאפשר שחזור ללא עיוות (דגימת אות פס).",
+     "description": "",
      "topics": [
+      "t2",
       "t4"
      ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
      "num": "3",
-     "description": "אות ממשי באורך 8 עם חלק ממקדמי ה-DFT נתונים: סכום החלקים המדומים של כל המקדמים (סימטריה צמודה \\(X^d[k]=X^{d*}[N-k]\\)).",
+     "description": "",
      "topics": [
       "t6"
      ],
-     "difficulty": 1
+     "difficulty": 3
     },
     {
      "num": "4",
-     "description": "שתי סדרות שמתאפסות עבור \\(n\\ge N_0\\); מתי מכפלת ה-DFT נותנת קונבולוציה לינארית (\\(N\\gt 2N_0-2\\)).",
+     "description": "",
      "topics": [
       "t7"
      ],
-     "difficulty": 1
+     "difficulty": 3
     },
     {
      "num": "5",
-     "description": "אות \\(y\\) המורכב מ-4 שכפולים של \\(x\\): מאילו דגימות של \\(Y^d[k]\\) ניתן לשחזר את \\(x\\) (רק \\(Y^d[4k]\\) שונים מאפס).",
+     "description": "",
      "topics": [
-      "t7",
-      "t6"
+      "t6",
+      "t7"
      ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
      "num": "6",
-     "description": "האם \\(y(t)=x(t)h(t)\\) ניתן להצגה כמוצא מערכת LTI עבור הכניסה \\(x(t)\\).",
+     "description": "",
      "topics": [
       "t1"
      ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
      "num": "7",
-     "description": "זיהוי התגובה להלם של מסנן FIR קצר מתוך גרף תגובת התדר (אמפליטודה ופאזה).",
+     "description": "",
      "topics": [
+      "t5",
       "t12"
      ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
-     "num": "8-9",
-     "description": "(נפסלו) קשר מטריצי בין ה-DFT של הדגימות הזוגיות/אי-זוגיות ל-DFT המלא (מבנה Radix-2), ופירוק FFT באורך 192 למספר מכפלות מינימלי.",
+     "num": "8",
+     "description": "",
+     "topics": [
+      "t6",
+      "t8"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "9",
+     "description": "",
      "topics": [
       "t8"
      ],
@@ -1038,12 +1049,12 @@
     },
     {
      "num": "10",
-     "description": "מסנן FIR בעל פאזה לינארית מוכללת \\(H(z)\\) ומסנן \\(G(z)=zH(z)\\): אילו תכונות נשמרות (סיבתיות, פאזה לינארית, אמפליטודה).",
+     "description": "",
      "topics": [
-      "t12",
-      "t11"
+      "t11",
+      "t12"
      ],
-     "difficulty": 2
+     "difficulty": 3
     }
    ]
   },

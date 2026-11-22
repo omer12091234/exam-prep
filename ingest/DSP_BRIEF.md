@@ -24,3 +24,7 @@ Follow `ingest/AGENT_BRIEF.md` with these differences.
   reconstructions and handwriting. Do not use it for doubts about your own solution: say those
   inside the solution (or mark it "**פתרון חלקי – לא אומת.**").
 - If the Drive download fails (file over 10 MB), stop and report it; do not guess the exam.
+- **Marked answers**: if the questionnaire has the right answers highlighted or circled (common in
+  multiple-choice files "עם פתרון"), use them only to check yours, and after publishing the crops
+  run `python3 -I ingest/unhighlight.py public/exams/dsp-<KEY>` so the images don't give the
+  answer away. Look at one cleaned crop to confirm.
