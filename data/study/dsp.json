@@ -1097,87 +1097,87 @@
    "questions": [
     {
      "num": "1",
-     "description": "\\(X^F,Y^F\\) מלבנים מוזזים ברוחב \\(B,C\\): מתי \\(y\\) הוא מוצא מערכת LTI שכניסתה \\(x\\) (נדרש \\(B\\ge C\\)).",
+     "description": "",
      "topics": [
       "t1"
      ],
-     "difficulty": 1
+     "difficulty": 3
     },
     {
      "num": "2",
-     "description": "מספר הדגימות המינימלי (דגימה לא אחידה) לשחזור \\(z(t)=A_0+A_1\\cos(\\omega_1t+\\phi_1)+A_2\\cos(\\omega_2t+\\phi_2)\\) עם 5 נעלמים.",
+     "description": "",
      "topics": [
       "t4"
      ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
      "num": "3",
-     "description": "\\(x[n]=\\cos(0.8\\pi n)\\): תנאי על \\(N\\) כך של-DFT יש בדיוק שני מקדמים שונים מאפס (מספר שלם של מחזורים – \\(N\\) כפולה של 5).",
+     "description": "",
      "topics": [
-      "t6",
-      "t10"
+      "t5",
+      "t6"
      ],
-     "difficulty": 1
+     "difficulty": 3
     },
     {
      "num": "4",
-     "description": "מספר המכפלות המרוכבות לחישוב קונבולוציה לינארית של שני אותות באורך \\(N=2^r\\) באמצעות Radix-2 FFT (שלוש התמרות באורך \\(2N\\) ועוד \\(2N\\) מכפלות).",
+     "description": "",
      "topics": [
-      "t8",
-      "t7"
+      "t7",
+      "t8"
      ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
      "num": "5",
-     "description": "מסנן RCSR מסדר ראשון \\(H^Z(z)\\) התלוי בפרמטר \\(a\\): האם הוא LPF או HPF.",
+     "description": "",
      "topics": [
-      "t12",
-      "t11"
+      "t11",
+      "t12"
      ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
      "num": "6",
-     "description": "מציאת התגובה להלם של מסנן רציונלי עם קטבים ב-\\(2,\\pm j\\) (פירוק לשברים חלקיים והתמרת Z הפוכה).",
+     "description": "",
      "topics": [
       "t11"
      ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
      "num": "7",
-     "description": "תדר הדגימה הנמוך ביותר לשחזור מכפלת שני אותות מוגבלי סרט (רוחב הסרט של מכפלה = סכום רוחבי הסרט).",
+     "description": "",
      "topics": [
       "t2"
      ],
-     "difficulty": 1
+     "difficulty": 3
     },
     {
      "num": "8",
-     "description": "\\(z\\) = ריפוד באפסים של \\(x\\) ל-\\(2N\\), \\(y=[x,-x]\\): מציאת \\(w[n]\\) כך ש-\\(y=z\\circledast w\\) (\\(w=\\delta[n]-\\delta[n-N]\\)).",
+     "description": "",
      "topics": [
       "t7"
      ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
      "num": "9",
-     "description": "הפאזה של \\(H^f(\\theta)\\) למסנן אנטי-סימטרי (\\(+1\\) על \\(N\\) דגימות ואז \\(-1\\) על \\(N\\) דגימות) – פאזה לינארית מוכללת.",
+     "description": "",
      "topics": [
+      "t5",
       "t12"
      ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
      "num": "10",
-     "description": "קונבולוציה מעגלית עם \\(H^d[k]=N\\delta[k-1]\\): מציאת האיבר הכללי של המטריצה בקשר \\(Y=Ax\\).",
+     "description": "",
      "topics": [
-      "t6",
-      "t7"
+      "t6"
      ],
-     "difficulty": 2
+     "difficulty": 3
     }
    ]
   },
