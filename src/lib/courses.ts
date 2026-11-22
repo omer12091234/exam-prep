@@ -27,8 +27,8 @@ export async function enrolledIds(userId: string) {
   return new Set(rows.map((r) => r.courseId));
 }
 
-const SEMESTER = { A: "סמסטר א'", B: "סמסטר ב'", SUMMER: "קיץ" } as const;
-const MOED = ["", "מועד א'", "מועד ב'", "מועד ג'", "מועד ד'"];
+export const SEMESTER = { A: "סמסטר א'", B: "סמסטר ב'", SUMMER: "קיץ" } as const;
+export const MOED = ["", "מועד א'", "מועד ב'", "מועד ג'", "מועד ד'"];
 
 export function examTitle(e: {
   title: string | null;
