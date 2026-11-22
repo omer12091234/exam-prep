@@ -29,3 +29,6 @@ sheet's number and title.
   every formula exactly as in the original (same `$…$`), translate only the words; keep technical
   terms the course uses in English where natural (e.g. "aliasing", "Nyquist rate" →
   "קצב נייקוויסט (Nyquist rate)"). Hebrew sheets need no translation fields.
+- **General instructions** printed at the top of a sheet (before the first exercise, e.g.
+  "Answer all questions…", "Use N=8…") are not lost: put them at the start of the first
+  question's `stem`, and their translation at the start of its `stem_he`.
