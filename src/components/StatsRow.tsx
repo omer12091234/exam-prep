@@ -1,8 +1,8 @@
 import type { CourseStats } from "@/lib/progress";
 
-/** "מבחנים: בוצעו 3 · נשארו 35" + the same for questions. */
+/** "מבחנים: בוצעו 3 · נשארו 35" + the same for questions, and for practice sheets if any. */
 export function StatsRow({ stats }: { stats: CourseStats }) {
-  const { exams, questions } = stats;
+  const { exams, questions, sheets, sheetQuestions } = stats;
   return (
     <dl className="grid grid-cols-2 gap-3 text-sm">
       <Stat
@@ -17,6 +17,22 @@ export function StatsRow({ stats }: { stats: CourseStats }) {
         left={questions.total - questions.done}
         partial={questions.started - questions.done}
       />
+      {sheets.total > 0 && (
+        <>
+          <Stat
+            title="דפי תרגול"
+            done={sheets.done}
+            left={sheets.total - sheets.done}
+            partial={sheets.started - sheets.done}
+          />
+          <Stat
+            title="שאלות בדפי התרגול"
+            done={sheetQuestions.done}
+            left={sheetQuestions.total - sheetQuestions.done}
+            partial={sheetQuestions.started - sheetQuestions.done}
+          />
+        </>
+      )}
     </dl>
   );
 }

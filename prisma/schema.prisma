@@ -120,6 +120,11 @@ enum Semester {
   SUMMER
 }
 
+enum ExamKind {
+  EXAM
+  SHEET
+}
+
 enum ExamOrigin {
   OFFICIAL // original questionnaire
   RESTORED // שחזור – reconstructed by students
@@ -140,6 +145,10 @@ model Exam {
   durationMinutes Int?
   aidsNote        String?
   origin          ExamOrigin    @default(OFFICIAL)
+  /// EXAM = an exam sitting; SHEET = a practice sheet (דף תרגול), counted separately
+  kind            ExamKind      @default(EXAM)
+  /// Practice sheet number ("דף 3"), for ordering
+  sheetNumber     Int?
   /// Official grade stats when a stats page exists (e.g. "_prof" files)
   statMean        Float?
   statStdDev      Float?

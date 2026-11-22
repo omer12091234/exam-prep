@@ -3516,7 +3516,36 @@
    "term": "מועד ב",
    "url": "https://drive.google.com/file/d/1KJzgTxlsreMYDjBv3nQWNuJl6nrL6FxZ/view?usp=drivesdk",
    "has_solution": false,
-   "questions": []
+   "questions": [
+    {
+     "num": "1",
+     "description": "",
+     "topics": [
+      "t6",
+      "t2"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2",
+     "description": "",
+     "topics": [
+      "t5",
+      "t11"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3",
+     "description": "",
+     "topics": [
+      "t10",
+      "t7",
+      "t11"
+     ],
+     "difficulty": 3
+    }
+   ]
   },
   {
    "title": "מבחן 2023 סמסטר ב' מועד א' (מתן גל, 04.07.23)",
@@ -3524,7 +3553,35 @@
    "term": "מועד א",
    "url": "https://drive.google.com/file/d/1usms1h2x85Pppz9JWemUroD1apjm3WAI/view?usp=drivesdk",
    "has_solution": false,
-   "questions": []
+   "questions": [
+    {
+     "num": "1",
+     "description": "",
+     "topics": [
+      "t4",
+      "t5"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2",
+     "description": "",
+     "topics": [
+      "t6",
+      "t11"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3",
+     "description": "",
+     "topics": [
+      "t10",
+      "t12"
+     ],
+     "difficulty": 3
+    }
+   ]
   },
   {
    "title": "מבחן לדוגמה 2023 (מתן גל) + פתרון סטודנט",
@@ -3540,7 +3597,36 @@
    "term": "מועד ב",
    "url": "https://drive.google.com/file/d/1gpNfFSS_oQPTW_-fbhuIwR-aZPzqQJrz/view?usp=drivesdk",
    "has_solution": true,
-   "questions": []
+   "questions": [
+    {
+     "num": "1",
+     "description": "",
+     "topics": [
+      "t8",
+      "t11"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2",
+     "description": "",
+     "topics": [
+      "t6",
+      "t5"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3",
+     "description": "",
+     "topics": [
+      "t7",
+      "t11",
+      "t10"
+     ],
+     "difficulty": 3
+    }
+   ]
   },
   {
    "title": "מבחן 2022 סמסטר ב' מועד א' (מתן גל, 12.07.22) + פתרון סטודנט",
@@ -3548,7 +3634,37 @@
    "term": "מועד א",
    "url": "https://drive.google.com/file/d/1o3a3pkH4Du84m-dSfsM-gSkesingDFF_/view?usp=drivesdk",
    "has_solution": true,
-   "questions": []
+   "questions": [
+    {
+     "num": "1",
+     "description": "",
+     "topics": [
+      "t4",
+      "t8",
+      "t5"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2",
+     "description": "",
+     "topics": [
+      "t7",
+      "t10"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3",
+     "description": "",
+     "topics": [
+      "t12",
+      "t3",
+      "t7"
+     ],
+     "difficulty": 3
+    }
+   ]
   }
  ],
  "practice": [

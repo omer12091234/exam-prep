@@ -52,6 +52,7 @@ async function Exam({ params }: { params: Promise<{ id: string }> }) {
     },
   });
   if (!exam || !exam.published) notFound();
+  const sheet = exam.kind === "SHEET";
 
   const allSubIds = exam.questions.flatMap((q) =>
     q.subQuestions.map((s) => s.id),
@@ -92,10 +93,11 @@ async function Exam({ params }: { params: Promise<{ id: string }> }) {
   return (
     <>
       <Link
-        href={`/courses/${exam.course.slug}`}
+        href={`/courses/${exam.course.slug}${sheet ? "/sheets" : ""}`}
         className="no-print text-sm text-neutral-500 hover:underline"
       >
         ← {exam.course.name}
+        {sheet ? " · דפי תרגול" : ""}
       </Link>
       <h1 className="mt-2 text-2xl font-bold">{examTitle(exam)}</h1>
       <p className="mb-4 flex flex-wrap gap-x-3 text-sm text-neutral-500">
@@ -111,7 +113,8 @@ async function Exam({ params }: { params: Promise<{ id: string }> }) {
             rel="noopener noreferrer"
             className="underline"
           >
-            השאלון המקורי בדרייב{exam.hasSolution ? " (כולל פתרון)" : ""}
+            {sheet ? "הדף המקורי בדרייב" : "השאלון המקורי בדרייב"}
+            {exam.hasSolution ? " (כולל פתרון)" : ""}
           </a>
         )}
       </p>
@@ -119,37 +122,40 @@ async function Exam({ params }: { params: Promise<{ id: string }> }) {
         <ProgressBar counts={examCounts} />
       </div>
 
-      <ExamTimer
-        examId={exam.id}
-        defaultMinutes={exam.durationMinutes ?? 180}
-        active={
-          active && {
-            id: active.id,
-            startedAt: active.startedAt.toISOString(),
-            endsAt: active.endsAt?.toISOString() ?? null,
+      {!sheet && (
+        <ExamTimer
+          examId={exam.id}
+          defaultMinutes={exam.durationMinutes ?? 180}
+          active={
+            active && {
+              id: active.id,
+              startedAt: active.startedAt.toISOString(),
+              endsAt: active.endsAt?.toISOString() ?? null,
+            }
           }
-        }
-        last={
-          finished && {
-            seconds:
-              (finished.submittedAt!.getTime() - finished.startedAt.getTime()) /
-              1000,
-            minutesAllowed: finished.endsAt
-              ? Math.round(
-                  (finished.endsAt.getTime() - finished.startedAt.getTime()) /
-                    60_000,
-                )
-              : null,
+          last={
+            finished && {
+              seconds:
+                (finished.submittedAt!.getTime() -
+                  finished.startedAt.getTime()) /
+                1000,
+              minutesAllowed: finished.endsAt
+                ? Math.round(
+                    (finished.endsAt.getTime() - finished.startedAt.getTime()) /
+                      60_000,
+                  )
+                : null,
+            }
           }
-        }
-      />
+        />
+      )}
 
       <div className="no-print mb-8 flex flex-wrap items-center gap-3 text-sm">
         <Link
           href={`/exams/${exam.id}/grade`}
           className="rounded-lg bg-neutral-900 px-3 py-1.5 text-white dark:bg-white dark:text-black"
         >
-          שליחת המבחן לבדיקה
+          {sheet ? "שליחת הדף לבדיקה" : "שליחת המבחן לבדיקה"}
         </Link>
         {gradings.map((g) => (
           <Link key={g.id} href={`/gradings/${g.id}`} className="underline">

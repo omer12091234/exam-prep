@@ -71,7 +71,11 @@ export function PartExtras({
             תמונה מהמבחן
           </summary>
           {images.map((img) => (
-            <Crop key={img.id} src={img.path} alt={`סעיף ${label} – תמונה מהמבחן`} />
+            <Crop
+              key={img.id}
+              src={img.path}
+              alt={`סעיף ${label} – תמונה מהמבחן`}
+            />
           ))}
         </details>
       )}

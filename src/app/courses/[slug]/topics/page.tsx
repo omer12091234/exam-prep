@@ -50,11 +50,7 @@ async function Topics({ params }: { params: Promise<{ slug: string }> }) {
   return (
     <>
       <h1 className="mb-4 text-2xl font-bold">{course.name}</h1>
-      <CourseTabs
-        slug={slug}
-        active="topics"
-        hasDocs={course.docs.length > 0}
-      />
+      <CourseTabs slug={slug} active="topics" />
       <p className="mb-4 text-sm text-neutral-500">
         בכל נושא: סיכום, נוסחאות, טעויות נפוצות, וכל השאלות ממבחני העבר שעוסקות
         בו, ממוינות לפי קושי.

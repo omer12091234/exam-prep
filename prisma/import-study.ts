@@ -324,6 +324,50 @@ async function main() {
       await importDetailed(db, x.examId, course.id, x.detail);
       links.push(...(await tagExam(db, { id: x.examId }, x.items, topicId)));
     }
+    // ── practice sheets (data/sheets/<slug>): stored as exams of kind SHEET ──
+    const sheets = [...loadDetailed(slug, "sheets").values()];
+    const sheetIds = sheets.map((sh) => id(slug, "sheet", sh.key));
+    await db.exam.deleteMany({
+      where: { courseId: course.id, kind: "SHEET", id: { notIn: sheetIds } },
+    });
+    for (const sh of sheets) {
+      const examId = id(slug, "sheet", sh.key);
+      const fields = {
+        courseId: course.id,
+        kind: "SHEET" as const,
+        sheetNumber: sh.exam.sheet_number ?? null,
+        title: sh.exam.match_title,
+        importKey: `${slug}:sheet:${sh.key}`,
+        year: 0,
+        semester: "A" as const,
+        moed: 1,
+        origin: "OFFICIAL" as const,
+        sourceUrl: sh.exam.drive_file_id
+          ? `https://drive.google.com/file/d/${sh.exam.drive_file_id}/view`
+          : null,
+        hasSolution: false,
+        durationMinutes: null,
+        published: true,
+      };
+      await db.exam.upsert({
+        where: { id: examId },
+        update: fields,
+        create: { id: examId, ...fields },
+      });
+      await importDetailed(db, examId, course.id, sh);
+      for (const q of sh.questions) {
+        const qid = id(examId, "dq", String(q.number));
+        for (const s of q.subs)
+          for (const t of new Set(q.topics ?? []))
+            if (topicId.has(t))
+              links.push({
+                subQuestionId: id(qid, "ds", s.label),
+                topicId: topicId.get(t)!,
+              });
+      }
+    }
+    if (sheets.length) console.log(`${slug}: ${sheets.length} practice sheets`);
+
     await importRepeats(db, slug, course.id, (title) =>
       id(slug, "exam", title),
     );

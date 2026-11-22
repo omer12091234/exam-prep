@@ -46,8 +46,13 @@ export function countStatuses(
 
 export type DoneLeft = { done: number; started: number; total: number };
 export type CourseStats = {
-  /** sub-question counts */
+  /** sub-question counts (exams only) */
   counts: Counts;
+  /** sub-question counts of the practice sheets */
+  sheetCounts: Counts;
+  /** practice sheets done / left, and their questions */
+  sheets: DoneLeft;
+  sheetQuestions: DoneLeft;
   /** an exam is done when every part of it has a status; started when at least one has */
   exams: DoneLeft;
   /** a question is done when every part of it has a status */
@@ -57,6 +62,9 @@ export type CourseStats = {
 
 const emptyStats = (): CourseStats => ({
   counts: emptyCounts(),
+  sheetCounts: emptyCounts(),
+  sheets: { done: 0, started: 0, total: 0 },
+  sheetQuestions: { done: 0, started: 0, total: 0 },
   exams: { done: 0, started: 0, total: 0 },
   questions: { done: 0, started: 0, total: 0 },
   perExam: new Map(),
@@ -76,7 +84,10 @@ export async function courseStats(userId: string, courseIds: string[]) {
       id: true,
       questionId: true,
       question: {
-        select: { examId: true, exam: { select: { courseId: true } } },
+        select: {
+          examId: true,
+          exam: { select: { courseId: true, kind: true } },
+        },
       },
     },
   });
@@ -92,29 +103,38 @@ export async function courseStats(userId: string, courseIds: string[]) {
 
   const perQuestion = new Map<
     string,
-    { courseId: string; done: number; total: number }
+    { courseId: string; sheet: boolean; done: number; total: number }
   >();
+  const sheetExams = new Set<string>();
   for (const s of subs) {
     const { examId } = s.question;
     const courseId = s.question.exam.courseId;
+    const sheet = s.question.exam.kind === "SHEET";
+    if (sheet) sheetExams.add(examId);
     const cs = stats.get(courseId)!;
     const st = status.get(s.id);
     let ec = cs.perExam.get(examId);
     if (!ec) cs.perExam.set(examId, (ec = emptyCounts()));
-    for (const c of [cs.counts, ec]) {
+    for (const c of [sheet ? cs.sheetCounts : cs.counts, ec]) {
       c.total++;
       add(c, st);
     }
     let q = perQuestion.get(s.questionId);
     if (!q)
-      perQuestion.set(s.questionId, (q = { courseId, done: 0, total: 0 }));
+      perQuestion.set(
+        s.questionId,
+        (q = { courseId, sheet, done: 0, total: 0 }),
+      );
     q.total++;
     if (st) q.done++;
   }
-  for (const q of perQuestion.values())
-    tally(stats.get(q.courseId)!.questions, q.done, q.total);
+  for (const q of perQuestion.values()) {
+    const cs = stats.get(q.courseId)!;
+    tally(q.sheet ? cs.sheetQuestions : cs.questions, q.done, q.total);
+  }
   for (const cs of stats.values())
-    for (const c of cs.perExam.values()) tally(cs.exams, solved(c), c.total);
+    for (const [examId, c] of cs.perExam)
+      tally(sheetExams.has(examId) ? cs.sheets : cs.exams, solved(c), c.total);
   return stats;
 }
 

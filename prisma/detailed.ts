@@ -13,6 +13,8 @@ import type {
 type Sub = { label: string; points?: number; text: string; solution?: string };
 type Q = {
   number: number;
+  /** topic keys of the course ("t3"); used by practice sheets */
+  topics?: string[];
   points?: number;
   stem: string;
   figures?: string[];
@@ -33,6 +35,7 @@ export type Detailed = {
   raw: Buffer;
   exam: {
     match_title: string;
+    sheet_number?: number;
     drive_file_id?: string;
     source_title?: string;
     date?: string;
@@ -46,10 +49,13 @@ export type Detailed = {
 const id = (...parts: string[]) =>
   createHash("sha1").update(parts.join("\u0000")).digest("hex").slice(0, 24);
 
-/** Detailed exams of one course, keyed by the title used in data/study. */
-export function loadDetailed(slug: string) {
+/**
+ * Detailed exams (data/exams) or practice sheets (data/sheets) of one course, keyed by
+ * match_title (for exams: the title used in data/study).
+ */
+export function loadDetailed(slug: string, kind: "exams" | "sheets" = "exams") {
   const out = new Map<string, Detailed>();
-  const root = `data/exams/${slug}`;
+  const root = `data/${kind}/${slug}`;
   if (!existsSync(root)) return out;
   for (const key of readdirSync(root)) {
     const file = `${root}/${key}/extraction.json`;
@@ -59,7 +65,7 @@ export function loadDetailed(slug: string) {
       Detailed,
       "exam" | "questions"
     >;
-    const publicDir = `exams/${slug}-${key}`;
+    const publicDir = `${kind}/${slug}-${key}`;
     const manifest = `public/${publicDir}/manifest.json`;
     const crops = existsSync(manifest)
       ? (JSON.parse(readFileSync(manifest, "utf8")) as Crop[])

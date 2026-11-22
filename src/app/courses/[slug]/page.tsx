@@ -39,7 +39,7 @@ async function Course({
     include: {
       _count: { select: { docs: true } },
       exams: {
-        where: { published: true },
+        where: { published: true, kind: "EXAM" },
         orderBy: [{ year: "desc" }, { semester: "asc" }, { moed: "asc" }],
         include: { lecturer: true, _count: { select: { questions: true } } },
       },
@@ -91,7 +91,7 @@ async function Course({
       <div className="mb-6">
         <ProgressBar counts={stats.counts} />
       </div>
-      <CourseTabs slug={slug} active="exams" hasDocs={course._count.docs > 0} />
+      <CourseTabs slug={slug} active="exams" />
 
       <form
         action={`/courses/${slug}`}
@@ -298,7 +298,7 @@ async function examsMentioning(courseId: string, phrase: string) {
   const contains = { contains: phrase, mode: "insensitive" as const };
   const rows = await db.question.findMany({
     where: {
-      exam: { courseId },
+      exam: { courseId, kind: "EXAM" },
       OR: [
         { stemText: contains },
         { subQuestions: { some: { text: contains } } },
