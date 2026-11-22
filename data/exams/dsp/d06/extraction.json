@@ -1,0 +1,191 @@
+{
+ "exam": {
+  "match_title": "מועד ב׳ סמסטר ב׳ 2024 (יגאל ביליק)",
+  "drive_file_id": "1bNt3ohMgCQY_38leCozEq-QVmQVv5ZZX",
+  "source_title": "מועד ב+פתרון.pdf",
+  "lecturer": "ד\"ר יגאל ביליק",
+  "year": 2024,
+  "date": "2024-07-30",
+  "duration_minutes": 120,
+  "aids": "מחשבון",
+  "notes": "הקובץ: עמ' 1-2 שאלון (שתי שאלות), עמ' 3-6 דף נוסחאות (באנגלית), עמ' 7-15 פתרון סרוק (שאלה 1 בתמליל מודפס באנגלית ורחוק מהשאלה, שאלה 2 בכתב יד). בשאלה 1 אורך ה-DFT בסעיף א' לא צוין והוא נלקח כ-N."
+ },
+ "questions": [
+  {
+   "number": 1,
+   "points": 50,
+   "stem": "נתונות שני אותות בזמן-בדיד:\n$$x[n]=\\begin{cases}\\sin\\left(\\frac{2\\pi n}{N}\\right), & n=0,\\dots,N_x-1\\\\ 0, & \\text{otherwise}\\end{cases}$$\n$$h[n]=\\begin{cases}\\alpha^{n}, & n=0,\\dots,N_h-1\\\\ 0, & \\text{otherwise}\\end{cases}$$\nכאשר $N_x,N_h\\in\\mathbb{N}$ ו-$0<\\alpha<1$.",
+   "figures": [],
+   "regions": [
+    {
+     "page": 1,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      300,
+      465,
+      810,
+      700
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "א",
+     "points": 10,
+     "text": "מצאו ביטוי מפורש ל-$X^d[k]$ ו-$H^d[k]$ התמרות DFT של $x[n]$ ו-$h[n]$ בהתאמה.",
+     "box": [
+      130,
+      712,
+      810,
+      730
+     ],
+     "lines": 1,
+     "solution": "**מוסכמות.** DFT באורך $N$ (אותו $N$ שמופיע בביטוי של $x[n]$; מניחים $N\\ge N_x,N_h$ והאותות מרופדים באפסים עד אורך $N$), $W_N=e^{-j2\\pi/N}$ ו-$X^d[k]=\\sum_{n=0}^{N-1}x[n]W_N^{kn}$.\n\n**חישוב $X^d[k]$.** מפתחים את הסינוס לפי אוילר: $\\sin\\frac{2\\pi n}{N}=\\frac{1}{2j}\\left(e^{j2\\pi n/N}-e^{-j2\\pi n/N}\\right)$. מכיוון ש-$e^{\\pm j2\\pi n/N}W_N^{kn}=W_N^{(k\\mp1)n}$:\n$$X^d[k]=\\frac{1}{2j}\\left(S[k-1]-S[k+1]\\right),\\qquad S[m]=\\sum_{n=0}^{N_x-1}W_N^{mn}.$$\nסכום גאומטרי (נוסחת העזר $\\sum_{n=0}^{M-1}q^n=\\frac{1-q^M}{1-q}$):\n$$S[m]=\\begin{cases}\\dfrac{1-W_N^{mN_x}}{1-W_N^{m}}, & m\\not\\equiv0 \\pmod N\\\\[2mm] N_x, & m\\equiv0\\pmod N\\end{cases}$$\nכלומר\n$$X^d[k]=\\frac{1}{2j}\\left[\\frac{1-W_N^{(k-1)N_x}}{1-W_N^{k-1}}-\\frac{1-W_N^{(k+1)N_x}}{1-W_N^{k+1}}\\right],$$\nכאשר בכל מקום שבו המכנה מתאפס ($k\\equiv\\pm1 \\bmod N$) הגורם המתאים הוא $N_x$.\n\n**מקרה פרטי (בדיקה).** אם $N_x=N$ אז $W_N^{mN}=1$, לכן $S[m]=N\\,\\delta[((m))_N]$ ו-\n$$X^d[k]=\\frac{N}{2j}\\left(\\delta[k-1]-\\delta[k-(N-1)]\\right),$$\nכצפוי: סינוס אחד שלם הוא שני הלמים בתדרים $k=1$ ו-$k=N-1$.\n\n**חישוב $H^d[k]$.** $H^d[k]=\\sum_{n=0}^{N_h-1}\\alpha^nW_N^{kn}=\\sum_{n=0}^{N_h-1}(\\alpha W_N^k)^n$, סכום גאומטרי עם $q=\\alpha W_N^{k}$. מכיוון ש-$|q|=\\alpha<1$, $q\\neq1$ ולכן אין חלוקה באפס:\n$$H^d[k]=\\frac{1-\\alpha^{N_h}W_N^{kN_h}}{1-\\alpha W_N^{k}},\\qquad 0\\le k\\le N-1.$$\nבדיקה: $H^d[0]=\\frac{1-\\alpha^{N_h}}{1-\\alpha}=\\sum_n\\alpha^n$ - סכום הערכים של $h[n]$, כנדרש.\n\n*הערה: בפתרון הסרוק שבקובץ נרשם $X[k]=\\frac{1}{2j}(\\delta[k-1]-\\delta[k+1])$ - נראה ששם הושמט הגורם $N$ ונלקח $N_x=N$; הביטוי הכללי לעיל מתלכד איתו במקרה זה (עד הגורם $N$). הביטוי ל-$H[k]$ זהה לשלנו.*"
+    },
+    {
+     "label": "ב",
+     "points": 10,
+     "text": "נתונים האותות:\n$$y_{lin}[n]=x[n]*h[n]$$\n$$y_{cyc}[n]=x[n]\\circledast h[n]$$\nכאשר $*$ מציינת קונבולוציה לינארית ו-$\\circledast$ מציינת קונבולוציה ציקלית באורך $N$ ומתקיים $N>N_x,N_h$. תנו ביטוי כללי ל-$y_{lin}[n]$ ו-$y_{cyc}[n]$.",
+     "box": [
+      130,
+      730,
+      810,
+      892
+     ],
+     "lines": 4,
+     "solution": "**מוסכמות.** $*$ קונבולוציה לינארית, $\\circledast$ קונבולוציה ציקלית באורך $N$, ואותות באורך קצר מ-$N$ מרופדים באפסים.\n\n**קונבולוציה לינארית.** $y_{lin}[n]=\\sum_{m}x[m]h[n-m]$. $x[m]\\ne0$ רק עבור $0\\le m\\le N_x-1$ ו-$h[n-m]\\neq0$ רק עבור $0\\le n-m\\le N_h-1$, לכן האורך הוא $N_x+N_h-1$ ו-$y_{lin}[n]=0$ מחוץ ל-$0\\le n\\le N_x+N_h-2$. בתחום זה:\n$$y_{lin}[n]=\\sum_{m=m_0}^{m_1}\\sin\\!\\left(\\frac{2\\pi m}{N}\\right)\\alpha^{\\,n-m},\\qquad m_0=\\max(0,\\,n-N_h+1),\\quad m_1=\\min(n,\\,N_x-1).$$\nסכום גאומטרי: עם $r=\\alpha^{-1}e^{j2\\pi/N}$ (ואז $|r|>1$ ולכן $r\\ne1$), מכיוון ש-$\\alpha^{-m}$ ממשי:\n$$y_{lin}[n]=\\alpha^{n}\\,\\mathrm{Im}\\left\\{\\frac{r^{m_0}-r^{m_1+1}}{1-r}\\right\\}.$$\n\n**קונבולוציה ציקלית.**\n$$y_{cyc}[n]=\\sum_{m=0}^{N-1}x[m]\\,h[((n-m))_N],\\qquad 0\\le n\\le N-1.$$\nהקשר ל-$y_{lin}$: הקונבולוציה הציקלית היא \"קיפול\" של הלינארית מודולו $N$:\n$$y_{cyc}[n]=\\sum_{l=-\\infty}^{\\infty}y_{lin}[n+lN]=y_{lin}[n]+y_{lin}[n+N],\\quad 0\\le n\\le N-1,$$\n(האיבר $y_{lin}[n+N]$ שונה מאפס רק כאשר $n+N\\le N_x+N_h-2$; ו-$l=-1$ לא תורם כי $y_{lin}[n-N]=0$ ל-$n<N$, ו-$l\\ge2$ לא תורם כי $N_x+N_h-2<2N$ מכיוון ש-$N_x,N_h<N$).\nדרך DFT: $Y^d_{cyc}[k]=X^d[k]H^d[k]$ ו-$y_{cyc}=\\mathrm{IDFT}\\{X^dH^d\\}$."
+    },
+    {
+     "label": "ג",
+     "points": 10,
+     "text": "האם מתקיים הקשר $y_{cyc}[n]=y_{lin}[n]$? אם כן, הראו זאת. אם לא, הסבירו מדוע וציינו תנאי על $N$ בו הקשר כן יתקיים.",
+     "box": [
+      130,
+      895,
+      810,
+      957
+     ],
+     "lines": 2,
+     "solution": "**תשובה: בדרך כלל לא.** השוויון $y_{cyc}[n]=y_{lin}[n]$ מתקיים אם ורק אם הקיפול מסעיף ב' לא תורם, כלומר $y_{lin}[n+N]=0$ לכל $0\\le n\\le N-1$.\n\n**נימוק.** מסעיף ב': $y_{cyc}[n]=y_{lin}[n]+y_{lin}[n+N]$ על $0\\le n\\le N-1$. האות $y_{lin}$ שונה מאפס על $0\\le n\\le N_x+N_h-2$. אם $N_x+N_h-1>N$, האיברים $n=N,\\dots,N_x+N_h-2$ של $y_{lin}$ \"מתקפלים\" (aliasing בזמן) אל $n=0,\\dots,N_x+N_h-2-N$ ומתווספים לשם. התנאי $N>N_x,N_h$ שבשאלה אינו מספיק.\n\n**דוגמה נגדית.** $N_x=N_h=N-1$ ($N\\ge4$): האורך הלינארי $2N-3>N$, ובפרט $y_{lin}[2N-4]=x[N-2]h[N-2]=\\sin\\frac{2\\pi(N-2)}{N}\\alpha^{N-2}=-\\sin\\frac{4\\pi}{N}\\,\\alpha^{N-2}\\neq0$ (עבור $N>4$), והוא מתווסף ל-$y_{cyc}[N-4]$.\n\n**התנאי לשוויון.**\n$$N\\ \\ge\\ N_x+N_h-1.$$\nאז $y_{lin}[n]=0$ לכל $n\\ge N$, הקיפול ריק, ו-$y_{cyc}[n]=y_{lin}[n]$ ל-$0\\le n\\le N-1$ (עם $y_{lin}[n]=0$ עבור $n>N_x+N_h-2$). באופן שקול בתדר: ל-DFT באורך $N\\ge N_x+N_h-1$ יש מספיק נקודות כדי לייצג את $y_{lin}$ במלואה, ולכן $\\mathrm{IDFT}\\{X^dH^d\\}=y_{lin}$."
+    },
+    {
+     "label": "ד",
+     "points": 10,
+     "text": "מצאו קשר מטריצי ל-$y_{cyc}[n]$ כתלות ב-$x[n]$ ו-$h[n]$.",
+     "box": [
+      130,
+      958,
+      810,
+      985
+     ],
+     "lines": 1,
+     "solution": "**מוסכמות.** וקטורים עמודה באורך $N$: $\\mathbf x=[x[0],\\dots,x[N-1]]^T$ (רק $N_x$ הראשונים שונים מאפס), $\\mathbf h$ באופן דומה (רק $N_h$ הראשונים שונים מאפס), $\\mathbf y=[y_{cyc}[0],\\dots,y_{cyc}[N-1]]^T$.\n\n**מטריצה ציקלית.** מההגדרה $y_{cyc}[n]=\\sum_{m=0}^{N-1}h[((n-m))_N]\\,x[m]$, כלומר $\\mathbf y=\\mathbf C_h\\mathbf x$ עם $(\\mathbf C_h)_{n,m}=h[((n-m))_N]$:\n$$\\begin{bmatrix}y_{cyc}[0]\\\\y_{cyc}[1]\\\\ \\vdots\\\\ y_{cyc}[N-1]\\end{bmatrix}=\\begin{bmatrix}h[0]&h[N-1]&\\cdots&h[1]\\\\ h[1]&h[0]&\\cdots&h[2]\\\\ \\vdots&\\vdots&\\ddots&\\vdots\\\\ h[N-1]&h[N-2]&\\cdots&h[0]\\end{bmatrix}\\begin{bmatrix}x[0]\\\\x[1]\\\\ \\vdots\\\\ x[N-1]\\end{bmatrix}$$\nהעמודה הראשונה היא $\\mathbf h$, וכל עמודה היא הסחה ציקלית של הקודמת. כאן $h[n]=\\alpha^n$ עבור $0\\le n\\le N_h-1$ ו-$0$ עבור $N_h\\le n\\le N-1$ (ו-$x[m]=\\sin\\frac{2\\pi m}{N}$ עבור $m<N_x$, אפס אחרת).\n\n**ביטוי באמצעות DFT.** עם $\\mathbf F_{kn}=W_N^{kn}$ ו-$\\mathbf F^H\\mathbf F=N\\mathbf I$ מתקיים $\\mathbf X=\\mathbf F\\mathbf x$, $\\mathbf x=\\frac1N\\mathbf F^H\\mathbf X$. מכיוון ש-$\\mathbf Y=\\mathrm{diag}(\\mathbf H)\\mathbf X$ (משפט הקונבולוציה הציקלית),\n$$\\mathbf y=\\frac1N\\mathbf F^H\\,\\mathrm{diag}(\\mathbf F\\mathbf h)\\,\\mathbf F\\,\\mathbf x,\\qquad\\text{כלומר}\\quad \\mathbf C_h=\\frac1N\\mathbf F^H\\,\\mathrm{diag}(H^d[0],\\dots,H^d[N-1])\\,\\mathbf F.$$\nהווקטורים העצמיים של כל מטריצה ציקלית הם עמודות $\\mathbf F^H$ והערכים העצמיים הם $H^d[k]$.\n\n**בדיקה.** לדוגמה $h=\\delta[n]$: $\\mathbf C_h=\\mathbf I$ ו-$H^d[k]=1$, והנוסחה נותנת $\\frac1N\\mathbf F^H\\mathbf F=\\mathbf I$."
+    },
+    {
+     "label": "ה",
+     "points": 10,
+     "text": "הראו כי התמרת DFT משמרת את אנרגיית האות, כלומר:\n$$\\sum_{n=0}^{N-1}\\left|x[n]\\right|^2=\\frac{1}{N}\\sum_{k=0}^{N-1}\\left|X^d[k]\\right|^2$$",
+     "box": [
+      130,
+      986,
+      810,
+      1100
+     ],
+     "lines": 1,
+     "solution": "**מוסכמות.** $X^d[k]=\\sum_{n=0}^{N-1}x[n]W_N^{kn}$, $W_N=e^{-j2\\pi/N}$.\n\n**הוכחה.**\n$$\\sum_{k=0}^{N-1}|X^d[k]|^2=\\sum_{k=0}^{N-1}X^d[k]\\,\\overline{X^d[k]}=\\sum_{k=0}^{N-1}\\sum_{n=0}^{N-1}\\sum_{m=0}^{N-1}x[n]\\,\\overline{x[m]}\\,W_N^{k(n-m)}.$$\nמחליפים סדר סכימה:\n$$=\\sum_{n=0}^{N-1}\\sum_{m=0}^{N-1}x[n]\\overline{x[m]}\\left(\\sum_{k=0}^{N-1}W_N^{k(n-m)}\\right).$$\nהסכום הפנימי הוא סכום גאומטרי: אם $n=m$ הוא שווה $N$. אם $n\\ne m$, אז $0<|n-m|<N$ ולכן $q=W_N^{n-m}\\neq1$ ו-$q^N=1$, ולכן $\\sum_kq^k=\\frac{1-q^N}{1-q}=0$. כלומר הסכום הפנימי הוא $N\\delta[n-m]$ ואז\n$$\\sum_{k=0}^{N-1}|X^d[k]|^2=N\\sum_{n=0}^{N-1}|x[n]|^2\\ \\Longrightarrow\\ \\sum_{n=0}^{N-1}|x[n]|^2=\\frac1N\\sum_{k=0}^{N-1}|X^d[k]|^2.\\ \\blacksquare$$\n\n**הוכחה שקולה (מטריצית).** $\\mathbf X=\\mathbf F\\mathbf x$ ו-$\\mathbf F^H\\mathbf F=N\\mathbf I$, לכן $\\|\\mathbf X\\|^2=\\mathbf x^H\\mathbf F^H\\mathbf F\\mathbf x=N\\|\\mathbf x\\|^2$.\n\n**הערה.** ההוכחה תקפה לכל $x[n]$ באורך $N$ ולא רק לאות הנתון; אות קצר מ-$N$ מרופדים באפסים."
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "points": 50,
+   "stem": "נתון אות $x(t)$ מחזורי בזמן-רציף בעל זמן מחזור $T$ המוגדר עבורו טור פורייה, $\\omega_0=\\frac{2\\pi}{T}$:\n$$x(t)=\\sum_{n=-\\infty}^{\\infty}c_ne^{j\\omega_0nt}$$\nכאשר המקדמים $\\{c_n\\}_{n=-\\infty}^{\\infty}$ ידועים.\nבנוסף, $x(t)$ הוא אות bandpass המקיים $X^F(\\omega)=0,\\ \\forall\\left|\\omega\\right|\\notin[\\omega_1,2\\omega_1]$, כאשר $\\omega_1=\\frac{10\\pi}{3T}$.\nנתון אות נוסף $n(t)$ המוגדר כ-:\n$$n(t)=A\\cdot\\mathrm{sinc}(t/\\Delta)\\cdot\\cos(\\omega_2t)$$\nכאשר $\\Delta>0$, $A>0$ קבוע לא ידוע ו-$\\omega_2=\\frac{10\\pi}{2T}$. בנוסף, מוגדר האות $y(t)$:\n$$y(t)=x(t)+n(t)$$",
+   "figures": [],
+   "regions": [
+    {
+     "page": 2,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      170,
+      100,
+      810,
+      470
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "א",
+     "points": 10,
+     "text": "מצאו ביטוי פשוט ל-$X^F(\\omega)$ ו-$Y^F(\\omega)$ ושרטטו אותם במרחב התדר.",
+     "box": [
+      170,
+      475,
+      810,
+      500
+     ],
+     "lines": 1,
+     "solution": "**מוסכמות.** $\\omega$ בר\"ד/שנייה, התמרת פורייה $X^F(\\omega)=\\int x(t)e^{-j\\omega t}dt$, $\\mathrm{sinc}(x)=\\frac{\\sin\\pi x}{\\pi x}$, $\\omega_0=\\frac{2\\pi}{T}$. נחשב בכפולות של $\\omega_0$: $\\omega_1=\\frac{10\\pi}{3T}=\\frac53\\omega_0$, $2\\omega_1=\\frac{10}{3}\\omega_0$, $\\omega_2=\\frac{10\\pi}{2T}=\\frac52\\omega_0$.\n\n**$X^F(\\omega)$.** מהתמרת האקספוננט ($e^{j\\omega_0nt}\\to2\\pi\\delta(\\omega-n\\omega_0)$):\n$$X^F(\\omega)=2\\pi\\sum_{n=-\\infty}^{\\infty}c_n\\,\\delta(\\omega-n\\omega_0).$$\nהתנאי $X^F(\\omega)=0$ לכל $|\\omega|\\notin[\\tfrac53\\omega_0,\\tfrac{10}{3}\\omega_0]$ משאיר רק הרמוניות עם $\\frac53\\le|n|\\le\\frac{10}3$, כלומר $|n|\\in\\{2,3\\}$. לכן $c_n=0$ לכל $n\\notin\\{\\pm2,\\pm3\\}$ ו-\n$$X^F(\\omega)=2\\pi\\sum_{n\\in\\{-3,-2,2,3\\}}c_n\\,\\delta(\\omega-n\\omega_0).$$\n**שרטוט:** ארבעה הלמים (חצים) באמפליטודות $2\\pi c_{-3},2\\pi c_{-2}$ ב-$\\omega=-3\\omega_0,-2\\omega_0$ ו-$2\\pi c_2,2\\pi c_3$ ב-$\\omega=2\\omega_0,3\\omega_0$; אפס בכל מקום אחר (בפרט בנקודה $\\omega_2=2.5\\omega_0$ שבין ההלמים החיוביים).\n\n**$N^F(\\omega)$.** נוסחת העזר: $\\mathrm{sinc}(t/\\Delta)\\ \\to\\ \\Delta\\,\\Pi\\!\\left(\\frac{\\omega}{2\\pi/\\Delta}\\right)$ (מלבן ברוחב $\\frac{2\\pi}{\\Delta}$ וגובה $\\Delta$). הכפלה ב-$\\cos(\\omega_2t)$ מזיזה ל-$\\pm\\omega_2$ ומכפילה ב-$\\frac12$ (כי $\\cos\\omega_2t\\to\\pi[\\delta(\\omega-\\omega_2)+\\delta(\\omega+\\omega_2)]$ והכפל בזמן הוא $\\frac{1}{2\\pi}\\cdot$קונבולוציה):\n$$N^F(\\omega)=\\frac{A\\Delta}{2}\\left[\\Pi\\!\\left(\\frac{\\omega-\\omega_2}{2\\pi/\\Delta}\\right)+\\Pi\\!\\left(\\frac{\\omega+\\omega_2}{2\\pi/\\Delta}\\right)\\right].$$\nשני מלבנים בגובה $\\frac{A\\Delta}{2}$ וברוחב $\\frac{2\\pi}{\\Delta}$ סביב $\\pm\\omega_2$, כלומר התומך הוא $|\\,|\\omega|-\\omega_2|<\\frac{\\pi}{\\Delta}$.\n\n**$Y^F(\\omega)$.** לינאריות:\n$$Y^F(\\omega)=2\\pi\\!\\!\\sum_{n\\in\\{\\pm2,\\pm3\\}}\\!\\!c_n\\delta(\\omega-n\\omega_0)+\\frac{A\\Delta}{2}\\left[\\Pi\\!\\left(\\tfrac{\\omega-\\omega_2}{2\\pi/\\Delta}\\right)+\\Pi\\!\\left(\\tfrac{\\omega+\\omega_2}{2\\pi/\\Delta}\\right)\\right].$$\n**שרטוט:** אותם ארבעה הלמים, ובנוסף מלבן ממורכז ב-$+2.5\\omega_0$ (בין ההלם ב-$2\\omega_0$ ל-$3\\omega_0$) ומלבן ממורכז ב-$-2.5\\omega_0$.\n\n*הערה: בפתרון הסרוק הגובה של המלבן נרשם $A\\cdot T\\cdot\\pi$; לפי נוסחאות העזר הגובה הנכון הוא $\\frac{A\\Delta}{2}$ (הצורה של השרטוט זהה).*"
+    },
+    {
+     "label": "ב",
+     "points": 10,
+     "text": "מצאו $\\Delta$ עבורו ניתן לשחזר את האות המקורי $x(t)$ מתוך $y(t)$, הסבירו.",
+     "box": [
+      170,
+      502,
+      810,
+      527
+     ],
+     "lines": 1,
+     "solution": "**מטרה.** שחזור $x(t)$ מתוך $y(t)=x(t)+n(t)$ אפשרי אם הספקטרום של הרעש $n(t)$ אינו חופף לשום הלם של $x(t)$ (בכל התדרים $\\pm2\\omega_0,\\pm3\\omega_0$), כי אז מסנן LTI אידאלי מוחק את הרעש ומשאיר את $x$ ללא עיוות. (אי אפשר פשוט לחסר $n(t)$ כי $A$ אינו ידוע.)\n\n**תנאי.** הרעש תופס את $|\\omega|\\in\\left(\\omega_2-\\frac\\pi\\Delta,\\ \\omega_2+\\frac\\pi\\Delta\\right)$ ו-$\\omega_2=2.5\\omega_0$. כדי שהחלון לא יכסה את ההלמים ב-$2\\omega_0$ וב-$3\\omega_0$ (המרחק מהם ל-$\\omega_2$ הוא $0.5\\omega_0$) נדרש\n$$\\frac{\\pi}{\\Delta}<\\frac{\\omega_0}{2}=\\frac{\\pi}{T}\\quad\\Longleftrightarrow\\quad \\frac{2\\pi}{\\Delta}<\\omega_0\\quad\\Longleftrightarrow\\quad \\boxed{\\Delta>T}.$$\n(בשוויון $\\Delta=T$ שפת המלבן נוגעת בהלמים, ושם ערך המלבן הוא $\\frac12$ - חפיפה, ולכן אי-שוויון חזק.) דוגמה: $\\Delta=3T$, וכך גם בסעיף ה'.\n\n**מערכת השחזור.** מסנן שמשאיר את $[\\omega_1,\\omega_2-\\frac\\pi\\Delta]\\cup[\\omega_2+\\frac\\pi\\Delta,2\\omega_1]$ (ואת התדרים השליליים המקבילים) ומאפס את חלון הרעש (band-stop סביב $\\pm\\omega_2$), או מסנן ש-\"מעביר\" רק סביבות צרות של $\\pm2\\omega_0,\\pm3\\omega_0$. הוא מעביר את ההלמים ללא שינוי ואוסף אפס מהרעש, ולכן יוצא בדיוק $x(t)$.\n\n**בדיקה:** עבור $\\Delta=3T$ חצי רוחב החלון הוא $\\frac{\\pi}{3T}=\\frac{\\omega_0}{6}<\\frac{\\omega_0}{2}$ ✓."
+    },
+    {
+     "label": "ג",
+     "points": 10,
+     "text": "בסעיף זה הניחו את $\\Delta$ שמצאתם בסעיף הקודם. האות $y(t)$ נדגם ע\"י רכבת הלמים בקצב $\\omega_s$ ומתקבל האות $y_p(t)$. מצאו תדר דגימה $\\omega_s$ ובנו מערכת לשחזור אידאלי של $x(t)$ מתוך $y_p(t)$.",
+     "box": [
+      170,
+      530,
+      810,
+      615
+     ],
+     "lines": 3,
+     "solution": "**נתונים.** נניח $\\Delta>T$ (למשל $\\Delta=3T$). אז כל התוכן של $y(t)$ נמצא ב-$|\\omega|\\in[2\\omega_0,3\\omega_0]$ (ההלמים בקצוות והרעש בפנים), ובפרט בתוך $[\\omega_1,2\\omega_1]=[\\tfrac53\\omega_0,\\tfrac{10}3\\omega_0]$ - אות bandpass. $\\omega_s$ - רכבת הלמים, $y_p(t)=y(t)\\sum\\delta(t-nT_s)$, $T_s=\\frac{2\\pi}{\\omega_s}$ ו-$Y_p^F(\\omega)=\\frac1{T_s}\\sum_kY^F(\\omega-k\\omega_s)$.\n\n**בחירת $\\omega_s$ (דגימת bandpass).** הפס החיובי הוא $[\\omega_1,2\\omega_1]$, $B=\\omega_1$, $\\frac{\\omega_H}{B}=2$ שלם, ולכן תדר הדגימה המינימלי לפי הפס הנתון הוא $\\omega_s=2B=2\\omega_1$:\n$$\\omega_s=2\\omega_1=\\frac{10}{3}\\omega_0=\\frac{20\\pi}{3T},\\qquad T_s=\\frac{3T}{10}.$$\n**בדיקה שאין חפיפה:** העתקי הפס החיובי: $[\\omega_1,2\\omega_1]-\\omega_s=[-\\frac53,0]\\omega_0$ ו-$+\\omega_s=[5,\\frac{20}3]\\omega_0$. העתקי הפס השלילי $[-\\frac{10}3,-\\frac53]\\omega_0$: $+\\omega_s\\to[0,\\frac53]\\omega_0$ ו-$+2\\omega_s\\to[\\frac{10}{3},5]\\omega_0$. אף העתק לא נכנס ל-$[\\frac53,\\frac{10}3]\\omega_0$ (שהוא הפס המקורי), לכן אין aliasing.\n\n(באמצעות הפס הצר בפועל $[2\\omega_0,3\\omega_0]$, כל $\\omega_s\\in(3\\omega_0,4\\omega_0)$ מתאים; $\\frac{10}{3}\\omega_0$ שייך לתחום.)\n\n**מערכת שחזור.** מסנן מעביר-פס אידאלי $G(\\omega)$ עם גבר $T_s$ (מבטל את הגורם $\\frac1{T_s}$) על התחום של הפס המקורי, ללא חלון הרעש:\n$$G(\\omega)=T_s\\left[\\mathbb 1_{\\left[\\omega_1,\\ \\omega_2-\\frac\\pi\\Delta\\right]}(|\\omega|)+\\mathbb 1_{\\left[\\omega_2+\\frac\\pi\\Delta,\\ 2\\omega_1\\right]}(|\\omega|)\\right],\\quad T_s=\\frac{3T}{10}.$$\nביציאה: $\\hat x(t)=x(t)$ (ההלמים של $x$ בלבד, בלי הרעש - חלון הרעש מחוץ לפס ההעברה כי $\\omega_2\\pm\\frac\\pi\\Delta\\in(2\\omega_0,3\\omega_0)$).\n\n**למה לא $\\omega_s=2\\omega_0$?** כשדוגמים ב-$\\omega_s=2\\omega_0$ ההלם של $c_{-2}$ מוזז ב-$2\\omega_s$ אל $-2\\omega_0+4\\omega_0=2\\omega_0$ ומתלכד עם ההלם של $c_2$ (וכך גם $-3\\omega_0+6\\omega_0=3\\omega_0$ עם $c_3$). ב-$2\\omega_0$ מתקבל $c_2+c_{-2}$ בלבד, והפאזה אובדת: למשל $\\sin(2\\omega_0t)$ נדגם תמיד באפס כי $2\\omega_0nT_s=2\\pi n$. לכן לא ניתן לשחזר את $x(t)$ בקצב זה.\n\n*הערה: בפתרון הסרוק נבחר $\\omega_s=2\\omega_0$ - נראה ששם לא נבדקה החפיפה בקצוות הפס (שם יושבים ההלמים); לכן שמרנו כאן $\\omega_s=\\frac{10}{3}\\omega_0$.*"
+    },
+    {
+     "label": "ד",
+     "points": 10,
+     "text": "נתונה המערכת $\\mathcal H$ בעלת תגובה להלם:\n$$h(t)=\\mathrm{sinc}^2\\!\\left(\\frac{t}{4T}\\right)\\cdot\\cos(\\omega_3t)\\cdot\\sin(\\omega_2t)$$\nכאשר $\\omega_3=\\frac{\\pi}{T}$ מצאו ביטוי ל-$H^F(\\omega)=\\mathcal F\\{h(t)\\}$ ושרטטו אותו במרחב התדר.",
+     "box": [
+      170,
+      617,
+      810,
+      735
+     ],
+     "lines": 2,
+     "solution": "**מוסכמות.** $\\omega_3=\\frac\\pi T=\\frac{\\omega_0}{2}$, $\\omega_2=\\frac52\\omega_0$. נכתוב $h(t)=s(t)\\cos(\\omega_3t)\\sin(\\omega_2t)$ עם $s(t)=\\mathrm{sinc}^2\\!\\left(\\frac{t}{4T}\\right)$.\n\n**שלב 1: $S(\\omega)$.** $\\mathrm{sinc}(t/T_0)\\to T_0\\Pi\\!\\left(\\frac{\\omega}{2\\pi/T_0}\\right)$ ועם $W=\\frac{2\\pi}{T_0}$ הכפל בזמן נותן $\\frac{1}{2\\pi}T_0^2\\,(\\Pi*\\Pi)=\\frac{T_0^2}{2\\pi}W\\Lambda(\\omega/W)$ (קונבולוציה של מלבן עם עצמו היא משולש). עם $T_0=4T$, $W=\\frac{2\\pi}{4T}=\\frac{\\omega_0}{4}$:\n$$S(\\omega)=4T\\,\\Lambda\\!\\left(\\frac{\\omega}{\\omega_0/4}\\right)$$\nמשולש סימטרי, גובה $4T$, תומך $|\\omega|<\\frac{\\omega_0}{4}$.\n\n**שלב 2: כפל בקוסינוס.** $v(t)=s(t)\\cos\\omega_3t\\to V(\\omega)=\\frac12[S(\\omega-\\omega_3)+S(\\omega+\\omega_3)]$:\n$$V(\\omega)=2T\\left[\\Lambda\\!\\left(\\tfrac{\\omega-\\omega_3}{\\omega_0/4}\\right)+\\Lambda\\!\\left(\\tfrac{\\omega+\\omega_3}{\\omega_0/4}\\right)\\right]$$\nמשולשים בגובה $2T$ ממורכזים ב-$\\pm\\frac{\\omega_0}{2}$.\n\n**שלב 3: כפל בסינוס.** $\\sin\\omega_2t\\to\\frac\\pi j[\\delta(\\omega-\\omega_2)-\\delta(\\omega+\\omega_2)]$ ולכן $h(t)=v(t)\\sin\\omega_2t\\to H^F(\\omega)=\\frac{1}{2j}[V(\\omega-\\omega_2)-V(\\omega+\\omega_2)]=-\\frac j2[V(\\omega-\\omega_2)-V(\\omega+\\omega_2)]$. ממקמים: $\\omega_2+\\omega_3=3\\omega_0$, $\\omega_2-\\omega_3=2\\omega_0$:\n$$H^F(\\omega)=-jT\\left[\\Lambda\\!\\left(\\tfrac{\\omega-3\\omega_0}{\\omega_0/4}\\right)+\\Lambda\\!\\left(\\tfrac{\\omega-2\\omega_0}{\\omega_0/4}\\right)-\\Lambda\\!\\left(\\tfrac{\\omega+2\\omega_0}{\\omega_0/4}\\right)-\\Lambda\\!\\left(\\tfrac{\\omega+3\\omega_0}{\\omega_0/4}\\right)\\right].$$\n\n**שרטוט.** ארבעה משולשים ברוחב בסיס $\\frac{\\omega_0}{2}$ (חצי רוחב $\\frac{\\omega_0}{4}$): ב-$\\omega>0$ ממורכזים ב-$2\\omega_0$ וב-$3\\omega_0$ עם ערך שיא $-jT$ (דמיוני טהור: $|H|=T$ בשיא, פאזה $-\\frac\\pi2$), וב-$\\omega<0$ ממורכזים ב-$-2\\omega_0,-3\\omega_0$ עם שיא $+jT$ (פאזה $+\\frac\\pi2$; $h(t)$ ממשי ולכן $H(-\\omega)=\\overline{H(\\omega)}$ ✓). התומך הוא $|\\omega|\\in[1.75\\omega_0,2.25\\omega_0]\\cup[2.75\\omega_0,3.25\\omega_0]$.\n\n**ערכים בהרמוניות (לשימוש בסעיף ה'):** $H^F(\\pm2\\omega_0)=H^F(\\pm3\\omega_0)=\\mp jT$, ו-$H^F(\\omega)=0$ בכל התחום $|\\omega|\\in(2.25\\omega_0,2.75\\omega_0)$ שבו נמצא הרעש."
+    },
+    {
+     "label": "ה",
+     "points": 10,
+     "text": "נתון $\\Delta=3T$. כעת נתון אות $z(t)$:\n$$z(t)=y(t)*h(t)$$\nנתון ש-$z(t)$ נדגם בקצב $\\omega_s=\\frac95\\omega_0$ ומתקבל $z_p(t)$. שרטטו במרחב התדר את האות הדגום $Z_p^F(\\omega)$. האם ניתן לשחזר את $x(t)$ מתוך $z_p(t)$? אם כן, הסבירו מדוע ניתן לדגום בקצב זה ובנו מערכת שחזור אידאלית. אם לא, הסבירו.",
+     "box": [
+      170,
+      745,
+      810,
+      935
+     ],
+     "lines": 4,
+     "solution": "**מוסכמות.** $Z^F(\\omega)=Y^F(\\omega)H^F(\\omega)$, $\\Delta=3T$ כלומר חלון הרעש הוא $|\\,|\\omega|-2.5\\omega_0|<\\frac{\\pi}{3T}=\\frac{\\omega_0}{6}$, כלומר $|\\omega|\\in(2.33\\omega_0,2.67\\omega_0)$.\n\n**ספקטרום $Z^F$.** $Z^F=X^FH^F+N^FH^F$. תומך $H^F$ הוא $|\\omega|\\in[1.75\\omega_0,2.25\\omega_0]\\cup[2.75\\omega_0,3.25\\omega_0]$, ותומך הרעש $(2.33\\omega_0,2.67\\omega_0)$ זר לו, ולכן $N^FH^F=0$. מהסעיף הקודם $H^F(\\pm2\\omega_0)=H^F(\\pm3\\omega_0)=\\mp jT$ ולכן\n$$Z^F(\\omega)=2\\pi\\left[-jT\\,c_2\\,\\delta(\\omega-2\\omega_0)-jT\\,c_3\\,\\delta(\\omega-3\\omega_0)+jT\\,c_{-2}\\,\\delta(\\omega+2\\omega_0)+jT\\,c_{-3}\\,\\delta(\\omega+3\\omega_0)\\right].$$\n(בזמן: $z(t)=-jT(c_2e^{j2\\omega_0t}+c_3e^{j3\\omega_0t})+jT(c_{-2}e^{-j2\\omega_0t}+c_{-3}e^{-j3\\omega_0t})$ - כל הרמוניה מוכפלת ב-$H(n\\omega_0)$.)\n\n**דגימה.** $\\omega_s=\\frac95\\omega_0$, $T_s=\\frac{2\\pi}{\\omega_s}=\\frac{5T}{9}$, $Z_p^F=\\frac{1}{T_s}\\sum_kZ^F(\\omega-k\\omega_s)=\\frac{9}{5T}\\sum_kZ^F(\\omega-k\\omega_s)$. כל הלם מקורי $n\\omega_0$ ($n=\\pm2,\\pm3$) מופיע ב-$n\\omega_0+k\\cdot1.8\\omega_0$ באמפליטודה $\\frac{9}{5T}\\cdot2\\pi c_n H^F(n\\omega_0)=-j\\,\\mathrm{sgn}(n)\\frac{18\\pi}{5}c_n$.\n\nמיקומים (ביחידות $\\omega_0$), $k=0,\\pm1,\\pm2,\\dots$:\n- מ-$c_2$: $2+1.8k$: $\\dots,-1.6,\\ \\mathbf{0.2},\\ \\mathbf{2},\\ 3.8,\\dots$\n- מ-$c_3$: $3+1.8k$: $\\dots,-0.6,\\ \\mathbf{1.2},\\ \\mathbf{3},\\ 4.8,\\dots$\n- מ-$c_{-2}$: $-2+1.8k$: $\\dots,-3.8,\\ \\mathbf{-2},\\ \\mathbf{-0.2},\\ 1.6,\\dots$\n- מ-$c_{-3}$: $-3+1.8k$: $\\dots,-4.8,\\ \\mathbf{-3},\\ \\mathbf{-1.2},\\ 0.6,\\dots$\n\n**שרטוט:** סדרה מחזורית (מחזור $1.8\\omega_0$) של ארבע משפחות הלמים, שכולן בעלות אמפליטודה $\\frac{18\\pi}{5}|c_n|$ עם סימן/פאזה $\\mp j$ כנ\"ל: ארבעת העתקי היסוד ב-$\\pm2\\omega_0$ ו-$\\pm3\\omega_0$, והעתקים ב-$\\pm0.2,\\pm0.6,\\pm1.2,\\pm1.6,\\pm2.4,\\pm3.4,\\dots$.\n\n**האם אפשר לשחזר? כן.** ההלמים נמצאים ב-$\\pm2,\\pm3\\ (\\bmod\\,1.8)$, כלומר ב-$0.2,\\ 1.2,\\ 1.6\\ (=-2+3.6),\\ 0.6\\ (=-3+3.6)$ מודולו $1.8$: ארבעה שאריות שונות, ולכן אף שני הלמים אינם חופפים (אין aliasing) - למרות ש-$\\omega_s<$ קצב נייקוויסט $6\\omega_0$ של האות כולו. כך אפשר לדגום בקצב נמוך: כי $H$ מחק את הרעש והשאיר ארבעה הלמים בלבד (אות דליל), לכן הדגימה נבדקת לפי חפיפת ההלמים ולא לפי רוחב פס. (הקצב $\\frac95\\omega_0$ נמוך מ-$\\frac{10}{3}\\omega_0$ שנדרש לפי הפס $[\\omega_1,2\\omega_1]$, אבל לאחר הסינון ב-$H$ התוכן של $z$ הוא ארבעה הלמים בלבד ולכן אפשר.)\n\n**מערכת שחזור.** המרחק בין ההלמים לשכניהם הקרובים ביותר הוא $0.4\\omega_0$ (כגון $2$ מול $1.6$ ו-$2.4$; $3$ מול $2.4$ ו-$3.4$), לכן:\n1. מסנן מעביר-פס אידאלי עם גבר $T_s=\\frac{5T}{9}$ ועם פסי מעבר $|\\omega|\\in[1.8\\omega_0,2.2\\omega_0]\\cup[2.8\\omega_0,3.2\\omega_0]$ - יבודד את ההלמים המקוריים $\\pm2\\omega_0,\\pm3\\omega_0$ ויחזיר את $Z^F$ (מסנן $G_1$).\n2. מסנן מתקן $G_2(\\omega)=\\frac{1}{H^F(\\omega)}$ בתוך פסי המעבר של $G_1$ (שם $H^F\\neq0$, כי הם בתוך המשולשים) ו-$0$ אחרת. מהערכים בהרמוניות: $G_2(n\\omega_0)=\\frac{1}{\\mp jT}=\\pm\\frac jT$, כלומר $G_1G_2$ בהלמים הוא $\\mathrm{sgn}(\\omega)\\cdot\\frac{5j}{9}$.\n\nהמערכת הכוללת $G(\\omega)=G_1(\\omega)G_2(\\omega)$ מחזירה $X^F(\\omega)$ ולכן $x(t)$, בלי לדעת את $A$ ו-$\\Delta$.\n\n**בדיקה.** ההעתקים הקרובים ביותר לפסי המעבר הם ב-$1.6,2.4,3.4$ - כולם מחוץ ל-$[1.8,2.2]\\cup[2.8,3.2]$ ✓."
+    }
+   ]
+  }
+ ]
+}
