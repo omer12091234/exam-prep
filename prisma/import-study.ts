@@ -76,6 +76,7 @@ const LECTURERS = [
   "אסף כהן",
   "פרנצוס",
   "טבריקיאן",
+  "מתן גל",
 ];
 /** How a lecturer may appear in a title when the full name is not used. */
 const ALIASES: Record<string, string> = {

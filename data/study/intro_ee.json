@@ -3473,6 +3473,62 @@
      "difficulty": 2
     }
    ]
+  },
+  {
+   "title": "מבחן 2024 סמסטר ב' מועד ב' (מתן גל, 18.08.24)",
+   "year": "2024",
+   "term": "מועד ב",
+   "url": "https://drive.google.com/file/d/19xJ6dVfBEG1BqKeC3DIij1eKCnAI3bPc/view?usp=drivesdk",
+   "has_solution": false,
+   "questions": []
+  },
+  {
+   "title": "מבחן 2024 סמסטר ב' מועד א' (מתן גל, 01.08.24) — שאלון מצולם",
+   "year": "2024",
+   "term": "מועד א",
+   "url": "https://drive.google.com/file/d/1pCTzXi7FJdHDniac4DjMGZFZ9wqc5zRF/view?usp=drivesdk",
+   "has_solution": false,
+   "questions": []
+  },
+  {
+   "title": "מבחן 2023 סמסטר ב' מועד ב' (מתן גל, 26.07.23) — שאלון מצולם",
+   "year": "2023",
+   "term": "מועד ב",
+   "url": "https://drive.google.com/file/d/1KJzgTxlsreMYDjBv3nQWNuJl6nrL6FxZ/view?usp=drivesdk",
+   "has_solution": false,
+   "questions": []
+  },
+  {
+   "title": "מבחן 2023 סמסטר ב' מועד א' (מתן גל, 04.07.23)",
+   "year": "2023",
+   "term": "מועד א",
+   "url": "https://drive.google.com/file/d/1usms1h2x85Pppz9JWemUroD1apjm3WAI/view?usp=drivesdk",
+   "has_solution": false,
+   "questions": []
+  },
+  {
+   "title": "מבחן לדוגמה 2023 (מתן גל) + פתרון סטודנט",
+   "year": "2023",
+   "term": "מבחן לדוגמה",
+   "url": "https://drive.google.com/file/d/1dVz58DWHpdLfKqvtsCu4odwlJ9Z0558S/view?usp=drivesdk",
+   "has_solution": true,
+   "questions": []
+  },
+  {
+   "title": "מבחן 2022 סמסטר ב' מועד ב' (מתן גל, 16.08.22) + פתרון סטודנט (ציון 90)",
+   "year": "2022",
+   "term": "מועד ב",
+   "url": "https://drive.google.com/file/d/1gpNfFSS_oQPTW_-fbhuIwR-aZPzqQJrz/view?usp=drivesdk",
+   "has_solution": true,
+   "questions": []
+  },
+  {
+   "title": "מבחן 2022 סמסטר ב' מועד א' (מתן גל, 12.07.22) + פתרון סטודנט",
+   "year": "2022",
+   "term": "מועד א",
+   "url": "https://drive.google.com/file/d/1o3a3pkH4Du84m-dSfsM-gSkesingDFF_/view?usp=drivesdk",
+   "has_solution": true,
+   "questions": []
   }
  ],
  "practice": [
