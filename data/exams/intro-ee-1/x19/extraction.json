@@ -164,7 +164,8 @@
      ],
      "lines": 1,
      "solution": "**שימוש בחלק א.** פתרון ה-ZIR הוא פתרון המשוואה ההומוגנית עם $\\alpha=\\dfrac{R}{2L}$ ו-$\\omega_0^2=\\dfrac{1}{L(C_1+C_2)}$. המשוואה האופיינית $s^2+2\\alpha s+\\omega_0^2=0$ נותנת $s=-\\alpha\\pm\\sqrt{\\alpha^2-\\omega_0^2}$.\n\n**אין תנודות** כשהשורשים ממשיים: $\\alpha\\ge\\omega_0$ (דעיכה קריטית או יתר). אז:\n$$\\frac{R^2}{4L^2}\\ge\\frac{1}{L(C_1+C_2)}\\iff R^2\\ge\\frac{4L}{C_1+C_2}$$\n$$\\boxed{R\\ge2\\sqrt{\\frac{L}{C_1+C_2}}}$$\nזה מתקיים לכל תנאי התחלה, כי סוג השורשים נקבע על ידי המעגל בלבד.\n\n**בדיקה.** יחידות: $\\sqrt{L/C}$ הוא אוהם. עבור הערכים בהמשך ($L=\\frac14$, $C_1+C_2=2$) הסף הוא $2\\sqrt{1/8}\\approx0.707$.\n\n*השוואה לפתרון הסרוק: זהה.*",
-     "points": 7
+     "points": 7,
+     "review": "המילה הראשונה בסעיף ('מהו') מטושטשת בסריקה ושוחזרה."
     },
     {
      "label": "ג",
@@ -190,7 +191,8 @@
      ],
      "lines": 2,
      "solution": "**הערה על הנתונים.** בשאלון המודפס אות הכניסה אינו מפורש; הסטודנט רשם ביד $V_s=\\sin(t)$ ו-ZSR (מצב אפס), ולכן הפתרון כאן מבוסס על $V_s=\\sin t\\cdot u(t)$ עם תנאי התחלה אפס. ($R=\\frac34$, $L=\\frac14$, $C_1=C_2=1$.)\n\n**המשוואה.** $\\alpha=\\frac{R}{2L}=\\frac32$, $\\omega_0^2=\\frac{1}{L(C_1+C_2)}=2$, $\\frac{C_1}{C_1+C_2}=\\frac12$, $\\frac{RC_1}{L(C_1+C_2)}=\\frac{3/4}{1/2}=\\frac32$:\n$$\\ddot V+3\\dot V+2V=\\tfrac12\\ddot V_s+\\tfrac32\\dot V_s$$\n\n**נגזרות האות** (עם $u(t)$): $\\dot V_s=\\cos t\\,u(t)+\\sin t\\,\\delta(t)=\\cos t\\,u(t)$, ולכן $\\ddot V_s=-\\sin t\\,u(t)+\\delta(t)$.\n\n**תנאי התחלה ל-$0^+$** (ZSR, $V(0^-)=\\dot V(0^-)=0$). בגלל ה-$\\delta$ באגף ימין, $\\dot V$ קופץ ו-$V$ רציף:\nאינטגרל המשוואה על $[0^-,0^+]$ נותן $\\dot V(0^+)-\\dot V(0^-)=\\tfrac12\\cdot1$, כלומר\n$$V(0^+)=0,\\qquad \\dot V(0^+)=\\tfrac12$$\n\n**פתרון פרטי** ל-$t>0$: אגף ימין $=-\\frac12\\sin t+\\frac32\\cos t$. ננסה $V_p=C\\sin t+D\\cos t$:\n$$(C-3D)\\sin t+(3C+D)\\cos t=-\\tfrac12\\sin t+\\tfrac32\\cos t\\;\\Rightarrow\\;D=\\tfrac3{10},\\;C=\\tfrac4{10}$$\n\n**פתרון הומוגני.** $s^2+3s+2=0\\Rightarrow s=-1,-2$: $V_h=Ae^{-t}+Be^{-2t}$.\n\n**תנאי התחלה:**\n$$A+B+\\tfrac3{10}=0,\\qquad -A-2B+\\tfrac4{10}=\\tfrac12\\;\\Rightarrow\\;B=\\tfrac15,\\;A=-\\tfrac12$$\n$$\\boxed{V_{ZSR}(t)=\\left[-\\tfrac12e^{-t}+\\tfrac15e^{-2t}+\\tfrac4{10}\\sin t+\\tfrac3{10}\\cos t\\right]u(t)}$$\nהאקספוננטים הם התגובה המעברית, והיא דועכת; נשארת התגובה במצב מתמיד $\\frac4{10}\\sin t+\\frac3{10}\\cos t$.\n\n**בדיקה.** ב-$t=0$: $-\\frac12+\\frac15+\\frac3{10}=0$ ✓; נגזרת: $\\frac12-\\frac25+\\frac4{10}=\\frac12$ ✓.\n\n*השוואה לפתרון הסרוק: זהה.*",
-     "points": 7
+     "points": 7,
+     "review": "אות הכניסה $V_s=\\sin(t)$ והאינדקס ZSR נוספו בכתב יד על ידי הסטודנט ואינם מודפסים בשאלון."
     },
     {
      "label": "ה",
@@ -202,7 +204,8 @@
       164
      ],
      "lines": 1,
-     "solution": "**הערה.** סעיף זה נוסף בכתב יד על ידי הסטודנט ואינו מודפס בשאלון.\n\n**מצב מתמיד** מ-ד (קובעים תדר $\\omega=1$, מקור $V_s=\\sin t$ שהפאזור שלו $-j$ בייחוס קוסינוס):\n$$V=\\tfrac4{10}\\sin t+\\tfrac3{10}\\cos t\\;\\Rightarrow\\;\\tilde V=\\tfrac3{10}-\\tfrac4{10}j$$\n\n**זרמים** ($\\omega=1$, $C_1=C_2=1$, $Z_L+R=\\frac34+\\frac14j$):\n- $\\tilde I_{C_2}=j\\omega C_2\\tilde V=j\\left(\\tfrac3{10}-\\tfrac4{10}j\\right)=0.4+0.3j$, זווית $\\arctan\\tfrac34\\approx36.87^\\circ$.\n- $\\tilde I_L=\\dfrac{\\tilde V}{R+j\\omega L}=\\dfrac{0.3-0.4j}{0.75+0.25j}=0.2-0.6j$, זווית $-\\arctan3\\approx-71.57^\\circ$.\n\nבדיקה עצמאית: $\\tilde V_{C_1}=\\tilde V_s-\\tilde V=-j-(0.3-0.4j)=-0.3-0.6j$, $\\tilde I_{C_1}=j\\tilde V_{C_1}=0.6-0.3j$, ו-$\\tilde I_{C_1}-\\tilde I_{C_2}=0.2-0.6j=\\tilde I_L$ ✓ (KCL).\n\n**הפרש הפאזות:**\n$$\\angle I_{C_2}-\\angle I_L=\\arctan\\tfrac34+\\arctan3\\approx36.87^\\circ+71.57^\\circ\\approx108.4^\\circ$$\n$$\\boxed{\\angle I_{C_2}-\\angle I_L\\approx108.4^\\circ\\ (\\approx1.89\\text{ rad})}$$\nכלומר $I_{C_2}$ מקדים את $I_L$ ב-כ-$108^\\circ$.\n\n*הערה: בפתרון הסרוק התקבל $\\approx20^\\circ$ — נראה ששם נעשתה חיסור זוויות של $V_s$ ו-$V_{C_2}$ כדי לקבל את $\\angle V_{C_1}$, אך $V_{C_1}=V_s-V_{C_2}$ הוא הפרש פאזורים ולא הפרש זוויות. ($\\angle V_{C_1}=-116.6^\\circ$ ולא $-36.9^\\circ$.)*"
+     "solution": "**הערה.** סעיף זה נוסף בכתב יד על ידי הסטודנט ואינו מודפס בשאלון.\n\n**מצב מתמיד** מ-ד (קובעים תדר $\\omega=1$, מקור $V_s=\\sin t$ שהפאזור שלו $-j$ בייחוס קוסינוס):\n$$V=\\tfrac4{10}\\sin t+\\tfrac3{10}\\cos t\\;\\Rightarrow\\;\\tilde V=\\tfrac3{10}-\\tfrac4{10}j$$\n\n**זרמים** ($\\omega=1$, $C_1=C_2=1$, $Z_L+R=\\frac34+\\frac14j$):\n- $\\tilde I_{C_2}=j\\omega C_2\\tilde V=j\\left(\\tfrac3{10}-\\tfrac4{10}j\\right)=0.4+0.3j$, זווית $\\arctan\\tfrac34\\approx36.87^\\circ$.\n- $\\tilde I_L=\\dfrac{\\tilde V}{R+j\\omega L}=\\dfrac{0.3-0.4j}{0.75+0.25j}=0.2-0.6j$, זווית $-\\arctan3\\approx-71.57^\\circ$.\n\nבדיקה עצמאית: $\\tilde V_{C_1}=\\tilde V_s-\\tilde V=-j-(0.3-0.4j)=-0.3-0.6j$, $\\tilde I_{C_1}=j\\tilde V_{C_1}=0.6-0.3j$, ו-$\\tilde I_{C_1}-\\tilde I_{C_2}=0.2-0.6j=\\tilde I_L$ ✓ (KCL).\n\n**הפרש הפאזות:**\n$$\\angle I_{C_2}-\\angle I_L=\\arctan\\tfrac34+\\arctan3\\approx36.87^\\circ+71.57^\\circ\\approx108.4^\\circ$$\n$$\\boxed{\\angle I_{C_2}-\\angle I_L\\approx108.4^\\circ\\ (\\approx1.89\\text{ rad})}$$\nכלומר $I_{C_2}$ מקדים את $I_L$ ב-כ-$108^\\circ$.\n\n*הערה: בפתרון הסרוק התקבל $\\approx20^\\circ$ — נראה ששם נעשתה חיסור זוויות של $V_s$ ו-$V_{C_2}$ כדי לקבל את $\\angle V_{C_1}$, אך $V_{C_1}=V_s-V_{C_2}$ הוא הפרש פאזורים ולא הפרש זוויות. ($\\angle V_{C_1}=-116.6^\\circ$ ולא $-36.9^\\circ$.)*",
+     "review": "הסעיף נוסף בכתב יד על ידי הסטודנט ואינו מודפס בשאלון; נוסחו כפי שנכתב ביד."
     }
    ]
   },

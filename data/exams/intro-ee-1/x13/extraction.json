@@ -45,7 +45,8 @@
       645
      ],
      "lines": 2,
-     "solution": "**מוסכמות.** זרם הסליל $i_L$ זורם בלולאה בטור דרך $R$, $L$ ו-$C$ (אותו זרם בכל האלמנטים). $V_c$ הוא מתח הקבל, בקוטביות שהזרם $i_L$ נכנס לצדה החיובי. אין מקור, והמעגל הוא לולאה אחת.\n\n**הקבל:** $i_C=C\\dot V_c$ ו-$i_C=i_L$, ולכן\n$$\\dot V_c=\\frac{1}{C}\\,i_L$$\n\n**KVL בלולאה:** $V_c+Ri_L+L\\dot i_L=0$, ולכן\n$$\\dot i_L=-\\frac{1}{L}V_c-\\frac{R}{L}\\,i_L$$\n\n**בכתיב מטריצי:**\n$$\\begin{pmatrix}\\dot V_c\\\\ \\dot i_L\\end{pmatrix}=\\begin{pmatrix}0&\\frac1C\\\\-\\frac1L&-\\frac RL\\end{pmatrix}\\begin{pmatrix}V_c\\\\ i_L\\end{pmatrix},\\qquad A=\\begin{pmatrix}0&\\frac1C\\\\-\\frac1L&-\\frac RL\\end{pmatrix}$$\n\n(בסעיפים הבאים $R=L=C=1$, ואז $A=\\begin{pmatrix}0&1\\\\-1&-1\\end{pmatrix}$.)"
+     "solution": "**מוסכמות.** זרם הסליל $i_L$ זורם בלולאה בטור דרך $R$, $L$ ו-$C$ (אותו זרם בכל האלמנטים). $V_c$ הוא מתח הקבל, בקוטביות שהזרם $i_L$ נכנס לצדה החיובי. אין מקור, והמעגל הוא לולאה אחת.\n\n**הקבל:** $i_C=C\\dot V_c$ ו-$i_C=i_L$, ולכן\n$$\\dot V_c=\\frac{1}{C}\\,i_L$$\n\n**KVL בלולאה:** $V_c+Ri_L+L\\dot i_L=0$, ולכן\n$$\\dot i_L=-\\frac{1}{L}V_c-\\frac{R}{L}\\,i_L$$\n\n**בכתיב מטריצי:**\n$$\\begin{pmatrix}\\dot V_c\\\\ \\dot i_L\\end{pmatrix}=\\begin{pmatrix}0&\\frac1C\\\\-\\frac1L&-\\frac RL\\end{pmatrix}\\begin{pmatrix}V_c\\\\ i_L\\end{pmatrix},\\qquad A=\\begin{pmatrix}0&\\frac1C\\\\-\\frac1L&-\\frac RL\\end{pmatrix}$$\n\n(בסעיפים הבאים $R=L=C=1$, ואז $A=\\begin{pmatrix}0&1\\\\-1&-1\\end{pmatrix}$.)",
+     "review": "סימון קוטביות מתח הקבל חסר בשרטוט; הונח שזרם הסליל נכנס לצד החיובי של הקבל."
     },
     {
      "label": "ב",

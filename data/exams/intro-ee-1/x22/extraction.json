@@ -42,7 +42,8 @@
       532
      ],
      "lines": 1,
-     "solution": "**מוסכמות.** המעגל מקבילי (כך נאמר בנתון; אין בשאלה שרטוט): מתח משותף $v_C$ על $R$, $L$ ו-$C$. זרם הקבל $i_C=C\\dot v_C$ כלפי מטה, זרם הנגד $i_R=v_C/R$, זרם הסליל $i_L$ (כולם באותו כיוון, מהצומת העליון כלפי מטה).\n\n**משוואות.**\n\nKCL בצומת העליון (סכום הזרמים היוצאים שווה אפס):\n$$i_R+i_L+i_C=0 \\;\\Rightarrow\\; C\\dot v_C=-\\frac{v_C}{R}-i_L$$\nמשוואת הסליל:\n$$L\\dot i_L=v_C$$\n\n**בצורת מטריצה.**\n$$\\frac{d}{dt}\\begin{pmatrix} v_C\\\\ i_L\\end{pmatrix}=\\underbrace{\\begin{pmatrix} -\\frac{1}{RC} & -\\frac{1}{C}\\\\ \\frac{1}{L} & 0\\end{pmatrix}}_{A}\\begin{pmatrix} v_C\\\\ i_L\\end{pmatrix}$$\n\n**בדיקה:** אם $R\\to\\infty$ מתקבל $\\ddot v_C=-\\frac{1}{LC}v_C$, מתנד הרמוני, כצפוי."
+     "solution": "**מוסכמות.** המעגל מקבילי (כך נאמר בנתון; אין בשאלה שרטוט): מתח משותף $v_C$ על $R$, $L$ ו-$C$. זרם הקבל $i_C=C\\dot v_C$ כלפי מטה, זרם הנגד $i_R=v_C/R$, זרם הסליל $i_L$ (כולם באותו כיוון, מהצומת העליון כלפי מטה).\n\n**משוואות.**\n\nKCL בצומת העליון (סכום הזרמים היוצאים שווה אפס):\n$$i_R+i_L+i_C=0 \\;\\Rightarrow\\; C\\dot v_C=-\\frac{v_C}{R}-i_L$$\nמשוואת הסליל:\n$$L\\dot i_L=v_C$$\n\n**בצורת מטריצה.**\n$$\\frac{d}{dt}\\begin{pmatrix} v_C\\\\ i_L\\end{pmatrix}=\\underbrace{\\begin{pmatrix} -\\frac{1}{RC} & -\\frac{1}{C}\\\\ \\frac{1}{L} & 0\\end{pmatrix}}_{A}\\begin{pmatrix} v_C\\\\ i_L\\end{pmatrix}$$\n\n**בדיקה:** אם $R\\to\\infty$ מתקבל $\\ddot v_C=-\\frac{1}{LC}v_C$, מתנד הרמוני, כצפוי.",
+     "review": "אין שרטוט בשאלון, והמעגל הונח כ-RLC מקבילי כמו בפתרון הסטודנט."
     },
     {
      "label": "ב",

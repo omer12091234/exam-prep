@@ -236,7 +236,8 @@
      ],
      "lines": 5,
      "solution": "**הערת קריאה:** בטקסט המודפס מופיע $0\\le n\\le N-1$, אך $Y(k)$ היא DFT באורך $N/2$, ולכן רק $0\\le n\\le N/2-1$ משתתף בה; זה הטווח שבו נשתמש. כמו כן הטענה נכונה גם עבור $k=0$ (הטקסט מונה $k=2,4,\\dots,N-2$).\n\n**שלב 1 – $y$ הוא אות מקופל.** $x(n)$ מוגדר על $0..N-1$ ואפס מחוץ לו. עבור $M=N/2$ ו-$0\\le n\\le M-1$ הסכום $\\sum_lx(n+lM)$ כולל בדיוק שני איברים לא-אפסיים: $l=0$ ו-$l=1$ (ה-$x(n+N/2)$). לכן $y(n)=x(n)+x(n+N/2)$ הוא בדיוק האות המקופל של סעיף (א) עם $M=N/2$.\n\n**שלב 2 – שימוש בסעיף (א).**\n$$Y(k)=X(\\omega)\\Big|_{\\omega=\\frac{2\\pi}{N/2}k}=X(\\omega)\\Big|_{\\omega=\\frac{2\\pi}{N}(2k)}=X(2k),\\qquad k=0,\\dots,\\tfrac N2-1,$$\nכאשר $X(2k)$ הוא ה-$N$-נקודות DFT של $x$ באינדקס $2k$.\n\n**שלב 3.** החלפת משתנה $k\\to k/2$ (ל-$k$ זוגי):\n$$X(k)=Y\\!\\left(\\tfrac k2\\right),\\qquad k=0,2,4,\\dots,N-2.$$\n\n**בדיקה ישירה:** $X(2r)=\\sum_{n=0}^{N-1}x(n)W_N^{2rn}=\\sum_{n=0}^{N/2-1}\\big[x(n)+x(n+\\tfrac N2)\\big]W_{N/2}^{rn}$ כי $W_N^{2r(n+N/2)}=W_N^{2rn}$ ו-$W_N^2=W_{N/2}$ – זהו $Y(r)$. הפתרון בקובץ הסרוק זהה.",
-     "text_he": "תהי $y(n)=\\begin{cases}x(n)+x\\!\\left(n+\\frac N2\\right), & 0\\le n\\le N-1\\\\ 0, & \\text{elsewhere}\\end{cases}$ ויהי $y(n)\\ \\overset{\\mathrm{DFT}}{\\underset{N/2}{\\longleftrightarrow}}\\ Y(k)$. הראו ש-$X(k)=Y(k/2)$, $k=2,4,\\dots,N-2$."
+     "text_he": "תהי $y(n)=\\begin{cases}x(n)+x\\!\\left(n+\\frac N2\\right), & 0\\le n\\le N-1\\\\ 0, & \\text{elsewhere}\\end{cases}$ ויהי $y(n)\\ \\overset{\\mathrm{DFT}}{\\underset{N/2}{\\longleftrightarrow}}\\ Y(k)$. הראו ש-$X(k)=Y(k/2)$, $k=2,4,\\dots,N-2$.",
+     "review": "מודפס $0\\le n\\le N-1$ ו-$k=2,4,\\dots,N-2$ (כנראה $N/2-1$); תומלל כפי שהודפס."
     },
     {
      "label": "c",
