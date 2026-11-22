@@ -7,6 +7,7 @@ import json, os, re, sys
 path = sys.argv[1]
 key = os.path.basename(os.path.dirname(path))
 course = os.path.basename(os.path.dirname(os.path.dirname(path)))
+kind = os.path.basename(os.path.dirname(os.path.dirname(os.path.dirname(path))))  # exams | sheets
 errors = []
 try:
     d = json.load(open(path, encoding="utf8"))
@@ -17,7 +18,7 @@ exam = d.get("exam", {})
 for f in ("match_title",):
     if not exam.get(f):
         errors.append(f"exam.{f} missing")
-study = {"intro-ee-1": "data/study/intro_ee.json"}.get(course)
+study = {"intro-ee-1": "data/study/intro_ee.json"}.get(course) if kind == "exams" else None
 if study and exam.get("match_title"):
     titles = {e["title"] for e in json.load(open(study, encoding="utf8"))["exams"]}
     if exam["match_title"] not in titles:
@@ -74,7 +75,13 @@ for q in qs:
         if len(s.get("box", [])) != 4 or not isinstance(s.get("lines"), int):
             errors.append(f"{lw}: needs box[4] and integer lines")
 
-pub = f"public/exams/{course}-{key}"
+if kind == "sheets":
+    if not isinstance(exam.get("sheet_number"), int):
+        errors.append("exam.sheet_number (integer) missing")
+    for q in qs:
+        if not q.get("topics"):
+            errors.append(f"Q{q.get('number')}: topics (list of topic ids) missing")
+pub = f"public/{kind}/{course}-{key}"
 man = f"{pub}/manifest.json"
 if not os.path.exists(man):
     errors.append(f"{man} missing (run crop.py and copy the crops)")

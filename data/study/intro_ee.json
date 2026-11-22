@@ -3480,7 +3480,27 @@
    "term": "מועד ב",
    "url": "https://drive.google.com/file/d/19xJ6dVfBEG1BqKeC3DIij1eKCnAI3bPc/view?usp=drivesdk",
    "has_solution": false,
-   "questions": []
+   "questions": [
+    {
+     "num": "1",
+     "description": "",
+     "topics": [
+      "t10",
+      "t3",
+      "t6"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2",
+     "description": "",
+     "topics": [
+      "t7",
+      "t12"
+     ],
+     "difficulty": 3
+    }
+   ]
   },
   {
    "title": "מבחן 2024 סמסטר ב' מועד א' (מתן גל, 01.08.24) — שאלון מצולם",
