@@ -1048,19 +1048,22 @@
    "questions": [
     {
      "num": "1",
-     "description": "\\(z(t)=\\int x(\\tau)\\sum_n h(nT-\\tau)\\mathrm{sinc}(\\frac{t-nT}{T})d\\tau\\) – סינון מקדים, דגימה ושחזור sinc. האם קיים \\(h(t)\\) כך ש-\\(z=x\\) כאשר \\(\\omega_0=\\pi/T\\), כאשר \\(\\omega_0\\gt \\pi/T\\) (תת-דגימה), וכאשר \\(x\\) ממשי.",
+     "description": "",
      "topics": [
+      "t1",
       "t2",
-      "t3"
+      "t3",
+      "t4"
      ],
      "difficulty": 3
     },
     {
      "num": "2",
-     "description": "\\(y=x*h\\) (אורכים \\(N,M\\)) ו-\\(Z^d[k]=X^f(\\theta)H^f(\\theta)|_{\\theta=2\\pi k/N_z}\\): תחום \\(N_z\\) לשחזור \\(y\\) (\\(N_z\\ge N+M-1\\)), מקרה שבו \\(y\\) בעל מבנה מחזורי המאפשר \\(N_z\\) קטן יותר, ותחום \\(N_z\\) לשחזור \\(x\\) כאשר \\(H^f\\neq0\\).",
+     "description": "",
      "topics": [
-      "t7",
-      "t5"
+      "t5",
+      "t6",
+      "t7"
      ],
      "difficulty": 3
     }
