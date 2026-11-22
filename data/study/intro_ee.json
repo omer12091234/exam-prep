@@ -378,8 +378,38 @@
    "year": "2026",
    "term": "מועד א",
    "url": "https://drive.google.com/file/d/18TBKjzXXx7ED0O0L6Gb4yO-lwcVwP9r_/view?usp=drivesdk",
-   "has_solution": false,
-   "questions": []
+   "has_solution": true,
+   "questions": [
+    {
+     "num": "1",
+     "description": "מעגל RC מסדר ראשון עם מקור תלוי: תגובה, גבול להלם ואנרגיה",
+     "topics": [
+      "t6",
+      "t12",
+      "t5"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2",
+     "description": "RLC מקבילי: משוואה מסדר שני, ריסון, דיאגרמת פאזורים ותגובה סינוסית",
+     "topics": [
+      "t7",
+      "t10"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3",
+     "description": "דיודה אידיאלית במעגל RC: תגובה למדרגה ולרמפה, האם המערכת LTI",
+     "topics": [
+      "t4",
+      "t6",
+      "t8"
+     ],
+     "difficulty": 3
+    }
+   ]
   },
   {
    "title": "מבחן 2008 מועד א' (סמסטר ב' תשס\"ח, ד\"ר גיא כהן)",
