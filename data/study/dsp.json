@@ -3980,45 +3980,37 @@
    "questions": [
     {
      "num": "1",
-     "description": "שתי מערכות לינאריות \\(H_1,H_2\\) מחוברות בטור בשני הסדרים (\\(H_1\\to H_2\\) ו-\\(H_2\\to H_1\\)). האם \\(y_a[n]=y_b[n]\\) לכל כניסה? להוכיח או לתת דוגמה נגדית (לינאריות ללא קביעות בזמן).",
+     "description": "",
      "topics": [
       "t11"
      ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
      "num": "2",
-     "description": "מערכת LTI עם \\(h[n]=a\\delta[n]+b\\delta[n-1]\\); ידוע ש-\\(y[n]=0\\) עבור \\(x[n]=2^{-n}\\) ו-\\(H(1)=1\\). למצוא את \\(a,b\\) ולחשב את המוצא עבור \\(x[n]=2\\).",
+     "description": "",
      "topics": [
       "t11"
      ],
-     "difficulty": 1
+     "difficulty": 3
     },
     {
-     "num": "3א",
-     "description": "\\(x(t)\\) עם \\(X(j\\omega)=0\\) ל-\\(|\\omega|\\ge\\pi/T\\) נדגם כל \\(T\\). להוכיח באופן מלא את נוסחת השחזור של שנון \\(x(t)=\\sum_n x(nT)\\mathrm{sinc}(\\tfrac{t-nT}{T})\\).",
+     "num": "3",
+     "description": "",
      "topics": [
       "t2",
       "t3"
-     ],
-     "difficulty": 2
-    },
-    {
-     "num": "3ב",
-     "description": "האם מתקיים השוויון \\(e^{-nT}=\\tfrac1T\\int_0^\\infty e^{-t}\\mathrm{sinc}(\\tfrac{t-nT}{T})dt\\)? להוכיח או להסביר (האות אינו חסום סרט).",
-     "topics": [
-      "t2"
      ],
      "difficulty": 3
     },
     {
      "num": "4",
-     "description": "\\(y[n]=x[((n))_N]\\), \\(n=0..2N-1\\) (שכפול הסדרה פעמיים). למצוא קשר ישיר ופשוט בין ה-DFT באורך \\(N\\) של \\(x[n]\\) לבין ה-DFT באורך \\(2N\\) של \\(y[n]\\).",
+     "description": "",
      "topics": [
       "t6",
       "t7"
      ],
-     "difficulty": 2
+     "difficulty": 3
     }
    ]
   },
