@@ -1,0 +1,318 @@
+[
+ {
+  "file": "Q1_s1.webp",
+  "question": 1,
+  "page": 1,
+  "bbox": [
+   0.0692,
+   0.4802,
+   0.9253,
+   0.5035
+  ],
+  "skew_deg": 0.0,
+  "role": "SUB",
+  "sub": "א",
+  "order": 1,
+  "needs_review": true
+ },
+ {
+  "file": "Q1_s2.webp",
+  "question": 1,
+  "page": 1,
+  "bbox": [
+   0.0692,
+   0.5066,
+   0.9253,
+   0.5299
+  ],
+  "skew_deg": 0.0,
+  "role": "SUB",
+  "sub": "ב",
+  "order": 2,
+  "needs_review": true
+ },
+ {
+  "file": "Q1_s3.webp",
+  "question": 1,
+  "page": 1,
+  "bbox": [
+   0.0692,
+   0.5346,
+   0.9253,
+   0.5796
+  ],
+  "skew_deg": 0.0,
+  "role": "SUB",
+  "sub": "ג",
+  "order": 3,
+  "needs_review": true
+ },
+ {
+  "file": "Q1_s4.webp",
+  "question": 1,
+  "page": 1,
+  "bbox": [
+   0.0692,
+   0.5859,
+   0.9253,
+   0.634
+  ],
+  "skew_deg": 0.0,
+  "role": "SUB",
+  "sub": "ד",
+  "order": 4,
+  "needs_review": true
+ },
+ {
+  "file": "Q1_stem1.webp",
+  "question": 1,
+  "page": 1,
+  "bbox": [
+   0.0681,
+   0.2207,
+   0.9253,
+   0.4848
+  ],
+  "skew_deg": 0.0,
+  "role": "STEM",
+  "order": 0,
+  "needs_review": false
+ },
+ {
+  "file": "Q2_s1.webp",
+  "question": 2,
+  "page": 1,
+  "bbox": [
+   0.0692,
+   0.735,
+   0.9253,
+   0.777
+  ],
+  "skew_deg": 0.0,
+  "role": "SUB",
+  "sub": "א",
+  "order": 1,
+  "needs_review": true
+ },
+ {
+  "file": "Q2_s2.webp",
+  "question": 2,
+  "page": 1,
+  "bbox": [
+   0.0692,
+   0.7786,
+   0.9253,
+   0.8531
+  ],
+  "skew_deg": 0.0,
+  "role": "SUB",
+  "sub": "ב",
+  "order": 2,
+  "needs_review": true
+ },
+ {
+  "file": "Q2_s3.webp",
+  "question": 2,
+  "page": 1,
+  "bbox": [
+   0.0692,
+   0.8625,
+   0.9253,
+   0.913
+  ],
+  "skew_deg": 0.0,
+  "role": "SUB",
+  "sub": "ג",
+  "order": 3,
+  "needs_review": true
+ },
+ {
+  "file": "Q2_stem1.webp",
+  "question": 2,
+  "page": 1,
+  "bbox": [
+   0.0692,
+   0.6395,
+   0.9253,
+   0.7358
+  ],
+  "skew_deg": 0.0,
+  "role": "STEM",
+  "order": 0,
+  "needs_review": false
+ },
+ {
+  "file": "Q3_s1.webp",
+  "question": 3,
+  "page": 2,
+  "bbox": [
+   0.0681,
+   0.0637,
+   0.9253,
+   0.2199
+  ],
+  "skew_deg": 0.0,
+  "role": "SUB",
+  "sub": "א",
+  "order": 1,
+  "needs_review": false
+ },
+ {
+  "file": "Q3_s2.webp",
+  "question": 3,
+  "page": 2,
+  "bbox": [
+   0.0681,
+   0.2199,
+   0.9253,
+   0.2603
+  ],
+  "skew_deg": 0.0,
+  "role": "SUB",
+  "sub": "ב",
+  "order": 2,
+  "needs_review": false
+ },
+ {
+  "file": "Q3_s3.webp",
+  "question": 3,
+  "page": 2,
+  "bbox": [
+   0.0681,
+   0.2603,
+   0.9253,
+   0.3776
+  ],
+  "skew_deg": 0.0,
+  "role": "SUB",
+  "sub": "ג",
+  "order": 3,
+  "needs_review": false
+ },
+ {
+  "file": "Q3_stem1.webp",
+  "question": 3,
+  "page": 2,
+  "bbox": [
+   0.0681,
+   0.0427,
+   0.9253,
+   0.08
+  ],
+  "skew_deg": 0.0,
+  "role": "STEM",
+  "order": 0,
+  "needs_review": false
+ },
+ {
+  "file": "Q4_s1.webp",
+  "question": 4,
+  "page": 2,
+  "bbox": [
+   0.0692,
+   0.519,
+   0.9253,
+   0.5688
+  ],
+  "skew_deg": 0.0,
+  "role": "SUB",
+  "sub": "א1",
+  "order": 1,
+  "needs_review": true
+ },
+ {
+  "file": "Q4_s2.webp",
+  "question": 4,
+  "page": 2,
+  "bbox": [
+   0.0692,
+   0.5734,
+   0.9253,
+   0.596
+  ],
+  "skew_deg": 0.0,
+  "role": "SUB",
+  "sub": "א2",
+  "order": 2,
+  "needs_review": true
+ },
+ {
+  "file": "Q4_s3.webp",
+  "question": 4,
+  "page": 2,
+  "bbox": [
+   0.0692,
+   0.5998,
+   0.9253,
+   0.6239
+  ],
+  "skew_deg": 0.0,
+  "role": "SUB",
+  "sub": "א3",
+  "order": 3,
+  "needs_review": true
+ },
+ {
+  "file": "Q4_s4.webp",
+  "question": 4,
+  "page": 2,
+  "bbox": [
+   0.0692,
+   0.6278,
+   0.9253,
+   0.7374
+  ],
+  "skew_deg": 0.0,
+  "role": "SUB",
+  "sub": "ב1",
+  "order": 4,
+  "needs_review": true
+ },
+ {
+  "file": "Q4_s5.webp",
+  "question": 4,
+  "page": 2,
+  "bbox": [
+   0.0692,
+   0.742,
+   0.9253,
+   0.7653
+  ],
+  "skew_deg": 0.0,
+  "role": "SUB",
+  "sub": "ב2",
+  "order": 5,
+  "needs_review": true
+ },
+ {
+  "file": "Q4_s6.webp",
+  "question": 4,
+  "page": 2,
+  "bbox": [
+   0.0692,
+   0.7716,
+   0.9253,
+   0.8469
+  ],
+  "skew_deg": 0.0,
+  "role": "SUB",
+  "sub": "ג",
+  "order": 6,
+  "needs_review": true
+ },
+ {
+  "file": "Q4_stem1.webp",
+  "question": 4,
+  "page": 2,
+  "bbox": [
+   0.0692,
+   0.3893,
+   0.9253,
+   0.5089
+  ],
+  "skew_deg": 0.0,
+  "role": "STEM",
+  "order": 0,
+  "needs_review": false
+ }
+]
