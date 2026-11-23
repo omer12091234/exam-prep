@@ -4104,27 +4104,11 @@
    "has_solution": true,
    "questions": [
     {
-     "num": "1א",
-     "description": "מערכת LTI בזמן רציף: להוכיח שאם המערכת הפיכה, אזי גם המערכת ההופכית שלה היא LTI.",
+     "num": "1",
+     "description": "",
      "topics": [
-      "t1"
-     ],
-     "difficulty": 2
-    },
-    {
-     "num": "1ב",
-     "description": "מערכת בזמן בדיד \\(y[n]=\\sum_{m=n}^{2n}x[m]\\). לחשב את התגובה להלם ולקבוע האם המערכת יציבה BIBO.",
-     "topics": [
-      "t11"
-     ],
-     "difficulty": 2
-    },
-    {
-     "num": "1ג",
-     "description": "דגימה ע״י כפל ב-\\(s(t)\\), מוצא מערכת \\(h(t)=\\delta(t)+\\delta(t-T/4)\\) שבכניסתה רכבת הלמים \\(p(t)\\), עבור \\(x(t)=\\tfrac{\\omega_0}{\\pi}\\mathrm{sinc}(\\tfrac{\\omega_0 t}{\\pi})\\). (i) לפתח ולצייר את \\(|S(j\\omega)|\\); (ii) למצוא את \\(B\\) המקסימלי כך שעבור \\(\\omega_0\\lt B\\) אין aliasing.",
-     "topics": [
-      "t2",
-      "t4"
+      "t1",
+      "t2"
      ],
      "difficulty": 3
     }
