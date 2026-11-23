@@ -2224,63 +2224,83 @@
    "has_solution": true,
    "questions": [
     {
-     "num": "1-2",
-     "description": "תדר דגימה מינימלי לאות פס בתחום \\(2\\omega\\)–\\(6\\omega\\): מקרה ממשי מול מקרה שאינו בהכרח ממשי.",
-     "topics": [
-      "t4"
-     ],
-     "difficulty": 2
-    },
-    {
-     "num": "3",
-     "description": "מערכת LTI ממשית עם קטבים ב-\\(z_0,1/z_0\\): קיום קטבים צמודים.",
-     "topics": [
-      "t11"
-     ],
-     "difficulty": 1
-    },
-    {
-     "num": "4",
-     "description": "\\(y[n]=0.19x[n]-0.81y[n-2]\\): זיהוי סוג המסנן (קטבים ב-\\(\\pm0.9j\\) – BPF).",
-     "topics": [
-      "t12",
-      "t11"
-     ],
-     "difficulty": 2
-    },
-    {
-     "num": "5",
-     "description": "\\(x[n]=e^{j\\pi n/4}\\): לאילו \\(N\\) ל-DFT איבר יחיד שונה מאפס (\\(N=8m\\)).",
-     "topics": [
-      "t6",
-      "t10"
-     ],
-     "difficulty": 1
-    },
-    {
-     "num": "6",
-     "description": "תכונות התמרת פורייה של אות דגום ברכבת הלמים: מחזורית ואינה מוגבלת סרט.",
+     "num": "1",
+     "description": "",
      "topics": [
       "t2"
      ],
-     "difficulty": 1
+     "difficulty": 3
+    },
+    {
+     "num": "2",
+     "description": "",
+     "topics": [
+      "t2",
+      "t4"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3",
+     "description": "",
+     "topics": [
+      "t11"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "4",
+     "description": "",
+     "topics": [
+      "t11",
+      "t12"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "5",
+     "description": "",
+     "topics": [
+      "t5",
+      "t6"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "6",
+     "description": "",
+     "topics": [
+      "t2",
+      "t5"
+     ],
+     "difficulty": 3
     },
     {
      "num": "7",
-     "description": "MATLAB: fft של אות מרופד באפסים לאורך \\(2N\\) – הדגימות הזוגיות שוות ל-fft(x).",
+     "description": "",
      "topics": [
+      "t6",
       "t7"
      ],
-     "difficulty": 1
+     "difficulty": 3
     },
     {
-     "num": "8-9",
-     "description": "אות עם ספקטרום נתון נדגם ב-\\(4\\omega_0\\) וב-\\(2\\omega_0\\) ומשוחזר במסנן אידיאלי: זיהוי הספקטרום המתקבל (עם/בלי aliasing).",
+     "num": "8",
+     "description": "",
      "topics": [
       "t2",
       "t3"
      ],
-     "difficulty": 2
+     "difficulty": 3
+    },
+    {
+     "num": "9",
+     "description": "",
+     "topics": [
+      "t2",
+      "t3"
+     ],
+     "difficulty": 3
     }
    ]
   },
