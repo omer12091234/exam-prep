@@ -3575,84 +3575,42 @@
    "has_solution": true,
    "questions": [
     {
-     "num": "1א",
-     "description": "\\(x(t)=\\sum_{i=1}^3a_if_i(t)\\) מחזורי במחזור \\(T\\), כאשר \\(f_i(t)=\\Lambda(\\tfrac{t-iT/4}{T/4})\\) משולשים. לצייר דוגמה ולקבוע האם \\(x(t)\\) מוגבל סרט.",
+     "num": "1",
+     "description": "",
      "topics": [
-      "t1"
+      "t1",
+      "t2",
+      "t3"
      ],
-     "difficulty": 1
+     "difficulty": 3
     },
     {
-     "num": "1ב",
-     "description": "האות נדגם במרווח \\(T/4\\). האם ניתן לשחזר במדויק \\(\\hat x(t)=\\sum_n x(nT/4)h(t-nT/4)\\)? אם כן לפתח את \\(h(t)\\) (אינטרפולציה לינארית – FOH).",
-     "topics": [
-      "t3",
-      "t4"
-     ],
-     "difficulty": 2
-    },
-    {
-     "num": "1ג",
-     "description": "דגימה ב-\\(M\\) נקודות \\(t_m\\) במחזור אחד: מהו \\(M\\) המינימלי לחישוב \\(a_1,a_2,a_3\\), מהן \\(t_m\\), ופיתוח מלא של חישוב \\(a_i\\).",
-     "topics": [
-      "t4"
-     ],
-     "difficulty": 2
-    },
-    {
-     "num": "2א",
-     "description": "\\(f[n]\\) באורך \\(N\\) זוגי עם DTFT המקיים \\(F(e^{j\\theta_k})=(-1)^k\\) ב-\\(\\theta_k=2\\pi k/N\\). לפתח ביטוי פשוט ל-\\(f[n]\\).",
+     "num": "2",
+     "description": "",
      "topics": [
       "t5",
-      "t7",
-      "t6"
-     ],
-     "difficulty": 2
-    },
-    {
-     "num": "2ב",
-     "description": "\\(Y(e^{j\\theta})\\) ידוע רק בנקודות: אפס ב-\\(\\theta=0,\\pm\\tfrac{4\\pi}{N},\\pm\\tfrac{8\\pi}{N},..\\) ושווה ל-\\(X(e^{j\\theta})\\) ב-\\(\\theta=\\pm\\tfrac{2\\pi}{N},\\pm\\tfrac{6\\pi}{N},..\\). לפתח ביטוי פשוט ל-\\(y[n]\\) (באורך \\(N\\) זוגי) כתלות ב-\\(x[n]\\).",
-     "topics": [
-      "t7",
       "t6",
-      "t5"
+      "t7"
      ],
      "difficulty": 3
     },
     {
-     "num": "3א",
-     "description": "\\(\\mathbf x\\) וקטור באורך \\(N=6\\). למצוא מטריצת סידור \\(E\\) כך ש-\\(\\mathbf x_1=E\\mathbf x\\), \\(\\mathbf x_1=[x[0],x[2],x[4],x[1],x[3],x[5]]^T\\).",
+     "num": "3",
+     "description": "",
      "topics": [
-      "t8",
-      "t6"
-     ],
-     "difficulty": 1
-    },
-    {
-     "num": "3ב",
-     "description": "ייצוג מטריצי של DFT באורך 6 בשיטת Cooley–Tukey (\\(N=3\\times2\\)): \\(\\mathbf X=ABCD\\mathbf x_1\\), כאשר \\(A,D\\) מכילות בלוקי מטריצות DFT מסדר נמוך, \\(C\\) אלכסונית ו-\\(B\\) לא אלכסונית. למצוא את כל המטריצות.",
-     "topics": [
-      "t8",
-      "t6"
-     ],
-     "difficulty": 3
-    },
-    {
-     "num": "4א",
-     "description": "אות דיבור באורך \\(L=500\\) ומסנן באורך \\(N_h=49\\): לכתוב תוכנית MATLAB לקונבולוציה לינארית בשיטת Overlap-Add עם FFT באורך 64.",
-     "topics": [
-      "t9"
-     ],
-     "difficulty": 2
-    },
-    {
-     "num": "4ב",
-     "description": "הוצע להגדיל את אורך ה-FFT ל-128: לפרט יתרונות וחסרונות של ההצעה.",
-     "topics": [
-      "t9",
+      "t6",
       "t8"
      ],
-     "difficulty": 2
+     "difficulty": 3
+    },
+    {
+     "num": "4",
+     "description": "",
+     "topics": [
+      "t9",
+      "t7"
+     ],
+     "difficulty": 3
     }
    ]
   },
