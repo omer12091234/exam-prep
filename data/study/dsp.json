@@ -2853,27 +2853,17 @@
    "has_solution": true,
    "questions": [
     {
-     "num": "1א",
-     "description": "\\(x(t)\\) ממשי חסום סרט \\(\\pi/T\\). \\(\\alpha_m[n]=\\int\\tfrac{x(t)}2\\mathrm{sinc}\\!\\left(\\tfrac{t+nT(-1)^m}{T}\\right)dt\\), \\(m=1,2\\), ו-\\(y(t)=\\sum_n(\\alpha_1[n]+\\alpha_2[n])\\mathrm{sinc}(\\tfrac{t-nT}{T})\\). האם ניתן להציג את \\(y(t)\\) כמוצא מערכת LTI שכניסתה \\(x(t)\\)? אם כן למצוא את התגובה להלם.",
+     "num": "1",
+     "description": "",
      "topics": [
-      "t3",
-      "t4",
-      "t1"
+      "t2",
+      "t3"
      ],
      "difficulty": 3
     },
     {
-     "num": "1ב",
-     "description": "האם ניתן לשחזר את \\(x(t)\\) בהינתן \\(y(t)\\)? פיתוח מלא או הוכחה/דוגמה.",
-     "topics": [
-      "t3",
-      "t4"
-     ],
-     "difficulty": 3
-    },
-    {
-     "num": "2א",
-     "description": "\\(Y_1[k]=\\tfrac1N\\sum_{m=0}^{N-1}X[m]\\sin\\!\\left(\\tfrac{2\\pi}{N}(m-k)\\right)\\) (קונבולוציה מעגלית בתדר = כפל בזמן). האם ניתן לשחזר את \\(x[n]\\) בהינתן \\(y_1[n]\\)?",
+     "num": "2",
+     "description": "",
      "topics": [
       "t6",
       "t7"
@@ -2881,16 +2871,8 @@
      "difficulty": 3
     },
     {
-     "num": "2ב",
-     "description": "\\(y_2[n]=h[n]\\cdot x[n]\\). להציע \\(h[n]\\) שעבורה לא ניתן לשחזר את \\(x[n]\\) מ-\\(y_2[n]\\) לבדו, אך ניתן לשחזר מ-\\(y_1[n]\\) ו-\\(y_2[n]\\) יחד.",
-     "topics": [
-      "t6"
-     ],
-     "difficulty": 2
-    },
-    {
-     "num": "3א",
-     "description": "מסנן FIR סיבתי וממשי \\(h[n]\\) שהחלק הממשי של ה-DTFT שלו הוא \\(H_{Real}(e^{j\\theta})=\\tfrac{\\sin(10.5\\theta)}{\\sin(0.5\\theta)}+1\\). למצוא את \\(H(e^{j\\theta})\\) ולצייר את \\(h[n]\\).",
+     "num": "3",
+     "description": "",
      "topics": [
       "t5",
       "t12"
@@ -2898,29 +2880,12 @@
      "difficulty": 3
     },
     {
-     "num": "3ב",
-     "description": "האם המסנן בעל פאזה לינארית (למקוטעין)? הסבר מלא.",
-     "topics": [
-      "t12"
-     ],
-     "difficulty": 2
-    },
-    {
-     "num": "4א",
-     "description": "\\(x(t)\\) ממשי מוגבל בזמן ל-\\([0,NT)\\). מחשבים \\(y(t)=x(t)*\\mathrm{sinc}(t/T)\\), \\(y[n]=y(nT)\\), DTFT, דגימתו ב-\\(N\\) נקודות \\(Z[k]=Y(e^{j2\\pi k/N})\\) ו-IDFT \\(z[n]\\). האם ניתן לדעת/לשחזר את \\(X(j\\omega)\\) בתדרים כלשהם מתוך \\(Z[k]\\)? להציג את התדרים ונוסחת השחזור.",
+     "num": "4",
+     "description": "",
      "topics": [
       "t5",
-      "t7",
-      "t2"
-     ],
-     "difficulty": 3
-    },
-    {
-     "num": "4ב",
-     "description": "נתון \\(z[n]=\\delta[n]\\). האם ניתן לשחזר במקרה זה את \\(x(t)\\)? להוכיח ולהציג את \\(x(t)\\), או להוכיח שלא.",
-     "topics": [
-      "t7",
-      "t3"
+      "t6",
+      "t7"
      ],
      "difficulty": 3
     }
