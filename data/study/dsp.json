@@ -2141,87 +2141,109 @@
    "has_solution": true,
    "questions": [
     {
-     "num": "א1",
-     "description": "אות נדגם ב-\\(8\\omega_0\\) ועובר BPF בתחום \\(7\\omega_0\\)–\\(9\\omega_0\\): אמפליטודת השכפול במוצא.",
+     "num": "1",
+     "description": "",
      "topics": [
       "t2",
       "t4"
      ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
-     "num": "א2-3",
-     "description": "מספר דגימות מינימלי לאות מחזורי אי-זוגי מוגבל סרט; ומה ניתן להסיק כששני אותות נותנים אותן דגימות \\(\\delta[n]\\) (שוויון סכומי השכפולים).",
+     "num": "2",
+     "description": "",
+     "topics": [
+      "t1",
+      "t2",
+      "t4"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3",
+     "description": "",
      "topics": [
       "t2",
-      "t1"
+      "t5"
      ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
-     "num": "א4",
-     "description": "קונבולוציה מעגלית באורך 2 של \\(x=\\{11,4\\}\\) עם עצמו: \\(y[0]+y[1]=(\\sum x)^2\\).",
+     "num": "4",
+     "description": "",
+     "topics": [
+      "t6",
+      "t7"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "5",
+     "description": "",
      "topics": [
       "t7"
      ],
-     "difficulty": 1
+     "difficulty": 3
     },
     {
-     "num": "א5",
-     "description": "קוד MATLAB: fft של הרחבה סימטרית \\([x;x(N{:}{-}1{:}2)]\\) – תכונות הסימטריה של התוצאה.",
+     "num": "6",
+     "description": "",
      "topics": [
       "t6"
      ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
-     "num": "א6-7",
-     "description": "מסנן ממשי וזוגי עם קוטב ב-\\(1+j\\) (קטבים נוספים: צמוד והופכיים); מסנן מרוכב עם \\(h[n]=-h^*[-4-n]\\) – פאזה לינארית מוכללת.",
+     "num": "7",
+     "description": "",
      "topics": [
-      "t11",
+      "t11"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "8",
+     "description": "",
+     "topics": [
       "t12"
      ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
-     "num": "א8",
-     "description": "upsampling פי 4 של שתי סדרות וקשר בין הקונבולוציות המעגליות לפני ואחרי.",
-     "topics": [
-      "t7"
-     ],
-     "difficulty": 2
-    },
-    {
-     "num": "א9",
-     "description": "מספר המכפלות ב-Cooley-Tukey ל-DFT באורך \\(105=3\\cdot5\\cdot7\\).",
+     "num": "9",
+     "description": "",
      "topics": [
       "t8"
      ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
-     "num": "א10",
-     "description": "FIR באורך 7, כניסה באורך 1000, FFT באורך 16: מספר הפעלות ה-FFT/IFFT ב-overlap-save מול overlap-add.",
+     "num": "10",
+     "description": "",
      "topics": [
       "t9"
      ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
-     "num": "ב1",
-     "description": "מערכת ניתוח ספקטרלי (דגימה, חלון, DFT): \\(X_1^d[k]\\) לקוסינוס 10.5Hz דרך התמרת החלון, בחירת \\(f_s,L\\) לחלון מלבני ללא זליגה, והוספת קוסינוס חלש (\\(\\frac1{64}\\)) – בחירת חלון מהטבלה לפי רוחב אונה ראשית ורמת אונות צד.",
+     "num": "11",
+     "description": "",
      "topics": [
-      "t10"
+      "t10",
+      "t6",
+      "t5"
      ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
-     "num": "ב2",
-     "description": "\\(x(t)=\\cos(\\omega_1t)\\) נדגם עם \\(T=\\frac{2\\pi}{9\\omega_0}\\), \\(\\omega_1=6\\omega_0\\): \\(Y^F(\\omega)\\) ומציאת תדר אחר שנותן אותו אות דגום (alias).",
+     "num": "12",
+     "description": "",
      "topics": [
-      "t2"
+      "t2",
+      "t5",
+      "t6"
      ],
-     "difficulty": 2
+     "difficulty": 3
     }
    ]
   },
