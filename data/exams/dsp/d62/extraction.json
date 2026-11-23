@@ -1,0 +1,211 @@
+{
+ "exam": {
+  "match_title": "מועד מיוחד (ג׳) סמסטר א׳ 2011 (בועז רפאלי, 05/04/2011) + פתרון",
+  "drive_file_id": "1zzPFrJp9iVew2CqTB6Qw9uGy23kRpqW_",
+  "source_title": "מועד ג 2011 - בועז + פתרון.pdf",
+  "lecturer": "בועז רפאלי",
+  "year": 2011,
+  "date": "2011-04-05",
+  "duration_minutes": 180,
+  "aids": "דף הנוסחאות המצורף; מחשב כיס ללא תכנות ותקשורת",
+  "notes": "הקובץ: עמ' 1-2 שאלון (4 שאלות), עמ' 3-8 פתרון בכתב יד של המרצה. בשאלה 2 במקור הענף השלישי של $Y[k]$ הוא 'אחרת' (בעברית) ובתמלול הוצג כ-otherwise. הפתרון הסרוק של סעיף 4ג' חלקי ולא קריא; הפתרון שבאתר הוא של המתמלל."
+ },
+ "questions": [
+  {
+   "number": 1,
+   "points": 25,
+   "stem": "מערכת LTI בזמן בדיד שכניסתה $x[n]$ ומוצאה $y[n]$ מוגדרת על-ידי הקשר הבא:\n$$y[n]=x[n]+x[n-2]-0.5y[n-1]-0.1y[n-2]$$\nלמערכת תגובת תדר המסומנת על-ידי $H(e^{j\\theta})$.\nעליך לתכנן מסנן FIR בעל תגובה להלם, $g[n],\\ 0\\le n\\le N-1$, ובעל תגובת תדר $G(e^{j\\theta})$, המקיימת:\n$$G(e^{j0})=H(e^{j0}),\\qquad G(e^{j\\pi})=H(e^{j\\pi})$$",
+   "figures": [],
+   "topics": [
+    "t11",
+    "t12"
+   ],
+   "regions": [
+    {
+     "page": 1,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      194,
+      407,
+      771,
+      612
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "",
+     "text": "יש להציג פיתוח מלא, והסבר לכל שלב בפיתוח. **יש להציג את מקדמי המסנן שתכננת.** אורך המסנן, $N$, נתון לבחירתך.",
+     "box": [
+      194,
+      616,
+      771,
+      661
+     ],
+     "lines": 2,
+     "solution": "**סימונים:** $\\theta$ – תדר בדיד ב-rad/sample, ו-$H(e^{j\\theta})$ הוא ה-DTFT של התגובה להלם $h[n]$.\n\n**שלב 1 – תגובת התדר של המערכת.** מפעילים DTFT על משוואת ההפרשים (הזזה ב-$m$ דגימות כופלת ב-$e^{-j\\theta m}$):\n$$Y(e^{j\\theta})=X(e^{j\\theta})+e^{-j2\\theta}X(e^{j\\theta})-0.5e^{-j\\theta}Y(e^{j\\theta})-0.1e^{-j2\\theta}Y(e^{j\\theta})$$\n$$H(e^{j\\theta})=\\frac{Y}{X}=\\frac{1+e^{-j2\\theta}}{1+0.5e^{-j\\theta}+0.1e^{-j2\\theta}}$$\n\n**שלב 2 – הערכים בשני התדרים הנדרשים.**\n$$H(e^{j0})=\\frac{1+1}{1+0.5+0.1}=\\frac{2}{1.6}=\\frac54,\\qquad H(e^{j\\pi})=\\frac{1+1}{1-0.5+0.1}=\\frac{2}{0.6}=\\frac{10}{3}$$\n(ב-$\\theta=\\pi$: $e^{-j\\pi}=-1$, $e^{-j2\\pi}=1$.)\n\n**שלב 3 – מסנן FIR.** עבור $g[n]$ באורך $N$:\n$$G(e^{j0})=\\sum_{n=0}^{N-1}g[n],\\qquad G(e^{j\\pi})=\\sum_{n=0}^{N-1}(-1)^n g[n]$$\nיש שני אילוצים בלבד, ולכן $N=2$ מספיק (עם $N=1$ יש נעלם אחד לשתי משוואות, ואין פתרון כי $5/4\\ne10/3$). עבור $N=2$:\n$$g[0]+g[1]=\\frac54,\\qquad g[0]-g[1]=\\frac{10}{3}$$\nחיבור והפחתה:\n$$g[0]=\\frac12\\left(\\frac54+\\frac{10}3\\right)=\\frac{55}{24},\\qquad g[1]=\\frac12\\left(\\frac54-\\frac{10}3\\right)=-\\frac{25}{24}$$\n\n**בדיקה:** $g[0]+g[1]=\\frac{30}{24}=\\frac54$ ו-$g[0]-g[1]=\\frac{80}{24}=\\frac{10}3$.\n\n**תשובה:** $g[n]=\\frac{55}{24}\\delta[n]-\\frac{25}{24}\\delta[n-1]$, כלומר $G(e^{j\\theta})=\\frac{55}{24}-\\frac{25}{24}e^{-j\\theta}$ (אורך $N=2$; אפשר גם אורך גדול יותר, עם דרגות חופש נוספות).\n\n*הפתרון הסרוק שבקובץ מגיע לאותן תוצאות ($2\\tfrac{7}{24}$ ו-$-1\\tfrac1{24}$).*"
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "points": 25,
+   "stem": "נתונה סדרה ממשית בזמן בדיד, $x[n],\\ 0\\le n\\le N-1$ באורך $N$ אי-זוגי, בעלת התמרת DFT $X[k]$ באורך $N$. הסדרה $X[k]$ מרופדת ב-$N$ אפסים לקבלת סדרה $Y[k]$ באורך $2N$, באופן הבא:\n$$Y[k]=\\begin{cases}2X[k], & 0\\le k\\le (N-1)/2\\\\ 2X[k-N], & 2N-(N-1)/2\\le k\\le 2N-1\\\\ 0, & \\text{otherwise}\\end{cases}$$\nנגדיר וקטור עמודה $\\mathbf x$ באורך $N$, עם איברים $x[n]$, ווקטור עמודה $\\mathbf y$ באורך $2N$ עם איברים $y[n]$, כאשר הסדרה $y[n]$ הינה התמרת DFT הפוכה לסדרה $Y[k]$.",
+   "figures": [],
+   "topics": [
+    "t6",
+    "t7"
+   ],
+   "regions": [
+    {
+     "page": 1,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      194,
+      688,
+      771,
+      948
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "א",
+     "text": "פתח\\י ביטוי למטריצה $\\mathbf A$, המקיימת $\\mathbf y=\\mathbf A\\mathbf x$. יש להציג את מטריצה $\\mathbf A$ כמכפלת מטריצות בעלות איברים קבועים או הניתנים לחישוב ללא תלות בערכי האותות או ההתמרות שלהן. יש לפרט ולהסביר כל שלב בפיתוח.",
+     "box": [
+      194,
+      950,
+      771,
+      1004
+     ],
+     "lines": 3,
+     "solution": "**המרות:** $\\mathbf X=F_N\\mathbf x$, כאשר $F_N$ מטריצת ה-DFT מסדר $N\\times N$ ($[F_N]_{kn}=W_N^{kn}$, $W_N=e^{-j2\\pi/N}$). ה-IDFT מסדר $2N$ הוא $\\mathbf y=\\frac1{2N}F_{2N}^H\\mathbf Y$.\n\n**שלב 1 – $\\mathbf Y$ כפונקציה של $\\mathbf X$.** לפי ההגדרה $\\mathbf Y=Z\\mathbf X$, כאשר $Z$ מטריצה קבועה $2N\\times N$:\n- שורות $0,\\dots,\\frac{N-1}2$ ($\\frac{N+1}2$ שורות): $Y[k]=2X[k]$, כלומר הבלוק $\\left[\\,2I_{\\frac{N+1}2}\\;\\;0\\,\\right]$.\n- $N$ השורות האמצעיות: אפסים.\n- $\\frac{N-1}2$ השורות האחרונות ($k=2N-\\frac{N-1}2,\\dots,2N-1$): $Y[k]=2X[k-N]$, והאינדקסים $k-N$ הם $\\frac{N+1}2,\\dots,N-1$, כלומר הבלוק $\\left[\\,0\\;\\;2I_{\\frac{N-1}2}\\,\\right]$.\n\n$$Z=\\begin{bmatrix}2I_{\\frac{N+1}2}&0\\\\0_{N\\times\\frac{N+1}2}&0_{N\\times\\frac{N-1}2}\\\\0&2I_{\\frac{N-1}2}\\end{bmatrix}$$\n\n**שלב 2 – חזרה לזמן.**\n$$\\mathbf y=\\frac1{2N}F_{2N}^H\\,Z\\,F_N\\,\\mathbf x\\;\\Rightarrow\\;\\boxed{A=\\frac1{2N}F_{2N}^H\\,Z\\,F_N}$$\n\n**משמעות:** ריפוד ב-$N$ אפסים באמצע ספקטרום ה-DFT (כשהתדרים השליליים מועברים לקצה) הוא אינטרפולציה בגורם 2 של $x[n]$; הגורם $2$ שומר על המשרעת.\n\n*הערה:* $N$ אי-זוגי, ולכן אין תדר נייקוויסט בודד שצריך לפצל, וזו הסיבה שהחלוקה $\\frac{N+1}2$ / $\\frac{N-1}2$ מדויקת.",
+     "points": 15
+    },
+    {
+     "label": "ב",
+     "text": "בהינתן $\\mathbf y$, הוצע לך לחשב את $\\mathbf x$ באופן הבא: $\\mathbf x=\\mathbf B\\mathbf y$, כאשר $\\mathbf B=\\left(\\mathbf A^H\\mathbf A\\right)^{-1}\\mathbf A^H$. פתח\\י ביטוי למטריצה $\\mathbf B$ כמכפלה רגילה של מטריצות בעלות איברים ידועים. **הסבר\\י את התוצאה.** הערה: ודא\\י כי הביטוי **אינו כולל** פעולת היפוך מטריצות.",
+     "box": [
+      194,
+      1006,
+      771,
+      1088
+     ],
+     "lines": 3,
+     "solution": "**שלב 1 – $A^HA$.** מכיוון ש-$Z$ ממשית, $Z^H=Z^T$, ו-$F_{2N}F_{2N}^H=2N\\,I_{2N}$:\n$$A^HA=\\frac1{4N^2}F_N^HZ^TF_{2N}F_{2N}^HZF_N=\\frac1{2N}F_N^H\\,(Z^TZ)\\,F_N$$\nבכל עמודה של $Z$ יש בדיוק ערך $2$ אחד, ולכן $Z^TZ=4I_N$. נציב גם $F_N^HF_N=N\\,I_N$:\n$$A^HA=\\frac{4}{2N}F_N^HF_N=\\frac{4}{2N}\\,N\\,I_N=2I_N\\;\\Rightarrow\\;(A^HA)^{-1}=\\tfrac12I_N$$\n\n**שלב 2 – $B$.**\n$$B=(A^HA)^{-1}A^H=\\frac12A^H=\\frac12\\cdot\\frac1{2N}F_N^H\\,Z^T\\,F_{2N}=\\boxed{\\frac1{4N}F_N^H\\,Z^T\\,F_{2N}}$$\n(בביטוי אין היפוך מטריצה.)\n\n**שלב 3 – מה זה עושה.** $F_{2N}\\mathbf y$ הוא ה-DFT מסדר $2N$ של $y$. המטריצה $\\frac14Z^T$ היא $\\begin{bmatrix}\\frac12I&0&0\\\\0&0&\\frac12I\\end{bmatrix}$, כלומר:\n- משאירים מה-DFT של $y$ רק את $\\frac{N+1}2$ המקדמים הראשונים ואת $\\frac{N-1}2$ המקדמים האחרונים, ומכפילים ב-$\\frac12$ (בדיוק הערכים שהיו ב-$Y$ במקור, בלי האפסים האמצעיים),\n- ומחילים עליהם IDFT מסדר $N$ (זה $\\frac1NF_N^H$).\n\n**בדיקה:** $BA=\\frac12A^HA=I_N$, כלומר $B\\mathbf y=\\mathbf x$ בדיוק עבור $\\mathbf y=A\\mathbf x$ (שחזור מלא ללא שגיאה).",
+     "points": 10
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "points": 20,
+   "stem": "נתונה סדרה $x[n]$ באורך $N$, בעלת התמרת DFT $X[k]$ באורך $N$, כאשר $N=4^q$, $q$ שלם חיובי. הסדרה חולקה ל-4 סדרות באורך $N/4$, כל הסדרות בתחום $n=0,\\dots,N/4-1$:\n$$f_1[n]=x[4n],\\quad f_2[n]=x[4n+1],\\quad f_3[n]=x[4n+2],\\quad f_4[n]=x[4n+3]$$\nהתמרות DFT של הסדרות באורך $N/4$ מסומנות על-ידי $F_1[k],F_2[k],F_3[k],F_4[k]$.",
+   "figures": [],
+   "topics": [
+    "t8"
+   ],
+   "regions": [
+    {
+     "page": 2,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      194,
+      134,
+      771,
+      376
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "",
+     "text": "פתח\\י ביטוי פשוט ככל שניתן (הכולל מספר קטן ככל שניתן של מכפלות קומפלקסיות) ל-$X[k]$ כתלות ב-$F_1[k],F_2[k],F_3[k],F_4[k]$. יש להציג פיתוח מלא ולפרט כל שלב בפיתוח. כמה מכפלות קומפלקסיות דרושות לחישוב זה (אין צורך לספור את המכפלות לחישוב $F_i[k],\\ i=1,\\dots,4$)?",
+     "box": [
+      194,
+      396,
+      771,
+      505
+     ],
+     "lines": 4,
+     "solution": "נסמן $W_N=e^{-j2\\pi/N}$ ו-$N=4^q$.\n\n**שלב 1 – פיצול הסכום לפי $n \\bmod 4$.**\n$$X[k]=\\sum_{n=0}^{N-1}x[n]W_N^{kn}=\\sum_{r=0}^{3}\\sum_{m=0}^{N/4-1}x[4m+r]\\,W_N^{k(4m+r)}$$\nכיוון ש-$W_N^{4km}=W_{N/4}^{km}$:\n$$\\boxed{X[k]=F_1[k]+W_N^{k}F_2[k]+W_N^{2k}F_3[k]+W_N^{3k}F_4[k],\\quad 0\\le k\\le N-1}$$\nה-$F_i[k]$ הם DFT באורך $N/4$, ולכן **מחזוריים** ב-$N/4$: $F_i[k+N/4]=F_i[k]$.\n\n**שלב 2 – הצגה לפי $k=0,\\dots,N/4-1$.** נגדיר\n$$a[k]=W_N^{k}F_2[k],\\quad b[k]=W_N^{2k}F_3[k],\\quad c[k]=W_N^{3k}F_4[k]$$\nונשתמש ב-$W_N^{N/4}=e^{-j\\pi/2}=-j$ (ולכן $W_N^{N/2}=-1$, $W_N^{3N/4}=j$). עבור $0\\le k\\le N/4-1$:\n$$\\begin{aligned}\nX[k]&=F_1[k]+a+b+c\\\\\nX[k+\\tfrac N4]&=F_1[k]-j\\,a-b+j\\,c\\\\\nX[k+\\tfrac N2]&=F_1[k]-a+b-c\\\\\nX[k+\\tfrac{3N}4]&=F_1[k]+j\\,a-b-j\\,c\n\\end{aligned}$$\n(כאן $a,b,c,F_1$ מחושבים ב-$k$ בלבד, בזכות המחזוריות.)\n\n**שלב 3 – ספירת מכפלות.** לכל $k$ בתחום $0\\le k\\le N/4-1$ מחשבים רק את $a,b,c$: **3 מכפלות קומפלקסיות** (כפל ב-$\\pm1$ וב-$\\pm j$ אינו מכפלה). ארבעת הערכים נובעים מחיבורים בלבד, למשל דרך $s_1=F_1+b$, $s_2=F_1-b$, $s_3=a+c$, $s_4=a-c$: $X[k]=s_1+s_3$, $X[k+\\frac N2]=s_1-s_3$, $X[k+\\frac N4]=s_2-js_4$, $X[k+\\frac{3N}4]=s_2+js_4$.\n\nסה\"כ $\\frac N4\\cdot3=\\boxed{\\tfrac{3N}{4}}$ מכפלות קומפלקסיות (ואם לא סופרים את $k=0$, שבו כל הגורמים שווים ל-$W^0=1$, אפילו $\\frac{3N}4-3$).\n\n*הפתרון הסרוק שבקובץ מגיע לאותה תוצאה ($3N/4$).*"
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "points": 30,
+   "stem": "נתון אות בזמן רציף $x(t)$ בעל התמרת פורייה המקיימת $X(j\\omega)=0\\ \\forall\\,|\\omega|\\ge\\omega_0$. האות נדגם בתדר דגימה $\\omega_s=2\\omega_0$ לקבלת $x(nT),\\ n\\in Z$, כאשר $\\omega_s=2\\pi/T$.\nמוגדר אות חדש $\\hat x(t)$ באופן הבא:\n$$\\hat x(t)=\\sum_{n=-\\infty}^{\\infty}x(nT)\\cdot\\operatorname{sinc}\\!\\left(\\frac{t-nT}{\\alpha T}\\right)$$",
+   "figures": [],
+   "topics": [
+    "t2",
+    "t3"
+   ],
+   "regions": [
+    {
+     "page": 2,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      194,
+      576,
+      771,
+      722
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "א",
+     "text": "בסעיף זה נתון $\\alpha=1$. הוכח\\י כי מתקיים $\\hat x(t)=x(t)\\ \\forall t$. יש להציג הוכחה מלאה והסבר לכל שלב בהוכחה. אם נעשה שימוש במשפט שנון, יש להוכיח אותו.",
+     "box": [
+      194,
+      723,
+      771,
+      766
+     ],
+     "lines": 2,
+     "solution": "**הגדרות:** $\\omega_s=2\\pi/T=2\\omega_0$, כלומר $\\omega_0=\\pi/T$. $\\operatorname{sinc}(u)=\\frac{\\sin\\pi u}{\\pi u}$. טרנספורם פורייה: $X(j\\omega)=\\int x(t)e^{-j\\omega t}dt$.\n\n**שלב 1 – כתיבה כקונבולוציה.** נגדיר $p(t)=\\sum_n\\delta(t-nT)$ ו-$x_s(t)=x(t)p(t)=\\sum_n x(nT)\\delta(t-nT)$. מכיוון ש-$f(t)*\\delta(t-nT)=f(t-nT)$:\n$$\\hat x(t)=\\sum_n x(nT)\\operatorname{sinc}\\!\\left(\\tfrac{t-nT}{T}\\right)=\\Big[\\sum_nx(nT)\\delta(t-nT)\\Big]*\\operatorname{sinc}\\!\\left(\\tfrac tT\\right)=x_s(t)*\\operatorname{sinc}\\!\\left(\\tfrac tT\\right)$$\n\n**שלב 2 – בתחום התדר.** מכפלה בזמן היא קונבולוציה בתדר, ו-$P(j\\omega)=\\frac{2\\pi}{T}\\sum_k\\delta(\\omega-k\\omega_s)$:\n$$X_s(j\\omega)=\\frac1{2\\pi}X(j\\omega)*P(j\\omega)=\\frac1T\\sum_{k=-\\infty}^{\\infty}X\\big(j(\\omega-k\\omega_s)\\big)$$\nוהטרנספורם של ה-sinc:\n$$\\mathcal F\\{\\operatorname{sinc}(t/T)\\}=T\\cdot\\mathbf 1_{\\{|\\omega|<\\omega_s/2\\}}=T\\cdot\\mathbf 1_{\\{|\\omega|<\\omega_0\\}}$$\n\n**שלב 3 – מכפלה.**\n$$\\hat X(j\\omega)=X_s(j\\omega)\\cdot T\\,\\mathbf 1_{\\{|\\omega|<\\omega_0\\}}=\\sum_kX\\big(j(\\omega-k\\omega_s)\\big)\\,\\mathbf 1_{\\{|\\omega|<\\omega_0\\}}$$\n$X(j\\omega)=0$ עבור $|\\omega|\\ge\\omega_0$, ולכן העותק ה-$k$ נתמך ב-$|\\omega-k\\omega_s|<\\omega_0$. העותקים $k\\neq0$ נמצאים כולם מחוץ ל-$|\\omega|<\\omega_0$ (העותקים לא חופפים, כי $\\omega_s=2\\omega_0$ והספקטרום מתאפס בקצה). נותר רק $k=0$:\n$$\\hat X(j\\omega)=X(j\\omega)\\;\\Rightarrow\\;\\hat x(t)=x(t)\\quad\\forall t\\ \\blacksquare$$\n\n*זו הוכחת משפט הדגימה לשחזור אידיאלי; הפתרון הסרוק שבקובץ בנוי באותה דרך.*",
+     "points": 10
+    },
+    {
+     "label": "ב",
+     "text": "בסעיף זה נתון $\\alpha=2$. האם לדעתך מתקיים: $\\hat x(t)=h(t)*x(t),\\ \\forall t$ עבור $h(t)$ לבחירתך? אם לא, הסבר\\י ופרט\\י, אם כן הצג\\י ביטוי ל-$h(t)$ והוכח\\י. כמו כן '$*$' מסמן קונבולוציה.",
+     "box": [
+      194,
+      768,
+      771,
+      842
+     ],
+     "lines": 3,
+     "solution": "**כללי:** אותה מכפלה כמו בסעיף א', רק עם $\\alpha=2$:\n$$\\hat x(t)=x_s(t)*\\operatorname{sinc}\\!\\left(\\tfrac t{2T}\\right)$$\n$$\\mathcal F\\{\\operatorname{sinc}(t/(2T))\\}=2T\\cdot\\mathbf 1_{\\{|\\omega|<\\omega_0/2\\}}$$\n(התדר הקריטי של ה-sinc הוא $\\frac{\\pi}{2T}=\\frac{\\omega_0}{2}$.)\n\n**הספקטרום:**\n$$\\hat X(j\\omega)=X_s(j\\omega)\\cdot2T\\cdot\\mathbf 1_{\\{|\\omega|<\\omega_0/2\\}}=2\\sum_kX\\big(j(\\omega-k\\omega_s)\\big)\\mathbf 1_{\\{|\\omega|<\\omega_0/2\\}}$$\nהעותקים $k\\ne0$ נתמכים ב-$|\\omega-2k\\omega_0|<\\omega_0$, כלומר הם רחוקים מ-$|\\omega|<\\omega_0/2$, ולכן\n$$\\hat X(j\\omega)=2\\,\\mathbf 1_{\\{|\\omega|<\\omega_0/2\\}}\\,X(j\\omega)\\quad\\forall\\omega$$\nזו מכפלה של $X(j\\omega)$ בפונקציה קבועה, כלומר **כן**, קיים $h(t)$ כך ש-$\\hat x=h*x$, עם\n$$H(j\\omega)=2\\cdot\\mathbf 1_{\\{|\\omega|<\\omega_0/2\\}}$$\n\n**ה-$h(t)$:**\n$$h(t)=\\frac1{2\\pi}\\int_{-\\omega_0/2}^{\\omega_0/2}2e^{j\\omega t}d\\omega=\\frac{2\\sin(\\omega_0t/2)}{\\pi t}=\\frac{\\omega_0}{\\pi}\\operatorname{sinc}\\!\\left(\\frac{\\omega_0t}{2\\pi}\\right)=\\boxed{\\frac1T\\operatorname{sinc}\\!\\left(\\frac t{2T}\\right)}$$\n(בעזרת $\\omega_0=\\pi/T$.)\n\n**בדיקה:** $H(j0)=2$ ובהתאם $\\int h\\,dt=\\frac1T\\cdot2T=2$. אכן $\\hat x$ הוא גרסה מסוננת בפס נמוך של $x$, בגודל כפול.\n\n*הפתרון הסרוק שבקובץ מגיע לאותו $h(t)=\\frac1T\\operatorname{sinc}(t/2T)$.*",
+     "points": 10
+    },
+    {
+     "label": "ג",
+     "text": "חזור על סעיף ב' עבור $\\alpha=0.5$.",
+     "box": [
+      194,
+      845,
+      771,
+      872
+     ],
+     "lines": 1,
+     "solution": "**כללי:** כעת $\\hat x(t)=x_s(t)*\\operatorname{sinc}\\!\\left(\\tfrac{2t}{T}\\right)$, ו-\n$$\\mathcal F\\{\\operatorname{sinc}(2t/T)\\}=\\tfrac T2\\cdot\\mathbf 1_{\\{|\\omega|<2\\pi/T\\}}=\\tfrac T2\\cdot\\mathbf 1_{\\{|\\omega|<2\\omega_0\\}}$$\n(התדר הקריטי: $\\frac{\\pi}{T/2}=2\\omega_0=\\omega_s$.)\n\n**הספקטרום:**\n$$\\hat X(j\\omega)=\\frac12\\sum_kX\\big(j(\\omega-2k\\omega_0)\\big)\\,\\mathbf 1_{\\{|\\omega|<2\\omega_0\\}}$$\nהעותקים $k=\\pm1$ נמצאים ב-$\\omega_0<|\\omega|<3\\omega_0$, ולכן חלק מהם נכנס לחלון $|\\omega|<2\\omega_0$:\n$$\\hat X(j\\omega)=\\begin{cases}\\tfrac12X(j\\omega),&|\\omega|<\\omega_0\\\\[2pt]\\tfrac12X\\big(j(\\omega\\mp2\\omega_0)\\big),&\\omega_0\\le\\pm\\omega<2\\omega_0\\\\0,&|\\omega|\\ge2\\omega_0\\end{cases}$$\n\n**מסקנה: לא קיים $h(t)$.** אם $\\hat x=h*x$ אז $\\hat X(j\\omega)=H(j\\omega)X(j\\omega)$, ולכן $\\hat X$ היה חייב להתאפס בכל תדר שבו $X=0$, בפרט ב-$\\omega_0\\le|\\omega|<2\\omega_0$. אבל שם $\\hat X(j\\omega)=\\frac12X(j(\\omega\\mp2\\omega_0))$, שאינו אפס באופן כללי (זה aliasing: העותקים $k=\\pm1$ נכנסים לחלון). לכן עבור אות $x$ כללי אי אפשר לבטא את $\\hat x$ כקונבולוציה עם מסנן קבוע.\n\n(ההבדל מסעיף ב': שם חלון השחזור ($\\omega_0/2$) קטן מ-$\\omega_0$ ואינו מכניס עותקים. כאן החלון רחב מדי ($2\\omega_0$) ומכניס את העותקים $k=\\pm1$.)\n\n*בפתרון הסרוק שבקובץ סעיף זה אינו מפורט (נראה כחלקי), והפתרון כאן הוא של המתמלל.*",
+     "points": 10
+    }
+   ]
+  }
+ ]
+}
