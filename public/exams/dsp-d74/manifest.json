@@ -1,0 +1,49 @@
+[
+ {
+  "file": "Q1_s1.webp",
+  "question": 1,
+  "page": 10,
+  "bbox": [
+   0.1571,
+   0.3753,
+   0.8593,
+   0.5765
+  ],
+  "skew_deg": 0.0,
+  "role": "SUB",
+  "sub": "א",
+  "order": 1,
+  "needs_review": true
+ },
+ {
+  "file": "Q1_s2.webp",
+  "question": 1,
+  "page": 10,
+  "bbox": [
+   0.1571,
+   0.6294,
+   0.8593,
+   0.7809
+  ],
+  "skew_deg": 0.0,
+  "role": "SUB",
+  "sub": "ב",
+  "order": 2,
+  "needs_review": true
+ },
+ {
+  "file": "Q1_stem1.webp",
+  "question": 1,
+  "page": 10,
+  "bbox": [
+   0.6956,
+   0.317,
+   0.8593,
+   0.3489
+  ],
+  "skew_deg": 0.0,
+  "role": "STEM",
+  "order": 0,
+  "needs_review": false
+ }
+]
