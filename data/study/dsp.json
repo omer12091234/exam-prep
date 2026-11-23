@@ -1909,24 +1909,25 @@
    "questions": [
     {
      "num": "1",
-     "description": "שני מסנני FIR שאפסיהם \\(1.25e^{\\pm j0.8\\pi}\\) מול \\(0.8e^{\\pm j0.8\\pi}\\) (שיקוף ביחס למעגל היחידה): אותה אמפליטודת תגובת תדר.",
+     "description": "",
      "topics": [
-      "t12",
-      "t11"
+      "t11",
+      "t12"
      ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
      "num": "2",
-     "description": "השוואת זמני ריצה: Radix-2 FFT (\\(N\\log N\\)) מול DFT ישיר (\\(N^2\\)) לאורכים שונים.",
+     "description": "",
      "topics": [
-      "t8"
+      "t8",
+      "t6"
      ],
-     "difficulty": 1
+     "difficulty": 3
     },
     {
      "num": "3",
-     "description": "שגיאה ריבועית בין דגימות אות \\(x(t)=\\sum\\beta_n\\mathrm{sinc}\\) לבין דגימות ההטלה שלו על מרחב מוגבל סרט.",
+     "description": "",
      "topics": [
       "t2",
       "t3"
@@ -1935,63 +1936,67 @@
     },
     {
      "num": "4",
-     "description": "סכום סינוסואידים שמתאפס לאחר FIR באורך 8: מיקום אפסי המסנן והאם הוא בהכרח ממשי/בעל פאזה לינארית.",
+     "description": "",
      "topics": [
-      "t12"
+      "t12",
+      "t11",
+      "t5"
      ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
      "num": "5",
-     "description": "לאילו אותות הטלה על פונקציות מלבן \\(W_n(t)\\) שווה לשחזור מדרגות מדגימות (אותות מדרגה).",
+     "description": "",
      "topics": [
-      "t3",
-      "t1"
+      "t4",
+      "t2",
+      "t3"
      ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
      "num": "6",
-     "description": "\\(\\cos(\\omega_0t+\\phi)\\) נדגם \\(L\\) דגימות למחזור ו-DFT באורך \\(7L\\): באילו \\(k\\) המקדמים שונים מאפס (\\(k=7\\) ו-\\(-7\\bmod 7L\\)).",
+     "description": "",
      "topics": [
       "t6",
-      "t10"
+      "t5"
      ],
-     "difficulty": 1
+     "difficulty": 3
     },
     {
      "num": "7",
-     "description": "זיהוי הפעולה בזמן של ביטוי מטריצי עם \\(F_N^H\\) והצמדה (היפוך/הצמדה של הסדרה).",
+     "description": "",
      "topics": [
       "t6"
      ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
      "num": "8",
-     "description": "אות מחזורי בעל 7 הרמוניות נדגם 8 דגימות במחזור: האם ניתן לשחזרו מה-DFT.",
+     "description": "",
      "topics": [
+      "t6",
       "t2",
-      "t6"
+      "t5"
      ],
-     "difficulty": 1
+     "difficulty": 3
     },
     {
      "num": "9",
-     "description": "ריפוד באפסים מ-\\(M\\) ל-\\(K\\): לאילו \\(n\\) הקונבולוציה הלינארית והמעגלית מתלכדות (\\(n=M-1,\\dots,K-1\\)).",
+     "description": "",
      "topics": [
       "t7"
      ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
      "num": "10",
-     "description": "פונקציית MATLAB המשתמשת במטריצת DFT מוזזת ו-ifft: חישוב ערך מוצא (קונבולוציה מעגלית עם הזזה).",
+     "description": "",
      "topics": [
-      "t7",
-      "t6"
+      "t6",
+      "t7"
      ],
-     "difficulty": 2
+     "difficulty": 3
     }
    ]
   },
