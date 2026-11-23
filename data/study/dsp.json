@@ -2989,45 +2989,19 @@
    "has_solution": true,
    "questions": [
     {
-     "num": "1א",
-     "description": "\\(x(t)\\) עם \\(X(j\\omega)=0\\) ל-\\(|\\omega|\\ge\\pi/T\\). \\(z(t)=\\sum_n\\int x(\\tau)\\,\\mathrm{sinc}(\\tfrac{t-nT}{T/2})\\,\\mathrm{sinc}(\\tfrac{\\tau-nT}{T})d\\tau\\). האם \\(z(t)\\) מוגבל סרט? נדרשת הוכחה מלאה.",
-     "topics": [
-      "t1",
-      "t3"
-     ],
-     "difficulty": 2
-    },
-    {
-     "num": "1ב",
-     "description": "לפתח ביטוי פשוט ל-\\(z(nT)\\) לכל \\(n\\) שלם כתלות ב-\\(x(t)\\), ולצייר את \\(z(nT)\\) למקרה \\(x(t)=1\\).",
+     "num": "1",
+     "description": "",
      "topics": [
       "t2",
-      "t3"
-     ],
-     "difficulty": 2
-    },
-    {
-     "num": "1ג",
-     "description": "\\(u(t)=\\sum_n z(nT)\\Pi(\\tfrac{t-nT}{T/2})*h(t)\\). האם קיים \\(h(t)\\) שעבורו \\(u(t)=x(t)\\)? אם כן להוכיח ולצייר את \\(|H(j\\omega)|\\) (שחזור מדגימות מוחזקות – פיצוי ZOH), אחרת דוגמה נגדית.",
-     "topics": [
       "t3"
      ],
      "difficulty": 3
     },
     {
-     "num": "2א",
-     "description": "\\(x(t)=\\sum_n\\sum_l x[n]\\,\\mathrm{sinc}(\\tfrac{t-n\\pi-lN\\pi}{\\pi})\\), \\(N\\) אי-זוגי. עבור \\(x[n]=\\cos(\\tfrac{2\\pi}{N}n)\\), \\(0\\le n\\le N-1\\) (אפס אחרת): לצייר את \\(X(j\\omega)\\) ולקבוע האם \\(x(t)\\) חסום סרט.",
+     "num": "2",
+     "description": "",
      "topics": [
       "t3",
-      "t5",
-      "t1"
-     ],
-     "difficulty": 2
-    },
-    {
-     "num": "2ב",
-     "description": "עבור \\(x[n]=a[n]\\) סדרה באורך \\(N\\): לפתח ביטוי פשוט ל-\\(X(j\\omega)\\) כתלות ב-\\(A[k]\\), ה-DFT באורך \\(N\\) של \\(a[n]\\) (שחזור מחזורי – קווים ספקטרליים).",
-     "topics": [
       "t5",
       "t6",
       "t7"
@@ -3035,39 +3009,12 @@
      "difficulty": 3
     },
     {
-     "num": "2ג",
-     "description": "עבור \\(x[n]=a[n]*b[n]\\) (קונבולוציה לינארית של סדרות באורך \\(N\\)): ביטוי ל-\\(X(j\\omega)\\) כתלות ב-\\(A[k],B[k]\\). האם ניתן לשחזר את \\(a[n],b[n]\\) בהינתן \\(x(t)\\)?",
+     "num": "3",
+     "description": "",
      "topics": [
+      "t6",
       "t7",
-      "t6"
-     ],
-     "difficulty": 3
-    },
-    {
-     "num": "3א",
-     "description": "סינון בבלוקים: \\(y[n]=x[n]*h[n]\\), \\(h\\) באורך 3, בלוקים \\(\\mathbf x_i=(x[4i-2],..,x[4i+3])^T\\) באורך 6 ו-\\(\\mathbf y_i=F^{-1}\\mathrm{diag}\\{FA\\mathbf x_i\\}FB\\mathbf h\\) (\\(F\\) מטריצת DFT באורך 6). עבור \\(A=B=I\\): אילו איברי \\(\\mathbf y_i\\) זהים ל-\\(y[n]\\), ואיך לחשב את \\(y[n]\\) מה-\\(\\mathbf y_i\\) (Overlap-Save)?",
-     "topics": [
-      "t9",
-      "t7"
-     ],
-     "difficulty": 2
-    },
-    {
-     "num": "3ב",
-     "description": "חזרה על סעיף א׳ עבור \\(A=C\\) (מטריצת הזזה מעגלית ב-2 נתונה, \\(6\\times6\\)) ו-\\(B=I\\).",
-     "topics": [
-      "t9",
-      "t7",
-      "t6"
-     ],
-     "difficulty": 3
-    },
-    {
-     "num": "3ג",
-     "description": "עבור \\(A=C\\): האם קיימת מטריצה \\(B\\) שעבורה \\(\\mathbf y_i\\) זהה למוצא של סעיף א׳? אם כן לתת ביטוי מפורש לאיברי המטריצה.",
-     "topics": [
-      "t7",
-      "t6"
+      "t9"
      ],
      "difficulty": 3
     }

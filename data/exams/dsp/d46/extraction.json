@@ -1,0 +1,233 @@
+{
+ "exam": {
+  "match_title": "מועד ב׳ סמסטר א׳ 2016 (בועז רפאלי, 04/03/2016) + פתרון",
+  "drive_file_id": "1ArX6eeSuVrxXOBuWcbahkTOwucEZ-zoV",
+  "source_title": "מועד ב 2016 - בועז + פתרון.pdf",
+  "lecturer": "פרופ' בועז רפאלי",
+  "year": 2016,
+  "date": "2016-03-04",
+  "duration_minutes": 180,
+  "aids": "דף הנוסחאות המצורף; מחשב כיס ללא תכנות ותקשורת",
+  "notes": "הקובץ (11 עמודים): עמודים 1–2 הם השאלון (מודפס, ברור); עמודים 3–11 הם פתרון בכתב יד (שאלה 1 בעמודים 3–5, שאלה 2 בעמודים 6–10, שאלה 3 בעמוד 11, שם סדר הסעיפים בשאלה 3 הוא א׳, ג׳, ב׳). דף הנוסחאות הנזכר בשאלון אינו מצורף. בשאלון לא מוגדר $\\mathrm{sinc}$ ולא $\\Pi$; הוסכם $\\mathrm{sinc}(u)=\\sin(\\pi u)/(\\pi u)$ ו-$\\Pi(u)=1$ עבור $|u|<\\tfrac12$ ו-0 מחוץ לכך (כך גם בפתרון הסרוק). כל הפתרונות נכתבו מחדש ותאמו את הפתרון הסרוק בתשובות הסופיות."
+ },
+ "questions": [
+  {
+   "number": 1,
+   "points": 35,
+   "topics": [
+    "t2",
+    "t3"
+   ],
+   "stem": "נתון אות בזמן רציף, $x(t)$, בעל התמרת פורייה המקיימת $X(j\\omega)=0$ לכל $|\\omega|\\geq\\frac{\\pi}{T}$. נתונות ההגדרות הבאות עבור $z(t)$ ו-$u(t)$ ($*$ מסמן קונבולוציה ליניארית):\n$$z(t)=\\sum_{n=-\\infty}^{\\infty}\\int_{-\\infty}^{\\infty}x(\\tau)\\,\\mathrm{sinc}\\left(\\frac{t-nT}{T/2}\\right)\\mathrm{sinc}\\left(\\frac{\\tau-nT}{T}\\right)d\\tau$$\n$$u(t)=\\sum_{n=-\\infty}^{\\infty}z(nT)\\,\\Pi\\left(\\frac{t-nT}{T/2}\\right)*h(t)$$",
+   "figures": [],
+   "page": 1,
+   "view": [
+    935,
+    1210
+   ],
+   "regions": [
+    {
+     "page": 1,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      100,
+      398,
+      830,
+      635
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "א",
+     "points": 10,
+     "box": [
+      75,
+      646,
+      830,
+      674
+     ],
+     "lines": 1,
+     "text": "האם האות $z(t)$ מוגבל סרט? הצג/י פיתוח והוכחה מלאים.",
+     "solution": "**מוסכמות.** $\\mathrm{sinc}(u)=\\frac{\\sin\\pi u}{\\pi u}$; $X(j\\omega)=\\int x(t)e^{-j\\omega t}dt$; $\\omega_s=\\frac{2\\pi}{T}$ (לכן $\\frac{\\pi}{T}=\\frac{\\omega_s}{2}$); $\\Pi(u)=1$ עבור $|u|<\\frac12$ ואפס אחרת; $p(t)=\\sum_n\\delta(t-nT)$ ו-$x_s(t)=x(t)p(t)=\\sum_n x(nT)\\delta(t-nT)$, כך ש-$X_s(j\\omega)=\\frac1T\\sum_k X\\big(j(\\omega-k\\omega_s)\\big)$.\n\n**שלב מקדים – הפשטת $z(t)$.** האינטגרל הפנימי הוא קונבולוציה: $\\int x(\\tau)\\,\\mathrm{sinc}\\!\\left(\\frac{nT-\\tau}{T}\\right)d\\tau=(x*s)(nT)$ עם $s(t)=\\mathrm{sinc}(t/T)$ (הפונקציה $\\mathrm{sinc}$ זוגית), ו-$S(j\\omega)=T\\,\\Pi\\!\\left(\\frac{\\omega}{\\omega_s}\\right)$ הוא מסנן מעביר-נמוכים בתחום $|\\omega|<\\frac{\\pi}{T}$. מכיוון ש-$X(j\\omega)=0$ מחוץ לתחום זה, $X\\cdot S=T\\,X$, כלומר $(x*s)(t)=T\\,x(t)$. לכן\n$$z(t)=T\\sum_{n=-\\infty}^{\\infty}x(nT)\\,\\mathrm{sinc}\\!\\left(\\frac{t-nT}{T/2}\\right)\\qquad(\\ast)$$\n\n**התמרת פורייה.** מ-$(\\ast)$, $z(t)=T\\,x_s(t)*\\mathrm{sinc}\\!\\left(\\frac{t}{T/2}\\right)$. מתקיים $\\mathrm{sinc}(t/a)\\longleftrightarrow a\\,\\Pi\\!\\left(\\frac{a\\omega}{2\\pi}\\right)$, ועבור $a=\\frac T2$ מקבלים $\\frac T2\\,\\Pi\\!\\left(\\frac{\\omega}{2\\omega_s}\\right)$ (שווה ל-$\\frac T2$ בתחום $|\\omega|<\\omega_s$ ואפס מחוצה לו). לכן\n$$Z(j\\omega)=T\\,X_s(j\\omega)\\cdot\\frac T2\\,\\Pi\\!\\left(\\frac{\\omega}{2\\omega_s}\\right)=\\frac T2\\,\\Pi\\!\\left(\\frac{\\omega}{2\\omega_s}\\right)\\sum_{k=-\\infty}^{\\infty}X\\big(j(\\omega-k\\omega_s)\\big)$$\n\n**מסקנה.** $Z(j\\omega)=0$ לכל $|\\omega|\\ge\\omega_s=\\frac{2\\pi}{T}$, ולכן **$z(t)$ מוגבל סרט** (בתדר $\\frac{2\\pi}{T}$, כפליים מסרט $x$).\n\n**איור מילולי.** בתחום $|\\omega|<\\frac{\\omega_s}{2}$ מופיעה ההעתק המקורי $\\frac T2X(j\\omega)$; ההעתקים הממורכזים ב-$\\pm\\omega_s$ תופסים את התחום $\\frac{\\omega_s}{2}<|\\omega|<\\frac{3\\omega_s}{2}$ וחתוכים על ידי $\\Pi$ ב-$|\\omega|=\\omega_s$, כך שנשארת מהם חצי הצורה הקרובה לראשית.\n\n**בדיקה.** כל מחובר ב-$(\\ast)$ הוא $\\mathrm{sinc}$ ברוחב $T/2$ שהסרט שלו $\\frac{2\\pi}{T}$, וסכום (מקדמים קבועים) של אותות מוגבלי סרט באותו תחום נשאר מוגבל סרט.\n"
+    },
+    {
+     "label": "ב",
+     "points": 13,
+     "box": [
+      75,
+      674,
+      830,
+      722
+     ],
+     "lines": 2,
+     "text": "פתח/י ביטוי פשוט ככל שניתן ל-$z(nT)$ לכל $n$ שלם כתלות ב-$x(t)$. צייר/י את $z(nT)$ עבור המקרה הפשוט $x(t)=1$. יש להציג כל שלב בפיתוח.",
+     "solution": "**מוסכמות.** $\\mathrm{sinc}(u)=\\frac{\\sin\\pi u}{\\pi u}$; $X(j\\omega)=\\int x(t)e^{-j\\omega t}dt$; $\\omega_s=\\frac{2\\pi}{T}$ (לכן $\\frac{\\pi}{T}=\\frac{\\omega_s}{2}$); $\\Pi(u)=1$ עבור $|u|<\\frac12$ ואפס אחרת; $p(t)=\\sum_n\\delta(t-nT)$ ו-$x_s(t)=x(t)p(t)=\\sum_n x(nT)\\delta(t-nT)$, כך ש-$X_s(j\\omega)=\\frac1T\\sum_k X\\big(j(\\omega-k\\omega_s)\\big)$.\n\n**שלב מקדים – הפשטת $z(t)$.** האינטגרל הפנימי הוא קונבולוציה: $\\int x(\\tau)\\,\\mathrm{sinc}\\!\\left(\\frac{nT-\\tau}{T}\\right)d\\tau=(x*s)(nT)$ עם $s(t)=\\mathrm{sinc}(t/T)$ (הפונקציה $\\mathrm{sinc}$ זוגית), ו-$S(j\\omega)=T\\,\\Pi\\!\\left(\\frac{\\omega}{\\omega_s}\\right)$ הוא מסנן מעביר-נמוכים בתחום $|\\omega|<\\frac{\\pi}{T}$. מכיוון ש-$X(j\\omega)=0$ מחוץ לתחום זה, $X\\cdot S=T\\,X$, כלומר $(x*s)(t)=T\\,x(t)$. לכן\n$$z(t)=T\\sum_{n=-\\infty}^{\\infty}x(nT)\\,\\mathrm{sinc}\\!\\left(\\frac{t-nT}{T/2}\\right)\\qquad(\\ast)$$\n\n**חישוב $z(nT)$.** נציב $t=mT$ ב-$(\\ast)$ עבור $m$ שלם:\n$$z(mT)=T\\sum_n x(nT)\\,\\mathrm{sinc}\\!\\left(\\frac{mT-nT}{T/2}\\right)=T\\sum_n x(nT)\\,\\mathrm{sinc}\\big(2(m-n)\\big)$$\nל-$k$ שלם, $\\mathrm{sinc}(2k)=\\frac{\\sin 2\\pi k}{2\\pi k}=0$ עבור $k\\ne0$ ו-$\\mathrm{sinc}(0)=1$, כלומר $\\mathrm{sinc}(2k)=\\delta[k]$. לכן נשאר רק המחובר $n=m$:\n$$\\boxed{z(nT)=T\\,x(nT)\\quad\\text{לכל } n\\in\\mathbb Z}$$\n\n**המקרה $x(t)=1$.** האות $x\\equiv1$ הוא חוקי (התמרתו $2\\pi\\delta(\\omega)$ מרוכזת ב-$\\omega=0$, בתוך $|\\omega|<\\frac\\pi T$). אז $z(nT)=T$ לכל $n$: רכבת דגימות שוות בגובה $T$ בנקודות $t=nT$ (נקודות על הישר $z=T$ במרווחי $T$ על ציר הזמן).\n\n**בדיקה (איור של $z(t)$ המלא).** עבור $x\\equiv1$: $z(t)=T\\sum_n\\mathrm{sinc}\\!\\left(\\frac{2(t-nT)}{T}\\right)=T\\cos^2\\!\\left(\\frac{\\pi t}{T}\\right)$. אכן $z(0)=T$, $z(T/2)=0$, $z(T/4)=T/2$ (נבדק ישירות מהסכום), ו-$z(nT)=T$. כלומר $z(t)$ הוא גל קוסינוס מורם, ו-$z(nT)$ הם הדגימות בשיאיו.\n"
+    },
+    {
+     "label": "ג",
+     "points": 12,
+     "box": [
+      75,
+      722,
+      830,
+      768
+     ],
+     "lines": 2,
+     "text": "האם קיים $h(t)$ עבורו מתקיים $u(t)=x(t)$? אם קיים, הוכח/י תוך הצגת פיתוח מלא, וצייר/י את $|H(j\\omega)|$. אם לא קיים, הצג/י הוכחה ותן/י דוגמא.",
+     "solution": "**מוסכמות.** $\\mathrm{sinc}(u)=\\frac{\\sin\\pi u}{\\pi u}$; $X(j\\omega)=\\int x(t)e^{-j\\omega t}dt$; $\\omega_s=\\frac{2\\pi}{T}$ (לכן $\\frac{\\pi}{T}=\\frac{\\omega_s}{2}$); $\\Pi(u)=1$ עבור $|u|<\\frac12$ ואפס אחרת; $p(t)=\\sum_n\\delta(t-nT)$ ו-$x_s(t)=x(t)p(t)=\\sum_n x(nT)\\delta(t-nT)$, כך ש-$X_s(j\\omega)=\\frac1T\\sum_k X\\big(j(\\omega-k\\omega_s)\\big)$.\n\n**שלב מקדים – הפשטת $z(t)$.** האינטגרל הפנימי הוא קונבולוציה: $\\int x(\\tau)\\,\\mathrm{sinc}\\!\\left(\\frac{nT-\\tau}{T}\\right)d\\tau=(x*s)(nT)$ עם $s(t)=\\mathrm{sinc}(t/T)$ (הפונקציה $\\mathrm{sinc}$ זוגית), ו-$S(j\\omega)=T\\,\\Pi\\!\\left(\\frac{\\omega}{\\omega_s}\\right)$ הוא מסנן מעביר-נמוכים בתחום $|\\omega|<\\frac{\\pi}{T}$. מכיוון ש-$X(j\\omega)=0$ מחוץ לתחום זה, $X\\cdot S=T\\,X$, כלומר $(x*s)(t)=T\\,x(t)$. לכן\n$$z(t)=T\\sum_{n=-\\infty}^{\\infty}x(nT)\\,\\mathrm{sinc}\\!\\left(\\frac{t-nT}{T/2}\\right)\\qquad(\\ast)$$\n\n**חישוב $u(t)$.** לפי סעיף ב', $z(nT)=Tx(nT)$, ולכן\n$$u(t)=\\Big[T\\sum_n x(nT)\\,\\Pi\\!\\left(\\tfrac{t-nT}{T/2}\\right)\\Big]*h(t)=T\\Big[x_s(t)*\\Pi\\!\\left(\\tfrac{t}{T/2}\\right)\\Big]*h(t)$$\n$\\Pi\\!\\left(\\frac{t}{T/2}\\right)$ הוא פולס ברוחב $\\frac T2$ ו-$\\Pi\\!\\left(\\frac{t}{\\tau}\\right)\\longleftrightarrow\\tau\\,\\mathrm{sinc}\\!\\left(\\frac{\\omega\\tau}{2\\pi}\\right)$, ולכן התמרתו $\\frac T2\\,\\mathrm{sinc}\\!\\left(\\frac{\\omega}{2\\omega_s}\\right)$ (כי $\\frac{\\omega T}{4\\pi}=\\frac{\\omega}{2\\omega_s}$). נקבל\n$$U(j\\omega)=\\frac T2\\,\\mathrm{sinc}\\!\\left(\\frac{\\omega}{2\\omega_s}\\right)H(j\\omega)\\sum_{k}X\\big(j(\\omega-k\\omega_s)\\big)$$\n\n**מציאת $H$.** נדרוש $H(j\\omega)=0$ עבור $|\\omega|\\ge\\frac\\pi T=\\frac{\\omega_s}{2}$: אז רק ההעתק $k=0$ שורד (ההעתקים האחרים נמצאים ב-$|\\omega|>\\frac{\\omega_s}{2}$, מחוץ לתחום שבו $H\\neq0$), ו-\n$$U(j\\omega)=\\frac T2\\,\\mathrm{sinc}\\!\\left(\\frac{\\omega}{2\\omega_s}\\right)H(j\\omega)\\,X(j\\omega)\\;,\\qquad |\\omega|<\\tfrac\\pi T$$\nכדי ש-$U=X$ בוחרים\n$$\\boxed{H(j\\omega)=\\frac{\\Pi\\!\\left(\\frac{\\omega}{\\omega_s}\\right)}{\\frac T2\\,\\mathrm{sinc}\\!\\left(\\frac{\\omega}{2\\omega_s}\\right)}=\\begin{cases}\\dfrac{2}{T\\,\\mathrm{sinc}\\!\\left(\\frac{\\omega T}{4\\pi}\\right)},&|\\omega|<\\frac\\pi T\\\\[2mm]0,&\\text{אחרת}\\end{cases}}$$\n**החלוקה חוקית:** עבור $|\\omega|<\\frac\\pi T$ הארגומנט $\\frac{\\omega T}{4\\pi}$ קטן מ-$\\frac14$ בערכו המוחלט, ו-$\\mathrm{sinc}(\\frac14)=\\frac{\\sin(\\pi/4)}{\\pi/4}\\approx0.900>0$, כך שאין אפסים במכנה. לכן הפתרון קיים.\n\n**שרטוט $|H(j\\omega)|$.** פונקציה זוגית, ממשית וחיובית בתחום $|\\omega|<\\frac\\pi T$ ואפס מחוצה לו. במרכז $|H(0)|=\\frac2T$ (המינימום), והיא עולה בצורת \"קערה\" עד $|H|=\\frac{2}{T\\cdot0.900}\\approx\\frac{2.22}{T}$ בקצוות $\\omega=\\pm\\frac\\pi T$, ואז קופצת ל-0. תפקיד $H$: (1) לסלק את ההעתקים הספקטרליים, ו-(2) לפצות על ההנחתה $\\mathrm{sinc}$ שנגרמת מפולסי ה-$\\Pi$ (אפקט ה-ZOH).\n\n**בדיקה.** ב-$\\omega\\to0$: $U=\\frac T2\\cdot1\\cdot\\frac2T\\cdot X=X$.\n"
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "points": 32,
+   "topics": [
+    "t3",
+    "t5",
+    "t6",
+    "t7"
+   ],
+   "stem": "נתונים סדרה בזמן בדיד $x[n]$ ו-$N$ קבוע שלם ואי זוגי. מגדירים אות בזמן רציף באופן הבא:\n$$x(t)=\\sum_{n=-\\infty}^{\\infty}\\sum_{l=-\\infty}^{\\infty}x[n]\\,\\mathrm{sinc}\\left(\\frac{t-n\\pi-lN\\pi}{\\pi}\\right)$$",
+   "figures": [],
+   "page": 101,
+   "view": [
+    935,
+    1176
+   ],
+   "regions": [
+    {
+     "page": 101,
+     "view": [
+      935,
+      1176
+     ],
+     "box": [
+      100,
+      785,
+      830,
+      886
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "א",
+     "points": 8,
+     "box": [
+      75,
+      890,
+      830,
+      981
+     ],
+     "lines": 3,
+     "text": "בסעיף זה נתון כי: $x[n]=\\cos\\left(\\frac{2\\pi}{N}n\\right)$ ; $n=0,1,..,N-1$ ; $x[n]=0$ elsewhere. צייר/י את $X(j\\omega)$, התמרת פורייה של $x(t)$. האם $x(t)$ חסום סרט? יש להציג פיתוח מלא.",
+     "solution": "**מוסכמות.** $\\mathrm{sinc}(u)=\\frac{\\sin\\pi u}{\\pi u}$; $A[k]=\\sum_{n=0}^{N-1}a[n]e^{-j\\frac{2\\pi}{N}nk}$ ($N$ אי-זוגי); $((k))_N$ הוא $k$ מודולו $N$; $X(j\\omega)=\\int x(t)e^{-j\\omega t}dt$.\n\n**שלב מקדים.** נסמן $m=n+lN$:\n$$x(t)=\\sum_{n}\\sum_{l}x[n]\\,\\mathrm{sinc}\\!\\left(\\frac{t-(n+lN)\\pi}{\\pi}\\right)=\\sum_{m=-\\infty}^{\\infty}\\tilde x[m]\\,\\mathrm{sinc}\\!\\left(\\frac{t-m\\pi}{\\pi}\\right),\\qquad \\tilde x[m]=\\sum_{l=-\\infty}^{\\infty}x[m-lN]$$\nכלומר $x(t)$ הוא שחזור sinc אידיאלי של הסדרה $\\tilde x[m]$ (ההרחבה המחזורית, מחזור $N$, של $x[n]$) בזמן דגימה $\\pi$: תדר הדגימה $\\omega_s=2$ ותחום הניקוויסט $|\\omega|<1$.\n\n**עובדה בה נשתמש.** אם $|\\Omega|<1$ אז $e^{j\\Omega t}$ מוגבל סרט בתחום, ודגימותיו ב-$t=m\\pi$ הן $e^{j\\Omega\\pi m}$, ולכן $\\sum_m e^{j\\Omega\\pi m}\\,\\mathrm{sinc}\\!\\left(\\frac{t-m\\pi}{\\pi}\\right)=e^{j\\Omega t}$. עבור $|\\Omega|>1$ השחזור ייתן את אליאס שלו.\n\n**פתרון.** $x[n]$ הוא מחזור אחד של $\\cos\\!\\left(\\frac{2\\pi}{N}n\\right)$ (בדיוק $N$ דגימות), ולכן ההרחבה המחזורית היא $\\tilde x[m]=\\cos\\!\\left(\\frac{2\\pi}{N}m\\right)=\\cos(\\Omega_0\\pi m)$ עם $\\Omega_0=\\frac2N$. עבור $N\\ge3$ (אי-זוגי) מתקיים $\\Omega_0\\le\\frac23<1$, ולכן לפי העובדה\n$$x(t)=\\cos\\!\\left(\\frac{2}{N}\\,t\\right),\\qquad X(j\\omega)=\\pi\\left[\\delta\\!\\left(\\omega-\\tfrac2N\\right)+\\delta\\!\\left(\\omega+\\tfrac2N\\right)\\right]$$\n**שרטוט:** שני הלמים בגובה (שטח) $\\pi$ בנקודות $\\omega=\\pm\\frac2N$, בתוך התחום $(-1,1)$; אפס בכל מקום אחר.\n\n**חסום סרט?** כן. $X(j\\omega)=0$ עבור $|\\omega|>\\frac2N$, ובפרט $|\\omega|\\ge1$.\n\n**הערה ($N=1$).** אז $x[0]=1$ בלבד, $x(t)=\\sum_m\\mathrm{sinc}(\\cdot)\\equiv1$ (התמרה $2\\pi\\delta(\\omega)$), והנוסחה $\\cos(2t)$ אינה נכונה, כי $\\Omega_0=2>1$ והדגימות נשחזרות כאליאס. אצל $N\\ge3$ אין בעיה.\n\n**בדיקה.** $x(m\\pi)=\\cos\\!\\left(\\frac{2\\pi m}{N}\\right)=\\tilde x[m]$, כנדרש.\n"
+    },
+    {
+     "label": "ב",
+     "points": 12,
+     "box": [
+      75,
+      982,
+      830,
+      1066
+     ],
+     "lines": 3,
+     "text": "בסעיף זה נתון כי $x[n]=a[n]$, כאשר $a[n]$ סדרה באורך $N$ בתחום $n=0,1,..,N-1$ השווה לאפס עבור יתר ערכי $n$. פתח/י ביטוי פשוט ככל הניתן ל-$X(j\\omega)$ כתלות ב-$A[k]$, התמרת $DFT$ באורך $N$ של $a[n]$. פרט/י והסבר/י כל שלב בפיתוח.",
+     "solution": "**מוסכמות.** $\\mathrm{sinc}(u)=\\frac{\\sin\\pi u}{\\pi u}$; $A[k]=\\sum_{n=0}^{N-1}a[n]e^{-j\\frac{2\\pi}{N}nk}$ ($N$ אי-זוגי); $((k))_N$ הוא $k$ מודולו $N$; $X(j\\omega)=\\int x(t)e^{-j\\omega t}dt$.\n\n**שלב מקדים.** נסמן $m=n+lN$:\n$$x(t)=\\sum_{n}\\sum_{l}x[n]\\,\\mathrm{sinc}\\!\\left(\\frac{t-(n+lN)\\pi}{\\pi}\\right)=\\sum_{m=-\\infty}^{\\infty}\\tilde x[m]\\,\\mathrm{sinc}\\!\\left(\\frac{t-m\\pi}{\\pi}\\right),\\qquad \\tilde x[m]=\\sum_{l=-\\infty}^{\\infty}x[m-lN]$$\nכלומר $x(t)$ הוא שחזור sinc אידיאלי של הסדרה $\\tilde x[m]$ (ההרחבה המחזורית, מחזור $N$, של $x[n]$) בזמן דגימה $\\pi$: תדר הדגימה $\\omega_s=2$ ותחום הניקוויסט $|\\omega|<1$.\n\n**עובדה בה נשתמש.** אם $|\\Omega|<1$ אז $e^{j\\Omega t}$ מוגבל סרט בתחום, ודגימותיו ב-$t=m\\pi$ הן $e^{j\\Omega\\pi m}$, ולכן $\\sum_m e^{j\\Omega\\pi m}\\,\\mathrm{sinc}\\!\\left(\\frac{t-m\\pi}{\\pi}\\right)=e^{j\\Omega t}$. עבור $|\\Omega|>1$ השחזור ייתן את אליאס שלו.\n\n**פתרון.** $a[n]$ מוגדר על $0..N-1$ ו-$x[n]=a[n]$ שם (אפס אחרת), ולכן $\\tilde x[m]$ הוא ההרחבה המחזורית של $a$, ומשוואת ההפיכה של ה-DFT תקפה לכל $m$:\n$$\\tilde x[m]=\\frac1N\\sum_{k=0}^{N-1}A[k]\\,e^{j\\frac{2\\pi}{N}km}$$\nהאיבר ה-$k$ הוא מעריכי מרוכב $e^{j\\Omega_k\\pi m}$ עם $\\Omega_k=\\frac{2k}{N}$. לשחזור הנכון צריך $|\\Omega_k|<1$, כלומר $|k|<\\frac N2$. עבור $k=0,\\dots,\\frac{N-1}{2}$ זה מתקיים. עבור $k=\\frac{N+1}{2},\\dots,N-1$ מתקיים $\\Omega_k>1$, אבל $e^{j\\frac{2\\pi}{N}km}=e^{j\\frac{2\\pi}{N}(k-N)m}$ ולכן ניתן להחליף ב-$k'=k-N\\in\\left\\{-\\frac{N-1}{2},\\dots,-1\\right\\}$ שמקיים $|\\Omega|<1$ (ו-$A[k]=A[((k'))_N]$). לכן\n$$\\tilde x[m]=\\frac1N\\sum_{k=-\\frac{N-1}{2}}^{\\frac{N-1}{2}}A[((k))_N]\\,e^{j\\frac{2k}{N}\\pi m}\\;\\;\\Longrightarrow\\;\\; x(t)=\\frac1N\\sum_{k=-\\frac{N-1}{2}}^{\\frac{N-1}{2}}A[((k))_N]\\,e^{j\\frac{2k}{N}t}$$\nולבסוף\n$$\\boxed{X(j\\omega)=\\frac{2\\pi}{N}\\sum_{k=-\\frac{N-1}{2}}^{\\frac{N-1}{2}}A\\big[((k))_N\\big]\\;\\delta\\!\\left(\\omega-\\frac{2k}{N}\\right)}$$\nכלומר $N$ הלמים במרווחים $\\frac2N$ בתחום $(-1,1)$. ($N$ אי-זוגי מבטיח שאין הלם בדיוק ב-$\\omega=\\pm1$ ושהתחום סימטרי.)\n\n**בדיקה מול סעיף א'.** עבור $a[n]=\\cos\\frac{2\\pi n}{N}$: $A[1]=A[N-1]=\\frac N2$ ושאר ה-$A[k]=0$; מהנוסחה נשארים רק $k=\\pm1$ עם מקדם $\\frac{2\\pi}{N}\\cdot\\frac N2=\\pi$. זו אותה תוצאה.\n"
+    },
+    {
+     "label": "ג",
+     "points": 12,
+     "box": [
+      75,
+      1070,
+      830,
+      1170
+     ],
+     "lines": 4,
+     "text": "בסעיף זה נתון $x[n]=a[n]*b[n]$ ($*$ מסמן קונבולוציה ליניארית), כאשר $a[n]$ ו-$b[n]$ סדרות באורך $N$ בתחום $n=0,1,..,N-1$ השווים לאפס עבור יתר ערכי $n$. פתח/י ביטוי פשוט ככל הניתן ל-$X(j\\omega)$ כתלות ב-$A[k]$ ו-$B[k]$, התמרות $DFT$ באורך $N$ של $a[n]$ ו-$b[n]$ בהתאמה. האם ניתן לשחזר את $a[n]$ ו-$b[n]$ בהינתן $x(t)$? יש להציג פיתוח מלא.",
+     "solution": "**מוסכמות.** $\\mathrm{sinc}(u)=\\frac{\\sin\\pi u}{\\pi u}$; $A[k]=\\sum_{n=0}^{N-1}a[n]e^{-j\\frac{2\\pi}{N}nk}$ ($N$ אי-זוגי); $((k))_N$ הוא $k$ מודולו $N$; $X(j\\omega)=\\int x(t)e^{-j\\omega t}dt$.\n\n**שלב מקדים.** נסמן $m=n+lN$:\n$$x(t)=\\sum_{n}\\sum_{l}x[n]\\,\\mathrm{sinc}\\!\\left(\\frac{t-(n+lN)\\pi}{\\pi}\\right)=\\sum_{m=-\\infty}^{\\infty}\\tilde x[m]\\,\\mathrm{sinc}\\!\\left(\\frac{t-m\\pi}{\\pi}\\right),\\qquad \\tilde x[m]=\\sum_{l=-\\infty}^{\\infty}x[m-lN]$$\nכלומר $x(t)$ הוא שחזור sinc אידיאלי של הסדרה $\\tilde x[m]$ (ההרחבה המחזורית, מחזור $N$, של $x[n]$) בזמן דגימה $\\pi$: תדר הדגימה $\\omega_s=2$ ותחום הניקוויסט $|\\omega|<1$.\n\n**עובדה בה נשתמש.** אם $|\\Omega|<1$ אז $e^{j\\Omega t}$ מוגבל סרט בתחום, ודגימותיו ב-$t=m\\pi$ הן $e^{j\\Omega\\pi m}$, ולכן $\\sum_m e^{j\\Omega\\pi m}\\,\\mathrm{sinc}\\!\\left(\\frac{t-m\\pi}{\\pi}\\right)=e^{j\\Omega t}$. עבור $|\\Omega|>1$ השחזור ייתן את אליאס שלו.\n\n**פתרון.** $x[n]=a[n]*b[n]$ היא קונבולוציה ליניארית, ולכן $x[n]$ באורך $2N-1$ (תומך $0..2N-2$) ולא מוגבל ל-$0..N-1$. ההרחבה המחזורית $\\tilde x[m]=\\sum_l x[m-lN]$ מקפלת את הזנב $n=N..2N-2$ לתוך $0..N-2$, כלומר $\\tilde x$ היא הקונבולוציה **המעגלית** $a\\circledast_N b$.\n\n**ה-DFT של $\\tilde x$.** ה-DFT של ההרחבה המחזורית שווה לדגימות ה-DTFT של $x$ בנקודות $\\theta=\\frac{2\\pi}{N}k$. מכיוון ש-$X_d(e^{j\\theta})=A(e^{j\\theta})B(e^{j\\theta})$ (קונבולוציה ליניארית), מקבלים\n$$\\tilde X[k]=A\\!\\left(e^{j\\frac{2\\pi}{N}k}\\right)B\\!\\left(e^{j\\frac{2\\pi}{N}k}\\right)=A[k]\\,B[k]$$\n(כאשר $A(e^{j\\theta})$ הוא ה-DTFT של $a$, ו-$A[k]$ הדגימות שלו, כי $a$ באורך $N$).\n\n**התמרת $x(t)$.** נציב ב-$\\tilde x[m]=\\frac1N\\sum_kA[k]B[k]e^{j\\frac{2\\pi}{N}km}$ ונחזור על הפיתוח של סעיף ב' (חילוף $k\\to k-N$ עבור המחצית העליונה):\n$$\\boxed{X(j\\omega)=\\frac{2\\pi}{N}\\sum_{k=-\\frac{N-1}{2}}^{\\frac{N-1}{2}}A\\big[((k))_N\\big]\\,B\\big[((k))_N\\big]\\;\\delta\\!\\left(\\omega-\\frac{2k}{N}\\right)}$$\n\n**האם ניתן לשחזר את $a[n]$ ו-$b[n]$ מתוך $x(t)$?** **לא.** ההלמים ב-$\\omega=\\frac{2k}{N}$ שונים זה מזה, ולכן $x(t)$ קובע בדיוק את $N$ המכפלות $A[k]B[k]$ ותו לא; מכפלה אינה קובעת את גורמיה. דוגמאות נגדיות: $(a,b)$ ו-$(2a,\\tfrac12b)$ נותנים אותו $x(t)$; גם $a=\\delta[n]$, $b=c[n]$ מול $a=c[n]$, $b=\\delta[n]$. בנוסף, אם $A[k_0]B[k_0]=0$ אין כל מידע על הגורם האחר באותו $k_0$. רק אם אחד הגורמים ידוע ו-$A[k]\\neq0$ לכל $k$, ניתן לחשב $B[k]=\\frac{A[k]B[k]}{A[k]}$ ו-$b=\\mathrm{IDFT}\\{B\\}$. גם $x[n]$ המלא (הקונבולוציה הליניארית) לא ניתן לשחזור, כי ראינו שרק גרסתו המקופלת $\\tilde x$ משפיעה על $x(t)$.\n\n**בדיקה.** עבור $b[n]=\\delta[n]$ ($B[k]=1$) מתקבל $x=a$ ו-$X$ של סעיף ב'.\n"
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "points": 33,
+   "topics": [
+    "t6",
+    "t7",
+    "t9"
+   ],
+   "stem": "נתון אות ארוך $x[n]$, $n=0,1,2,\\dots$, המקיים כי $x[n]=0,\\ n<0$. בנוסף נתונה תגובה להלם של מסנן, $h[n]$, $n=0,1,2$ באורך 3. לצורך חישוב מוצא המסנן $y[n]=x[n]*h[n]$ ($*$ מסמן קונבולוציה ליניארית), מבוצעים השלבים הבאים:\n1. שליפת 4 איברים מתוך $x[n]$: $\\{x[4i],x[4i+1],x[4i+2],x[4i+3]\\}$, עבור $i=0,1,2,\\dots$.\n2. הגדרת בלוק $i$ באורך 6 על ידי: $\\boldsymbol x_i=(x[4i-2],x[4i-1],\\dots,x[4i+3])^T$\n3. חישוב הווקטור: $\\boldsymbol y_i=\\boldsymbol F^{-1}\\mathrm{diag}\\{\\boldsymbol F A\\boldsymbol x_i\\}\\boldsymbol F B\\boldsymbol h$\nכאשר $\\boldsymbol F$ היא מטריצת $DFT$ באורך 6 ו-$\\boldsymbol h=(h[0],h[1],h[2],0,0,0)^T$.\nבנוסף נתונה מטריצה $\\boldsymbol C$: $$\\boldsymbol C=\\begin{pmatrix}0&0&1&0&0&0\\\\0&0&0&1&0&0\\\\0&0&0&0&1&0\\\\0&0&0&0&0&1\\\\1&0&0&0&0&0\\\\0&1&0&0&0&0\\end{pmatrix}$$",
+   "figures": [
+    "המטריצה $C$ מסדר 6x6: מטריצת תמורה (סיבוב מעגלי), בשורות 1-4 האחד בעמודות 3-6 ובשורות 5-6 בעמודות 1-2"
+   ],
+   "page": 2,
+   "view": [
+    935,
+    1210
+   ],
+   "regions": [
+    {
+     "page": 2,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      100,
+      250,
+      830,
+      688
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "א",
+     "points": 5,
+     "box": [
+      75,
+      695,
+      830,
+      740
+     ],
+     "lines": 2,
+     "text": "בסעיף זה בלבד נתון כי $A=B=I$. אילו איברים של $\\boldsymbol y_i$ זהים לאיברי $y[n]$? הציע/י דרך לחישוב $y[n]$ מתוך $\\boldsymbol y_i,\\ i=0,1,2,\\dots$.",
+     "solution": "**מוסכמות.** $\\boldsymbol F$ היא מטריצת $DFT$ מסדר 6, $F_{kn}=W_6^{kn}$, $W_6=e^{-j2\\pi/6}$, אינדקסים $0..5$. מתקיים $\\boldsymbol F^{-1}\\mathrm{diag}\\{\\boldsymbol F\\boldsymbol u\\}\\boldsymbol F\\boldsymbol v=\\boldsymbol u\\circledast_6\\boldsymbol v$ (קונבולוציה מעגלית באורך 6), ולכן\n$$\\boldsymbol y_i=(A\\boldsymbol x_i)\\circledast_6(B\\boldsymbol h),\\qquad \\boldsymbol x_i[j]=x[4i-2+j],\\;j=0..5.$$\nהקונבולוציה הליניארית הרצויה: $y[n]=h[0]x[n]+h[1]x[n-1]+h[2]x[n-2]$ (אורך המסנן $M=3$). זו שיטת Overlap-Save עם בלוק $N=6$, חפיפה $M-1=2$ ו-$L=N-M+1=4$ פלטים תקינים לבלוק.\n\n**פתרון ($A=B=I$).** $\\boldsymbol y_i[j]=\\sum_{m=0}^{2}h[m]\\,\\boldsymbol x_i[(j-m)\\bmod 6]$.\n\n- עבור $j=2,3,4,5$: האינדקסים $j,j-1,j-2$ נמצאים ב-$0..5$ ללא גלישה, ולכן $\\boldsymbol y_i[j]=\\sum_m h[m]\\,x[4i-2+j-m]=y[4i-2+j]$. זה הפלט הליניארי התקין.\n- עבור $j=0,1$: יש גלישה ל-$\\boldsymbol x_i[5],\\boldsymbol x_i[4]$ (כלומר $x[4i+3],x[4i+2]$, ערכים עתידיים) ולכן אלו איברים שגויים (אליאס בזמן).\n\n**תשובה:** האיברים $\\boldsymbol y_i[2],\\boldsymbol y_i[3],\\boldsymbol y_i[4],\\boldsymbol y_i[5]$ זהים ל-$y[4i],y[4i+1],y[4i+2],y[4i+3]$.\n\n**דרך החישוב של $y[n]$:** מתוך כל $\\boldsymbol y_i$ שומרים את ארבעת האיברים התקינים ומשרשרים:\n$$y[n]=\\{\\boldsymbol y_0[2..5],\\;\\boldsymbol y_1[2..5],\\;\\boldsymbol y_2[2..5],\\dots\\},\\qquad y[4i+r]=\\boldsymbol y_i[r+2],\\;r=0..3$$\n(זורקים את $\\boldsymbol y_i[0],\\boldsymbol y_i[1]$). עבור $i=0$ הערכים $x[-2]=x[-1]=0$ (סיבתיות), כך שגם הבלוק הראשון תקין. ארבעת הפלטים בכל בלוק מכסים את כל $n\\ge0$ בלי חורים.\n"
+    },
+    {
+     "label": "ב",
+     "points": 14,
+     "box": [
+      75,
+      741,
+      830,
+      762
+     ],
+     "lines": 1,
+     "text": "חזור/י על סעיף א' עבור $B=I,\\ A=C$.",
+     "solution": "**מוסכמות.** $\\boldsymbol F$ היא מטריצת $DFT$ מסדר 6, $F_{kn}=W_6^{kn}$, $W_6=e^{-j2\\pi/6}$, אינדקסים $0..5$. מתקיים $\\boldsymbol F^{-1}\\mathrm{diag}\\{\\boldsymbol F\\boldsymbol u\\}\\boldsymbol F\\boldsymbol v=\\boldsymbol u\\circledast_6\\boldsymbol v$ (קונבולוציה מעגלית באורך 6), ולכן\n$$\\boldsymbol y_i=(A\\boldsymbol x_i)\\circledast_6(B\\boldsymbol h),\\qquad \\boldsymbol x_i[j]=x[4i-2+j],\\;j=0..5.$$\nהקונבולוציה הליניארית הרצויה: $y[n]=h[0]x[n]+h[1]x[n-1]+h[2]x[n-2]$ (אורך המסנן $M=3$). זו שיטת Overlap-Save עם בלוק $N=6$, חפיפה $M-1=2$ ו-$L=N-M+1=4$ פלטים תקינים לבלוק.\n\n**פתרון ($B=I$, $A=C$).** $C\\boldsymbol v=(v_2,v_3,v_4,v_5,v_0,v_1)^T$: סיבוב מעגלי של הווקטור שתי עמדות שמאלה. לכן\n$$\\boldsymbol w\\equiv C\\boldsymbol x_i=\\big(x[4i],\\,x[4i+1],\\,x[4i+2],\\,x[4i+3],\\,x[4i-2],\\,x[4i-1]\\big)^T$$\nו-$\\boldsymbol y_i[j]=h[0]\\boldsymbol w[j]+h[1]\\boldsymbol w[j-1]+h[2]\\boldsymbol w[j-2]$ (אינדקסים מודולו 6). בסדר הזמן, הרצף $\\boldsymbol w[4],\\boldsymbol w[5],\\boldsymbol w[0],\\dots,\\boldsymbol w[3]$ הוא $x[4i-2],\\dots,x[4i+3]$ ברצף.\n\n- $j=0$: $\\boldsymbol w[0],\\boldsymbol w[5],\\boldsymbol w[4]=x[4i],x[4i-1],x[4i-2]$ $\\Rightarrow$ $y[4i]$.\n- $j=1$: $\\boldsymbol w[1],\\boldsymbol w[0],\\boldsymbol w[5]$ $\\Rightarrow$ $y[4i+1]$.\n- $j=2$: $\\boldsymbol w[2],\\boldsymbol w[1],\\boldsymbol w[0]$ $\\Rightarrow$ $y[4i+2]$.\n- $j=3$: $\\boldsymbol w[3],\\boldsymbol w[2],\\boldsymbol w[1]$ $\\Rightarrow$ $y[4i+3]$.\n- $j=4$: $\\boldsymbol w[4],\\boldsymbol w[3],\\boldsymbol w[2]=x[4i-2],x[4i+3],x[4i+2]$, שילוב לא רציף, **שגוי**.\n- $j=5$: $\\boldsymbol w[5],\\boldsymbol w[4],\\boldsymbol w[3]=x[4i-1],x[4i-2],x[4i+3]$, **שגוי**.\n\n**תשובה:** האיברים התקינים הם $\\boldsymbol y_i[0],\\dots,\\boldsymbol y_i[3]$, ו-\n$$y[4i+r]=\\boldsymbol y_i[r],\\;r=0..3\\qquad\\Longrightarrow\\qquad y[n]=\\{\\boldsymbol y_0[0..3],\\;\\boldsymbol y_1[0..3],\\;\\dots\\}$$\n(זורקים את $\\boldsymbol y_i[4],\\boldsymbol y_i[5]$).\n\n**בדיקה.** סיבוב מעגלי מתחלף עם קונבולוציה מעגלית: $(C\\boldsymbol x)\\circledast\\boldsymbol h=C(\\boldsymbol x\\circledast\\boldsymbol h)$, ולכן $\\boldsymbol y_i^{(\\text{ב})}[j]=\\boldsymbol y_i^{(\\text{א})}[j+2]$, ובפרט $\\boldsymbol y_i^{(\\text{ב})}[0..3]=\\boldsymbol y_i^{(\\text{א})}[2..5]$. תואם.\n"
+    },
+    {
+     "label": "ג",
+     "points": 14,
+     "box": [
+      75,
+      763,
+      830,
+      806
+     ],
+     "lines": 2,
+     "text": "עבור $A=C$, האם קיימת מטריצה $B$ שעבורה המוצא $\\boldsymbol y_i$ יהיה זהה למוצא $\\boldsymbol y_i$ שהתקבל בסעיף א'? אם קיימת, הצג/י ביטוי מפורש לאיברי המטריצה, אם לא קיימת, הסבר/י.",
+     "solution": "**מוסכמות.** $\\boldsymbol F$ היא מטריצת $DFT$ מסדר 6, $F_{kn}=W_6^{kn}$, $W_6=e^{-j2\\pi/6}$, אינדקסים $0..5$. מתקיים $\\boldsymbol F^{-1}\\mathrm{diag}\\{\\boldsymbol F\\boldsymbol u\\}\\boldsymbol F\\boldsymbol v=\\boldsymbol u\\circledast_6\\boldsymbol v$ (קונבולוציה מעגלית באורך 6), ולכן\n$$\\boldsymbol y_i=(A\\boldsymbol x_i)\\circledast_6(B\\boldsymbol h),\\qquad \\boldsymbol x_i[j]=x[4i-2+j],\\;j=0..5.$$\nהקונבולוציה הליניארית הרצויה: $y[n]=h[0]x[n]+h[1]x[n-1]+h[2]x[n-2]$ (אורך המסנן $M=3$). זו שיטת Overlap-Save עם בלוק $N=6$, חפיפה $M-1=2$ ו-$L=N-M+1=4$ פלטים תקינים לבלוק.\n\n**פתרון.** כן, קיימת: $B=C^{-1}=C^{T}$ (מטריצת תמורה).\n\n**נימוק.** נסמן $S=C$ (סיבוב שמאלה ב-2). קונבולוציה מעגלית מתחלפת עם סיבוב: $(S\\boldsymbol x)\\circledast\\boldsymbol g=S(\\boldsymbol x\\circledast\\boldsymbol g)$. אנו רוצים $(S\\boldsymbol x_i)\\circledast(B\\boldsymbol h)=\\boldsymbol x_i\\circledast\\boldsymbol h$. אבל $\\boldsymbol x_i\\circledast\\boldsymbol h=S\\big(S^{-1}(\\boldsymbol x_i\\circledast\\boldsymbol h)\\big)=S\\big(\\boldsymbol x_i\\circledast S^{-1}\\boldsymbol h\\big)=(S\\boldsymbol x_i)\\circledast(S^{-1}\\boldsymbol h)$. לכן מספיק $B\\boldsymbol h=S^{-1}\\boldsymbol h$, כלומר $B=S^{-1}=C^{T}$ (סיבוב ימינה ב-2), שמתאים לכל $\\boldsymbol h$ ולכל $\\boldsymbol x_i$.\n\n**איברי המטריצה** ($C^T_{jk}=C_{kj}$, כלומר $B_{jk}=1$ אם ורק אם $k=(j-2)\\bmod6$):\n$$B=C^{T}=\\begin{pmatrix}0&0&0&0&1&0\\\\0&0&0&0&0&1\\\\1&0&0&0&0&0\\\\0&1&0&0&0&0\\\\0&0&1&0&0&0\\\\0&0&0&1&0&0\\end{pmatrix},\\qquad B\\boldsymbol h=(0,0,h[0],h[1],h[2],0)^T$$\n\n**אימות ישיר.** $\\boldsymbol g=B\\boldsymbol h$, $\\boldsymbol w=C\\boldsymbol x_i$ עם $\\boldsymbol w[j]=\\boldsymbol x_i[j+2]$. אז\n$$\\boldsymbol y_i[j]=h[0]\\boldsymbol w[j-2]+h[1]\\boldsymbol w[j-3]+h[2]\\boldsymbol w[j-4]=h[0]\\boldsymbol x_i[j]+h[1]\\boldsymbol x_i[j-1]+h[2]\\boldsymbol x_i[j-2]$$\n(אינדקסים מודולו 6), שזהה לחלוטין לפלט של סעיף א' (כל ששת האיברים). לכן בדיוק כמו שם, $\\boldsymbol y_i[2..5]=y[4i..4i+3]$.\n"
+    }
+   ]
+  }
+ ]
+}
