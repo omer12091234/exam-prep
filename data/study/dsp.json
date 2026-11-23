@@ -3064,8 +3064,8 @@
    "has_solution": true,
    "questions": [
     {
-     "num": "1א",
-     "description": "\\(x(t)\\) מחזורי במחזור \\(3.5T\\) עם \\(X(j\\omega)=0\\) ל-\\(|\\omega|\\gt\\tfrac{4\\pi}{3.5T}\\). בשל תקלה מתקבל \\(s(t)=\\int_t^{t+\\alpha T}\\sum_n x(\\tau)\\delta(\\tau-nT)d\\tau\\). לפתח את \\(S(j\\omega)\\) כתלות ב-\\(X(j\\omega)\\) ולצייר דוגמה לערך המוחלט עבור \\(\\alpha=1.75\\) בתחום \\(|\\omega|\\le 2\\pi/T\\).",
+     "num": "1",
+     "description": "",
      "topics": [
       "t1",
       "t2",
@@ -3074,66 +3074,29 @@
      "difficulty": 3
     },
     {
-     "num": "1ב",
-     "description": "\\(y(t)=\\int s(\\tau)\\Pi(\\tfrac{t-\\tau}{T})d\\tau\\). עבור \\(\\alpha=1\\): האם קיימת מערכת LTI \\(H(j\\omega)\\) כך ש-\\(X(j\\omega)=Y(j\\omega)H(j\\omega)\\)? אם כן לפתח ביטוי פשוט, אחרת להוכיח.",
-     "topics": [
-      "t2",
-      "t3"
-     ],
-     "difficulty": 3
-    },
-    {
-     "num": "2א",
-     "description": "נתונה פונקציית MATLAB שמנסה לממש קונבולוציה לינארית של \\(\\mathbf x,\\mathbf h\\) באורך \\(N\\) דרך FFT באורך \\(3N\\) (ריפוד \\(x\\) באפסים, \\(h1=\\exp(-j2\\pi n_1 n/(3N))\\cdot h\\), מכפלה ו-IFFT). למצוא מטריצה \\(A\\) כך ש-\\(\\mathbf y=A\\mathbf x\\) (כמכפלת מטריצות).",
+     "num": "2",
+     "description": "",
      "topics": [
       "t6",
       "t7"
      ],
-     "difficulty": 2
-    },
-    {
-     "num": "2ב",
-     "description": "האם הפונקציה אכן מממשת קונבולוציה לינארית? להוכיח; אם לא – להסביר, לתקן ולהוכיח שהגרסה המתוקנת נכונה.",
-     "topics": [
-      "t7",
-      "t6"
-     ],
      "difficulty": 3
     },
     {
-     "num": "3א",
-     "description": "סדרה באורך \\(N=r_1r_2r_3\\) (ראשוניים). לפתח נוסחה למספר המכפלות הקומפלקסיות ל-DFT בשיטת הפרד ומשול (CT), כולל מכפלות ה-twiddle factor.",
+     "num": "3",
+     "description": "",
      "topics": [
       "t8"
      ],
-     "difficulty": 2
-    },
-    {
-     "num": "3ב",
-     "description": "נתון \\(r_1=2\\) והסימטריה \\(x[2n]=x[N-1-2n]\\), \\(n=0..N/2-1\\). האם ניתן לצמצם את מספר המכפלות ביחס לסעיף א׳? לפתח נוסחה למספר הנמוך ביותר.",
-     "topics": [
-      "t8",
-      "t6"
-     ],
      "difficulty": 3
     },
     {
-     "num": "4א",
-     "description": "מערכת A: \\(y[n]=x[n]+0.5x[n-1]\\); מערכת B: \\(z(t)=\\sum_n y[n]\\Pi(\\tfrac{t-nT}{1.5T})\\); מערכת C: \\(f(t)=z(t)*g(t)\\). לפתח ביטוי פשוט ל-\\(Z(j\\omega)\\) כתלות ב-\\(X(e^{j\\theta})\\).",
+     "num": "4",
+     "description": "",
      "topics": [
-      "t5",
+      "t2",
       "t3",
-      "t11"
-     ],
-     "difficulty": 2
-    },
-    {
-     "num": "4ב",
-     "description": "האם קיימת \\(g(t)\\) שעבורה \\(f(nT)=x[n]\\) לכל \\(n\\)? אם כן לפתח את \\(G(j\\omega)\\) ולהוכיח את השוויון; אם לא – להוכיח.",
-     "topics": [
-      "t3",
-      "t5",
-      "t4"
+      "t5"
      ],
      "difficulty": 3
     }
