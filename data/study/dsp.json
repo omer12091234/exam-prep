@@ -3871,52 +3871,29 @@
    "has_solution": true,
    "questions": [
     {
-     "num": "1א",
-     "description": "מערכת LTI עם \\(H(e^{j\\theta})=\\tfrac{e^{-j\\theta}-e^{j2\\theta}}{1-e^{j\\theta}}\\). לפשט ולצייר באופן מקורב את \\(|H(e^{j\\theta})|\\) בתחום \\([0,\\pi]\\).",
+     "num": "1",
+     "description": "",
      "topics": [
-      "t5"
-     ],
-     "difficulty": 2
-    },
-    {
-     "num": "1ב-ג",
-     "description": "לחשב את \\(h[n]\\), את \\(H(z)\\) ואת תחום ההתכנסות (ROC); האם המערכת הפיכה? אם כן לפתח את המערכת ההופכית.",
-     "topics": [
+      "t5",
       "t11"
      ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
-     "num": "2א-ב",
-     "description": "להוכיח שמכפלה בזמן \\(z[n]=x[n]y[n]\\) מתאימה ל-\\(Z[k]=\\tfrac1N\\sum_l X[l]Y[((k-l))_N]\\), ולהציע דרכים לשנות את \\(x,y\\) כך ש-\\(z[n]\\) משתנה אך \\(|Z[k]|\\) לא.",
+     "num": "2",
+     "description": "",
      "topics": [
       "t6",
       "t7"
      ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
-     "num": "2ג",
-     "description": "לכתוב תוכנית MATLAB המממשת באופן ישיר קונבולוציה מעגלית של שתי סדרות DFT.",
+     "num": "3",
+     "description": "",
      "topics": [
-      "t7"
-     ],
-     "difficulty": 1
-    },
-    {
-     "num": "3א-ב",
-     "description": "\\(a(t)\\) חסום ב-\\(\\pi/T\\) נדגם ברכבת הלמים ועובר במקביל דרך \\(h_1(t)=\\Pi(t/T)\\) (ZOH) ו-\\(h_2(t)=\\Lambda(t/T)\\) (FOH). לצייר דוגמה ל-\\(a,x,y\\), לחשב \\(x(0)/a(0)\\), \\(y(0)/a(0)\\), ואת היחס \\(X(j\\pi/\\tau)/A(j\\pi/\\tau)\\) עבור \\(\\tau=2T\\).",
-     "topics": [
+      "t2",
       "t3"
-     ],
-     "difficulty": 2
-    },
-    {
-     "num": "3ג",
-     "description": "האם \\(y(t)\\) מוגבל סרט? האם ניתן לשחזר את \\(a(t)\\) בהינתן \\(y_s(t)\\) (דגימה חוזרת של מוצא ה-FOH)? להציג מסנן משחזר.",
-     "topics": [
-      "t3",
-      "t2"
      ],
      "difficulty": 3
     }
