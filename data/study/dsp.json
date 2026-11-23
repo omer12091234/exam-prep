@@ -2350,73 +2350,24 @@
    "has_solution": false,
    "questions": [
     {
-     "num": "1א",
-     "description": "נתון \\(x(t)=\\cos(\\omega_0 t)+\\sin(3\\omega_0 t)\\). מהו תנאי הדגימה (נייקוויסט) על \\(T\\) כך שניתן לשחזר את \\(x(t)\\) מתוך \\(x[n]=x(nT)\\)?",
-     "topics": [
-      "t2"
-     ],
-     "difficulty": 1
-    },
-    {
-     "num": "1ב",
-     "description": "בהינתן קצב דגימה \\(\\omega_s=4.5\\omega_0\\) (הערך קריא בקושי) – לשרטט/לחשב את ה-DTFT של \\(x[n]\\).",
+     "num": "1",
+     "description": "",
      "topics": [
       "t2",
+      "t3",
       "t5"
      ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
-     "num": "1ג",
-     "description": "מה הקשר בין \\(X_p^F(\\omega)\\) (התמרת האות הדגום בהלמים) לבין \\(X^f(\\theta)\\) (ה-DTFT)?",
+     "num": "2",
+     "description": "",
      "topics": [
       "t5",
-      "t2"
-     ],
-     "difficulty": 1
-    },
-    {
-     "num": "1ד",
-     "description": "סעיף נוסף שעוסק בשינוי קצב פי 3 והאם עדיין ניתן לשחזר, כולל הסבר – הנוסח המלא אינו קריא בתמונה.",
-     "topics": [
-      "t2",
-      "t3"
-     ],
-     "difficulty": 2
-    },
-    {
-     "num": "2א",
-     "description": "נתון \\(x[n]\\) ומגדירים \\(y[n]=\\sum_{r=-\\infty}^{\\infty}x[n-rN]\\). להוכיח ש-\\(y[n]\\) מחזורית ולמצוא את המחזור.",
-     "topics": [
+      "t6",
       "t7"
      ],
-     "difficulty": 1
-    },
-    {
-     "num": "2ב",
-     "description": "מציאת מקדמי פורייה \\(c_k\\) של \\(y[n]\\).",
-     "topics": [
-      "t7",
-      "t6"
-     ],
-     "difficulty": 2
-    },
-    {
-     "num": "2ג",
-     "description": "חישוב ה-DTFT של \\(x[n]\\).",
-     "topics": [
-      "t5"
-     ],
-     "difficulty": 1
-    },
-    {
-     "num": "2ד",
-     "description": "הצגת הקשר בין ה-DTFT של \\(x[n]\\) לבין \\(c_k\\), והפעלתו עבור האות הדו-צדדי \\(x[n]=\\alpha^{n}\\) ל-\\(n\\ge 0\\) ו-\\(\\alpha^{-n}\\) ל-\\(n\\lt 0\\) (כלומר \\(\\alpha^{|n|}\\); התנאי על \\(|\\alpha|\\) קריא בקושי, ככל הנראה \\(|\\alpha|\\lt 1\\)).",
-     "topics": [
-      "t7",
-      "t5"
-     ],
-     "difficulty": 2
+     "difficulty": 3
     }
    ]
   },

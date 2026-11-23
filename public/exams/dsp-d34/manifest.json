@@ -1,0 +1,160 @@
+[
+ {
+  "file": "Q1_s1.webp",
+  "question": 1,
+  "page": 1,
+  "bbox": [
+   0.1022,
+   0.1475,
+   0.9133,
+   0.21
+  ],
+  "skew_deg": -0.4,
+  "role": "SUB",
+  "sub": "א",
+  "order": 1,
+  "needs_review": true
+ },
+ {
+  "file": "Q1_s2.webp",
+  "question": 1,
+  "page": 1,
+  "bbox": [
+   0.1022,
+   0.2256,
+   0.9133,
+   0.2756
+  ],
+  "skew_deg": -0.4,
+  "role": "SUB",
+  "sub": "ב",
+  "order": 2,
+  "needs_review": true
+ },
+ {
+  "file": "Q1_s3.webp",
+  "question": 1,
+  "page": 1,
+  "bbox": [
+   0.1022,
+   0.2787,
+   0.9133,
+   0.31
+  ],
+  "skew_deg": -0.4,
+  "role": "SUB",
+  "sub": "ג",
+  "order": 3,
+  "needs_review": true
+ },
+ {
+  "file": "Q1_s4.webp",
+  "question": 1,
+  "page": 1,
+  "bbox": [
+   0.1022,
+   0.3131,
+   0.9133,
+   0.3819
+  ],
+  "skew_deg": -0.4,
+  "role": "SUB",
+  "sub": "ד",
+  "order": 4,
+  "needs_review": true
+ },
+ {
+  "file": "Q1_stem1.webp",
+  "question": 1,
+  "page": 1,
+  "bbox": [
+   0.1044,
+   0.1144,
+   0.9144,
+   0.1569
+  ],
+  "skew_deg": -0.4,
+  "role": "STEM",
+  "order": 0,
+  "needs_review": false
+ },
+ {
+  "file": "Q2_s1.webp",
+  "question": 2,
+  "page": 1,
+  "bbox": [
+   0.0978,
+   0.5006,
+   0.9089,
+   0.5413
+  ],
+  "skew_deg": -0.4,
+  "role": "SUB",
+  "sub": "א",
+  "order": 1,
+  "needs_review": true
+ },
+ {
+  "file": "Q2_s2.webp",
+  "question": 2,
+  "page": 1,
+  "bbox": [
+   0.0978,
+   0.5413,
+   0.9089,
+   0.5819
+  ],
+  "skew_deg": -0.4,
+  "role": "SUB",
+  "sub": "ב",
+  "order": 2,
+  "needs_review": true
+ },
+ {
+  "file": "Q2_s3.webp",
+  "question": 2,
+  "page": 1,
+  "bbox": [
+   0.0978,
+   0.585,
+   0.9089,
+   0.6194
+  ],
+  "skew_deg": -0.4,
+  "role": "SUB",
+  "sub": "ג",
+  "order": 3,
+  "needs_review": true
+ },
+ {
+  "file": "Q2_s4.webp",
+  "question": 2,
+  "page": 1,
+  "bbox": [
+   0.0978,
+   0.6225,
+   0.9089,
+   0.7444
+  ],
+  "skew_deg": -0.4,
+  "role": "SUB",
+  "sub": "ד",
+  "order": 4,
+  "needs_review": true
+ },
+ {
+  "file": "Q2_stem1.webp",
+  "question": 2,
+  "page": 1,
+  "bbox": [
+   0.1011,
+   0.4581,
+   0.91,
+   0.5069
+  ],
+  "skew_deg": -0.4,
+  "role": "STEM",
+  "order": 0,
+  "needs_review": false
+ }
+]
