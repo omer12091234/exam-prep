@@ -1,0 +1,230 @@
+{
+ "exam": {
+  "match_title": "מועד ב׳ סמסטר ב׳ 2019 (בועז רפאלי, 26/07/2019) + פתרון בכתב יד",
+  "drive_file_id": "1Qz7kUMvF__Tfrs0VP-DRXdnA5isF0wNN",
+  "source_title": "מועד ב - בעז רפאלי + פתרון.pdf",
+  "lecturer": "פרופ' בעז רפאלי",
+  "year": 2019,
+  "date": "2019-07-26",
+  "duration_minutes": 180,
+  "aids": "דף הנוסחאות המצורף, מחשב כיס (ללא תכנות ותקשורת)",
+  "notes": "הקובץ (8 עמודים): עמ' 1-2 שאלון (4 שאלות), עמ' 3-8 פתרון בכתב יד. הוסכם $\\mathrm{sinc}(u)=\\sin(\\pi u)/(\\pi u)$ ו-$W_N=e^{-j2\\pi/N}$. הפתרונות נכתבו מחדש ונבדקו מול הפתרון הסרוק; בפתרון הסרוק של שאלה 2 סעיף ב' יש טעות אינדקס בקוד (ראו הערה שם)."
+ },
+ "questions": [
+  {
+   "number": 1,
+   "points": 25,
+   "topics": [
+    "t1",
+    "t5",
+    "t6"
+   ],
+   "stem": "נתון אות $x(t)$ ממשי ומחזורי בעל התמרת פורייה $X(j\\omega)$ וזמן מחזור $T$ המקיים $X(j\\omega)=0\\ \\ \\forall |\\omega|>\\frac{2M\\pi}{T}$ עבור $M$ שלם חיובי. נגדיר את הסדרה הבאה באורך $N$:\n$$\\tilde{x}[n]=\\int_{\\frac{nT}{N}}^{\\frac{(n+1)T}{N}}x(t)\\,dt\\ ,\\quad n=0,\\dots,N-1$$",
+   "figures": [],
+   "regions": [
+    {
+     "page": 1,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      110,
+      372,
+      830,
+      545
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "א",
+     "points": 15,
+     "text": "מהו ה-$N$ הקטן ביותר עבורו ניתן לשחזר את $x(t)$ בהינתן $\\tilde{x}[n]$? עבור ה-$N$ שבחרת, הציג/י את תהליך השחזור והוכיח/י כי ניתן לשחזר את $x(t)$.",
+     "box": [
+      110,
+      545,
+      830,
+      592
+     ],
+     "lines": 2,
+     "solution": "**מוסכמות.** $\\mathrm{sinc}(u)=\\frac{\\sin\\pi u}{\\pi u}$; $W_N=e^{-j2\\pi/N}$; DFT באורך $N$: $\\tilde X[k]=\\sum_{n=0}^{N-1}\\tilde x[n]W_N^{kn}$.\n\n**מבנה האות.** $x(t)$ מחזורי ברוחב סרט $\\frac{2M\\pi}{T}$, ולכן הוא טור פורייה סופי:\n$$x(t)=\\sum_{m=-M}^{M}a_m e^{j\\frac{2\\pi}{T}mt},\\qquad a_{-m}=a_m^*\\ \\ (\\text{כי }x\\text{ ממשי}).$$\nהאות נקבע לחלוטין על ידי $2M+1$ המקדמים $a_{-M},\\dots,a_M$ (כלומר $2M+1$ פרמטרים ממשיים).\n\n**חסם תחתון.** $\\tilde x[n]$ הם $N$ מספרים ממשיים. כדי לקבוע $2M+1$ פרמטרים ממשיים בלתי תלויים נדרש $N\\ge 2M+1$. עבור $N\\le 2M$ קיימים אותות שונים עם אותה סדרה $\\tilde x[n]$ (ההעתקה מ-$2M+1$ פרמטרים ל-$N$ מספרים אינה חד-חד-ערכית), ולכן $N_{\\min}\\ge 2M+1$.\n\n**חישוב $\\tilde x[n]$ לפי המקדמים.** נציב את הטור:\n$$\\tilde x[n]=\\sum_{m=-M}^{M}a_m\\int_{nT/N}^{(n+1)T/N}e^{j\\frac{2\\pi}{T}mt}dt=\\sum_{m=-M}^{M}a_m H_m\\,e^{j\\frac{2\\pi}{N}mn},$$\n$$H_m=\\int_0^{T/N}e^{j\\frac{2\\pi}{T}ms}ds=\\frac{e^{j\\frac{2\\pi m}{N}}-1}{j\\frac{2\\pi m}{T}}=\\frac{T}{N}\\,\\mathrm{sinc}\\!\\left(\\frac mN\\right)e^{j\\pi m/N}.$$\n(זהו סינון של $x$ במסנן ממוצע-חלון ברוחב $T/N$ ואחריו דגימה.)\n\n**שחזור עבור $N=2M+1$.** הביטוי לעיל הוא התמרת DFT הפוכה באורך $N$ של הסדרה $\\{a_mH_m\\}$ (האינדקסים $m=-M,\\dots,M$ הם $N=2M+1$ ערכים שונים מודולו $N$). לכן\n$$\\tilde X[k]=N\\,a_mH_m\\quad\\text{עבור }k\\equiv m \\pmod N,\\qquad\\text{כלומר}\\quad a_m=\\frac{\\tilde X\\big[((m))_N\\big]}{N\\,H_m}=\\frac{e^{-j\\pi m/N}\\,\\tilde X\\big[((m))_N\\big]}{T\\,\\mathrm{sinc}(m/N)}.$$\nהחילוץ אפשרי כי $H_m\\ne0$: הפונקציה $\\mathrm{sinc}(m/N)$ מתאפסת רק כש-$m/N$ שלם שונה מאפס, ו-$|m|\\le M<N$.\n\n**אלגוריתם.** (1) מחשבים $\\tilde X[k]$ ב-FFT באורך $N=2M+1$. (2) מחשבים $a_m$ לפי הנוסחה, $m=-M,\\dots,M$. (3) משחזרים $x(t)=\\sum_{m=-M}^{M}a_me^{j2\\pi mt/T}$.\n\n**תשובה:** $N_{\\min}=2M+1$."
+    },
+    {
+     "label": "ב",
+     "points": 10,
+     "text": "נתונות הסדרות הבאות:\n$$y[n]=x\\!\\left(\\frac{nT}{N}\\right),\\qquad z[n]=\\tilde{x}[((n))_N]\\qquad n=-\\infty,\\dots,\\infty$$\nהאם קיימת סדרה $g[n]$ עבורה יתקיים $z[n]=y[n]*g[n]$ כאשר $*$ מסמן קונבולוציה לינארית? אם כן, פתח/י ביטוי ל-$g[n]$. אם לא, הוכח/י.",
+     "box": [
+      110,
+      595,
+      830,
+      707
+     ],
+     "lines": 4,
+     "solution": "**הנחה.** $N=2M+1$ (ה-$N$ מסעיף א'). $\\tilde x[((n))_N]$ היא ההמשך המחזורי של $\\tilde x$.\n\n**שתי הסדרות בתחום התדר.** $y[n]=\\sum_{m=-M}^{M}a_me^{j2\\pi mn/N}$ היא סדרה מחזורית (מחזור $N$) ו-$Y[k]=Na_m$ עבור $k\\equiv m\\ (\\mathrm{mod}\\ N)$. מסעיף א':\n$$z[n]=\\sum_{m=-M}^{M}a_mH_m e^{j2\\pi mn/N}\\ \\Longrightarrow\\ Z[k]=H_m\\,Y[k],\\quad k\\equiv m.$$\nכלומר $z$ מתקבלת מ-$y$ על ידי הכפלת כל הרמוניה $m$ ב-$H_m$.\n\n**קיום $g$.** קונבולוציה של סדרה מחזורית עם $g$ מכפילה את ההרמוניה $e^{j2\\pi mn/N}$ ב-$G(e^{j\\theta})$ בתדר $\\theta=2\\pi m/N$. לכן מספיק לדרוש\n$$G\\!\\left(e^{j2\\pi m/N}\\right)=H_m,\\qquad m=-M,\\dots,M.$$\nאפשר לבחור $g$ סופית באורך $N$:\n$$g[n]=\\begin{cases}\\dfrac1N\\displaystyle\\sum_{m=-M}^{M}H_m\\,e^{j\\frac{2\\pi}{N}mn},&0\\le n\\le N-1\\\\[2mm]0,&\\text{אחרת}\\end{cases}\\qquad H_m=\\frac TN\\mathrm{sinc}\\!\\left(\\frac mN\\right)e^{j\\pi m/N}.$$\n**בדיקה:** $y*g$ עם $g$ באורך מחזור אחד שווה לקונבולוציה מעגלית ב-$\\mathrm{mod}\\ N$, ו-DFT שלה הוא $Y[k]G_N[k]$ עם $G_N[k]=H_m$, כלומר בדיוק $Z[k]$. הסדרה $g$ ממשית כי $H_{-m}=H_m^*$.\n\n**ביטוי חלופי (כפי שבפתרון הסרוק).** במקום $g$ סופית אפשר לקחת $G(e^{j\\theta})=\\frac TN\\mathrm{sinc}\\!\\left(\\frac{\\theta}{2\\pi}\\right)e^{j\\theta/2}$ עבור $|\\theta|\\le\\pi$, כלומר $H(j\\omega)$ של המסנן הרציף בתדר $\\omega\\frac TN=\\theta$, ו-$g[n]=\\frac1{2\\pi}\\int_{-\\pi}^{\\pi}G(e^{j\\theta})e^{j\\theta n}d\\theta$. גם הוא מקיים $G(e^{j2\\pi m/N})=H_m$ (כי $|2\\pi m/N|<\\pi$).\n\n**תשובה:** כן, קיימת $g[n]$, למשל הסדרה לעיל."
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "points": 25,
+   "topics": [
+    "t5",
+    "t6",
+    "t7"
+   ],
+   "stem": "נתונות הסדרות $x[n]$ ו-$y[n]$ המוגדרות בתחום $n=0,\\dots,M-1$ ושוות ל-0 מחוץ לתחום. נתונה הסדרה הבאה התלויה בפרמטרים השלמים $N,q,r$:\n$$z[n]=\\frac{q}{N}\\sum_{k=0}^{\\frac Nq-1}\\left(\\sum_{m=-\\infty}^{\\infty}x[m]e^{-j\\frac{2\\pi}{N}(qk+r)m}\\sum_{l=-\\infty}^{\\infty}y[l]e^{-j\\frac{2\\pi}{N}(qk+r)l}\\right)e^{j\\frac{2\\pi}{N}qkn}\\ ,\\quad n=0,\\dots,\\frac Nq-1$$",
+   "figures": [],
+   "regions": [
+    {
+     "page": 1,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      110,
+      712,
+      830,
+      865
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "א",
+     "points": 10,
+     "text": "בסעיף זה בלבד הנח/י $q=3,\\ r=0$. האם קיים $N$, כך שמתקיים $z[n]=x[n]*y[n]$, כאשר $*$ מסמן קונבולוציה לינארית? האם כן מצא/י את $N$ והוכח/י, אם לא הסבר/י.",
+     "box": [
+      110,
+      866,
+      830,
+      924
+     ],
+     "lines": 2,
+     "solution": "**מוסכמות.** $X(e^{j\\theta}),Y(e^{j\\theta})$ הן ה-DTFT; $w[n]=x[n]*y[n]$ קונבולוציה לינארית, $W(e^{j\\theta})=X(e^{j\\theta})Y(e^{j\\theta})$. כיוון ש-$x,y$ באורך $M$, $w[n]$ שונה מאפס רק עבור $0\\le n\\le 2M-2$ (אורך $2M-1$).\n\n**זיהוי $z$.** סימון $L=N/q$ ו-$\\theta_k=\\frac{2\\pi}{N}(qk+r)$. הסוגריים הם $W(e^{j\\theta_k})$, ולכן\n$$z[n]=\\frac1L\\sum_{k=0}^{L-1}W(e^{j\\theta_k})e^{j\\frac{2\\pi}{L}kn}.$$\nעבור $r=0$ מתקבל $\\theta_k=\\frac{2\\pi}{L}k$: זו DFT הפוכה באורך $L$ של דגימות ה-DTFT של $w$.\n\n**חישוב.** נציב $W(e^{j\\theta_k})=\\sum_mw[m]e^{-j\\frac{2\\pi}{L}km}$:\n$$z[n]=\\sum_mw[m]\\,\\frac1L\\sum_{k=0}^{L-1}e^{j\\frac{2\\pi}{L}k(n-m)}=\\sum_mw[m]\\sum_{i}\\delta[m-n-iL]=\\sum_{i=-\\infty}^{\\infty}w[n+iL],\\quad 0\\le n\\le L-1.$$\nכלומר $z$ היא החזרה מחזורית (aliasing בזמן) של $w$ עם מחזור $L$.\n\n**תנאי.** כדי ש-$z[n]=w[n]$ בתחום $0\\le n\\le L-1$ יש לדרוש שאין חפיפה, כלומר $L\\ge 2M-1$ (אחרת, למשל, $w[L]$ שונה מאפס בדרך כלל ומתווסף ל-$z[0]$). עם $q=3$: $L=N/3$, ולכן\n$$N\\ge 3(2M-1),\\ \\ N\\text{ כפולה של }3.$$\n**תשובה:** כן. הערך הקטן ביותר הוא $N=3(2M-1)$ (וכל כפולה של 3 הגדולה ממנו מתאימה)."
+    },
+    {
+     "label": "ב",
+     "points": 15,
+     "text": "בסעיף זה בלבד הנח/י $q=2,\\ N=M$. מוגדרות שתי סדרות. הראשונה $z_1[n]=z[n]$ בהצבת $r=0$, והשנייה $z_2[n]=z[n]$ בהצבת $r=1$. מוגדרים הווקטורים הבאים:\n$$\\boldsymbol{z_1}=\\left[z_1[0],\\dots,z_1\\!\\left[\\tfrac M2-1\\right]\\right]^T,\\quad \\boldsymbol{y}=\\left[y[0],\\dots,y[M-1]\\right]^T,\\quad \\boldsymbol{x}=\\left[x[0],\\dots,x[M-1]\\right]^T,\\quad \\boldsymbol{z_2}=\\left[z_2[0],\\dots,z_2\\!\\left[\\tfrac M2-1\\right]\\right]^T$$\nכתוב/י פונקציה בשפת מטלב (תוך הקפדה על תחביר נכון) המקבלת כקלט את $\\boldsymbol{y},\\boldsymbol{z_1},\\boldsymbol{z_2}$, ומחזירה כפלט את $\\boldsymbol{x}$. כמו כן, במידה ונדרשת הנחה לגבי הסדרה $y[n]$ ציין/י זאת בפירוש.",
+     "box": [
+      110,
+      930,
+      830,
+      1114
+     ],
+     "lines": 6,
+     "solution": "**הנחות.** $M$ זוגי (כדי ש-$M/2$ שלם). $L=M/2$.\n\n**מה נותנות $z_1,z_2$.** מסעיף א' (אותו חישוב עם $q=2$): $\\theta_k=\\frac{2\\pi}{M}(2k+r)$, $z_r[n]=\\frac1L\\sum_{k=0}^{L-1}W(e^{j\\theta_k})e^{j\\frac{2\\pi}{L}kn}$. זו DFT הפוכה באורך $L$, ולכן ה-DFT באורך $L$ של הסדרות היא בדיוק הדגימות:\n$$Z_1[k]=W\\!\\left(e^{j\\frac{2\\pi}{M}\\,2k}\\right),\\qquad Z_2[k]=W\\!\\left(e^{j\\frac{2\\pi}{M}(2k+1)}\\right),\\qquad k=0,\\dots,\\tfrac M2-1.$$\n(זו גם התוצאה הקצרה: $z_1[n]=\\sum_i w[n+iL]$, ו-$z_2[n]=e^{-j2\\pi n/M}\\sum_i(-1)^iw[n+iL]$.)\n\n**שילוב.** נשזור את הדגימות הזוגיות והאי-זוגיות:\n$$Z[2k]=Z_1[k],\\quad Z[2k+1]=Z_2[k]\\ \\Longrightarrow\\ Z[k']=W\\!\\left(e^{j\\frac{2\\pi}{M}k'}\\right),\\ k'=0,\\dots,M-1.$$\nמכיוון ש-$x,y$ מוגדרות על $0..M-1$ בדיוק, $X(e^{j2\\pi k'/M})=X_M[k']$ ו-$Y(e^{j2\\pi k'/M})=Y_M[k']$ הן ה-DFT בגודל $M$ שלהן, ולכן $Z[k']=X_M[k']\\,Y_M[k']$, כלומר $Z$ היא DFT של הקונבולוציה המעגלית $x\\circledast y$ (אורך $M$).\n\n**שחזור.** $X_M[k]=Z[k]/Y_M[k]$ ואז $x=\\mathrm{IDFT}_M\\{X_M\\}$.\n\n**הנחה על $y$:** $Y_M[k]\\ne0$ לכל $k=0,\\dots,M-1$ (אחרת אין שחזור יחיד).\n\n```matlab\nfunction x = restore_x(y, z1, z2)\n% y: M x 1, z1,z2: (M/2) x 1, M even; assumes fft(y) has no zeros\nM = length(y);\nZ = zeros(M,1);\nZ(1:2:M) = fft(z1(:));   % Z[2k]   = Z1[k]\nZ(2:2:M) = fft(z2(:));   % Z[2k+1] = Z2[k]\nY = fft(y(:));           % Y[k] ~= 0 for all k\nx = ifft(Z ./ Y);        % if x is known to be real: x = real(x)\nend\n```\n**בדיקה:** מספר הדגימות ב-$Z$ הוא $M/2+M/2=M$ והאורכים מתאימים. *הערה: בקוד שבפתרון הסרוק הלולאה רצה על $l=1:2:M$ ומציבה $Z_1(l)$ ו-$Z_2(l)$ באינדקס $l$ של הווקטור הקצר, ולכן נדרש להחליף ל-$Z_1((l+1)/2)$; בגרסה למעלה זה נעשה בהצבה וקטורית.*"
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "points": 25,
+   "topics": [
+    "t6",
+    "t8"
+   ],
+   "stem": "נתונה הסדרה $x[n]$ באורך $N=2\\cdot L$, כאשר $L>2$ הינו מספר ראשוני. נסמן ב-$X[k]$ את התמרת ה-DFT של $x[n]$ עבור $k=0,\\dots,N-1$.",
+   "figures": [],
+   "regions": [
+    {
+     "page": 2,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      120,
+      125,
+      830,
+      192
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "א",
+     "points": 10,
+     "text": "בהנחה ש-$X[k]$ מחושב באמצעות אלגוריתם Cooley-Tukey, מהו מספר המכפלות הקומפלקסיות הדרוש לביצוע ההתמרה? יש להציג הוכחה מלאה!",
+     "box": [
+      120,
+      196,
+      830,
+      245
+     ],
+     "lines": 2,
+     "solution": "**מוסכמות.** $W_N=e^{-j2\\pi/N}$, $N=2L$. סופרים כל כפל קומפלקסי, כולל כפל ב-$1$ (כמו ב-DFT נאיבי). $L$ ראשוני, ולכן אין פירוק נוסף של ה-DFT באורך $L$: מחשבים אותו ישירות ב-$L^2$ מכפלות.\n\n**פירוק (decimation in time).** נפצל לאינדקסים זוגיים ואי-זוגיים:\n$$X[k]=\\sum_{n=0}^{L-1}x[2n]W_L^{kn}+W_N^{k}\\sum_{n=0}^{L-1}x[2n+1]W_L^{kn}=E[k]+W_N^kO[k],\\quad k=0,\\dots,N-1.$$\n$E[k],O[k]$ הן DFT באורך $L$, מחזוריות ב-$k$ עם מחזור $L$.\n\n**ספירה.**\n1. שני DFT באורך $L$: $2\\cdot L^2$ מכפלות.\n2. הכפלה ב-twiddle: $W_N^kO[k]$ עבור $k=0,\\dots,L-1$ בלבד, כי $W_N^{k+L}=-W_N^k$ ו-$O[k+L]=O[k]$, ולכן $X[k+L]=E[k]-W_N^kO[k]$ משתמש באותה מכפלה: $L$ מכפלות.\n3. פרפר באורך 2 (חיבור/חיסור): $0$ מכפלות.\n\n$$\\boxed{2L^2+L}$$\n(אם לא סופרים את הכפל ב-$W_N^0=1$: $2L^2+L-1$.)\n\n**השוואה:** DFT ישיר דורש $N^2=4L^2$, והחיסכון הוא כמעט פי 2. הסכום תואם את הפתרון הסרוק."
+    },
+    {
+     "label": "ב",
+     "points": 15,
+     "text": "מגדירים את שתי הסדרות הבאות עבור $i=1,2$:\n$$g_i[n]=x[n]+(-1)^{i-1}x\\!\\left[n+\\frac N2\\right],\\qquad n=0,\\dots,\\frac N2-1$$\nמצא/י ייצוג למטריצה $\\boldsymbol{A}$ כך שיתקיים: $\\boldsymbol{X}=\\boldsymbol{A}\\boldsymbol{g}$ כאשר $\\boldsymbol{X}=[X[0],\\dots,X[N-1]]^T$, $\\boldsymbol{g}=\\left[g_1[0],\\dots,g_1\\!\\left[\\tfrac N2-1\\right],g_2[0],\\dots,g_2\\!\\left[\\tfrac N2-1\\right]\\right]^T$.\nחשוב: ניתן להציג את $\\boldsymbol{A}$ כמכפלת מטריצות, אבל אף אחת ממטריצות אלה אסור שתהיה מטריצת DFT בגודל $N$.",
+     "box": [
+      120,
+      248,
+      830,
+      442
+     ],
+     "lines": 5,
+     "solution": "**מוסכמות.** $W_N=e^{-j2\\pi/N}$, $L=N/2$, $F_L$ מטריצת DFT בגודל $L$: $[F_L]_{k,n}=W_L^{kn}$. שימו לב $W_N^2=W_L$ ו-$W_N^{L}=-1$.\n\n**פיתוח (decimation in frequency).**\n$$X[2k]=\\sum_{n=0}^{L-1}\\left(x[n]+x[n+L]\\right)W_N^{2kn}=\\sum_{n=0}^{L-1}g_1[n]W_L^{kn},$$\nכי $W_N^{2k(n+L)}=W_N^{2kn}$. ועבור האינדקסים האי-זוגיים, $W_N^{(2k+1)(n+L)}=-W_N^{(2k+1)n}$:\n$$X[2k+1]=\\sum_{n=0}^{L-1}\\left(x[n]-x[n+L]\\right)W_N^{(2k+1)n}=\\sum_{n=0}^{L-1}\\big(g_2[n]W_N^{n}\\big)W_L^{kn}.$$\nכלומר $X[2k]$ הוא ה-DFT באורך $L$ של $g_1$, ו-$X[2k+1]$ הוא ה-DFT באורך $L$ של $g_2[n]W_N^n$.\n\n**הצגה מטריצית $\\boldsymbol A=\\boldsymbol D\\boldsymbol C\\boldsymbol B$.**\n\n1. **מטריצת twiddle** $\\boldsymbol B$ (אלכסונית, $N\\times N$): $\\boldsymbol B=\\mathrm{diag}\\big(\\underbrace{1,\\dots,1}_{L},\\ W_N^{0},W_N^{1},\\dots,W_N^{L-1}\\big)$. הכפלה בה נותנת $[g_1;\\ g_2[n]W_N^n]$.\n2. **שני DFT באורך $L$:** $\\boldsymbol C=\\begin{bmatrix}F_L&\\boldsymbol 0_L\\\\\\boldsymbol 0_L&F_L\\end{bmatrix}$. התוצאה $\\boldsymbol u=\\boldsymbol C\\boldsymbol B\\boldsymbol g$ מקיימת $u[k]=X[2k]$ ו-$u[L+k]=X[2k+1]$, $k=0,\\dots,L-1$.\n3. **תמורה** $\\boldsymbol D$ (מטריצת תמורה $N\\times N$, בה בכל שורה בדיוק איבר אחד שווה 1) המשזרת את התוצאות: שורה $2k$ בוחרת את $u[k]$ ושורה $2k+1$ בוחרת את $u[L+k]$, כלומר\n$$[\\boldsymbol D]_{2k,\\,j}=\\delta[j-k],\\qquad [\\boldsymbol D]_{2k+1,\\,j}=\\delta[j-(L+k)],\\quad k=0,\\dots,L-1.$$\n$$\\boxed{\\boldsymbol A=\\boldsymbol D\\cdot\\boldsymbol C\\cdot\\boldsymbol B}$$\n**בדיקה:** $\\boldsymbol A\\boldsymbol g=\\boldsymbol D\\boldsymbol u=[u[0],u[L],u[1],u[L+1],\\dots]^T=[X[0],X[1],X[2],X[3],\\dots]^T$. אף גורם אינו DFT בגודל $N$ ($F_L$ בגודל $N/2$ בלבד). מספר המכפלות: $2L^2+L$ כמו בסעיף א'."
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "points": 25,
+   "topics": [
+    "t1",
+    "t5",
+    "t6"
+   ],
+   "stem": "נתון אות ממשי בזמן רציף, $x(t)$, עבור $T$ ממשי חיובי, ו-$M$ שלם חיובי,\n$$x(t)=\\sum_{m=-M}^{M}a_me^{j\\frac{2\\pi}{T}mt}$$\n$\\tau=\\frac TN$ , $N=5M$. הוגדרה הסדרה $Y[k]$ באופן הבא, עבור\n$$Y[k]=\\sum_{n=0}^{N-1}x(n\\tau)e^{-j\\frac{2\\pi}{N}kn}\\ ,\\quad k=0,\\dots,N-1$$",
+   "figures": [],
+   "regions": [
+    {
+     "page": 2,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      120,
+      495,
+      830,
+      722
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "א",
+     "points": 15,
+     "text": "האם ניתן לשחזר $a_m$ בהינתן $Y[k]$? אם כן, פתח/י $Y[k]$ ביטוי פשוט ככל שניתן ל-$a_m$ בהינתן $Y[k]$. אם לא, הסבר/י.",
+     "box": [
+      120,
+      724,
+      830,
+      774
+     ],
+     "lines": 2,
+     "solution": "**מוסכמות.** $\\tau=T/N$ ולכן $x(n\\tau)=\\sum_ma_me^{j\\frac{2\\pi}{N}mn}$. $Y[k]$ היא DFT באורך $N=5M$ של $x(n\\tau)$, $n=0..N-1$.\n\n**חישוב.**\n$$Y[k]=\\sum_{m=-M}^{M}a_m\\sum_{n=0}^{N-1}e^{j\\frac{2\\pi}{N}(m-k)n}=N\\sum_{m=-M}^{M}a_m\\,\\delta\\big[((m-k))_N\\big],$$\nכי סכום סדרה הנדסית מרוכבת של שורשי יחידה מתאפס, פרט למקרה $m\\equiv k\\pmod N$ שבו הוא $N$.\n\n**אין חפיפה.** האינדקסים $m\\in\\{-M,\\dots,M\\}$ הם $2M+1<5M=N$ ערכים, ולכן שונים מודולו $N$ (תנאי דגימה: $f_s=\\frac{N}{T}=\\frac{5M}{T}>2\\cdot\\frac MT$). לכל $k$ יש לכל היותר $m$ אחד התואם:\n- $k=m$ עבור $m=0,\\dots,M$;\n- $k=m+N$ עבור $m=-M,\\dots,-1$;\n- $Y[k]=0$ עבור $M<k<4M$.\n\n**תשובה: כן, ניתן לשחזר.**\n$$\\boxed{a_m=\\frac1N\\,Y\\big[((m))_N\\big]=\\frac{1}{5M}Y\\big[((m))_{5M}\\big],\\qquad -M\\le m\\le M}$$\nכלומר $a_m=\\frac{Y[m]}{N}$ עבור $m\\ge0$ ו-$a_m=\\frac{Y[N+m]}{N}$ עבור $m<0$."
+    },
+    {
+     "label": "ב",
+     "points": 10,
+     "text": "עבור $M=3$ , $x(t)=\\cos\\!\\left(\\frac{4\\pi}{T}t\\right)$, צייר/י את $a_m$ עבור $-M\\le m\\le M$ ואת $Y[k]$ עבור $k=0,\\dots,N-1$.",
+     "box": [
+      120,
+      777,
+      830,
+      842
+     ],
+     "lines": 2,
+     "solution": "**מוסכמות.** $M=3$, $N=5M=15$.\n\n**מקדמי פורייה.** $\\cos\\!\\left(\\frac{4\\pi}{T}t\\right)=\\cos\\!\\left(\\frac{2\\pi}{T}\\cdot2t\\right)=\\frac12e^{j\\frac{2\\pi}{T}2t}+\\frac12e^{-j\\frac{2\\pi}{T}2t}$, ולכן\n$$a_2=a_{-2}=\\tfrac12,\\qquad a_m=0\\ \\text{ עבור }m\\in\\{-3,-1,0,1,3\\}.$$\n**שרטוט $a_m$:** ציר $m$ מ-$-3$ עד $3$; שני עמודים (stem) בגובה $\\tfrac12$ בנקודות $m=-2$ ו-$m=2$, ואפס בשאר.\n\n**$Y[k]$.** לפי סעיף א': $Y[k]=15\\,a_{m}$ עבור $k\\equiv m\\pmod{15}$:\n- $m=2\\Rightarrow k=2$: $Y[2]=15\\cdot\\tfrac12=\\tfrac{15}{2}$.\n- $m=-2\\Rightarrow k=-2+15=13$: $Y[13]=\\tfrac{15}{2}$.\n- כל שאר $k\\in\\{0,\\dots,14\\}$: $Y[k]=0$.\n\n**שרטוט $Y[k]$:** ציר $k$ מ-0 עד 14; שני עמודים בגובה $7.5$ בנקודות $k=2$ ו-$k=13$ (סימטריה $Y[k]=Y^*[N-k]$), ואפס בשאר.\n**בדיקה:** $x(n\\tau)=\\cos\\!\\left(\\frac{2\\pi\\cdot2n}{15}\\right)$, ו-DFT של קוסינוס בתדר $2$ באורך 15 נותן $\\frac{15}{2}$ ב-$k=2$ וב-$k=13$. התוצאה תואמת את הסרטוט בפתרון הסרוק."
+    }
+   ]
+  }
+ ]
+}
