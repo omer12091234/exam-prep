@@ -2045,42 +2045,43 @@
    "has_solution": true,
    "questions": [
     {
-     "num": "א1",
-     "description": "בחירת \\(T\\) ו-\\(N=2^r\\) כך שלא יהיה aliasing (אות עד 5kHz) ורזולוציית התדר ב-DFT תהיה קטנה מ-5Hz (\\(N\\ge2048\\)).",
+     "num": "1",
+     "description": "",
      "topics": [
-      "t10",
+      "t2",
+      "t6"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "2",
+     "description": "",
+     "topics": [
+      "t4",
       "t2"
      ],
-     "difficulty": 1
+     "difficulty": 3
     },
     {
-     "num": "א2",
-     "description": "תדר דגימה מינימלי לאות פס ממשי בתחום \\(2.5\\omega_0\\le|\\omega|\\le4\\omega_0\\).",
-     "topics": [
-      "t4"
-     ],
-     "difficulty": 2
-    },
-    {
-     "num": "א3",
-     "description": "מספר דגימות מינימלי לשחזור מושלם של אות מחזורי מוגבל סרט (מספר מקדמי פורייה).",
+     "num": "3",
+     "description": "",
      "topics": [
       "t2",
       "t1"
      ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
-     "num": "א4",
-     "description": "חישוב \\(y[10],y[11]\\) של קונבולוציה לינארית מתוך קונבולוציה מעגלית באורך 10 וערכים ראשונים ידועים (\\(z[n]=y[n]+y[n+10]\\)).",
+     "num": "4",
+     "description": "",
      "topics": [
       "t7"
      ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
-     "num": "א5",
-     "description": "DFT של הרחבה אנטי-סימטרית באורך \\(2N-1\\) באמצעות דגימות ה-DTFT של \\(x\\).",
+     "num": "5",
+     "description": "",
      "topics": [
       "t6",
       "t5"
@@ -2088,46 +2089,63 @@
      "difficulty": 3
     },
     {
-     "num": "א6",
-     "description": "סדרה באורך 9: איזו שיטה דורשת הכי מעט מכפלות – DFT ישיר, Radix-2 עם ריפוד, Radix-3 או Cooley-Tukey באורך 10.",
+     "num": "6",
+     "description": "",
      "topics": [
       "t8"
      ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
-     "num": "א7",
-     "description": "חלון מלבני באורך \\(N\\) מול \\(2N\\): איזה גודל זהה (יחס גובה אונה ראשית לאונת צד).",
+     "num": "7",
+     "description": "",
      "topics": [
       "t10"
      ],
-     "difficulty": 1
+     "difficulty": 3
     },
     {
-     "num": "א9-10",
-     "description": "האם \\((h+g)*h\\) הוא FIR/IIR; ומציאת \\(h[n]\\) ממשי עם אפס ב-\\(1+j\\), שני קטבים בראשית ו-\\(H(1)=1\\).",
+     "num": "8",
+     "description": "",
+     "topics": [
+      "t6"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "9",
+     "description": "",
      "topics": [
       "t11",
       "t12"
      ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
-     "num": "ב1",
-     "description": "דגימה ברכבת הלמים וסינון ב-\\(h(t)=\\Pi*\\Pi\\) (משולש – שחזור FOH): \\(H^F\\), האם המוצא מוגבל סרט, מסנן מתקן \\(G^F\\) כך ש-\\(X^F=G^FY^F\\), והקשר בין ה-DTFT של \\(x[n]\\) ושל \\(y[n]\\).",
+     "num": "10",
+     "description": "",
      "topics": [
-      "t3",
+      "t11",
+      "t12"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "11",
+     "description": "",
+     "topics": [
       "t2",
+      "t3",
       "t5"
      ],
      "difficulty": 3
     },
     {
-     "num": "ב2",
-     "description": "דה-קונבולוציה: \\(y=x*h\\) (אורכים 4 ו-3) – בניית מטריצה \\(B\\) כך ש-\\(x=By\\) עבור \\(N=4\\) ו-\\(N=6\\) בעזרת DFT (\\(F^{-1}\\mathrm{diag}(1/H)F\\)).",
+     "num": "12",
+     "description": "",
      "topics": [
-      "t7",
-      "t6"
+      "t6",
+      "t7"
      ],
      "difficulty": 3
     }
