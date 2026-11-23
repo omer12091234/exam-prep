@@ -1,0 +1,312 @@
+{
+ "exam": {
+  "match_title": "מועד ב׳ סמסטר ב׳ תשע״ז 2017 (תרצה רוטנברג)",
+  "drive_file_id": "1pxWU3cDlP_M28n7_pKj4dzNFLa-rc-n_",
+  "source_title": "מועד ב 2017 - תרצה + פתרון.pdf",
+  "lecturer": "ד\"ר תרצה רוטנברג",
+  "year": 2017,
+  "date": "2017-07-31",
+  "duration_minutes": 180,
+  "aids": "דף הנוסחאות המצורף, מחשב כיס",
+  "notes": "הקובץ (11 עמודים): עמודים 1-3 שאלון, עמודים 4-11 פתרון (שאלה 1 בכתב יד, שאלות 2-3 מודפס). דף הנוסחאות אינו מצורף. בשאלה 1 ציון השאלה המודפס נקרא 35% (שכבת הטקסט בקובץ נותנת 33%; סכום הסעיפים 10+9+9+7=35). בשאלה 2 אין סימון לגובה המשולש ב-$|X^F|$; הפתרונות מניחים $X^F(0)=1$. בשאלה 3 סעיף א נחלק לתתי-סעיפים a,b,c שסומנו א1,א2,א3 (10% יחד). הסעיפים נפתרו מחדש; הפתרון שבקובץ הושווה."
+ },
+ "questions": [
+  {
+   "number": 1,
+   "points": 35,
+   "topics": [
+    "t6",
+    "t7",
+    "t8"
+   ],
+   "stem": "עבור $N$ זוגי נתונות הסדרות הבאות בזמן בדיד:\n- $x[n]$ המתאפסת מחוץ לתחום $n=0,\\dots,\\frac{3}{2}N-1$\n- $h[n]$ המתאפסת מחוץ לתחום $n=0,\\dots,N-1$\n- $\\tilde h[n]$ המהווה ריפוד באפסים של $h[n]$ לאורך $\\frac{3}{2}N$\n\nמגדירים את הקונבולוציה הלינארית $y[n]=\\{x*h\\}[n]$ ואת הקונבולוציה המעגלית $z[n]=\\{x\\circledast\\tilde h\\}[n]$.",
+   "figures": [],
+   "regions": [
+    {
+     "page": 1,
+     "view": [
+      910,
+      1287
+     ],
+     "box": [
+      90,
+      294,
+      830,
+      512
+     ]
+    }
+   ],
+   "page": 1,
+   "view": [
+    910,
+    1287
+   ],
+   "subs": [
+    {
+     "label": "א",
+     "points": 10,
+     "text": "עבור סעיף זה נתון כי יש תקלה במערכת אשר שומרת את תוצאת הקונבולוציה הלינארית, כך שנשמרו רק $N-1$ הערכים הראשונים של $y[n]$. אילו ערכים נוספים של $y[n]$ נוכל לשחזר מתוך ידיעת ערכי $z[n]$? יש להסביר!",
+     "box": [
+      90,
+      514,
+      830,
+      592
+     ],
+     "lines": 3,
+     "solution": "**מוסכמות.** $M=\\frac{3}{2}N$ הוא אורך הקונבולוציה המעגלית. אורך $y[n]=\\{x*h\\}[n]$ הוא $\\frac32N+N-1=\\frac52N-1$, כלומר $y[n]$ נתמכת על $n=0,\\dots,\\frac52N-2$.\n\n**הקשר בין הקונבולוציה המעגלית ללינארית.** קונבולוציה מעגלית באורך $M$ היא קיפול (aliasing) של התוצאה הלינארית בזמן:\n$$z[n]=\\sum_{r}y[n+rM],\\qquad n=0,\\dots,M-1.$$\nכיוון ש-$2M=3N>\\frac52N-2$, רק $r=0,1$ תורמים:\n$$z[n]=y[n]+y[n+M],\\qquad 0\\le n\\le \\tfrac32N-1,$$\nו-$y[n+M]\\neq0$ רק כאשר $n+M\\le\\frac52N-2$, כלומר $n\\le N-2$.\n\n**שחזור.** נתון $y[0],\\dots,y[N-2]$ (אלו $N-1$ הערכים הראשונים).\n\n1. עבור $N-1\\le n\\le \\frac32N-1$ אין חפיפה ($y[n+M]=0$), ולכן\n$$y[n]=z[n],\\qquad N-1\\le n\\le \\tfrac32N-1 .$$\nזה נותן עוד $\\frac N2+1$ ערכים.\n2. עבור $0\\le n\\le N-2$ מתקיים $z[n]=y[n]+y[n+M]$ ו-$y[n]$ ידוע, ולכן\n$$y\\!\\left[n+\\tfrac32N\\right]=z[n]-y[n],\\qquad 0\\le n\\le N-2 ,$$\nכלומר מתקבלים הערכים $y[\\frac32N],\\dots,y[\\frac52N-2]$ ($N-1$ ערכים).\n\n**תשובה:** אפשר לשחזר את **כל** שאר ערכי $y[n]$, כלומר $n=N-1,\\dots,\\frac52N-2$.\n\n**בדיקה:** $(N-1)+(\\frac N2+1)+(N-1)=\\frac52N-1$, בדיוק אורך $y[n]$."
+    },
+    {
+     "label": "ב",
+     "points": 9,
+     "text": "בהינתן הוקטורים הבאים, המכילים את איברי התמרות ה-DFT של הסדרות $x[n],h[n]$:\n$$\\underline{X}^d=\\left[X^d[0],\\dots,X^d\\left[\\tfrac32N-1\\right]\\right]^T,\\qquad \\underline{H}^d=\\left[H^d[0],\\dots,H^d[N-1]\\right]^T$$\nפתח/י ביטוי למטריצה $\\mathbf A$ המקיימת את הקשר $\\underline z=\\mathbf A\\underline H^d$ ולמטריצה $\\mathbf B$ המקיימת $\\underline y=\\mathbf B\\underline H^d$ כאשר\n$$\\underline z=\\left[z[0],\\dots,z\\left[\\tfrac32N-1\\right]\\right]^T,\\qquad \\underline y=\\left[y[0],\\dots,y\\left[\\tfrac52N-2\\right]\\right]^T$$\nהדרכה: ניתן להציג את המטריצות הנדרשות כמכפלת מטריצות; יש לפרט מהי כל מטריצה במכפלה ומהם מימדיה.",
+     "box": [
+      90,
+      593,
+      830,
+      903
+     ],
+     "lines": 8,
+     "solution": "**סימונים.** $W_L=e^{-j2\\pi/L}$, מטריצת ה-DFT מגודל $L$ היא $[F_L]_{kn}=W_L^{kn}$ ומטריצת ההופכית $F_L^{-1}=\\frac1L F_L^{H}$. $I_k$ מטריצת יחידה, $0_{k\\times m}$ מטריצת אפסים. $\\underline{h}=[h[0],\\dots,h[N-1]]^T$, $\\underline{x}=[x[0],\\dots,x[\\tfrac32N-1]]^T$.\n\n**עיקרון.** הקונבולוציה המעגלית היא מכפלה נקודתית של ה-DFT-ים (באורך $M=\\frac32N$); הקונבולוציה הלינארית היא קונבולוציה מעגלית באורך $L=\\frac52N-1$ של הסדרות המרופדות באפסים.\n\n**המטריצה $A$** (באורך $M=\\frac32N$):\n\n1. $\\underline h=F_N^{-1}\\underline H^d\\triangleq A_1\\underline H^d$, $\\;A_1\\in\\mathbb C^{N\\times N}$.\n2. ריפוד: $\\underline{\\tilde h}=\\begin{pmatrix}I_{N}\\\\0_{\\frac N2\\times N}\\end{pmatrix}\\underline h\\triangleq A_2\\underline h$, $\\;A_2\\in\\mathbb R^{\\frac32N\\times N}$.\n3. $\\underline{\\tilde H}^d=F_{\\frac32N}\\underline{\\tilde h}\\triangleq A_3\\underline{\\tilde h}$, $\\;A_3\\in\\mathbb C^{\\frac32N\\times\\frac32N}$.\n4. $\\underline Z^d=\\mathrm{diag}(\\underline X^d)\\,\\underline{\\tilde H}^d$ (כי $Z^d[k]=X^d[k]\\tilde H^d[k]$).\n5. $\\underline z=F^{-1}_{\\frac32N}\\underline Z^d\\triangleq A_4\\underline Z^d$, $\\;A_4\\in\\mathbb C^{\\frac32N\\times\\frac32N}$.\n\nלכן\n$$\\boxed{\\mathbf A=A_4\\,\\mathrm{diag}(\\underline X^d)\\,A_3A_2A_1=F^{-1}_{\\frac32N}\\,\\mathrm{diag}(\\underline X^d)\\,F_{\\frac32N}\\begin{pmatrix}I_N\\\\0_{\\frac N2\\times N}\\end{pmatrix}F_N^{-1}\\in\\mathbb C^{\\frac32N\\times N}}$$\n\n**המטריצה $B$** (באורך $L=\\frac52N-1$):\n\n1. $\\underline h=F_N^{-1}\\underline H^d\\triangleq B_1\\underline H^d$, $\\;B_1\\in\\mathbb C^{N\\times N}$.\n2. ריפוד $h$ ל-$L$: $\\underline{\\hat h}=\\begin{pmatrix}I_N\\\\0_{(\\frac32N-1)\\times N}\\end{pmatrix}\\underline h\\triangleq B_2\\underline h$, $\\;B_2\\in\\mathbb R^{L\\times N}$.\n3. $\\underline{\\hat H}^d=F_L\\underline{\\hat h}\\triangleq B_3\\underline{\\hat h}$, $\\;B_3\\in\\mathbb C^{L\\times L}$.\n4. $\\underline x=F^{-1}_{\\frac32N}\\underline X^d\\triangleq B_4\\underline X^d$, $\\;B_4\\in\\mathbb C^{\\frac32N\\times\\frac32N}$.\n5. ריפוד $x$ ל-$L$: $\\underline{\\hat x}=\\begin{pmatrix}I_{\\frac32N}\\\\0_{(N-1)\\times\\frac32N}\\end{pmatrix}\\underline x\\triangleq B_5\\underline x$, $\\;B_5\\in\\mathbb R^{L\\times\\frac32N}$.\n6. $\\underline{\\hat X}^d=F_L\\underline{\\hat x}\\triangleq B_6\\underline{\\hat x}$, $\\;B_6\\in\\mathbb C^{L\\times L}$.\n7. $\\underline Y^d=\\mathrm{diag}(\\underline{\\hat X}^d)\\,\\underline{\\hat H}^d$.\n8. $\\underline y=F_L^{-1}\\underline Y^d\\triangleq B_7\\underline Y^d$, $\\;B_7\\in\\mathbb C^{L\\times L}$.\n\nלכן\n$$\\boxed{\\mathbf B=B_7\\,\\mathrm{diag}\\!\\left(B_6B_5B_4\\underline X^d\\right)B_3B_2B_1\\in\\mathbb C^{(\\frac52N-1)\\times N}}$$\n\n**הערות ובדיקות.** (1) שתי המטריצות תלויות בוקטור הידוע $\\underline X^d$ ליניארית-פרמטרית; הקשר ל-$\\underline H^d$ ליניארי. (2) מימדים: ב-$A$ מקבלים $\\frac32N\\times N$ ולכן $\\underline z\\in\\mathbb C^{\\frac32N}$; ב-$B$ מקבלים $(\\frac52N-1)\\times N$ ולכן $\\underline y\\in\\mathbb C^{\\frac52N-1}$, כנדרש. (3) הריפוד ל-$L=\\frac52N-1$ הכרחי כדי שהקונבולוציה המעגלית תתלכד עם הלינארית (אין aliasing)."
+    },
+    {
+     "label": "ג",
+     "points": 9,
+     "text": "עבור סעיף זה בלבד נתון כי $N=40$. חשב/י מהו מספר המכפלות הנדרשות לחישוב $Y^d[k]$ בשיטת Cooley-Tukey מתוך הסדרות $x[n],h[n]$.",
+     "box": [
+      90,
+      904,
+      830,
+      961
+     ],
+     "lines": 2,
+     "solution": "**אורך ה-DFT.** $Y^d[k]$ הוא ה-DFT של $y[n]$ שאורכה $\\frac52N-1=\\frac52\\cdot40-1=99$, לכן מחשבים DFT באורך $M=99$. מתקבל כמכפלה\n$$Y^d[k]=\\hat X^d[k]\\,\\hat H^d[k],$$\nכאשר $\\hat X^d,\\hat H^d$ הם ה-DFT-ים באורך 99 של $x[n]$ (אורך 60) ו-$h[n]$ (אורך 40) לאחר ריפוד באפסים ל-99.\n\n**פירוק לגורמים.** $99=3\\cdot3\\cdot11$, כלומר $r=3$ גורמים ($N_1=3,N_2=3,N_3=11$).\n\n**ספירה (Cooley–Tukey).** DFT באורך $M=N_1N_2\\cdots N_r$ דורש\n$$M\\Big(\\sum_{i=1}^rN_i+r-1\\Big)=99\\,(3+3+11+3-1)=99\\cdot19=1881$$\nמכפלות (כולל המכפלות במקדמי הסיבוב). יש לחשב שני DFT-ים ולהוסיף $M$ מכפלות נקודתיות:\n$$2\\cdot1881+99=3762+99=\\boxed{3861}.$$\n\n**בדיקה:** חישוב ישיר של DFT באורך 99 דורש $99^2=9801$ מכפלות לכל DFT, כלומר פי 5 לערך יותר, ולכן $3861$ סביר.\n\n*הנחה:* נספרו מכפלות מרוכבות לפי נוסחת הקורס $M(\\sum N_i+r-1)$; כל סדרת הכניסה מרופדת ל-99."
+    },
+    {
+     "label": "ד",
+     "points": 7,
+     "text": "כעת נתון כי $h[n]=\\begin{cases}1&n=0\\\\-2&n=1\\\\4&n=2\\\\-3&n=3\\\\0&\\text{otherwise}\\end{cases}$. האם קיימת סדרה $x[n]$ כך שיתקיים $z[n]=\\begin{cases}1&n=0,4,5\\\\2&n=1\\\\-3&n=2\\\\4&n=3\\\\0&\\text{otherwise}\\end{cases}$? אם כן, מצא/י את $x[n]$. אם לא, הוכח/י. (רמז: ניתן להיעזר בחישוב הערך $H^d[0]$).",
+     "box": [
+      90,
+      962,
+      830,
+      1136
+     ],
+     "lines": 2,
+     "solution": "**אורך הסדרות.** $h[n]$ שונה מאפס על $n=0,\\dots,3$, כלומר $N=4$; לכן $\\tilde h[n]$ ו-$z[n]$ באורך $\\frac32N=6$ ($z[n]$ נתונה על $n=0,\\dots,5$, כאשר $z[0]=z[4]=z[5]=1$).\n\nכלומר $z=[1,2,-3,4,1,1]$ ו-$\\tilde h=[1,-2,4,-3,0,0]$.\n\n**שימוש ב-$k=0$.** $z[n]=\\{x\\circledast\\tilde h\\}[n]$ באורך 6, ולכן\n$$Z^d[k]=X^d[k]\\,\\tilde H^d[k],\\qquad k=0,\\dots,5.$$\nעבור $k=0$ ה-DFT הוא סכום האיברים:\n$$\\tilde H^d[0]=\\sum\\tilde h[n]=1-2+4-3=0,$$\n$$Z^d[0]=\\sum z[n]=1+2-3+4+1+1=6 .$$\n(ריפוד באפסים אינו משנה את $H^d[0]$.)\n\n**סתירה.** מהקשר $Z^d[0]=X^d[0]\\tilde H^d[0]=X^d[0]\\cdot0=0$, אך $Z^d[0]=6\\neq0$.\n\n**מסקנה:** **לא** קיימת סדרה $x[n]$ המקיימת את הנתון, כי אף ערך של $X^d[0]$ אינו מתאים.\n\n**בדיקה אחרת:** $\\tilde h$ הוא פולינום ב-$z^{-1}$ שמתאפס ב-$z=1$ (סכום מקדמיו אפס), ולכן כל קונבולוציה איתו מחזירה סדרה שסכומה אפס; סכום $z[n]$ אינו אפס."
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "points": 35,
+   "topics": [
+    "t1",
+    "t2",
+    "t3"
+   ],
+   "stem": "נתונה מערכת הכוללת דגימה ושחזור -",
+   "figures": [
+    "דיאגרמת בלוקים: האות $x(t)$ מוכפל באות $q_T(t)$ (מוצא הכפל $y(t)$), ולאחר מכן עובר במסנן עם תגובת הלם $h(t)$ למוצא $z(t)$",
+    "סעיף ג: $|X^F(\\omega)|$ משולש סימטרי עם שיא ב-$\\omega=0$, מתאפס ב-$\\pm\\omega_m$",
+    "סעיף ג: $|H^F(\\omega)|$ שני מלבנים בגובה 1 בתחומים $\\pi/T_s\\le|\\omega|\\le3\\pi/T_s$ ובצד השלילי המתאים",
+    "סעיף ד: $|X^F(\\omega)|$ משולש סימטרי עם שיא ב-$\\omega=0$, מתאפס ב-$\\pm2\\omega_m$"
+   ],
+   "regions": [
+    {
+     "page": 2,
+     "view": [
+      910,
+      1287
+     ],
+     "box": [
+      60,
+      62,
+      850,
+      280
+     ]
+    }
+   ],
+   "page": 2,
+   "view": [
+    910,
+    1287
+   ],
+   "subs": [
+    {
+     "label": "א",
+     "points": 7,
+     "text": "נתון $q_T(t)=\\sum_{n=-\\infty}^{\\infty}(-1)^n\\delta(t-nT_s)$ (רכבת הלמים עם סימן משתנה). חשב/י את התמרת פוריה, $Q_T^F(\\omega)$.",
+     "box": [
+      90,
+      287,
+      830,
+      340
+     ],
+     "lines": 1,
+     "solution": "**מוסכמות.** $\\omega$ בנות רדיאן לשנייה, $\\omega_s=2\\pi/T_s$, התמרת פוריה $X^F(\\omega)=\\int x(t)e^{-j\\omega t}dt$; $y(t)=x(t)q_T(t)$, ולכן $Y^F=\\frac1{2\\pi}X^F*Q_T^F$.\n\n**דרך א' (פירוק).** $(-1)^n=1$ עבור $n$ זוגי ו-$-1$ עבור $n$ אי-זוגי, לכן\n$$q_T(t)=\\sum_n\\delta(t-2nT_s)-\\sum_n\\delta\\big(t-(2n+1)T_s\\big).$$\nהסכום הראשון הוא רכבת הלמים עם מחזור $2T_s$ ($\\omega_0=\\omega_s/2$) והשני אותה רכבת מוזזת ב-$T_s$. מההתמרה של רכבת הלמים, $\\sum_n\\delta(t-nT)\\leftrightarrow\\frac{2\\pi}{T}\\sum_k\\delta(\\omega-k\\frac{2\\pi}{T})$:\n$$Q_T^F(\\omega)=\\frac{\\omega_s}{2}\\sum_k\\Big(1-e^{-jkT_s\\omega_s/2}\\Big)\\delta\\!\\Big(\\omega-\\tfrac k2\\omega_s\\Big)=\\frac{\\omega_s}{2}\\sum_k\\big(1-(-1)^k\\big)\\delta\\!\\Big(\\omega-\\tfrac k2\\omega_s\\Big),$$\nורק $k$ אי-זוגי שורד ($k=2m+1$, גורם 2):\n\n**דרך ב' (הזזה בתדר).** $(-1)^n=e^{j\\pi n}$, ובנקודות ההלמים $t=nT_s$ מתקיים $e^{j\\pi n}=e^{j\\pi t/T_s}=e^{j\\omega_st/2}$. לכן $q_T(t)=e^{j\\frac{\\omega_s}{2}t}\\sum_n\\delta(t-nT_s)$, והכפלה באקספוננט מרוכב מזיזה את ההתמרה ב-$\\omega_s/2$:\n$$\\boxed{Q_T^F(\\omega)=\\omega_s\\sum_{k=-\\infty}^{\\infty}\\delta\\!\\Big(\\omega-k\\omega_s-\\frac{\\omega_s}{2}\\Big)=\\omega_s\\sum_{k}\\delta\\!\\Big(\\omega-\\frac{2k+1}{2}\\omega_s\\Big)}$$\nכלומר רכבת הלמים (בעוצמה $\\omega_s$ כל אחד) במרווחים $\\omega_s$, הממוקמים ב-$\\pm\\frac12\\omega_s,\\pm\\frac32\\omega_s,\\dots$ (ללא הלם ב-0).\n\n**בדיקה:** שתי הדרכים נותנות אותה תוצאה; הזזה של רכבת סימטרית ב-$\\omega_s/2$ שווה לזו ב-$-\\omega_s/2$, לכן אין הבדל בין $e^{\\pm j\\pi n}$.\n\n**שימוש בהמשך:** $Y^F(\\omega)=\\frac1{2\\pi}X^F*Q_T^F=\\frac1{T_s}\\sum_kX^F\\!\\big(\\omega-(k+\\tfrac12)\\omega_s\\big)$ — עותקים של $X^F$ ממורכזים ב-$\\pm\\frac{\\omega_s}2,\\pm\\frac{3\\omega_s}2,\\dots$ בגובה $1/T_s=\\omega_s/2\\pi$."
+    },
+    {
+     "label": "ב",
+     "points": 4,
+     "text": "נתון כי התמרת פוריה של האות הממשי $x(t),\\ t\\in\\mathbb R$, מקיימת $X^F(\\omega)=0,\\ \\forall|\\omega|\\ge\\omega_m$. קבע/י את ערכו של $T_s$ המינימלי כך שיהיה ניתן לשחזר את $x(t),\\ t\\in\\mathbb R$ מתוך $y(t),\\ t\\in\\mathbb R$.",
+     "box": [
+      90,
+      342,
+      830,
+      408
+     ],
+     "lines": 2,
+     "solution": "**מוסכמות.** $\\omega$ בנות רדיאן לשנייה, $\\omega_s=2\\pi/T_s$, התמרת פוריה $X^F(\\omega)=\\int x(t)e^{-j\\omega t}dt$; $y(t)=x(t)q_T(t)$, ולכן $Y^F=\\frac1{2\\pi}X^F*Q_T^F$.\n\nלפי סעיף א', $Y^F(\\omega)=\\frac1{T_s}\\sum_kX^F\\big(\\omega-(k+\\frac12)\\omega_s\\big)$. שני העותקים הקרובים ביותר ממורכזים ב-$\\pm\\frac{\\omega_s}2$ ותופסים את התחומים $[\\frac{\\omega_s}2-\\omega_m,\\frac{\\omega_s}2+\\omega_m]$ ו-$[-\\frac{\\omega_s}2-\\omega_m,-\\frac{\\omega_s}2+\\omega_m]$. אין חפיפה (אין aliasing) אם ורק אם\n$$-\\tfrac{\\omega_s}2+\\omega_m\\le\\tfrac{\\omega_s}2-\\omega_m\\iff\\omega_s\\ge2\\omega_m\\iff T_s\\le\\frac{\\pi}{\\omega_m}.$$\n(העותקים הבאים ב-$\\pm\\frac{3\\omega_s}2$ רחוקים יותר ונפרדים באותו תנאי.) בשוויון העותקים נוגעים רק בנקודה $\\omega=0$ שבה $X^F=0$, ולכן אין פגיעה בשחזור.\n\n**תשובה:** התדר $\\omega_s$ המינימלי הוא $2\\omega_m$, כלומר $\\boxed{T_s=\\frac{\\pi}{\\omega_m}}$ (זהו הערך הקיצוני של $T_s$: כל $T_s\\le\\pi/\\omega_m$ מתאים, ואילו $T_s>\\pi/\\omega_m$ גורם ל-aliasing). בסעיפים הבאים משתמשים ב-$T_s=\\pi/\\omega_m$, כלומר $\\omega_s=2\\omega_m$.\n\n*הערה:* בנוסח השאלה כתוב \"$T_s$ המינימלי\", ופירשנו זאת כתדר הדגימה המינימלי $\\omega_s=2\\omega_m$, שהוא $T_s$ המקסימלי; כך גם בפתרון הסרוק (שרטוטי סעיף ג' מניחים $\\omega_s=2\\omega_m$)."
+    },
+    {
+     "label": "ג1",
+     "points": 7,
+     "text": "כעת נתון כי: $|X^F(\\omega)|$ הוא משולש סימטרי בגובה מרבי ב-$\\omega=0$ ובעל תומך $[-\\omega_m,\\omega_m]$ (ראו איור), ונתון כי התמרת פוריה של תגובת המסנן להלם $h(t),\\ t\\in\\mathbb R$, מקיימת (עבור $T_s$ שקבעת בסעיף קודם): $|H^F(\\omega)|=1$ בתחומים $\\frac{\\pi}{T_s}\\le|\\omega|\\le\\frac{3\\pi}{T_s}$ ו-0 מחוץ להם (ראו איור). שרטט/י את $Z^F(\\omega)$, התמרת פוריה של מוצא המסנן, $z(t),\\ t\\in\\mathbb R$.",
+     "box": [
+      90,
+      408,
+      830,
+      877
+     ],
+     "lines": 3,
+     "solution": "**מוסכמות.** $\\omega$ בנות רדיאן לשנייה, $\\omega_s=2\\pi/T_s$, התמרת פוריה $X^F(\\omega)=\\int x(t)e^{-j\\omega t}dt$; $y(t)=x(t)q_T(t)$, ולכן $Y^F=\\frac1{2\\pi}X^F*Q_T^F$.\n\n**נתונים.** $T_s=\\pi/\\omega_m$, כלומר $\\omega_s=2\\omega_m$, ו-$|X^F(\\omega)|$ משולש: $X^F(\\omega)=1-|\\omega|/\\omega_m$ לכל $|\\omega|\\le\\omega_m$ (הנחה: $X^F(0)=1$, הגובה אינו מצוין בשרטוט; בכל גובה אחר הכל מוכפל בקבוע). המסנן $H^F$ עובר פס $\\frac{\\pi}{T_s}\\le|\\omega|\\le\\frac{3\\pi}{T_s}$, כלומר $\\frac{\\omega_s}2\\le|\\omega|\\le\\frac{3\\omega_s}2$, בהגבר 1.\n\n**שלב 1: $Y^F$.** לפי סעיף א', $Y^F(\\omega)=\\frac{\\omega_s}{2\\pi}\\sum_kX^F(\\omega-(k+\\frac12)\\omega_s)$: משולשים ברוחב חצי-בסיס $\\omega_m=\\omega_s/2$ ממורכזים ב-$\\pm\\frac{\\omega_s}2,\\pm\\frac{3\\omega_s}2,\\dots$ בגובה $\\frac{\\omega_s}{2\\pi}$. המשולשים הסמוכים נוגעים זה בזה ב-$\\omega=0,\\pm\\omega_s,\\pm2\\omega_s,\\dots$ (שם $Y^F=0$), כך שמתקבל גל \"שן-מסור\" (זיגזג) בין $0$ לגובה $\\frac{\\omega_s}{2\\pi}$ עם פסגות ב-$\\pm\\frac{\\omega_s}{2},\\pm\\frac{3\\omega_s}{2}$.\n\n**שלב 2: $Z^F=Y^FH^F$.** המסנן משאיר רק $\\frac{\\omega_s}2\\le|\\omega|\\le\\frac{3\\omega_s}2$. בתחום החיובי: חצי ימני של המשולש במרכז $\\frac{\\omega_s}2$ (יורד מ-$\\frac{\\omega_s}{2\\pi}$ ב-$\\frac{\\omega_s}{2}$ ל-0 ב-$\\omega_s$) וחצי שמאלי של המשולש במרכז $\\frac{3\\omega_s}2$ (עולה מ-0 ב-$\\omega_s$ ל-$\\frac{\\omega_s}{2\\pi}$ ב-$\\frac{3\\omega_s}2$). כלומר\n$$Z^F(\\omega)=\\begin{cases}\\dfrac{|\\omega-\\omega_s|}{\\pi}&\\frac{\\omega_s}2\\le|\\omega|\\le\\frac{3\\omega_s}2\\ \\ \\text{(עבור }\\omega>0\\text{; זוגי ב-}\\omega)\\\\[2mm]0&\\text{אחרת}\\end{cases}$$\n(לתחום השלילי $Z^F(\\omega)=Z^F(-\\omega)$.) הצורה: שני \"V\" סימטריים, אחד סביב $\\omega=+\\omega_s$ ואחד סביב $\\omega=-\\omega_s$, בגובה $\\frac{\\omega_s}{2\\pi}$ בקצוותיהם $\\pm\\frac{\\omega_s}{2},\\pm\\frac{3\\omega_s}{2}$ ו-0 במרכזם $\\pm\\omega_s$.\n\n**בדיקה:** ב-$\\omega=\\frac{\\omega_s}2$: $\\frac{\\omega_s/2}{\\pi}=\\frac{\\omega_s}{2\\pi}$ ✓; ב-$\\omega=\\omega_s$: 0 ✓."
+    },
+    {
+     "label": "ג2",
+     "points": 8,
+     "text": "הצע/י סכימה לשחזור האות $x(t),\\ t\\in\\mathbb R$ מתוך מוצא המסנן, $z(t),\\ t\\in\\mathbb R$, או הסבר/י מדוע לא ניתן לשחזר.",
+     "box": [
+      90,
+      880,
+      830,
+      934
+     ],
+     "lines": 2,
+     "solution": "**מוסכמות.** $\\omega$ בנות רדיאן לשנייה, $\\omega_s=2\\pi/T_s$, התמרת פוריה $X^F(\\omega)=\\int x(t)e^{-j\\omega t}dt$; $y(t)=x(t)q_T(t)$, ולכן $Y^F=\\frac1{2\\pi}X^F*Q_T^F$.\n\n**התשובה: אפשר לשחזר.** בתחום החיובי $\\frac{\\omega_s}2\\le\\omega\\le\\frac{3\\omega_s}2$ המשולש $X^F$ הופיע \"מחולק\": החצי ה-$[0,\\omega_m]$ של $X^F$ נמצא ב-$[\\frac{\\omega_s}2,\\omega_s]$ והחצי $[-\\omega_m,0]$ ב-$[\\omega_s,\\frac{3\\omega_s}2]$. כלומר\n$$Z^F\\!\\Big(\\omega+\\tfrac{\\omega_s}{2}\\Big)=\\frac1{T_s}X^F(\\omega)\\qquad0\\le\\omega\\le\\tfrac{\\omega_s}{2}\\quad(\\text{וכן }Z^F(\\omega+\\tfrac{\\omega_s}2)=\\tfrac1{T_s}X^F(\\omega-\\omega_s)\\text{ ל-}\\tfrac{\\omega_s}2\\le\\omega\\le\\omega_s).$$\n\n**סכימה:** (1) להכפיל את $z(t)$ ב-$\\cos\\!\\big(\\frac{\\omega_s}{2}t\\big)$ (הזזה בתדר ב-$\\pm\\frac{\\omega_s}{2}$):\n$$\\mathcal F\\{z(t)\\cos(\\tfrac{\\omega_s}2t)\\}=\\tfrac12\\Big[Z^F\\!\\big(\\omega-\\tfrac{\\omega_s}2\\big)+Z^F\\!\\big(\\omega+\\tfrac{\\omega_s}2\\big)\\Big].$$\n(2) להעביר במסנן מעבר-נמוך אידיאלי עם תדר חיתוך $\\frac{\\omega_s}2\\,(=\\omega_m)$ והגבר $2T_s$.\n\n**נימוק.** לכל $0\\le\\omega\\le\\frac{\\omega_s}2$: $Z^F(\\omega+\\frac{\\omega_s}2)=\\frac1{T_s}X^F(\\omega)$, ואילו $Z^F(\\omega-\\frac{\\omega_s}2)=0$ (כי $|\\omega-\\frac{\\omega_s}2|<\\frac{\\omega_s}2$ מחוץ לפס של $H$). לכן בפלט $\\frac{1}{2T_s}X^F(\\omega)$; ל-$\\omega<0$ מקבלים את אותו הדבר מסימטריה (האות ממשי: $Z^F(-\\omega)=\\overline{Z^F(\\omega)}$). אחרי הגבר $2T_s$ מתקבל $X^F(\\omega)$, כלומר $x(t)$ משוחזר במלואו. לא נוצר aliasing כי אין חפיפה בין העותקים (סעיף ב').\n\n**בדיקה בעזרת הנוסחה מסעיף ג.1:** $Z^F(\\omega+\\frac{\\omega_s}2)=\\frac{|\\omega-\\frac{\\omega_s}2|}{\\pi}=\\frac{\\omega_m-\\omega}{\\pi}=\\frac{1}{T_s}\\big(1-\\frac{\\omega}{\\omega_m}\\big)=\\frac1{T_s}X^F(\\omega)$ ✓."
+    },
+    {
+     "label": "ד",
+     "points": 9,
+     "text": "יש לחזור על סעיף ג' עבור האות הבא (כאשר המסנן וערכו של $T_s$ נותרים ללא שינוי): $|X^F(\\omega)|$ הוא משולש סימטרי בגובה מרבי ב-$\\omega=0$ ובעל תומך $[-2\\omega_m,2\\omega_m]$ (ראו איור).",
+     "box": [
+      90,
+      935,
+      830,
+      1120
+     ],
+     "lines": 1,
+     "solution": "**מוסכמות.** $\\omega$ בנות רדיאן לשנייה, $\\omega_s=2\\pi/T_s$, התמרת פוריה $X^F(\\omega)=\\int x(t)e^{-j\\omega t}dt$; $y(t)=x(t)q_T(t)$, ולכן $Y^F=\\frac1{2\\pi}X^F*Q_T^F$.\n\n**נתונים.** כעת $X^F(\\omega)=1-\\frac{|\\omega|}{2\\omega_m}=1-\\frac{|\\omega|}{\\omega_s}$ עבור $|\\omega|\\le2\\omega_m=\\omega_s$ (הנחה: $X^F(0)=1$), ו-$T_s,H$ ללא שינוי ($\\omega_s=2\\omega_m$).\n\n**$Y^F$.** עותקי המשולש (רוחב חצי-בסיס $\\omega_s$) ממורכזים ב-$\\pm\\frac{\\omega_s}2,\\pm\\frac{3\\omega_s}2,\\dots$ במרווחים $\\omega_s$, ולכן עכשיו הם **חופפים**: כל נקודה מכוסה בשני משולשים. זהו אוסף משולשים שסכומם קבוע (הממוצע של שני הצלעות: ירידה לינארית של אחד שווה לעלייה לינארית של האחר), ולכן\n$$Y^F(\\omega)=\\frac{1}{T_s}=\\frac{\\omega_s}{2\\pi}\\quad\\text{לכל }\\omega\\quad(\\text{קו אופקי}).$$\n(למשל ב-$\\omega=\\frac{\\omega_s}2$: משולש אחד בשיאו, 1, והסמוכים נותנים 0.)\n\n**$Z^F$.** אחרי המסנן:\n$$Z^F(\\omega)=\\begin{cases}\\dfrac{\\omega_s}{2\\pi}&\\frac{\\omega_s}2\\le|\\omega|\\le\\frac{3\\omega_s}2\\\\0&\\text{אחרת}\\end{cases}$$\nכלומר שני מלבנים בגובה $\\frac{\\omega_s}{2\\pi}$ סביב $\\pm\\omega_s$.\n\n**שחזור: לא ניתן.** ברוחב הפס $2\\omega_m=\\omega_s$ של האות, הדגימה ($\\omega_s=2\\omega_m$) נמוכה מדי: דרוש $\\omega_s\\ge 2\\cdot 2\\omega_m=4\\omega_m$ (אותו תנאי של סעיף ב' עם $2\\omega_m$ בתפקיד $\\omega_m$). בתחום $[\\frac{\\omega_s}2,\\frac{3\\omega_s}2]$ מתקבל רק הסכום $\\frac1{T_s}\\big[X^F(\\omega-\\tfrac{\\omega_s}2)+X^F(\\omega-\\tfrac{3\\omega_s}2)\\big]$ של שני עותקים חופפים, ואי אפשר להפריד אותם. הוכחה: גם לאות אחר, $x'(t)$ עם $X'^F(\\omega)=\\frac12$ לכל $|\\omega|\\le\\omega_s$ (ממשי וזוגי), מתקבל אותו סכום $\\frac12+\\frac12=1$ ולכן אותו $Z^F$ בדיוק. אותו $z(t)$ נובע משני אותות שונים, ולכן $x(t)$ אינו ניתן לשחזור מתוך $z(t)$ (aliasing: השכפולים חופפים ומתקפלים זה על זה)."
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "points": 30,
+   "topics": [
+    "t11",
+    "t12"
+   ],
+   "stem": "א. מעוניינים לתכנן מסנן FIR אשר קבוצת אפסיו תכיל **לפחות** את קבוצת האפסים הבאים: $z_1=1,\\ z_2=\\frac12e^{j\\frac\\pi3},\\ z_3=\\frac12e^{j\\frac\\pi2}$. (ניקוד סעיף א': 10%, כולל תתי-סעיפים a, b, c)",
+   "figures": [
+    "דיאגרמת בלוקים: $x[n]$ נכנס ל-$H_1^Z(z)$, ואחריו $H_2^Z(z)$ בטור, ומוצא $y[n]$ (מופיע בסעיף ב)"
+   ],
+   "regions": [
+    {
+     "page": 3,
+     "view": [
+      910,
+      1287
+     ],
+     "box": [
+      90,
+      124,
+      830,
+      240
+     ]
+    }
+   ],
+   "page": 3,
+   "view": [
+    910,
+    1287
+   ],
+   "subs": [
+    {
+     "label": "א1",
+     "text": "(a) מצא/י פונקציית תמסורת $H_1^Z(z)$ בעלת סדר מינימלי כך שהמסנן המבוקש יהיה FIR, סיבתי, וממשי.",
+     "box": [
+      90,
+      248,
+      830,
+      280
+     ],
+     "lines": 1,
+     "solution": "**מוסכמות.** $\\theta$ תדר בדיד ברדיאן לדגימה, $H^f(\\theta)=H^Z(e^{j\\theta})$. מסנן FIR סיבתי מסדר $K$ מייצג $H^Z(z)=A\\prod_{i=1}^K(1-z_iz^{-1})$ עם $K$ אפסים ו-$K$ קטבים בראשית.\n\n**(a)** מסנן ממשי: המקדמים ממשיים, ולכן האפסים מרוכבים בזוגות צמודים. $z_1=1$ ממשי, אך $z_2=\\frac12e^{j\\pi/3}$ ו-$z_3=\\frac12e^{j\\pi/2}$ מרוכבים, ולכן נדרשים גם $z_4=z_2^*=\\frac12e^{-j\\pi/3}$ ו-$z_5=z_3^*=\\frac12e^{-j\\pi/2}$. מינימום 5 אפסים (סדר 5):\n$$H_1^Z(z)=A(1-z^{-1})\\Big(1-\\tfrac12e^{j\\pi/3}z^{-1}\\Big)\\Big(1-\\tfrac12e^{-j\\pi/3}z^{-1}\\Big)\\Big(1-\\tfrac12e^{j\\pi/2}z^{-1}\\Big)\\Big(1-\\tfrac12e^{-j\\pi/2}z^{-1}\\Big).$$\nכל זוג צמוד נותן פולינום ממשי: $1-2\\cdot\\frac12\\cos\\frac\\pi3\\,z^{-1}+\\frac14z^{-2}=1-\\frac12z^{-1}+\\frac14z^{-2}$ ו-$1-\\cos\\frac\\pi2\\,z^{-1}+\\frac14z^{-2}=1+\\frac14z^{-2}$. אז\n$$\\Big(1-\\tfrac12z^{-1}+\\tfrac14z^{-2}\\Big)\\Big(1+\\tfrac14z^{-2}\\Big)=1-\\tfrac12z^{-1}+\\tfrac12z^{-2}-\\tfrac18z^{-3}+\\tfrac1{16}z^{-4},$$\nולאחר הכפלה ב-$(1-z^{-1})$:\n$$\\boxed{H_1^Z(z)=A\\Big(1-\\tfrac32z^{-1}+z^{-2}-\\tfrac58z^{-3}+\\tfrac3{16}z^{-4}-\\tfrac1{16}z^{-5}\\Big)}$$\nכאשר $A$ ממשי כלשהו (למשל $A=1$).\n\n**בדיקה:** סכום המקדמים $=1-1.5+1-0.625+0.1875-0.0625=0$, כנדרש מאפס ב-$z=1$ ✓."
+    },
+    {
+     "label": "א2",
+     "text": "(b) שרטט/י את מפת האפסים והקטבים של המסנן.",
+     "box": [
+      90,
+      286,
+      830,
+      314
+     ],
+     "lines": 1,
+     "solution": "**מוסכמות.** $\\theta$ תדר בדיד ברדיאן לדגימה, $H^f(\\theta)=H^Z(e^{j\\theta})$. מסנן FIR סיבתי מסדר $K$ מייצג $H^Z(z)=A\\prod_{i=1}^K(1-z_iz^{-1})$ עם $K$ אפסים ו-$K$ קטבים בראשית.\n\n**מפת אפסים וקטבים.**\n\n- **אפסים (5):** $z=1$; $z=\\frac12e^{\\pm j\\pi/3}=\\frac14\\pm j\\frac{\\sqrt3}4$ (רדיוס $\\frac12$, זווית $\\pm60^\\circ$); $z=\\pm\\frac j2$ (רדיוס $\\frac12$, זווית $\\pm90^\\circ$).\n- **קטבים:** קוטב מריבוי 5 ב-$z=0$ (כי $H_1^Z(z)=A\\,z^{-5}\\cdot$ פולינום מדרגה 5 ב-$z$).\n\nארבעת האפסים המרוכבים נמצאים בתוך מעגל היחידה, והאפס הממשי $z=1$ ממש על מעגל היחידה."
+    },
+    {
+     "label": "א3",
+     "text": "(c) העזר/י במפה מסעיף קודם על מנת לשרטט סקיצה (לא מדויקת) של אמפליטודת תגובת התדר של מסנן זה, $|H_1^f(\\theta)|$. איזה סוג מסנן התקבל? (HPF/BPF/LPF).",
+     "box": [
+      90,
+      320,
+      830,
+      386
+     ],
+     "lines": 2,
+     "solution": "**מוסכמות.** $\\theta$ תדר בדיד ברדיאן לדגימה, $H^f(\\theta)=H^Z(e^{j\\theta})$. מסנן FIR סיבתי מסדר $K$ מייצג $H^Z(z)=A\\prod_{i=1}^K(1-z_iz^{-1})$ עם $K$ אפסים ו-$K$ קטבים בראשית.\n\n**ניתוח.** $|H_1^f(\\theta)|=|A|\\prod|e^{j\\theta}-z_i|/|e^{j\\theta}|^5$, כלומר מכפלת מרחקי הנקודה $e^{j\\theta}$ על מעגל היחידה מכל האפסים.\n\n- ב-$\\theta=0$ ($z=1$) יש אפס על מעגל היחידה: $|H_1^f(0)|=0$.\n- האפסים האחרים ברדיוס $\\frac12$ בלבד (רחוקים מהמעגל), ולכן יוצרים רק שקעים רדודים סביב $\\theta=\\pm\\frac\\pi3,\\pm\\frac\\pi2$.\n- ככל ש-$\\theta$ גדל לכיוון $\\pi$ מתרחקים מכל האפסים: ב-$\\theta=\\pi$ ($z=-1$): $|H_1^f(\\pi)|=|A|\\cdot2\\cdot1.75\\cdot1.25=4.375|A|$.\n\nערכים לדוגמה (ל-$A=1$): $|H_1^f(0)|=0$, $|H_1^f(\\pi/3)|\\approx0.60$, $|H_1^f(\\pi/2)|\\approx0.96$, $|H_1^f(\\pi)|=4.375$.\n\n**סקיצה ($0\\le\\theta\\le\\pi$, זוגית):** מתחילה ב-0 ב-$\\theta=0$, עולה בהדרגה (עם \"כתף\"/שקע קל סביב $\\theta\\approx1$–$1.5$), ועולה בתלילות עד מקסימום ב-$\\theta=\\pi$.\n\n**תשובה:** מסנן **HPF** (מעביר גבוהים): מדכא תדרים נמוכים (אפס ב-DC) ומעביר את הגבוהים."
+    },
+    {
+     "label": "ב",
+     "points": 10,
+     "text": "כעת מחברים מסנן זה למסנן FIR נוסף עם פונקציית תמסורת $H_2^Z(z)$ באופן הבא: $x[n]\\to H_1^Z(z)\\to H_2^Z(z)\\to y[n]$. נסמן: $Y^Z(z)=H^Z(z)X^Z(z)$ כאשר $H^Z(z)$ הינה התגובה השקולה. מצא/י את פונקציית התמסורת של המסנן $H_2^Z(z)$ בעל סדר מינימלי כך שהתגובה השקולה $H^Z(z)$ תיצור מסנן FIR, סיבתי, ממשי ובעל פאזה ליניארית (כלומר $H^f(\\theta)=A(\\theta)e^{j\\tau\\theta}$, $A(\\theta)$ ממשית).",
+     "box": [
+      90,
+      398,
+      830,
+      655
+     ],
+     "lines": 4,
+     "solution": "**מוסכמות.** $\\theta$ תדר בדיד ברדיאן לדגימה, $H^f(\\theta)=H^Z(e^{j\\theta})$. מסנן FIR סיבתי מסדר $K$ מייצג $H^Z(z)=A\\prod_{i=1}^K(1-z_iz^{-1})$ עם $K$ אפסים ו-$K$ קטבים בראשית.\n\n**תנאי לפאזה ליניארית.** $H^Z(z)=H_1^Z(z)H_2^Z(z)$ FIR סיבתי וממשי בעל פאזה ליניארית אם ורק אם קבוצת האפסים סגורה להיפוך: לכל אפס $z_0$ גם $1/z_0$ הוא אפס (כלומר אפסים מופיעים ב\"רביעיות\" $z_0,z_0^*,\\frac1{z_0},\\frac1{z_0^*}$; אפס ב-$z=\\pm1$ מספיק בודד).\n\n**אפסי $H_1^Z$:** $1$ (מקיים $1/1=1$, אינו דורש זוג), $\\frac12e^{\\pm j\\pi/3}$, $\\frac12e^{\\pm j\\pi/2}$. האפסים $\\frac12e^{\\pm j\\pi/3}$ זקוקים לאפסים ההפוכים $\\frac1{z_0^*}=2e^{\\pm j\\pi/3}$, ו-$\\frac12e^{\\pm j\\pi/2}$ זקוקים ל-$2e^{\\pm j\\pi/2}$. לכן בסדר מינימלי $H_2^Z$ מכיל בדיוק ארבעה אפסים:\n$$z=2e^{\\pm j\\pi/3},\\ 2e^{\\pm j\\pi/2}.$$\n$$\\boxed{H_2^Z(z)=\\Big(1-2e^{j\\pi/3}z^{-1}\\Big)\\Big(1-2e^{-j\\pi/3}z^{-1}\\Big)\\Big(1-2e^{j\\pi/2}z^{-1}\\Big)\\Big(1-2e^{-j\\pi/2}z^{-1}\\Big)=\\big(1-2z^{-1}+4z^{-2}\\big)\\big(1+4z^{-2}\\big)}$$\n(עד כדי הגבר קבוע ממשי), סדר $4$. סדר קטן יותר אינו אפשרי: כל אחד מארבעת האפסים ההפוכים חייב להופיע.\n\n**בדיקה:** האפסים של $H^Z$ הם $1;\\ \\frac12e^{\\pm j\\pi/3},2e^{\\pm j\\pi/3};\\ \\frac12e^{\\pm j\\pi/2},2e^{\\pm j\\pi/2}$ — סגורים להיפוך, בסדר כולל 9 ($H^Z$ בעל 10 מקדמים, מסנן אנטי-סימטרי עקב האפס ב-$z=1$)."
+    },
+    {
+     "label": "ג",
+     "points": 6,
+     "text": "בסעיף זה בלבד נתון כי $H_2^Z(z)=\\dfrac{1}{1-\\frac12e^{j\\frac\\pi3}z^{-1}}$. שרטט/י את מפת האפסים והקטבים של המסנן הכולל $H^Z(z)$. האם זהו מסנן FIR או IIR?",
+     "box": [
+      90,
+      672,
+      830,
+      782
+     ],
+     "lines": 2,
+     "solution": "**מוסכמות.** $\\theta$ תדר בדיד ברדיאן לדגימה, $H^f(\\theta)=H^Z(e^{j\\theta})$. מסנן FIR סיבתי מסדר $K$ מייצג $H^Z(z)=A\\prod_{i=1}^K(1-z_iz^{-1})$ עם $K$ אפסים ו-$K$ קטבים בראשית.\n\n$H^Z(z)=H_1^Z(z)H_2^Z(z)$ עם $H_2^Z(z)=\\dfrac1{1-\\frac12e^{j\\pi/3}z^{-1}}$. הקוטב של $H_2^Z$ ב-$z=\\frac12e^{j\\pi/3}$ מבטל את האפס $z_2=\\frac12e^{j\\pi/3}$ של $H_1^Z$:\n$$H^Z(z)=A(1-z^{-1})\\Big(1-\\tfrac12e^{-j\\pi/3}z^{-1}\\Big)\\Big(1-\\tfrac12e^{j\\pi/2}z^{-1}\\Big)\\Big(1-\\tfrac12e^{-j\\pi/2}z^{-1}\\Big).$$\n**מפת אפסים וקטבים של המסנן הכולל:**\n\n- **אפסים (4):** $z=1$, $z=\\frac12e^{-j\\pi/3}$, $z=\\frac j2$, $z=-\\frac j2$.\n- **קטבים:** קוטב מריבוי 4 ב-$z=0$ בלבד (חמשת הקטבים בראשית של $H_1^Z$ ועוד האפס ב-0 של $H_2^Z$, בניכוי: $5-1=4$). הקוטב ב-$\\frac12e^{j\\pi/3}$ התבטל.\n\n**תשובה:** המסנן הכולל הוא **FIR** (כל הקטבים בראשית, מתקבל פולינום ב-$z^{-1}$ מדרגה 4); הוא איבד את הצמידות המרוכבת (האפס $\\frac12e^{j\\pi/3}$ נעלם) ולכן אינו ממשי, אך זה אינו נדרש בסעיף."
+    },
+    {
+     "label": "ד",
+     "points": 4,
+     "text": "בסעיף זה בלבד נתון כי $H_1^f(\\theta)=H_2^f(\\theta)=\\begin{cases}-j&0\\le\\theta<\\pi\\\\ j&-\\pi\\le\\theta<0\\end{cases}$, כלומר המסננים לא ממשיים. מה יהיה המוצא $y[n]$ עבור אות הכניסה $x[n]=\\delta[n]+5\\delta[n-1]$?",
+     "box": [
+      90,
+      796,
+      830,
+      900
+     ],
+     "lines": 2,
+     "solution": "**מוסכמות.** $\\theta$ תדר בדיד ברדיאן לדגימה, $H^f(\\theta)=H^Z(e^{j\\theta})$. מסנן FIR סיבתי מסדר $K$ מייצג $H^Z(z)=A\\prod_{i=1}^K(1-z_iz^{-1})$ עם $K$ אפסים ו-$K$ קטבים בראשית.\n\n**הנתון:** $H_1^f(\\theta)=H_2^f(\\theta)=\\begin{cases}-j&0\\le\\theta<\\pi\\\\ j&-\\pi\\le\\theta<0\\end{cases}$ (מסנן הזזת פאזה ב-$\\mp90^\\circ$, מסנן הילברט).\n\n**התגובה הכוללת (מכפלה):**\n$$H^f(\\theta)=H_1^f(\\theta)H_2^f(\\theta)=\\begin{cases}(-j)^2=-1&0\\le\\theta<\\pi\\\\ j^2=-1&-\\pi\\le\\theta<0\\end{cases}\\;=\\;-1\\quad\\forall\\theta .$$\nכלומר המערכת הכוללת היא היפוך סימן: $H^Z(z)\\equiv-1$ ו-$y[n]=-x[n]$:\n$$\\boxed{y[n]=-x[n]=-\\delta[n]-5\\delta[n-1]}$$\n\n**בדיקה:** שני הזזות של $-90^\\circ$ נותנות הזזה של $-180^\\circ$, כלומר $-1$ ✓."
+    }
+   ]
+  }
+ ]
+}
