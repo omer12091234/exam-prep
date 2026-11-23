@@ -3530,79 +3530,40 @@
    "has_solution": true,
    "questions": [
     {
-     "num": "1א",
-     "description": "\\(x(t)\\) עם \\(X(j\\omega)=0\\) ל-\\(|\\omega|\\ge\\pi/T\\); \\(y(t)=\\tfrac1{T^2}\\int x(\\tau)\\int\\mathrm{sinc}(\\tfrac{t'-\\tau}{T})\\sum_n\\mathrm{sinc}(\\tfrac{t'-nT}{T})\\Pi(\\tfrac{t-nT}{T})dt'd\\tau\\). לפתח ביטוי פשוט ל-\\(y(t)\\) כתלות ב-\\(x(t)\\) (מתקבל שחזור ZOH של הדגימות).",
+     "num": "1",
+     "description": "",
      "topics": [
-      "t3",
-      "t2"
-     ],
-     "difficulty": 3
-    },
-    {
-     "num": "1ב-ג",
-     "description": "לתת דוגמה ל-\\(x(t)\\not\\equiv0\\) שעבורו \\(y(t)=x(t)\\) לכל \\(t\\) (או להוכיח שאין), ולפתח ביטוי במישור הזמן לחישוב \\(x(t)\\) מתוך \\(y(t)\\).",
-     "topics": [
+      "t2",
       "t3"
      ],
      "difficulty": 3
     },
     {
-     "num": "2א",
-     "description": "אם \\(X[k]\\) ממשית – איזו תכונה מקיימת \\(x[n]\\)? ואם בנוסף \\(X[k]=X[N-k]\\)? להוכיח.",
+     "num": "2",
+     "description": "",
      "topics": [
-      "t6"
+      "t6",
+      "t7"
      ],
-     "difficulty": 1
+     "difficulty": 3
     },
     {
-     "num": "2ב",
-     "description": "\\(y[n]\\) היא ה-DFT (לא IDFT) של הסדרה \\(X[k]\\). לפתח ביטוי פשוט ל-\\(y[n]\\) כתלות ב-\\(x[n]\\).",
-     "topics": [
-      "t6"
-     ],
-     "difficulty": 2
-    },
-    {
-     "num": "2ג",
-     "description": "\\(w[n]\\) מתקבלת מהפעלת DFT \\(P\\) פעמים בשרשרת על \\(x[n]\\). מהו \\(P\\) המינימלי שעבורו \\(w[n]=Ax[n]\\) עם \\(A\\) קבוע, ומהו \\(A\\)?",
-     "topics": [
-      "t6"
-     ],
-     "difficulty": 2
-    },
-    {
-     "num": "3א",
-     "description": "לפתח ביטוי לשלב אחד של FFT Radix-2: עם \\(x_i[m]=x[2m+i]\\), \\(i=0,1\\), לבטא את ה-DFT של \\(x[n]\\) בעזרת ה-DFT של \\(x_0,x_1\\).",
-     "topics": [
-      "t8"
-     ],
-     "difficulty": 1
-    },
-    {
-     "num": "3ב",
-     "description": "עבור הוקטור \\(\\mathbf x=[x_0[0..\\tfrac N2-1],x_1[0..\\tfrac N2-1]]^T\\): לפתח את המטריצה \\(A\\) המקיימת \\(\\mathbf X=A\\mathbf x\\) בעזרת קשרי סעיף א׳.",
+     "num": "3",
+     "description": "",
      "topics": [
       "t8",
       "t6"
      ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
-     "num": "4א",
-     "description": "קונבולוציה לינארית בשיטת Overlap-Add עם FFT/IFFT באורך \\(N=9\\) (Radix-3), \\(L_x=5\\), \\(L_y=15\\): לחשב את המוצא עם הסבר מפורט של כל שלב (המבוקש המדויק לא חד בסריקה).",
+     "num": "4",
+     "description": "",
      "topics": [
       "t9",
       "t8"
      ],
-     "difficulty": 2
-    },
-    {
-     "num": "4ב",
-     "description": "להציג קוד MATLAB למימוש השיטה של סעיף א׳ תוך שימוש בפקודת fft באורך 9 בלבד.",
-     "topics": [
-      "t9"
-     ],
-     "difficulty": 2
+     "difficulty": 3
     }
    ]
   },
