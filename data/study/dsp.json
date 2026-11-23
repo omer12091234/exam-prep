@@ -1803,100 +1803,109 @@
    "has_solution": true,
    "questions": [
     {
-     "num": "א1",
-     "description": "מספר המכפלות הממשיות המינימלי ל-DFT של אות ממשי ואי-זוגי באורך ראשוני (ניצול סימטריה, ללא FFT).",
+     "num": "1",
+     "description": "",
      "topics": [
       "t6",
       "t8"
      ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
-     "num": "א2",
-     "description": "פונקציית MATLAB שבונה מטריצה צירקולנטית מוקטור: אילו תכונות נכונות (לכסון ע\"י DFT, הפיכות, סימטריה).",
+     "num": "2",
+     "description": "",
      "topics": [
-      "t7",
-      "t6"
+      "t6",
+      "t7"
      ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
-     "num": "א3",
-     "description": "מסנן שאפסיו ב-\\(1/\\alpha,1/\\alpha^*,\\beta,\\beta^*\\) וקטביו ההופכיים: All-pass, סיבתיות ויציבות.",
+     "num": "3",
+     "description": "",
      "topics": [
-      "t11",
+      "t11"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "4",
+     "description": "",
+     "topics": [
+      "t5",
       "t12"
      ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
-     "num": "א4",
-     "description": "קירוב שלושה מסננים אידיאליים ע\"י קטיעת התגובה להלם ל-FIR: השוואת אנרגיות השגיאה (פרסבל ומודולציה).",
+     "num": "5",
+     "description": "",
      "topics": [
-      "t12",
+      "t4"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "6",
+     "description": "",
+     "topics": [
+      "t10"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "7",
+     "description": "",
+     "topics": [
+      "t3"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "8",
+     "description": "",
+     "topics": [
+      "t6",
+      "t7"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "9",
+     "description": "",
+     "topics": [
+      "t6",
+      "t7"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "10",
+     "description": "",
+     "topics": [
+      "t5",
+      "t7"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "11",
+     "description": "",
+     "topics": [
+      "t2",
+      "t3",
       "t5"
      ],
      "difficulty": 3
     },
     {
-     "num": "א5",
-     "description": "תדר דגימה מינימלי לאות לא ממשי המורכב מאות מאופנן ואות חד-צדדי.",
+     "num": "12",
+     "description": "",
      "topics": [
-      "t4",
-      "t2"
-     ],
-     "difficulty": 2
-    },
-    {
-     "num": "א6",
-     "description": "הפרדת שני קוסינוסים בעוצמות \\(6\\) ו-\\(0.01\\): חלון מלבני 16 דגימות מול Hamming 32 דגימות עם DFT באורך 16.",
-     "topics": [
-      "t10"
-     ],
-     "difficulty": 2
-    },
-    {
-     "num": "א7",
-     "description": "שחזור מדרגות (ZOH): איזה עיוות מקדים \\(Y^F\\) מביא את שגיאת השחזור בפס למינימום (פיצוי ה-sinc וההשהיה).",
-     "topics": [
-      "t3"
-     ],
-     "difficulty": 2
-    },
-    {
-     "num": "א8-9",
-     "description": "\\(c=x\\circledast x\\circledast x\\) כקשר מטריצי – הערכים העצמיים הם \\((X^d[k])^2\\); וחישוב סכום \\(\\sum X^d[k]Y^d[k]e^{j\\cdot}\\) כערך של קונבולוציה מעגלית.",
-     "topics": [
-      "t7",
-      "t6"
-     ],
-     "difficulty": 2
-    },
-    {
-     "num": "א10",
-     "description": "מתי ה-DFT של דגימות האות שווה לדגימות של סכום שכפולי \\(X^F\\) (אות מוגבל בזמן / מחזורי).",
-     "topics": [
-      "t5",
-      "t6"
-     ],
-     "difficulty": 2
-    },
-    {
-     "num": "ב1",
-     "description": "מערכת דגימה עם מסנן מקדים \\(h_1\\), רכבת הלמים ושחזור משולש \\(h_2=\\Lambda(t/T)\\) (FOH): דוגמה נגדית לטענה על תנאי נייקוויסט, שחזור \\(x\\) מ-\\(z\\), שחזור מקדמי \\(\\mathrm{sinc}^2\\) מדגימות, וערכי \\(t_0\\) עבור \\(h_1=\\delta(t-t_0)+2\\delta(t+t_0)\\).",
-     "topics": [
-      "t2",
-      "t3"
-     ],
-     "difficulty": 3
-    },
-    {
-     "num": "ב2",
-     "description": "מסנן FIR ממשי עם \\(N+1\\) מקדמים מסוג \\(\\cos(\\cdot)/(n-N/2)\\): מספר קטבים ואפסים, הצגה עם פאזה רציפה, פאזה לינארית מוכללת והשהיית חבורה, והתאמה כ-LPF.",
-     "topics": [
+      "t11",
       "t12"
      ],
-     "difficulty": 2
+     "difficulty": 3
     }
    ]
   },
