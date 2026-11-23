@@ -2321,74 +2321,24 @@
    "has_solution": false,
    "questions": [
     {
-     "num": "1א",
-     "description": "אות \\(x(t)\\) חסום סרט \\(\\omega_m\\) נדגם בקצב \\(\\omega_s=2\\pi/T=8\\omega_m\\) לקבלת \\(x_s[n]\\), שידוע כי הוא מחזורי עם \\(N=20\\). מגדירים \\(z[n]=\\cos(\\theta_0 n)\\), \\(\\theta_0=9\\pi/10\\), ו-\\(y[n]=x_s[n]+z[n]\\). יש לרשום ביטוי ל-\\(X(e^{j\\theta})\\) ו-\\(Y(e^{j\\theta})\\) ולשרטט אותם ב-\\([-\\pi,\\pi]\\).",
+     "num": "1",
+     "description": "",
      "topics": [
       "t2",
-      "t5"
-     ],
-     "difficulty": 2
-    },
-    {
-     "num": "1ב",
-     "description": "מערכת בעלת תגובה להלם \\(g(t)=A\\left(1+2\\cos(\\tfrac{2\\pi}{\\Delta}t)\\right)\\mathrm{sinc}^2(t/\\Delta)\\): יש למצוא את \\(G^F(\\omega)\\) ולשרטט אותו (משולשים מוזזים).",
-     "topics": [
-      "t1",
-      "t3"
-     ],
-     "difficulty": 2
-    },
-    {
-     "num": "1ג",
-     "description": "מגדירים \\(\\hat x(t)=y(t)*g(t)\\). יש לרשום תנאים על \\(A,\\Delta\\) כך ש-\\(\\hat x(t)\\) יהיה שחזור אידיאלי של \\(x(t)\\), כלומר \\(\\hat x(t)\\equiv x(t)\\).",
-     "topics": [
       "t3",
-      "t2"
+      "t5"
      ],
      "difficulty": 3
     },
     {
-     "num": "1ד",
-     "description": "(לפי השחזור, ללא הנוסח המדויק) ניתנו 3 פונקציות תמסורת; נדרש למצוא לכל אחת קטבים ואפסים, לבחור את בעלת השהיית החבורה המינימלית ולצייר דיאגרמת בלוקים.",
+     "num": "2",
+     "description": "",
      "topics": [
-      "t11",
-      "t12"
-     ],
-     "difficulty": 2
-    },
-    {
-     "num": "2א",
-     "description": "נתון \\(x[n]=a^n u[n]\\), \\(|a|\\lt 1\\), ומגדירים \\(y[n]=\\sum_{r=-\\infty}^{\\infty}x[n+rN]\\). יש לחשב את \\(X(e^{j\\theta})\\).",
-     "topics": [
-      "t5"
-     ],
-     "difficulty": 1
-    },
-    {
-     "num": "2ב",
-     "description": "האם \\(y[n]\\) מחזורי? אם כן – למצוא את זמן המחזור, ואם לא – לנמק.",
-     "topics": [
+      "t5",
+      "t6",
       "t7"
      ],
-     "difficulty": 1
-    },
-    {
-     "num": "2ג",
-     "description": "מציאת מקדמי פורייה \\(c_k\\) של \\(y[n]\\).",
-     "topics": [
-      "t7",
-      "t6"
-     ],
-     "difficulty": 2
-    },
-    {
-     "num": "2ד",
-     "description": "מציאת \\(c_k\\) באמצעות \\(X(e^{j\\theta})\\) – הקשר בין שכפול מחזורי בזמן לדגימת ה-DTFT בתדר.",
-     "topics": [
-      "t7",
-      "t5"
-     ],
-     "difficulty": 2
+     "difficulty": 3
     }
    ]
   },

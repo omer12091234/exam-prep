@@ -1,0 +1,181 @@
+{
+ "exam": {
+  "match_title": "שחזור מועד א׳ קיץ 2024 (יקיר חדד) – שחזור סטודנטים בכתב יד",
+  "drive_file_id": "1I1pfYEcC_zDPDQpJ2b1BSV2N6pDZDfRS",
+  "source_title": "שחזור מועד א.pdf",
+  "lecturer": "יקיר חדד",
+  "year": 2024,
+  "notes": "שחזור סטודנטים בכתב יד (עמוד אחד, שאלון בלבד, ללא פתרון). הנוסח, הסימונים ושמות הסעיפים נקראו מכתב יד ועלולים להיות שונים מהמבחן המקורי. סעיף ד' בשאלה 1 כמעט לא קריא ולכן אינו משוחזר. הוסכם $\\mathrm{sinc}(u)=\\sin(\\pi u)/(\\pi u)$ וש-$y(t)$ בשאלה 1 הוא רכבת הלמים של $y[n]$. הקובץ מכיל רק שתי שאלות; האינדקס מציין 8 שאלות, כך שייתכן שהשחזור חלקי."
+ },
+ "questions": [
+  {
+   "number": 1,
+   "topics": [
+    "t2",
+    "t3",
+    "t5"
+   ],
+   "stem": "נתון אות $x(t)$ חסום סרט ב-$\\omega_m$. האות נדגם כדי לקבל $x_s[n]$ בקצב $\\omega_s=\\frac{2\\pi}{T}=8\\omega_m$. ידוע ש-$x_s[n]$ מחזורי בעל מחזור $N=20$. נגדיר אות $z[n]=\\cos(\\theta_0 n)$ כאשר $\\theta_0=\\frac{9\\pi}{10}$, ונגדיר $y[n]=x_s[n]+z[n]$.",
+   "figures": [],
+   "regions": [
+    {
+     "page": 1,
+     "view": [
+      935,
+      1228
+     ],
+     "box": [
+      20,
+      25,
+      925,
+      240
+     ]
+    }
+   ],
+   "page": 1,
+   "view": [
+    935,
+    1228
+   ],
+   "review": "נוסח פתיחת השאלה בכתב יד; לא ודאי: 'חסום סרט ב-ω_m', 'מחזורי בעל מחזור N=20'.",
+   "subs": [
+    {
+     "label": "א",
+     "text": "רשמו ביטוי עבור $X(e^{j\\theta})$, $Y(e^{j\\theta})$ ושרטטו אותן ב-$[-\\pi,\\pi]$.",
+     "box": [
+      20,
+      238,
+      925,
+      288
+     ],
+     "lines": 1,
+     "review": "לא ברור אם הכוונה ל-$X_s(e^{j\\theta})$ (התמרת הסדרה הדגומה) או ל-$X(e^{j\\theta})$ כפי שנכתב; פורש כהתמרת הסדרה $x_s[n]$.",
+     "solution": "**מוסכמות.** $\\theta=\\omega T$ (רדיאן/דגימה), $x_s[n]=x(nT)$. בסעיף זה $X(e^{j\\theta})$ מסמן את ה-DTFT של $x_s[n]$ (כך פורש הסימון בשאלה).\n\n**תחום התדר של $x_s$.** קצב הדגימה $\\omega_s=8\\omega_m$ אינו גורם ל-aliasing, ולכן ב-$[-\\pi,\\pi]$ ההתמרה מרוכזת סביב $0$ ברוחב\n$$\\theta_m=\\omega_m T=2\\pi\\frac{\\omega_m}{\\omega_s}=\\frac{\\pi}{4}.$$\n\n**$x_s[n]$ מחזורי** עם $N=20$, ולכן ההתמרה שלו היא רכבת הלמים במרווחי $\\frac{2\\pi}{20}=\\frac{\\pi}{10}$:\n$$X(e^{j\\theta})=2\\pi\\sum_{k}a_k\\,\\delta\\!\\left(\\theta-\\frac{2\\pi k}{20}\\right),\\qquad a_k=\\frac1{20}\\sum_{n=0}^{19}x_s[n]e^{-j2\\pi kn/20},$$\nכאשר $a_k$ הם מקדמי טור פורייה בדיד של $x_s$ ($a_k$ מחזורי ב-$k$ עם מחזור $20$).\n\n**אילו הלמים נשארים.** הלם בהתדר $\\frac{\\pi k}{10}$ נמצא בתחום אם $\\frac{\\pi|k|}{10}\\le\\frac\\pi4\\iff|k|\\le2.5$. לכן ב-$[-\\pi,\\pi]$ נשארים רק $k=-2,\\dots,2$, כלומר חמישה הלמים בתדרים $0,\\pm\\frac\\pi{10},\\pm\\frac{\\pi}{5}$, ומשקלם $2\\pi a_k$ (ושאר $a_k$ עם $3\\le|k|\\le10$ מתאפסים). הערה: כיוון ש-$x(t)$ אינו נתון, גבהי ההלמים נשארים כפרמטרים.\n\n**$z[n]$.** $\\cos(\\theta_0n)\\leftrightarrow\\pi\\left[\\delta(\\theta-\\theta_0)+\\delta(\\theta+\\theta_0)\\right]$ עם $\\theta_0=\\frac{9\\pi}{10}$ (מקום $k=9$ מתוך $20$, והוא מחוץ ל-$|\\theta|\\le\\frac\\pi4$).\n\n**$Y$.** בלינאריות\n$$Y(e^{j\\theta})=X(e^{j\\theta})+\\pi\\left[\\delta\\!\\left(\\theta-\\tfrac{9\\pi}{10}\\right)+\\delta\\!\\left(\\theta+\\tfrac{9\\pi}{10}\\right)\\right]\\quad(\\theta\\in[-\\pi,\\pi]).$$\n\n**שרטוט.** ל-$X$: חמישה הלמים סביב $0$ בתדרים $0,\\pm\\frac\\pi{10},\\pm\\frac\\pi5$ (גבהים $2\\pi a_k$, סימטריה צמודה $a_{-k}=a_k^*$ אם $x$ ממשי). ל-$Y$: אותם הלמים ובנוסף שני הלמים בגובה $\\pi$ ב-$\\pm\\frac{9\\pi}{10}$, קרוב לקצוות התחום."
+    },
+    {
+     "label": "ב",
+     "text": "נגדיר מערכת בעלת תגובה להלם $g(t)=A\\left(1+2\\cos\\left(\\frac{2\\pi}{\\Delta}t\\right)\\right)\\cdot\\mathrm{sinc}^2\\left(\\frac{t}{\\Delta}\\right)$. מצאו את $G^F(\\omega)$ ושרטטו אותה.",
+     "box": [
+      20,
+      300,
+      925,
+      400
+     ],
+     "lines": 2,
+     "review": "המילים 'תגובה להלם' ומוסכמת ה-sinc אינן ודאיות בכתב היד; הוסכם $\\mathrm{sinc}(u)=\\sin(\\pi u)/(\\pi u)$.",
+     "solution": "**מוסכמות.** $\\mathrm{sinc}(u)=\\frac{\\sin\\pi u}{\\pi u}$ (הנחה; השאלה בכתב יד אינה מציינת), $G^F(\\omega)=\\int g(t)e^{-j\\omega t}dt$.\n\n**שלב 1: $\\mathrm{sinc}^2$.** $\\mathrm{sinc}\\left(\\frac t\\Delta\\right)\\leftrightarrow\\Delta\\,\\mathrm{rect}\\left(\\frac{\\omega\\Delta}{2\\pi}\\right)$ (מלבן ברוחב $\\frac{2\\pi}\\Delta$, גובה $\\Delta$). ריבוע בזמן הוא קונבולוציה בתדר, ולכן\n$$h(t)=\\mathrm{sinc}^2\\!\\left(\\tfrac t\\Delta\\right)\\ \\leftrightarrow\\ H(\\omega)=\\Delta\\,\\Lambda(\\omega),\\qquad \\Lambda(\\omega)=\\max\\left(0,\\,1-\\tfrac{\\Delta|\\omega|}{2\\pi}\\right),$$\nמשולש בגובה $\\Delta$ ובחצי-רוחב $\\frac{2\\pi}\\Delta$. (בדיקה: $H(0)=\\int h\\,dt=\\Delta$.)\n\n**שלב 2: מודולציה.** $2\\cos\\left(\\frac{2\\pi}\\Delta t\\right)=e^{j\\frac{2\\pi}\\Delta t}+e^{-j\\frac{2\\pi}\\Delta t}$ מזיזה את ההתמרה:\n$$G^F(\\omega)=A\\left[H(\\omega)+H\\!\\left(\\omega-\\tfrac{2\\pi}\\Delta\\right)+H\\!\\left(\\omega+\\tfrac{2\\pi}\\Delta\\right)\\right].$$\n\n**סכום המשולשים.** המשולשים ממורכזים ב-$0,\\pm\\frac{2\\pi}\\Delta$ ובעלי חצי-רוחב $\\frac{2\\pi}\\Delta$, ולכן הם נוגעים זה בזה. עבור $0\\le\\omega\\le\\frac{2\\pi}\\Delta$ ($u=\\frac{\\omega\\Delta}{2\\pi}$) מתקבל $\\Delta[(1-u)+u]=\\Delta$. עבור $\\frac{2\\pi}\\Delta\\le\\omega\\le\\frac{4\\pi}\\Delta$ נשאר רק המשולש הימני: $\\Delta(2-u)$.\n\n**תוצאה (טרפז, זוגי):**\n$$G^F(\\omega)=\\begin{cases}A\\Delta,&|\\omega|\\le\\frac{2\\pi}\\Delta\\\\ A\\Delta\\left(2-\\frac{\\Delta|\\omega|}{2\\pi}\\right),&\\frac{2\\pi}\\Delta\\le|\\omega|\\le\\frac{4\\pi}\\Delta\\\\0,&|\\omega|\\ge\\frac{4\\pi}\\Delta\\end{cases}$$\n\n**שרטוט.** טרפז סימטרי: רמה קבועה $A\\Delta$ עד $\\pm\\frac{2\\pi}\\Delta$, ירידה לינארית ל-$0$ ב-$\\pm\\frac{4\\pi}\\Delta$."
+    },
+    {
+     "label": "ג",
+     "text": "נגדיר $\\hat x(t)=y(t)*g(t)$. רשמו תנאי על $A,\\Delta$ כך ש-$g(t)$ תבצע שחזור אידיאלי של $x(t)$, כלומר $\\hat x(t)\\equiv x(t)$.",
+     "box": [
+      20,
+      438,
+      925,
+      538
+     ],
+     "lines": 2,
+     "review": "מילים בתחילת השורה השנייה אינן קריאות היטב ('תבצע/תתאים'); לא ברור גם מהו $y(t)$ (פורש כרכבת הלמים $y(t)=\\sum_n y[n]\\delta(t-nT)$).",
+     "solution": "**הנחה.** $y(t)=\\sum_n y[n]\\,\\delta(t-nT)$ (רכבת הלמים של הסדרה $y[n]=x_s[n]+z[n]$), כלומר $\\hat x$ הוא פלט מסנן השחזור $g$.\n\n**ההתמרה של $y(t)$.**\n$$Y^F(\\omega)=\\frac1T\\sum_k X^F(\\omega-k\\omega_s)+\\underbrace{\\text{רכיבי }z}_{\\text{בתדרים }\\pm\\Omega_0+k\\omega_s},\\qquad \\Omega_0=\\frac{\\theta_0}{T}=\\frac{9\\pi}{10T}=\\frac{9}{20}\\omega_s=3.6\\,\\omega_m .$$\n\n**דרישות מ-$G^F$ (כך ש-$\\hat x=x$):**\n1. הגבר $T$ בכל $|\\omega|\\le\\omega_m$ (לשחזר את $X^F$ עם ביטול הגורם $\\frac1T$).\n2. אפס על כל העותקים של $x$, שמתחילים ב-$\\omega_s-\\omega_m=7\\omega_m$.\n3. אפס גם על רכיבי ה-$z$: ב-$\\pm3.6\\omega_m$ וב-$\\omega_s\\pm3.6\\omega_m=4.4\\omega_m,\\ 11.6\\omega_m,\\dots$. הקרוב ביותר ל-$0$ הוא $3.6\\omega_m$. (אם $\\hat x$ צריך להיות נקי מהפרעה.)\n\n**התרגום לפרמטרי סעיף ב.**\n- הגבר בתחום המעבר: $G^F=A\\Delta$ על $|\\omega|\\le\\frac{2\\pi}\\Delta$. נדרש $\\frac{2\\pi}\\Delta\\ge\\omega_m$ ו-$A\\Delta=T$.\n- אפס מעל $\\frac{4\\pi}\\Delta$: נדרש $\\frac{4\\pi}\\Delta\\le3.6\\,\\omega_m$ (מכסה גם את $7\\omega_m$ ואת שאר העותקים).\n\nמכאן $\\Delta\\ge\\frac{4\\pi}{3.6\\omega_m}=\\frac{10\\pi}{9\\omega_m}$ ו-$\\Delta\\le\\frac{2\\pi}{\\omega_m}$ (התנאי האחרון מתקיים אוטומטית לגבול העליון הזה):\n$$\\boxed{A=\\frac T\\Delta,\\qquad \\frac{10\\pi}{9\\,\\omega_m}\\le\\Delta\\le\\frac{2\\pi}{\\omega_m}}$$\nבעזרת $\\omega_m=\\frac{\\pi}{4T}$: $\\ \\frac{40}{9}T\\le\\Delta\\le8T$.\n\n**בדיקה.** עבור $\\Delta=8T$: $\\frac{2\\pi}\\Delta=\\frac{\\pi}{4T}=\\omega_m$ (קצה התחום) ו-$\\frac{4\\pi}\\Delta=2\\omega_m<3.6\\omega_m$. תקין.\n\n*הערה: אם מתעלמים מ-$z[n]$ (רק שחזור של $x_s$) התנאי על $\\Delta$ מתרחב ל-$\\frac{4\\pi}{7\\omega_m}\\le\\Delta\\le\\frac{2\\pi}{\\omega_m}$.*"
+    },
+    {
+     "label": "ד",
+     "text": "[לא קריא] נתונות 3 פונקציות תמסורת [לא קריא] ... [לא קריא] מינימלי ולצייר דוגמה [לא קריא].",
+     "box": [
+      20,
+      575,
+      925,
+      675
+     ],
+     "lines": 2,
+     "review": "הסעיף כמעט לא קריא בכתב היד: נראה שמדובר ב-3 פונקציות (תמסורת?) ובבחירת אחת מהן לפי קריטריון 'מינימלי', עם שרטוט דוגמה. הנוסח אינו משוחזר.",
+     "solution": "**פתרון חלקי – לא אומת.** נוסח הסעיף אינו קריא בקובץ (הכתב מעורפל), ולכן אי אפשר לפתור אותו בבטחה.\n\nמה שניתן לומר: לפי המילים הקריאות, הסעיף עוסק בבחירה מבין שלוש פונקציות תמסורת/מסננים לפי קריטריון מינימלי ובשרטוט דוגמה. מהתוצאות של סעיפים ב'-ג' אפשר להשתמש בתנאי $A\\Delta=T$ ו-$\\frac{10\\pi}{9\\omega_m}\\le\\Delta\\le\\frac{2\\pi}{\\omega_m}$ כדי לבדוק אילו מהמועמדים מתאימים. יש לאמת מול המקור."
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "topics": [
+    "t5",
+    "t6",
+    "t7"
+   ],
+   "stem": "נתון $\\{x[n]\\}_{n=-\\infty}^{\\infty}$ כאשר $x[n]=a^nu[n]$, $|a|<1$. נגדיר $y[n]=\\sum_{r=-\\infty}^{\\infty}x[n+rN]$.",
+   "figures": [],
+   "regions": [
+    {
+     "page": 1,
+     "view": [
+      935,
+      1228
+     ],
+     "box": [
+      20,
+      765,
+      925,
+      845
+     ]
+    }
+   ],
+   "page": 1,
+   "view": [
+    935,
+    1228
+   ],
+   "review": "סדר המשפטים בשורה הראשונה בכתב יד אינו ודאי (המיקום של 'נתון' ושל 'נגדיר').",
+   "subs": [
+    {
+     "label": "א",
+     "text": "חשבו את $X(e^{j\\theta})$.",
+     "box": [
+      20,
+      855,
+      925,
+      895
+     ],
+     "lines": 1,
+     "solution": "**מוסכמה.** $X(e^{j\\theta})=\\sum_n x[n]e^{-j\\theta n}$.\n\n$$X(e^{j\\theta})=\\sum_{n=0}^{\\infty}a^ne^{-j\\theta n}=\\sum_{n=0}^\\infty\\left(ae^{-j\\theta}\\right)^n=\\frac{1}{1-ae^{-j\\theta}}$$\nההתכנסות לכל $\\theta$ כי $|ae^{-j\\theta}|=|a|<1$. **בדיקה:** $\\theta=0$ נותן $\\sum a^n=\\frac1{1-a}$."
+    },
+    {
+     "label": "ב",
+     "text": "האם $y[n]$ מחזורי? אם כן מצאו את זמן המחזור, אם לא נמקו.",
+     "box": [
+      20,
+      908,
+      925,
+      955
+     ],
+     "lines": 1,
+     "review": "המילים 'מצאו את זמן המחזור' אינן ודאיות בכתב יד.",
+     "solution": "**כן, $y[n]$ מחזורי.** הסכום מתכנס ($|a|<1$), ושינוי $n\\to n+N$ רק מזיז את אינדקס הסכימה:\n$$y[n+N]=\\sum_r x[n+(r+1)N]=\\sum_{r'}x[n+r'N]=y[n].$$\n**הערך בפועל.** עבור $0\\le n\\le N-1$ רק $r\\ge0$ תורמים ($n+rN<0$ עבור $r<0$):\n$$y[n]=\\sum_{r\\ge0}a^{n+rN}=\\frac{a^n}{1-a^N},\\quad 0\\le n\\le N-1,$$\nוהמשך מחזורי. **זמן המחזור הוא $N$.** מחזור יסודי הוא בדיוק $N$ כי עבור $a\\neq0$ הערכים $|y[n]|$ יורדים ממש ב-$n=0,\\dots,N-1$ ולכן אין מחזור קטן יותר (עבור $a=0$ מתקבלת רכבת הלמים עם מחזור $N$)."
+    },
+    {
+     "label": "ג",
+     "text": "מצאו את מקדמי פורייה: $c_k$ של $y[n]$.",
+     "box": [
+      20,
+      965,
+      925,
+      1005
+     ],
+     "lines": 1,
+     "review": "הסימון $c_k$ והמילה 'מקדמי פורייה' קריאים חלקית.",
+     "solution": "**מוסכמה.** $y[n]=\\sum_{k=0}^{N-1}c_ke^{j\\frac{2\\pi}{N}kn}$, ולכן $c_k=\\frac1N\\sum_{n=0}^{N-1}y[n]e^{-j\\frac{2\\pi}{N}kn}$.\n\nנציב $y[n]=\\frac{a^n}{1-a^N}$ (סעיף ב'):\n$$c_k=\\frac{1}{N(1-a^N)}\\sum_{n=0}^{N-1}\\left(ae^{-j\\frac{2\\pi k}{N}}\\right)^n=\\frac{1}{N(1-a^N)}\\cdot\\frac{1-a^Ne^{-j2\\pi k}}{1-ae^{-j\\frac{2\\pi k}N}}.$$\nכיוון ש-$e^{-j2\\pi k}=1$:\n$$\\boxed{c_k=\\frac{1}{N}\\cdot\\frac{1}{1-ae^{-j\\frac{2\\pi k}{N}}}}$$\n**בדיקה:** $N=1$, $k=0$ נותן $\\frac1{1-a}$, וזה ערך הקבוע $y[n]=\\sum_{m\\ge0}a^m$."
+    },
+    {
+     "label": "ד",
+     "text": "מצאו את $c_k$ באמצעות $X(e^{j\\theta})$.",
+     "box": [
+      20,
+      1018,
+      925,
+      1060
+     ],
+     "lines": 1,
+     "review": "הנוסח 'באמצעות' קריא חלקית.",
+     "solution": "$y$ היא הפרקת $x$ למחזורים: $y[n]=\\sum_r x[n+rN]$, ולכן ב-$0\\le n\\le N-1$ מתקיים $y[n]$ = סכום ההעתקות של $x$. מקדמי הטור:\n$$c_k=\\frac1N\\sum_{n=0}^{N-1}\\sum_rx[n+rN]e^{-j\\frac{2\\pi}Nkn}=\\frac1N\\sum_{m=-\\infty}^{\\infty}x[m]e^{-j\\frac{2\\pi}{N}km},$$\nכי $e^{-j\\frac{2\\pi}Nk(m-rN)}=e^{-j\\frac{2\\pi}Nkm}$ ו-$m=n+rN$ רץ על כל השלמים. הסכום הוא ה-DTFT בנקודה $\\theta=\\frac{2\\pi k}N$:\n$$\\boxed{c_k=\\frac1NX\\!\\left(e^{j\\frac{2\\pi k}{N}}\\right)}$$\nנציב את סעיף א': $c_k=\\frac1N\\frac{1}{1-ae^{-j2\\pi k/N}}$, **תואם לסעיף ג'.** (זו מהות דגימה של ה-DTFT בתדר = מחזוריות בזמן.)"
+    }
+   ]
+  }
+ ]
+}
