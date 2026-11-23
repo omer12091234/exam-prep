@@ -1,0 +1,187 @@
+{
+ "exam": {
+  "match_title": "מועד א׳ סמסטר א׳ 2011 (בועז רפאלי, 31/01/2011) + פתרון",
+  "drive_file_id": "1PRS8RPfFiVh5oWpyW8eJ6ATfjVP-pdAs",
+  "source_title": "מועד א 2011 - בועז + פתרון.pdf",
+  "lecturer": "פרופ' בועז רפאלי",
+  "year": 2011,
+  "date": "2011-01-31",
+  "aids": "דף הנוסחאות המצורף, מחשבון כיס ללא תכנות ותקשורת",
+  "notes": "הקובץ כולל 8 עמודים: עמ' 1-2 שאלון (4 שאלות), עמ' 3-8 פתרון בכתב יד של המרצה לכל ארבע השאלות. עמוד הנוסחאות הנזכר אינו מצורף. כל הפתרונות כאן נכתבו מחדש ונבדקו מול הפתרון הסרוק. הוסכם $\\mathrm{sinc}(u)=\\sin(\\pi u)/(\\pi u)$."
+ },
+ "questions": [
+  {
+   "number": 1,
+   "points": 35,
+   "topics": [
+    "t6",
+    "t7"
+   ],
+   "stem": "נתון אות ממשי בזמן בדיד $x[n]$ באורך $N$, בתחום $n=0,\\dots,N-1$, בעל התמרת DFT $X[k]$ באורך $N$.",
+   "figures": [],
+   "regions": [
+    {
+     "page": 1,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      190,
+      405,
+      770,
+      480
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "א",
+     "points": 15,
+     "text": "נתון כי ההתמרה מקיימת $X[k]=X[((-k))_N]$. הוכח\\י כי האות מקיים $x[n]=x[((-n))_N]$. יש להציג הוכחה מלאה ומפורטת, עם הסבר כל שלב. יש להוכיח כל תכונה בה נעשה שימוש, גם אם היא מופיעה בדף הנוסחאות.",
+     "box": [
+      190,
+      482,
+      770,
+      560
+     ],
+     "lines": 3,
+     "solution": "**מוסכמות.** $x[n]=\\frac1N\\sum_{k=0}^{N-1}X[k]e^{j\\frac{2\\pi}{N}kn}$ (התמרת DFT הפוכה), וכל האינדקסים מחושבים מודולו $N$. הסדרה $e^{j\\frac{2\\pi}{N}kn}$ מחזורית ב-$n$ וב-$k$ בתקופה $N$, ולכן $x[((-n))_N]$ מתקבל פשוט על ידי הצבת $-n$ בנוסחה.\n\n**הוכחה.** נתון $X[k]=X[((-k))_N]$. מנוסחת ההתמרה ההפוכה:\n$$x[((-n))_N]=\\frac1N\\sum_{k=0}^{N-1}X[k]\\,e^{j\\frac{2\\pi}{N}k(-n)}=\\frac1N\\sum_{k=0}^{N-1}X[k]\\,e^{-j\\frac{2\\pi}{N}kn}$$\nנחליף משתנה סכימה: $m=((-k))_N$. הפונקציה $k\\mapsto((-k))_N$ היא התאמה חד-חד-ערכית של $\\{0,\\dots,N-1\\}$ על עצמה ($0\\mapsto0$, $k\\mapsto N-k$ עבור $k\\ge1$), ולכן הסכום רץ על אותם איברים בסדר שונה. מתקיים $k\\equiv-m \\pmod N$ ולכן, מפני שהאקספוננט מחזורי ב-$k$:\n$$e^{-j\\frac{2\\pi}{N}kn}=e^{j\\frac{2\\pi}{N}mn}$$\nומהנתון, $X[k]=X[((-m))_N]=X[m]$ (הנתון מוחל על האינדקס $m$: $X[m]=X[((-m))_N]$). לכן:\n$$x[((-n))_N]=\\frac1N\\sum_{m=0}^{N-1}X[m]\\,e^{j\\frac{2\\pi}{N}mn}=x[n]$$\nוזה מה שנדרש. $\\blacksquare$\n\n**הערות.** (1) ההוכחה לא השתמשה בממשיות של $x[n]$. (2) אותו חישוב, בכיוון ההפוך (מתוך $x[n]=x[((-n))_N]$ ובהתמרה הישירה), נותן גם את הכיוון ההפוך, כלומר התכונות שקולות. (3) בדיקה: עבור $N=4$ ו-$x=[a,b,c,b]$ (סימטרי, $x[1]=x[3]$) מתקבל $X[1]=a-jb-c+jb=a-c$ ו-$X[3]=a+jb-c-jb=a-c$, כלומר $X[1]=X[3]=X[((-1))_4]$, בהתאם."
+    },
+    {
+     "label": "ב",
+     "points": 20,
+     "text": "נתון $y[n]=\\left(x[n]\\right)^2$ בתחום $n=0,\\dots,N-1$. נסמן בוקטור $\\underline X$ את $X[k]$, ובוקטור $\\underline Y$ את $Y[k]$, התמרת ה-DFT של $y[n]$, כך שמתקיים $\\underline Y=\\underline{\\underline A}\\,\\underline X$. עליך לפתח ביטוי למטריצה $\\underline{\\underline A}$, כמכפלה של מטריצות ידועות המוצגות באופן ברור. יש לפרט כל שלב בפיתוח. מהם הוקטורים העצמיים והערכים העצמיים של מטריצה $\\underline{\\underline A}$? מהו התנאי שעבורו למטריצה $\\underline{\\underline A}$ דרגה מלאה? הסבר\\י.",
+     "box": [
+      190,
+      563,
+      770,
+      715
+     ],
+     "lines": 5,
+     "solution": "**מוסכמות.** $W_N=e^{-j2\\pi/N}$, מטריצת ה-DFT $\\underline{\\underline F}$ בגודל $N\\times N$ עם $F[k,n]=W_N^{kn}$, ומתקיים $\\underline{\\underline F}^H\\underline{\\underline F}=N\\underline{\\underline I}$, כלומר $\\underline{\\underline F}^{-1}=\\frac1N\\underline{\\underline F}^H$. נסמן ב-$\\underline x$ את וקטור הדגימות בזמן. $\\underline X=\\underline{\\underline F}\\,\\underline x$.\n\n**שלב 1 – $\\underline Y$ במונחי $\\underline y$.** $\\underline Y=\\underline{\\underline F}\\,\\underline y$.\n\n**שלב 2 – $\\underline y$ במונחי $\\underline x$.** $y[n]=x[n]\\cdot x[n]$, כלומר כפל איבר-איבר, שאותו אפשר לכתוב כמטריצה אלכסונית:\n$$\\underline y=\\mathrm{diag}(\\underline x)\\,\\underline x$$\n\n**שלב 3 – הצבת $\\underline x$ במונחי $\\underline X$.** מ-$\\underline X=\\underline{\\underline F}\\underline x$ נקבל $\\underline x=\\underline{\\underline F}^{-1}\\underline X=\\frac1N\\underline{\\underline F}^H\\underline X$. הוקטור $\\underline x$ שבתוך $\\mathrm{diag}(\\underline x)$ נשאר במטריצה $\\underline{\\underline A}$ (הוא ידוע מתוך $\\underline X$ בעזרת ההתמרה ההפוכה). לכן:\n$$\\underline Y=\\underline{\\underline F}\\,\\mathrm{diag}(\\underline x)\\,\\frac1N\\underline{\\underline F}^H\\,\\underline X$$\nומכאן\n$$\\boxed{\\underline{\\underline A}=\\frac1N\\,\\underline{\\underline F}\\,\\mathrm{diag}(\\underline x)\\,\\underline{\\underline F}^H=\\underline{\\underline F}\\,\\mathrm{diag}(\\underline x)\\,\\underline{\\underline F}^{-1}}$$\n**בדיקה.** $A[k,m]=\\frac1N\\sum_n W_N^{kn}x[n]W_N^{-nm}=\\frac1N X[((k-m))_N]$. זה בדיוק $Y[k]=\\frac1N\\sum_m X[m]X[((k-m))_N]$, תכונת הקונבולוציה המעגלית של התמרת מכפלה, ולכן $\\underline{\\underline A}$ היא מטריצה **מעגלית** (circulant).\n\n**וקטורים עצמיים וערכים עצמיים.** הביטוי $\\underline{\\underline A}=\\underline{\\underline F}\\,\\mathrm{diag}(\\underline x)\\,\\underline{\\underline F}^{-1}$ הוא פירוק עצמי (eigendecomposition) $\\underline{\\underline A}=\\underline{\\underline V}\\underline{\\underline\\Lambda}\\underline{\\underline V}^{-1}$ עם $\\underline{\\underline V}=\\underline{\\underline F}$. כלומר $\\underline{\\underline A}\\,\\underline{\\underline F}=\\underline{\\underline F}\\,\\mathrm{diag}(\\underline x)$, ועבור העמודה ה-$n$ של $\\underline{\\underline F}$, $\\underline f_n=[W_N^{kn}]_{k=0}^{N-1}$:\n$$\\underline{\\underline A}\\,\\underline f_n=x[n]\\,\\underline f_n$$\n- **וקטורים עצמיים:** עמודות מטריצת ה-DFT, כלומר האקספוננטים המרוכבים $e^{-j\\frac{2\\pi}{N}kn}$ (לא מנורמלים).\n- **ערכים עצמיים:** דגימות האות בזמן $x[0],\\dots,x[N-1]$.\n\n**דרגה מלאה.** $\\underline{\\underline F}$ הפיכה תמיד, ולכן $\\mathrm{rank}\\,\\underline{\\underline A}=\\mathrm{rank}\\,\\mathrm{diag}(\\underline x)$ = מספר הערכים של $x[n]$ השונים מאפס. המטריצה היא מדרגה מלאה ($N$) **אם ורק אם $x[n]\\neq0$ לכל $n=0,\\dots,N-1$** (כל הערכים העצמיים שונים מאפס, והמטריצה הפיכה)."
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "points": 25,
+   "topics": [
+    "t9",
+    "t8",
+    "t7"
+   ],
+   "stem": "נתונה הסדרה $x[n]$ באורך 8, ומסנן $h[n]$ מסוג FIR באורך 4. תוצאת הקונבולוציה הליניארית בין האות למסנן הינה $y[n]=x[n]*h[n]$. לרשותך מעבד בזמן אמת, בעל פונקציות של FFT ו-IFFT באורך 8, ופעולות כפל קומפלקסיות.",
+   "figures": [],
+   "regions": [
+    {
+     "page": 1,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      190,
+      782,
+      770,
+      865
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "",
+     "points": 25,
+     "text": "עליך להשיב את $y[n]$ תוך שימוש בפונקציות המעבד. אין להשתמש בפעולות אחרות כגון חיבור למעט פעולות של השמת ערכים לזכרון או לוקטור נתון. יש להציג את הפתרון המוצע באופן מפורט ולפי שלבים. **בכל שלב הצג\\י שורת/שורות מטלב לפי התחביר של שפת מטלב למימוש הפעולה של אותו שלב.**",
+     "box": [
+      190,
+      885,
+      770,
+      975
+     ],
+     "lines": 4,
+     "solution": "**מוסכמות.** $N=8$ (אורך ה-FFT), $M=4$ (אורך $h[n]$), $x[n]$ באורך 8 ולכן $y[n]=x[n]*h[n]$ באורך $8+4-1=11$ (אינדקסים $0..10$). בקוד משתמשים באינדוקס של MATLAB (מ-1): `x(1:8)` הם $x[0..7]$.\n\n**רעיון – Overlap-Save.** קונבולוציה מעגלית באורך 8 של בלוק $b$ באורך 8 עם $h$ (באורך 4) נותנת $z[n]=\\sum_{k=0}^{3}h[k]\\,b[((n-k))_8]$. עבור $n=3,\\dots,7$ (חמישה ערכים) אין \"היפוך מעגלי\", אלא רק לשלוש הדגימות הראשונות ($n=0,1,2$) ישנו aliasing. מכיוון שהקצב הוא $4$ דגימות חדשות לבלוק, נשתמש רק ב-$z[4..7]$ (ב-MATLAB: `z(5:8)`) ונשליך את `z(1:4)`. כל בלוק קלט הוא שרשור של 4 הדגימות הקודמות ו-4 הדגימות החדשות.\n\nנפצל את הקלט לשני בלוקים של 4: $x_1=$ `x(1:4)`, $x_2=$ `x(5:8)`, ונשלים בלוקים של אפסים כאשר אין דגימות.\n\n**קוד (כל שורה מקבילה לפעולה בחומרה):**\n```\nH  = fft(h, 8);              % FFT באורך 8 של h (ריפוד ב-4 אפסים), פעם אחת\nx1 = x(1:4);  x2 = x(5:8);  z4 = zeros(1,4);\n\n% בלוק 1: [0 0 0 0 x1]\nX = fft([z4 x1]);   Z = H .* X;   z = ifft(Z);   y(1:4)  = z(5:8);\n% בלוק 2: [x1 x2]\nX = fft([x1 x2]);   Z = H .* X;   z = ifft(Z);   y(5:8)  = z(5:8);\n% בלוק 3: [x2 0 0 0 0] (הזנב של הקונבולוציה)\nX = fft([x2 z4]);   Z = H .* X;   z = ifft(Z);   y(9:11) = z(5:7);\n```\nסה\"כ: FFT אחד של $h$, ועוד שלוש פעולות FFT, שלוש IFFT ושלוש מכפלות איבר-איבר של וקטורים מרוכבים באורך 8 (אחת לכל בלוק).\n\n**הוכחת נכונות.** נסמן $y[n]=\\sum_{k=0}^3h[k]x[n-k]$ ו-$x[n]=0$ מחוץ ל-$0..7$.\n- בלוק 1: $b[j]=x[j-4]$ ($b[0..3]=0$, $b[4..7]=x[0..3]$). עבור $n=4..7$ האינדקסים $n-k\\in[1,7]$ אינם עוברים מודולו, ולכן $z[n]=\\sum_kh[k]x[n-4-k]=y[n-4]$. מתקבל $y[0..3]$ = `z(5:8)`. ✓.\n- בלוק 2: $b[j]=x[j]$ ($j=0..7$, קרי $x[0..3]$ ואחריהם $x[4..7]$). עבור $n=4..7$: $z[n]=\\sum_kh[k]x[n-k]=y[n]$, כלומר $y[4..7]$ = `z(5:8)`. ✓\n- בלוק 3: $b[j]=x[4+j]$ עבור $j=0..3$ ואפס עבור $j=4..7$. $z[4]=h[1]x[7]+h[2]x[6]+h[3]x[5]=y[8]$, $z[5]=h[2]x[7]+h[3]x[6]=y[9]$, $z[6]=h[3]x[7]=y[10]$, $z[7]=0=y[11]$. לכן $y[8..10]$ = `z(5:7)`. ✓\n\n**בדיקה.** סך הדגימות שנכתבו: $4+4+3=11$, כאורך הקונבולוציה הליניארית. כל FFT הוא באורך 8 כנדרש.\n\n**הערה.** זהו אחד מכמה פתרונות אפשריים. אפשר גם Overlap-Add עם בלוקי קלט של 5 דגימות ($5+4-1=8$) ובלי השלכת תוצאות."
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "points": 20,
+   "topics": [
+    "t2",
+    "t3"
+   ],
+   "stem": "נתון הקשר הבא בין הסדרה $g[n]$ לאות הממשי והלא-מחזורי $x(t)$: $$g[n]=\\frac1T\\int_{-\\infty}^{\\infty}x(t)\\,\\mathrm{sinc}\\!\\left(\\frac{t-nT}{T}\\right)dt,\\quad n=-\\infty,\\dots,\\infty\\qquad(1)$$",
+   "figures": [],
+   "regions": [
+    {
+     "page": 2,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      190,
+      100,
+      770,
+      213
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "",
+     "points": 20,
+     "text": "בהינתן $g[n]$ והערך של $T$, מהו התנאי על האות $x(t)$ שיאפשר שחזורו? מהו מספר הדגימות המינימלי שנדרש מהאות $g[n]$ לשחזור $x(t)$? הסבר\\י. בהנחה כי מתקיימים התנאים שהצגת, הצג\\י ביטוי לשחזור $x(t)$ מתוך $g[n]$, והוכח\\י באופן מלא ומפורט כי האות המשוחזר מקיים את משוואה (1). ניתן להשתמש בדף הנוסחאות, אולם יש להוכיח כל נוסחה שאינה מופיעה בדף הנוסחאות, אך דרושה להוכחה.",
+     "box": [
+      190,
+      212,
+      770,
+      350
+     ],
+     "lines": 5,
+     "solution": "**מוסכמות.** $\\mathrm{sinc}(u)=\\frac{\\sin\\pi u}{\\pi u}$, ולכן $\\mathrm{sinc}(t/T)\\ \\overset{\\mathcal F}{\\longleftrightarrow}\\ T\\,\\mathrm{rect}\\!\\left(\\frac{\\omega T}{2\\pi}\\right)$, כלומר $T$ בתחום $|\\omega|<\\pi/T$ ו-$0$ מחוצה לו. $\\omega$ ברד/שנייה. $\\mathrm{sinc}$ זוגית.\n\n**1. משמעות הקשר (1).** ($\\mathrm{sinc}$ זוגית):\n$$g[n]=\\frac1T\\int x(\\tau)\\,\\mathrm{sinc}\\!\\left(\\frac{nT-\\tau}{T}\\right)d\\tau=\\left(x*h_{LP}\\right)(nT),\\qquad h_{LP}(t)=\\frac1T\\mathrm{sinc}\\!\\left(\\frac tT\\right)$$\n$H_{LP}(j\\omega)=\\mathrm{rect}\\!\\left(\\frac{\\omega T}{2\\pi}\\right)$: מסנן מעביר-נמוכים אידיאלי עם הגבר 1 ותדר חיתוך $\\pi/T$. כלומר $g[n]$ היא דגימה (בקצב $1/T$) של $x$ לאחר סינון נמוכים.\n\n**2. תנאי השחזור.** אם $X(j\\omega)=0$ לכל $|\\omega|>\\pi/T$ (אות מוגבל סרט, $\\omega_m\\le\\pi/T$), הסינון אינו משנה את $x$: $x*h_{LP}=x$, ולכן\n$$g[n]=x(nT)$$\nוזה דגימה רגילה, ומשפט הדגימה (תנאי נייקוויסט $T\\le\\pi/\\omega_m$) מבטיח שחזור מלא. אם $x$ אינו מוגבל סרט ב-$\\pi/T$, החלק מחוץ לסרט אובד ואי אפשר לשחזר.\n\n**3. המספר המינימלי של דגימות.** נדרשת דגימה אחת מכל מרווח $T\\le\\pi/\\omega_m$. כלומר מספר הדגימות המינימלי ליחידת זמן הוא $\\frac1T=\\frac{\\omega_m}{\\pi}=2f_m$ (קצב נייקוויסט); בהינתן $T$, הערך המינימלי מושג עבור $T=\\pi/\\omega_m$ בדיוק. פחות מזה יוצר aliasing.\n\n**4. ביטוי השחזור.**\n$$\\boxed{\\hat x(t)=\\sum_{m=-\\infty}^{\\infty}g[m]\\,\\mathrm{sinc}\\!\\left(\\frac{t-mT}{T}\\right)}$$\nתחת התנאי $x(t)=\\hat x(t)$ (אינטרפולציית sinc האידיאלית של $x(mT)=g[m]$).\n\n**5. הוכחה ש-$\\hat x$ מקיים את (1).** נציב $\\hat x$ באגף ימין של (1) ונחליף סכום ואינטגרל (התכנסות מתאימה):\n$$\\frac1T\\int\\hat x(t)\\,\\mathrm{sinc}\\!\\left(\\frac{t-nT}{T}\\right)dt=\\sum_m g[m]\\;\\underbrace{\\frac1T\\int\\mathrm{sinc}\\!\\left(\\frac{t-mT}{T}\\right)\\mathrm{sinc}\\!\\left(\\frac{t-nT}{T}\\right)dt}_{I_{mn}}$$\n**חישוב $I_{mn}$ (אורתוגונליות).** לפי משפט פרסבל, $\\int a(t)b^*(t)dt=\\frac1{2\\pi}\\int A(j\\omega)B^*(j\\omega)d\\omega$. עבור הזזה בזמן $\\mathrm{sinc}((t-mT)/T)\\leftrightarrow T\\,\\mathrm{rect}\\!\\left(\\frac{\\omega T}{2\\pi}\\right)e^{-j\\omega mT}$, ולכן\n$$I_{mn}=\\frac1T\\cdot\\frac1{2\\pi}\\int_{-\\pi/T}^{\\pi/T}T^2e^{-j\\omega mT}e^{+j\\omega nT}d\\omega=\\frac{T}{2\\pi}\\int_{-\\pi/T}^{\\pi/T}e^{-j\\omega(m-n)T}d\\omega$$\nהחלפת משתנים $\\theta=\\omega T$:\n$$I_{mn}=\\frac1{2\\pi}\\int_{-\\pi}^{\\pi}e^{-j\\theta(m-n)}d\\theta=\\delta[m-n]$$\n(האינטגרל של אקספוננט שלם על מחזור שלם הוא 0 עבור $m\\ne n$, ו-$2\\pi$ עבור $m=n$.) לכן\n$$\\frac1T\\int\\hat x(t)\\,\\mathrm{sinc}\\!\\left(\\frac{t-nT}{T}\\right)dt=\\sum_mg[m]\\delta[m-n]=g[n]\\ \\ \\blacksquare$$\n\n**בדיקה.** $n=m$: $I_{nn}=\\frac1T\\int\\mathrm{sinc}^2(t/T)dt=\\frac1T\\cdot T=1$, ידוע ש-$\\int\\mathrm{sinc}^2(u)du=1$. ✓\n\n**הערה.** הוכחת הסעיף 5 נכונה לכל סדרה $g[m]$ (בעלת אנרגיה סופית), ולא רק כשהיא מגיעה מאות מוגבל סרט: הפונקציות $\\mathrm{sinc}((t-mT)/T)$ הן בסיס אורתוגונלי ל-$L^2$ של אותות המוגבלים ל-$\\pi/T$."
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "points": 20,
+   "topics": [
+    "t4"
+   ],
+   "stem": "נתון אות בזמן רציף $x(t)$ בעל התמרת פורייה המקיימת $X(j\\omega)=0\\ \\ \\forall\\,|\\omega|\\ge\\omega_0$. מוגדרות שתי מערכות מסוג LTI בעלות תגובות להלם: $$h_1(t)=\\frac{\\omega_0}{4\\pi}\\mathrm{sinc}\\!\\left(\\frac{\\omega_0}{4\\pi}t\\right),\\qquad h_2(t)=\\delta\\!\\left(t-2\\pi/\\omega_0\\right)$$ האותות $g_1(t),g_2(t)$ מתקבלים על ידי: $g_1(t)=x(t)*h_1(t),\\ g_2(t)=x(t)*h_2(t)$.",
+   "figures": [],
+   "regions": [
+    {
+     "page": 2,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      190,
+      405,
+      770,
+      610
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "",
+     "points": 20,
+     "text": "חשב\\י וצייר את $H_1(j\\omega),H_2(j\\omega)$ (ערך מוחלט ופאזה). האם ניתן לשחזר באופן מדויק את $x(t)$ בשיטת Generalized Sampling, בהינתן הדגימות $g_1(nT),g_2(nT)$ לכל $n$ שלם, כאשר $T=2\\pi/\\omega_0$? יש להציג הוכחה מלאה ומפורטת והסבר כל שלב בהוכחה.",
+     "box": [
+      190,
+      614,
+      770,
+      705
+     ],
+     "lines": 3,
+     "solution": "**מוסכמות.** $\\mathrm{sinc}(u)=\\frac{\\sin\\pi u}{\\pi u}$, $\\omega$ ברד/שנייה, $T=2\\pi/\\omega_0$.\n\n**1. תגובות התדר.**\n$$h_1(t)=\\frac{\\omega_0}{4\\pi}\\mathrm{sinc}\\!\\left(\\frac{\\omega_0}{4\\pi}t\\right)=\\frac{\\sin(\\omega_0t/4)}{\\pi t}\\ \\Longrightarrow\\ H_1(j\\omega)=\\begin{cases}1&|\\omega|<\\omega_0/4\\\\0&\\text{אחרת}\\end{cases}$$\nמסנן מעביר-נמוכים אידיאלי: $|H_1|$ הוא מלבן בגובה 1 ברוחב $\\omega_0/2$ ו-$\\angle H_1=0$.\n$$h_2(t)=\\delta\\!\\left(t-\\frac{2\\pi}{\\omega_0}\\right)\\ \\Longrightarrow\\ H_2(j\\omega)=e^{-j\\omega\\,2\\pi/\\omega_0}$$\n$|H_2|=1$ לכל $\\omega$, ו-$\\angle H_2=-2\\pi\\omega/\\omega_0$ (ישר בעל שיפוע $-2\\pi/\\omega_0$, $-2\\pi$ ב-$\\omega=\\omega_0$).\n\n**2. Generalized Sampling (פפולי) עם שני ערוצים.** $X(j\\omega)=0$ עבור $|\\omega|\\ge\\omega_0$, כלומר סרט כולל ברוחב $2\\omega_0$ (קצב נייקוויסט $T_N=\\pi/\\omega_0$). כל ערוץ נדגם בקצב $T=2\\pi/\\omega_0=2T_N$, כלומר חצי מקצב נייקוויסט, ושני הערוצים יחד נותנים בדיוק את קצב נייקוויסט. $\\omega_s=2\\pi/T=\\omega_0$. מתקיים, לכל ערוץ $i$ ובתדר $\\omega\\in[-\\omega_0,0)$:\n$$G_i^{s}(\\omega)=\\frac1T\\sum_kH_i(\\omega+k\\omega_0)X(\\omega+k\\omega_0)$$\nבתחום זה רק $k=0,1$ נותנים תוצאות שאינן אפס ($\\omega\\in[-\\omega_0,0)$ ו-$\\omega+\\omega_0\\in[0,\\omega_0)$), ולכן:\n$$T\\begin{bmatrix}G_1^s(\\omega)\\\\G_2^s(\\omega)\\end{bmatrix}=\\underbrace{\\begin{bmatrix}H_1(j\\omega)&H_1(j(\\omega+\\omega_0))\\\\H_2(j\\omega)&H_2(j(\\omega+\\omega_0))\\end{bmatrix}}_{\\underline{\\underline H}(\\omega)}\\begin{bmatrix}X(j\\omega)\\\\X(j(\\omega+\\omega_0))\\end{bmatrix}$$\nשחזור מדויק אפשרי **אם ורק אם** $\\det\\underline{\\underline H}(\\omega)\\neq0$ לכל $\\omega\\in[-\\omega_0,0)$.\n\n**3. הבדיקה.** נבדוק את השורה הראשונה:\n- $\\omega\\in(-\\omega_0,-\\tfrac34\\omega_0)$: $H_1(j\\omega)=0$ ו-$H_1(j(\\omega+\\omega_0))=1$, שורה $[0,\\ 1]$.\n- $\\omega\\in(-\\tfrac34\\omega_0,-\\tfrac14\\omega_0)$: שני התדרים $\\omega$ ו-$\\omega+\\omega_0$ מחוץ ל-$|\\cdot|<\\omega_0/4$, ולכן שורה **$[0,\\ 0]$**.\n- $\\omega\\in(-\\tfrac14\\omega_0,0)$: שורה $[1,\\ 0]$.\n\nבתחום האמצעי השורה הראשונה אפסית ולכן $\\det\\underline{\\underline H}=0$. למשל עבור $\\omega=-\\omega_0/2$: $H_2(j\\omega)=e^{j\\pi}=-1$ ו-$H_2(j(\\omega+\\omega_0))=e^{-j\\pi}=-1$ ולכן $\\underline{\\underline H}=\\begin{bmatrix}0&0\\\\-1&-1\\end{bmatrix}$, $\\det=0$.\n\n**4. מסקנה: לא ניתן לשחזר באופן מדויק.** בתחום $\\tfrac14\\omega_0<|\\omega|<\\tfrac34\\omega_0$ יש רק משוואה אחת ושני נעלמים $X(j\\omega),X(j(\\omega+\\omega_0))$. מכיוון ש-$T=2\\pi/\\omega_0$ ההזזה של $h_2$ היא בדיוק $T$, ולכן $g_2(nT)=x((n-1)T)$ הם דגימות רגילות של $x$ בקצב חצי מנייקוויסט, ובתחום זה הן סוכמות את $X(j\\omega)$ ו-$X(j(\\omega+\\omega_0))$ (aliasing) ומערוץ 1 אין שום מידע.\n\n**דוגמה נגדית (אות ממשי שהדגימות שלו מתאפסות).** נבחר $X(j\\omega)=1$ עבור $\\omega_0/2<|\\omega|<3\\omega_0/4$ ו-$X(j\\omega)=-1$ עבור $\\omega_0/4<|\\omega|<\\omega_0/2$ (ממשי וזוגי, ולכן $x(t)$ ממשי). אז $g_1(t)\\equiv0$ (האות מחוץ לסרט של $H_1$), ו-$g_2(nT)=x((n-1)T)=0$ לכל $n$ כי הסכום $X(j\\omega)+X(j(\\omega+\\omega_0))=0$ בכל התדרים של $[-\\omega_0,0)$. כלומר אות שאינו אפס נותן אותן דגימות כמו האות האפס, ולכן אין שחזור יחיד. $\\blacksquare$\n\n**בדיקה (קצב).** סרט $2\\omega_0$ דורש $2\\omega_0/2\\pi$ דגימות לשנייה, והערוצים נותנים $2\\cdot\\omega_0/2\\pi$ דגימות לשנייה, כלומר מספר הדגימות מספיק בכמות, אבל ערוץ 2 הוא רק $x$ מוזז (דגימות $x((n-1)T)$), כלומר אין בו מידע שונה מדגימה רגילה של $x$ בקצב חצי נייקוויסט, וערוץ 1 מכסה רק את הסרט $|\\omega|<\\omega_0/4$. לכן המידע בפועל אינו מספיק."
+    }
+   ]
+  }
+ ]
+}

@@ -3664,16 +3664,8 @@
    "has_solution": true,
    "questions": [
     {
-     "num": "1א",
-     "description": "\\(x[n]\\) ממשי באורך \\(N\\) עם DFT \\(X[k]\\). נתון \\(X[k]=X[((-k))_N]\\); להוכיח באופן מלא ש-\\(x[n]=x[((-n))_N]\\) (כולל הוכחת כל תכונה שבשימוש).",
-     "topics": [
-      "t6"
-     ],
-     "difficulty": 1
-    },
-    {
-     "num": "1ב",
-     "description": "\\(y[n]=(x[n])^2\\). לפתח מטריצה \\(\\underline{\\underline A}\\) כך ש-\\(\\underline Y=\\underline{\\underline A}\\,\\underline X\\) כמכפלת מטריצות ידועות; מהם הוקטורים והערכים העצמיים שלה ומה התנאי לדרגה מלאה?",
+     "num": "1",
+     "description": "",
      "topics": [
       "t6",
       "t7"
@@ -3682,25 +3674,26 @@
     },
     {
      "num": "2",
-     "description": "\\(x[n]\\) באורך 8 ו-FIR \\(h[n]\\) באורך 4. לחשב את \\(y[n]=x[n]*h[n]\\) במעבד שיש לו רק FFT/IFFT באורך 8 וכפל קומפלקסי (ללא חיבור), ולהציג שורות MATLAB לכל שלב.",
+     "description": "",
      "topics": [
-      "t7",
-      "t9"
+      "t9",
+      "t8",
+      "t7"
      ],
      "difficulty": 3
     },
     {
      "num": "3",
-     "description": "\\(g[n]=\\tfrac1T\\int x(t)\\mathrm{sinc}(\\tfrac{t-nT}{T})dt\\). מה התנאי על \\(x(t)\\) שמאפשר שחזור מ-\\(g[n]\\), כמה דגימות נדרשות, ולפתח ולהוכיח ביטוי לשחזור \\(x(t)\\) מתוך \\(g[n]\\).",
+     "description": "",
      "topics": [
       "t2",
       "t3"
      ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
      "num": "4",
-     "description": "\\(x(t)\\) עם \\(X(j\\omega)=0\\) ל-\\(|\\omega|\\ge\\omega_0\\); \\(h_1(t)=\\tfrac{\\omega_0}{4\\pi}\\mathrm{sinc}(\\tfrac{\\omega_0}{4\\pi}t)\\), \\(h_2(t)=\\delta(t-2\\pi/\\omega_0)\\). לצייר את \\(H_1,H_2\\) ולקבוע האם ניתן לשחזר את \\(x(t)\\) ב-Generalized Sampling מ-\\(g_1(nT),g_2(nT)\\) עם \\(T=2\\pi/\\omega_0\\).",
+     "description": "",
      "topics": [
       "t4"
      ],
