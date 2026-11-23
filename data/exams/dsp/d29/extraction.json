@@ -1,0 +1,174 @@
+{
+ "exam": {
+  "match_title": "מועד ב׳ סמסטר ב׳ תשע״ו 2016 (תרצה רוטנברג) – חלק ב׳ פתוח",
+  "drive_file_id": "1XxNhSODQkTrHfS9oV5tWbvCq7Jn9WB_g",
+  "source_title": "מועד ב 2016 חלק ב' - תרצה.pdf",
+  "lecturer": "ד\"ר תרצה רוטנברג",
+  "year": 2016,
+  "date": "2016-08-04",
+  "duration_minutes": 120,
+  "aids": "דף הנוסחאות המצורף, מחשב כיס",
+  "notes": "הקובץ (2 עמודים) כולל שאלון חלק ב' (שאלות פתוחות) בלבד, ללא פתרון; דף הנוסחאות אינו מצורף. כל הפתרונות נכתבו מחדש. בשאלה 1 הוגדר האיבר האלכסוני של $\\mathbf C$ כגבול ($M$). שאלה 2 נחתכה בין עמודים 1 ו-2 ולכן נתפרה לתמונה אחת. נקבע $\\theta$ בראד/דגימה."
+ },
+ "questions": [
+  {
+   "number": 1,
+   "points": 30,
+   "topics": [
+    "t6",
+    "t7"
+   ],
+   "stem": "נתון הוקטור $\\mathbf x=\\left[x[0],x[1]...,x[N-1]\\right]^T$ באורך $N>3$ אי-זוגי. מבוצעות הפעולות הבאות –\n- התמרת DFT לקבלת וקטור $\\mathbf X^d$ באורך $N$.\n- הכפלת הוקטור $\\mathbf X^d$ במטריצה $\\mathbf C$ ממימד $N\\times N$ לקבלת הוקטור $\\mathbf Y^d=\\mathbf C\\mathbf X^d$, כאשר איברי המטריצה $\\mathbf C$ נתונים על ידי:\n$$[\\mathbf C]_{l,k}=\\frac{\\sin\\left(\\Delta\\theta\\frac M2(l-k)\\right)}{\\sin\\left(\\frac{\\Delta\\theta}2(l-k)\\right)}e^{-j\\Delta\\theta(l-k)\\left(\\frac{M-1}{2}\\right)},\\quad\\forall l,k=0,1,\\dots,N-1$$\nכאשר $l$ אינדקס שורה ו-$k$ אינדקס עמודה ו-$\\Delta\\theta=\\frac{2\\pi}{N}$.\n- התמרת IDFT לקבלת וקטור $\\mathbf y$ באורך $N$.",
+   "figures": [],
+   "regions": [
+    {
+     "page": 1,
+     "view": [
+      910,
+      1287
+     ],
+     "box": [
+      84,
+      406,
+      830,
+      725
+     ]
+    }
+   ],
+   "page": 1,
+   "view": [
+    910,
+    1287
+   ],
+   "subs": [
+    {
+     "label": "א",
+     "points": 10,
+     "text": "עבור $M=N$ בטאו את איברי $\\mathbf y$ כפונקציה של איברי $\\mathbf x$.",
+     "box": [
+      84,
+      735,
+      830,
+      756
+     ],
+     "lines": 1,
+     "solution": "**מוסכמות.** $W_N=e^{-j2\\pi/N}$, $X^d[k]=\\sum_{n=0}^{N-1}x[n]W_N^{nk}$, $x[n]=\\frac1N\\sum_{k=0}^{N-1}X^d[k]W_N^{-nk}$; האינדקסים מודולו $N$. $\\Delta\\theta=2\\pi/N$.\n\n**שלב 1 – מבנה המטריצה $\\mathbf C$.** סכום סדרה הנדסית:\n$$\\sum_{p=0}^{M-1}e^{-j\\Delta\\theta mp}=\\frac{1-e^{-j\\Delta\\theta mM}}{1-e^{-j\\Delta\\theta m}}=\\frac{\\sin\\left(\\Delta\\theta\\frac M2m\\right)}{\\sin\\left(\\frac{\\Delta\\theta}{2}m\\right)}e^{-j\\Delta\\theta m\\frac{M-1}{2}}$$\nלכן, עם $m=l-k$, $[\\mathbf C]_{l,k}=\\sum_{p=0}^{M-1}e^{-j\\Delta\\theta(l-k)p}$. (באלכסון, $l=k$, הנוסחה היא $0/0$ והגבול הוא $M$, שהוא גם הסכום הישיר $\\sum 1$.) לכל $l\\ne k$ מתקיים $0<|l-k|<N$ ולכן המכנה אינו מתאפס.\n\n**שלב 2 – $\\mathbf Y^d$.**\n$$Y^d[l]=\\sum_{k}[\\mathbf C]_{l,k}X^d[k]=\\sum_{p=0}^{M-1}W_N^{lp}\\sum_{k=0}^{N-1}X^d[k]W_N^{-kp}=N\\sum_{p=0}^{M-1}x[\\langle p\\rangle_N]\\,W_N^{lp}$$\nכי הסכום הפנימי הוא $N$ כפול ה-IDFT בנקודה $p$, והוא מחזורי ב-$p$ עם מחזור $N$.\n\n**שלב 3 – IDFT.**\n$$y[n]=\\frac1N\\sum_{l=0}^{N-1}Y^d[l]W_N^{-ln}=\\sum_{p=0}^{M-1}x[\\langle p\\rangle_N]\\sum_{l=0}^{N-1}W_N^{l(p-n)}\\cdot\\frac{N}{N}$$\nוהסכום $\\sum_l W_N^{l(p-n)}=N$ אם $p\\equiv n\\pmod N$ ואחרת $0$. התוצאה הכללית:\n$$\\boxed{y[n]=N\\cdot c_M[n]\\cdot x[n]},\\qquad c_M[n]=\\#\\{p\\in\\{0,\\dots,M-1\\}:\\ p\\equiv n \\ (\\mathrm{mod}\\ N)\\}$$\nכלומר $y$ הוא $x$ מוכפל בקבוע בכל נקודה, בהתאם למספר הפעמים ש-$n$ \"נכנס\" לטווח $0..M-1$ מודולו $N$.\n\n**סעיף א ($M=N$).** $p$ עובר על $0..N-1$, כל $n$ מופיע בדיוק פעם אחת: $c_M[n]=1$.\n$$y[n]=N\\,x[n],\\quad n=0,\\dots,N-1$$\n**בדיקה:** כאן $\\mathbf C=N\\cdot\\mathbf I$ (הפונקציה $\\mathrm{sin}(\\pi m)/\\sin(\\pi m/N)=0$ מחוץ לאלכסון, $N$ על האלכסון), ולכן $\\mathbf Y^d=N\\mathbf X^d$ ו-$y=Nx$. מתיישב."
+    },
+    {
+     "label": "ב",
+     "points": 10,
+     "text": "חזרו על סעיף א' עבור $M=\\frac{N+1}{2}$.",
+     "box": [
+      84,
+      762,
+      830,
+      798
+     ],
+     "lines": 1,
+     "solution": "**שימוש בנוסחה הכללית** $y[n]=N\\,c_M[n]\\,x[n]$ מסעיף א (הפיתוח המלא מופיע שם).\n\n$M=\\frac{N+1}{2}<N$ (כי $N>3$), לכן $p=0,\\dots,\\frac{N-1}{2}$ וכל ערך מופיע לכל היותר פעם אחת: $n$ נספר פעם אחת אם $n\\le\\frac{N-1}{2}$ ו-$0$ פעמים אחרת.\n$$y[n]=\\begin{cases}N\\,x[n]&0\\le n\\le\\frac{N-1}{2}\\\\[2pt]0&\\frac{N+1}{2}\\le n\\le N-1\\end{cases}$$\n**משמעות:** חצי הדגימות הראשון (כולל האמצעי) נשמר בהגברה $N$, והחצי השני מתאפס. **בדיקה:** $N=5$, $M=3$: $y=5\\,[x_0,x_1,x_2,0,0]$, ואכן $p\\in\\{0,1,2\\}$."
+    },
+    {
+     "label": "ג",
+     "points": 10,
+     "text": "חזרו על סעיף א' עבור $M=\\frac{3(N+1)}{2}$.",
+     "box": [
+      84,
+      810,
+      830,
+      860
+     ],
+     "lines": 2,
+     "solution": "**שימוש בנוסחה הכללית** $y[n]=N\\,c_M[n]\\,x[n]$ מסעיף א.\n\n$M=\\frac{3(N+1)}{2}=N+\\frac{N+3}{2}$, ומכיוון ש-$N>3$ מתקיים $N<M<2N$. לכן $p$ עובר על $0..N-1$ (כל $n$ פעם אחת) ועוד על $p=N,\\dots,M-1$, כלומר $p=N+n'$ עם $n'=0,\\dots,M-1-N=\\frac{N+1}{2}$. האינדקסים $n=0..\\frac{N+1}{2}$ נספרים פעמיים, השאר פעם אחת:\n$$y[n]=\\begin{cases}2N\\,x[n]&0\\le n\\le\\frac{N+1}{2}\\\\[2pt]N\\,x[n]&\\frac{N+3}{2}\\le n\\le N-1\\end{cases}$$\n**בדיקה:** $N=5$, $M=9$: $p=0..8$, $p\\bmod5=0,1,2,3,4,0,1,2,3$, ולכן $c=[2,2,2,2,1]$. לפי הנוסחה: $2N$ עבור $n\\le3=\\frac{N+1}{2}$ ו-$N$ עבור $n=4$. מתיישב."
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "points": 30,
+   "topics": [
+    "t5",
+    "t11",
+    "t12"
+   ],
+   "stem": "",
+   "figures": [
+    "נוסחה מקוטעת של $h[n]$: $\\frac{\\sin(\\frac\\pi2 n)}{2\\pi n}$ עבור $n\\neq0$ ו-$\\frac14$ עבור $n=0$",
+    "נוסחה מקוטעת של $g[n]=h[n-\\frac N2]$ עבור $n=0,\\dots,N$, ואפס אחרת"
+   ],
+   "regions": [
+    {
+     "page": 101,
+     "view": [
+      910,
+      1830
+     ],
+     "box": [
+      84,
+      888,
+      830,
+      922
+     ]
+    }
+   ],
+   "page": 101,
+   "view": [
+    910,
+    1830
+   ],
+   "subs": [
+    {
+     "label": "1",
+     "points": 7,
+     "text": "נתון מסנן ממשי בזמן בדיד שתגובת ההלם שלו מקיימת: $h[n]=\\begin{cases}\\frac{\\sin\\left(\\frac\\pi2 n\\right)}{2\\pi n}&n\\in\\mathbb Z,\\ n\\neq0\\\\ \\frac14&n=0\\end{cases}$. איזה סוג מסנן זה? (FIR/IIR וכן HPF/BPF/LPF). יש למצוא במפורש את תגובת התדר $H^f(\\theta)$.",
+     "box": [
+      84,
+      925,
+      830,
+      1130
+     ],
+     "lines": 3,
+     "solution": "**מוסכמות.** $\\theta$ בראד/דגימה, $H^f(\\theta)=\\sum_n h[n]e^{-j\\theta n}$.\n\n**זיהוי.** $h[n]=\\frac{\\sin(\\frac\\pi2 n)}{2\\pi n}=\\frac12\\cdot\\frac{\\sin(\\theta_c n)}{\\pi n}$ עם $\\theta_c=\\frac\\pi2$. זה מסנן מעביר-נמוכים אידיאלי בגובה $\\frac12$ (בדיקה בראשית: $h[0]=\\frac12\\cdot\\frac{\\theta_c}{\\pi}=\\frac14$, כנתון).\n\n**חישוב.** התמרה הפוכה של מלבן:\n$$h[n]=\\frac1{2\\pi}\\int_{-\\pi/2}^{\\pi/2}\\frac12e^{j\\theta n}d\\theta=\\frac{1}{4\\pi}\\cdot\\frac{2\\sin(\\pi n/2)}{n}=\\frac{\\sin(\\pi n/2)}{2\\pi n}\\ \\checkmark$$\n$$\\boxed{H^f(\\theta)=\\begin{cases}\\frac12&|\\theta|<\\frac\\pi2\\\\0&\\frac\\pi2<|\\theta|\\le\\pi\\end{cases}}$$\n(מחזורית ב-$2\\pi$).\n\n**סוג.** $h[n]$ אינה מתאפסת מחוץ לטווח סופי (דועכת כ-$1/n$ ואינה סיבתית), לכן **IIR** (אינסופית ולא סיבתית), ו-**LPF** עם תדר קטעון $\\frac\\pi2$."
+    },
+    {
+     "label": "2",
+     "points": 10,
+     "text": "על מנת לממש את המסנן $\\{h[n]\\}$ בפועל, מציעים את המסנן הבא: $g[n]=\\begin{cases}h\\left[n-\\frac N2\\right]&n=0,1,2,\\dots N\\\\ 0&\\text{otherwise}\\end{cases}$ כאשר $N$ ממשי, חיובי, זוגי, וסופי. איזה סוג מסנן זה? (FIR/IIR וכן HPF/BPF/LPF). בטאו את תגובת התדר באמצעות ייצוג פאזה רציפה, כלומר $G^f(\\theta)=A(\\theta)e^{j\\varphi(\\theta)}$ כאשר $\\varphi(\\theta)$ רציפה וליניארית ו-$A(\\theta)$ ממשית.",
+     "box": [
+      84,
+      1146,
+      830,
+      1385
+     ],
+     "lines": 5,
+     "solution": "**מוסכמות.** $\\theta$ בראד/דגימה; $L=\\frac N2$ שלם (כי $N$ זוגי).\n\n**סוג.** $g[n]=h[n-L]$ עבור $n=0..N$, כלומר $h$ מקוטע לחלון $-L\\le m\\le L$ ומוסט $L$ דגימות לימין: מסנן **FIR** סיבתי באורך $N+1$ (אי-זוגי), שהוא קירוב של ה-LPF מסעיף 1 ולכן **LPF** (עם גל ב-$|\\theta|\\approx\\frac\\pi2$ בגלל הקטיעה).\n\n**תגובת התדר.** נציב $m=n-L$:\n$$G^f(\\theta)=\\sum_{m=-L}^{L}h[m]e^{-j\\theta(m+L)}=e^{-j\\theta N/2}\\sum_{m=-L}^{L}h[m]e^{-j\\theta m}$$\n$h[m]$ ממשי וזוגי, ולכן הסכום ממשי:\n$$\\boxed{G^f(\\theta)=A(\\theta)e^{j\\varphi(\\theta)},\\quad A(\\theta)=\\frac14+\\sum_{m=1}^{N/2}\\frac{\\sin(\\pi m/2)}{\\pi m}\\cos(m\\theta),\\quad \\varphi(\\theta)=-\\frac N2\\theta}$$\n**בדיקות:** $A(0)=\\frac14+\\sum\\frac{\\sin(\\pi m/2)}{\\pi m}\\to\\frac12$ כאשר $N\\to\\infty$ (תואם $H^f(0)=\\frac12$); הפאזה $\\varphi$ ליניארית ורציפה, והשהיה של $\\frac N2$ דגימות היא מרכז הסימטריה של $g$. ($A(\\theta)$ יכול להיות שלילי באזור הפסק; זה בסדר בייצוג פאזה רציפה כי $\\varphi$ נשארת ליניארית, בלי קפיצות של $\\pi$ שנכללות ב-$A$.)"
+    },
+    {
+     "label": "3",
+     "points": 5,
+     "text": "כעת מציעים את המסנן הבא $k[n]=(-1)^n g[n],\\ n\\in\\mathbb Z$. איזה סוג מסנן זה? (FIR/IIR וכן HPF/BPF/LPF). יש למצוא במפורש את תגובת התדר.",
+     "box": [
+      84,
+      1398,
+      830,
+      1462
+     ],
+     "lines": 2,
+     "solution": "**מוסכמות.** $\\theta$ בראד/דגימה, $L=\\frac N2$.\n\n**כלל ההזזה.** $(-1)^n=e^{j\\pi n}$, לכן $K^f(\\theta)=\\sum_n g[n]e^{j\\pi n}e^{-j\\theta n}=G^f(\\theta-\\pi)$: הספקטרום מוזז ב-$\\pi$, ו-LPF הופך ל-**HPF** (אזור המעבר נע מ-$|\\theta|<\\frac\\pi2$ ל-$|\\theta|>\\frac\\pi2$). $k[n]$ הוא $g[n]$ כפול סדרה חסומה, ולכן עדיין **FIR** באורך $N+1$.\n\n**חישוב מפורש.**\n$$K^f(\\theta)=A(\\theta-\\pi)e^{-j(\\theta-\\pi)N/2}=(-1)^{N/2}A(\\theta-\\pi)\\,e^{-j\\theta N/2}$$\nכי $e^{j\\pi N/2}=(-1)^{N/2}$. ומכיוון ש-$\\cos(m(\\theta-\\pi))=(-1)^m\\cos m\\theta$ ו-$\\sin(\\pi m/2)=0$ עבור $m$ זוגי, נקבל (רק $m$ אי-זוגי תורם, $(-1)^m=-1$):\n$$\\boxed{K^f(\\theta)=(-1)^{N/2}\\Big[\\frac14-\\sum_{\\substack{m=1\\\\ m\\ \\mathrm{odd}}}^{N/2}\\frac{\\sin(\\pi m/2)}{\\pi m}\\cos(m\\theta)\\Big]e^{-j\\theta N/2}}$$\n**בדיקה:** ב-$\\theta=\\pi$ התוצאה היא $(-1)^{N/2}A(0)e^{-j\\pi N/2}=A(0)\\approx\\frac12$ (השהיה $e^{-j\\pi N/2}$ מבטלת את הסימן), ואילו ב-$\\theta=0$ מתקבל $\\approx0$ כנדרש מ-HPF."
+    },
+    {
+     "label": "4",
+     "points": 8,
+     "text": "(סעיף זה אינו תלוי בסעיפים הקודמים): נתון המסנן הבא: $H^Z(z)=1+2z^{-1}+\\alpha z^{-2}-2z^{-3}-z^{-4}$. קבעו את ערכו של $\\alpha$ כך שהמסנן יהיה מסנן פאזה ליניארית מוכללת (GLP). יש לנמק.",
+     "box": [
+      84,
+      1470,
+      830,
+      1537
+     ],
+     "lines": 2,
+     "solution": "**מוסכמות.** $h=[1,\\,2,\\,\\alpha,\\,-2,\\,-1]$ עבור $n=0..4$, $M=4$ (סדר המסנן), אורך 5.\n\n**תנאי GLP.** מסנן FIR ממשי הוא בעל פאזה ליניארית מוכללת אם ורק אם $h[n]=\\pm h[M-n]$ (סימטרי או אנטי-סימטרי).\n\n**סימטרי?** דורש $h[0]=h[4]$, כלומר $1=-1$. לא מתקיים, לכן אין סימטריה.\n\n**אנטי-סימטרי?** דורש $h[n]=-h[4-n]$:\n- $h[0]=-h[4]$: $1=-(-1)$ ✓\n- $h[1]=-h[3]$: $2=-(-2)$ ✓\n- $h[2]=-h[2]$: $\\alpha=-\\alpha$, ולכן $\\alpha=0$.\n\n$$\\boxed{\\alpha=0}$$\n**בדיקה:** עבור $\\alpha=0$:\n$$H^f(\\theta)=e^{-j2\\theta}\\left[(e^{j2\\theta}-e^{-j2\\theta})+2(e^{j\\theta}-e^{-j\\theta})\\right]=e^{j(\\pi/2-2\\theta)}\\left[2\\sin2\\theta+4\\sin\\theta\\right]$$\nפאזה ליניארית $\\frac\\pi2-2\\theta$ ומשרעת ממשית (מסנן מסוג III, אורך אי-זוגי ואנטי-סימטרי; מתאפס ב-$z=\\pm1$). לכל $\\alpha\\neq0$ אף אחד מתנאי הסימטריה אינו מתקיים, ולכן המסנן אינו GLP."
+    }
+   ]
+  }
+ ]
+}
