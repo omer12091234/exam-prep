@@ -3346,74 +3346,38 @@
    "has_solution": true,
    "questions": [
     {
-     "num": "1א",
-     "description": "\\(x(t)=e^{j\\alpha\\frac{\\pi}{T}t}\\), \\(a_n=\\tfrac1T\\int x(t)\\mathrm{sinc}(\\tfrac{t-nT}{T})dt\\), \\(\\hat x_1(t)=\\sum_n a_n\\mathrm{sinc}(\\tfrac{t-nT}{T})\\). מהו \\(\\alpha_{max}\\) כך ש-\\(\\hat x_1(t)=x(t)\\) לכל \\(|\\alpha|\\lt\\alpha_{max}\\)? האם עבור \\(|\\alpha|\\gt\\alpha_{max}\\) מתקיים \\(\\hat x_1(nT)=x(nT)\\)?",
+     "num": "1",
+     "description": "",
      "topics": [
       "t2",
       "t3"
      ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
-     "num": "1ב",
-     "description": "אותן שאלות עבור \\(\\hat x_2(t)=\\sum_n x(nT)\\mathrm{sinc}(\\tfrac{t-nT}{T})\\) (דגימה ללא מסנן anti-aliasing).",
+     "num": "2",
+     "description": "",
+     "topics": [
+      "t6",
+      "t7"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "3",
+     "description": "",
+     "topics": [
+      "t8",
+      "t9"
+     ],
+     "difficulty": 3
+    },
+    {
+     "num": "4",
+     "description": "",
      "topics": [
       "t2",
-      "t3"
-     ],
-     "difficulty": 2
-    },
-    {
-     "num": "2א",
-     "description": "\\(h[n]=e^{j\\theta_0n}\\), \\(n=0..N-1\\), ו-\\(y[n]=x[n]\\circledast h[n]\\). עבור \\(\\theta_0=4\\pi/N\\): לפתח את \\(A\\) כך ש-\\(\\underline y=A\\underline x\\) (ביטוי לאיבר כללי), ולקבוע האם לכל \\(\\underline y\\) קיים \\(\\underline x\\) מתאים.",
-     "topics": [
-      "t7",
-      "t6"
-     ],
-     "difficulty": 2
-    },
-    {
-     "num": "2ב",
-     "description": "חזרה על סעיף א׳ עבור \\(\\theta_0=\\tfrac{\\pi}{2N}\\) (תדר שאינו על רשת ה-DFT).",
-     "topics": [
-      "t7",
-      "t6"
-     ],
-     "difficulty": 3
-    },
-    {
-     "num": "3א",
-     "description": "סינון אות ארוך ב-FIR באורך 30 בשיטת Overlap-Save עם FFT Radix-2 באורך 32. מהו מספר המכפלות לחישוב 105 הדגימות הראשונות של המוצא?",
-     "topics": [
-      "t9",
-      "t8"
-     ],
-     "difficulty": 2
-    },
-    {
-     "num": "3ב",
-     "description": "תוך שימוש ב-FFT באורך 32 ופעולות כפל וחיבור נוספות: להציע דרך לצמצם את מספר המכפלות לחישוב 105 הדגימות הראשונות לפחות פי 5.",
-     "topics": [
-      "t9",
-      "t8"
-     ],
-     "difficulty": 3
-    },
-    {
-     "num": "4א",
-     "description": "\\(x[n]\\) באורך \\(N\\) הופכת לרכבת הלמים \\(x(t)=\\sum_n x[n]\\delta(t-nT)\\), מסוננת ב-\\(h(t)=\\mathrm{sinc}(t/\\tau)\\) ונדגמת \\(y[n]=y(nT)\\), \\(n=0..N-1\\). עבור \\(\\tau=T\\): ביטוי ל-\\(Y[k]\\) כתלות ב-\\(X[k]\\).",
-     "topics": [
       "t3",
-      "t6"
-     ],
-     "difficulty": 1
-    },
-    {
-     "num": "4ב",
-     "description": "עבור \\(\\tau=\\alpha T\\), \\(\\alpha\\) ממשי: האם ניתן לחשב את \\(X[k]\\) בהינתן \\(Y[k]\\)? יש להתייחס לתחום ערכי \\(\\alpha\\) רחב ככל הניתן.",
-     "topics": [
-      "t3",
-      "t5",
       "t6"
      ],
      "difficulty": 3
