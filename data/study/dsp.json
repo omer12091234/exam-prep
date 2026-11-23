@@ -2770,66 +2770,39 @@
    "has_solution": true,
    "questions": [
     {
-     "num": "1א",
-     "description": "\\(x(t)\\) ממשי עם \\(X(j\\omega)=0\\) ל-\\(|\\omega|\\ge\\pi/T\\). מעבדים: \\(y(t)=x(t)*\\Pi(t/T)\\), \\(y[n]=y(nT)\\), \\(z[n]=y[n]*g[n]\\), \\(z(t)=\\sum_n z[n]\\mathrm{sinc}(\\tfrac{t-nT}{T})\\). האם ניתן לשחזר את \\(x(t)\\) בהינתן \\(y[n]\\)?",
+     "num": "1",
+     "description": "",
      "topics": [
       "t2",
-      "t4",
+      "t3",
       "t5"
-     ],
-     "difficulty": 2
-    },
-    {
-     "num": "1ב",
-     "description": "האם קיים \\(g[n]\\) שעבורו \\(z(t)=x(t)\\)? להוכיח ולפתח ביטוי ל-\\(g[n]\\) (מסנן הופכי בדיד ל-sinc בתדר), או להוכיח שלא עם דוגמה.",
-     "topics": [
-      "t4",
-      "t5",
-      "t3"
      ],
      "difficulty": 3
     },
     {
-     "num": "2א",
-     "description": "\\(x_1[n],x_2[n]\\) באורך \\(N\\) ו-\\(y[n]=\\{x_1[0],0,x_2[0],x_1[1],0,x_2[1],\\ldots\\}\\) באורך \\(3N\\). לפתח ביטוי פשוט ל-\\(Y[k]\\) (DFT באורך \\(3N\\)) כתלות ב-\\(X_1[k],X_2[k]\\).",
+     "num": "2",
+     "description": "",
      "topics": [
       "t6",
       "t7"
      ],
-     "difficulty": 2
-    },
-    {
-     "num": "2ב",
-     "description": "לפתח ביטוי למטריצה \\(A\\) המקיימת \\(\\underline Y=A\\underline X\\), כאשר \\(\\underline X=(X_1[0..N-1],X_2[0..N-1])^T\\).",
-     "topics": [
-      "t6"
-     ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
      "num": "3",
-     "description": "סינון סדרה ארוכה \\(y=x*h\\) (מסנן באורך \\(M\\)) כאשר הבלוקים \\(x_i[n]\\) באורך \\(N=L+M-1\\) מוגדרים עם גלישה מעגלית (\\(x[iL+n-N]\\) ל-\\(L\\le n\\le N-1\\)) ונתונות \\(X_i[k]\\). לפתח אלגוריתם יעיל ככל הניתן לחישוב \\(y[n]\\), להוכיח נכונות ולחשב את מספר המכפלות המרוכבות לכל \\(L\\) איברי מוצא.",
+     "description": "",
      "topics": [
       "t9",
-      "t8",
-      "t7"
+      "t7",
+      "t8"
      ],
      "difficulty": 3
     },
     {
-     "num": "4א",
-     "description": "\\(X[k]=\\tfrac1{\\omega_s}\\int X(j\\omega)\\mathrm{sinc}(\\tfrac{\\omega-k\\omega_s}{\\omega_s})d\\omega\\), \\(\\omega_s=2\\pi/T\\), ו-\\(x[n]=\\sum_{k=0}^{N-1}X[k]e^{j\\frac{2\\pi}{N}kn}\\) (\\(N\\) אי-זוגי). האם ניתן לשחזר את \\(x(t)\\) בהינתן \\(X[k]\\) לכל \\(k\\)? (כן לכל \\(x\\) / לא / כן ל-\\(x\\) מסוימים) – דגימה בתדר, דואליות.",
+     "num": "4",
+     "description": "",
      "topics": [
-      "t4",
-      "t1"
-     ],
-     "difficulty": 3
-    },
-    {
-     "num": "4ב",
-     "description": "האם ניתן לשחזר את \\(x(t)\\) בהינתן \\(x[n]\\) לכל \\(n\\)? לבחור תשובה ולהוכיח.",
-     "topics": [
-      "t4",
+      "t1",
       "t6"
      ],
      "difficulty": 3
