@@ -3667,26 +3667,17 @@
    "has_solution": true,
    "questions": [
     {
-     "num": "1א",
-     "description": "FIR ממשי לא סיבתי באורך \\(2N+1\\) עם \\(h[n]=h[-n]\\). לפתח את ה-DTFT בצורה \\(H(e^{j\\theta})=\\sum_{n=0}^N a_n(\\theta)h[n]\\) עם ביטוי פשוט ל-\\(a_n(\\theta)\\), ולהגדיר את האילוצים על הפאזה של \\(H\\).",
+     "num": "1",
+     "description": "",
      "topics": [
       "t12",
       "t5"
      ],
-     "difficulty": 2
-    },
-    {
-     "num": "1ב",
-     "description": "לכתוב תוכנית MATLAB לחישוב \\(H(e^{j\\pi/2})\\) ללא שימוש ב-fft().",
-     "topics": [
-      "t5",
-      "t12"
-     ],
-     "difficulty": 1
+     "difficulty": 3
     },
     {
      "num": "2",
-     "description": "\\(x[n]\\) ממשית באורך \\(N\\) זוגי עם \\(X[k]\\) ממשית, מרופדת ב-\\(N\\) אפסים ל-\\(y[n]\\) באורך \\(2N\\). התמרות חד-צדדיות \\(X_1[k]\\) (\\(k=0..N/2\\)) ו-\\(Y_1[k]\\) (\\(k=0..N\\)). לפתח מטריצה \\(A\\) כך ש-\\(\\mathbf Y_1=A\\mathbf X_1\\) כמכפלת מטריצות קבועות.",
+     "description": "",
      "topics": [
       "t6",
       "t7"
@@ -3695,16 +3686,16 @@
     },
     {
      "num": "3",
-     "description": "\\(f(t,\\alpha)=\\sum_n\\sin(n\\alpha)\\,\\mathrm{sinc}(t-n)\\). לפתח ביטוי פשוט עבור \\(0\\le\\alpha\\le\\pi\\), לצייר את \\(f(t,0.5\\pi)\\), ולבדוק האם הביטוי נכון גם ל-\\(\\alpha=1.5\\pi\\) (aliasing) ולצייר.",
+     "description": "",
      "topics": [
       "t2",
       "t3"
      ],
-     "difficulty": 2
+     "difficulty": 3
     },
     {
      "num": "4",
-     "description": "\\(x(t)\\) ממשי חסום סרט (\\(|\\omega|\\ge\\pi/T\\)); \\(x_1(t)=\\sum_n x(nT)\\Pi(\\tfrac{t-nT}{T})\\) ו-\\(x_2(t)\\) עם ממוצע מקומי במקום דגימה נקודתית. לצייר דוגמה שבה \\(x_1=x_2\\) ודוגמה שבה לא, ולהציע דרך לחשב את \\(x_2(t)\\) מ-\\(x_1(t)\\).",
+     "description": "",
      "topics": [
       "t3",
       "t2"
