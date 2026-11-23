@@ -1,0 +1,231 @@
+{
+ "exam": {
+  "match_title": "מועד ב׳ סמסטר א׳ 2013 (בועז רפאלי, 08/03/2013) + פתרון",
+  "drive_file_id": "1i-3F_AS0RL28IfU0wpyQ1-X9WLUdFymw",
+  "source_title": "מועד ב 2013 - בועז + פתרון.pdf",
+  "lecturer": "פרופ' בועז רפאלי",
+  "year": 2013,
+  "date": "2013-03-08",
+  "duration_minutes": 180,
+  "aids": "דף הנוסחאות המצורף, מחשב כיס",
+  "notes": "הקובץ (9 עמודים): עמ' 1-2 שאלון, עמ' 3-9 פתרון בכתב יד של הקורס (חלקו קשה לקריאה). כל הפתרונות כאן נכתבו מחדש ונבדקו מול הפתרון הסרוק. הוסכם $\\mathrm{sinc}(u)=\\sin(\\pi u)/(\\pi u)$, $\\omega_s=2\\pi/T$, התמרת DTFT $Y(e^{j\\theta})=\\sum y[n]e^{-j\\theta n}$. בשאלה 4 הפתרון הסרוק משתמש בגורם $2\\pi/T$ בקשר בין התמרת האות הדגום להתמרה הרציפה, בניגוד לנוסחה הסטנדרטית $1/T$ - ראו הערות בפתרונות."
+ },
+ "questions": [
+  {
+   "number": 1,
+   "points": 25,
+   "topics": [
+    "t2",
+    "t3"
+   ],
+   "stem": "מערכת דגימה ושחזור נתונה באיור 1. כאשר:\n$$p(t)=\\sum_{n=-\\infty}^{\\infty}\\delta(t-nT)\\qquad \\text{(i)}$$\n$$z(t)=x(t)\\,[p(t)*h(t)]\\qquad \\text{(ii)}$$\n$$y(t)=z(t)*g(t)\\qquad \\text{(iii)}$$\n$*$ מסמן קונבולוציה לינארית.",
+   "figures": [
+    "איור 1: דיאגרמת בלוקים: $x(t)$ מוכפל (באמצעות מכפל) באות $z$ שמתקבל מהכפלה ב-$p(t)*h(t)$, כלומר $p(t)$ עובר דרך המסנן $h(t)$ ומוכפל ב-$x(t)$; התוצאה $z(t)$ נכנסת לבלוק $g(t)$ ומוציאה $y(t)$"
+   ],
+   "regions": [
+    {
+     "page": 1,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      150,
+      423,
+      780,
+      617
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "א",
+     "points": 10,
+     "text": "בסעיף זה נתון כי $h(t)=\\frac{1}{T}\\Pi\\left(\\frac{t}{T}\\right)$. עבור אות כניסה חסום סרט, קרי $|X(j\\omega)|=0,\\ \\omega\\ge\\frac{\\pi}{T}$, מהו $g(t)$ שעבורו יתקבל $y(t)=x(t)$? הסבר/י את הפתרון.",
+     "box": [
+      190,
+      619,
+      775,
+      711
+     ],
+     "lines": 2,
+     "solution": "**מוסכמות.** $\\omega_s=\\frac{2\\pi}{T}$, $\\Pi(u)=1$ עבור $|u|<\\frac12$ ו-0 אחרת (מלבן ברוחב 1 וגובה 1), $\\tilde p(t)\\triangleq h(t)*p(t)$.\n\n**שלב 1 - האות $z(t)$.** הקונבולוציה עם רכבת הלמים משכפלת את $h$ בכל מכפלה של $T$:\n$$\\tilde p(t)=\\frac1T\\Pi\\!\\left(\\frac tT\\right)*\\sum_n\\delta(t-nT)=\\frac1T\\sum_{n}\\Pi\\!\\left(\\frac{t-nT}{T}\\right).$$\nכל מלבן ברוחב $T$ וגובה $\\frac1T$, והמלבנים צמודים זה לזה ללא חפיפה וללא רווח (המלבן ה-$n$ תופס את $\\left(nT-\\frac T2,\\,nT+\\frac T2\\right)$), ולכן $\\tilde p(t)=\\frac1T$ לכל $t$. מכאן\n$$z(t)=x(t)\\tilde p(t)=\\frac{x(t)}{T}.$$\n\n**שלב 2 - $g(t)$.** צריך $y=z*g=x$, כלומר $\\frac1T\\,x*g=x$, ולכן $g(t)=T\\,\\delta(t)$ (במישור התדר $G(j\\omega)=T$ קבוע).\n\n**הערה.** מכיוון ש-$z=x/T$ בדיוק, לא נדרש שה-$x$ יהיה חסום סרט: $g=T\\delta(t)$ עובד לכל $x$. אם כבר ידוע ש-$|X(j\\omega)|=0$ עבור $|\\omega|\\ge\\frac\\pi T$, אפשר גם כל $g$ שמקיים $G(j\\omega)=T$ בתחום $|\\omega|<\\frac\\pi T$ (למשל מסנן מעביר-נמוכים אידיאלי בעל הגבר $T$).\n\n**בדיקה בתדר.** $\\tilde P(j\\omega)=H(j\\omega)\\,\\omega_s\\sum_k\\delta(\\omega-k\\omega_s)=\\omega_s\\sum_kH(jk\\omega_s)\\delta(\\omega-k\\omega_s)$. עבור $H(j\\omega)=\\mathrm{sinc}\\!\\left(\\frac{\\omega T}{2\\pi}\\right)$ מתקיים $H(0)=1$ ו-$H(jk\\omega_s)=\\mathrm{sinc}(k)=0$ לכל $k\\ne0$, ולכן $\\tilde P(j\\omega)=\\omega_s\\delta(\\omega)$, כלומר $\\tilde p(t)=\\frac1T$. התוצאה תואמת.\n\n**תשובה:** $g(t)=T\\,\\delta(t)$."
+    },
+    {
+     "label": "ב",
+     "points": 15,
+     "text": "האם קיים $h(t)\\not\\equiv0$, עבורו לא קיים $g(t)$ המאפשר שחזור מלא, כלומר $y(t)=x(t)$? אם קיים, תן/י דוגמה, אחרת הוכח/י.",
+     "box": [
+      190,
+      712,
+      775,
+      778
+     ],
+     "lines": 2,
+     "solution": "**מוסכמות.** כמו בסעיף א'; $\\tilde p(t)=h(t)*p(t)$.\n\n**התמרת האות $z$.** $z=x\\tilde p$, ולכן $Z(j\\omega)=\\frac1{2\\pi}X(j\\omega)*\\tilde P(j\\omega)$, כאשר\n$$\\tilde P(j\\omega)=H(j\\omega)\\cdot\\omega_s\\sum_{k}\\delta(\\omega-k\\omega_s)=\\omega_s\\sum_kH(jk\\omega_s)\\,\\delta(\\omega-k\\omega_s).$$\nמכאן\n$$Z(j\\omega)=\\frac1T\\sum_{k}H(jk\\omega_s)\\,X\\big(j(\\omega-k\\omega_s)\\big).$$\nכלומר $z$ מכיל העתקים של $X$ במשקלים $H(jk\\omega_s)$ - אלה הערכים של $H$ **רק בכפולות של $\\omega_s$** שקובעים את $z$.\n\n**התשובה: כן, קיים.** אם $H(jk\\omega_s)=0$ לכל $k$ שלם, אז $\\tilde P\\equiv0$, לכן $z(t)\\equiv0$, ו-$y=z*g\\equiv0\\neq x$ לכל $g$ ולכל $x\\not\\equiv0$ - אין שום שחזור.\n\n**דוגמה מפורשת.**\n$$h(t)=\\Pi\\!\\left(\\frac tT\\right)-\\Pi\\!\\left(\\frac{t-T}{T}\\right)\\not\\equiv0.$$\nהחישוב ישירות בזמן: $\\tilde p(t)=\\sum_n h(t-nT)=\\sum_n\\Pi\\!\\left(\\frac{t-nT}{T}\\right)-\\sum_n\\Pi\\!\\left(\\frac{t-(n+1)T}{T}\\right)=1-1=0$ (שתי הסכומות זהות, כי $n+1$ רץ גם הוא על כל השלמים). לכן $z\\equiv0$.\n\n(בתדר: $H(j\\omega)=T\\,\\mathrm{sinc}\\!\\left(\\frac{\\omega T}{2\\pi}\\right)\\left(1-e^{-j\\omega T}\\right)$, ו-$H(jk\\omega_s)=0$ לכל $k$: עבור $k\\neq0$ בגלל ה-sinc, ועבור $k=0$ בגלל הגורם $1-e^{-j\\omega T}$.)\n\n**מסקנה.** הדרישה לשחזור היא (לפחות) $H(jk\\omega_s)\\ne0$ עבור $k=0$, ובנוסף כאשר יש חפיפה בין ההעתקים - תנאי נוסף על $x$."
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "points": 25,
+   "topics": [
+    "t8",
+    "t9"
+   ],
+   "stem": "נדרש לחשב את תוצאת הקונבולוציה הליניארית בין האות הבדיד $x[n]$ באורך 50 לבין מסנן FIR באורך 4 בעזרת שיטת overlap-save. נסמן את תוצאת הקונבולוציה ב-$y[n]$.\nלרשותך פונקצית FFT לחישוב התמרה באורך 8 ופונקצית IFFT לחישוב התמרה הפוכה באורך 8.",
+   "figures": [],
+   "regions": [
+    {
+     "page": 1,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      190,
+      783,
+      775,
+      890
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "א",
+     "points": 12,
+     "text": "כתוב/י קוד מטלב למימוש חישוב $y[n]$ במלואו, בעזרת שיטת overlap-save. ניקוד מלא יינתן עבור מימוש נכון ותחביר תקני. הנח/י כי נתון במטלב האות $x$, המסנן $h$, ופונקציות FFT ו-IFFT אשר ניתן להפעילן רק בחישוב התמרות באורך 8.",
+     "box": [
+      190,
+      898,
+      775,
+      976
+     ],
+     "lines": 3,
+     "solution": "**מוסכמות.** $M=4$ (אורך $h$), $N=8$ (אורך ה-FFT), אינדוקס מטלב מ-1. $x$ ו-$h$ וקטורי שורה.\n\n**פרמטרים.**\n- בכל בלוק באורך $N=8$ הקונבולוציה המעגלית פוגעת ב-$M-1=3$ הדגימות הראשונות (aliasing), ו-$N-M+1=5$ הדגימות האחרונות נכונות. לכן **כל בלוק תורם $L=5$ דגימות פלט**, והבלוקים חופפים ב-$M-1=3$ דגימות.\n- אורך הקונבולוציה הליניארית: $50+4-1=53$.\n- מספר הבלוקים: $\\lceil 53/5\\rceil=11$.\n- ריפוד: $M-1=3$ אפסים בתחילת $x$ (כדי שהבלוק הראשון ייתן את $y[0..4]$), ובסוף אפסים עד אורך כולל $11\\cdot5+3=58$, כלומר $58-3-50=5$ אפסים בסוף.\n\n**קוד.**\n```matlab\nM = 4;  N = 8;  L = N - M + 1;          % L = 5\nLy = 50 + M - 1;                         % 53\nnb = ceil(Ly / L);                       % 11 blocks\nxp = [zeros(1, M-1), x, zeros(1, nb*L + M - 1 - (M-1) - 50)];   % length 58\nH  = fft([h, zeros(1, N - M)]);          % FFT of h padded to 8 (done once)\ny  = zeros(1, nb*L);\nfor ind = 0:nb-1\n    block = xp(ind*L + (1:N));           % 8 samples, overlap of 3\n    yb    = ifft(fft(block) .* H);       % circular convolution of length 8\n    y(ind*L + (1:L)) = yb(M:N);          % keep only samples 4..8\nend\ny = real(y(1:Ly));                       % 53 output samples\n```\n\n**בדיקה.** בלוק $0$ מכיל $[0,0,0,x_0,\\dots,x_4]$; בפלט המעגלי הדגימות $1..3$ מזוהמות והדגימות $4..8$ שוות ל-$y[0..4]$. הבלוק האחרון ($ind=10$) מכסה את $xp(51{:}58)$ ומשלים את $y[50..54]$ (מהן $y[50..52]$ אמיתיות והשאר אפסים, והחיתוך ל-53 מסלק אותן). `real` מסיר שאריות מדומות זעירות של נקודה צפה."
+    },
+    {
+     "label": "ב",
+     "points": 13,
+     "text": "בסעיף זה בלבד פונקצית ה-FFT לא ניתנת לשימוש, אבל פונקציית IFFT ניתנת לשימוש כרגיל לחישוב התמרה הפוכה באורך 8 בלבד. הצע/י דרך לחישוב הקונבולוציה הליניארית הדרושה בעזרת פונקציית ה-IFFT הנתונה (ללא חישוב ישיר של התמרת DFT וללא חישוב ישיר של קונבולוציה בזמן). פרט/י בעזרת נוסחאות והסבר/י.",
+     "box": [
+      190,
+      990,
+      775,
+      1115
+     ],
+     "lines": 5,
+     "solution": "**הרעיון.** FFT אפשר לחשב בעזרת IFFT על סדרה מוחזרת (reversed) מעגלית.\n\n**הפיתוח.** ב-IFFT באורך $N=8$: $\\mathrm{ifft}(v)[k]=\\frac1N\\sum_{n=0}^{N-1}v[n]e^{+j\\frac{2\\pi}{N}kn}$. נציב $v[n]=x[((-n))_N]$ ונחליף משתנה $m=((-n))_N$ (תמורה של האינדקסים):\n$$\\mathrm{ifft}\\big(x[((-n))_N]\\big)[k]=\\frac1N\\sum_{m=0}^{N-1}x[m]\\,e^{-j\\frac{2\\pi}{N}km}=\\frac1N X[k].$$\nלכן\n$$\\boxed{\\mathrm{fft}(x)=N\\cdot\\mathrm{ifft}\\big(x[((-n))_N]\\big)}$$\nבמטלב: `myfft = @(v) N * ifft(v([1, N:-1:2]));` כאשר $N=8$ (המרת האינדקס: $n=0$ נשאר, $n=1..7$ הופך ל-$7..1$).\n\n(חלופה שקולה: $\\mathrm{fft}(x)=\\mathrm{conj}\\big(N\\cdot\\mathrm{ifft}(\\mathrm{conj}(x))\\big)$.)\n\n**שימוש בשיטת overlap-save.** מחליפים את שתי קריאות ה-FFT בקוד של סעיף א':\n```matlab\nN = 8;  myfft = @(v) N * ifft(v([1, N:-1:2]));\nH = myfft([h, zeros(1, N-M)]);\n...\nyb = ifft(myfft(block) .* H);\n```\nכל שאר הקוד (ריפוד, בלוקים, חיתוך $M..N$) זהה, ולכן מתקבלת אותה קונבולוציה ליניארית באורך 53 - כאשר נעשה שימוש רק ב-IFFT באורך 8 ובפעולות כפל איברים והיפוך אינדקסים (ללא DFT ישיר וללא קונבולוציה בזמן).\n\n**בדיקה.** עבור $x=\\delta[n]$: $x[((-n))_N]=\\delta[n]$, $\\mathrm{ifft}=\\frac1N$, ולכן $N\\cdot\\frac1N=1=X[k]$ - נכון."
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "points": 25,
+   "topics": [
+    "t6",
+    "t7"
+   ],
+   "stem": "נתונה סדרה באורך $N$ אי זוגי: $x[n],\\quad n=0,1,\\dots,N-1$.\nנתון כי הסדרה ממשית, וגם כי: $x[n]=x\\left[((-n))_N\\right],\\quad n=0,1,\\dots,N-1$. נגדיר:\n(i) $X[k],\\ k=0,1,\\dots,N-1$ היא התמרת DFT של $x[n]$ באורך $N$.\n(ii) $z[n]=\\begin{cases}x\\left[\\frac n2\\right], & \\text{even } n\\\\ 0, & \\text{odd } n\\end{cases},\\quad n=0,1,\\dots,2N-1$.\n(iii) $Z[k],\\ k=0,1,\\dots,2N-1$ היא התמרת DFT של $z[n]$ באורך $2N$.\n(iv) $Y[k]$ היא החלק הממשי של $X[k]$ עבור $k=0,1,\\dots,\\frac{N-1}{2}$.",
+   "figures": [],
+   "regions": [
+    {
+     "page": 2,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      170,
+      60,
+      775,
+      318
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "א",
+     "points": 10,
+     "text": "פתח/י ביטוי פשוט ככל הניתן (בעל מספר קטן ככל שניתן של מכפלות וסכומים) ל-$Z[k]$ כפונקציה של $X[k]$.",
+     "box": [
+      170,
+      325,
+      775,
+      378
+     ],
+     "lines": 2,
+     "solution": "**מוסכמות.** $W_N=e^{-j2\\pi/N}$, $X[k]=\\sum_{n=0}^{N-1}x[n]W_N^{kn}$, $Z[k]$ - DFT באורך $2N$.\n\n**פיתוח.** $z[n]$ מאופס באינדקסים אי-זוגיים, ולכן בסכום נשארים רק $n=2m$, $m=0,\\dots,N-1$ (ואז $z[2m]=x[m]$):\n$$Z[k]=\\sum_{n=0}^{2N-1}z[n]e^{-j\\frac{2\\pi}{2N}kn}=\\sum_{m=0}^{N-1}x[m]\\,e^{-j\\frac{2\\pi}{2N}k\\,2m}=\\sum_{m=0}^{N-1}x[m]\\,e^{-j\\frac{2\\pi}{N}km}.$$\nהביטוי האחרון הוא DFT באורך $N$ המחושב בנקודה $k$, וזו מחזורית ב-$N$ ב-$k$:\n$$\\boxed{Z[k]=X\\big[((k))_N\\big],\\qquad k=0,\\dots,2N-1}$$\nכלומר $Z$ הוא $X$ משוכפל פעמיים ברציפות: $Z[k]=X[k]$ ל-$0\\le k\\le N-1$ ו-$Z[k]=X[k-N]$ ל-$N\\le k\\le 2N-1$. (הכנסת אפסים בזמן = שכפול בתדר.)\n\n**בדיקה.** $Z[0]=\\sum x[m]=X[0]$ ✓; $Z[N]=\\sum x[m]e^{-j2\\pi m}=X[0]$ ✓."
+    },
+    {
+     "label": "ב",
+     "points": 15,
+     "text": "חשב/י את איברי המטריצה $A$ המקיימת $\\underline{Z}=A\\cdot\\underline{Y}$ כאשר $\\underline{Z}=\\left(Z[0]\\ Z[1]\\ \\cdots\\ Z[2N-1]\\right)^T,\\ \\underline{Y}=\\left(Y[0]\\ Y[1]\\ \\cdots\\ Y\\left[\\frac{N-1}{2}\\right]\\right)^T$. יש להציג הסבר מלא.",
+     "box": [
+      170,
+      382,
+      775,
+      466
+     ],
+     "lines": 3,
+     "solution": "**מוסכמות.** $\\underline Y=\\big(Y[0],\\dots,Y[\\tfrac{N-1}2]\\big)^T$ (אורך $\\frac{N+1}{2}$), $\\underline Z\\in\\mathbb C^{2N}$. מכיוון ש-$N$ אי-זוגי, $\\frac{N-1}{2}$ שלם.\n\n**שלב 1 - מבנה $X[k]$.** $x$ ממשית וזוגית מעגלית ($x[n]=x[((-n))_N]$), ולכן\n$$X[k]=\\sum_nx[n]\\cos\\!\\big(\\tfrac{2\\pi}{N}kn\\big)\\in\\mathbb R,$$\n(החלק המדומה $-\\sum x[n]\\sin(\\cdot)$ מתאפס כי $x[n]\\sin$ אי-זוגי מעגלית), וגם $X[k]=X[((-k))_N]=X[N-k]$. לכן $Y[k]=\\mathrm{Re}\\{X[k]\\}=X[k]$ ל-$0\\le k\\le\\frac{N-1}2$, ו-\n$$X[k]=Y[N-k],\\qquad k=\\tfrac{N+1}{2},\\dots,N-1\\quad(\\text{אז }N-k=\\tfrac{N-1}2,\\dots,1).$$\n\n**שלב 2 - $\\underline X=S\\,\\underline Y$.** השורות $0..\\frac{N-1}2$ של $S$ הן מטריצת היחידה $I_{\\frac{N+1}2}$. השורה ה-$k$ עבור $k\\ge\\frac{N+1}{2}$ מכילה 1 בעמודה $N-k$:\n$$S=\\begin{pmatrix}I_{\\frac{N+1}{2}}\\\\ J\\end{pmatrix}\\in\\mathbb R^{N\\times\\frac{N+1}2},\\qquad J=\\begin{pmatrix}0&0&\\cdots&0&1\\\\ \\vdots&&\\iddots&1&0\\\\0&1&\\cdots&0&0\\end{pmatrix}\\in\\mathbb R^{\\frac{N-1}{2}\\times\\frac{N+1}2}$$\nב-$J$ העמודה הראשונה (אינדקס 0) אפסים, ומעליה אלכסון משני של אחדות: $J_{r,\\,\\frac{N-1}{2}-r}=1$ עבור $r=0,\\dots,\\frac{N-3}{2}$ (שורה $r$ מתאימה ל-$k=\\frac{N+1}{2}+r$).\n\n**שלב 3 - $\\underline Z=\\begin{pmatrix}I_N\\\\I_N\\end{pmatrix}\\underline X$** לפי סעיף א'.\n\n**התוצאה.**\n$$A=\\begin{pmatrix}I_N\\\\I_N\\end{pmatrix}S=\\begin{pmatrix}I_{\\frac{N+1}{2}}\\\\ J\\\\ I_{\\frac{N+1}{2}}\\\\ J\\end{pmatrix}\\in\\mathbb R^{2N\\times\\frac{N+1}{2}}$$\nכלומר $A=\\begin{pmatrix}S\\\\S\\end{pmatrix}$, מטריצה ממשית בגודל $2N\\times\\frac{N+1}2$.\n\n**דוגמה ($N=3$).** $\\underline Y=(Y_0,Y_1)^T$, $X=(Y_0,Y_1,Y_1)$, ו-\n$$S=\\begin{pmatrix}1&0\\\\0&1\\\\0&1\\end{pmatrix},\\quad A=\\begin{pmatrix}S\\\\S\\end{pmatrix}\\in\\mathbb R^{6\\times2}.$$\nאכן $Z=(Y_0,Y_1,Y_1,Y_0,Y_1,Y_1)$ ✓."
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "points": 25,
+   "topics": [
+    "t2",
+    "t5"
+   ],
+   "stem": "כמהנדס לעיבוד אותות בחברה המפתחת מערכות תקשורת, הוטל עליך לפתח מסנן דיגיטלי הפועל על אות כניסה דגום, לפי איור 2 והתיאור הבא.\n(i) אות הכניסה נתון על-ידי: $x(t)=P\\cos\\left(\\frac{\\pi}{2T}t\\right)$, כאשר $P$ קבוע ממשי, ולאות התמרת פורייה $X(j\\omega)$.\n(ii) מערכת A מוגדרת על ידי: $y(t)=\\Pi\\left(\\frac{t-T/2}{T}\\right)*x(t)$, כאשר $*$ מסמן קונבולוציה לינארית.\n(iii) מערכת B מוגדרת על-ידי: $y[n]=y(nT)$ לכל $n$ שלם, כאשר ל-$y[n]$ התמרת DTFT המסומנת על-ידי $Y(e^{j\\theta})$.\n(iv) מערכת C היא מסנן ספרתי בעל תגובה להלם $h[n]$ שלו DTFT בעל התמרת $H(e^{j\\theta})$.\nסעיפי השאלה:",
+   "figures": [
+    "איור 2: דיאגרמת בלוקים: $x(t)\\to$ מערכת A $\\to y(t)\\to$ מערכת B $\\to y[n]\\to$ מערכת C $\\to z[n]$"
+   ],
+   "regions": [
+    {
+     "page": 2,
+     "view": [
+      935,
+      1210
+     ],
+     "box": [
+      170,
+      482,
+      775,
+      950
+     ]
+    }
+   ],
+   "subs": [
+    {
+     "label": "א",
+     "points": 15,
+     "text": "פתח/י ביטוי לקשר בין $X(j\\omega)$ בתחום $\\omega\\in\\left[-\\frac{\\pi}{T},\\frac{\\pi}{T}\\right]$ לבין $Y(e^{j\\theta})$. על הקשר להיות פשוט ככל שניתן, שאינו כולל פעולות סיכום או אינטגרציה. פרט/י והסבר/י כל שלב בפיתוח.",
+     "box": [
+      170,
+      962,
+      775,
+      1062
+     ],
+     "lines": 3,
+     "solution": "**מוסכמות.** $\\omega_s=\\frac{2\\pi}T$; $\\mathrm{sinc}(u)=\\frac{\\sin\\pi u}{\\pi u}$; $X(j\\omega)=\\int x(t)e^{-j\\omega t}dt$; DTFT: $Y(e^{j\\theta})=\\sum_ny[n]e^{-j\\theta n}$.\n\n**אות הכניסה.** $\\Omega_0=\\frac{\\pi}{2T}=\\frac{\\omega_s}{4}$ ו-\n$$X(j\\omega)=P\\pi\\big[\\delta(\\omega-\\Omega_0)+\\delta(\\omega+\\Omega_0)\\big],$$\nכלומר רק שני הלמים בתדרים $\\pm\\frac{\\pi}{2T}$, בתוך $\\left(-\\frac\\pi T,\\frac\\pi T\\right)$.\n\n**מערכת A.** $a(t)=\\Pi\\!\\left(\\frac{t-T/2}{T}\\right)$ הוא מלבן בגובה 1 על $[0,T]$:\n$$A(j\\omega)=\\int_0^Te^{-j\\omega t}dt=e^{-j\\omega T/2}\\,T\\,\\frac{\\sin(\\omega T/2)}{\\omega T/2}=T\\,e^{-j\\omega T/2}\\,\\mathrm{sinc}\\!\\left(\\frac{\\omega}{\\omega_s}\\right).$$\n$$Y(j\\omega)=T\\,e^{-j\\omega T/2}\\,\\mathrm{sinc}\\!\\left(\\frac{\\omega}{\\omega_s}\\right)X(j\\omega).$$\nמכיוון ש-$X$ הוא הלמים בלבד, גם $Y(j\\omega)$ מורכב משני הלמים באותם תדרים $\\pm\\Omega_0$ (בלי זנבות ובלי רוחב-סרט נוסף).\n\n**מערכת B - דגימה.** ל-DTFT של $y[n]=y(nT)$:\n$$Y(e^{j\\theta})\\Big|_{\\theta=\\omega T}=\\frac1T\\sum_{k=-\\infty}^{\\infty}Y\\big(j(\\omega-k\\omega_s)\\big).$$\nבתחום $\\omega\\in\\left[-\\frac\\pi T,\\frac\\pi T\\right]$ ההעתקים $k\\ne0$ הם הלמים בתדרים $\\pm\\Omega_0+k\\omega_s$ שנמצאים מחוץ לתחום (למשל $\\frac{\\omega_s}4-\\omega_s=-\\frac{3\\omega_s}{4}$ שהוא מחוץ ל-$\\pm\\frac{\\omega_s}2$), ולכן נשאר רק $k=0$ - **אין aliasing** ואין צורך בסכום:\n$$\\boxed{Y(e^{j\\theta})\\Big|_{\\theta=\\omega T}=\\frac1TY(j\\omega)=e^{-j\\omega T/2}\\,\\mathrm{sinc}\\!\\left(\\frac{\\omega T}{2\\pi}\\right)X(j\\omega),\\qquad \\omega\\in\\left[-\\tfrac\\pi T,\\tfrac\\pi T\\right]}$$\n(הגורם $\\frac1T$ מבטל את ה-$T$ של $A(j\\omega)$.)\n\n**בדיקה.** ב-$\\omega=0$ (אילו היה שם מרכיב DC): $\\mathrm{sinc}(0)=1$, ו-$y[n]$ הוא הערך הממוצע על מלבן ברוחב $T$ כפול $T$... אכן $A(0)=T$ ו-$\\frac1T\\cdot T=1$. בנקודות המעניינות $\\omega=\\pm\\Omega_0$: $\\mathrm{sinc}(\\tfrac14)=\\frac{\\sin(\\pi/4)}{\\pi/4}=\\frac{2\\sqrt2}{\\pi}$ ו-$e^{-j\\omega T/2}=e^{\\mp j\\pi/4}$.\n\n*הערה: בפתרון הסרוק מופיע הגורם $\\frac{2\\pi}{T}$ במקום $\\frac1T$ בקשר שבין התמרת האות הדגום להתמרה הרציפה. לפי ההגדרה $Y(e^{j\\theta})|_{\\theta=\\omega T}=\\sum_ny(nT)e^{-j\\omega nT}=\\frac1T\\sum_kY(j(\\omega-k\\omega_s))$ הגורם הנכון הוא $\\frac1T$, ולכן כאן התקבל גורם שונה ב-$2\\pi$ מזה שבסריקה (הצורה $e^{-j\\omega T/2}\\mathrm{sinc}$ והפאזה זהות).*"
+    },
+    {
+     "label": "ב",
+     "points": 10,
+     "text": "מהם התנאים שצריכה לקיים $H(e^{j\\theta})$ כך שיתקיים $Z(e^{j\\theta})=X(j\\omega)\\big|_{\\theta=\\omega T}$. הצג/י פרוט מלא והסבר מלא לפתרון.",
+     "box": [
+      170,
+      1066,
+      775,
+      1112
+     ],
+     "lines": 2,
+     "solution": "**מוסכמות.** כמו בסעיף א'. המסנן $C$ הוא LTI, ולכן $Z(e^{j\\theta})=H(e^{j\\theta})\\,Y(e^{j\\theta})$, והדרישה היא $Z(e^{j\\theta})=X(j\\omega)\\big|_{\\theta=\\omega T}$.\n\n**התנאי.** נציב את התוצאה של סעיף א' (תקפה ב-$|\\omega|\\le\\frac\\pi T$, כלומר $|\\theta|\\le\\pi$):\n$$H(e^{j\\theta})\\,e^{-j\\theta/2}\\,\\mathrm{sinc}\\!\\left(\\frac{\\theta}{2\\pi}\\right)X(j\\omega)=X(j\\omega)\\quad\\Longrightarrow\\quad H(e^{j\\theta})=\\frac{e^{j\\theta/2}}{\\mathrm{sinc}\\!\\left(\\frac{\\theta}{2\\pi}\\right)}$$\nוזאת **רק בנקודות שבהן $X(j\\omega)\\ne0$**, כלומר בתדרים $\\omega=\\pm\\frac{\\pi}{2T}$, שמתאימים ל-$\\theta=\\omega T=\\pm\\frac\\pi2$ (ובגלל מחזוריות $2\\pi$ של ה-DTFT גם $\\pm\\frac\\pi2+2\\pi m$). בשאר התדרים $H$ יכול להיות כלשהו.\n\n**הערכים.** $\\mathrm{sinc}\\!\\left(\\pm\\frac14\\right)=\\frac{2\\sqrt2}{\\pi}$, ולכן\n$$\\boxed{H\\big(e^{\\pm j\\pi/2}\\big)=\\frac{\\pi}{2\\sqrt2}\\,e^{\\pm j\\pi/4}}$$\nכלומר גודל $\\frac{\\pi}{2\\sqrt2}\\approx1.11$ ופאזה $\\pm\\frac\\pi4$ (קידום פאזה, שמבטל את ההשהיה של $\\frac T2$ שגרם המלבן ב-A, שהיא $e^{-j\\pi/4}$ ב-$\\theta=\\frac\\pi2$).\n\n**בדיקות.** (1) המסנן ממשי: $H(e^{-j\\theta})=\\overline{H(e^{j\\theta})}$ - אכן הגודל זהה והפאזה הפוכה ✓. (2) הכפלה: $Y\\cdot H$ ב-$\\theta=\\frac\\pi2$: $e^{-j\\pi/4}\\frac{2\\sqrt2}{\\pi}\\cdot\\frac{\\pi}{2\\sqrt2}e^{j\\pi/4}=1$ ✓.\n\n**הרחבה (אם $x$ היה כללי חסום סרט ב-$\\pm\\frac\\pi T$ ):** התנאי הכללי $H(e^{j\\theta})=\\dfrac{e^{j\\theta/2}}{\\mathrm{sinc}(\\theta/2\\pi)}$ לכל $|\\theta|<\\pi$ (מסנן \"ביטול\" ל-sinc ולהשהיה).\n\n*הערה: בפתרון הסרוק התקבל $H(e^{\\pm j\\pi/2})=\\frac{e^{\\pm j\\pi/4}}{2\\pi\\,\\sin(\\pm\\ldots)}$ עם גורם $2\\pi$ נוסף - זו אותה סטייה של $2\\pi$ שבסעיף א'; הפאזה זהה.*"
+    }
+   ]
+  }
+ ]
+}

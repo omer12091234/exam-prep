@@ -3427,75 +3427,40 @@
    "has_solution": true,
    "questions": [
     {
-     "num": "1א",
-     "description": "דגימה בפולסים: \\(z(t)=x(t)[p(t)*h(t)]\\), \\(p(t)=\\sum_n\\delta(t-nT)\\), \\(y(t)=z(t)*g(t)\\). עבור \\(h(t)=\\tfrac1T\\Pi(t/T)\\) וכניסה חסומת סרט (\\(|\\omega|\\ge\\pi/T\\)): מהו \\(g(t)\\) שעבורו \\(y(t)=x(t)\\)?",
+     "num": "1",
+     "description": "",
      "topics": [
       "t2",
       "t3"
      ],
-     "difficulty": 2
-    },
-    {
-     "num": "1ב",
-     "description": "האם קיים \\(h(t)\\not\\equiv0\\) שעבורו לא קיים \\(g(t)\\) המאפשר שחזור מלא? לתת דוגמה או להוכיח שלא.",
-     "topics": [
-      "t2",
-      "t4"
-     ],
      "difficulty": 3
     },
     {
-     "num": "2א",
-     "description": "קונבולוציה לינארית של אות באורך 50 עם FIR באורך 4 בשיטת Overlap-Save עם FFT/IFFT באורך 8: לכתוב קוד MATLAB מלא למימוש.",
+     "num": "2",
+     "description": "",
      "topics": [
-      "t9",
-      "t7"
-     ],
-     "difficulty": 2
-    },
-    {
-     "num": "2ב",
-     "description": "רק פונקציית IFFT באורך 8 זמינה (ללא FFT): להציע דרך לחשב את הקונבולוציה בעזרת IFFT בלבד, ללא חישוב ישיר של DFT או קונבולוציה בזמן.",
-     "topics": [
-      "t6",
+      "t8",
       "t9"
      ],
      "difficulty": 3
     },
     {
-     "num": "3א",
-     "description": "\\(x[n]\\) ממשית באורך \\(N\\) אי-זוגי עם \\(x[n]=x[((-n))_N]\\); \\(z[n]\\) – ריפוד באפסים בין דגימות לאורך \\(2N\\), \\(Z[k]\\) ה-DFT באורך \\(2N\\). לפתח ביטוי פשוט ל-\\(Z[k]\\) כפונקציה של \\(X[k]\\).",
+     "num": "3",
+     "description": "",
      "topics": [
       "t6",
       "t7"
      ],
-     "difficulty": 2
-    },
-    {
-     "num": "3ב",
-     "description": "\\(Y[k]\\) החלק הממשי של \\(X[k]\\) ל-\\(k=0..\\tfrac{N-1}{2}\\). לחשב את איברי המטריצה \\(A\\) המקיימת \\(\\underline Z=A\\underline Y\\).",
-     "topics": [
-      "t6"
-     ],
      "difficulty": 3
     },
     {
-     "num": "4א",
-     "description": "\\(x(t)=P\\cos(\\tfrac{\\pi}{2T}t)\\); \\(y(t)=\\Pi(\\tfrac{t-T/2}{T})*x(t)\\), \\(y[n]=y(nT)\\), ואחריו מסנן ספרתי \\(h[n]\\). לפתח קשר פשוט בין \\(X(j\\omega)\\) בתחום \\([-\\pi/T,\\pi/T]\\) לבין \\(Y(e^{j\\theta})\\).",
+     "num": "4",
+     "description": "",
      "topics": [
-      "t5",
-      "t2"
+      "t2",
+      "t5"
      ],
-     "difficulty": 2
-    },
-    {
-     "num": "4ב",
-     "description": "מהם התנאים על \\(H(e^{j\\theta})\\) כך ש-\\(Z(e^{j\\theta})=X(j\\omega)|_{\\theta=\\omega T}\\) (פיצוי בדיד על המיצוע)?",
-     "topics": [
-      "t5",
-      "t12"
-     ],
-     "difficulty": 2
+     "difficulty": 3
     }
    ]
   },
